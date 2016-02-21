@@ -1,0 +1,261 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ChangeViewController"
+provides-nominal:
+- "C8GoChange20ChangeViewController"
+provides-member:
+- ["C8GoChange20ChangeViewController", ""]
+provides-dynamic-lookup:
+- "viewDidLoad"
+- "viewIdeaClick"
+- "didReceiveMemoryWarning"
+- "addIdeaButton"
+- "addIdeaClick"
+depends-top-level:
+- !private "IdeaViewController"
+- !private "StringLiteralType"
+- "ChangeViewController"
+- "UIButton"
+- !private "AddIdeaViewController"
+- "UIViewController"
+- !private "BooleanLiteralType"
+depends-member:
+- ["PSs9AnyObject", "addIdeaButton"]
+- ["PSs9AnyObject", "addIdeaClick"]
+- ["PSs9AnyObject", "didReceiveMemoryWarning"]
+- ["PSs9AnyObject", "init"]
+- !private ["PSs9AnyObject", "instantiateViewControllerWithIdentifier"]
+- !private ["PSs9AnyObject", "navigationController"]
+- !private ["PSs9AnyObject", "presentViewController"]
+- !private ["PSs9AnyObject", "pushViewController"]
+- !private ["PSs9AnyObject", "storyboard"]
+- ["PSs9AnyObject", "viewDidLoad"]
+- ["PSs9AnyObject", "viewIdeaClick"]
+- ["PSs9AnyObject", ""]
+- ["PSs11CVarArgType", "addIdeaButton"]
+- ["PSs11CVarArgType", "addIdeaClick"]
+- ["PSs11CVarArgType", "didReceiveMemoryWarning"]
+- ["PSs11CVarArgType", "init"]
+- !private ["PSs11CVarArgType", "instantiateViewControllerWithIdentifier"]
+- !private ["PSs11CVarArgType", "navigationController"]
+- !private ["PSs11CVarArgType", "presentViewController"]
+- !private ["PSs11CVarArgType", "pushViewController"]
+- !private ["PSs11CVarArgType", "storyboard"]
+- ["PSs11CVarArgType", "viewDidLoad"]
+- ["PSs11CVarArgType", "viewIdeaClick"]
+- ["PSs11CVarArgType", ""]
+- !private ["C8GoChange20ChangeViewController", "AddIdeaViewController"]
+- !private ["C8GoChange20ChangeViewController", "IdeaViewController"]
+- ["C8GoChange20ChangeViewController", "UIButton"]
+- ["C8GoChange20ChangeViewController", "addIdeaButton"]
+- ["C8GoChange20ChangeViewController", "addIdeaClick"]
+- ["C8GoChange20ChangeViewController", "deinit"]
+- ["C8GoChange20ChangeViewController", "didReceiveMemoryWarning"]
+- ["C8GoChange20ChangeViewController", "init"]
+- !private ["C8GoChange20ChangeViewController", "navigationController"]
+- !private ["C8GoChange20ChangeViewController", "presentViewController"]
+- !private ["C8GoChange20ChangeViewController", "storyboard"]
+- ["C8GoChange20ChangeViewController", "viewDidLoad"]
+- ["C8GoChange20ChangeViewController", "viewIdeaClick"]
+- ["PSs23CustomStringConvertible", "addIdeaButton"]
+- ["PSs23CustomStringConvertible", "addIdeaClick"]
+- ["PSs23CustomStringConvertible", "didReceiveMemoryWarning"]
+- ["PSs23CustomStringConvertible", "init"]
+- !private ["PSs23CustomStringConvertible", "instantiateViewControllerWithIdentifier"]
+- !private ["PSs23CustomStringConvertible", "navigationController"]
+- !private ["PSs23CustomStringConvertible", "presentViewController"]
+- !private ["PSs23CustomStringConvertible", "pushViewController"]
+- !private ["PSs23CustomStringConvertible", "storyboard"]
+- ["PSs23CustomStringConvertible", "viewDidLoad"]
+- ["PSs23CustomStringConvertible", "viewIdeaClick"]
+- ["PSs23CustomStringConvertible", ""]
+- ["PSs9Equatable", "addIdeaButton"]
+- ["PSs9Equatable", "addIdeaClick"]
+- ["PSs9Equatable", "didReceiveMemoryWarning"]
+- ["PSs9Equatable", "init"]
+- !private ["PSs9Equatable", "instantiateViewControllerWithIdentifier"]
+- !private ["PSs9Equatable", "navigationController"]
+- !private ["PSs9Equatable", "presentViewController"]
+- !private ["PSs9Equatable", "pushViewController"]
+- !private ["PSs9Equatable", "storyboard"]
+- ["PSs9Equatable", "viewDidLoad"]
+- ["PSs9Equatable", "viewIdeaClick"]
+- ["PSs9Equatable", ""]
+- ["PSs8Hashable", "addIdeaButton"]
+- ["PSs8Hashable", "addIdeaClick"]
+- ["PSs8Hashable", "didReceiveMemoryWarning"]
+- ["PSs8Hashable", "init"]
+- !private ["PSs8Hashable", "instantiateViewControllerWithIdentifier"]
+- !private ["PSs8Hashable", "navigationController"]
+- !private ["PSs8Hashable", "presentViewController"]
+- !private ["PSs8Hashable", "pushViewController"]
+- !private ["PSs8Hashable", "storyboard"]
+- ["PSs8Hashable", "viewDidLoad"]
+- ["PSs8Hashable", "viewIdeaClick"]
+- ["PSs8Hashable", ""]
+- ["PSo8NSCoding", "addIdeaButton"]
+- ["PSo8NSCoding", "addIdeaClick"]
+- ["PSo8NSCoding", "didReceiveMemoryWarning"]
+- ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "navigationController"]
+- !private ["PSo8NSCoding", "presentViewController"]
+- !private ["PSo8NSCoding", "pushViewController"]
+- !private ["PSo8NSCoding", "storyboard"]
+- ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", "viewIdeaClick"]
+- ["PSo8NSCoding", ""]
+- ["PSo26NSExtensionRequestHandling", "addIdeaButton"]
+- ["PSo26NSExtensionRequestHandling", "addIdeaClick"]
+- ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
+- ["PSo26NSExtensionRequestHandling", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "navigationController"]
+- !private ["PSo26NSExtensionRequestHandling", "presentViewController"]
+- !private ["PSo26NSExtensionRequestHandling", "pushViewController"]
+- !private ["PSo26NSExtensionRequestHandling", "storyboard"]
+- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", "viewIdeaClick"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- !private ["CSo8NSObject", "AddIdeaViewController"]
+- !private ["CSo8NSObject", "IdeaViewController"]
+- ["CSo8NSObject", "UIButton"]
+- ["CSo8NSObject", "addIdeaButton"]
+- ["CSo8NSObject", "addIdeaClick"]
+- ["CSo8NSObject", "didReceiveMemoryWarning"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "instantiateViewControllerWithIdentifier"]
+- !private ["CSo8NSObject", "navigationController"]
+- !private ["CSo8NSObject", "presentViewController"]
+- !private ["CSo8NSObject", "pushViewController"]
+- !private ["CSo8NSObject", "storyboard"]
+- ["CSo8NSObject", "viewDidLoad"]
+- ["CSo8NSObject", "viewIdeaClick"]
+- ["PSo16NSObjectProtocol", "addIdeaButton"]
+- ["PSo16NSObjectProtocol", "addIdeaClick"]
+- ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "instantiateViewControllerWithIdentifier"]
+- !private ["PSo16NSObjectProtocol", "navigationController"]
+- !private ["PSo16NSObjectProtocol", "presentViewController"]
+- !private ["PSo16NSObjectProtocol", "pushViewController"]
+- !private ["PSo16NSObjectProtocol", "storyboard"]
+- ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", "viewIdeaClick"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["Sq", "deinit"]
+- ["PSo21UIAppearanceContainer", "addIdeaButton"]
+- ["PSo21UIAppearanceContainer", "addIdeaClick"]
+- ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
+- ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "navigationController"]
+- !private ["PSo21UIAppearanceContainer", "presentViewController"]
+- !private ["PSo21UIAppearanceContainer", "pushViewController"]
+- !private ["PSo21UIAppearanceContainer", "storyboard"]
+- ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", "viewIdeaClick"]
+- ["PSo21UIAppearanceContainer", ""]
+- ["PSo18UIContentContainer", "addIdeaButton"]
+- ["PSo18UIContentContainer", "addIdeaClick"]
+- ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
+- ["PSo18UIContentContainer", "init"]
+- !private ["PSo18UIContentContainer", "navigationController"]
+- !private ["PSo18UIContentContainer", "presentViewController"]
+- !private ["PSo18UIContentContainer", "pushViewController"]
+- !private ["PSo18UIContentContainer", "storyboard"]
+- ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", "viewIdeaClick"]
+- ["PSo18UIContentContainer", ""]
+- ["PSo18UIFocusEnvironment", "addIdeaButton"]
+- ["PSo18UIFocusEnvironment", "addIdeaClick"]
+- ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
+- ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "navigationController"]
+- !private ["PSo18UIFocusEnvironment", "presentViewController"]
+- !private ["PSo18UIFocusEnvironment", "pushViewController"]
+- !private ["PSo18UIFocusEnvironment", "storyboard"]
+- ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", "viewIdeaClick"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["CSo22UINavigationController", "pushViewController"]
+- !private ["CSo11UIResponder", "AddIdeaViewController"]
+- !private ["CSo11UIResponder", "IdeaViewController"]
+- ["CSo11UIResponder", "UIButton"]
+- ["CSo11UIResponder", "addIdeaButton"]
+- ["CSo11UIResponder", "addIdeaClick"]
+- ["CSo11UIResponder", "didReceiveMemoryWarning"]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "navigationController"]
+- !private ["CSo11UIResponder", "presentViewController"]
+- !private ["CSo11UIResponder", "pushViewController"]
+- !private ["CSo11UIResponder", "storyboard"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- ["CSo11UIResponder", "viewIdeaClick"]
+- ["PSo16UIStateRestoring", "addIdeaButton"]
+- ["PSo16UIStateRestoring", "addIdeaClick"]
+- ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
+- ["PSo16UIStateRestoring", "init"]
+- !private ["PSo16UIStateRestoring", "navigationController"]
+- !private ["PSo16UIStateRestoring", "presentViewController"]
+- !private ["PSo16UIStateRestoring", "pushViewController"]
+- !private ["PSo16UIStateRestoring", "storyboard"]
+- ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", "viewIdeaClick"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["CSo12UIStoryboard", "instantiateViewControllerWithIdentifier"]
+- ["PSo18UITraitEnvironment", "addIdeaButton"]
+- ["PSo18UITraitEnvironment", "addIdeaClick"]
+- ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
+- ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "navigationController"]
+- !private ["PSo18UITraitEnvironment", "presentViewController"]
+- !private ["PSo18UITraitEnvironment", "pushViewController"]
+- !private ["PSo18UITraitEnvironment", "storyboard"]
+- ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", "viewIdeaClick"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo16UIViewController", "AddIdeaViewController"]
+- !private ["CSo16UIViewController", "IdeaViewController"]
+- ["CSo16UIViewController", "UIButton"]
+- ["CSo16UIViewController", "addIdeaButton"]
+- ["CSo16UIViewController", "addIdeaClick"]
+- ["CSo16UIViewController", "didReceiveMemoryWarning"]
+- ["CSo16UIViewController", "init"]
+- !private ["CSo16UIViewController", "navigationController"]
+- !private ["CSo16UIViewController", "presentViewController"]
+- !private ["CSo16UIViewController", "pushViewController"]
+- !private ["CSo16UIViewController", "storyboard"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", "viewIdeaClick"]
+- ["CSo16UIViewController", ""]
+depends-nominal:
+- "PSs9AnyObject"
+- "PSs11CVarArgType"
+- "C8GoChange20ChangeViewController"
+- "PSs23CustomStringConvertible"
+- "PSs9Equatable"
+- "PSs8Hashable"
+- "PSo8NSCoding"
+- "PSo26NSExtensionRequestHandling"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "Sq"
+- "PSo21UIAppearanceContainer"
+- "PSo18UIContentContainer"
+- "PSo18UIFocusEnvironment"
+- !private "CSo22UINavigationController"
+- "CSo11UIResponder"
+- "PSo16UIStateRestoring"
+- !private "CSo12UIStoryboard"
+- "PSo18UITraitEnvironment"
+- "CSo16UIViewController"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+interface-hash: "8f0d30083da07b10a825544bf04274a9"
