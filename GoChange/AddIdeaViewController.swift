@@ -14,7 +14,7 @@ class AddIdeaViewController: UIViewController {
     
     var requestURL = "https://api.change.org/v1/petitions/get_id"
     var petitionURL = "http://www.change.org/p/dunkin-donuts-stop-using-styrofoam-cups-and-switch-to-a-more-eco-friendly-solution"
-
+    var petitionId:String = ""
     var session = NSURLSession.sharedSession()
     
     
@@ -51,23 +51,19 @@ class AddIdeaViewController: UIViewController {
        let queryString =  GoChangeClient.sharedInstance().escapedParameters(parameterDictionary)
        let finalString = requestURL + queryString
        
-        print(finalString)
-       
        let url = NSURL(string: finalString)!
-        
        let request = NSURLRequest(URL: url)
-        
-        print("request created")
         
         let task = session.dataTaskWithRequest(request){
             data, response, downloadError in
             
-            print("task returned")
-            
             if downloadError != nil{
+                
                 //TODO: Deal with error
                 print("error with request \(downloadError)")
+                
             }else{
+                
                 GoChangeClient.sharedInstance().parseJSON(data!){
                     result,error in
                     
@@ -75,9 +71,9 @@ class AddIdeaViewController: UIViewController {
                         //TODO: deal with error
                         print("error parsing JSON \(error)")
                     }else{
-                       print(result)
-                        print(result["petition_id"])
-                        print(result["result"])
+                        
+                        self.petitionId = result["petition_id"] as! String
+                        
                     }
                 }
             }

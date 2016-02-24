@@ -10,12 +10,15 @@ import Foundation
 import UIKit
 import Firebase
 
-
 class SignupViewController:UIViewController,UITextFieldDelegate{
     
     @IBOutlet weak var usernameTextfield: UITextField!
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
+    
+    
+    @IBOutlet weak var signupButton: UIButton!
+    
     
     var ref = Firebase(url:"https://gochange.firebaseio.com")
     
@@ -26,12 +29,19 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
         emailTextfield.delegate = self
         passwordTextfield.delegate = self
         
+        //TODO: if segue from add User data (update) switch signupButton.text = "Update user info"
+        
+        //TODO: write second function to updateChildValues
         
     }
     
     
     @IBAction func signupButton(sender: UIButton) {
         
+        // if signupButton.text == "Update"{
+            // updateChildValues()
+        //}
+    
         
         print("signing up")
         
@@ -67,11 +77,12 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
                         
                             // save user id to NSDefaults
                             NSUserDefaults.standardUserDefaults().setValue(authData.uid!, forKey: "uid")
-                        
-                            // segue to home view controller
-                            var controller:HomeViewController
-                            controller = self.storyboard?.instantiateViewControllerWithIdentifier("HomeViewController") as! HomeViewController
-                            self.presentViewController(controller, animated: true, completion: nil)
+                            NSUserDefaults.standardUserDefaults().setValue(username, forKey: "username")
+                            
+                            
+                            // segue back to loginViewController
+                            self.dismissViewControllerAnimated(true, completion: nil)
+                            
                         }
                         
                     })
@@ -79,8 +90,29 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
             })
         }else{
             //TODO: code for no username, password, email filled in
+            
         }
     }
+    
+    func updateChildValues(){
+        
+        //1. gather current user details and paste into boxes
+        
+        
+        
+        
+        
+        //2. on button click...
+        // update username (plus any future other details) in database
+        
+        
+        //update email, password in database && in security
+        
+        
+        // self.dismissViewController(true,completion:nil)
+    }
+    
+    
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         usernameTextfield.resignFirstResponder()

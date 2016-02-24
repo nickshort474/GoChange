@@ -1,0 +1,21 @@
+version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
+options: "531c34136425ab5b79a3e8d06fad54c8"
+build_time: [509626562, 455405000]
+inputs:
+  "/Users/nickshort/Git/GoChange/GoChange/IdeaViewController.swift": [508159940, 0]
+  "/Users/nickshort/Git/GoChange/GoChange/GoChangeClient.swift": [509023513, 0]
+  "/Users/nickshort/Git/GoChange/GoChange/loginViewController.swift": [509626562, 0]
+  "/Users/nickshort/Git/GoChange/GoChange/GoChangeConvenience.swift": [509373759, 0]
+  "/Users/nickshort/Git/GoChange/GoChange/CreateChangeViewController.swift": [509380874, 0]
+  "/Users/nickshort/Git/GoChange/GoChange/SearchViewController.swift": [508097518, 0]
+  "/Users/nickshort/Git/GoChange/GoChange/ChangePreviewViewController.swift": [508525978, 0]
+  "/Users/nickshort/Git/GoChange/GoChange/ChangeViewController.swift": [508159940, 0]
+  "/Users/nickshort/Git/GoChange/GoChange/GoChangeConstants.swift": [509023513, 0]
+  "/Users/nickshort/Git/GoChange/GoChange/AddTweakViewController.swift": [509381491, 0]
+  "/Users/nickshort/Git/GoChange/GoChange/FollowingViewController.swift": [508099663, 0]
+  "/Users/nickshort/Git/GoChange/GoChange/AddIdeaViewController.swift": [509397618, 0]
+  "/Users/nickshort/Git/GoChange/GoChange/SignupViewController.swift": [509622508, 0]
+  "/Users/nickshort/Git/GoChange/GoChange/WebViewController.swift": [508094637, 0]
+  "/Users/nickshort/Git/GoChange/GoChange/HomeViewController.swift": [509626562, 0]
+  "/Users/nickshort/Git/GoChange/GoChange/AppDelegate.swift": [509380067, 0]
+  "/Users/nickshort/Git/GoChange/GoChange/ResultsViewController.swift": [508099457, 0]

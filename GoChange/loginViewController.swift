@@ -8,9 +8,6 @@
 
 import UIKit
 import Firebase
-import FBSDKCoreKit
-import FBSDKLoginKit
-
 
 
 class loginViewController:UIViewController,UITextFieldDelegate{
@@ -19,7 +16,7 @@ class loginViewController:UIViewController,UITextFieldDelegate{
     
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
-    var userID:String!
+    var userID:String?
     
     
     override func viewDidLoad() {
@@ -31,22 +28,26 @@ class loginViewController:UIViewController,UITextFieldDelegate{
         emailTextfield.delegate = self
         passwordTextfield.delegate = self
         
-        // check for svaed user id
-        userID = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
-        
-        print(userID)
-        
-        // check to see if has been saved and are already logged in
-        //if(userID != nil){
-           //
-       // }
+       
         
         
+        //check for saved user id
+        
+            
+       
         
     }
     
+    
     override func viewDidAppear(animated: Bool) {
+        
+        
+        userID = NSUserDefaults.standardUserDefaults().valueForKey("uid") as? String
+        print(userID)
+
+        
         if (userID != nil){
+            print("user ID not nil")
             segueToHomeScreen()
         }
     }
@@ -54,6 +55,7 @@ class loginViewController:UIViewController,UITextFieldDelegate{
     
     
     @IBAction func login(sender: AnyObject) {
+        
         let email = emailTextfield.text
         let password = passwordTextfield.text
         
@@ -65,9 +67,23 @@ class loginViewController:UIViewController,UITextFieldDelegate{
                 if error != nil{
                     //TODO: code for error
                 }else{
+                    print("user is authorized")
+                    let usernameRef = self.ref.childByAppendingPath("users/\(authData.uid!)")
+                   
+                    print(usernameRef)
                     
-                    NSUserDefaults.standardUserDefaults().setValue(authData.uid!,forKey:"uid")
-                    self.segueToHomeScreen()
+                    usernameRef.observeEventType(.Value, withBlock: {snapshot in
+                        
+                        let username = snapshot.value.objectForKey("username") as? String
+                        NSUserDefaults.standardUserDefaults().setValue(authData.uid!,forKey:"uid")
+                        NSUserDefaults.standardUserDefaults().setValue(username, forKey: "username")
+                        self.segueToHomeScreen()
+                        
+                    }, withCancelBlock: { error in
+                         print(error.description)
+                    })
+                    
+                    
                     
                 }
                 
@@ -90,6 +106,7 @@ class loginViewController:UIViewController,UITextFieldDelegate{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     func segueToHomeScreen(){
         let controller = self.storyboard?.instantiateViewControllerWithIdentifier("HomeViewController") as! HomeViewController

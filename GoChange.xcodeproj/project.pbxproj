@@ -176,18 +176,18 @@
 		36C37C9D1C7A0101002B4FB1 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				36C37CAC1C7A01AC002B4FB1 /* SignupViewController.swift */,
+				36C37CA91C7A01AC002B4FB1 /* loginViewController.swift */,
+				36C37CA71C7A01AC002B4FB1 /* HomeViewController.swift */,
 				36C37CA11C7A01AC002B4FB1 /* AddIdeaViewController.swift */,
 				36C37CA21C7A01AC002B4FB1 /* AddTweakViewController.swift */,
 				36C37CA31C7A01AC002B4FB1 /* ChangePreviewViewController.swift */,
 				36C37CA41C7A01AC002B4FB1 /* ChangeViewController.swift */,
 				36C37CA51C7A01AC002B4FB1 /* CreateChangeViewController.swift */,
 				36C37CA61C7A01AC002B4FB1 /* FollowingViewController.swift */,
-				36C37CA71C7A01AC002B4FB1 /* HomeViewController.swift */,
 				36C37CA81C7A01AC002B4FB1 /* IdeaViewController.swift */,
-				36C37CA91C7A01AC002B4FB1 /* loginViewController.swift */,
 				36C37CAA1C7A01AC002B4FB1 /* ResultsViewController.swift */,
 				36C37CAB1C7A01AC002B4FB1 /* SearchViewController.swift */,
-				36C37CAC1C7A01AC002B4FB1 /* SignupViewController.swift */,
 				36C37CAD1C7A01AC002B4FB1 /* WebViewController.swift */,
 			);
 			name = "View Controllers";

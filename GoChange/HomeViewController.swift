@@ -10,17 +10,11 @@ import UIKit
 import Firebase
 
 
-
 class HomeViewController: UIViewController {
     
     
     @IBOutlet weak var welcomeLabel: UILabel!
-    
-    
-   
     var ref:Firebase!
-    //let currentUserName = GoChangeClient.Constants.userName
-    //let currentUserID = GoChangeClient.Constants.userID
     
     
     override func viewDidLoad() {
@@ -28,30 +22,42 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         ref = Firebase(url:"https://GoChange.firebaseio.com")
         
+        let currentUserName = NSUserDefaults.standardUserDefaults().valueForKey("username") as! String
         
-        //welcomeLabel.text = "\(currentUserName)" + " " + "\(currentUserID)"
-        //print(currentUserID)
+        welcomeLabel.text = "Welcome \(currentUserName)"
+        
+        
         
     }
     
     @IBAction func addUserData(sender: UIButton) {
+        // get userID
         
-        let userData =  ["email":"myEmail","provider":"Postman"]
+        let controller = UIAlertController()
+        controller.title = "Update your user information"
         
-        var ref = Firebase(url:"https://GoChange.firebaseio.com/")
+        self.presentViewController(controller, animated: true, completion: nil)
         
-        print(ref)
-        var userID = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
+        let alertAction = UIAlertAction(title: "Add data", style: UIAlertActionStyle.Default, handler: {
+            action in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        })
         
-        var userRef = ref.childByAppendingPath("users/")
+        controller.addAction(alertAction)
         
-        print(userRef)
         
-        var currentUserRef = userRef.childByAppendingPath(userID)
+        let userID = NSUserDefaults.standardUserDefaults().valueForKey("uid")
         
-        print(currentUserRef)
         
-        currentUserRef.setValue(userData)
+        let userRef = ref.childByAppendingPath("users/\(userID)")
+        
+        let usersNewUsername = ""
+        
+        let values = ["username":usersNewUsername]
+        
+        userRef.updateChildValues(values)
+        
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -63,6 +69,7 @@ class HomeViewController: UIViewController {
         
         ref.unauth()
         NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "uid")
+        NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "username")
         self.dismissViewControllerAnimated(true, completion: nil)
         
     }

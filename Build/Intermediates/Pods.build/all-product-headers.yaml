@@ -1,0 +1,115 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "FAuthData.h",
+          'external-contents': "/Users/nickshort/Git/GoChange/Pods/Firebase/FAuthData.h"
+        },
+        {
+          'type': 'file',
+          'name': "FAuthType.h",
+          'external-contents': "/Users/nickshort/Git/GoChange/Pods/Firebase/FAuthType.h"
+        },
+        {
+          'type': 'file',
+          'name': "FConfig.h",
+          'external-contents': "/Users/nickshort/Git/GoChange/Pods/Firebase/FConfig.h"
+        },
+        {
+          'type': 'file',
+          'name': "FDataSnapshot.h",
+          'external-contents': "/Users/nickshort/Git/GoChange/Pods/Firebase/FDataSnapshot.h"
+        },
+        {
+          'type': 'file',
+          'name': "FEventType.h",
+          'external-contents': "/Users/nickshort/Git/GoChange/Pods/Firebase/FEventType.h"
+        },
+        {
+          'type': 'file',
+          'name': "FMutableData.h",
+          'external-contents': "/Users/nickshort/Git/GoChange/Pods/Firebase/FMutableData.h"
+        },
+        {
+          'type': 'file',
+          'name': "FQuery.h",
+          'external-contents': "/Users/nickshort/Git/GoChange/Pods/Firebase/FQuery.h"
+        },
+        {
+          'type': 'file',
+          'name': "FTransactionResult.h",
+          'external-contents': "/Users/nickshort/Git/GoChange/Pods/Firebase/FTransactionResult.h"
+        },
+        {
+          'type': 'file',
+          'name': "Firebase-Swift.h",
+          'external-contents': "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "Firebase-umbrella.h",
+          'external-contents': "/Users/nickshort/Git/GoChange/Pods/Target Support Files/Firebase/Firebase-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "Firebase.h",
+          'external-contents': "/Users/nickshort/Git/GoChange/Pods/Firebase/Firebase.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseApp.h",
+          'external-contents': "/Users/nickshort/Git/GoChange/Pods/Firebase/FirebaseApp.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseServerValue.h",
+          'external-contents': "/Users/nickshort/Git/GoChange/Pods/Firebase/FirebaseServerValue.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/nickshort/Git/GoChange/Build/Intermediates/Pods.build/Debug-iphoneos/Firebase.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Pods_GoChange.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Pods-GoChange-umbrella.h",
+          'external-contents': "/Users/nickshort/Git/GoChange/Pods/Target Support Files/Pods-GoChange/Pods-GoChange-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "Pods_GoChange-Swift.h",
+          'external-contents': "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Pods_GoChange.framework/Headers/Pods_GoChange-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Pods_GoChange.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/nickshort/Git/GoChange/Build/Intermediates/Pods.build/Debug-iphoneos/Pods-GoChange.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}
