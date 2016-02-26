@@ -87,6 +87,7 @@ typedef int swift_int3  __attribute__((__ext_vector_type__(3)));
 typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
+@import CoreData;
 @import Foundation;
 @import ObjectiveC;
 #endif
@@ -150,11 +151,31 @@ SWIFT_CLASS("_TtC8GoChange11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSEntityDescription;
+
+SWIFT_CLASS("_TtC8GoChange6Change")
+@interface Change : NSManagedObject
+@property (nonatomic, copy) NSString * __nonnull changeName;
+@property (nonatomic, copy) NSString * __nonnull changeDescription;
+- (nonnull instancetype)initWithEntity:(NSEntityDescription * __nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * __nullable)context OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithDictionary:(NSDictionary<NSString *, id> * __nonnull)dictionary context:(NSManagedObjectContext * __nonnull)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class Firebase;
+@class UITextField;
+@class UITextView;
 
 SWIFT_CLASS("_TtC8GoChange27ChangePreviewViewController")
 @interface ChangePreviewViewController : UIViewController
+@property (nonatomic, readonly, strong) Firebase * __null_unspecified firebaseRef;
+@property (nonatomic, copy) NSString * __nonnull passedName;
+@property (nonatomic, weak) IBOutlet UITextField * __null_unspecified nameTextfield;
+@property (nonatomic, weak) IBOutlet UITextView * __null_unspecified descriptionTextView;
+@property (nonatomic, copy) NSString * __null_unspecified changeName;
+@property (nonatomic, copy) NSString * __null_unspecified changeDescription;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+@property (nonatomic, strong) NSManagedObjectContext * __nonnull sharedContext;
 - (IBAction)saveChangeClick:(UIButton * __nonnull)sender;
 - (void)leftButtonAction;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -173,8 +194,6 @@ SWIFT_CLASS("_TtC8GoChange20ChangeViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UITextField;
-@class UITextView;
 
 SWIFT_CLASS("_TtC8GoChange26CreateChangeViewController")
 @interface CreateChangeViewController : UIViewController <UIScrollViewDelegate, UITextFieldDelegate, UITextViewDelegate>
@@ -189,6 +208,7 @@ SWIFT_CLASS("_TtC8GoChange26CreateChangeViewController")
 @property (nonatomic, readonly, copy) NSString * __nonnull detailInputPrompt;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+@property (nonatomic, strong) NSManagedObjectContext * __nonnull sharedContext;
 - (IBAction)homeButtonClick:(UIButton * __nonnull)sender;
 - (void)textFieldDidBeginEditing:(UITextField * __nonnull)textField;
 - (void)textViewDidBeginEditing:(UITextView * __nonnull)textView;
@@ -229,7 +249,6 @@ SWIFT_CLASS("_TtC8GoChange14GoChangeClient")
 - (void)parseJSON:(NSData * __nonnull)data completionHandler:(void (^ __nonnull)(id __null_unspecified, NSError * __nullable))completionHandler;
 @end
 
-@class Firebase;
 @class UILabel;
 
 SWIFT_CLASS("_TtC8GoChange18HomeViewController")
@@ -281,9 +300,11 @@ SWIFT_CLASS("_TtC8GoChange20SignupViewController")
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified usernameTextfield;
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified emailTextfield;
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified passwordTextfield;
+@property (nonatomic, weak) IBOutlet UIButton * __null_unspecified signupButton;
 @property (nonatomic, strong) Firebase * __null_unspecified ref;
 - (void)viewDidLoad;
 - (IBAction)signupButton:(UIButton * __nonnull)sender;
+- (void)updateChildValues;
 - (BOOL)textFieldShouldReturn:(UITextField * __nonnull)textField;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;

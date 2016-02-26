@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreData
+
 
 class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFieldDelegate {
     
@@ -42,10 +44,17 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         
     }
     
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    lazy var sharedContext:NSManagedObjectContext = {
+        return CoreDataStackManager.sharedInstance().managedObjectContext
+    }()
+    
+    
     
     @IBAction func homeButtonClick(sender: UIButton) {
         navigationController?.dismissViewControllerAnimated(true, completion: nil)
@@ -135,9 +144,29 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
     
     @IBAction func previewChange(sender: UIButton) {
         
+        // save to core data
+        
+        //create dictionary
+        
+        var changeDictionary:[String:AnyObject] = [String:AnyObject]()
+        changeDictionary[Change.Keys.changeName] = currentNameData
+        changeDictionary[Change.Keys.changeDescription] = currentDetailData
+        
+        let newChange = Change(dictionary: changeDictionary,context: sharedContext)
+        
+        do{
+            try self.sharedContext.save()
+        }catch{
+            //TODO: Catch errors!
+        }
+        
+        
         var controller:ChangePreviewViewController
         
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("ChangePreviewViewController") as! ChangePreviewViewController
+        controller.passedName = currentNameData
+        
+        
         let navController = self.navigationController
         
         navController?.pushViewController(controller, animated: true)

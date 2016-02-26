@@ -6,28 +6,30 @@ provides-nominal:
 provides-member:
 - ["C8GoChange20SignupViewController", ""]
 provides-dynamic-lookup:
-- "passwordTextfield"
-- "textFieldShouldReturn"
-- "ref"
-- "emailTextfield"
-- "usernameTextfield"
-- "signupButton"
 - "viewDidLoad"
+- "emailTextfield"
+- "signupButton"
+- "signupButton"
+- "textFieldShouldReturn"
+- "usernameTextfield"
+- "updateChildValues"
+- "ref"
+- "passwordTextfield"
 depends-top-level:
-- "Dictionary"
-- !private "&&"
-- "BooleanLiteralType"
-- "UITextField"
-- !private "NSUserDefaults"
-- "SignupViewController"
-- "Firebase"
-- "Bool"
-- "StringLiteralType"
 - "UIViewController"
-- "UITextFieldDelegate"
+- "BooleanLiteralType"
+- "Bool"
 - !private "!="
+- "UITextFieldDelegate"
 - !private "print"
 - "UIButton"
+- "UITextField"
+- !private "NSUserDefaults"
+- "StringLiteralType"
+- !private "&&"
+- "Dictionary"
+- "Firebase"
+- "SignupViewController"
 depends-member:
 - ["PSs9AnyObject", "Firebase"]
 - !private ["PSs9AnyObject", "NSUserDefaults"]
@@ -55,6 +57,7 @@ depends-member:
 - ["PSs9AnyObject", "textFieldShouldEndEditing"]
 - ["PSs9AnyObject", "textFieldShouldReturn"]
 - !private ["PSs9AnyObject", "uid"]
+- ["PSs9AnyObject", "updateChildValues"]
 - ["PSs9AnyObject", "usernameTextfield"]
 - ["PSs9AnyObject", "viewDidLoad"]
 - ["PSs9AnyObject", ""]
@@ -88,6 +91,7 @@ depends-member:
 - ["PSs11CVarArgType", "textFieldShouldEndEditing"]
 - ["PSs11CVarArgType", "textFieldShouldReturn"]
 - !private ["PSs11CVarArgType", "uid"]
+- ["PSs11CVarArgType", "updateChildValues"]
 - ["PSs11CVarArgType", "usernameTextfield"]
 - ["PSs11CVarArgType", "viewDidLoad"]
 - ["PSs11CVarArgType", ""]
@@ -127,6 +131,7 @@ depends-member:
 - ["PSs23CustomStringConvertible", "textFieldShouldEndEditing"]
 - ["PSs23CustomStringConvertible", "textFieldShouldReturn"]
 - !private ["PSs23CustomStringConvertible", "uid"]
+- ["PSs23CustomStringConvertible", "updateChildValues"]
 - ["PSs23CustomStringConvertible", "usernameTextfield"]
 - ["PSs23CustomStringConvertible", "viewDidLoad"]
 - ["PSs23CustomStringConvertible", ""]
@@ -163,6 +168,7 @@ depends-member:
 - ["PSs9Equatable", "textFieldShouldEndEditing"]
 - ["PSs9Equatable", "textFieldShouldReturn"]
 - !private ["PSs9Equatable", "uid"]
+- ["PSs9Equatable", "updateChildValues"]
 - ["PSs9Equatable", "usernameTextfield"]
 - ["PSs9Equatable", "viewDidLoad"]
 - ["PSs9Equatable", ""]
@@ -207,6 +213,7 @@ depends-member:
 - ["PSs8Hashable", "textFieldShouldEndEditing"]
 - ["PSs8Hashable", "textFieldShouldReturn"]
 - !private ["PSs8Hashable", "uid"]
+- ["PSs8Hashable", "updateChildValues"]
 - ["PSs8Hashable", "usernameTextfield"]
 - ["PSs8Hashable", "viewDidLoad"]
 - ["PSs8Hashable", ""]
@@ -238,6 +245,7 @@ depends-member:
 - ["PSo8NSCoding", "textFieldShouldClear"]
 - ["PSo8NSCoding", "textFieldShouldEndEditing"]
 - ["PSo8NSCoding", "textFieldShouldReturn"]
+- ["PSo8NSCoding", "updateChildValues"]
 - ["PSo8NSCoding", "usernameTextfield"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", ""]
@@ -259,6 +267,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "textFieldShouldClear"]
 - ["PSo26NSExtensionRequestHandling", "textFieldShouldEndEditing"]
 - ["PSo26NSExtensionRequestHandling", "textFieldShouldReturn"]
+- ["PSo26NSExtensionRequestHandling", "updateChildValues"]
 - ["PSo26NSExtensionRequestHandling", "usernameTextfield"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", ""]
@@ -293,6 +302,7 @@ depends-member:
 - ["CSo8NSObject", "textFieldShouldEndEditing"]
 - ["CSo8NSObject", "textFieldShouldReturn"]
 - !private ["CSo8NSObject", "uid"]
+- ["CSo8NSObject", "updateChildValues"]
 - ["CSo8NSObject", "usernameTextfield"]
 - ["CSo8NSObject", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", "Firebase"]
@@ -321,6 +331,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "textFieldShouldEndEditing"]
 - ["PSo16NSObjectProtocol", "textFieldShouldReturn"]
 - !private ["PSo16NSObjectProtocol", "uid"]
+- ["PSo16NSObjectProtocol", "updateChildValues"]
 - ["PSo16NSObjectProtocol", "usernameTextfield"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", ""]
@@ -353,6 +364,7 @@ depends-member:
 - ["C8GoChange20SignupViewController", "textFieldShouldClear"]
 - ["C8GoChange20SignupViewController", "textFieldShouldEndEditing"]
 - ["C8GoChange20SignupViewController", "textFieldShouldReturn"]
+- ["C8GoChange20SignupViewController", "updateChildValues"]
 - ["C8GoChange20SignupViewController", "usernameTextfield"]
 - ["C8GoChange20SignupViewController", "viewDidLoad"]
 - !private ["PSs10Streamable", "init"]
@@ -385,6 +397,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "textFieldShouldClear"]
 - ["PSo21UIAppearanceContainer", "textFieldShouldEndEditing"]
 - ["PSo21UIAppearanceContainer", "textFieldShouldReturn"]
+- ["PSo21UIAppearanceContainer", "updateChildValues"]
 - ["PSo21UIAppearanceContainer", "usernameTextfield"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", ""]
@@ -404,6 +417,7 @@ depends-member:
 - ["PSo18UIContentContainer", "textFieldShouldClear"]
 - ["PSo18UIContentContainer", "textFieldShouldEndEditing"]
 - ["PSo18UIContentContainer", "textFieldShouldReturn"]
+- ["PSo18UIContentContainer", "updateChildValues"]
 - ["PSo18UIContentContainer", "usernameTextfield"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", ""]
@@ -435,6 +449,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "textFieldShouldClear"]
 - ["PSo18UIFocusEnvironment", "textFieldShouldEndEditing"]
 - ["PSo18UIFocusEnvironment", "textFieldShouldReturn"]
+- ["PSo18UIFocusEnvironment", "updateChildValues"]
 - ["PSo18UIFocusEnvironment", "usernameTextfield"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", ""]
@@ -463,6 +478,7 @@ depends-member:
 - ["CSo11UIResponder", "textFieldShouldClear"]
 - ["CSo11UIResponder", "textFieldShouldEndEditing"]
 - ["CSo11UIResponder", "textFieldShouldReturn"]
+- ["CSo11UIResponder", "updateChildValues"]
 - ["CSo11UIResponder", "usernameTextfield"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - ["PSo16UIStateRestoring", "Firebase"]
@@ -481,6 +497,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "textFieldShouldClear"]
 - ["PSo16UIStateRestoring", "textFieldShouldEndEditing"]
 - ["PSo16UIStateRestoring", "textFieldShouldReturn"]
+- ["PSo16UIStateRestoring", "updateChildValues"]
 - ["PSo16UIStateRestoring", "usernameTextfield"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", ""]
@@ -528,6 +545,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "textFieldShouldClear"]
 - ["PSo18UITraitEnvironment", "textFieldShouldEndEditing"]
 - ["PSo18UITraitEnvironment", "textFieldShouldReturn"]
+- ["PSo18UITraitEnvironment", "updateChildValues"]
 - ["PSo18UITraitEnvironment", "usernameTextfield"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", ""]
@@ -553,6 +571,7 @@ depends-member:
 - ["CSo16UIViewController", "textFieldShouldClear"]
 - ["CSo16UIViewController", "textFieldShouldEndEditing"]
 - ["CSo16UIViewController", "textFieldShouldReturn"]
+- ["CSo16UIViewController", "updateChildValues"]
 - ["CSo16UIViewController", "usernameTextfield"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", ""]
@@ -686,4 +705,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreData.swiftmodule"
-interface-hash: "15b2992a23a455a98200bf4d1a8a5365"
+interface-hash: "07ce697327154c1e3b0328eac5017c78"

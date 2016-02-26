@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		369EF17D1C80C24600D8D46A /* Change.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369EF17C1C80C24600D8D46A /* Change.swift */; };
+		369EF17F1C80C5D900D8D46A /* CoreDataStackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369EF17E1C80C5D900D8D46A /* CoreDataStackManager.swift */; };
 		36C37C6C1C7A00E3002B4FB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37C6B1C7A00E3002B4FB1 /* AppDelegate.swift */; };
 		36C37C711C7A00E3002B4FB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36C37C6F1C7A00E3002B4FB1 /* Main.storyboard */; };
 		36C37C741C7A00E3002B4FB1 /* GoChange.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 36C37C721C7A00E3002B4FB1 /* GoChange.xcdatamodeld */; };
@@ -52,6 +54,8 @@
 
 /* Begin PBXFileReference section */
 		0961F4BBEE6401B9B1D0DE43 /* Pods_GoChange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoChange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		369EF17C1C80C24600D8D46A /* Change.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Change.swift; sourceTree = "<group>"; };
+		369EF17E1C80C5D900D8D46A /* CoreDataStackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStackManager.swift; sourceTree = "<group>"; };
 		36C37C681C7A00E2002B4FB1 /* GoChange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoChange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C37C6B1C7A00E3002B4FB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36C37C701C7A00E3002B4FB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -196,7 +200,9 @@
 		36C37C9E1C7A010F002B4FB1 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				369EF17E1C80C5D900D8D46A /* CoreDataStackManager.swift */,
 				36C37C721C7A00E3002B4FB1 /* GoChange.xcdatamodeld */,
+				369EF17C1C80C24600D8D46A /* Change.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -432,10 +438,12 @@
 				36C37CC01C7A01C5002B4FB1 /* GoChangeConvenience.swift in Sources */,
 				36C37CB61C7A01AC002B4FB1 /* loginViewController.swift in Sources */,
 				36C37C6C1C7A00E3002B4FB1 /* AppDelegate.swift in Sources */,
+				369EF17F1C80C5D900D8D46A /* CoreDataStackManager.swift in Sources */,
 				36C37CB71C7A01AC002B4FB1 /* ResultsViewController.swift in Sources */,
 				36C37CB91C7A01AC002B4FB1 /* SignupViewController.swift in Sources */,
 				36C37CB31C7A01AC002B4FB1 /* FollowingViewController.swift in Sources */,
 				36C37C741C7A00E3002B4FB1 /* GoChange.xcdatamodeld in Sources */,
+				369EF17D1C80C24600D8D46A /* Change.swift in Sources */,
 				36C37CBA1C7A01AC002B4FB1 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
