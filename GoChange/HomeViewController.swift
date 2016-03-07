@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-
+import CoreData
 
 class HomeViewController: UIViewController {
     
@@ -16,6 +16,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var welcomeLabel: UILabel!
     var ref:Firebase!
     
+    @IBOutlet weak var followButton: UIButton!
+    @IBOutlet weak var followingLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,45 +26,64 @@ class HomeViewController: UIViewController {
         
         let currentUserName = NSUserDefaults.standardUserDefaults().valueForKey("username") as! String
         
-        welcomeLabel.text = "Welcome \(currentUserName)"
+        welcomeLabel.text = "Welcome to GoChange \(currentUserName)"
+        //TODO: Check core data for amount of following
+        followingLabel.hidden = true
+        
+        checkCoreData()
         
         
         
     }
     
-    @IBAction func addUserData(sender: UIButton) {
-        // get userID
+    lazy var sharedContext:NSManagedObjectContext = {
         
-        let controller = UIAlertController()
-        controller.title = "Update your user information"
+        return CoreDataStackManager.sharedInstance().managedObjectContext
+        
+    }()
+    
+    
+    
+    @IBAction func addUserData(sender: UIButton) {
+        
+        var controller:UpdateUserInfoController
+        controller = self.storyboard?.instantiateViewControllerWithIdentifier("UpdateUserInfoController") as! UpdateUserInfoController
         
         self.presentViewController(controller, animated: true, completion: nil)
         
-        let alertAction = UIAlertAction(title: "Add data", style: UIAlertActionStyle.Default, handler: {
-            action in
-            self.dismissViewControllerAnimated(true, completion: nil)
-        })
+    }
+    
+    func checkCoreData(){
         
-        controller.addAction(alertAction)
+        var request = NSFetchRequest(entityName: "Change")
+        
+        var results:[AnyObject]?
+        
+        do{
+            results = try sharedContext.executeFetchRequest(request) as! [Change]
+        }catch{
+            //TODO: catch error
+            print("error fetching")
+        }
+        
+        let changeCount = results?.count
+        let countText = String(changeCount!)
         
         
-        let userID = NSUserDefaults.standardUserDefaults().valueForKey("uid")
+        if countText != "0"{
+            followingLabel.hidden = false
+            followingLabel.text = countText
+        }else{
+            followingLabel.hidden = true
+        }
         
         
-        let userRef = ref.childByAppendingPath("users/\(userID)")
-        
-        let usersNewUsername = ""
-        
-        let values = ["username":usersNewUsername]
-        
-        userRef.updateChildValues(values)
         
         
     }
     
-    override func viewDidAppear(animated: Bool) {
-        
-    }
+    
+    
     
     
     @IBAction func logout(sender: UIButton) {

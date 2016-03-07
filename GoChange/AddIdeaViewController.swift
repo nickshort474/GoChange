@@ -10,17 +10,17 @@ import UIKit
 
 class AddIdeaViewController: UIViewController {
     
-    var apiKey = "1a4f569e8857b5ce19ed32d20b799f1e8d922b8b3bd5413cbaa8fb9c2664ad41"
     
-    var requestURL = "https://api.change.org/v1/petitions/get_id"
-    var petitionURL = "http://www.change.org/p/dunkin-donuts-stop-using-styrofoam-cups-and-switch-to-a-more-eco-friendly-solution"
-    var petitionId:String = ""
+    var petitionId:Int = 1
     var session = NSURLSession.sharedSession()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.navigationController?.title = "Add Solution"
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,15 +41,18 @@ class AddIdeaViewController: UIViewController {
     
     
     
+    
+    //---------------petition methods--------------------
+    
     @IBAction func addPetition(sender: UIButton) {
         
         let parameterDictionary = [
-            "api_key":apiKey,
-            "petition_url":petitionURL
+            "api_key":GoChangeClient.Constants.apiKey,
+            "petition_url":GoChangeClient.Constants.petitionURL
         ]
         
        let queryString =  GoChangeClient.sharedInstance().escapedParameters(parameterDictionary)
-       let finalString = requestURL + queryString
+       let finalString = GoChangeClient.Constants.requestURL + queryString
        
        let url = NSURL(string: finalString)!
        let request = NSURLRequest(URL: url)
@@ -72,8 +75,8 @@ class AddIdeaViewController: UIViewController {
                         print("error parsing JSON \(error)")
                     }else{
                         
-                        self.petitionId = result["petition_id"] as! String
-                        
+                        self.petitionId = result["petition_id"] as! Int
+                        print(self.petitionId)
                     }
                 }
             }

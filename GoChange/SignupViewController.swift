@@ -16,6 +16,15 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     
+    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var label3: UILabel!
+    
+    
+    
+    var sendingController:String = ""
+    var updateField:String = ""
+    
     
     @IBOutlet weak var signupButton: UIButton!
     
@@ -29,19 +38,44 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
         emailTextfield.delegate = self
         passwordTextfield.delegate = self
         
-        //TODO: if segue from add User data (update) switch signupButton.text = "Update user info"
         
-        //TODO: write second function to updateChildValues
+        //TODO: if segue from add User data (update) switch signupButton.text = "Update user info"
+        if (sendingController == "update"){
+            signupButton.setTitle("Update user info", forState: UIControlState.Normal)
+            
+            if(updateField == "username"){
+                label1.text = "Old username"
+                label2.text = "New username"
+                label3.text = "Password"
+            }else if(updateField == "password"){
+                label1.text = "Email"
+                label2.text = "Old password"
+                label3.text = "New password"
+            }else if(updateField == "email"){
+                label1.text = "Old email"
+                label2.text = "New email"
+                label3.text = "Password"
+            }
+            
+            
+            
+            
+        }else if (sendingController == "login"){
+            signupButton.setTitle("Signup", forState: UIControlState.Normal)
+            
+            
+        }
         
     }
     
     
     @IBAction func signupButton(sender: UIButton) {
         
-        // if signupButton.text == "Update"{
-            // updateChildValues()
-        //}
-    
+        
+        if signupButton.currentTitle == "Update user info"{
+            updateChildValues()
+        }else{
+        
         
         print("signing up")
         
@@ -90,29 +124,87 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
             })
         }else{
             //TODO: code for no username, password, email filled in
-            
+            print("no information, please put user information")
+        }
         }
     }
+    
     
     func updateChildValues(){
         
         //1. gather current user details and paste into boxes
+        print("update child values")
+        
+        if usernameTextfield.text != nil && emailTextfield.text != nil && passwordTextfield.text != nil{
+        
+        
+        if(updateField == "username"){
+            let oldUsername = usernameTextfield.text
+            let newUsername = emailTextfield.text!
+            let password = passwordTextfield.text
+            
+            NSUserDefaults.standardUserDefaults().setValue(newUsername, forKey: "username")
+            
+            let values = ["username":newUsername]
+            
+            
+            let userID = NSUserDefaults.standardUserDefaults().valueForKey("uid") as? String
+            var userRef = ref.childByAppendingPath("users/\(userID!)")
+            print(userRef)
+            
+            userRef.observeEventType(.Value, withBlock: { snapshot in
+                
+                let usernameValue = snapshot.value.objectForKey("username") as? String
+                if usernameValue == oldUsername{
+                    userRef.updateChildValues(values)
+                }
+            })
+            
+            
+            
+        }else if(updateField == "password"){
+            let email = usernameTextfield.text
+            let oldPassword = emailTextfield.text
+            let newPassword = passwordTextfield.text
+            
+            ref.changePasswordForUser(email, fromOld: oldPassword, toNew: newPassword, withCompletionBlock: { error in
+                if error != nil{
+                    //TODO: code for error
+                    print("there was an error!")
+                }else{
+                    print("password changed!")
+                }
+                
+            })
+            
+            
+            
+        }else if(updateField == "email"){
+            let oldEmail = usernameTextfield.text
+            let newEmail = emailTextfield.text
+            let password = passwordTextfield.text
+            
+            ref.changeEmailForUser(oldEmail, password: password, toNewEmail: newEmail, withCompletionBlock: { error in
+                if error != nil{
+                    //TODO: process error
+                    print("there was an error")
+                }else{
+                    print("email updated!")
+                }
+            })
+        }
         
         
         
+        }else{
+            //TODO: prompt user to input data
+            print("please input data")
+        }
         
         
-        //2. on button click...
-        // update username (plus any future other details) in database
-        
-        
-        //update email, password in database && in security
-        
-        
-        // self.dismissViewController(true,completion:nil)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
-    
-    
+        
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         usernameTextfield.resignFirstResponder()
@@ -120,6 +212,13 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
         passwordTextfield.resignFirstResponder()
         return true
     }
+    
+    
+    @IBAction func cancelButton(sender: UIButton) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
     
 }
 

@@ -1,10 +1,10 @@
 /Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/CreateChangeViewController.o
+/Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/CreateChange.o
 /Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/ChangeViewController.o
 /Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/AddTweakViewController.o
 /Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/IdeaViewController.o
 /Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/AddIdeaViewController.o
 /Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/HomeViewController.o
-/Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/ChangePreviewViewController.o
 /Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/SearchViewController.o
 /Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/GoChangeConstants.o
 /Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/GoChangeClient.o
@@ -14,6 +14,7 @@
 /Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/CoreDataStackManager.o
 /Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/ResultsViewController.o
 /Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/SignupViewController.o
+/Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/UpdateUserInfoController.o
 /Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/FollowingViewController.o
 /Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/Change.o
 /Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/WebViewController.o

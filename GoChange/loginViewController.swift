@@ -28,26 +28,15 @@ class loginViewController:UIViewController,UITextFieldDelegate{
         emailTextfield.delegate = self
         passwordTextfield.delegate = self
         
-       
-        
-        
-        //check for saved user id
-        
-            
-       
-        
     }
     
     
     override func viewDidAppear(animated: Bool) {
         
-        
         userID = NSUserDefaults.standardUserDefaults().valueForKey("uid") as? String
-        print(userID)
-
         
         if (userID != nil){
-            print("user ID not nil")
+            //print("user ID not nil")
             segueToHomeScreen()
         }
     }
@@ -55,7 +44,7 @@ class loginViewController:UIViewController,UITextFieldDelegate{
     
     
     @IBAction func login(sender: AnyObject) {
-        
+        print("Attempting to log in")
         let email = emailTextfield.text
         let password = passwordTextfield.text
         
@@ -66,6 +55,7 @@ class loginViewController:UIViewController,UITextFieldDelegate{
                 
                 if error != nil{
                     //TODO: code for error
+                    print("error: \(error)")
                 }else{
                     print("user is authorized")
                     let usernameRef = self.ref.childByAppendingPath("users/\(authData.uid!)")
@@ -94,6 +84,18 @@ class loginViewController:UIViewController,UITextFieldDelegate{
     }
     
     
+    
+    @IBAction func signupControl(sender: UIButton) {
+        var controller:SignupViewController
+        
+        controller = self.storyboard?.instantiateViewControllerWithIdentifier("SignupViewController") as! SignupViewController
+        
+        self.presentViewController(controller, animated: true, completion: nil)
+    }
+    
+    
+    
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         emailTextfield.resignFirstResponder()
         passwordTextfield.resignFirstResponder()
@@ -110,6 +112,8 @@ class loginViewController:UIViewController,UITextFieldDelegate{
     
     func segueToHomeScreen(){
         let controller = self.storyboard?.instantiateViewControllerWithIdentifier("HomeViewController") as! HomeViewController
+        
+        
         self.presentViewController(controller, animated: true, completion: nil)
     }
  

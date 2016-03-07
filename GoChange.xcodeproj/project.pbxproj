@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		369EF17D1C80C24600D8D46A /* Change.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369EF17C1C80C24600D8D46A /* Change.swift */; };
 		369EF17F1C80C5D900D8D46A /* CoreDataStackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369EF17E1C80C5D900D8D46A /* CoreDataStackManager.swift */; };
+		36AE6F361C8C37A50041B5CD /* UpdateUserInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AE6F351C8C37A50041B5CD /* UpdateUserInfoController.swift */; };
+		36B03CC71C8DFBFF00E9427D /* CreateChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B03CC61C8DFBFF00E9427D /* CreateChange.swift */; };
 		36C37C6C1C7A00E3002B4FB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37C6B1C7A00E3002B4FB1 /* AppDelegate.swift */; };
 		36C37C711C7A00E3002B4FB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36C37C6F1C7A00E3002B4FB1 /* Main.storyboard */; };
 		36C37C741C7A00E3002B4FB1 /* GoChange.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 36C37C721C7A00E3002B4FB1 /* GoChange.xcdatamodeld */; };
@@ -18,7 +20,6 @@
 		36C37C8F1C7A00E3002B4FB1 /* GoChangeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37C8E1C7A00E3002B4FB1 /* GoChangeUITests.swift */; };
 		36C37CAE1C7A01AC002B4FB1 /* AddIdeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CA11C7A01AC002B4FB1 /* AddIdeaViewController.swift */; };
 		36C37CAF1C7A01AC002B4FB1 /* AddTweakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CA21C7A01AC002B4FB1 /* AddTweakViewController.swift */; };
-		36C37CB01C7A01AC002B4FB1 /* ChangePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CA31C7A01AC002B4FB1 /* ChangePreviewViewController.swift */; };
 		36C37CB11C7A01AC002B4FB1 /* ChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CA41C7A01AC002B4FB1 /* ChangeViewController.swift */; };
 		36C37CB21C7A01AC002B4FB1 /* CreateChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CA51C7A01AC002B4FB1 /* CreateChangeViewController.swift */; };
 		36C37CB31C7A01AC002B4FB1 /* FollowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CA61C7A01AC002B4FB1 /* FollowingViewController.swift */; };
@@ -56,6 +57,8 @@
 		0961F4BBEE6401B9B1D0DE43 /* Pods_GoChange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoChange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		369EF17C1C80C24600D8D46A /* Change.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Change.swift; sourceTree = "<group>"; };
 		369EF17E1C80C5D900D8D46A /* CoreDataStackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStackManager.swift; sourceTree = "<group>"; };
+		36AE6F351C8C37A50041B5CD /* UpdateUserInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateUserInfoController.swift; sourceTree = "<group>"; };
+		36B03CC61C8DFBFF00E9427D /* CreateChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateChange.swift; sourceTree = "<group>"; };
 		36C37C681C7A00E2002B4FB1 /* GoChange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoChange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C37C6B1C7A00E3002B4FB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36C37C701C7A00E3002B4FB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,7 +74,6 @@
 		36C37C901C7A00E3002B4FB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36C37CA11C7A01AC002B4FB1 /* AddIdeaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddIdeaViewController.swift; sourceTree = "<group>"; };
 		36C37CA21C7A01AC002B4FB1 /* AddTweakViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTweakViewController.swift; sourceTree = "<group>"; };
-		36C37CA31C7A01AC002B4FB1 /* ChangePreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePreviewViewController.swift; sourceTree = "<group>"; };
 		36C37CA41C7A01AC002B4FB1 /* ChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeViewController.swift; sourceTree = "<group>"; };
 		36C37CA51C7A01AC002B4FB1 /* CreateChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateChangeViewController.swift; sourceTree = "<group>"; };
 		36C37CA61C7A01AC002B4FB1 /* FollowingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowingViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36B03CC51C8DFBC700E9427D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				36B03CC61C8DFBFF00E9427D /* CreateChange.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		36C37C5F1C7A00E2002B4FB1 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +150,7 @@
 		36C37C6A1C7A00E3002B4FB1 /* GoChange */ = {
 			isa = PBXGroup;
 			children = (
+				36B03CC51C8DFBC700E9427D /* Controllers */,
 				36C37CA01C7A0125002B4FB1 /* Helper */,
 				36C37C9F1C7A0118002B4FB1 /* Other */,
 				36C37C9D1C7A0101002B4FB1 /* View Controllers */,
@@ -180,18 +191,18 @@
 		36C37C9D1C7A0101002B4FB1 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				36C37CAC1C7A01AC002B4FB1 /* SignupViewController.swift */,
 				36C37CA91C7A01AC002B4FB1 /* loginViewController.swift */,
+				36C37CAC1C7A01AC002B4FB1 /* SignupViewController.swift */,
+				36AE6F351C8C37A50041B5CD /* UpdateUserInfoController.swift */,
 				36C37CA71C7A01AC002B4FB1 /* HomeViewController.swift */,
-				36C37CA11C7A01AC002B4FB1 /* AddIdeaViewController.swift */,
-				36C37CA21C7A01AC002B4FB1 /* AddTweakViewController.swift */,
-				36C37CA31C7A01AC002B4FB1 /* ChangePreviewViewController.swift */,
-				36C37CA41C7A01AC002B4FB1 /* ChangeViewController.swift */,
 				36C37CA51C7A01AC002B4FB1 /* CreateChangeViewController.swift */,
-				36C37CA61C7A01AC002B4FB1 /* FollowingViewController.swift */,
+				36C37CA41C7A01AC002B4FB1 /* ChangeViewController.swift */,
+				36C37CA11C7A01AC002B4FB1 /* AddIdeaViewController.swift */,
 				36C37CA81C7A01AC002B4FB1 /* IdeaViewController.swift */,
-				36C37CAA1C7A01AC002B4FB1 /* ResultsViewController.swift */,
+				36C37CA21C7A01AC002B4FB1 /* AddTweakViewController.swift */,
 				36C37CAB1C7A01AC002B4FB1 /* SearchViewController.swift */,
+				36C37CA61C7A01AC002B4FB1 /* FollowingViewController.swift */,
+				36C37CAA1C7A01AC002B4FB1 /* ResultsViewController.swift */,
 				36C37CAD1C7A01AC002B4FB1 /* WebViewController.swift */,
 			);
 			name = "View Controllers";
@@ -200,6 +211,7 @@
 		36C37C9E1C7A010F002B4FB1 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				36C37CBC1C7A01C5002B4FB1 /* GoChangeConstants.swift */,
 				369EF17E1C80C5D900D8D46A /* CoreDataStackManager.swift */,
 				36C37C721C7A00E3002B4FB1 /* GoChange.xcdatamodeld */,
 				369EF17C1C80C24600D8D46A /* Change.swift */,
@@ -220,7 +232,6 @@
 			isa = PBXGroup;
 			children = (
 				36C37CBB1C7A01C5002B4FB1 /* GoChangeClient.swift */,
-				36C37CBC1C7A01C5002B4FB1 /* GoChangeConstants.swift */,
 				36C37CBD1C7A01C5002B4FB1 /* GoChangeConvenience.swift */,
 			);
 			name = Helper;
@@ -426,12 +437,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				36C37CB21C7A01AC002B4FB1 /* CreateChangeViewController.swift in Sources */,
+				36B03CC71C8DFBFF00E9427D /* CreateChange.swift in Sources */,
 				36C37CB11C7A01AC002B4FB1 /* ChangeViewController.swift in Sources */,
 				36C37CAF1C7A01AC002B4FB1 /* AddTweakViewController.swift in Sources */,
 				36C37CB51C7A01AC002B4FB1 /* IdeaViewController.swift in Sources */,
 				36C37CAE1C7A01AC002B4FB1 /* AddIdeaViewController.swift in Sources */,
 				36C37CB41C7A01AC002B4FB1 /* HomeViewController.swift in Sources */,
-				36C37CB01C7A01AC002B4FB1 /* ChangePreviewViewController.swift in Sources */,
 				36C37CB81C7A01AC002B4FB1 /* SearchViewController.swift in Sources */,
 				36C37CBF1C7A01C5002B4FB1 /* GoChangeConstants.swift in Sources */,
 				36C37CBE1C7A01C5002B4FB1 /* GoChangeClient.swift in Sources */,
@@ -441,6 +452,7 @@
 				369EF17F1C80C5D900D8D46A /* CoreDataStackManager.swift in Sources */,
 				36C37CB71C7A01AC002B4FB1 /* ResultsViewController.swift in Sources */,
 				36C37CB91C7A01AC002B4FB1 /* SignupViewController.swift in Sources */,
+				36AE6F361C8C37A50041B5CD /* UpdateUserInfoController.swift in Sources */,
 				36C37CB31C7A01AC002B4FB1 /* FollowingViewController.swift in Sources */,
 				36C37C741C7A00E3002B4FB1 /* GoChange.xcdatamodeld in Sources */,
 				369EF17D1C80C24600D8D46A /* Change.swift in Sources */,

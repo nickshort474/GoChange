@@ -88,7 +88,6 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
 @import CoreData;
-@import Foundation;
 @import ObjectiveC;
 #endif
 
@@ -101,10 +100,7 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 
 SWIFT_CLASS("_TtC8GoChange21AddIdeaViewController")
 @interface AddIdeaViewController : UIViewController
-@property (nonatomic, copy) NSString * __nonnull apiKey;
-@property (nonatomic, copy) NSString * __nonnull requestURL;
-@property (nonatomic, copy) NSString * __nonnull petitionURL;
-@property (nonatomic, copy) NSString * __nonnull petitionId;
+@property (nonatomic) NSInteger petitionId;
 @property (nonatomic, strong) NSURLSession * __nonnull session;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
@@ -161,27 +157,6 @@ SWIFT_CLASS("_TtC8GoChange6Change")
 - (nonnull instancetype)initWithDictionary:(NSDictionary<NSString *, id> * __nonnull)dictionary context:(NSManagedObjectContext * __nonnull)context OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class Firebase;
-@class UITextField;
-@class UITextView;
-
-SWIFT_CLASS("_TtC8GoChange27ChangePreviewViewController")
-@interface ChangePreviewViewController : UIViewController
-@property (nonatomic, readonly, strong) Firebase * __null_unspecified firebaseRef;
-@property (nonatomic, copy) NSString * __nonnull passedName;
-@property (nonatomic, weak) IBOutlet UITextField * __null_unspecified nameTextfield;
-@property (nonatomic, weak) IBOutlet UITextView * __null_unspecified descriptionTextView;
-@property (nonatomic, copy) NSString * __null_unspecified changeName;
-@property (nonatomic, copy) NSString * __null_unspecified changeDescription;
-- (void)viewDidLoad;
-- (void)didReceiveMemoryWarning;
-@property (nonatomic, strong) NSManagedObjectContext * __nonnull sharedContext;
-- (IBAction)saveChangeClick:(UIButton * __nonnull)sender;
-- (void)leftButtonAction;
-- (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
 
 SWIFT_CLASS("_TtC8GoChange20ChangeViewController")
 @interface ChangeViewController : UIViewController
@@ -194,26 +169,48 @@ SWIFT_CLASS("_TtC8GoChange20ChangeViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class Firebase;
+
+SWIFT_CLASS("_TtC8GoChange12CreateChange")
+@interface CreateChange : NSObject
+@property (nonatomic, strong) Firebase * __null_unspecified ref;
+- (nonnull instancetype)initWithCurrentDetailData:(NSString * __nonnull)currentDetailData currentNameData:(NSString * __nonnull)currentNameData OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, strong) NSManagedObjectContext * __nonnull sharedContext;
+- (void)createCoreDataChange:(NSString * __nonnull)currentDetailData currentNameData:(NSString * __nonnull)currentNameData;
+- (void)saveChangeToFirebase:(NSString * __nonnull)currentDetailData currentNameData:(NSString * __nonnull)currentNameData;
+@end
+
+@class UITextField;
+@class UITextView;
+@class UITableView;
+@class NSIndexPath;
+@class UITableViewCell;
+@class UIImageView;
 
 SWIFT_CLASS("_TtC8GoChange26CreateChangeViewController")
-@interface CreateChangeViewController : UIViewController <UIScrollViewDelegate, UITextFieldDelegate, UITextViewDelegate>
-@property (nonatomic, weak) IBOutlet UITextField * __null_unspecified nameTextfield;
-@property (nonatomic, weak) IBOutlet UITextView * __null_unspecified detailsTextView;
-@property (nonatomic, weak) IBOutlet UITextView * __null_unspecified inputTextView;
-@property (nonatomic, copy) NSString * __nonnull savedText;
-@property (nonatomic, copy) NSString * __nonnull currentField;
+@interface CreateChangeViewController : UIViewController <UIScrollViewDelegate, UITextFieldDelegate, UITableViewDelegate, UITextViewDelegate>
+@property (nonatomic, weak) IBOutlet UITextField * __null_unspecified nameField;
+@property (nonatomic, weak) IBOutlet UITextView * __null_unspecified detailsField;
+@property (nonatomic, weak) IBOutlet UIImageView * __null_unspecified detailListViewDivider;
+@property (nonatomic, weak) IBOutlet UIImageView * __null_unspecified nameDetailDivider;
+@property (nonatomic, weak) IBOutlet UIButton * __null_unspecified namePlusButton;
+@property (nonatomic, weak) IBOutlet UIButton * __null_unspecified detailsPlusButton;
+@property (nonatomic, weak) IBOutlet UIButton * __null_unspecified postButton;
 @property (nonatomic, copy) NSString * __nonnull currentNameData;
 @property (nonatomic, copy) NSString * __nonnull currentDetailData;
-@property (nonatomic, readonly, copy) NSString * __nonnull nameInputPrompt;
-@property (nonatomic, readonly, copy) NSString * __nonnull detailInputPrompt;
+@property (nonatomic, weak) IBOutlet UITableView * __null_unspecified solutionTable;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 @property (nonatomic, strong) NSManagedObjectContext * __nonnull sharedContext;
 - (IBAction)homeButtonClick:(UIButton * __nonnull)sender;
+- (IBAction)nameActionButton:(UIButton * __nonnull)sender;
+- (IBAction)detailsActionButton:(UIButton * __nonnull)sender;
 - (void)textFieldDidBeginEditing:(UITextField * __nonnull)textField;
 - (void)textViewDidBeginEditing:(UITextView * __nonnull)textView;
-- (BOOL)textView:(UITextView * __nonnull)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString * __nonnull)text;
-- (IBAction)previewChange:(UIButton * __nonnull)sender;
+- (NSInteger)tableView:(UITableView * __nonnull)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell * __nonnull)tableView:(UITableView * __nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
+- (void)tableView:(UITableView * __nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
+- (IBAction)PostInfo:(UIButton * __nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -255,9 +252,12 @@ SWIFT_CLASS("_TtC8GoChange18HomeViewController")
 @interface HomeViewController : UIViewController
 @property (nonatomic, weak) IBOutlet UILabel * __null_unspecified welcomeLabel;
 @property (nonatomic, strong) Firebase * __null_unspecified ref;
+@property (nonatomic, weak) IBOutlet UIButton * __null_unspecified followButton;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified followingLabel;
 - (void)viewDidLoad;
+@property (nonatomic, strong) NSManagedObjectContext * __nonnull sharedContext;
 - (IBAction)addUserData:(UIButton * __nonnull)sender;
-- (void)viewDidAppear:(BOOL)animated;
+- (void)checkCoreData;
 - (IBAction)logout:(UIButton * __nonnull)sender;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -300,12 +300,33 @@ SWIFT_CLASS("_TtC8GoChange20SignupViewController")
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified usernameTextfield;
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified emailTextfield;
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified passwordTextfield;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified label1;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified label2;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified label3;
+@property (nonatomic, copy) NSString * __nonnull sendingController;
+@property (nonatomic, copy) NSString * __nonnull updateField;
 @property (nonatomic, weak) IBOutlet UIButton * __null_unspecified signupButton;
 @property (nonatomic, strong) Firebase * __null_unspecified ref;
 - (void)viewDidLoad;
 - (IBAction)signupButton:(UIButton * __nonnull)sender;
 - (void)updateChildValues;
 - (BOOL)textFieldShouldReturn:(UITextField * __nonnull)textField;
+- (IBAction)cancelButton:(UIButton * __nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8GoChange24UpdateUserInfoController")
+@interface UpdateUserInfoController : UIViewController
+@property (nonatomic, strong) Firebase * __null_unspecified ref;
+@property (nonatomic, copy) NSString * __nonnull currentlyUpdating;
+- (void)viewDidLoad;
+- (IBAction)updatePassword:(UIButton * __nonnull)sender;
+- (IBAction)updateUsername:(UIButton * __nonnull)sender;
+- (IBAction)updateEmail:(UIButton * __nonnull)sender;
+- (void)segueToInput;
+- (IBAction)cancelUpdate:(UIButton * __nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -329,6 +350,7 @@ SWIFT_CLASS("_TtC8GoChange19loginViewController")
 - (void)viewDidLoad;
 - (void)viewDidAppear:(BOOL)animated;
 - (IBAction)login:(id __nonnull)sender;
+- (IBAction)signupControl:(UIButton * __nonnull)sender;
 - (BOOL)textFieldShouldReturn:(UITextField * __nonnull)textField;
 - (void)didReceiveMemoryWarning;
 - (void)segueToHomeScreen;

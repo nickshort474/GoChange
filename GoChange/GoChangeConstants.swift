@@ -16,6 +16,11 @@ extension GoChangeClient{
         
         static var userID:String = ""
         static var userName:String = ""
+        static var apiKey = "1a4f569e8857b5ce19ed32d20b799f1e8d922b8b3bd5413cbaa8fb9c2664ad41"
+        
+        static var requestURL = "https://api.change.org/v1/petitions/get_id"
+        static var petitionURL = "http://www.change.org/p/dunkin-donuts-stop-using-styrofoam-cups-and-switch-to-a-more-eco-friendly-solution"
+        
     }
     
     

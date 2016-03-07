@@ -10,38 +10,42 @@ import UIKit
 import CoreData
 
 
-class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFieldDelegate {
+class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFieldDelegate,UITableViewDelegate {
     
     
-    @IBOutlet weak var nameTextfield: UITextField!
-    @IBOutlet weak var detailsTextView: UITextView!
-    @IBOutlet weak var inputTextView: UITextView!
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var detailsField: UITextView!
     
-    var savedText:String = ""
-    var currentField:String = ""
+    @IBOutlet weak var detailListViewDivider: UIImageView!
+    @IBOutlet weak var nameDetailDivider: UIImageView!
+    
+    @IBOutlet weak var namePlusButton: UIButton!
+    @IBOutlet weak var detailsPlusButton: UIButton!
+    @IBOutlet weak var postButton: UIButton!
     
     var currentNameData:String = ""
     var currentDetailData:String = ""
     
-    let nameInputPrompt:String = "Please input a name for the change you would like to see, either in the world or yourself"
     
-    let detailInputPrompt:String = "Please input some details about the change you would like to see, maybe some specifics of the change or even the reasons behind wanting the change"
+    @IBOutlet weak var solutionTable: UITableView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        nameTextfield.delegate = self
-        
-        detailsTextView.delegate = self
-        
-        inputTextView.delegate = self
-        
-        inputTextView.hidden = true
+        nameField.delegate = self
+        detailsField.delegate = self
+        solutionTable.delegate = self
         
         
         
-        
+             
+        namePlusButton.hidden = true
+        detailsPlusButton.hidden = true
+        postButton.alpha = 0.5
+        postButton.enabled = false
     }
     
     
@@ -50,128 +54,144 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         // Dispose of any resources that can be recreated.
     }
     
+    
+    //-------------------- core data------------------
     lazy var sharedContext:NSManagedObjectContext = {
         return CoreDataStackManager.sharedInstance().managedObjectContext
     }()
     
     
     
+    //-------------------Button methods---------------
     @IBAction func homeButtonClick(sender: UIButton) {
         navigationController?.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
+    @IBAction func nameActionButton(sender: UIButton) {
+        nameField.resignFirstResponder()
+        currentNameData = nameField.text!
+        namePlusButton.hidden = true
         
+        if(nameField.text != "" && detailsField.text != ""){
+            postButton.alpha = 1
+            postButton.enabled = true
+
+        }
         
     }
     
     
-    // Name textfield clicked
-    func textFieldDidBeginEditing(textField: UITextField) {
+    @IBAction func detailsActionButton(sender: UIButton) {
         
-        currentField = "Name"
+        //TODO: check for /n character, delete if necessary
         
-        // show input box
-        inputTextView.hidden = false
+        detailsField.resignFirstResponder()
+         currentDetailData = detailsField.text!
+        detailsPlusButton.hidden = true
         
-        // show prompt string if first time
-        if(nameTextfield.text == ""){
-            inputTextView.text = nameInputPrompt
-        }else{
-            inputTextView.text = currentNameData
+        if(nameField.text != "" && detailsField.text != ""){
+            postButton.alpha = 1
+            postButton.enabled = true
+            
         }
         
+    }
+    
+    
+    //-----------------textfield methods-------------------
+    func textFieldDidBeginEditing(textField: UITextField) {
+        namePlusButton.hidden = false
+    }
+    
+    
+    
+    
+    
+    
+    //---------------------textView methods------------
+    func textViewDidBeginEditing(textView: UITextView) {
+        if(textView.text == "Please enter details of the change you would like to see..."){
+            textView.text = ""
+        }
+        textView.textColor = UIColor.blackColor()
+        detailsPlusButton.hidden = false
+        namePlusButton.hidden = true
         
-        nameTextfield.resignFirstResponder()
+    }
+    
+    
+    
+    
+    
+    //--------------------Table view methods--------------
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cellID = "solutionCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath)
+        
+        cell.textLabel!.text = "Add a solution"
+        
+        return cell
+        
+    }
+    
+    func tableView(tableView:UITableView,didSelectRowAtIndexPath indexPath: NSIndexPath){
+        
+        var controller:AddIdeaViewController
+        
+        controller = self.storyboard?.instantiateViewControllerWithIdentifier("AddIdeaViewController") as! AddIdeaViewController
+        
+        self.navigationController?.pushViewController(controller, animated: true)
+        
+        
         
        
     }
+
     
     
-    
-    func textViewDidBeginEditing(textView: UITextView) {
         
-        // if detail text view
-        if(textView.tag == 2){
+    //---------------------Posting/Saving data----------------
+    @IBAction func PostInfo(sender: UIButton) {
+        
+        
+        
+        if (currentDetailData == "" || currentNameData == ""){
+            //TODO: message to user to get them to fill in form
             
-            currentField = "Details"
-            inputTextView.hidden = false
+        }else{
+            CreateChange(currentDetailData:currentDetailData,currentNameData:
+                currentNameData)
             
-            // show prompt data if first time
-            if(detailsTextView.text == ""){
-                 inputTextView.text = detailInputPrompt
-            }else{
-                inputTextView.text = currentDetailData
+            
+            
+            /*
+            var changeDictionary:[String:AnyObject] = [String:AnyObject]()
+            changeDictionary[Change.Keys.changeName] = currentNameData
+            changeDictionary[Change.Keys.changeDescription] = currentDetailData
+        
+            let newChange = Change(dictionary: changeDictionary,context: sharedContext)
+        
+            do{
+                try self.sharedContext.save()
+            }catch{
+                //TODO: Catch errors!
             }
-            detailsTextView.resignFirstResponder()
+            */
+            self.navigationController?.popToRootViewControllerAnimated(true)
+            
             
         }
         
-        // if input popup textView clicked
-        if(textView.tag == 1){
-            
-            inputTextView.becomeFirstResponder()
-            
-            if(inputTextView.text == nameInputPrompt || inputTextView.text == detailInputPrompt){
-                inputTextView.text = ""
-            }
-        }
     }
     
-    
-    
-    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
-        
-        if(text == "\n" && textView.tag == 1 && currentField == "Name"){
-            
-            nameTextfield.text = inputTextView.text
-            currentNameData = inputTextView.text
-            inputTextView.resignFirstResponder()
-            inputTextView.hidden = true
-            
-            
-        }else if(text == "\n" && textView.tag == 1 && currentField == "Details"){
-            
-            detailsTextView.text = inputTextView.text
-            currentDetailData = inputTextView.text
-            inputTextView.resignFirstResponder()
-            inputTextView.hidden = true
-        }
-        return true
-        
-    }
-   
-    
-   
-    
-    
-    @IBAction func previewChange(sender: UIButton) {
-        
-        // save to core data
-        
-        //create dictionary
-        
-        var changeDictionary:[String:AnyObject] = [String:AnyObject]()
-        changeDictionary[Change.Keys.changeName] = currentNameData
-        changeDictionary[Change.Keys.changeDescription] = currentDetailData
-        
-        let newChange = Change(dictionary: changeDictionary,context: sharedContext)
-        
-        do{
-            try self.sharedContext.save()
-        }catch{
-            //TODO: Catch errors!
-        }
-        
-        
-        var controller:ChangePreviewViewController
-        
-        controller = self.storyboard?.instantiateViewControllerWithIdentifier("ChangePreviewViewController") as! ChangePreviewViewController
-        controller.passedName = currentNameData
-        
-        
-        let navController = self.navigationController
-        
-        navController?.pushViewController(controller, animated: true)
-        
-    }
     
 }
 

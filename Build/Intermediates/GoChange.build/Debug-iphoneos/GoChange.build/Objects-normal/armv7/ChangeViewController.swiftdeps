@@ -6,19 +6,19 @@ provides-nominal:
 provides-member:
 - ["C8GoChange20ChangeViewController", ""]
 provides-dynamic-lookup:
-- "viewIdeaClick"
-- "addIdeaButton"
-- "addIdeaClick"
 - "didReceiveMemoryWarning"
+- "addIdeaButton"
 - "viewDidLoad"
+- "addIdeaClick"
+- "viewIdeaClick"
 depends-top-level:
-- "ChangeViewController"
-- !private "BooleanLiteralType"
 - !private "IdeaViewController"
+- !private "BooleanLiteralType"
 - "UIViewController"
-- !private "AddIdeaViewController"
-- "UIButton"
+- "ChangeViewController"
 - !private "StringLiteralType"
+- "UIButton"
+- !private "AddIdeaViewController"
 depends-member:
 - ["PSs9AnyObject", "addIdeaButton"]
 - ["PSs9AnyObject", "addIdeaClick"]
@@ -257,6 +257,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreData.swiftmodule"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FirebaseServerValue.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FTransactionResult.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FMutableData.h"
@@ -270,5 +271,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreData.swiftmodule"
 interface-hash: "8f0d30083da07b10a825544bf04274a9"
