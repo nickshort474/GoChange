@@ -26,6 +26,9 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
     var currentNameData:String = ""
     var currentDetailData:String = ""
     
+    var sendingController:String = ""
+    var isOwner:String = ""
+    
     
     @IBOutlet weak var solutionTable: UITableView!
     
@@ -35,13 +38,28 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        //TODO: If coming from FollowingViewController load core data details
+        
+        if(sendingController == "following"){
+            // load core data 
+            if(isOwner == "yes"){
+                // allow edit buttons for name and details 
+            }
+            
+            
+        }else if(sendingController == "results"){
+            //TODO: load data from firebase
+            
+            //TODO: change POST button to SAVE/FOLLOW change
+        }
+        
+        // If owner of change allow editing buttons
+        
+        
         nameField.delegate = self
         detailsField.delegate = self
         solutionTable.delegate = self
         
-        
-        
-             
         namePlusButton.hidden = true
         detailsPlusButton.hidden = true
         postButton.alpha = 0.5
@@ -53,12 +71,6 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    //-------------------- core data------------------
-    lazy var sharedContext:NSManagedObjectContext = {
-        return CoreDataStackManager.sharedInstance().managedObjectContext
-    }()
     
     
     
@@ -161,30 +173,23 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
     //---------------------Posting/Saving data----------------
     @IBAction func PostInfo(sender: UIButton) {
         
+        //TODO: if button == POST save changes to core data and firebase
+        let owner = true
+        
+        
+        // else if button == SAVE/FOLLOW save changes to core data only
+        // let owner = false
         
         
         if (currentDetailData == "" || currentNameData == ""){
+            
             //TODO: message to user to get them to fill in form
+            print("please input name and detail data")
             
         }else{
-            CreateChange(currentDetailData:currentDetailData,currentNameData:
-                currentNameData)
+            _ = CreateChange(currentDetailData:currentDetailData,currentNameData:
+                currentNameData,owner:owner)
             
-            
-            
-            /*
-            var changeDictionary:[String:AnyObject] = [String:AnyObject]()
-            changeDictionary[Change.Keys.changeName] = currentNameData
-            changeDictionary[Change.Keys.changeDescription] = currentDetailData
-        
-            let newChange = Change(dictionary: changeDictionary,context: sharedContext)
-        
-            do{
-                try self.sharedContext.save()
-            }catch{
-                //TODO: Catch errors!
-            }
-            */
             self.navigationController?.popToRootViewControllerAnimated(true)
             
             

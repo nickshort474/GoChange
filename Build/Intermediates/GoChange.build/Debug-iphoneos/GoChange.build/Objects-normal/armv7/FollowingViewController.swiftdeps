@@ -6,17 +6,17 @@ provides-nominal:
 provides-member:
 - ["C8GoChange23FollowingViewController", ""]
 provides-dynamic-lookup:
-- "HomeButtonClick"
 - "didReceiveMemoryWarning"
+- "HomeButtonClick"
 - "FollowedChangeButton"
 - "viewDidLoad"
 depends-top-level:
-- !private "ChangeViewController"
-- !private "BooleanLiteralType"
 - "FollowingViewController"
-- "UIViewController"
-- !private "StringLiteralType"
+- !private "BooleanLiteralType"
 - "UIButton"
+- !private "StringLiteralType"
+- "UIViewController"
+- !private "CreateChangeViewController"
 depends-member:
 - ["PSs9AnyObject", "FollowedChangeButton"]
 - ["PSs9AnyObject", "HomeButtonClick"]
@@ -26,6 +26,7 @@ depends-member:
 - !private ["PSs9AnyObject", "instantiateViewControllerWithIdentifier"]
 - !private ["PSs9AnyObject", "navigationController"]
 - !private ["PSs9AnyObject", "pushViewController"]
+- !private ["PSs9AnyObject", "sendingController"]
 - !private ["PSs9AnyObject", "storyboard"]
 - ["PSs9AnyObject", "viewDidLoad"]
 - ["PSs9AnyObject", ""]
@@ -37,9 +38,11 @@ depends-member:
 - !private ["PSs11CVarArgType", "instantiateViewControllerWithIdentifier"]
 - !private ["PSs11CVarArgType", "navigationController"]
 - !private ["PSs11CVarArgType", "pushViewController"]
+- !private ["PSs11CVarArgType", "sendingController"]
 - !private ["PSs11CVarArgType", "storyboard"]
 - ["PSs11CVarArgType", "viewDidLoad"]
 - ["PSs11CVarArgType", ""]
+- !private ["C8GoChange26CreateChangeViewController", "sendingController"]
 - ["PSs23CustomStringConvertible", "FollowedChangeButton"]
 - ["PSs23CustomStringConvertible", "HomeButtonClick"]
 - ["PSs23CustomStringConvertible", "didReceiveMemoryWarning"]
@@ -48,6 +51,7 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "instantiateViewControllerWithIdentifier"]
 - !private ["PSs23CustomStringConvertible", "navigationController"]
 - !private ["PSs23CustomStringConvertible", "pushViewController"]
+- !private ["PSs23CustomStringConvertible", "sendingController"]
 - !private ["PSs23CustomStringConvertible", "storyboard"]
 - ["PSs23CustomStringConvertible", "viewDidLoad"]
 - ["PSs23CustomStringConvertible", ""]
@@ -59,10 +63,11 @@ depends-member:
 - !private ["PSs9Equatable", "instantiateViewControllerWithIdentifier"]
 - !private ["PSs9Equatable", "navigationController"]
 - !private ["PSs9Equatable", "pushViewController"]
+- !private ["PSs9Equatable", "sendingController"]
 - !private ["PSs9Equatable", "storyboard"]
 - ["PSs9Equatable", "viewDidLoad"]
 - ["PSs9Equatable", ""]
-- !private ["C8GoChange23FollowingViewController", "ChangeViewController"]
+- !private ["C8GoChange23FollowingViewController", "CreateChangeViewController"]
 - ["C8GoChange23FollowingViewController", "FollowedChangeButton"]
 - ["C8GoChange23FollowingViewController", "HomeButtonClick"]
 - ["C8GoChange23FollowingViewController", "UIButton"]
@@ -80,6 +85,7 @@ depends-member:
 - !private ["PSs8Hashable", "instantiateViewControllerWithIdentifier"]
 - !private ["PSs8Hashable", "navigationController"]
 - !private ["PSs8Hashable", "pushViewController"]
+- !private ["PSs8Hashable", "sendingController"]
 - !private ["PSs8Hashable", "storyboard"]
 - ["PSs8Hashable", "viewDidLoad"]
 - ["PSs8Hashable", ""]
@@ -90,6 +96,7 @@ depends-member:
 - ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "navigationController"]
 - !private ["PSo8NSCoding", "pushViewController"]
+- !private ["PSo8NSCoding", "sendingController"]
 - !private ["PSo8NSCoding", "storyboard"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", ""]
@@ -100,10 +107,11 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "init"]
 - !private ["PSo26NSExtensionRequestHandling", "navigationController"]
 - !private ["PSo26NSExtensionRequestHandling", "pushViewController"]
+- !private ["PSo26NSExtensionRequestHandling", "sendingController"]
 - !private ["PSo26NSExtensionRequestHandling", "storyboard"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", ""]
-- !private ["CSo8NSObject", "ChangeViewController"]
+- !private ["CSo8NSObject", "CreateChangeViewController"]
 - ["CSo8NSObject", "FollowedChangeButton"]
 - ["CSo8NSObject", "HomeButtonClick"]
 - ["CSo8NSObject", "UIButton"]
@@ -113,6 +121,7 @@ depends-member:
 - !private ["CSo8NSObject", "instantiateViewControllerWithIdentifier"]
 - !private ["CSo8NSObject", "navigationController"]
 - !private ["CSo8NSObject", "pushViewController"]
+- !private ["CSo8NSObject", "sendingController"]
 - !private ["CSo8NSObject", "storyboard"]
 - ["CSo8NSObject", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", "FollowedChangeButton"]
@@ -123,6 +132,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "instantiateViewControllerWithIdentifier"]
 - !private ["PSo16NSObjectProtocol", "navigationController"]
 - !private ["PSo16NSObjectProtocol", "pushViewController"]
+- !private ["PSo16NSObjectProtocol", "sendingController"]
 - !private ["PSo16NSObjectProtocol", "storyboard"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", ""]
@@ -134,6 +144,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "init"]
 - !private ["PSo21UIAppearanceContainer", "navigationController"]
 - !private ["PSo21UIAppearanceContainer", "pushViewController"]
+- !private ["PSo21UIAppearanceContainer", "sendingController"]
 - !private ["PSo21UIAppearanceContainer", "storyboard"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", ""]
@@ -144,6 +155,7 @@ depends-member:
 - ["PSo18UIContentContainer", "init"]
 - !private ["PSo18UIContentContainer", "navigationController"]
 - !private ["PSo18UIContentContainer", "pushViewController"]
+- !private ["PSo18UIContentContainer", "sendingController"]
 - !private ["PSo18UIContentContainer", "storyboard"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", ""]
@@ -154,12 +166,13 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "init"]
 - !private ["PSo18UIFocusEnvironment", "navigationController"]
 - !private ["PSo18UIFocusEnvironment", "pushViewController"]
+- !private ["PSo18UIFocusEnvironment", "sendingController"]
 - !private ["PSo18UIFocusEnvironment", "storyboard"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", ""]
 - !private ["CSo22UINavigationController", "dismissViewControllerAnimated"]
 - !private ["CSo22UINavigationController", "pushViewController"]
-- !private ["CSo11UIResponder", "ChangeViewController"]
+- !private ["CSo11UIResponder", "CreateChangeViewController"]
 - ["CSo11UIResponder", "FollowedChangeButton"]
 - ["CSo11UIResponder", "HomeButtonClick"]
 - ["CSo11UIResponder", "UIButton"]
@@ -168,8 +181,10 @@ depends-member:
 - ["CSo11UIResponder", "init"]
 - !private ["CSo11UIResponder", "navigationController"]
 - !private ["CSo11UIResponder", "pushViewController"]
+- !private ["CSo11UIResponder", "sendingController"]
 - !private ["CSo11UIResponder", "storyboard"]
 - ["CSo11UIResponder", "viewDidLoad"]
+- !private ["PSo20UIScrollViewDelegate", "sendingController"]
 - ["PSo16UIStateRestoring", "FollowedChangeButton"]
 - ["PSo16UIStateRestoring", "HomeButtonClick"]
 - ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
@@ -177,10 +192,14 @@ depends-member:
 - ["PSo16UIStateRestoring", "init"]
 - !private ["PSo16UIStateRestoring", "navigationController"]
 - !private ["PSo16UIStateRestoring", "pushViewController"]
+- !private ["PSo16UIStateRestoring", "sendingController"]
 - !private ["PSo16UIStateRestoring", "storyboard"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", ""]
 - !private ["CSo12UIStoryboard", "instantiateViewControllerWithIdentifier"]
+- !private ["PSo19UITableViewDelegate", "sendingController"]
+- !private ["PSo19UITextFieldDelegate", "sendingController"]
+- !private ["PSo18UITextViewDelegate", "sendingController"]
 - ["PSo18UITraitEnvironment", "FollowedChangeButton"]
 - ["PSo18UITraitEnvironment", "HomeButtonClick"]
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
@@ -188,10 +207,11 @@ depends-member:
 - ["PSo18UITraitEnvironment", "init"]
 - !private ["PSo18UITraitEnvironment", "navigationController"]
 - !private ["PSo18UITraitEnvironment", "pushViewController"]
+- !private ["PSo18UITraitEnvironment", "sendingController"]
 - !private ["PSo18UITraitEnvironment", "storyboard"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", ""]
-- !private ["CSo16UIViewController", "ChangeViewController"]
+- !private ["CSo16UIViewController", "CreateChangeViewController"]
 - ["CSo16UIViewController", "FollowedChangeButton"]
 - ["CSo16UIViewController", "HomeButtonClick"]
 - ["CSo16UIViewController", "UIButton"]
@@ -200,12 +220,14 @@ depends-member:
 - ["CSo16UIViewController", "init"]
 - !private ["CSo16UIViewController", "navigationController"]
 - !private ["CSo16UIViewController", "pushViewController"]
+- !private ["CSo16UIViewController", "sendingController"]
 - !private ["CSo16UIViewController", "storyboard"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", ""]
 depends-nominal:
 - "PSs9AnyObject"
 - "PSs11CVarArgType"
+- !private "C8GoChange26CreateChangeViewController"
 - "PSs23CustomStringConvertible"
 - "PSs9Equatable"
 - "C8GoChange23FollowingViewController"
@@ -220,8 +242,12 @@ depends-nominal:
 - "PSo18UIFocusEnvironment"
 - !private "CSo22UINavigationController"
 - "CSo11UIResponder"
+- !private "PSo20UIScrollViewDelegate"
 - "PSo16UIStateRestoring"
 - !private "CSo12UIStoryboard"
+- !private "PSo19UITableViewDelegate"
+- !private "PSo19UITextFieldDelegate"
+- !private "PSo18UITextViewDelegate"
 - "PSo18UITraitEnvironment"
 - "CSo16UIViewController"
 depends-dynamic-lookup:

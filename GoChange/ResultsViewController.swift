@@ -23,9 +23,12 @@ class ResultsViewController: UIViewController {
     @IBAction func ResultLinkButton(sender: UIButton) {
         //ChangeViewController
         
-        var controller:ChangeViewController
-        controller = self.storyboard?.instantiateViewControllerWithIdentifier("ChangeViewController") as! ChangeViewController
+        var controller:CreateChangeViewController
+        controller = self.storyboard?.instantiateViewControllerWithIdentifier("CreateChangeViewController") as! CreateChangeViewController
         let navigationController = self.navigationController
+        
+        controller.sendingController = "results"
+        controller.isOwner = "no"
         
         navigationController?.pushViewController(controller,animated: true)
         

@@ -16,10 +16,17 @@ class CreateChange:NSObject{
     var ref = Firebase(url:"https://gochange.firebaseio.com/change")
     
     
-    init(currentDetailData:String,currentNameData:String){
+    init(currentDetailData:String,currentNameData:String,owner:Bool){
         super.init()
-        createCoreDataChange(currentDetailData,currentNameData: currentNameData)
-        saveChangeToFirebase(currentDetailData,currentNameData: currentNameData)
+        
+        if(owner == true){
+            createCoreDataChange(currentDetailData,currentNameData: currentNameData,owner:owner)
+            saveChangeToFirebase(currentDetailData,currentNameData: currentNameData)
+        }else{
+            createCoreDataChange(currentDetailData,currentNameData: currentNameData,owner:owner)
+        }
+        
+        
     }
     
     
@@ -30,13 +37,15 @@ class CreateChange:NSObject{
     
     
     
-    func createCoreDataChange(currentDetailData:String,currentNameData:String){
+    func createCoreDataChange(currentDetailData:String,currentNameData:String,owner:Bool){
         
         var changeDictionary:[String:AnyObject] = [String:AnyObject]()
         
         changeDictionary[Change.Keys.changeName] = currentNameData
         changeDictionary[Change.Keys.changeDescription] = currentDetailData
-    
+        changeDictionary[Change.Keys.owner] = owner
+        
+        
         let newChange = Change(dictionary: changeDictionary,context: sharedContext)
     
         do{

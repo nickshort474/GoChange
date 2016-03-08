@@ -6,56 +6,54 @@ provides-nominal:
 provides-member:
 - ["C8GoChange26CreateChangeViewController", ""]
 provides-dynamic-lookup:
-- "namePlusButton"
 - "currentNameData"
-- "tableView"
-- "tableView"
-- "tableView"
-- "nameField"
-- "textFieldDidBeginEditing"
-- "detailsPlusButton"
-- "textViewDidBeginEditing"
-- "viewDidLoad"
-- "currentDetailData"
-- "nameDetailDivider"
-- "nameActionButton"
-- "detailsActionButton"
-- "postButton"
-- "PostInfo"
-- "didReceiveMemoryWarning"
-- "detailsField"
 - "detailListViewDivider"
+- "textFieldDidBeginEditing"
+- "nameActionButton"
+- "nameField"
+- "detailsActionButton"
+- "detailsPlusButton"
+- "didReceiveMemoryWarning"
+- "currentDetailData"
 - "solutionTable"
-- "sharedContext"
 - "homeButtonClick"
+- "PostInfo"
+- "nameDetailDivider"
+- "viewDidLoad"
+- "tableView"
+- "tableView"
+- "tableView"
+- "detailsField"
+- "sendingController"
+- "postButton"
+- "namePlusButton"
+- "textViewDidBeginEditing"
 depends-top-level:
-- "UITextField"
 - "UIButton"
-- "UITableView"
-- !private "||"
-- "UITableViewCell"
-- !private "UIColor"
-- "String"
-- !private "CoreDataStackManager"
 - "UITableViewDelegate"
-- "Int"
-- !private "BooleanLiteralType"
-- "UITextViewDelegate"
-- "NSManagedObjectContext"
 - "UITextFieldDelegate"
-- !private "&&"
+- "UITextViewDelegate"
+- !private "print"
 - "NSIndexPath"
-- !private "=="
 - "UIViewController"
-- "UITextView"
-- "StringLiteralType"
+- "String"
 - "UIImageView"
+- !private "BooleanLiteralType"
+- !private "||"
+- "UITableView"
 - !private "!="
-- !private "AddIdeaViewController"
-- !private "CreateChange"
+- "UITextField"
+- !private "&&"
 - "CreateChangeViewController"
+- "UITableViewCell"
+- "StringLiteralType"
+- !private "CreateChange"
+- !private "UIColor"
+- "UITextView"
+- "Int"
+- !private "AddIdeaViewController"
+- !private "=="
 depends-member:
-- !private ["PSs9AnyObject", "CoreDataStackManager"]
 - !private ["PSs9AnyObject", "CreateChange"]
 - ["PSs9AnyObject", "PostInfo"]
 - !private ["PSs9AnyObject", "UIColor"]
@@ -77,7 +75,6 @@ depends-member:
 - ["PSs9AnyObject", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSs9AnyObject", "init"]
 - !private ["PSs9AnyObject", "instantiateViewControllerWithIdentifier"]
-- !private ["PSs9AnyObject", "managedObjectContext"]
 - ["PSs9AnyObject", "nameActionButton"]
 - ["PSs9AnyObject", "nameDetailDivider"]
 - ["PSs9AnyObject", "nameField"]
@@ -85,6 +82,7 @@ depends-member:
 - !private ["PSs9AnyObject", "navigationController"]
 - !private ["PSs9AnyObject", "popToRootViewControllerAnimated"]
 - ["PSs9AnyObject", "postButton"]
+- !private ["PSs9AnyObject", "print"]
 - !private ["PSs9AnyObject", "pushViewController"]
 - !private ["PSs9AnyObject", "resignFirstResponder"]
 - ["PSs9AnyObject", "scrollViewDidEndDecelerating"]
@@ -99,9 +97,7 @@ depends-member:
 - ["PSs9AnyObject", "scrollViewWillBeginDragging"]
 - ["PSs9AnyObject", "scrollViewWillBeginZooming"]
 - ["PSs9AnyObject", "scrollViewWillEndDragging"]
-- ["PSs9AnyObject", "sharedContext"]
-- ["PSs9AnyObject", "sharedContext.storage"]
-- !private ["PSs9AnyObject", "sharedInstance"]
+- ["PSs9AnyObject", "sendingController"]
 - ["PSs9AnyObject", "solutionTable"]
 - !private ["PSs9AnyObject", "storyboard"]
 - ["PSs9AnyObject", "tableView"]
@@ -129,7 +125,6 @@ depends-member:
 - !private ["PSs25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["PSs11BooleanType", "_getBuiltinLogicValue"]
 - !private ["V12CoreGraphics7CGFloat", "deinit"]
-- !private ["PSs11CVarArgType", "CoreDataStackManager"]
 - !private ["PSs11CVarArgType", "CreateChange"]
 - ["PSs11CVarArgType", "PostInfo"]
 - !private ["PSs11CVarArgType", "UIColor"]
@@ -158,6 +153,7 @@ depends-member:
 - !private ["PSs11CVarArgType", "navigationController"]
 - !private ["PSs11CVarArgType", "popToRootViewControllerAnimated"]
 - ["PSs11CVarArgType", "postButton"]
+- !private ["PSs11CVarArgType", "print"]
 - !private ["PSs11CVarArgType", "pushViewController"]
 - !private ["PSs11CVarArgType", "resignFirstResponder"]
 - ["PSs11CVarArgType", "scrollViewDidEndDecelerating"]
@@ -172,8 +168,7 @@ depends-member:
 - ["PSs11CVarArgType", "scrollViewWillBeginDragging"]
 - ["PSs11CVarArgType", "scrollViewWillBeginZooming"]
 - ["PSs11CVarArgType", "scrollViewWillEndDragging"]
-- ["PSs11CVarArgType", "sharedContext"]
-- ["PSs11CVarArgType", "sharedContext.storage"]
+- ["PSs11CVarArgType", "sendingController"]
 - ["PSs11CVarArgType", "solutionTable"]
 - !private ["PSs11CVarArgType", "storyboard"]
 - ["PSs11CVarArgType", "tableView"]
@@ -197,15 +192,11 @@ depends-member:
 - ["PSs11CVarArgType", "viewDidLoad"]
 - ["PSs11CVarArgType", "viewForZoomingInScrollView"]
 - ["PSs11CVarArgType", ""]
-- !private ["C8GoChange20CoreDataStackManager", "managedObjectContext"]
-- !private ["C8GoChange20CoreDataStackManager", "sharedInstance"]
 - !private ["C8GoChange12CreateChange", "init"]
 - !private ["C8GoChange26CreateChangeViewController", "AddIdeaViewController"]
-- !private ["C8GoChange26CreateChangeViewController", "CoreDataStackManager"]
 - !private ["C8GoChange26CreateChangeViewController", "CreateChange"]
 - ["C8GoChange26CreateChangeViewController", "Int"]
 - ["C8GoChange26CreateChangeViewController", "NSIndexPath"]
-- ["C8GoChange26CreateChangeViewController", "NSManagedObjectContext"]
 - ["C8GoChange26CreateChangeViewController", "PostInfo"]
 - ["C8GoChange26CreateChangeViewController", "String"]
 - ["C8GoChange26CreateChangeViewController", "UIButton"]
@@ -232,6 +223,7 @@ depends-member:
 - ["C8GoChange26CreateChangeViewController", "namePlusButton"]
 - !private ["C8GoChange26CreateChangeViewController", "navigationController"]
 - ["C8GoChange26CreateChangeViewController", "postButton"]
+- !private ["C8GoChange26CreateChangeViewController", "print"]
 - ["C8GoChange26CreateChangeViewController", "scrollViewDidEndDecelerating"]
 - ["C8GoChange26CreateChangeViewController", "scrollViewDidEndDragging"]
 - ["C8GoChange26CreateChangeViewController", "scrollViewDidEndScrollingAnimation"]
@@ -244,8 +236,7 @@ depends-member:
 - ["C8GoChange26CreateChangeViewController", "scrollViewWillBeginDragging"]
 - ["C8GoChange26CreateChangeViewController", "scrollViewWillBeginZooming"]
 - ["C8GoChange26CreateChangeViewController", "scrollViewWillEndDragging"]
-- ["C8GoChange26CreateChangeViewController", "sharedContext"]
-- !private ["C8GoChange26CreateChangeViewController", "sharedContext.storage"]
+- ["C8GoChange26CreateChangeViewController", "sendingController"]
 - ["C8GoChange26CreateChangeViewController", "solutionTable"]
 - !private ["C8GoChange26CreateChangeViewController", "storyboard"]
 - ["C8GoChange26CreateChangeViewController", "tableView"]
@@ -265,7 +256,6 @@ depends-member:
 - ["C8GoChange26CreateChangeViewController", "textViewShouldEndEditing"]
 - ["C8GoChange26CreateChangeViewController", "viewDidLoad"]
 - ["C8GoChange26CreateChangeViewController", "viewForZoomingInScrollView"]
-- !private ["PSs23CustomStringConvertible", "CoreDataStackManager"]
 - !private ["PSs23CustomStringConvertible", "CreateChange"]
 - ["PSs23CustomStringConvertible", "PostInfo"]
 - !private ["PSs23CustomStringConvertible", "UIColor"]
@@ -295,6 +285,7 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "navigationController"]
 - !private ["PSs23CustomStringConvertible", "popToRootViewControllerAnimated"]
 - ["PSs23CustomStringConvertible", "postButton"]
+- !private ["PSs23CustomStringConvertible", "print"]
 - !private ["PSs23CustomStringConvertible", "pushViewController"]
 - !private ["PSs23CustomStringConvertible", "resignFirstResponder"]
 - ["PSs23CustomStringConvertible", "scrollViewDidEndDecelerating"]
@@ -309,8 +300,7 @@ depends-member:
 - ["PSs23CustomStringConvertible", "scrollViewWillBeginDragging"]
 - ["PSs23CustomStringConvertible", "scrollViewWillBeginZooming"]
 - ["PSs23CustomStringConvertible", "scrollViewWillEndDragging"]
-- ["PSs23CustomStringConvertible", "sharedContext"]
-- ["PSs23CustomStringConvertible", "sharedContext.storage"]
+- ["PSs23CustomStringConvertible", "sendingController"]
 - ["PSs23CustomStringConvertible", "solutionTable"]
 - !private ["PSs23CustomStringConvertible", "storyboard"]
 - ["PSs23CustomStringConvertible", "tableView"]
@@ -334,7 +324,6 @@ depends-member:
 - ["PSs23CustomStringConvertible", "viewDidLoad"]
 - ["PSs23CustomStringConvertible", "viewForZoomingInScrollView"]
 - ["PSs23CustomStringConvertible", ""]
-- !private ["PSs9Equatable", "CoreDataStackManager"]
 - !private ["PSs9Equatable", "CreateChange"]
 - ["PSs9Equatable", "PostInfo"]
 - !private ["PSs9Equatable", "UIColor"]
@@ -364,6 +353,7 @@ depends-member:
 - !private ["PSs9Equatable", "navigationController"]
 - !private ["PSs9Equatable", "popToRootViewControllerAnimated"]
 - ["PSs9Equatable", "postButton"]
+- !private ["PSs9Equatable", "print"]
 - !private ["PSs9Equatable", "pushViewController"]
 - !private ["PSs9Equatable", "resignFirstResponder"]
 - ["PSs9Equatable", "scrollViewDidEndDecelerating"]
@@ -378,8 +368,7 @@ depends-member:
 - ["PSs9Equatable", "scrollViewWillBeginDragging"]
 - ["PSs9Equatable", "scrollViewWillBeginZooming"]
 - ["PSs9Equatable", "scrollViewWillEndDragging"]
-- ["PSs9Equatable", "sharedContext"]
-- ["PSs9Equatable", "sharedContext.storage"]
+- ["PSs9Equatable", "sendingController"]
 - ["PSs9Equatable", "solutionTable"]
 - !private ["PSs9Equatable", "storyboard"]
 - ["PSs9Equatable", "tableView"]
@@ -403,7 +392,6 @@ depends-member:
 - ["PSs9Equatable", "viewDidLoad"]
 - ["PSs9Equatable", "viewForZoomingInScrollView"]
 - ["PSs9Equatable", ""]
-- !private ["PSs8Hashable", "CoreDataStackManager"]
 - !private ["PSs8Hashable", "CreateChange"]
 - ["PSs8Hashable", "PostInfo"]
 - !private ["PSs8Hashable", "UIColor"]
@@ -433,6 +421,7 @@ depends-member:
 - !private ["PSs8Hashable", "navigationController"]
 - !private ["PSs8Hashable", "popToRootViewControllerAnimated"]
 - ["PSs8Hashable", "postButton"]
+- !private ["PSs8Hashable", "print"]
 - !private ["PSs8Hashable", "pushViewController"]
 - !private ["PSs8Hashable", "resignFirstResponder"]
 - ["PSs8Hashable", "scrollViewDidEndDecelerating"]
@@ -447,8 +436,7 @@ depends-member:
 - ["PSs8Hashable", "scrollViewWillBeginDragging"]
 - ["PSs8Hashable", "scrollViewWillBeginZooming"]
 - ["PSs8Hashable", "scrollViewWillEndDragging"]
-- ["PSs8Hashable", "sharedContext"]
-- ["PSs8Hashable", "sharedContext.storage"]
+- ["PSs8Hashable", "sendingController"]
 - ["PSs8Hashable", "solutionTable"]
 - !private ["PSs8Hashable", "storyboard"]
 - ["PSs8Hashable", "tableView"]
@@ -473,7 +461,6 @@ depends-member:
 - ["PSs8Hashable", "viewForZoomingInScrollView"]
 - ["PSs8Hashable", ""]
 - !private ["SQ", "deinit"]
-- !private ["PSo8NSCoding", "CoreDataStackManager"]
 - !private ["PSo8NSCoding", "CreateChange"]
 - ["PSo8NSCoding", "PostInfo"]
 - !private ["PSo8NSCoding", "UIColor"]
@@ -501,6 +488,7 @@ depends-member:
 - !private ["PSo8NSCoding", "navigationController"]
 - !private ["PSo8NSCoding", "popToRootViewControllerAnimated"]
 - ["PSo8NSCoding", "postButton"]
+- !private ["PSo8NSCoding", "print"]
 - !private ["PSo8NSCoding", "pushViewController"]
 - !private ["PSo8NSCoding", "resignFirstResponder"]
 - ["PSo8NSCoding", "scrollViewDidEndDecelerating"]
@@ -515,8 +503,7 @@ depends-member:
 - ["PSo8NSCoding", "scrollViewWillBeginDragging"]
 - ["PSo8NSCoding", "scrollViewWillBeginZooming"]
 - ["PSo8NSCoding", "scrollViewWillEndDragging"]
-- ["PSo8NSCoding", "sharedContext"]
-- ["PSo8NSCoding", "sharedContext.storage"]
+- ["PSo8NSCoding", "sendingController"]
 - ["PSo8NSCoding", "solutionTable"]
 - !private ["PSo8NSCoding", "storyboard"]
 - ["PSo8NSCoding", "tableView"]
@@ -541,7 +528,6 @@ depends-member:
 - ["PSo8NSCoding", "viewForZoomingInScrollView"]
 - ["PSo8NSCoding", ""]
 - !private ["PSo9NSCopying", "blackColor"]
-- !private ["PSo26NSExtensionRequestHandling", "CoreDataStackManager"]
 - !private ["PSo26NSExtensionRequestHandling", "CreateChange"]
 - ["PSo26NSExtensionRequestHandling", "PostInfo"]
 - !private ["PSo26NSExtensionRequestHandling", "UIColor"]
@@ -563,6 +549,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "navigationController"]
 - !private ["PSo26NSExtensionRequestHandling", "popToRootViewControllerAnimated"]
 - ["PSo26NSExtensionRequestHandling", "postButton"]
+- !private ["PSo26NSExtensionRequestHandling", "print"]
 - !private ["PSo26NSExtensionRequestHandling", "pushViewController"]
 - ["PSo26NSExtensionRequestHandling", "scrollViewDidEndDecelerating"]
 - ["PSo26NSExtensionRequestHandling", "scrollViewDidEndDragging"]
@@ -576,8 +563,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "scrollViewWillBeginDragging"]
 - ["PSo26NSExtensionRequestHandling", "scrollViewWillBeginZooming"]
 - ["PSo26NSExtensionRequestHandling", "scrollViewWillEndDragging"]
-- ["PSo26NSExtensionRequestHandling", "sharedContext"]
-- ["PSo26NSExtensionRequestHandling", "sharedContext.storage"]
+- ["PSo26NSExtensionRequestHandling", "sendingController"]
 - ["PSo26NSExtensionRequestHandling", "solutionTable"]
 - !private ["PSo26NSExtensionRequestHandling", "storyboard"]
 - ["PSo26NSExtensionRequestHandling", "tableView"]
@@ -599,11 +585,9 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "viewForZoomingInScrollView"]
 - ["PSo26NSExtensionRequestHandling", ""]
 - !private ["CSo8NSObject", "AddIdeaViewController"]
-- !private ["CSo8NSObject", "CoreDataStackManager"]
 - !private ["CSo8NSObject", "CreateChange"]
 - ["CSo8NSObject", "Int"]
 - ["CSo8NSObject", "NSIndexPath"]
-- ["CSo8NSObject", "NSManagedObjectContext"]
 - ["CSo8NSObject", "PostInfo"]
 - ["CSo8NSObject", "String"]
 - ["CSo8NSObject", "UIButton"]
@@ -638,6 +622,7 @@ depends-member:
 - !private ["CSo8NSObject", "navigationController"]
 - !private ["CSo8NSObject", "popToRootViewControllerAnimated"]
 - ["CSo8NSObject", "postButton"]
+- !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "pushViewController"]
 - !private ["CSo8NSObject", "resignFirstResponder"]
 - ["CSo8NSObject", "scrollViewDidEndDecelerating"]
@@ -652,8 +637,7 @@ depends-member:
 - ["CSo8NSObject", "scrollViewWillBeginDragging"]
 - ["CSo8NSObject", "scrollViewWillBeginZooming"]
 - ["CSo8NSObject", "scrollViewWillEndDragging"]
-- ["CSo8NSObject", "sharedContext"]
-- ["CSo8NSObject", "sharedContext.storage"]
+- ["CSo8NSObject", "sendingController"]
 - ["CSo8NSObject", "solutionTable"]
 - !private ["CSo8NSObject", "storyboard"]
 - ["CSo8NSObject", "tableView"]
@@ -676,7 +660,6 @@ depends-member:
 - ["CSo8NSObject", "textViewShouldEndEditing"]
 - ["CSo8NSObject", "viewDidLoad"]
 - ["CSo8NSObject", "viewForZoomingInScrollView"]
-- !private ["PSo16NSObjectProtocol", "CoreDataStackManager"]
 - !private ["PSo16NSObjectProtocol", "CreateChange"]
 - ["PSo16NSObjectProtocol", "PostInfo"]
 - !private ["PSo16NSObjectProtocol", "UIColor"]
@@ -705,6 +688,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "navigationController"]
 - !private ["PSo16NSObjectProtocol", "popToRootViewControllerAnimated"]
 - ["PSo16NSObjectProtocol", "postButton"]
+- !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "pushViewController"]
 - !private ["PSo16NSObjectProtocol", "resignFirstResponder"]
 - ["PSo16NSObjectProtocol", "scrollViewDidEndDecelerating"]
@@ -719,8 +703,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "scrollViewWillBeginDragging"]
 - ["PSo16NSObjectProtocol", "scrollViewWillBeginZooming"]
 - ["PSo16NSObjectProtocol", "scrollViewWillEndDragging"]
-- ["PSo16NSObjectProtocol", "sharedContext"]
-- ["PSo16NSObjectProtocol", "sharedContext.storage"]
+- ["PSo16NSObjectProtocol", "sendingController"]
 - ["PSo16NSObjectProtocol", "solutionTable"]
 - !private ["PSo16NSObjectProtocol", "storyboard"]
 - ["PSo16NSObjectProtocol", "tableView"]
@@ -765,7 +748,6 @@ depends-member:
 - !private ["PSo12UIAppearance", "text"]
 - !private ["PSo12UIAppearance", "textColor"]
 - !private ["PSo12UIAppearance", "textLabel"]
-- !private ["PSo21UIAppearanceContainer", "CoreDataStackManager"]
 - !private ["PSo21UIAppearanceContainer", "CreateChange"]
 - ["PSo21UIAppearanceContainer", "PostInfo"]
 - !private ["PSo21UIAppearanceContainer", "UIColor"]
@@ -792,6 +774,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "navigationController"]
 - !private ["PSo21UIAppearanceContainer", "popToRootViewControllerAnimated"]
 - ["PSo21UIAppearanceContainer", "postButton"]
+- !private ["PSo21UIAppearanceContainer", "print"]
 - !private ["PSo21UIAppearanceContainer", "pushViewController"]
 - !private ["PSo21UIAppearanceContainer", "resignFirstResponder"]
 - ["PSo21UIAppearanceContainer", "scrollViewDidEndDecelerating"]
@@ -806,8 +789,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "scrollViewWillBeginDragging"]
 - ["PSo21UIAppearanceContainer", "scrollViewWillBeginZooming"]
 - ["PSo21UIAppearanceContainer", "scrollViewWillEndDragging"]
-- ["PSo21UIAppearanceContainer", "sharedContext"]
-- ["PSo21UIAppearanceContainer", "sharedContext.storage"]
+- ["PSo21UIAppearanceContainer", "sendingController"]
 - ["PSo21UIAppearanceContainer", "solutionTable"]
 - !private ["PSo21UIAppearanceContainer", "storyboard"]
 - ["PSo21UIAppearanceContainer", "tableView"]
@@ -835,7 +817,6 @@ depends-member:
 - !private ["CSo8UIButton", "enabled"]
 - !private ["CSo8UIButton", "hidden"]
 - !private ["CSo7UIColor", "blackColor"]
-- !private ["PSo18UIContentContainer", "CoreDataStackManager"]
 - !private ["PSo18UIContentContainer", "CreateChange"]
 - ["PSo18UIContentContainer", "PostInfo"]
 - !private ["PSo18UIContentContainer", "UIColor"]
@@ -857,6 +838,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "navigationController"]
 - !private ["PSo18UIContentContainer", "popToRootViewControllerAnimated"]
 - ["PSo18UIContentContainer", "postButton"]
+- !private ["PSo18UIContentContainer", "print"]
 - !private ["PSo18UIContentContainer", "pushViewController"]
 - ["PSo18UIContentContainer", "scrollViewDidEndDecelerating"]
 - ["PSo18UIContentContainer", "scrollViewDidEndDragging"]
@@ -870,8 +852,7 @@ depends-member:
 - ["PSo18UIContentContainer", "scrollViewWillBeginDragging"]
 - ["PSo18UIContentContainer", "scrollViewWillBeginZooming"]
 - ["PSo18UIContentContainer", "scrollViewWillEndDragging"]
-- ["PSo18UIContentContainer", "sharedContext"]
-- ["PSo18UIContentContainer", "sharedContext.storage"]
+- ["PSo18UIContentContainer", "sendingController"]
 - ["PSo18UIContentContainer", "solutionTable"]
 - !private ["PSo18UIContentContainer", "storyboard"]
 - ["PSo18UIContentContainer", "tableView"]
@@ -916,7 +897,6 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "text"]
 - !private ["PSo13UIDynamicItem", "textColor"]
 - !private ["PSo13UIDynamicItem", "textLabel"]
-- !private ["PSo18UIFocusEnvironment", "CoreDataStackManager"]
 - !private ["PSo18UIFocusEnvironment", "CreateChange"]
 - ["PSo18UIFocusEnvironment", "PostInfo"]
 - !private ["PSo18UIFocusEnvironment", "UIColor"]
@@ -943,6 +923,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "navigationController"]
 - !private ["PSo18UIFocusEnvironment", "popToRootViewControllerAnimated"]
 - ["PSo18UIFocusEnvironment", "postButton"]
+- !private ["PSo18UIFocusEnvironment", "print"]
 - !private ["PSo18UIFocusEnvironment", "pushViewController"]
 - !private ["PSo18UIFocusEnvironment", "resignFirstResponder"]
 - ["PSo18UIFocusEnvironment", "scrollViewDidEndDecelerating"]
@@ -957,8 +938,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "scrollViewWillBeginDragging"]
 - ["PSo18UIFocusEnvironment", "scrollViewWillBeginZooming"]
 - ["PSo18UIFocusEnvironment", "scrollViewWillEndDragging"]
-- ["PSo18UIFocusEnvironment", "sharedContext"]
-- ["PSo18UIFocusEnvironment", "sharedContext.storage"]
+- ["PSo18UIFocusEnvironment", "sendingController"]
 - ["PSo18UIFocusEnvironment", "solutionTable"]
 - !private ["PSo18UIFocusEnvironment", "storyboard"]
 - ["PSo18UIFocusEnvironment", "tableView"]
@@ -992,11 +972,9 @@ depends-member:
 - !private ["CSo22UINavigationController", "popToRootViewControllerAnimated"]
 - !private ["CSo22UINavigationController", "pushViewController"]
 - !private ["CSo11UIResponder", "AddIdeaViewController"]
-- !private ["CSo11UIResponder", "CoreDataStackManager"]
 - !private ["CSo11UIResponder", "CreateChange"]
 - ["CSo11UIResponder", "Int"]
 - ["CSo11UIResponder", "NSIndexPath"]
-- ["CSo11UIResponder", "NSManagedObjectContext"]
 - ["CSo11UIResponder", "PostInfo"]
 - ["CSo11UIResponder", "String"]
 - ["CSo11UIResponder", "UIButton"]
@@ -1029,6 +1007,7 @@ depends-member:
 - !private ["CSo11UIResponder", "navigationController"]
 - !private ["CSo11UIResponder", "popToRootViewControllerAnimated"]
 - ["CSo11UIResponder", "postButton"]
+- !private ["CSo11UIResponder", "print"]
 - !private ["CSo11UIResponder", "pushViewController"]
 - !private ["CSo11UIResponder", "resignFirstResponder"]
 - ["CSo11UIResponder", "scrollViewDidEndDecelerating"]
@@ -1043,8 +1022,7 @@ depends-member:
 - ["CSo11UIResponder", "scrollViewWillBeginDragging"]
 - ["CSo11UIResponder", "scrollViewWillBeginZooming"]
 - ["CSo11UIResponder", "scrollViewWillEndDragging"]
-- ["CSo11UIResponder", "sharedContext"]
-- ["CSo11UIResponder", "sharedContext.storage"]
+- ["CSo11UIResponder", "sendingController"]
 - ["CSo11UIResponder", "solutionTable"]
 - !private ["CSo11UIResponder", "storyboard"]
 - ["CSo11UIResponder", "tableView"]
@@ -1072,7 +1050,6 @@ depends-member:
 - !private ["CSo12UIScrollView", "resignFirstResponder"]
 - !private ["CSo12UIScrollView", "text"]
 - !private ["CSo12UIScrollView", "textColor"]
-- !private ["PSo20UIScrollViewDelegate", "CoreDataStackManager"]
 - !private ["PSo20UIScrollViewDelegate", "CreateChange"]
 - !private ["PSo20UIScrollViewDelegate", "UIColor"]
 - !private ["PSo20UIScrollViewDelegate", "currentDetailData"]
@@ -1084,6 +1061,7 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "namePlusButton"]
 - !private ["PSo20UIScrollViewDelegate", "navigationController"]
 - !private ["PSo20UIScrollViewDelegate", "postButton"]
+- !private ["PSo20UIScrollViewDelegate", "print"]
 - ["PSo20UIScrollViewDelegate", "scrollViewDidEndDecelerating"]
 - ["PSo20UIScrollViewDelegate", "scrollViewDidEndDragging"]
 - ["PSo20UIScrollViewDelegate", "scrollViewDidEndScrollingAnimation"]
@@ -1115,7 +1093,6 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "textViewShouldEndEditing"]
 - ["PSo20UIScrollViewDelegate", "viewForZoomingInScrollView"]
 - ["PSo20UIScrollViewDelegate", ""]
-- !private ["PSo16UIStateRestoring", "CoreDataStackManager"]
 - !private ["PSo16UIStateRestoring", "CreateChange"]
 - ["PSo16UIStateRestoring", "PostInfo"]
 - !private ["PSo16UIStateRestoring", "UIColor"]
@@ -1137,6 +1114,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "navigationController"]
 - !private ["PSo16UIStateRestoring", "popToRootViewControllerAnimated"]
 - ["PSo16UIStateRestoring", "postButton"]
+- !private ["PSo16UIStateRestoring", "print"]
 - !private ["PSo16UIStateRestoring", "pushViewController"]
 - ["PSo16UIStateRestoring", "scrollViewDidEndDecelerating"]
 - ["PSo16UIStateRestoring", "scrollViewDidEndDragging"]
@@ -1150,8 +1128,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "scrollViewWillBeginDragging"]
 - ["PSo16UIStateRestoring", "scrollViewWillBeginZooming"]
 - ["PSo16UIStateRestoring", "scrollViewWillEndDragging"]
-- ["PSo16UIStateRestoring", "sharedContext"]
-- ["PSo16UIStateRestoring", "sharedContext.storage"]
+- ["PSo16UIStateRestoring", "sendingController"]
 - ["PSo16UIStateRestoring", "solutionTable"]
 - !private ["PSo16UIStateRestoring", "storyboard"]
 - ["PSo16UIStateRestoring", "tableView"]
@@ -1176,7 +1153,6 @@ depends-member:
 - !private ["CSo11UITableView", "delegate"]
 - !private ["CSo11UITableView", "dequeueReusableCellWithIdentifier"]
 - !private ["CSo15UITableViewCell", "textLabel"]
-- !private ["PSo19UITableViewDelegate", "CoreDataStackManager"]
 - !private ["PSo19UITableViewDelegate", "CreateChange"]
 - !private ["PSo19UITableViewDelegate", "UIColor"]
 - !private ["PSo19UITableViewDelegate", "currentDetailData"]
@@ -1188,6 +1164,7 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "namePlusButton"]
 - !private ["PSo19UITableViewDelegate", "navigationController"]
 - !private ["PSo19UITableViewDelegate", "postButton"]
+- !private ["PSo19UITableViewDelegate", "print"]
 - ["PSo19UITableViewDelegate", "scrollViewDidEndDecelerating"]
 - ["PSo19UITableViewDelegate", "scrollViewDidEndDragging"]
 - ["PSo19UITableViewDelegate", "scrollViewDidEndScrollingAnimation"]
@@ -1222,7 +1199,6 @@ depends-member:
 - !private ["CSo11UITextField", "delegate"]
 - !private ["CSo11UITextField", "resignFirstResponder"]
 - !private ["CSo11UITextField", "text"]
-- !private ["PSo19UITextFieldDelegate", "CoreDataStackManager"]
 - !private ["PSo19UITextFieldDelegate", "CreateChange"]
 - !private ["PSo19UITextFieldDelegate", "UIColor"]
 - !private ["PSo19UITextFieldDelegate", "currentDetailData"]
@@ -1234,6 +1210,7 @@ depends-member:
 - !private ["PSo19UITextFieldDelegate", "namePlusButton"]
 - !private ["PSo19UITextFieldDelegate", "navigationController"]
 - !private ["PSo19UITextFieldDelegate", "postButton"]
+- !private ["PSo19UITextFieldDelegate", "print"]
 - ["PSo19UITextFieldDelegate", "scrollViewDidEndDecelerating"]
 - ["PSo19UITextFieldDelegate", "scrollViewDidEndDragging"]
 - ["PSo19UITextFieldDelegate", "scrollViewDidEndScrollingAnimation"]
@@ -1277,7 +1254,6 @@ depends-member:
 - !private ["CSo10UITextView", "resignFirstResponder"]
 - !private ["CSo10UITextView", "text"]
 - !private ["CSo10UITextView", "textColor"]
-- !private ["PSo18UITextViewDelegate", "CoreDataStackManager"]
 - !private ["PSo18UITextViewDelegate", "CreateChange"]
 - !private ["PSo18UITextViewDelegate", "UIColor"]
 - !private ["PSo18UITextViewDelegate", "currentDetailData"]
@@ -1289,6 +1265,7 @@ depends-member:
 - !private ["PSo18UITextViewDelegate", "namePlusButton"]
 - !private ["PSo18UITextViewDelegate", "navigationController"]
 - !private ["PSo18UITextViewDelegate", "postButton"]
+- !private ["PSo18UITextViewDelegate", "print"]
 - ["PSo18UITextViewDelegate", "scrollViewDidEndDecelerating"]
 - ["PSo18UITextViewDelegate", "scrollViewDidEndDragging"]
 - ["PSo18UITextViewDelegate", "scrollViewDidEndScrollingAnimation"]
@@ -1320,7 +1297,6 @@ depends-member:
 - ["PSo18UITextViewDelegate", "textViewShouldEndEditing"]
 - ["PSo18UITextViewDelegate", "viewForZoomingInScrollView"]
 - ["PSo18UITextViewDelegate", ""]
-- !private ["PSo18UITraitEnvironment", "CoreDataStackManager"]
 - !private ["PSo18UITraitEnvironment", "CreateChange"]
 - ["PSo18UITraitEnvironment", "PostInfo"]
 - !private ["PSo18UITraitEnvironment", "UIColor"]
@@ -1347,6 +1323,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "navigationController"]
 - !private ["PSo18UITraitEnvironment", "popToRootViewControllerAnimated"]
 - ["PSo18UITraitEnvironment", "postButton"]
+- !private ["PSo18UITraitEnvironment", "print"]
 - !private ["PSo18UITraitEnvironment", "pushViewController"]
 - !private ["PSo18UITraitEnvironment", "resignFirstResponder"]
 - ["PSo18UITraitEnvironment", "scrollViewDidEndDecelerating"]
@@ -1361,8 +1338,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "scrollViewWillBeginDragging"]
 - ["PSo18UITraitEnvironment", "scrollViewWillBeginZooming"]
 - ["PSo18UITraitEnvironment", "scrollViewWillEndDragging"]
-- ["PSo18UITraitEnvironment", "sharedContext"]
-- ["PSo18UITraitEnvironment", "sharedContext.storage"]
+- ["PSo18UITraitEnvironment", "sendingController"]
 - ["PSo18UITraitEnvironment", "solutionTable"]
 - !private ["PSo18UITraitEnvironment", "storyboard"]
 - ["PSo18UITraitEnvironment", "tableView"]
@@ -1396,11 +1372,9 @@ depends-member:
 - !private ["CSo6UIView", "textColor"]
 - !private ["CSo6UIView", "textLabel"]
 - !private ["CSo16UIViewController", "AddIdeaViewController"]
-- !private ["CSo16UIViewController", "CoreDataStackManager"]
 - !private ["CSo16UIViewController", "CreateChange"]
 - ["CSo16UIViewController", "Int"]
 - ["CSo16UIViewController", "NSIndexPath"]
-- ["CSo16UIViewController", "NSManagedObjectContext"]
 - ["CSo16UIViewController", "PostInfo"]
 - ["CSo16UIViewController", "String"]
 - ["CSo16UIViewController", "UIButton"]
@@ -1428,6 +1402,7 @@ depends-member:
 - !private ["CSo16UIViewController", "navigationController"]
 - !private ["CSo16UIViewController", "popToRootViewControllerAnimated"]
 - ["CSo16UIViewController", "postButton"]
+- !private ["CSo16UIViewController", "print"]
 - !private ["CSo16UIViewController", "pushViewController"]
 - ["CSo16UIViewController", "scrollViewDidEndDecelerating"]
 - ["CSo16UIViewController", "scrollViewDidEndDragging"]
@@ -1441,8 +1416,7 @@ depends-member:
 - ["CSo16UIViewController", "scrollViewWillBeginDragging"]
 - ["CSo16UIViewController", "scrollViewWillBeginZooming"]
 - ["CSo16UIViewController", "scrollViewWillEndDragging"]
-- ["CSo16UIViewController", "sharedContext"]
-- ["CSo16UIViewController", "sharedContext.storage"]
+- ["CSo16UIViewController", "sendingController"]
 - ["CSo16UIViewController", "solutionTable"]
 - !private ["CSo16UIViewController", "storyboard"]
 - ["CSo16UIViewController", "tableView"]
@@ -1484,7 +1458,6 @@ depends-nominal:
 - !private "PSs11BooleanType"
 - !private "V12CoreGraphics7CGFloat"
 - "PSs11CVarArgType"
-- !private "C8GoChange20CoreDataStackManager"
 - !private "C8GoChange12CreateChange"
 - "C8GoChange26CreateChangeViewController"
 - "PSs23CustomStringConvertible"
@@ -1559,4 +1532,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "7d5e07b637478f4c602b5106f305e305"
+interface-hash: "7319505d44146317ef9cec0f5b388257"

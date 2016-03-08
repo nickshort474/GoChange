@@ -198,10 +198,10 @@ SWIFT_CLASS("_TtC8GoChange26CreateChangeViewController")
 @property (nonatomic, weak) IBOutlet UIButton * __null_unspecified postButton;
 @property (nonatomic, copy) NSString * __nonnull currentNameData;
 @property (nonatomic, copy) NSString * __nonnull currentDetailData;
+@property (nonatomic, copy) NSString * __nonnull sendingController;
 @property (nonatomic, weak) IBOutlet UITableView * __null_unspecified solutionTable;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
-@property (nonatomic, strong) NSManagedObjectContext * __nonnull sharedContext;
 - (IBAction)homeButtonClick:(UIButton * __nonnull)sender;
 - (IBAction)nameActionButton:(UIButton * __nonnull)sender;
 - (IBAction)detailsActionButton:(UIButton * __nonnull)sender;
@@ -256,6 +256,7 @@ SWIFT_CLASS("_TtC8GoChange18HomeViewController")
 @property (nonatomic, weak) IBOutlet UILabel * __null_unspecified followingLabel;
 - (void)viewDidLoad;
 @property (nonatomic, strong) NSManagedObjectContext * __nonnull sharedContext;
+- (IBAction)createChange:(UIButton * __nonnull)sender;
 - (IBAction)addUserData:(UIButton * __nonnull)sender;
 - (void)checkCoreData;
 - (IBAction)logout:(UIButton * __nonnull)sender;

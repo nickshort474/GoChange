@@ -21,12 +21,15 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
         ref = Firebase(url:"https://GoChange.firebaseio.com")
         
         let currentUserName = NSUserDefaults.standardUserDefaults().valueForKey("username") as! String
         
         welcomeLabel.text = "Welcome to GoChange \(currentUserName)"
+        
+        
         //TODO: Check core data for amount of following
         followingLabel.hidden = true
         
@@ -43,6 +46,17 @@ class HomeViewController: UIViewController {
     }()
     
     
+    @IBAction func createChange(sender: UIButton) {
+        
+        var controller:UINavigationController
+        
+        controller = self.storyboard?.instantiateViewControllerWithIdentifier("createChangeNavController") as! UINavigationController
+        
+        
+        self.presentViewController(controller, animated: true, completion: nil)
+        
+        
+    }
     
     @IBAction func addUserData(sender: UIButton) {
         
@@ -55,7 +69,7 @@ class HomeViewController: UIViewController {
     
     func checkCoreData(){
         
-        var request = NSFetchRequest(entityName: "Change")
+        let request = NSFetchRequest(entityName: "Change")
         
         var results:[AnyObject]?
         

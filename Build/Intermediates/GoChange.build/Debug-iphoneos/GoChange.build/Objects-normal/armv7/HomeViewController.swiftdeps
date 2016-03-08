@@ -6,35 +6,37 @@ provides-nominal:
 provides-member:
 - ["C8GoChange18HomeViewController", ""]
 provides-dynamic-lookup:
-- "logout"
 - "ref"
-- "followingLabel"
-- "addUserData"
-- "checkCoreData"
-- "didReceiveMemoryWarning"
-- "viewDidLoad"
-- "welcomeLabel"
-- "followButton"
 - "sharedContext"
+- "welcomeLabel"
+- "addUserData"
+- "logout"
+- "didReceiveMemoryWarning"
+- "followButton"
+- "viewDidLoad"
+- "checkCoreData"
+- "createChange"
+- "followingLabel"
 depends-top-level:
-- "UIViewController"
-- !private "NSUserDefaults"
-- "UILabel"
-- "HomeViewController"
-- !private "CoreDataStackManager"
-- !private "StringLiteralType"
+- "UIButton"
 - !private "AnyObject"
+- !private "print"
+- "UIViewController"
+- !private "String"
+- !private "BooleanLiteralType"
+- !private "UINavigationController"
 - !private "UnicodeScalarType"
+- !private "!="
+- !private "NSUserDefaults"
 - !private "UpdateUserInfoController"
 - "Firebase"
-- !private "NSFetchRequest"
-- !private "print"
 - "NSManagedObjectContext"
-- !private "String"
+- !private "CoreDataStackManager"
+- !private "StringLiteralType"
+- "HomeViewController"
 - !private "Change"
-- !private "!="
-- !private "BooleanLiteralType"
-- "UIButton"
+- "UILabel"
+- !private "NSFetchRequest"
 depends-member:
 - !private ["PSs9AnyObject", "CoreDataStackManager"]
 - !private ["PSs9AnyObject", "Firebase"]
@@ -43,6 +45,7 @@ depends-member:
 - !private ["PSs9AnyObject", "String"]
 - ["PSs9AnyObject", "addUserData"]
 - ["PSs9AnyObject", "checkCoreData"]
+- ["PSs9AnyObject", "createChange"]
 - ["PSs9AnyObject", "didReceiveMemoryWarning"]
 - !private ["PSs9AnyObject", "dismissViewControllerAnimated"]
 - !private ["PSs9AnyObject", "executeFetchRequest"]
@@ -96,6 +99,7 @@ depends-member:
 - !private ["PSs11CVarArgType", "String"]
 - ["PSs11CVarArgType", "addUserData"]
 - ["PSs11CVarArgType", "checkCoreData"]
+- ["PSs11CVarArgType", "createChange"]
 - ["PSs11CVarArgType", "didReceiveMemoryWarning"]
 - !private ["PSs11CVarArgType", "dismissViewControllerAnimated"]
 - !private ["PSs11CVarArgType", "executeFetchRequest"]
@@ -148,6 +152,7 @@ depends-member:
 - ["PSs23CustomStringConvertible", "addUserData"]
 - ["PSs23CustomStringConvertible", "checkCoreData"]
 - !private ["PSs23CustomStringConvertible", "count"]
+- ["PSs23CustomStringConvertible", "createChange"]
 - ["PSs23CustomStringConvertible", "didReceiveMemoryWarning"]
 - !private ["PSs23CustomStringConvertible", "dismissViewControllerAnimated"]
 - !private ["PSs23CustomStringConvertible", "executeFetchRequest"]
@@ -182,6 +187,7 @@ depends-member:
 - !private ["PSs9Equatable", "_getBuiltinLogicValue"]
 - ["PSs9Equatable", "addUserData"]
 - ["PSs9Equatable", "checkCoreData"]
+- ["PSs9Equatable", "createChange"]
 - ["PSs9Equatable", "didReceiveMemoryWarning"]
 - !private ["PSs9Equatable", "dismissViewControllerAnimated"]
 - !private ["PSs9Equatable", "executeFetchRequest"]
@@ -223,6 +229,7 @@ depends-member:
 - !private ["PSs8Hashable", "_getBuiltinLogicValue"]
 - ["PSs8Hashable", "addUserData"]
 - ["PSs8Hashable", "checkCoreData"]
+- ["PSs8Hashable", "createChange"]
 - ["PSs8Hashable", "didReceiveMemoryWarning"]
 - !private ["PSs8Hashable", "dismissViewControllerAnimated"]
 - !private ["PSs8Hashable", "executeFetchRequest"]
@@ -256,9 +263,11 @@ depends-member:
 - !private ["C8GoChange18HomeViewController", "String"]
 - ["C8GoChange18HomeViewController", "UIButton"]
 - ["C8GoChange18HomeViewController", "UILabel"]
+- !private ["C8GoChange18HomeViewController", "UINavigationController"]
 - !private ["C8GoChange18HomeViewController", "UpdateUserInfoController"]
 - ["C8GoChange18HomeViewController", "addUserData"]
 - ["C8GoChange18HomeViewController", "checkCoreData"]
+- ["C8GoChange18HomeViewController", "createChange"]
 - ["C8GoChange18HomeViewController", "deinit"]
 - ["C8GoChange18HomeViewController", "didReceiveMemoryWarning"]
 - !private ["C8GoChange18HomeViewController", "dismissViewControllerAnimated"]
@@ -314,6 +323,7 @@ depends-member:
 - !private ["PSo8NSCoding", "String"]
 - ["PSo8NSCoding", "addUserData"]
 - ["PSo8NSCoding", "checkCoreData"]
+- ["PSo8NSCoding", "createChange"]
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
 - !private ["PSo8NSCoding", "dismissViewControllerAnimated"]
 - !private ["PSo8NSCoding", "executeFetchRequest"]
@@ -340,6 +350,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "String"]
 - ["PSo26NSExtensionRequestHandling", "addUserData"]
 - ["PSo26NSExtensionRequestHandling", "checkCoreData"]
+- ["PSo26NSExtensionRequestHandling", "createChange"]
 - ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
 - !private ["PSo26NSExtensionRequestHandling", "dismissViewControllerAnimated"]
 - ["PSo26NSExtensionRequestHandling", "followButton"]
@@ -369,9 +380,11 @@ depends-member:
 - !private ["CSo8NSObject", "String"]
 - ["CSo8NSObject", "UIButton"]
 - ["CSo8NSObject", "UILabel"]
+- !private ["CSo8NSObject", "UINavigationController"]
 - !private ["CSo8NSObject", "UpdateUserInfoController"]
 - ["CSo8NSObject", "addUserData"]
 - ["CSo8NSObject", "checkCoreData"]
+- ["CSo8NSObject", "createChange"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
 - !private ["CSo8NSObject", "dismissViewControllerAnimated"]
 - !private ["CSo8NSObject", "executeFetchRequest"]
@@ -401,6 +414,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "String"]
 - ["PSo16NSObjectProtocol", "addUserData"]
 - ["PSo16NSObjectProtocol", "checkCoreData"]
+- ["PSo16NSObjectProtocol", "createChange"]
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
 - !private ["PSo16NSObjectProtocol", "dismissViewControllerAnimated"]
 - !private ["PSo16NSObjectProtocol", "executeFetchRequest"]
@@ -464,6 +478,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "String"]
 - ["PSo21UIAppearanceContainer", "addUserData"]
 - ["PSo21UIAppearanceContainer", "checkCoreData"]
+- ["PSo21UIAppearanceContainer", "createChange"]
 - ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
 - !private ["PSo21UIAppearanceContainer", "dismissViewControllerAnimated"]
 - ["PSo21UIAppearanceContainer", "followButton"]
@@ -488,6 +503,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "String"]
 - ["PSo18UIContentContainer", "addUserData"]
 - ["PSo18UIContentContainer", "checkCoreData"]
+- ["PSo18UIContentContainer", "createChange"]
 - ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
 - !private ["PSo18UIContentContainer", "dismissViewControllerAnimated"]
 - ["PSo18UIContentContainer", "followButton"]
@@ -514,6 +530,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "String"]
 - ["PSo18UIFocusEnvironment", "addUserData"]
 - ["PSo18UIFocusEnvironment", "checkCoreData"]
+- ["PSo18UIFocusEnvironment", "createChange"]
 - ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
 - !private ["PSo18UIFocusEnvironment", "dismissViewControllerAnimated"]
 - ["PSo18UIFocusEnvironment", "followButton"]
@@ -543,9 +560,11 @@ depends-member:
 - !private ["CSo11UIResponder", "String"]
 - ["CSo11UIResponder", "UIButton"]
 - ["CSo11UIResponder", "UILabel"]
+- !private ["CSo11UIResponder", "UINavigationController"]
 - !private ["CSo11UIResponder", "UpdateUserInfoController"]
 - ["CSo11UIResponder", "addUserData"]
 - ["CSo11UIResponder", "checkCoreData"]
+- ["CSo11UIResponder", "createChange"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
 - !private ["CSo11UIResponder", "dismissViewControllerAnimated"]
 - ["CSo11UIResponder", "followButton"]
@@ -569,6 +588,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "String"]
 - ["PSo16UIStateRestoring", "addUserData"]
 - ["PSo16UIStateRestoring", "checkCoreData"]
+- ["PSo16UIStateRestoring", "createChange"]
 - ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
 - !private ["PSo16UIStateRestoring", "dismissViewControllerAnimated"]
 - ["PSo16UIStateRestoring", "followButton"]
@@ -592,6 +612,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "String"]
 - ["PSo18UITraitEnvironment", "addUserData"]
 - ["PSo18UITraitEnvironment", "checkCoreData"]
+- ["PSo18UITraitEnvironment", "createChange"]
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
 - !private ["PSo18UITraitEnvironment", "dismissViewControllerAnimated"]
 - ["PSo18UITraitEnvironment", "followButton"]
@@ -621,9 +642,11 @@ depends-member:
 - !private ["CSo16UIViewController", "String"]
 - ["CSo16UIViewController", "UIButton"]
 - ["CSo16UIViewController", "UILabel"]
+- !private ["CSo16UIViewController", "UINavigationController"]
 - !private ["CSo16UIViewController", "UpdateUserInfoController"]
 - ["CSo16UIViewController", "addUserData"]
 - ["CSo16UIViewController", "checkCoreData"]
+- ["CSo16UIViewController", "createChange"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
 - !private ["CSo16UIViewController", "dismissViewControllerAnimated"]
 - ["CSo16UIViewController", "followButton"]
@@ -821,4 +844,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "dc3b8b72ef2d7702ceca70e408b72a15"
+interface-hash: "a7e7a057863f39a965952f5ae93f7355"

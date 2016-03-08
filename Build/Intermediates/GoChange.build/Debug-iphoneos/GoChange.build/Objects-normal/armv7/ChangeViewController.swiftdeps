@@ -6,19 +6,19 @@ provides-nominal:
 provides-member:
 - ["C8GoChange20ChangeViewController", ""]
 provides-dynamic-lookup:
-- "didReceiveMemoryWarning"
+- "addIdeaClick"
 - "addIdeaButton"
 - "viewDidLoad"
-- "addIdeaClick"
+- "didReceiveMemoryWarning"
 - "viewIdeaClick"
 depends-top-level:
-- !private "IdeaViewController"
-- !private "BooleanLiteralType"
 - "UIViewController"
-- "ChangeViewController"
-- !private "StringLiteralType"
-- "UIButton"
+- !private "BooleanLiteralType"
 - !private "AddIdeaViewController"
+- !private "StringLiteralType"
+- "ChangeViewController"
+- !private "IdeaViewController"
+- "UIButton"
 depends-member:
 - ["PSs9AnyObject", "addIdeaButton"]
 - ["PSs9AnyObject", "addIdeaClick"]

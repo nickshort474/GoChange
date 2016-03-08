@@ -164,9 +164,7 @@
                                             <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="QTV-fc-bde" kind="show" id="xXJ-Sc-oZo">
-                                                <nil key="action"/>
-                                            </segue>
+                                            <action selector="createChange:" destination="yRU-vG-Oij" eventType="touchUpInside" id="rhK-g9-5rh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d47-ve-3Me">
@@ -411,7 +409,7 @@
         <!--Navigation Controller-->
         <scene sceneID="CBm-os-3vh">
             <objects>
-                <navigationController id="QTV-fc-bde" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="createChangeNavController" id="QTV-fc-bde" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SUX-c4-fqu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -776,7 +774,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QwI-Vv-ENX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="402" y="-1780"/>
+            <point key="canvasLocation" x="198" y="-1830"/>
         </scene>
         <!--Add Idea-->
         <scene sceneID="Mra-KX-zJ5">
