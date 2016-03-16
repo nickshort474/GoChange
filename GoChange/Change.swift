@@ -20,7 +20,7 @@ class Change:NSManagedObject{
     
     @NSManaged var changeName:String
     @NSManaged var changeDescription:String
-    @NSManaged var owner:Bool
+    @NSManaged var owner:NSNumber
     
     override init(entity: NSEntityDescription, insertIntoManagedObjectContext context: NSManagedObjectContext?) {
         super.init(entity: entity, insertIntoManagedObjectContext: context)
@@ -34,7 +34,10 @@ class Change:NSManagedObject{
         
         changeName = dictionary[Change.Keys.changeName] as! String
         changeDescription = dictionary[Change.Keys.changeDescription] as! String
-        owner = dictionary[Change.Keys.owner] as! Bool
+        
+        let boolValue = dictionary[Change.Keys.owner] as! Bool
+        
+        owner = NSNumber(bool: boolValue)
         
     }
     

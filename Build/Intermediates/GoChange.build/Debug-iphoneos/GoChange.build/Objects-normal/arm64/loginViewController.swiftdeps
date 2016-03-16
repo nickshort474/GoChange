@@ -6,32 +6,35 @@ provides-nominal:
 provides-member:
 - ["C8GoChange19loginViewController", ""]
 provides-dynamic-lookup:
-- "login"
-- "textFieldShouldReturn"
-- "didReceiveMemoryWarning"
 - "emailTextfield"
-- "userID"
-- "viewDidAppear"
 - "viewDidLoad"
-- "segueToHomeScreen"
+- "userID"
+- "didReceiveMemoryWarning"
 - "passwordTextfield"
+- "segueToHomeScreen"
 - "ref"
+- "textFieldShouldReturn"
+- "login"
+- "viewDidAppear"
+- "signupControl"
 depends-top-level:
-- !private "!="
-- "UITextFieldDelegate"
-- !private "BooleanLiteralType"
 - !private "print"
-- "AnyObject"
-- "UIViewController"
-- "String"
-- !private "NSUserDefaults"
-- !private "&&"
+- !private "BooleanLiteralType"
 - !private "HomeViewController"
-- !private "StringLiteralType"
-- "Firebase"
 - "UITextField"
 - "Bool"
+- !private "NSUserDefaults"
+- !private "!="
+- !private "&&"
+- !private "StringLiteralType"
 - "loginViewController"
+- "AnyObject"
+- "UITextFieldDelegate"
+- "String"
+- !private "SignupViewController"
+- "UIButton"
+- "Firebase"
+- "UIViewController"
 depends-member:
 - !private ["PSs9AnyObject", "Firebase"]
 - !private ["PSs9AnyObject", "NSUserDefaults"]
@@ -54,6 +57,7 @@ depends-member:
 - !private ["PSs9AnyObject", "resignFirstResponder"]
 - ["PSs9AnyObject", "segueToHomeScreen"]
 - !private ["PSs9AnyObject", "setValue"]
+- ["PSs9AnyObject", "signupControl"]
 - !private ["PSs9AnyObject", "standardUserDefaults"]
 - !private ["PSs9AnyObject", "storyboard"]
 - !private ["PSs9AnyObject", "text"]
@@ -94,6 +98,7 @@ depends-member:
 - !private ["PSs11CVarArgType", "resignFirstResponder"]
 - ["PSs11CVarArgType", "segueToHomeScreen"]
 - !private ["PSs11CVarArgType", "setValue"]
+- ["PSs11CVarArgType", "signupControl"]
 - !private ["PSs11CVarArgType", "standardUserDefaults"]
 - !private ["PSs11CVarArgType", "storyboard"]
 - !private ["PSs11CVarArgType", "text"]
@@ -134,6 +139,7 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "resignFirstResponder"]
 - ["PSs23CustomStringConvertible", "segueToHomeScreen"]
 - !private ["PSs23CustomStringConvertible", "setValue"]
+- ["PSs23CustomStringConvertible", "signupControl"]
 - !private ["PSs23CustomStringConvertible", "standardUserDefaults"]
 - !private ["PSs23CustomStringConvertible", "storyboard"]
 - !private ["PSs23CustomStringConvertible", "text"]
@@ -173,6 +179,7 @@ depends-member:
 - !private ["PSs9Equatable", "resignFirstResponder"]
 - ["PSs9Equatable", "segueToHomeScreen"]
 - !private ["PSs9Equatable", "setValue"]
+- ["PSs9Equatable", "signupControl"]
 - !private ["PSs9Equatable", "standardUserDefaults"]
 - !private ["PSs9Equatable", "storyboard"]
 - !private ["PSs9Equatable", "text"]
@@ -225,6 +232,7 @@ depends-member:
 - !private ["PSs8Hashable", "resignFirstResponder"]
 - ["PSs8Hashable", "segueToHomeScreen"]
 - !private ["PSs8Hashable", "setValue"]
+- ["PSs8Hashable", "signupControl"]
 - !private ["PSs8Hashable", "standardUserDefaults"]
 - !private ["PSs8Hashable", "storyboard"]
 - !private ["PSs8Hashable", "text"]
@@ -263,6 +271,7 @@ depends-member:
 - ["PSo8NSCoding", "ref"]
 - !private ["PSo8NSCoding", "resignFirstResponder"]
 - ["PSo8NSCoding", "segueToHomeScreen"]
+- ["PSo8NSCoding", "signupControl"]
 - !private ["PSo8NSCoding", "storyboard"]
 - !private ["PSo8NSCoding", "text"]
 - ["PSo8NSCoding", "textField"]
@@ -291,6 +300,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "print"]
 - ["PSo26NSExtensionRequestHandling", "ref"]
 - ["PSo26NSExtensionRequestHandling", "segueToHomeScreen"]
+- ["PSo26NSExtensionRequestHandling", "signupControl"]
 - !private ["PSo26NSExtensionRequestHandling", "storyboard"]
 - ["PSo26NSExtensionRequestHandling", "textField"]
 - ["PSo26NSExtensionRequestHandling", "textFieldDidBeginEditing"]
@@ -309,7 +319,9 @@ depends-member:
 - ["CSo8NSObject", "Firebase"]
 - !private ["CSo8NSObject", "HomeViewController"]
 - !private ["CSo8NSObject", "NSUserDefaults"]
+- !private ["CSo8NSObject", "SignupViewController"]
 - ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "UIButton"]
 - ["CSo8NSObject", "UITextField"]
 - !private ["CSo8NSObject", "authUser"]
 - !private ["CSo8NSObject", "childByAppendingPath"]
@@ -329,6 +341,7 @@ depends-member:
 - !private ["CSo8NSObject", "resignFirstResponder"]
 - ["CSo8NSObject", "segueToHomeScreen"]
 - !private ["CSo8NSObject", "setValue"]
+- ["CSo8NSObject", "signupControl"]
 - !private ["CSo8NSObject", "standardUserDefaults"]
 - !private ["CSo8NSObject", "storyboard"]
 - !private ["CSo8NSObject", "text"]
@@ -364,6 +377,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "resignFirstResponder"]
 - ["PSo16NSObjectProtocol", "segueToHomeScreen"]
 - !private ["PSo16NSObjectProtocol", "setValue"]
+- ["PSo16NSObjectProtocol", "signupControl"]
 - !private ["PSo16NSObjectProtocol", "standardUserDefaults"]
 - !private ["PSo16NSObjectProtocol", "storyboard"]
 - !private ["PSo16NSObjectProtocol", "text"]
@@ -383,6 +397,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "description"]
 - !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "deinit"]
 - !private ["CSo8NSString", "init"]
 - !private ["CSo14NSUserDefaults", "setValue"]
 - !private ["CSo14NSUserDefaults", "standardUserDefaults"]
@@ -414,6 +429,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "ref"]
 - !private ["PSo21UIAppearanceContainer", "resignFirstResponder"]
 - ["PSo21UIAppearanceContainer", "segueToHomeScreen"]
+- ["PSo21UIAppearanceContainer", "signupControl"]
 - !private ["PSo21UIAppearanceContainer", "storyboard"]
 - !private ["PSo21UIAppearanceContainer", "text"]
 - ["PSo21UIAppearanceContainer", "textField"]
@@ -438,6 +454,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "print"]
 - ["PSo18UIContentContainer", "ref"]
 - ["PSo18UIContentContainer", "segueToHomeScreen"]
+- ["PSo18UIContentContainer", "signupControl"]
 - !private ["PSo18UIContentContainer", "storyboard"]
 - ["PSo18UIContentContainer", "textField"]
 - ["PSo18UIContentContainer", "textFieldDidBeginEditing"]
@@ -472,6 +489,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "ref"]
 - !private ["PSo18UIFocusEnvironment", "resignFirstResponder"]
 - ["PSo18UIFocusEnvironment", "segueToHomeScreen"]
+- ["PSo18UIFocusEnvironment", "signupControl"]
 - !private ["PSo18UIFocusEnvironment", "storyboard"]
 - !private ["PSo18UIFocusEnvironment", "text"]
 - ["PSo18UIFocusEnvironment", "textField"]
@@ -493,7 +511,9 @@ depends-member:
 - ["CSo11UIResponder", "Firebase"]
 - !private ["CSo11UIResponder", "HomeViewController"]
 - !private ["CSo11UIResponder", "NSUserDefaults"]
+- !private ["CSo11UIResponder", "SignupViewController"]
 - ["CSo11UIResponder", "String"]
+- ["CSo11UIResponder", "UIButton"]
 - ["CSo11UIResponder", "UITextField"]
 - !private ["CSo11UIResponder", "delegate"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
@@ -506,6 +526,7 @@ depends-member:
 - ["CSo11UIResponder", "ref"]
 - !private ["CSo11UIResponder", "resignFirstResponder"]
 - ["CSo11UIResponder", "segueToHomeScreen"]
+- ["CSo11UIResponder", "signupControl"]
 - !private ["CSo11UIResponder", "storyboard"]
 - !private ["CSo11UIResponder", "text"]
 - ["CSo11UIResponder", "textField"]
@@ -529,6 +550,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "print"]
 - ["PSo16UIStateRestoring", "ref"]
 - ["PSo16UIStateRestoring", "segueToHomeScreen"]
+- ["PSo16UIStateRestoring", "signupControl"]
 - !private ["PSo16UIStateRestoring", "storyboard"]
 - ["PSo16UIStateRestoring", "textField"]
 - ["PSo16UIStateRestoring", "textFieldDidBeginEditing"]
@@ -582,6 +604,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "ref"]
 - !private ["PSo18UITraitEnvironment", "resignFirstResponder"]
 - ["PSo18UITraitEnvironment", "segueToHomeScreen"]
+- ["PSo18UITraitEnvironment", "signupControl"]
 - !private ["PSo18UITraitEnvironment", "storyboard"]
 - !private ["PSo18UITraitEnvironment", "text"]
 - ["PSo18UITraitEnvironment", "textField"]
@@ -603,7 +626,9 @@ depends-member:
 - ["CSo16UIViewController", "Firebase"]
 - !private ["CSo16UIViewController", "HomeViewController"]
 - !private ["CSo16UIViewController", "NSUserDefaults"]
+- !private ["CSo16UIViewController", "SignupViewController"]
 - ["CSo16UIViewController", "String"]
+- ["CSo16UIViewController", "UIButton"]
 - ["CSo16UIViewController", "UITextField"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
 - ["CSo16UIViewController", "emailTextfield"]
@@ -614,6 +639,7 @@ depends-member:
 - !private ["CSo16UIViewController", "print"]
 - ["CSo16UIViewController", "ref"]
 - ["CSo16UIViewController", "segueToHomeScreen"]
+- ["CSo16UIViewController", "signupControl"]
 - !private ["CSo16UIViewController", "storyboard"]
 - ["CSo16UIViewController", "textField"]
 - ["CSo16UIViewController", "textFieldDidBeginEditing"]
@@ -652,7 +678,9 @@ depends-member:
 - ["C8GoChange19loginViewController", "Firebase"]
 - !private ["C8GoChange19loginViewController", "HomeViewController"]
 - !private ["C8GoChange19loginViewController", "NSUserDefaults"]
+- !private ["C8GoChange19loginViewController", "SignupViewController"]
 - ["C8GoChange19loginViewController", "String"]
+- ["C8GoChange19loginViewController", "UIButton"]
 - ["C8GoChange19loginViewController", "UITextField"]
 - ["C8GoChange19loginViewController", "deinit"]
 - ["C8GoChange19loginViewController", "didReceiveMemoryWarning"]
@@ -664,6 +692,7 @@ depends-member:
 - !private ["C8GoChange19loginViewController", "print"]
 - ["C8GoChange19loginViewController", "ref"]
 - ["C8GoChange19loginViewController", "segueToHomeScreen"]
+- ["C8GoChange19loginViewController", "signupControl"]
 - !private ["C8GoChange19loginViewController", "storyboard"]
 - ["C8GoChange19loginViewController", "textField"]
 - ["C8GoChange19loginViewController", "textFieldDidBeginEditing"]
@@ -767,6 +796,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FirebaseServerValue.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FTransactionResult.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FMutableData.h"
@@ -780,5 +810,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
-interface-hash: "93333a42bcfe2d4afc46bb9d54ef6b39"
+interface-hash: "b69dc5ff1c1f531a2656a94e6f24e383"

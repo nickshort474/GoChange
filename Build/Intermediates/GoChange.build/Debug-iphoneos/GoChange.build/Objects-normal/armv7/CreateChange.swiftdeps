@@ -6,22 +6,25 @@ provides-nominal:
 provides-member:
 - ["C8GoChange12CreateChange", ""]
 provides-dynamic-lookup:
+- "createCoreDataChange"
 - "ref"
 - "saveChangeToFirebase"
-- "createCoreDataChange"
 - "sharedContext"
 depends-top-level:
-- !private "Dictionary"
+- "Firebase"
 - !private "AnyObject"
+- !private "BooleanLiteralType"
 - "String"
 - "CreateChange"
-- !private "CoreDataStackManager"
-- "NSObject"
-- "StringLiteralType"
-- "Firebase"
-- "NSManagedObjectContext"
-- !private "print"
 - !private "Change"
+- !private "print"
+- "NSManagedObjectContext"
+- "NSObject"
+- "Bool"
+- "StringLiteralType"
+- !private "Dictionary"
+- !private "CoreDataStackManager"
+- !private "=="
 depends-member:
 - !private ["PSs9AnyObject", "AnyObject"]
 - !private ["PSs9AnyObject", "Change"]
@@ -43,6 +46,7 @@ depends-member:
 - !private ["PSs9AnyObject", "sharedInstance"]
 - ["PSs9AnyObject", ""]
 - !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Sb", "deinit"]
 - !private ["PSs25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["PSs11BooleanType", "_getBuiltinLogicValue"]
 - !private ["PSs11CVarArgType", "AnyObject"]
@@ -75,6 +79,7 @@ depends-member:
 - !private ["C8GoChange20CoreDataStackManager", "managedObjectContext"]
 - !private ["C8GoChange20CoreDataStackManager", "sharedInstance"]
 - !private ["C8GoChange12CreateChange", "AnyObject"]
+- ["C8GoChange12CreateChange", "Bool"]
 - !private ["C8GoChange12CreateChange", "Change"]
 - !private ["C8GoChange12CreateChange", "CoreDataStackManager"]
 - ["C8GoChange12CreateChange", "Firebase"]
@@ -177,12 +182,14 @@ depends-member:
 - !private ["VSs17IndexingGenerator", "Element"]
 - !private ["VC8GoChange6Change4Keys", "changeDescription"]
 - !private ["VC8GoChange6Change4Keys", "changeName"]
+- !private ["VC8GoChange6Change4Keys", "owner"]
 - !private ["PSo8NSCoding", "save"]
 - !private ["PSo9NSLocking", "save"]
 - !private ["CSo15NSManagedObject", "Keys"]
 - !private ["CSo15NSManagedObject", "init"]
 - !private ["CSo22NSManagedObjectContext", "save"]
 - !private ["CSo8NSObject", "AnyObject"]
+- ["CSo8NSObject", "Bool"]
 - !private ["CSo8NSObject", "Change"]
 - !private ["CSo8NSObject", "CoreDataStackManager"]
 - ["CSo8NSObject", "Firebase"]
@@ -303,4 +310,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "30c26afcb79224c34e79b5e336baa1eb"
+interface-hash: "dfb112c3198381ba881ee207cee5b71f"

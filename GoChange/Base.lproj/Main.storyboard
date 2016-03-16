@@ -425,7 +425,7 @@
         <!--Create A Change-->
         <scene sceneID="7LJ-1L-4aZ">
             <objects>
-                <viewController title="Create A Change" id="jla-2r-9q3" customClass="CreateChangeViewController" customModule="GoChange" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateChangeViewController" title="Create A Change" id="jla-2r-9q3" customClass="CreateChangeViewController" customModule="GoChange" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GAE-Cy-tYy"/>
                         <viewControllerLayoutGuide type="bottom" id="PGB-N4-xMZ"/>
@@ -437,15 +437,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fp9-c2-DJ3">
                                 <rect key="frame" x="0.0" y="64" width="600" height="480"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Please give you change a name...." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wUl-ml-dgM">
-                                        <rect key="frame" x="8" y="35" width="546" height="17"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Please give you change a name...." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wUl-ml-dgM">
+                                        <rect key="frame" x="8" y="35" width="542" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaS-ex-xaJ">
-                                        <rect key="frame" x="562" y="57" width="30" height="53"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                        <state key="normal" title="+"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaS-ex-xaJ">
+                                        <rect key="frame" x="558" y="60" width="34" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="Aj8-S1-lUq"/>
+                                            <constraint firstAttribute="width" constant="34" id="ZfN-sW-grm"/>
+                                        </constraints>
+                                        <state key="normal" image="plus"/>
                                         <connections>
                                             <action selector="detailsActionButton:" destination="jla-2r-9q3" eventType="touchUpInside" id="syI-W8-sMw"/>
                                         </connections>
@@ -467,16 +470,20 @@
                                             <outlet property="dataSource" destination="jla-2r-9q3" id="8y9-Ze-Uug"/>
                                         </connections>
                                     </tableView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHr-oT-t1z">
-                                        <rect key="frame" x="562" y="24" width="30" height="39"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="+"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHr-oT-t1z">
+                                        <rect key="frame" x="558" y="27" width="34" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="Pkk-ze-Jgj"/>
+                                            <constraint firstAttribute="width" constant="34" id="VQF-8t-n55"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" image="plus"/>
                                         <connections>
                                             <action selector="nameActionButton:" destination="jla-2r-9q3" eventType="touchUpInside" id="BJX-xo-kac"/>
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Please enter details of the change you would like to see..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lPM-ny-u3c">
-                                        <rect key="frame" x="8" y="81" width="546" height="138"/>
+                                        <rect key="frame" x="8" y="60" width="546" height="138"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -490,11 +497,11 @@
                                     <constraint firstItem="wUl-ml-dgM" firstAttribute="top" secondItem="Fp9-c2-DJ3" secondAttribute="top" constant="35" id="RvG-fM-AZX"/>
                                     <constraint firstItem="lPM-ny-u3c" firstAttribute="top" secondItem="wUl-ml-dgM" secondAttribute="bottom" constant="8" id="Xam-D4-G9Z"/>
                                     <constraint firstItem="Jei-Uk-BP3" firstAttribute="leading" secondItem="Fp9-c2-DJ3" secondAttribute="leading" constant="8" id="fN4-9n-7qk"/>
-                                    <constraint firstAttribute="trailing" secondItem="pHr-oT-t1z" secondAttribute="trailing" constant="8" id="gun-z3-MBi"/>
                                     <constraint firstItem="eaS-ex-xaJ" firstAttribute="top" secondItem="lPM-ny-u3c" secondAttribute="top" id="mBV-mE-jqU"/>
                                     <constraint firstAttribute="trailing" secondItem="eaS-ex-xaJ" secondAttribute="trailing" constant="8" id="nES-Ce-cDC"/>
                                     <constraint firstItem="pHr-oT-t1z" firstAttribute="leading" secondItem="wUl-ml-dgM" secondAttribute="trailing" constant="8" id="pbo-1a-3zg"/>
                                     <constraint firstItem="pHr-oT-t1z" firstAttribute="centerY" secondItem="wUl-ml-dgM" secondAttribute="centerY" id="s60-pc-wPL"/>
+                                    <constraint firstAttribute="trailing" secondItem="pHr-oT-t1z" secondAttribute="trailing" constant="8" id="t8k-NW-ACN"/>
                                     <constraint firstItem="wUl-ml-dgM" firstAttribute="leading" secondItem="Fp9-c2-DJ3" secondAttribute="leading" constant="8" id="u8n-Ca-Xcw"/>
                                     <constraint firstItem="Jei-Uk-BP3" firstAttribute="height" secondItem="lPM-ny-u3c" secondAttribute="height" id="wyr-db-2Oy"/>
                                 </constraints>
@@ -721,7 +728,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y7G-AN-1Wr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1698" y="-1018"/>
+            <point key="canvasLocation" x="1778" y="-1039"/>
         </scene>
         <!--Change View Controller-->
         <scene sceneID="2oq-fC-Vab">
@@ -791,18 +798,12 @@
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pbc-Xt-r0a">
                                 <rect key="frame" x="0.0" y="21" width="600" height="496"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Please enter details of the change you would like to see..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wuV-ff-IxT">
-                                        <rect key="frame" x="8" y="57" width="546" height="164"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsX-iJ-DcV">
                                         <rect key="frame" x="562" y="-4" width="30" height="53"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                         <state key="normal" title="+"/>
                                         <connections>
+                                            <action selector="addNameClick:" destination="GYX-c8-uwM" eventType="touchUpInside" id="1qV-Sh-8bC"/>
                                             <action selector="nameActionButton:" destination="jla-2r-9q3" eventType="touchUpInside" id="uaX-9u-4T5"/>
                                         </connections>
                                     </button>
@@ -811,6 +812,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                         <state key="normal" title="+"/>
                                         <connections>
+                                            <action selector="addDetailClick:" destination="GYX-c8-uwM" eventType="touchUpInside" id="LLS-Th-Caa"/>
                                             <action selector="detailsActionButton:" destination="jla-2r-9q3" eventType="touchUpInside" id="LlL-sG-VHz"/>
                                         </connections>
                                     </button>
@@ -818,7 +820,7 @@
                                         <rect key="frame" x="0.0" y="229" width="580" height="226"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="solutionCell" id="fOc-S7-hSQ">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweakCell" id="fOc-S7-hSQ">
                                                 <rect key="frame" x="0.0" y="28" width="580" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fOc-S7-hSQ" id="8iy-2E-3Hm">
@@ -831,11 +833,18 @@
                                             <outlet property="dataSource" destination="jla-2r-9q3" id="CJG-cS-y0H"/>
                                         </connections>
                                     </tableView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Please give you change a name...." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vZy-It-Oqd">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Please give you solution a name...." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vZy-It-Oqd">
                                         <rect key="frame" x="8" y="8" width="546" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Please enter details of the solution you have..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wuV-ff-IxT">
+                                        <rect key="frame" x="8" y="57" width="546" height="164"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -903,6 +912,12 @@
                             <constraint firstItem="9fa-V6-Soy" firstAttribute="centerX" secondItem="D4k-hL-6nw" secondAttribute="centerX" id="pMb-vr-fe6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addDetailButton" destination="ES5-S7-10A" id="Z1N-dV-Sil"/>
+                        <outlet property="addNameButton" destination="wsX-iJ-DcV" id="2ba-Gt-q1Q"/>
+                        <outlet property="detailTextView" destination="wuV-ff-IxT" id="dJM-UI-rov"/>
+                        <outlet property="nameTextField" destination="vZy-It-Oqd" id="Yxv-en-cV0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XZ5-cW-2Zh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -996,4 +1011,7 @@
             <point key="canvasLocation" x="2462" y="-1053"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus" width="34" height="34"/>
+    </resources>
 </document>

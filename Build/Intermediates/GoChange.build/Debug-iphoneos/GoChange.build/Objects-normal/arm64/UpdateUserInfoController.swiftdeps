@@ -1,0 +1,372 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "UpdateUserInfoController"
+provides-nominal:
+- "C8GoChange24UpdateUserInfoController"
+provides-member:
+- ["C8GoChange24UpdateUserInfoController", ""]
+provides-dynamic-lookup:
+- "ref"
+- "updateEmail"
+- "updateUsername"
+- "viewDidLoad"
+- "segueToInput"
+- "updatePassword"
+- "currentlyUpdating"
+- "cancelUpdate"
+depends-top-level:
+- "String"
+- !private "SignupViewController"
+- "UIButton"
+- "Firebase"
+- "UIViewController"
+- !private "BooleanLiteralType"
+- "UpdateUserInfoController"
+- "StringLiteralType"
+depends-member:
+- ["PSs9AnyObject", "Firebase"]
+- ["PSs9AnyObject", "cancelUpdate"]
+- ["PSs9AnyObject", "currentlyUpdating"]
+- !private ["PSs9AnyObject", "dismissViewControllerAnimated"]
+- ["PSs9AnyObject", "init"]
+- !private ["PSs9AnyObject", "instantiateViewControllerWithIdentifier"]
+- !private ["PSs9AnyObject", "presentViewController"]
+- ["PSs9AnyObject", "ref"]
+- ["PSs9AnyObject", "segueToInput"]
+- !private ["PSs9AnyObject", "sendingController"]
+- !private ["PSs9AnyObject", "storyboard"]
+- ["PSs9AnyObject", "updateEmail"]
+- !private ["PSs9AnyObject", "updateField"]
+- ["PSs9AnyObject", "updatePassword"]
+- ["PSs9AnyObject", "updateUsername"]
+- ["PSs9AnyObject", "viewDidLoad"]
+- ["PSs9AnyObject", ""]
+- ["PSs11CVarArgType", "Firebase"]
+- ["PSs11CVarArgType", "cancelUpdate"]
+- ["PSs11CVarArgType", "currentlyUpdating"]
+- !private ["PSs11CVarArgType", "dismissViewControllerAnimated"]
+- ["PSs11CVarArgType", "init"]
+- !private ["PSs11CVarArgType", "instantiateViewControllerWithIdentifier"]
+- !private ["PSs11CVarArgType", "presentViewController"]
+- ["PSs11CVarArgType", "ref"]
+- ["PSs11CVarArgType", "segueToInput"]
+- !private ["PSs11CVarArgType", "sendingController"]
+- !private ["PSs11CVarArgType", "storyboard"]
+- ["PSs11CVarArgType", "updateEmail"]
+- !private ["PSs11CVarArgType", "updateField"]
+- ["PSs11CVarArgType", "updatePassword"]
+- ["PSs11CVarArgType", "updateUsername"]
+- ["PSs11CVarArgType", "viewDidLoad"]
+- ["PSs11CVarArgType", ""]
+- ["PSs23CustomStringConvertible", "Firebase"]
+- ["PSs23CustomStringConvertible", "cancelUpdate"]
+- ["PSs23CustomStringConvertible", "currentlyUpdating"]
+- !private ["PSs23CustomStringConvertible", "dismissViewControllerAnimated"]
+- ["PSs23CustomStringConvertible", "init"]
+- !private ["PSs23CustomStringConvertible", "instantiateViewControllerWithIdentifier"]
+- !private ["PSs23CustomStringConvertible", "presentViewController"]
+- ["PSs23CustomStringConvertible", "ref"]
+- ["PSs23CustomStringConvertible", "segueToInput"]
+- !private ["PSs23CustomStringConvertible", "sendingController"]
+- !private ["PSs23CustomStringConvertible", "storyboard"]
+- ["PSs23CustomStringConvertible", "updateEmail"]
+- !private ["PSs23CustomStringConvertible", "updateField"]
+- ["PSs23CustomStringConvertible", "updatePassword"]
+- ["PSs23CustomStringConvertible", "updateUsername"]
+- ["PSs23CustomStringConvertible", "viewDidLoad"]
+- ["PSs23CustomStringConvertible", ""]
+- ["PSs9Equatable", "Firebase"]
+- ["PSs9Equatable", "cancelUpdate"]
+- ["PSs9Equatable", "currentlyUpdating"]
+- !private ["PSs9Equatable", "dismissViewControllerAnimated"]
+- ["PSs9Equatable", "init"]
+- !private ["PSs9Equatable", "instantiateViewControllerWithIdentifier"]
+- !private ["PSs9Equatable", "presentViewController"]
+- ["PSs9Equatable", "ref"]
+- ["PSs9Equatable", "segueToInput"]
+- !private ["PSs9Equatable", "sendingController"]
+- !private ["PSs9Equatable", "storyboard"]
+- ["PSs9Equatable", "updateEmail"]
+- !private ["PSs9Equatable", "updateField"]
+- ["PSs9Equatable", "updatePassword"]
+- ["PSs9Equatable", "updateUsername"]
+- ["PSs9Equatable", "viewDidLoad"]
+- ["PSs9Equatable", ""]
+- ["CSo6FQuery", "init"]
+- ["CSo8Firebase", "init"]
+- ["PSs8Hashable", "Firebase"]
+- ["PSs8Hashable", "cancelUpdate"]
+- ["PSs8Hashable", "currentlyUpdating"]
+- !private ["PSs8Hashable", "dismissViewControllerAnimated"]
+- ["PSs8Hashable", "init"]
+- !private ["PSs8Hashable", "instantiateViewControllerWithIdentifier"]
+- !private ["PSs8Hashable", "presentViewController"]
+- ["PSs8Hashable", "ref"]
+- ["PSs8Hashable", "segueToInput"]
+- !private ["PSs8Hashable", "sendingController"]
+- !private ["PSs8Hashable", "storyboard"]
+- ["PSs8Hashable", "updateEmail"]
+- !private ["PSs8Hashable", "updateField"]
+- ["PSs8Hashable", "updatePassword"]
+- ["PSs8Hashable", "updateUsername"]
+- ["PSs8Hashable", "viewDidLoad"]
+- ["PSs8Hashable", ""]
+- ["SQ", "deinit"]
+- ["PSo8NSCoding", "Firebase"]
+- ["PSo8NSCoding", "cancelUpdate"]
+- ["PSo8NSCoding", "currentlyUpdating"]
+- !private ["PSo8NSCoding", "dismissViewControllerAnimated"]
+- ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "presentViewController"]
+- ["PSo8NSCoding", "ref"]
+- ["PSo8NSCoding", "segueToInput"]
+- !private ["PSo8NSCoding", "sendingController"]
+- !private ["PSo8NSCoding", "storyboard"]
+- ["PSo8NSCoding", "updateEmail"]
+- !private ["PSo8NSCoding", "updateField"]
+- ["PSo8NSCoding", "updatePassword"]
+- ["PSo8NSCoding", "updateUsername"]
+- ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- ["PSo26NSExtensionRequestHandling", "Firebase"]
+- ["PSo26NSExtensionRequestHandling", "cancelUpdate"]
+- ["PSo26NSExtensionRequestHandling", "currentlyUpdating"]
+- !private ["PSo26NSExtensionRequestHandling", "dismissViewControllerAnimated"]
+- ["PSo26NSExtensionRequestHandling", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "presentViewController"]
+- ["PSo26NSExtensionRequestHandling", "ref"]
+- ["PSo26NSExtensionRequestHandling", "segueToInput"]
+- !private ["PSo26NSExtensionRequestHandling", "sendingController"]
+- !private ["PSo26NSExtensionRequestHandling", "storyboard"]
+- ["PSo26NSExtensionRequestHandling", "updateEmail"]
+- !private ["PSo26NSExtensionRequestHandling", "updateField"]
+- ["PSo26NSExtensionRequestHandling", "updatePassword"]
+- ["PSo26NSExtensionRequestHandling", "updateUsername"]
+- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- ["CSo8NSObject", "Firebase"]
+- !private ["CSo8NSObject", "SignupViewController"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "UIButton"]
+- ["CSo8NSObject", "cancelUpdate"]
+- ["CSo8NSObject", "currentlyUpdating"]
+- !private ["CSo8NSObject", "dismissViewControllerAnimated"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "instantiateViewControllerWithIdentifier"]
+- !private ["CSo8NSObject", "presentViewController"]
+- ["CSo8NSObject", "ref"]
+- ["CSo8NSObject", "segueToInput"]
+- !private ["CSo8NSObject", "sendingController"]
+- !private ["CSo8NSObject", "storyboard"]
+- ["CSo8NSObject", "updateEmail"]
+- !private ["CSo8NSObject", "updateField"]
+- ["CSo8NSObject", "updatePassword"]
+- ["CSo8NSObject", "updateUsername"]
+- ["CSo8NSObject", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", "Firebase"]
+- ["PSo16NSObjectProtocol", "cancelUpdate"]
+- ["PSo16NSObjectProtocol", "currentlyUpdating"]
+- !private ["PSo16NSObjectProtocol", "dismissViewControllerAnimated"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "instantiateViewControllerWithIdentifier"]
+- !private ["PSo16NSObjectProtocol", "presentViewController"]
+- ["PSo16NSObjectProtocol", "ref"]
+- ["PSo16NSObjectProtocol", "segueToInput"]
+- !private ["PSo16NSObjectProtocol", "sendingController"]
+- !private ["PSo16NSObjectProtocol", "storyboard"]
+- ["PSo16NSObjectProtocol", "updateEmail"]
+- !private ["PSo16NSObjectProtocol", "updateField"]
+- ["PSo16NSObjectProtocol", "updatePassword"]
+- ["PSo16NSObjectProtocol", "updateUsername"]
+- ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["Sq", "deinit"]
+- !private ["C8GoChange20SignupViewController", "sendingController"]
+- !private ["C8GoChange20SignupViewController", "updateField"]
+- ["PSo21UIAppearanceContainer", "Firebase"]
+- ["PSo21UIAppearanceContainer", "cancelUpdate"]
+- ["PSo21UIAppearanceContainer", "currentlyUpdating"]
+- !private ["PSo21UIAppearanceContainer", "dismissViewControllerAnimated"]
+- ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "presentViewController"]
+- ["PSo21UIAppearanceContainer", "ref"]
+- ["PSo21UIAppearanceContainer", "segueToInput"]
+- !private ["PSo21UIAppearanceContainer", "sendingController"]
+- !private ["PSo21UIAppearanceContainer", "storyboard"]
+- ["PSo21UIAppearanceContainer", "updateEmail"]
+- !private ["PSo21UIAppearanceContainer", "updateField"]
+- ["PSo21UIAppearanceContainer", "updatePassword"]
+- ["PSo21UIAppearanceContainer", "updateUsername"]
+- ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- ["PSo18UIContentContainer", "Firebase"]
+- ["PSo18UIContentContainer", "cancelUpdate"]
+- ["PSo18UIContentContainer", "currentlyUpdating"]
+- !private ["PSo18UIContentContainer", "dismissViewControllerAnimated"]
+- ["PSo18UIContentContainer", "init"]
+- !private ["PSo18UIContentContainer", "presentViewController"]
+- ["PSo18UIContentContainer", "ref"]
+- ["PSo18UIContentContainer", "segueToInput"]
+- !private ["PSo18UIContentContainer", "sendingController"]
+- !private ["PSo18UIContentContainer", "storyboard"]
+- ["PSo18UIContentContainer", "updateEmail"]
+- !private ["PSo18UIContentContainer", "updateField"]
+- ["PSo18UIContentContainer", "updatePassword"]
+- ["PSo18UIContentContainer", "updateUsername"]
+- ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- ["PSo18UIFocusEnvironment", "Firebase"]
+- ["PSo18UIFocusEnvironment", "cancelUpdate"]
+- ["PSo18UIFocusEnvironment", "currentlyUpdating"]
+- !private ["PSo18UIFocusEnvironment", "dismissViewControllerAnimated"]
+- ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "presentViewController"]
+- ["PSo18UIFocusEnvironment", "ref"]
+- ["PSo18UIFocusEnvironment", "segueToInput"]
+- !private ["PSo18UIFocusEnvironment", "sendingController"]
+- !private ["PSo18UIFocusEnvironment", "storyboard"]
+- ["PSo18UIFocusEnvironment", "updateEmail"]
+- !private ["PSo18UIFocusEnvironment", "updateField"]
+- ["PSo18UIFocusEnvironment", "updatePassword"]
+- ["PSo18UIFocusEnvironment", "updateUsername"]
+- ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- ["CSo11UIResponder", "Firebase"]
+- !private ["CSo11UIResponder", "SignupViewController"]
+- ["CSo11UIResponder", "String"]
+- ["CSo11UIResponder", "UIButton"]
+- ["CSo11UIResponder", "cancelUpdate"]
+- ["CSo11UIResponder", "currentlyUpdating"]
+- !private ["CSo11UIResponder", "dismissViewControllerAnimated"]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "presentViewController"]
+- ["CSo11UIResponder", "ref"]
+- ["CSo11UIResponder", "segueToInput"]
+- !private ["CSo11UIResponder", "sendingController"]
+- !private ["CSo11UIResponder", "storyboard"]
+- ["CSo11UIResponder", "updateEmail"]
+- !private ["CSo11UIResponder", "updateField"]
+- ["CSo11UIResponder", "updatePassword"]
+- ["CSo11UIResponder", "updateUsername"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- ["PSo16UIStateRestoring", "Firebase"]
+- ["PSo16UIStateRestoring", "cancelUpdate"]
+- ["PSo16UIStateRestoring", "currentlyUpdating"]
+- !private ["PSo16UIStateRestoring", "dismissViewControllerAnimated"]
+- ["PSo16UIStateRestoring", "init"]
+- !private ["PSo16UIStateRestoring", "presentViewController"]
+- ["PSo16UIStateRestoring", "ref"]
+- ["PSo16UIStateRestoring", "segueToInput"]
+- !private ["PSo16UIStateRestoring", "sendingController"]
+- !private ["PSo16UIStateRestoring", "storyboard"]
+- ["PSo16UIStateRestoring", "updateEmail"]
+- !private ["PSo16UIStateRestoring", "updateField"]
+- ["PSo16UIStateRestoring", "updatePassword"]
+- ["PSo16UIStateRestoring", "updateUsername"]
+- ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["CSo12UIStoryboard", "instantiateViewControllerWithIdentifier"]
+- !private ["PSo19UITextFieldDelegate", "sendingController"]
+- !private ["PSo19UITextFieldDelegate", "updateField"]
+- ["PSo18UITraitEnvironment", "Firebase"]
+- ["PSo18UITraitEnvironment", "cancelUpdate"]
+- ["PSo18UITraitEnvironment", "currentlyUpdating"]
+- !private ["PSo18UITraitEnvironment", "dismissViewControllerAnimated"]
+- ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "presentViewController"]
+- ["PSo18UITraitEnvironment", "ref"]
+- ["PSo18UITraitEnvironment", "segueToInput"]
+- !private ["PSo18UITraitEnvironment", "sendingController"]
+- !private ["PSo18UITraitEnvironment", "storyboard"]
+- ["PSo18UITraitEnvironment", "updateEmail"]
+- !private ["PSo18UITraitEnvironment", "updateField"]
+- ["PSo18UITraitEnvironment", "updatePassword"]
+- ["PSo18UITraitEnvironment", "updateUsername"]
+- ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- ["CSo16UIViewController", "Firebase"]
+- !private ["CSo16UIViewController", "SignupViewController"]
+- ["CSo16UIViewController", "String"]
+- ["CSo16UIViewController", "UIButton"]
+- ["CSo16UIViewController", "cancelUpdate"]
+- ["CSo16UIViewController", "currentlyUpdating"]
+- !private ["CSo16UIViewController", "dismissViewControllerAnimated"]
+- ["CSo16UIViewController", "init"]
+- !private ["CSo16UIViewController", "presentViewController"]
+- ["CSo16UIViewController", "ref"]
+- ["CSo16UIViewController", "segueToInput"]
+- !private ["CSo16UIViewController", "sendingController"]
+- !private ["CSo16UIViewController", "storyboard"]
+- ["CSo16UIViewController", "updateEmail"]
+- !private ["CSo16UIViewController", "updateField"]
+- ["CSo16UIViewController", "updatePassword"]
+- ["CSo16UIViewController", "updateUsername"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
+- ["C8GoChange24UpdateUserInfoController", "Firebase"]
+- !private ["C8GoChange24UpdateUserInfoController", "SignupViewController"]
+- ["C8GoChange24UpdateUserInfoController", "String"]
+- ["C8GoChange24UpdateUserInfoController", "UIButton"]
+- ["C8GoChange24UpdateUserInfoController", "cancelUpdate"]
+- ["C8GoChange24UpdateUserInfoController", "currentlyUpdating"]
+- ["C8GoChange24UpdateUserInfoController", "deinit"]
+- !private ["C8GoChange24UpdateUserInfoController", "dismissViewControllerAnimated"]
+- ["C8GoChange24UpdateUserInfoController", "init"]
+- !private ["C8GoChange24UpdateUserInfoController", "presentViewController"]
+- ["C8GoChange24UpdateUserInfoController", "ref"]
+- ["C8GoChange24UpdateUserInfoController", "segueToInput"]
+- !private ["C8GoChange24UpdateUserInfoController", "storyboard"]
+- ["C8GoChange24UpdateUserInfoController", "updateEmail"]
+- ["C8GoChange24UpdateUserInfoController", "updatePassword"]
+- ["C8GoChange24UpdateUserInfoController", "updateUsername"]
+- ["C8GoChange24UpdateUserInfoController", "viewDidLoad"]
+depends-nominal:
+- "PSs9AnyObject"
+- "PSs11CVarArgType"
+- "PSs23CustomStringConvertible"
+- "PSs9Equatable"
+- "CSo6FQuery"
+- "CSo8Firebase"
+- "PSs8Hashable"
+- "SQ"
+- "PSo8NSCoding"
+- "PSo26NSExtensionRequestHandling"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "Sq"
+- !private "C8GoChange20SignupViewController"
+- "PSo21UIAppearanceContainer"
+- "PSo18UIContentContainer"
+- "PSo18UIFocusEnvironment"
+- "CSo11UIResponder"
+- "PSo16UIStateRestoring"
+- !private "CSo12UIStoryboard"
+- !private "PSo19UITextFieldDelegate"
+- "PSo18UITraitEnvironment"
+- "CSo16UIViewController"
+- "C8GoChange24UpdateUserInfoController"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
+- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FirebaseServerValue.h"
+- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FTransactionResult.h"
+- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FMutableData.h"
+- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FirebaseApp.h"
+- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FQuery.h"
+- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase.h"
+- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FEventType.h"
+- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FDataSnapshot.h"
+- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FConfig.h"
+- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthType.h"
+- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
+- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
+- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
+interface-hash: "5ddaf003f5a2f876d4ccef3e7238f6eb"

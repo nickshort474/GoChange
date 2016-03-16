@@ -95,6 +95,11 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
 @class NSURLSession;
 @class UIButton;
+@class UITextField;
+@class UITextView;
+@class UITableView;
+@class NSIndexPath;
+@class UITableViewCell;
 @class NSBundle;
 @class NSCoder;
 
@@ -102,10 +107,23 @@ SWIFT_CLASS("_TtC8GoChange21AddIdeaViewController")
 @interface AddIdeaViewController : UIViewController
 @property (nonatomic) NSInteger petitionId;
 @property (nonatomic, strong) NSURLSession * __nonnull session;
+@property (nonatomic, weak) IBOutlet UITextField * __null_unspecified nameTextField;
+@property (nonatomic, weak) IBOutlet UITextView * __null_unspecified detailTextView;
+@property (nonatomic, weak) IBOutlet UIButton * __null_unspecified addNameButton;
+@property (nonatomic, weak) IBOutlet UIButton * __null_unspecified addDetailButton;
+@property (nonatomic, copy) NSString * __null_unspecified currentNameData;
+@property (nonatomic, copy) NSString * __null_unspecified currentDetailData;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (IBAction)doneAddingIdea:(UIButton * __nonnull)sender;
 - (IBAction)cancelAddingIdea:(UIButton * __nonnull)sender;
+- (IBAction)addNameClick:(id __nonnull)sender;
+- (IBAction)addDetailClick:(UIButton * __nonnull)sender;
+- (void)textFieldDidBeginEditing:(UITextField * __nonnull)textField;
+- (void)textViewDidBeginEditing:(UITextView * __nonnull)textView;
+- (NSInteger)tableView:(UITableView * __nonnull)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell * __nonnull)tableView:(UITableView * __nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
+- (void)tableView:(UITableView * __nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
 - (IBAction)addPetition:(UIButton * __nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -147,12 +165,14 @@ SWIFT_CLASS("_TtC8GoChange11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSNumber;
 @class NSEntityDescription;
 
 SWIFT_CLASS("_TtC8GoChange6Change")
 @interface Change : NSManagedObject
 @property (nonatomic, copy) NSString * __nonnull changeName;
 @property (nonatomic, copy) NSString * __nonnull changeDescription;
+@property (nonatomic, strong) NSNumber * __nonnull owner;
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * __nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * __nullable)context OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithDictionary:(NSDictionary<NSString *, id> * __nonnull)dictionary context:(NSManagedObjectContext * __nonnull)context OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -174,17 +194,12 @@ SWIFT_CLASS("_TtC8GoChange20ChangeViewController")
 SWIFT_CLASS("_TtC8GoChange12CreateChange")
 @interface CreateChange : NSObject
 @property (nonatomic, strong) Firebase * __null_unspecified ref;
-- (nonnull instancetype)initWithCurrentDetailData:(NSString * __nonnull)currentDetailData currentNameData:(NSString * __nonnull)currentNameData OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithCurrentDetailData:(NSString * __nonnull)currentDetailData currentNameData:(NSString * __nonnull)currentNameData owner:(BOOL)owner OBJC_DESIGNATED_INITIALIZER;
 @property (nonatomic, strong) NSManagedObjectContext * __nonnull sharedContext;
-- (void)createCoreDataChange:(NSString * __nonnull)currentDetailData currentNameData:(NSString * __nonnull)currentNameData;
+- (void)createCoreDataChange:(NSString * __nonnull)currentDetailData currentNameData:(NSString * __nonnull)currentNameData owner:(BOOL)owner;
 - (void)saveChangeToFirebase:(NSString * __nonnull)currentDetailData currentNameData:(NSString * __nonnull)currentNameData;
 @end
 
-@class UITextField;
-@class UITextView;
-@class UITableView;
-@class NSIndexPath;
-@class UITableViewCell;
 @class UIImageView;
 
 SWIFT_CLASS("_TtC8GoChange26CreateChangeViewController")
@@ -199,6 +214,7 @@ SWIFT_CLASS("_TtC8GoChange26CreateChangeViewController")
 @property (nonatomic, copy) NSString * __nonnull currentNameData;
 @property (nonatomic, copy) NSString * __nonnull currentDetailData;
 @property (nonatomic, copy) NSString * __nonnull sendingController;
+@property (nonatomic, copy) NSString * __nonnull isOwner;
 @property (nonatomic, weak) IBOutlet UITableView * __null_unspecified solutionTable;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
