@@ -6,111 +6,128 @@ provides-nominal:
 provides-member:
 - ["C8GoChange24UpdateUserInfoController", ""]
 provides-dynamic-lookup:
+- "ref"
+- "updatePassword"
 - "viewDidLoad"
 - "segueToInput"
-- "updatePassword"
-- "ref"
-- "updateEmail"
-- "currentlyUpdating"
 - "cancelUpdate"
 - "updateUsername"
+- "currentlyUpdating"
+- "updateEmail"
 depends-top-level:
+- "UIButton"
+- "UIViewController"
+- "StringLiteralType"
+- "String"
+- "Firebase"
+- !private "SignupViewController"
 - "UpdateUserInfoController"
 - !private "BooleanLiteralType"
-- "Firebase"
-- "UIButton"
-- "String"
-- "StringLiteralType"
-- !private "SignupViewController"
-- "UIViewController"
 depends-member:
-- ["PSs9AnyObject", "Firebase"]
-- ["PSs9AnyObject", "cancelUpdate"]
-- ["PSs9AnyObject", "currentlyUpdating"]
-- !private ["PSs9AnyObject", "dismissViewControllerAnimated"]
-- ["PSs9AnyObject", "init"]
-- !private ["PSs9AnyObject", "instantiateViewControllerWithIdentifier"]
-- !private ["PSs9AnyObject", "presentViewController"]
-- ["PSs9AnyObject", "ref"]
-- ["PSs9AnyObject", "segueToInput"]
-- !private ["PSs9AnyObject", "sendingController"]
-- !private ["PSs9AnyObject", "storyboard"]
-- ["PSs9AnyObject", "updateEmail"]
-- !private ["PSs9AnyObject", "updateField"]
-- ["PSs9AnyObject", "updatePassword"]
-- ["PSs9AnyObject", "updateUsername"]
-- ["PSs9AnyObject", "viewDidLoad"]
-- ["PSs9AnyObject", ""]
-- ["PSs11CVarArgType", "Firebase"]
-- ["PSs11CVarArgType", "cancelUpdate"]
-- ["PSs11CVarArgType", "currentlyUpdating"]
-- !private ["PSs11CVarArgType", "dismissViewControllerAnimated"]
-- ["PSs11CVarArgType", "init"]
-- !private ["PSs11CVarArgType", "instantiateViewControllerWithIdentifier"]
-- !private ["PSs11CVarArgType", "presentViewController"]
-- ["PSs11CVarArgType", "ref"]
-- ["PSs11CVarArgType", "segueToInput"]
-- !private ["PSs11CVarArgType", "sendingController"]
-- !private ["PSs11CVarArgType", "storyboard"]
-- ["PSs11CVarArgType", "updateEmail"]
-- !private ["PSs11CVarArgType", "updateField"]
-- ["PSs11CVarArgType", "updatePassword"]
-- ["PSs11CVarArgType", "updateUsername"]
-- ["PSs11CVarArgType", "viewDidLoad"]
-- ["PSs11CVarArgType", ""]
-- ["PSs23CustomStringConvertible", "Firebase"]
-- ["PSs23CustomStringConvertible", "cancelUpdate"]
-- ["PSs23CustomStringConvertible", "currentlyUpdating"]
-- !private ["PSs23CustomStringConvertible", "dismissViewControllerAnimated"]
-- ["PSs23CustomStringConvertible", "init"]
-- !private ["PSs23CustomStringConvertible", "instantiateViewControllerWithIdentifier"]
-- !private ["PSs23CustomStringConvertible", "presentViewController"]
-- ["PSs23CustomStringConvertible", "ref"]
-- ["PSs23CustomStringConvertible", "segueToInput"]
-- !private ["PSs23CustomStringConvertible", "sendingController"]
-- !private ["PSs23CustomStringConvertible", "storyboard"]
-- ["PSs23CustomStringConvertible", "updateEmail"]
-- !private ["PSs23CustomStringConvertible", "updateField"]
-- ["PSs23CustomStringConvertible", "updatePassword"]
-- ["PSs23CustomStringConvertible", "updateUsername"]
-- ["PSs23CustomStringConvertible", "viewDidLoad"]
-- ["PSs23CustomStringConvertible", ""]
-- ["PSs9Equatable", "Firebase"]
-- ["PSs9Equatable", "cancelUpdate"]
-- ["PSs9Equatable", "currentlyUpdating"]
-- !private ["PSs9Equatable", "dismissViewControllerAnimated"]
-- ["PSs9Equatable", "init"]
-- !private ["PSs9Equatable", "instantiateViewControllerWithIdentifier"]
-- !private ["PSs9Equatable", "presentViewController"]
-- ["PSs9Equatable", "ref"]
-- ["PSs9Equatable", "segueToInput"]
-- !private ["PSs9Equatable", "sendingController"]
-- !private ["PSs9Equatable", "storyboard"]
-- ["PSs9Equatable", "updateEmail"]
-- !private ["PSs9Equatable", "updateField"]
-- ["PSs9Equatable", "updatePassword"]
-- ["PSs9Equatable", "updateUsername"]
-- ["PSs9Equatable", "viewDidLoad"]
-- ["PSs9Equatable", ""]
+- ["Ps9AnyObject", "Firebase"]
+- ["Ps9AnyObject", "cancelUpdate"]
+- ["Ps9AnyObject", "currentlyUpdating"]
+- !private ["Ps9AnyObject", "dismissViewControllerAnimated"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "instantiateViewControllerWithIdentifier"]
+- !private ["Ps9AnyObject", "presentViewController"]
+- ["Ps9AnyObject", "ref"]
+- ["Ps9AnyObject", "segueToInput"]
+- !private ["Ps9AnyObject", "sendingController"]
+- !private ["Ps9AnyObject", "storyboard"]
+- ["Ps9AnyObject", "updateEmail"]
+- !private ["Ps9AnyObject", "updateField"]
+- ["Ps9AnyObject", "updatePassword"]
+- ["Ps9AnyObject", "updateUsername"]
+- ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- ["Ps11CVarArgType", "Firebase"]
+- ["Ps11CVarArgType", "cancelUpdate"]
+- ["Ps11CVarArgType", "currentlyUpdating"]
+- !private ["Ps11CVarArgType", "dismissViewControllerAnimated"]
+- ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "instantiateViewControllerWithIdentifier"]
+- !private ["Ps11CVarArgType", "presentViewController"]
+- ["Ps11CVarArgType", "ref"]
+- ["Ps11CVarArgType", "segueToInput"]
+- !private ["Ps11CVarArgType", "sendingController"]
+- !private ["Ps11CVarArgType", "storyboard"]
+- ["Ps11CVarArgType", "updateEmail"]
+- !private ["Ps11CVarArgType", "updateField"]
+- ["Ps11CVarArgType", "updatePassword"]
+- ["Ps11CVarArgType", "updateUsername"]
+- ["Ps11CVarArgType", "viewDidLoad"]
+- ["Ps11CVarArgType", ""]
+- ["Ps28CustomDebugStringConvertible", "Firebase"]
+- ["Ps28CustomDebugStringConvertible", "cancelUpdate"]
+- ["Ps28CustomDebugStringConvertible", "currentlyUpdating"]
+- !private ["Ps28CustomDebugStringConvertible", "dismissViewControllerAnimated"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "instantiateViewControllerWithIdentifier"]
+- !private ["Ps28CustomDebugStringConvertible", "presentViewController"]
+- ["Ps28CustomDebugStringConvertible", "ref"]
+- ["Ps28CustomDebugStringConvertible", "segueToInput"]
+- !private ["Ps28CustomDebugStringConvertible", "sendingController"]
+- !private ["Ps28CustomDebugStringConvertible", "storyboard"]
+- ["Ps28CustomDebugStringConvertible", "updateEmail"]
+- !private ["Ps28CustomDebugStringConvertible", "updateField"]
+- ["Ps28CustomDebugStringConvertible", "updatePassword"]
+- ["Ps28CustomDebugStringConvertible", "updateUsername"]
+- ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "Firebase"]
+- ["Ps23CustomStringConvertible", "cancelUpdate"]
+- ["Ps23CustomStringConvertible", "currentlyUpdating"]
+- !private ["Ps23CustomStringConvertible", "dismissViewControllerAnimated"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "instantiateViewControllerWithIdentifier"]
+- !private ["Ps23CustomStringConvertible", "presentViewController"]
+- ["Ps23CustomStringConvertible", "ref"]
+- ["Ps23CustomStringConvertible", "segueToInput"]
+- !private ["Ps23CustomStringConvertible", "sendingController"]
+- !private ["Ps23CustomStringConvertible", "storyboard"]
+- ["Ps23CustomStringConvertible", "updateEmail"]
+- !private ["Ps23CustomStringConvertible", "updateField"]
+- ["Ps23CustomStringConvertible", "updatePassword"]
+- ["Ps23CustomStringConvertible", "updateUsername"]
+- ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "Firebase"]
+- ["Ps9Equatable", "cancelUpdate"]
+- ["Ps9Equatable", "currentlyUpdating"]
+- !private ["Ps9Equatable", "dismissViewControllerAnimated"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "instantiateViewControllerWithIdentifier"]
+- !private ["Ps9Equatable", "presentViewController"]
+- ["Ps9Equatable", "ref"]
+- ["Ps9Equatable", "segueToInput"]
+- !private ["Ps9Equatable", "sendingController"]
+- !private ["Ps9Equatable", "storyboard"]
+- ["Ps9Equatable", "updateEmail"]
+- !private ["Ps9Equatable", "updateField"]
+- ["Ps9Equatable", "updatePassword"]
+- ["Ps9Equatable", "updateUsername"]
+- ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", ""]
 - ["CSo6FQuery", "init"]
 - ["CSo8Firebase", "init"]
-- ["PSs8Hashable", "Firebase"]
-- ["PSs8Hashable", "cancelUpdate"]
-- ["PSs8Hashable", "currentlyUpdating"]
-- !private ["PSs8Hashable", "dismissViewControllerAnimated"]
-- ["PSs8Hashable", "init"]
-- !private ["PSs8Hashable", "instantiateViewControllerWithIdentifier"]
-- !private ["PSs8Hashable", "presentViewController"]
-- ["PSs8Hashable", "ref"]
-- ["PSs8Hashable", "segueToInput"]
-- !private ["PSs8Hashable", "sendingController"]
-- !private ["PSs8Hashable", "storyboard"]
-- ["PSs8Hashable", "updateEmail"]
-- !private ["PSs8Hashable", "updateField"]
-- ["PSs8Hashable", "updatePassword"]
-- ["PSs8Hashable", "updateUsername"]
-- ["PSs8Hashable", "viewDidLoad"]
-- ["PSs8Hashable", ""]
+- ["Ps8Hashable", "Firebase"]
+- ["Ps8Hashable", "cancelUpdate"]
+- ["Ps8Hashable", "currentlyUpdating"]
+- !private ["Ps8Hashable", "dismissViewControllerAnimated"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "instantiateViewControllerWithIdentifier"]
+- !private ["Ps8Hashable", "presentViewController"]
+- ["Ps8Hashable", "ref"]
+- ["Ps8Hashable", "segueToInput"]
+- !private ["Ps8Hashable", "sendingController"]
+- !private ["Ps8Hashable", "storyboard"]
+- ["Ps8Hashable", "updateEmail"]
+- !private ["Ps8Hashable", "updateField"]
+- ["Ps8Hashable", "updatePassword"]
+- ["Ps8Hashable", "updateUsername"]
+- ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
 - ["SQ", "deinit"]
 - ["PSo8NSCoding", "Firebase"]
 - ["PSo8NSCoding", "cancelUpdate"]
@@ -321,13 +338,14 @@ depends-member:
 - ["C8GoChange24UpdateUserInfoController", "updateUsername"]
 - ["C8GoChange24UpdateUserInfoController", "viewDidLoad"]
 depends-nominal:
-- "PSs9AnyObject"
-- "PSs11CVarArgType"
-- "PSs23CustomStringConvertible"
-- "PSs9Equatable"
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
 - "CSo6FQuery"
 - "CSo8Firebase"
-- "PSs8Hashable"
+- "Ps8Hashable"
 - "SQ"
 - "PSo8NSCoding"
 - "PSo26NSExtensionRequestHandling"
@@ -369,4 +387,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "5ddaf003f5a2f876d4ccef3e7238f6eb"
+interface-hash: "db219567ff602f637772e8ec3da265fa"

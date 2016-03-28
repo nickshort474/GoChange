@@ -9,18 +9,25 @@
 import Foundation
 import CoreData
 
+
 class Change:NSManagedObject{
     
     struct Keys{
         static let changeName = "changeName"
         static let changeDescription = "changeDescription"
         static let owner = "owner"
+        static let firebaseLocation = "firebaseLocation"
     }
     
     
     @NSManaged var changeName:String
     @NSManaged var changeDescription:String
     @NSManaged var owner:NSNumber
+    @NSManaged var firebaseLocation:String
+    
+    @NSManaged var changeNeedingSolution:[Solution]
+    
+    
     
     override init(entity: NSEntityDescription, insertIntoManagedObjectContext context: NSManagedObjectContext?) {
         super.init(entity: entity, insertIntoManagedObjectContext: context)
@@ -34,9 +41,10 @@ class Change:NSManagedObject{
         
         changeName = dictionary[Change.Keys.changeName] as! String
         changeDescription = dictionary[Change.Keys.changeDescription] as! String
+        firebaseLocation = dictionary[Change.Keys.firebaseLocation] as! String
+        
         
         let boolValue = dictionary[Change.Keys.owner] as! Bool
-        
         owner = NSNumber(bool: boolValue)
         
     }

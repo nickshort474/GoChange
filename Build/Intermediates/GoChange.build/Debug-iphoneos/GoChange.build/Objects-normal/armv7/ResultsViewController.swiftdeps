@@ -6,74 +6,85 @@ provides-nominal:
 provides-member:
 - ["C8GoChange21ResultsViewController", ""]
 provides-dynamic-lookup:
-- "ResultLinkButton"
-- "didReceiveMemoryWarning"
 - "viewDidLoad"
+- "didReceiveMemoryWarning"
+- "ResultLinkButton"
 depends-top-level:
 - "UIButton"
-- "ResultsViewController"
 - "UIViewController"
-- !private "BooleanLiteralType"
-- !private "CreateChangeViewController"
 - !private "StringLiteralType"
+- "ResultsViewController"
+- !private "CreateChangeViewController"
+- !private "BooleanLiteralType"
 depends-member:
-- ["PSs9AnyObject", "ResultLinkButton"]
-- ["PSs9AnyObject", "didReceiveMemoryWarning"]
-- ["PSs9AnyObject", "init"]
-- !private ["PSs9AnyObject", "instantiateViewControllerWithIdentifier"]
-- !private ["PSs9AnyObject", "isOwner"]
-- !private ["PSs9AnyObject", "navigationController"]
-- !private ["PSs9AnyObject", "pushViewController"]
-- !private ["PSs9AnyObject", "sendingController"]
-- !private ["PSs9AnyObject", "storyboard"]
-- ["PSs9AnyObject", "viewDidLoad"]
-- ["PSs9AnyObject", ""]
-- ["PSs11CVarArgType", "ResultLinkButton"]
-- ["PSs11CVarArgType", "didReceiveMemoryWarning"]
-- ["PSs11CVarArgType", "init"]
-- !private ["PSs11CVarArgType", "instantiateViewControllerWithIdentifier"]
-- !private ["PSs11CVarArgType", "isOwner"]
-- !private ["PSs11CVarArgType", "navigationController"]
-- !private ["PSs11CVarArgType", "pushViewController"]
-- !private ["PSs11CVarArgType", "sendingController"]
-- !private ["PSs11CVarArgType", "storyboard"]
-- ["PSs11CVarArgType", "viewDidLoad"]
-- ["PSs11CVarArgType", ""]
+- ["Ps9AnyObject", "ResultLinkButton"]
+- ["Ps9AnyObject", "didReceiveMemoryWarning"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "instantiateViewControllerWithIdentifier"]
+- !private ["Ps9AnyObject", "isOwner"]
+- !private ["Ps9AnyObject", "navigationController"]
+- !private ["Ps9AnyObject", "pushViewController"]
+- !private ["Ps9AnyObject", "sendingController"]
+- !private ["Ps9AnyObject", "storyboard"]
+- ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- ["Ps11CVarArgType", "ResultLinkButton"]
+- ["Ps11CVarArgType", "didReceiveMemoryWarning"]
+- ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "instantiateViewControllerWithIdentifier"]
+- !private ["Ps11CVarArgType", "isOwner"]
+- !private ["Ps11CVarArgType", "navigationController"]
+- !private ["Ps11CVarArgType", "pushViewController"]
+- !private ["Ps11CVarArgType", "sendingController"]
+- !private ["Ps11CVarArgType", "storyboard"]
+- ["Ps11CVarArgType", "viewDidLoad"]
+- ["Ps11CVarArgType", ""]
 - !private ["C8GoChange26CreateChangeViewController", "isOwner"]
 - !private ["C8GoChange26CreateChangeViewController", "sendingController"]
-- ["PSs23CustomStringConvertible", "ResultLinkButton"]
-- ["PSs23CustomStringConvertible", "didReceiveMemoryWarning"]
-- ["PSs23CustomStringConvertible", "init"]
-- !private ["PSs23CustomStringConvertible", "instantiateViewControllerWithIdentifier"]
-- !private ["PSs23CustomStringConvertible", "isOwner"]
-- !private ["PSs23CustomStringConvertible", "navigationController"]
-- !private ["PSs23CustomStringConvertible", "pushViewController"]
-- !private ["PSs23CustomStringConvertible", "sendingController"]
-- !private ["PSs23CustomStringConvertible", "storyboard"]
-- ["PSs23CustomStringConvertible", "viewDidLoad"]
-- ["PSs23CustomStringConvertible", ""]
-- ["PSs9Equatable", "ResultLinkButton"]
-- ["PSs9Equatable", "didReceiveMemoryWarning"]
-- ["PSs9Equatable", "init"]
-- !private ["PSs9Equatable", "instantiateViewControllerWithIdentifier"]
-- !private ["PSs9Equatable", "isOwner"]
-- !private ["PSs9Equatable", "navigationController"]
-- !private ["PSs9Equatable", "pushViewController"]
-- !private ["PSs9Equatable", "sendingController"]
-- !private ["PSs9Equatable", "storyboard"]
-- ["PSs9Equatable", "viewDidLoad"]
-- ["PSs9Equatable", ""]
-- ["PSs8Hashable", "ResultLinkButton"]
-- ["PSs8Hashable", "didReceiveMemoryWarning"]
-- ["PSs8Hashable", "init"]
-- !private ["PSs8Hashable", "instantiateViewControllerWithIdentifier"]
-- !private ["PSs8Hashable", "isOwner"]
-- !private ["PSs8Hashable", "navigationController"]
-- !private ["PSs8Hashable", "pushViewController"]
-- !private ["PSs8Hashable", "sendingController"]
-- !private ["PSs8Hashable", "storyboard"]
-- ["PSs8Hashable", "viewDidLoad"]
-- ["PSs8Hashable", ""]
+- ["Ps28CustomDebugStringConvertible", "ResultLinkButton"]
+- ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "instantiateViewControllerWithIdentifier"]
+- !private ["Ps28CustomDebugStringConvertible", "isOwner"]
+- !private ["Ps28CustomDebugStringConvertible", "navigationController"]
+- !private ["Ps28CustomDebugStringConvertible", "pushViewController"]
+- !private ["Ps28CustomDebugStringConvertible", "sendingController"]
+- !private ["Ps28CustomDebugStringConvertible", "storyboard"]
+- ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "ResultLinkButton"]
+- ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "instantiateViewControllerWithIdentifier"]
+- !private ["Ps23CustomStringConvertible", "isOwner"]
+- !private ["Ps23CustomStringConvertible", "navigationController"]
+- !private ["Ps23CustomStringConvertible", "pushViewController"]
+- !private ["Ps23CustomStringConvertible", "sendingController"]
+- !private ["Ps23CustomStringConvertible", "storyboard"]
+- ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "ResultLinkButton"]
+- ["Ps9Equatable", "didReceiveMemoryWarning"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "instantiateViewControllerWithIdentifier"]
+- !private ["Ps9Equatable", "isOwner"]
+- !private ["Ps9Equatable", "navigationController"]
+- !private ["Ps9Equatable", "pushViewController"]
+- !private ["Ps9Equatable", "sendingController"]
+- !private ["Ps9Equatable", "storyboard"]
+- ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", ""]
+- ["Ps8Hashable", "ResultLinkButton"]
+- ["Ps8Hashable", "didReceiveMemoryWarning"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "instantiateViewControllerWithIdentifier"]
+- !private ["Ps8Hashable", "isOwner"]
+- !private ["Ps8Hashable", "navigationController"]
+- !private ["Ps8Hashable", "pushViewController"]
+- !private ["Ps8Hashable", "sendingController"]
+- !private ["Ps8Hashable", "storyboard"]
+- ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
 - ["PSo8NSCoding", "ResultLinkButton"]
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
 - ["PSo8NSCoding", "init"]
@@ -211,12 +222,13 @@ depends-member:
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", ""]
 depends-nominal:
-- "PSs9AnyObject"
-- "PSs11CVarArgType"
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
 - !private "C8GoChange26CreateChangeViewController"
-- "PSs23CustomStringConvertible"
-- "PSs9Equatable"
-- "PSs8Hashable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
 - "PSo8NSCoding"
 - "PSo26NSExtensionRequestHandling"
 - "CSo8NSObject"

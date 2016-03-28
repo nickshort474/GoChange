@@ -14,19 +14,24 @@ class CreateChange:NSObject{
     
     
     var ref = Firebase(url:"https://gochange.firebaseio.com/change")
+    var savedAutoID:String = ""
     
-    
-    init(currentDetailData:String,currentNameData:String,owner:Bool){
+    init(currentDetailData:String,currentNameData:String,owner:Bool) {
         super.init()
         
         if(owner == true){
-            createCoreDataChange(currentDetailData,currentNameData: currentNameData,owner:owner)
+            // save changes to firebase
             saveChangeToFirebase(currentDetailData,currentNameData: currentNameData)
+            
+            // get returned auto ID and save that along with other data to core data
+            
+            var change = createCoreDataChange(currentDetailData,currentNameData: currentNameData,owner:owner)
+           
         }else{
             createCoreDataChange(currentDetailData,currentNameData: currentNameData,owner:owner)
         }
         
-        
+    
     }
     
     
@@ -36,30 +41,10 @@ class CreateChange:NSObject{
     }()
     
     
-    
-    func createCoreDataChange(currentDetailData:String,currentNameData:String,owner:Bool){
-        
-        var changeDictionary:[String:AnyObject] = [String:AnyObject]()
-        
-        changeDictionary[Change.Keys.changeName] = currentNameData
-        changeDictionary[Change.Keys.changeDescription] = currentDetailData
-        changeDictionary[Change.Keys.owner] = owner
-        
-        
-        let newChange = Change(dictionary: changeDictionary,context: sharedContext)
-    
-        do{
-            try self.sharedContext.save()
-            print("change saved to core data")
-        }catch{
-            //TODO: Catch errors!
-        }
-    }
-    
-        
     func saveChangeToFirebase(currentDetailData:String,currentNameData:String){
         
         let changeRef = ref.childByAutoId()
+        savedAutoID = String(changeRef)
         
         
         let changeValues = ["ChangeName":currentNameData,"ChangeDetail":currentDetailData]
@@ -69,6 +54,32 @@ class CreateChange:NSObject{
         
         
     }
+    
+    
+    func createCoreDataChange(currentDetailData:String,currentNameData:String,owner:Bool) -> Change{
+        
+        var changeDictionary:[String:AnyObject] = [String:AnyObject]()
+        
+        changeDictionary[Change.Keys.changeName] = currentNameData
+        changeDictionary[Change.Keys.changeDescription] = currentDetailData
+        changeDictionary[Change.Keys.owner] = owner
+        changeDictionary[Change.Keys.firebaseLocation] = savedAutoID
+        
+      
+        
+        let newChange = Change(dictionary: changeDictionary,context: sharedContext)
+        
+        do{
+            try self.sharedContext.save()
+            print("change saved to core data")
+        }catch{
+            //TODO: Catch errors!
+        }
+        return newChange
+    }
+    
+        
+    
     
     
 }

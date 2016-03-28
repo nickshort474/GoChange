@@ -6,244 +6,287 @@ provides-nominal:
 provides-member:
 - ["C8GoChange20SignupViewController", ""]
 provides-dynamic-lookup:
-- "signupButton"
-- "signupButton"
+- "updateChildValues"
 - "usernameTextfield"
+- "signupButton"
+- "signupButton"
+- "label1"
+- "passwordTextfield"
+- "textFieldShouldReturn"
+- "viewDidLoad"
+- "label2"
+- "updateField"
 - "label3"
 - "emailTextfield"
-- "sendingController"
-- "passwordTextfield"
-- "label1"
-- "viewDidLoad"
-- "updateChildValues"
-- "textFieldShouldReturn"
 - "ref"
-- "updateField"
 - "cancelButton"
-- "label2"
+- "sendingController"
 depends-top-level:
-- "UIButton"
+- "UITextField"
 - "UILabel"
-- "String"
-- "SignupViewController"
-- "BooleanLiteralType"
-- "UIViewController"
-- !private "NSUserDefaults"
-- "UITextFieldDelegate"
-- !private "print"
-- "StringLiteralType"
-- !private "&&"
-- !private "UIControlState"
-- !private "!="
 - "Dictionary"
 - "Firebase"
-- "Bool"
-- "UITextField"
 - !private "=="
+- "String"
+- "StringLiteralType"
+- !private "!="
+- "UIViewController"
+- !private "print"
+- "UITextFieldDelegate"
+- !private "&&"
+- "Bool"
+- "UIButton"
+- !private "UIControlState"
+- !private "NSUserDefaults"
+- "BooleanLiteralType"
+- "SignupViewController"
 depends-member:
-- ["PSs9AnyObject", "Firebase"]
-- !private ["PSs9AnyObject", "NSUserDefaults"]
-- !private ["PSs9AnyObject", "UIControlState"]
-- !private ["PSs9AnyObject", "authUser"]
-- ["PSs9AnyObject", "cancelButton"]
-- !private ["PSs9AnyObject", "changeEmailForUser"]
-- !private ["PSs9AnyObject", "changePasswordForUser"]
-- !private ["PSs9AnyObject", "childByAppendingPath"]
-- !private ["PSs9AnyObject", "createUser"]
-- !private ["PSs9AnyObject", "currentTitle"]
-- !private ["PSs9AnyObject", "deinit"]
-- !private ["PSs9AnyObject", "delegate"]
-- !private ["PSs9AnyObject", "dismissViewControllerAnimated"]
-- ["PSs9AnyObject", "emailTextfield"]
-- ["PSs9AnyObject", "init"]
-- ["PSs9AnyObject", "label1"]
-- ["PSs9AnyObject", "label2"]
-- ["PSs9AnyObject", "label3"]
-- !private ["PSs9AnyObject", "objectForKey"]
-- !private ["PSs9AnyObject", "observeEventType"]
-- ["PSs9AnyObject", "passwordTextfield"]
-- !private ["PSs9AnyObject", "print"]
-- !private ["PSs9AnyObject", "provider"]
-- ["PSs9AnyObject", "ref"]
-- !private ["PSs9AnyObject", "resignFirstResponder"]
-- ["PSs9AnyObject", "sendingController"]
-- !private ["PSs9AnyObject", "setTitle"]
-- !private ["PSs9AnyObject", "setValue"]
-- ["PSs9AnyObject", "signupButton"]
-- !private ["PSs9AnyObject", "standardUserDefaults"]
-- !private ["PSs9AnyObject", "text"]
-- ["PSs9AnyObject", "textField"]
-- ["PSs9AnyObject", "textFieldDidBeginEditing"]
-- ["PSs9AnyObject", "textFieldDidEndEditing"]
-- ["PSs9AnyObject", "textFieldShouldBeginEditing"]
-- ["PSs9AnyObject", "textFieldShouldClear"]
-- ["PSs9AnyObject", "textFieldShouldEndEditing"]
-- ["PSs9AnyObject", "textFieldShouldReturn"]
-- !private ["PSs9AnyObject", "uid"]
-- ["PSs9AnyObject", "updateChildValues"]
-- ["PSs9AnyObject", "updateField"]
-- ["PSs9AnyObject", "usernameTextfield"]
-- !private ["PSs9AnyObject", "value"]
-- !private ["PSs9AnyObject", "valueForKey"]
-- ["PSs9AnyObject", "viewDidLoad"]
-- ["PSs9AnyObject", ""]
-- !private ["PSs23ArrayLiteralConvertible", "Normal"]
+- ["Ps9AnyObject", "Firebase"]
+- !private ["Ps9AnyObject", "NSUserDefaults"]
+- !private ["Ps9AnyObject", "UIControlState"]
+- !private ["Ps9AnyObject", "authUser"]
+- ["Ps9AnyObject", "cancelButton"]
+- !private ["Ps9AnyObject", "changeEmailForUser"]
+- !private ["Ps9AnyObject", "changePasswordForUser"]
+- !private ["Ps9AnyObject", "childByAppendingPath"]
+- !private ["Ps9AnyObject", "createUser"]
+- !private ["Ps9AnyObject", "currentTitle"]
+- !private ["Ps9AnyObject", "deinit"]
+- !private ["Ps9AnyObject", "delegate"]
+- !private ["Ps9AnyObject", "dismissViewControllerAnimated"]
+- ["Ps9AnyObject", "emailTextfield"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "label1"]
+- ["Ps9AnyObject", "label2"]
+- ["Ps9AnyObject", "label3"]
+- !private ["Ps9AnyObject", "objectForKey"]
+- !private ["Ps9AnyObject", "observeEventType"]
+- ["Ps9AnyObject", "passwordTextfield"]
+- !private ["Ps9AnyObject", "print"]
+- !private ["Ps9AnyObject", "provider"]
+- ["Ps9AnyObject", "ref"]
+- !private ["Ps9AnyObject", "resignFirstResponder"]
+- ["Ps9AnyObject", "sendingController"]
+- !private ["Ps9AnyObject", "setTitle"]
+- !private ["Ps9AnyObject", "setValue"]
+- ["Ps9AnyObject", "signupButton"]
+- !private ["Ps9AnyObject", "standardUserDefaults"]
+- !private ["Ps9AnyObject", "text"]
+- ["Ps9AnyObject", "textField"]
+- ["Ps9AnyObject", "textFieldDidBeginEditing"]
+- ["Ps9AnyObject", "textFieldDidEndEditing"]
+- ["Ps9AnyObject", "textFieldShouldBeginEditing"]
+- ["Ps9AnyObject", "textFieldShouldClear"]
+- ["Ps9AnyObject", "textFieldShouldEndEditing"]
+- ["Ps9AnyObject", "textFieldShouldReturn"]
+- !private ["Ps9AnyObject", "uid"]
+- ["Ps9AnyObject", "updateChildValues"]
+- ["Ps9AnyObject", "updateField"]
+- ["Ps9AnyObject", "usernameTextfield"]
+- !private ["Ps9AnyObject", "value"]
+- !private ["Ps9AnyObject", "valueForKey"]
+- ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- !private ["Ps23ArrayLiteralConvertible", "Normal"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["Sb", "deinit"]
-- !private ["PSs25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
-- !private ["PSs11BooleanType", "_getBuiltinLogicValue"]
-- ["PSs11CVarArgType", "Firebase"]
-- !private ["PSs11CVarArgType", "NSUserDefaults"]
-- !private ["PSs11CVarArgType", "UIControlState"]
-- !private ["PSs11CVarArgType", "authUser"]
-- ["PSs11CVarArgType", "cancelButton"]
-- !private ["PSs11CVarArgType", "changeEmailForUser"]
-- !private ["PSs11CVarArgType", "changePasswordForUser"]
-- !private ["PSs11CVarArgType", "childByAppendingPath"]
-- !private ["PSs11CVarArgType", "createUser"]
-- !private ["PSs11CVarArgType", "currentTitle"]
-- !private ["PSs11CVarArgType", "delegate"]
-- !private ["PSs11CVarArgType", "dismissViewControllerAnimated"]
-- ["PSs11CVarArgType", "emailTextfield"]
-- ["PSs11CVarArgType", "init"]
-- ["PSs11CVarArgType", "label1"]
-- ["PSs11CVarArgType", "label2"]
-- ["PSs11CVarArgType", "label3"]
-- !private ["PSs11CVarArgType", "observeEventType"]
-- ["PSs11CVarArgType", "passwordTextfield"]
-- !private ["PSs11CVarArgType", "print"]
-- !private ["PSs11CVarArgType", "provider"]
-- ["PSs11CVarArgType", "ref"]
-- !private ["PSs11CVarArgType", "resignFirstResponder"]
-- ["PSs11CVarArgType", "sendingController"]
-- !private ["PSs11CVarArgType", "setTitle"]
-- !private ["PSs11CVarArgType", "setValue"]
-- ["PSs11CVarArgType", "signupButton"]
-- !private ["PSs11CVarArgType", "standardUserDefaults"]
-- !private ["PSs11CVarArgType", "text"]
-- ["PSs11CVarArgType", "textField"]
-- ["PSs11CVarArgType", "textFieldDidBeginEditing"]
-- ["PSs11CVarArgType", "textFieldDidEndEditing"]
-- ["PSs11CVarArgType", "textFieldShouldBeginEditing"]
-- ["PSs11CVarArgType", "textFieldShouldClear"]
-- ["PSs11CVarArgType", "textFieldShouldEndEditing"]
-- ["PSs11CVarArgType", "textFieldShouldReturn"]
-- !private ["PSs11CVarArgType", "uid"]
-- ["PSs11CVarArgType", "updateChildValues"]
-- ["PSs11CVarArgType", "updateField"]
-- ["PSs11CVarArgType", "usernameTextfield"]
-- !private ["PSs11CVarArgType", "value"]
-- !private ["PSs11CVarArgType", "valueForKey"]
-- ["PSs11CVarArgType", "viewDidLoad"]
-- ["PSs11CVarArgType", ""]
-- !private ["VSs9Character", "deinit"]
-- !private ["PSs14CollectionType", "Key"]
-- !private ["PSs14CollectionType", "Value"]
-- !private ["PSs10Comparable", "init"]
-- !private ["PSs28CustomDebugStringConvertible", "Key"]
-- !private ["PSs28CustomDebugStringConvertible", "Value"]
-- !private ["PSs28CustomDebugStringConvertible", "init"]
-- ["PSs23CustomStringConvertible", "Firebase"]
-- !private ["PSs23CustomStringConvertible", "Key"]
-- !private ["PSs23CustomStringConvertible", "NSUserDefaults"]
-- !private ["PSs23CustomStringConvertible", "UIControlState"]
-- !private ["PSs23CustomStringConvertible", "Value"]
-- !private ["PSs23CustomStringConvertible", "_getBuiltinLogicValue"]
-- !private ["PSs23CustomStringConvertible", "authUser"]
-- ["PSs23CustomStringConvertible", "cancelButton"]
-- !private ["PSs23CustomStringConvertible", "changeEmailForUser"]
-- !private ["PSs23CustomStringConvertible", "changePasswordForUser"]
-- !private ["PSs23CustomStringConvertible", "childByAppendingPath"]
-- !private ["PSs23CustomStringConvertible", "createUser"]
-- !private ["PSs23CustomStringConvertible", "currentTitle"]
-- !private ["PSs23CustomStringConvertible", "delegate"]
-- !private ["PSs23CustomStringConvertible", "dismissViewControllerAnimated"]
-- ["PSs23CustomStringConvertible", "emailTextfield"]
-- ["PSs23CustomStringConvertible", "init"]
-- ["PSs23CustomStringConvertible", "label1"]
-- ["PSs23CustomStringConvertible", "label2"]
-- ["PSs23CustomStringConvertible", "label3"]
-- !private ["PSs23CustomStringConvertible", "observeEventType"]
-- ["PSs23CustomStringConvertible", "passwordTextfield"]
-- !private ["PSs23CustomStringConvertible", "print"]
-- !private ["PSs23CustomStringConvertible", "provider"]
-- ["PSs23CustomStringConvertible", "ref"]
-- !private ["PSs23CustomStringConvertible", "resignFirstResponder"]
-- ["PSs23CustomStringConvertible", "sendingController"]
-- !private ["PSs23CustomStringConvertible", "setTitle"]
-- !private ["PSs23CustomStringConvertible", "setValue"]
-- ["PSs23CustomStringConvertible", "signupButton"]
-- !private ["PSs23CustomStringConvertible", "standardUserDefaults"]
-- !private ["PSs23CustomStringConvertible", "text"]
-- ["PSs23CustomStringConvertible", "textField"]
-- ["PSs23CustomStringConvertible", "textFieldDidBeginEditing"]
-- ["PSs23CustomStringConvertible", "textFieldDidEndEditing"]
-- ["PSs23CustomStringConvertible", "textFieldShouldBeginEditing"]
-- ["PSs23CustomStringConvertible", "textFieldShouldClear"]
-- ["PSs23CustomStringConvertible", "textFieldShouldEndEditing"]
-- ["PSs23CustomStringConvertible", "textFieldShouldReturn"]
-- !private ["PSs23CustomStringConvertible", "uid"]
-- ["PSs23CustomStringConvertible", "updateChildValues"]
-- ["PSs23CustomStringConvertible", "updateField"]
-- ["PSs23CustomStringConvertible", "usernameTextfield"]
-- !private ["PSs23CustomStringConvertible", "value"]
-- !private ["PSs23CustomStringConvertible", "valueForKey"]
-- ["PSs23CustomStringConvertible", "viewDidLoad"]
-- ["PSs23CustomStringConvertible", ""]
-- !private ["VSs10Dictionary", "Key"]
-- !private ["VSs10Dictionary", "Value"]
-- !private ["VSs10Dictionary", "deinit"]
-- !private ["PSs28DictionaryLiteralConvertible", "Key"]
-- !private ["PSs28DictionaryLiteralConvertible", "Value"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- ["Ps11CVarArgType", "Firebase"]
+- !private ["Ps11CVarArgType", "NSUserDefaults"]
+- !private ["Ps11CVarArgType", "UIControlState"]
+- !private ["Ps11CVarArgType", "authUser"]
+- ["Ps11CVarArgType", "cancelButton"]
+- !private ["Ps11CVarArgType", "changeEmailForUser"]
+- !private ["Ps11CVarArgType", "changePasswordForUser"]
+- !private ["Ps11CVarArgType", "childByAppendingPath"]
+- !private ["Ps11CVarArgType", "createUser"]
+- !private ["Ps11CVarArgType", "currentTitle"]
+- !private ["Ps11CVarArgType", "delegate"]
+- !private ["Ps11CVarArgType", "dismissViewControllerAnimated"]
+- ["Ps11CVarArgType", "emailTextfield"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "label1"]
+- ["Ps11CVarArgType", "label2"]
+- ["Ps11CVarArgType", "label3"]
+- !private ["Ps11CVarArgType", "observeEventType"]
+- ["Ps11CVarArgType", "passwordTextfield"]
+- !private ["Ps11CVarArgType", "print"]
+- !private ["Ps11CVarArgType", "provider"]
+- ["Ps11CVarArgType", "ref"]
+- !private ["Ps11CVarArgType", "resignFirstResponder"]
+- ["Ps11CVarArgType", "sendingController"]
+- !private ["Ps11CVarArgType", "setTitle"]
+- !private ["Ps11CVarArgType", "setValue"]
+- ["Ps11CVarArgType", "signupButton"]
+- !private ["Ps11CVarArgType", "standardUserDefaults"]
+- !private ["Ps11CVarArgType", "text"]
+- ["Ps11CVarArgType", "textField"]
+- ["Ps11CVarArgType", "textFieldDidBeginEditing"]
+- ["Ps11CVarArgType", "textFieldDidEndEditing"]
+- ["Ps11CVarArgType", "textFieldShouldBeginEditing"]
+- ["Ps11CVarArgType", "textFieldShouldClear"]
+- ["Ps11CVarArgType", "textFieldShouldEndEditing"]
+- ["Ps11CVarArgType", "textFieldShouldReturn"]
+- !private ["Ps11CVarArgType", "uid"]
+- ["Ps11CVarArgType", "updateChildValues"]
+- ["Ps11CVarArgType", "updateField"]
+- ["Ps11CVarArgType", "usernameTextfield"]
+- !private ["Ps11CVarArgType", "value"]
+- !private ["Ps11CVarArgType", "valueForKey"]
+- ["Ps11CVarArgType", "viewDidLoad"]
+- ["Ps11CVarArgType", ""]
+- !private ["Vs9Character", "deinit"]
+- !private ["Ps14CollectionType", "Key"]
+- !private ["Ps14CollectionType", "Value"]
+- !private ["Ps10Comparable", "init"]
+- ["Ps28CustomDebugStringConvertible", "Firebase"]
+- !private ["Ps28CustomDebugStringConvertible", "Key"]
+- !private ["Ps28CustomDebugStringConvertible", "NSUserDefaults"]
+- !private ["Ps28CustomDebugStringConvertible", "UIControlState"]
+- !private ["Ps28CustomDebugStringConvertible", "Value"]
+- !private ["Ps28CustomDebugStringConvertible", "authUser"]
+- ["Ps28CustomDebugStringConvertible", "cancelButton"]
+- !private ["Ps28CustomDebugStringConvertible", "changeEmailForUser"]
+- !private ["Ps28CustomDebugStringConvertible", "changePasswordForUser"]
+- !private ["Ps28CustomDebugStringConvertible", "childByAppendingPath"]
+- !private ["Ps28CustomDebugStringConvertible", "createUser"]
+- !private ["Ps28CustomDebugStringConvertible", "currentTitle"]
+- !private ["Ps28CustomDebugStringConvertible", "delegate"]
+- !private ["Ps28CustomDebugStringConvertible", "dismissViewControllerAnimated"]
+- ["Ps28CustomDebugStringConvertible", "emailTextfield"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "label1"]
+- ["Ps28CustomDebugStringConvertible", "label2"]
+- ["Ps28CustomDebugStringConvertible", "label3"]
+- !private ["Ps28CustomDebugStringConvertible", "observeEventType"]
+- ["Ps28CustomDebugStringConvertible", "passwordTextfield"]
+- !private ["Ps28CustomDebugStringConvertible", "print"]
+- !private ["Ps28CustomDebugStringConvertible", "provider"]
+- ["Ps28CustomDebugStringConvertible", "ref"]
+- !private ["Ps28CustomDebugStringConvertible", "resignFirstResponder"]
+- ["Ps28CustomDebugStringConvertible", "sendingController"]
+- !private ["Ps28CustomDebugStringConvertible", "setTitle"]
+- !private ["Ps28CustomDebugStringConvertible", "setValue"]
+- ["Ps28CustomDebugStringConvertible", "signupButton"]
+- !private ["Ps28CustomDebugStringConvertible", "standardUserDefaults"]
+- !private ["Ps28CustomDebugStringConvertible", "text"]
+- ["Ps28CustomDebugStringConvertible", "textField"]
+- ["Ps28CustomDebugStringConvertible", "textFieldDidBeginEditing"]
+- ["Ps28CustomDebugStringConvertible", "textFieldDidEndEditing"]
+- ["Ps28CustomDebugStringConvertible", "textFieldShouldBeginEditing"]
+- ["Ps28CustomDebugStringConvertible", "textFieldShouldClear"]
+- ["Ps28CustomDebugStringConvertible", "textFieldShouldEndEditing"]
+- ["Ps28CustomDebugStringConvertible", "textFieldShouldReturn"]
+- !private ["Ps28CustomDebugStringConvertible", "uid"]
+- ["Ps28CustomDebugStringConvertible", "updateChildValues"]
+- ["Ps28CustomDebugStringConvertible", "updateField"]
+- ["Ps28CustomDebugStringConvertible", "usernameTextfield"]
+- !private ["Ps28CustomDebugStringConvertible", "value"]
+- !private ["Ps28CustomDebugStringConvertible", "valueForKey"]
+- ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "Firebase"]
+- !private ["Ps23CustomStringConvertible", "Key"]
+- !private ["Ps23CustomStringConvertible", "NSUserDefaults"]
+- !private ["Ps23CustomStringConvertible", "UIControlState"]
+- !private ["Ps23CustomStringConvertible", "Value"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "authUser"]
+- ["Ps23CustomStringConvertible", "cancelButton"]
+- !private ["Ps23CustomStringConvertible", "changeEmailForUser"]
+- !private ["Ps23CustomStringConvertible", "changePasswordForUser"]
+- !private ["Ps23CustomStringConvertible", "childByAppendingPath"]
+- !private ["Ps23CustomStringConvertible", "createUser"]
+- !private ["Ps23CustomStringConvertible", "currentTitle"]
+- !private ["Ps23CustomStringConvertible", "delegate"]
+- !private ["Ps23CustomStringConvertible", "dismissViewControllerAnimated"]
+- ["Ps23CustomStringConvertible", "emailTextfield"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "label1"]
+- ["Ps23CustomStringConvertible", "label2"]
+- ["Ps23CustomStringConvertible", "label3"]
+- !private ["Ps23CustomStringConvertible", "observeEventType"]
+- ["Ps23CustomStringConvertible", "passwordTextfield"]
+- !private ["Ps23CustomStringConvertible", "print"]
+- !private ["Ps23CustomStringConvertible", "provider"]
+- ["Ps23CustomStringConvertible", "ref"]
+- !private ["Ps23CustomStringConvertible", "resignFirstResponder"]
+- ["Ps23CustomStringConvertible", "sendingController"]
+- !private ["Ps23CustomStringConvertible", "setTitle"]
+- !private ["Ps23CustomStringConvertible", "setValue"]
+- ["Ps23CustomStringConvertible", "signupButton"]
+- !private ["Ps23CustomStringConvertible", "standardUserDefaults"]
+- !private ["Ps23CustomStringConvertible", "text"]
+- ["Ps23CustomStringConvertible", "textField"]
+- ["Ps23CustomStringConvertible", "textFieldDidBeginEditing"]
+- ["Ps23CustomStringConvertible", "textFieldDidEndEditing"]
+- ["Ps23CustomStringConvertible", "textFieldShouldBeginEditing"]
+- ["Ps23CustomStringConvertible", "textFieldShouldClear"]
+- ["Ps23CustomStringConvertible", "textFieldShouldEndEditing"]
+- ["Ps23CustomStringConvertible", "textFieldShouldReturn"]
+- !private ["Ps23CustomStringConvertible", "uid"]
+- ["Ps23CustomStringConvertible", "updateChildValues"]
+- ["Ps23CustomStringConvertible", "updateField"]
+- ["Ps23CustomStringConvertible", "usernameTextfield"]
+- !private ["Ps23CustomStringConvertible", "value"]
+- !private ["Ps23CustomStringConvertible", "valueForKey"]
+- ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Vs10Dictionary", "Key"]
+- !private ["Vs10Dictionary", "Value"]
+- !private ["Vs10Dictionary", "deinit"]
+- !private ["Ps28DictionaryLiteralConvertible", "Key"]
+- !private ["Ps28DictionaryLiteralConvertible", "Value"]
 - !private ["Sd", "deinit"]
-- ["PSs9Equatable", "Firebase"]
-- !private ["PSs9Equatable", "NSUserDefaults"]
-- !private ["PSs9Equatable", "Normal"]
-- !private ["PSs9Equatable", "UIControlState"]
-- !private ["PSs9Equatable", "Value"]
-- !private ["PSs9Equatable", "_getBuiltinLogicValue"]
-- !private ["PSs9Equatable", "authUser"]
-- ["PSs9Equatable", "cancelButton"]
-- !private ["PSs9Equatable", "changeEmailForUser"]
-- !private ["PSs9Equatable", "changePasswordForUser"]
-- !private ["PSs9Equatable", "childByAppendingPath"]
-- !private ["PSs9Equatable", "createUser"]
-- !private ["PSs9Equatable", "currentTitle"]
-- !private ["PSs9Equatable", "delegate"]
-- !private ["PSs9Equatable", "dismissViewControllerAnimated"]
-- ["PSs9Equatable", "emailTextfield"]
-- ["PSs9Equatable", "init"]
-- ["PSs9Equatable", "label1"]
-- ["PSs9Equatable", "label2"]
-- ["PSs9Equatable", "label3"]
-- !private ["PSs9Equatable", "observeEventType"]
-- ["PSs9Equatable", "passwordTextfield"]
-- !private ["PSs9Equatable", "print"]
-- !private ["PSs9Equatable", "provider"]
-- ["PSs9Equatable", "ref"]
-- !private ["PSs9Equatable", "resignFirstResponder"]
-- ["PSs9Equatable", "sendingController"]
-- !private ["PSs9Equatable", "setTitle"]
-- !private ["PSs9Equatable", "setValue"]
-- ["PSs9Equatable", "signupButton"]
-- !private ["PSs9Equatable", "standardUserDefaults"]
-- !private ["PSs9Equatable", "text"]
-- ["PSs9Equatable", "textField"]
-- ["PSs9Equatable", "textFieldDidBeginEditing"]
-- ["PSs9Equatable", "textFieldDidEndEditing"]
-- ["PSs9Equatable", "textFieldShouldBeginEditing"]
-- ["PSs9Equatable", "textFieldShouldClear"]
-- ["PSs9Equatable", "textFieldShouldEndEditing"]
-- ["PSs9Equatable", "textFieldShouldReturn"]
-- !private ["PSs9Equatable", "uid"]
-- ["PSs9Equatable", "updateChildValues"]
-- ["PSs9Equatable", "updateField"]
-- ["PSs9Equatable", "usernameTextfield"]
-- !private ["PSs9Equatable", "value"]
-- !private ["PSs9Equatable", "valueForKey"]
-- ["PSs9Equatable", "viewDidLoad"]
-- ["PSs9Equatable", ""]
-- !private ["PSs41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- ["Ps9Equatable", "Firebase"]
+- !private ["Ps9Equatable", "NSUserDefaults"]
+- !private ["Ps9Equatable", "Normal"]
+- !private ["Ps9Equatable", "UIControlState"]
+- !private ["Ps9Equatable", "Value"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "authUser"]
+- ["Ps9Equatable", "cancelButton"]
+- !private ["Ps9Equatable", "changeEmailForUser"]
+- !private ["Ps9Equatable", "changePasswordForUser"]
+- !private ["Ps9Equatable", "childByAppendingPath"]
+- !private ["Ps9Equatable", "createUser"]
+- !private ["Ps9Equatable", "currentTitle"]
+- !private ["Ps9Equatable", "delegate"]
+- !private ["Ps9Equatable", "dismissViewControllerAnimated"]
+- ["Ps9Equatable", "emailTextfield"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "label1"]
+- ["Ps9Equatable", "label2"]
+- ["Ps9Equatable", "label3"]
+- !private ["Ps9Equatable", "observeEventType"]
+- ["Ps9Equatable", "passwordTextfield"]
+- !private ["Ps9Equatable", "print"]
+- !private ["Ps9Equatable", "provider"]
+- ["Ps9Equatable", "ref"]
+- !private ["Ps9Equatable", "resignFirstResponder"]
+- ["Ps9Equatable", "sendingController"]
+- !private ["Ps9Equatable", "setTitle"]
+- !private ["Ps9Equatable", "setValue"]
+- ["Ps9Equatable", "signupButton"]
+- !private ["Ps9Equatable", "standardUserDefaults"]
+- !private ["Ps9Equatable", "text"]
+- ["Ps9Equatable", "textField"]
+- ["Ps9Equatable", "textFieldDidBeginEditing"]
+- ["Ps9Equatable", "textFieldDidEndEditing"]
+- ["Ps9Equatable", "textFieldShouldBeginEditing"]
+- ["Ps9Equatable", "textFieldShouldClear"]
+- ["Ps9Equatable", "textFieldShouldEndEditing"]
+- ["Ps9Equatable", "textFieldShouldReturn"]
+- !private ["Ps9Equatable", "uid"]
+- ["Ps9Equatable", "updateChildValues"]
+- ["Ps9Equatable", "updateField"]
+- ["Ps9Equatable", "usernameTextfield"]
+- !private ["Ps9Equatable", "value"]
+- !private ["Ps9Equatable", "valueForKey"]
+- ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", ""]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["CSo9FAuthData", "provider"]
 - !private ["CSo9FAuthData", "uid"]
 - !private ["CSo13FDataSnapshot", "value"]
@@ -267,61 +310,61 @@ depends-member:
 - !private ["CSo8Firebase", "setValue"]
 - !private ["CSo8Firebase", "updateChildValues"]
 - !private ["Sf", "deinit"]
-- ["PSs8Hashable", "Firebase"]
-- !private ["PSs8Hashable", "NSUserDefaults"]
-- !private ["PSs8Hashable", "UIControlState"]
-- !private ["PSs8Hashable", "Value"]
-- !private ["PSs8Hashable", "_getBuiltinLogicValue"]
-- !private ["PSs8Hashable", "authUser"]
-- ["PSs8Hashable", "cancelButton"]
-- !private ["PSs8Hashable", "changeEmailForUser"]
-- !private ["PSs8Hashable", "changePasswordForUser"]
-- !private ["PSs8Hashable", "childByAppendingPath"]
-- !private ["PSs8Hashable", "createUser"]
-- !private ["PSs8Hashable", "currentTitle"]
-- !private ["PSs8Hashable", "delegate"]
-- !private ["PSs8Hashable", "dismissViewControllerAnimated"]
-- ["PSs8Hashable", "emailTextfield"]
-- ["PSs8Hashable", "init"]
-- ["PSs8Hashable", "label1"]
-- ["PSs8Hashable", "label2"]
-- ["PSs8Hashable", "label3"]
-- !private ["PSs8Hashable", "observeEventType"]
-- ["PSs8Hashable", "passwordTextfield"]
-- !private ["PSs8Hashable", "print"]
-- !private ["PSs8Hashable", "provider"]
-- ["PSs8Hashable", "ref"]
-- !private ["PSs8Hashable", "resignFirstResponder"]
-- ["PSs8Hashable", "sendingController"]
-- !private ["PSs8Hashable", "setTitle"]
-- !private ["PSs8Hashable", "setValue"]
-- ["PSs8Hashable", "signupButton"]
-- !private ["PSs8Hashable", "standardUserDefaults"]
-- !private ["PSs8Hashable", "text"]
-- ["PSs8Hashable", "textField"]
-- ["PSs8Hashable", "textFieldDidBeginEditing"]
-- ["PSs8Hashable", "textFieldDidEndEditing"]
-- ["PSs8Hashable", "textFieldShouldBeginEditing"]
-- ["PSs8Hashable", "textFieldShouldClear"]
-- ["PSs8Hashable", "textFieldShouldEndEditing"]
-- ["PSs8Hashable", "textFieldShouldReturn"]
-- !private ["PSs8Hashable", "uid"]
-- ["PSs8Hashable", "updateChildValues"]
-- ["PSs8Hashable", "updateField"]
-- ["PSs8Hashable", "usernameTextfield"]
-- !private ["PSs8Hashable", "value"]
-- !private ["PSs8Hashable", "valueForKey"]
-- ["PSs8Hashable", "viewDidLoad"]
-- ["PSs8Hashable", ""]
+- ["Ps8Hashable", "Firebase"]
+- !private ["Ps8Hashable", "NSUserDefaults"]
+- !private ["Ps8Hashable", "UIControlState"]
+- !private ["Ps8Hashable", "Value"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "authUser"]
+- ["Ps8Hashable", "cancelButton"]
+- !private ["Ps8Hashable", "changeEmailForUser"]
+- !private ["Ps8Hashable", "changePasswordForUser"]
+- !private ["Ps8Hashable", "childByAppendingPath"]
+- !private ["Ps8Hashable", "createUser"]
+- !private ["Ps8Hashable", "currentTitle"]
+- !private ["Ps8Hashable", "delegate"]
+- !private ["Ps8Hashable", "dismissViewControllerAnimated"]
+- ["Ps8Hashable", "emailTextfield"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "label1"]
+- ["Ps8Hashable", "label2"]
+- ["Ps8Hashable", "label3"]
+- !private ["Ps8Hashable", "observeEventType"]
+- ["Ps8Hashable", "passwordTextfield"]
+- !private ["Ps8Hashable", "print"]
+- !private ["Ps8Hashable", "provider"]
+- ["Ps8Hashable", "ref"]
+- !private ["Ps8Hashable", "resignFirstResponder"]
+- ["Ps8Hashable", "sendingController"]
+- !private ["Ps8Hashable", "setTitle"]
+- !private ["Ps8Hashable", "setValue"]
+- ["Ps8Hashable", "signupButton"]
+- !private ["Ps8Hashable", "standardUserDefaults"]
+- !private ["Ps8Hashable", "text"]
+- ["Ps8Hashable", "textField"]
+- ["Ps8Hashable", "textFieldDidBeginEditing"]
+- ["Ps8Hashable", "textFieldDidEndEditing"]
+- ["Ps8Hashable", "textFieldShouldBeginEditing"]
+- ["Ps8Hashable", "textFieldShouldClear"]
+- ["Ps8Hashable", "textFieldShouldEndEditing"]
+- ["Ps8Hashable", "textFieldShouldReturn"]
+- !private ["Ps8Hashable", "uid"]
+- ["Ps8Hashable", "updateChildValues"]
+- ["Ps8Hashable", "updateField"]
+- ["Ps8Hashable", "usernameTextfield"]
+- !private ["Ps8Hashable", "value"]
+- !private ["Ps8Hashable", "valueForKey"]
+- ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
 - ["SQ", "deinit"]
-- !private ["PSs9Indexable", "Key"]
-- !private ["PSs9Indexable", "Value"]
+- !private ["Ps9Indexable", "Key"]
+- !private ["Ps9Indexable", "Value"]
 - !private ["Si", "deinit"]
-- !private ["VSs5Int16", "deinit"]
-- !private ["VSs5Int32", "deinit"]
-- !private ["VSs5Int64", "deinit"]
-- !private ["VSs4Int8", "deinit"]
-- !private ["PSs14MirrorPathType", "init"]
+- !private ["Vs5Int16", "deinit"]
+- !private ["Vs5Int32", "deinit"]
+- !private ["Vs5Int64", "deinit"]
+- !private ["Vs4Int8", "deinit"]
+- !private ["Ps14MirrorPathType", "init"]
 - ["PSo8NSCoding", "Firebase"]
 - !private ["PSo8NSCoding", "NSUserDefaults"]
 - !private ["PSo8NSCoding", "UIControlState"]
@@ -483,14 +526,14 @@ depends-member:
 - !private ["CSo14NSUserDefaults", "setValue"]
 - !private ["CSo14NSUserDefaults", "standardUserDefaults"]
 - !private ["CSo14NSUserDefaults", "valueForKey"]
-- !private ["PSs13OptionSetType", "Normal"]
+- !private ["Ps13OptionSetType", "Normal"]
 - !private ["Sq", "deinit"]
-- !private ["PSs16OutputStreamType", "init"]
-- !private ["PSs16RawRepresentable", "Normal"]
-- !private ["PSs16RawRepresentable", "Value"]
-- !private ["PSs12SequenceType", "Key"]
-- !private ["PSs12SequenceType", "Value"]
-- !private ["PSs14SetAlgebraType", "Normal"]
+- !private ["Ps16OutputStreamType", "init"]
+- !private ["Ps16RawRepresentable", "Normal"]
+- !private ["Ps16RawRepresentable", "Value"]
+- !private ["Ps12SequenceType", "Key"]
+- !private ["Ps12SequenceType", "Value"]
+- !private ["Ps14SetAlgebraType", "Normal"]
 - ["C8GoChange20SignupViewController", "Bool"]
 - ["C8GoChange20SignupViewController", "Firebase"]
 - !private ["C8GoChange20SignupViewController", "NSUserDefaults"]
@@ -523,11 +566,11 @@ depends-member:
 - ["C8GoChange20SignupViewController", "updateField"]
 - ["C8GoChange20SignupViewController", "usernameTextfield"]
 - ["C8GoChange20SignupViewController", "viewDidLoad"]
-- !private ["PSs10Streamable", "init"]
+- !private ["Ps10Streamable", "init"]
 - !private ["SS", "deinit"]
 - !private ["SS", "init"]
-- !private ["PSs30StringInterpolationConvertible", "init"]
-- !private ["PSs24StringLiteralConvertible", "init"]
+- !private ["Ps30StringInterpolationConvertible", "init"]
+- !private ["Ps24StringLiteralConvertible", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "currentTitle"]
 - !private ["PSo29UIAccessibilityIdentification", "delegate"]
 - !private ["PSo29UIAccessibilityIdentification", "resignFirstResponder"]
@@ -817,64 +860,63 @@ depends-member:
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", ""]
 - !private ["Su", "deinit"]
-- !private ["VSs6UInt16", "deinit"]
-- !private ["VSs6UInt32", "deinit"]
-- !private ["VSs6UInt64", "deinit"]
-- !private ["VSs5UInt8", "deinit"]
+- !private ["Vs6UInt16", "deinit"]
+- !private ["Vs6UInt32", "deinit"]
+- !private ["Vs6UInt64", "deinit"]
+- !private ["Vs5UInt8", "deinit"]
 - !private ["Sc", "deinit"]
-- !private ["PSs31UnicodeScalarLiteralConvertible", "init"]
-- !private ["PSs33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
-- !private ["PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
-- !private ["PSs32_BuiltinStringLiteralConvertible", "init"]
-- !private ["PSs37_BuiltinUTF16StringLiteralConvertible", "init"]
-- !private ["PSs39_BuiltinUnicodeScalarLiteralConvertible", "init"]
-- !private ["PSs16_CocoaStringType", "init"]
-- !private ["PSs21_ObjectiveCBridgeable", "Key"]
-- !private ["PSs21_ObjectiveCBridgeable", "Value"]
-- !private ["PSs21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
-- !private ["PSs21_ObjectiveCBridgeable", "init"]
-- !private ["VSs26_OptionalNilComparisonType", "deinit"]
-- !private ["PSs12_Reflectable", "Key"]
-- !private ["PSs12_Reflectable", "Value"]
-- !private ["PSs12_Reflectable", "_getBuiltinLogicValue"]
-- !private ["PSs12_Reflectable", "currentTitle"]
-- !private ["PSs12_Reflectable", "delegate"]
-- !private ["PSs12_Reflectable", "init"]
-- !private ["PSs12_Reflectable", "resignFirstResponder"]
-- !private ["PSs12_Reflectable", "setTitle"]
-- !private ["PSs12_Reflectable", "text"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "Key"]
+- !private ["Ps21_ObjectiveCBridgeable", "Value"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Vs26_OptionalNilComparisonType", "deinit"]
+- !private ["Ps12_Reflectable", "Key"]
+- !private ["Ps12_Reflectable", "Value"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "currentTitle"]
+- !private ["Ps12_Reflectable", "delegate"]
+- !private ["Ps12_Reflectable", "init"]
+- !private ["Ps12_Reflectable", "resignFirstResponder"]
+- !private ["Ps12_Reflectable", "setTitle"]
+- !private ["Ps12_Reflectable", "text"]
 depends-nominal:
-- "PSs9AnyObject"
-- !private "PSs23ArrayLiteralConvertible"
+- "Ps9AnyObject"
+- !private "Ps23ArrayLiteralConvertible"
 - !private "Sb"
-- !private "PSs25BooleanLiteralConvertible"
-- !private "PSs11BooleanType"
-- "PSs11CVarArgType"
-- !private "VSs9Character"
-- !private "PSs14CollectionType"
-- !private "PSs10Comparable"
-- !private "PSs28CustomDebugStringConvertible"
-- "PSs23CustomStringConvertible"
-- !private "VSs10Dictionary"
-- !private "PSs28DictionaryLiteralConvertible"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- "Ps11CVarArgType"
+- !private "Vs9Character"
+- !private "Ps14CollectionType"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- !private "Vs10Dictionary"
+- !private "Ps28DictionaryLiteralConvertible"
 - !private "Sd"
-- "PSs9Equatable"
-- !private "PSs41ExtendedGraphemeClusterLiteralConvertible"
+- "Ps9Equatable"
+- !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
 - !private "CSo9FAuthData"
 - !private "CSo13FDataSnapshot"
 - !private "OSC10FEventType"
 - "CSo6FQuery"
 - "CSo8Firebase"
 - !private "Sf"
-- "PSs8Hashable"
+- "Ps8Hashable"
 - "SQ"
-- !private "PSs9Indexable"
+- !private "Ps9Indexable"
 - !private "Si"
-- !private "VSs5Int16"
-- !private "VSs5Int32"
-- !private "VSs5Int64"
-- !private "VSs4Int8"
-- !private "PSs14MirrorPathType"
+- !private "Vs5Int16"
+- !private "Vs5Int32"
+- !private "Vs5Int64"
+- !private "Vs4Int8"
+- !private "Ps14MirrorPathType"
 - "PSo8NSCoding"
 - !private "PSo9NSCopying"
 - !private "CSo7NSError"
@@ -885,17 +927,17 @@ depends-nominal:
 - !private "PSo14NSSecureCoding"
 - !private "CSo8NSString"
 - !private "CSo14NSUserDefaults"
-- !private "PSs13OptionSetType"
+- !private "Ps13OptionSetType"
 - !private "Sq"
-- !private "PSs16OutputStreamType"
-- !private "PSs16RawRepresentable"
-- !private "PSs12SequenceType"
-- !private "PSs14SetAlgebraType"
+- !private "Ps16OutputStreamType"
+- !private "Ps16RawRepresentable"
+- !private "Ps12SequenceType"
+- !private "Ps14SetAlgebraType"
 - "C8GoChange20SignupViewController"
-- !private "PSs10Streamable"
+- !private "Ps10Streamable"
 - !private "SS"
-- !private "PSs30StringInterpolationConvertible"
-- !private "PSs24StringLiteralConvertible"
+- !private "Ps30StringInterpolationConvertible"
+- !private "Ps24StringLiteralConvertible"
 - !private "PSo29UIAccessibilityIdentification"
 - !private "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"
@@ -918,21 +960,20 @@ depends-nominal:
 - !private "CSo6UIView"
 - "CSo16UIViewController"
 - !private "Su"
-- !private "VSs6UInt16"
-- !private "VSs6UInt32"
-- !private "VSs6UInt64"
-- !private "VSs5UInt8"
+- !private "Vs6UInt16"
+- !private "Vs6UInt32"
+- !private "Vs6UInt64"
+- !private "Vs5UInt8"
 - !private "Sc"
-- !private "PSs31UnicodeScalarLiteralConvertible"
-- !private "PSs33_BuiltinBooleanLiteralConvertible"
-- !private "PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible"
-- !private "PSs32_BuiltinStringLiteralConvertible"
-- !private "PSs37_BuiltinUTF16StringLiteralConvertible"
-- !private "PSs39_BuiltinUnicodeScalarLiteralConvertible"
-- !private "PSs16_CocoaStringType"
-- !private "PSs21_ObjectiveCBridgeable"
-- !private "VSs26_OptionalNilComparisonType"
-- !private "PSs12_Reflectable"
+- !private "Ps31UnicodeScalarLiteralConvertible"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- !private "Ps32_BuiltinStringLiteralConvertible"
+- !private "Ps37_BuiltinUTF16StringLiteralConvertible"
+- !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Vs26_OptionalNilComparisonType"
+- !private "Ps12_Reflectable"
 depends-dynamic-lookup:
 - !private "objectForKey"
 depends-external:
@@ -958,4 +999,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "33338a0b59edd736748c1b57bde7ad84"
+interface-hash: "f3a1f5aa0dcddd262e04afe3be62d521"

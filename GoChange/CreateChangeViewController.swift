@@ -15,22 +15,15 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var detailsField: UITextView!
-    
-    @IBOutlet weak var detailListViewDivider: UIImageView!
-    @IBOutlet weak var nameDetailDivider: UIImageView!
-    
     @IBOutlet weak var namePlusButton: UIButton!
     @IBOutlet weak var detailsPlusButton: UIButton!
     @IBOutlet weak var postButton: UIButton!
+    @IBOutlet weak var solutionTable: UITableView!
     
     var currentNameData:String = ""
     var currentDetailData:String = ""
-    
     var sendingController:String = ""
     var isOwner:String = ""
-    
-    
-    @IBOutlet weak var solutionTable: UITableView!
     
     
     
@@ -38,8 +31,36 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //TODO: If coming from FollowingViewController load core data details
+        //clear TempChange ready for new change
         
+        TempChange.sharedInstance().changeName = ""
+        TempChange.sharedInstance().changeDetail = ""
+        
+        TempChange.sharedInstance().solutionDetailArray = []
+        TempChange.sharedInstance().solutionNameArray = []
+               
+        TempChange.sharedInstance().tweakDetailArray = []
+        TempChange.sharedInstance().tweakNameArray = []
+        
+        
+        
+        //set delegates
+        nameField.delegate = self
+        detailsField.delegate = self
+        solutionTable.delegate = self
+        
+        //hide / disable buttons
+        namePlusButton.hidden = true
+        detailsPlusButton.hidden = true
+        postButton.alpha = 0.5
+        postButton.enabled = false
+        
+        //set back button title
+        let barButtonItem = UIBarButtonItem(title: "Cancel Idea", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = barButtonItem
+       
+        
+        //TODO: If coming from FollowingViewController load core data details
         if(sendingController == "following"){
             // load core data 
             if(isOwner == "yes"){
@@ -53,17 +74,11 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
             //TODO: change POST button to SAVE/FOLLOW change
         }
         
-        // If owner of change allow editing buttons
-        
-        
-        nameField.delegate = self
-        detailsField.delegate = self
-        solutionTable.delegate = self
-        
-        namePlusButton.hidden = true
-        detailsPlusButton.hidden = true
-        postButton.alpha = 0.5
-        postButton.enabled = false
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        //reload table data when coming back from solution/tweak
+        self.solutionTable.reloadData()
     }
     
     
@@ -71,6 +86,11 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    lazy var sharedContext:NSManagedObjectContext = {
+        return CoreDataStackManager.sharedInstance().managedObjectContext
+    }()
     
     
     
@@ -82,14 +102,17 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
     
     @IBAction func nameActionButton(sender: UIButton) {
         nameField.resignFirstResponder()
-        currentNameData = nameField.text!
+        
         namePlusButton.hidden = true
         
-        if(nameField.text != "" && detailsField.text != ""){
+        if(nameField.text != "" && (detailsField.text != "" || detailsField.text != "Please enter details of the change you would like to see...")){
             postButton.alpha = 1
             postButton.enabled = true
 
         }
+        currentNameData = nameField.text!
+        TempChange.sharedInstance().changeName = nameField.text!
+        
         
     }
     
@@ -99,21 +122,38 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         //TODO: check for /n character, delete if necessary
         
         detailsField.resignFirstResponder()
-         currentDetailData = detailsField.text!
+        
         detailsPlusButton.hidden = true
         
-        if(nameField.text != "" && detailsField.text != ""){
+        if(nameField.text != "" && (detailsField.text != "" || detailsField.text != "Please enter details of the change you would like to see...")){
             postButton.alpha = 1
             postButton.enabled = true
             
         }
-        
+        currentDetailData = detailsField.text!
+        TempChange.sharedInstance().changeDetail = detailsField.text!
     }
+    
+    
+    
+    
+    @IBAction func addSolution(sender: UIButton) {
+        
+        var controller:AddIdeaViewController
+        
+        controller = self.storyboard?.instantiateViewControllerWithIdentifier("AddIdeaViewController") as! AddIdeaViewController
+        
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    
+    
     
     
     //-----------------textfield methods-------------------
     func textFieldDidBeginEditing(textField: UITextField) {
         namePlusButton.hidden = false
+        detailsPlusButton.hidden = true
     }
     
     
@@ -123,12 +163,15 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
     
     //---------------------textView methods------------
     func textViewDidBeginEditing(textView: UITextView) {
+        
         if(textView.text == "Please enter details of the change you would like to see..."){
             textView.text = ""
         }
         textView.textColor = UIColor.blackColor()
+        
         detailsPlusButton.hidden = false
         namePlusButton.hidden = true
+        
         
     }
     
@@ -140,7 +183,10 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1
+        //TODO: If viewing change load from core data 
+        
+        
+        return TempChange.sharedInstance().solutionNameArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -148,7 +194,10 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         let cellID = "solutionCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath)
         
-        cell.textLabel!.text = "Add a solution"
+        
+        let solutionName = TempChange.sharedInstance().solutionNameArray[indexPath.row]
+        
+        cell.textLabel!.text = solutionName as? String
         
         return cell
         
@@ -156,11 +205,7 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
     
     func tableView(tableView:UITableView,didSelectRowAtIndexPath indexPath: NSIndexPath){
         
-        var controller:AddIdeaViewController
         
-        controller = self.storyboard?.instantiateViewControllerWithIdentifier("AddIdeaViewController") as! AddIdeaViewController
-        
-        self.navigationController?.pushViewController(controller, animated: true)
         
         
         
@@ -187,8 +232,53 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
             print("please input name and detail data")
             
         }else{
-            _ = CreateChange(currentDetailData:currentDetailData,currentNameData:
+           
+            var postDictionary:Dictionary = [String:AnyObject]()
+            
+            var newPost = PostData(postDictionary:postDictionary)
+            
+            
+            /*
+            // Create new change in CoreData and firebase
+           let newChange = CreateChange(currentDetailData:currentDetailData,currentNameData:
                 currentNameData,owner:owner)
+            
+            //TODO: retrieve firebase unique ID from core data and use it to set solution in both core data and firebase
+            let request = NSFetchRequest()
+            
+            let entity = NSEntityDescription.entityForName("Change", inManagedObjectContext: sharedContext)
+            let predicate = NSPredicate(format: "changeName == %@", currentNameData)
+            
+            request.entity = entity
+            request.predicate = predicate
+            
+            
+            
+            do{
+               let results =  try sharedContext.executeFetchRequest(request) as! [Change]
+               
+               if let entity = results.first{
+                
+                
+                    let firebaseLocation = entity.firebaseLocation
+                
+                    for var i in 0 ..< (TempChange.sharedInstance().solutionNameArray.count){
+                        _ = CreateSolution(change:newChange, firebaseLocation:firebaseLocation,solutionName:TempChange.sharedInstance().solutionNameArray[i] as! String,solutionDescription:TempChange.sharedInstance().solutionDetailArray[i] as! String)
+                    }
+                
+                    /*
+                    for (key,value) in TempChange.sharedInstance().solutionDictionary{
+                        
+                        _ = CreateSolution(firebaseLocation:firebaseLocation,solutionName: key, solutionDescription: value as! String)
+                    }
+                    */
+                }
+                
+            }catch{
+                //TODO: catch errors
+            }
+            */
+                        
             
             self.navigationController?.popToRootViewControllerAnimated(true)
             

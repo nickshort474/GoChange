@@ -6,253 +6,311 @@ provides-nominal:
 provides-member:
 - ["C8GoChange18HomeViewController", ""]
 provides-dynamic-lookup:
-- "didReceiveMemoryWarning"
-- "followingLabel"
-- "viewDidLoad"
-- "createChange"
-- "ref"
-- "checkCoreData"
-- "welcomeLabel"
-- "logout"
-- "addUserData"
 - "followButton"
 - "sharedContext"
+- "logout"
+- "ref"
+- "addUserData"
+- "viewDidLoad"
+- "createChange"
+- "didReceiveMemoryWarning"
+- "followingLabel"
+- "welcomeLabel"
+- "checkCoreData"
 depends-top-level:
-- !private "NSUserDefaults"
-- "Firebase"
-- !private "BooleanLiteralType"
-- !private "Change"
-- "UILabel"
-- "HomeViewController"
+- !private "UIBarButtonItemStyle"
 - !private "UpdateUserInfoController"
-- "UIButton"
-- !private "CoreDataStackManager"
-- !private "String"
-- "NSManagedObjectContext"
-- "UIViewController"
+- !private "NSUserDefaults"
+- "UILabel"
+- !private "UIBarButtonItem"
+- !private "AnyObject"
+- "HomeViewController"
 - !private "StringLiteralType"
 - !private "!="
-- !private "NSFetchRequest"
+- "UIViewController"
 - !private "UnicodeScalarType"
-- !private "AnyObject"
-- !private "UINavigationController"
+- !private "String"
 - !private "print"
+- "Firebase"
+- !private "CoreDataStackManager"
+- !private "UINavigationController"
+- !private "NSFetchRequest"
+- !private "Change"
+- "UIButton"
+- "NSManagedObjectContext"
+- !private "BooleanLiteralType"
 depends-member:
-- !private ["PSs9AnyObject", "CoreDataStackManager"]
-- !private ["PSs9AnyObject", "Firebase"]
-- !private ["PSs9AnyObject", "NSFetchRequest"]
-- !private ["PSs9AnyObject", "NSUserDefaults"]
-- !private ["PSs9AnyObject", "String"]
-- ["PSs9AnyObject", "addUserData"]
-- ["PSs9AnyObject", "checkCoreData"]
-- ["PSs9AnyObject", "createChange"]
-- ["PSs9AnyObject", "didReceiveMemoryWarning"]
-- !private ["PSs9AnyObject", "dismissViewControllerAnimated"]
-- !private ["PSs9AnyObject", "executeFetchRequest"]
-- ["PSs9AnyObject", "followButton"]
-- ["PSs9AnyObject", "followingLabel"]
-- !private ["PSs9AnyObject", "hidden"]
-- ["PSs9AnyObject", "init"]
-- !private ["PSs9AnyObject", "instantiateViewControllerWithIdentifier"]
-- ["PSs9AnyObject", "logout"]
-- !private ["PSs9AnyObject", "managedObjectContext"]
-- !private ["PSs9AnyObject", "presentViewController"]
-- !private ["PSs9AnyObject", "print"]
-- ["PSs9AnyObject", "ref"]
-- !private ["PSs9AnyObject", "setValue"]
-- ["PSs9AnyObject", "sharedContext"]
-- ["PSs9AnyObject", "sharedContext.storage"]
-- !private ["PSs9AnyObject", "sharedInstance"]
-- !private ["PSs9AnyObject", "standardUserDefaults"]
-- !private ["PSs9AnyObject", "storyboard"]
-- !private ["PSs9AnyObject", "text"]
-- !private ["PSs9AnyObject", "unauth"]
-- !private ["PSs9AnyObject", "valueForKey"]
-- ["PSs9AnyObject", "viewDidLoad"]
-- ["PSs9AnyObject", "welcomeLabel"]
-- ["PSs9AnyObject", ""]
+- !private ["Ps9AnyObject", "CoreDataStackManager"]
+- !private ["Ps9AnyObject", "Firebase"]
+- !private ["Ps9AnyObject", "NSFetchRequest"]
+- !private ["Ps9AnyObject", "NSUserDefaults"]
+- !private ["Ps9AnyObject", "String"]
+- !private ["Ps9AnyObject", "UIBarButtonItem"]
+- !private ["Ps9AnyObject", "UIBarButtonItemStyle"]
+- ["Ps9AnyObject", "addUserData"]
+- !private ["Ps9AnyObject", "backBarButtonItem"]
+- ["Ps9AnyObject", "checkCoreData"]
+- ["Ps9AnyObject", "createChange"]
+- ["Ps9AnyObject", "didReceiveMemoryWarning"]
+- !private ["Ps9AnyObject", "dismissViewControllerAnimated"]
+- !private ["Ps9AnyObject", "executeFetchRequest"]
+- ["Ps9AnyObject", "followButton"]
+- ["Ps9AnyObject", "followingLabel"]
+- !private ["Ps9AnyObject", "hidden"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "instantiateViewControllerWithIdentifier"]
+- ["Ps9AnyObject", "logout"]
+- !private ["Ps9AnyObject", "managedObjectContext"]
+- !private ["Ps9AnyObject", "navigationItem"]
+- !private ["Ps9AnyObject", "presentViewController"]
+- !private ["Ps9AnyObject", "print"]
+- ["Ps9AnyObject", "ref"]
+- !private ["Ps9AnyObject", "setValue"]
+- ["Ps9AnyObject", "sharedContext"]
+- ["Ps9AnyObject", "sharedContext.storage"]
+- !private ["Ps9AnyObject", "sharedInstance"]
+- !private ["Ps9AnyObject", "standardUserDefaults"]
+- !private ["Ps9AnyObject", "storyboard"]
+- !private ["Ps9AnyObject", "text"]
+- !private ["Ps9AnyObject", "unauth"]
+- !private ["Ps9AnyObject", "valueForKey"]
+- ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", "welcomeLabel"]
+- ["Ps9AnyObject", ""]
 - !private ["Sa", "Generator"]
 - !private ["Sa", "Index"]
 - !private ["Sa", "SubSequence"]
 - !private ["Sa", "count"]
 - !private ["Sa", "deinit"]
-- !private ["PSs23ArrayLiteralConvertible", "Generator"]
-- !private ["PSs23ArrayLiteralConvertible", "Index"]
-- !private ["PSs23ArrayLiteralConvertible", "SubSequence"]
-- !private ["PSs23ArrayLiteralConvertible", "count"]
-- !private ["VSs10ArraySlice", "Generator"]
-- !private ["VSs10ArraySlice", "Index"]
-- !private ["PSs22BidirectionalIndexType", "Distance"]
-- !private ["PSs22BidirectionalIndexType", "IntegerLiteralType"]
-- !private ["PSs21BitwiseOperationsType", "Distance"]
-- !private ["PSs21BitwiseOperationsType", "IntegerLiteralType"]
+- !private ["Ps23ArrayLiteralConvertible", "Generator"]
+- !private ["Ps23ArrayLiteralConvertible", "Index"]
+- !private ["Ps23ArrayLiteralConvertible", "SubSequence"]
+- !private ["Ps23ArrayLiteralConvertible", "count"]
+- !private ["Vs10ArraySlice", "Generator"]
+- !private ["Vs10ArraySlice", "Index"]
+- !private ["Ps22BidirectionalIndexType", "Distance"]
+- !private ["Ps22BidirectionalIndexType", "IntegerLiteralType"]
+- !private ["Ps21BitwiseOperationsType", "Distance"]
+- !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["Sb", "deinit"]
-- !private ["PSs25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
-- !private ["PSs11BooleanType", "_getBuiltinLogicValue"]
-- !private ["PSs11CVarArgType", "CoreDataStackManager"]
-- !private ["PSs11CVarArgType", "Distance"]
-- !private ["PSs11CVarArgType", "Firebase"]
-- !private ["PSs11CVarArgType", "IntegerLiteralType"]
-- !private ["PSs11CVarArgType", "NSFetchRequest"]
-- !private ["PSs11CVarArgType", "NSUserDefaults"]
-- !private ["PSs11CVarArgType", "String"]
-- ["PSs11CVarArgType", "addUserData"]
-- ["PSs11CVarArgType", "checkCoreData"]
-- ["PSs11CVarArgType", "createChange"]
-- ["PSs11CVarArgType", "didReceiveMemoryWarning"]
-- !private ["PSs11CVarArgType", "dismissViewControllerAnimated"]
-- !private ["PSs11CVarArgType", "executeFetchRequest"]
-- ["PSs11CVarArgType", "followButton"]
-- ["PSs11CVarArgType", "followingLabel"]
-- !private ["PSs11CVarArgType", "hidden"]
-- ["PSs11CVarArgType", "init"]
-- !private ["PSs11CVarArgType", "instantiateViewControllerWithIdentifier"]
-- ["PSs11CVarArgType", "logout"]
-- !private ["PSs11CVarArgType", "presentViewController"]
-- !private ["PSs11CVarArgType", "print"]
-- ["PSs11CVarArgType", "ref"]
-- !private ["PSs11CVarArgType", "setValue"]
-- ["PSs11CVarArgType", "sharedContext"]
-- ["PSs11CVarArgType", "sharedContext.storage"]
-- !private ["PSs11CVarArgType", "standardUserDefaults"]
-- !private ["PSs11CVarArgType", "storyboard"]
-- !private ["PSs11CVarArgType", "text"]
-- !private ["PSs11CVarArgType", "unauth"]
-- !private ["PSs11CVarArgType", "valueForKey"]
-- ["PSs11CVarArgType", "viewDidLoad"]
-- ["PSs11CVarArgType", "welcomeLabel"]
-- ["PSs11CVarArgType", ""]
-- !private ["VSs9Character", "deinit"]
-- !private ["PSs14CollectionType", "Generator"]
-- !private ["PSs14CollectionType", "Index"]
-- !private ["PSs14CollectionType", "SubSequence"]
-- !private ["PSs14CollectionType", "count"]
-- !private ["PSs10Comparable", "Distance"]
-- !private ["PSs10Comparable", "IntegerLiteralType"]
-- !private ["PSs10Comparable", "init"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["Ps11CVarArgType", "CoreDataStackManager"]
+- !private ["Ps11CVarArgType", "Distance"]
+- !private ["Ps11CVarArgType", "Firebase"]
+- !private ["Ps11CVarArgType", "IntegerLiteralType"]
+- !private ["Ps11CVarArgType", "NSFetchRequest"]
+- !private ["Ps11CVarArgType", "NSUserDefaults"]
+- !private ["Ps11CVarArgType", "String"]
+- !private ["Ps11CVarArgType", "UIBarButtonItem"]
+- !private ["Ps11CVarArgType", "UIBarButtonItemStyle"]
+- ["Ps11CVarArgType", "addUserData"]
+- !private ["Ps11CVarArgType", "backBarButtonItem"]
+- ["Ps11CVarArgType", "checkCoreData"]
+- ["Ps11CVarArgType", "createChange"]
+- ["Ps11CVarArgType", "didReceiveMemoryWarning"]
+- !private ["Ps11CVarArgType", "dismissViewControllerAnimated"]
+- !private ["Ps11CVarArgType", "executeFetchRequest"]
+- ["Ps11CVarArgType", "followButton"]
+- ["Ps11CVarArgType", "followingLabel"]
+- !private ["Ps11CVarArgType", "hidden"]
+- ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "instantiateViewControllerWithIdentifier"]
+- ["Ps11CVarArgType", "logout"]
+- !private ["Ps11CVarArgType", "navigationItem"]
+- !private ["Ps11CVarArgType", "presentViewController"]
+- !private ["Ps11CVarArgType", "print"]
+- ["Ps11CVarArgType", "ref"]
+- !private ["Ps11CVarArgType", "setValue"]
+- ["Ps11CVarArgType", "sharedContext"]
+- ["Ps11CVarArgType", "sharedContext.storage"]
+- !private ["Ps11CVarArgType", "standardUserDefaults"]
+- !private ["Ps11CVarArgType", "storyboard"]
+- !private ["Ps11CVarArgType", "text"]
+- !private ["Ps11CVarArgType", "unauth"]
+- !private ["Ps11CVarArgType", "valueForKey"]
+- ["Ps11CVarArgType", "viewDidLoad"]
+- ["Ps11CVarArgType", "welcomeLabel"]
+- ["Ps11CVarArgType", ""]
+- !private ["Vs9Character", "deinit"]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- !private ["Ps14CollectionType", "count"]
+- !private ["Ps10Comparable", "Distance"]
+- !private ["Ps10Comparable", "IntegerLiteralType"]
+- !private ["Ps10Comparable", "init"]
 - !private ["C8GoChange20CoreDataStackManager", "managedObjectContext"]
 - !private ["C8GoChange20CoreDataStackManager", "sharedInstance"]
-- !private ["PSs28CustomDebugStringConvertible", "Generator"]
-- !private ["PSs28CustomDebugStringConvertible", "Index"]
-- !private ["PSs28CustomDebugStringConvertible", "SubSequence"]
-- !private ["PSs28CustomDebugStringConvertible", "count"]
-- !private ["PSs28CustomDebugStringConvertible", "init"]
-- !private ["PSs23CustomStringConvertible", "CoreDataStackManager"]
-- !private ["PSs23CustomStringConvertible", "Distance"]
-- !private ["PSs23CustomStringConvertible", "Firebase"]
-- !private ["PSs23CustomStringConvertible", "Generator"]
-- !private ["PSs23CustomStringConvertible", "Index"]
-- !private ["PSs23CustomStringConvertible", "IntegerLiteralType"]
-- !private ["PSs23CustomStringConvertible", "NSFetchRequest"]
-- !private ["PSs23CustomStringConvertible", "NSUserDefaults"]
-- !private ["PSs23CustomStringConvertible", "String"]
-- !private ["PSs23CustomStringConvertible", "SubSequence"]
-- !private ["PSs23CustomStringConvertible", "_getBuiltinLogicValue"]
-- ["PSs23CustomStringConvertible", "addUserData"]
-- ["PSs23CustomStringConvertible", "checkCoreData"]
-- !private ["PSs23CustomStringConvertible", "count"]
-- ["PSs23CustomStringConvertible", "createChange"]
-- ["PSs23CustomStringConvertible", "didReceiveMemoryWarning"]
-- !private ["PSs23CustomStringConvertible", "dismissViewControllerAnimated"]
-- !private ["PSs23CustomStringConvertible", "executeFetchRequest"]
-- ["PSs23CustomStringConvertible", "followButton"]
-- ["PSs23CustomStringConvertible", "followingLabel"]
-- !private ["PSs23CustomStringConvertible", "hidden"]
-- ["PSs23CustomStringConvertible", "init"]
-- !private ["PSs23CustomStringConvertible", "instantiateViewControllerWithIdentifier"]
-- ["PSs23CustomStringConvertible", "logout"]
-- !private ["PSs23CustomStringConvertible", "presentViewController"]
-- !private ["PSs23CustomStringConvertible", "print"]
-- ["PSs23CustomStringConvertible", "ref"]
-- !private ["PSs23CustomStringConvertible", "setValue"]
-- ["PSs23CustomStringConvertible", "sharedContext"]
-- ["PSs23CustomStringConvertible", "sharedContext.storage"]
-- !private ["PSs23CustomStringConvertible", "standardUserDefaults"]
-- !private ["PSs23CustomStringConvertible", "storyboard"]
-- !private ["PSs23CustomStringConvertible", "text"]
-- !private ["PSs23CustomStringConvertible", "unauth"]
-- !private ["PSs23CustomStringConvertible", "valueForKey"]
-- ["PSs23CustomStringConvertible", "viewDidLoad"]
-- ["PSs23CustomStringConvertible", "welcomeLabel"]
-- ["PSs23CustomStringConvertible", ""]
+- !private ["Ps28CustomDebugStringConvertible", "CoreDataStackManager"]
+- !private ["Ps28CustomDebugStringConvertible", "Firebase"]
+- !private ["Ps28CustomDebugStringConvertible", "Generator"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
+- !private ["Ps28CustomDebugStringConvertible", "NSFetchRequest"]
+- !private ["Ps28CustomDebugStringConvertible", "NSUserDefaults"]
+- !private ["Ps28CustomDebugStringConvertible", "String"]
+- !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
+- !private ["Ps28CustomDebugStringConvertible", "UIBarButtonItem"]
+- !private ["Ps28CustomDebugStringConvertible", "UIBarButtonItemStyle"]
+- ["Ps28CustomDebugStringConvertible", "addUserData"]
+- !private ["Ps28CustomDebugStringConvertible", "backBarButtonItem"]
+- ["Ps28CustomDebugStringConvertible", "checkCoreData"]
+- !private ["Ps28CustomDebugStringConvertible", "count"]
+- ["Ps28CustomDebugStringConvertible", "createChange"]
+- ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
+- !private ["Ps28CustomDebugStringConvertible", "dismissViewControllerAnimated"]
+- !private ["Ps28CustomDebugStringConvertible", "executeFetchRequest"]
+- ["Ps28CustomDebugStringConvertible", "followButton"]
+- ["Ps28CustomDebugStringConvertible", "followingLabel"]
+- !private ["Ps28CustomDebugStringConvertible", "hidden"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "instantiateViewControllerWithIdentifier"]
+- ["Ps28CustomDebugStringConvertible", "logout"]
+- !private ["Ps28CustomDebugStringConvertible", "navigationItem"]
+- !private ["Ps28CustomDebugStringConvertible", "presentViewController"]
+- !private ["Ps28CustomDebugStringConvertible", "print"]
+- ["Ps28CustomDebugStringConvertible", "ref"]
+- !private ["Ps28CustomDebugStringConvertible", "setValue"]
+- ["Ps28CustomDebugStringConvertible", "sharedContext"]
+- ["Ps28CustomDebugStringConvertible", "sharedContext.storage"]
+- !private ["Ps28CustomDebugStringConvertible", "standardUserDefaults"]
+- !private ["Ps28CustomDebugStringConvertible", "storyboard"]
+- !private ["Ps28CustomDebugStringConvertible", "text"]
+- !private ["Ps28CustomDebugStringConvertible", "unauth"]
+- !private ["Ps28CustomDebugStringConvertible", "valueForKey"]
+- ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", "welcomeLabel"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "CoreDataStackManager"]
+- !private ["Ps23CustomStringConvertible", "Distance"]
+- !private ["Ps23CustomStringConvertible", "Firebase"]
+- !private ["Ps23CustomStringConvertible", "Generator"]
+- !private ["Ps23CustomStringConvertible", "Index"]
+- !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
+- !private ["Ps23CustomStringConvertible", "NSFetchRequest"]
+- !private ["Ps23CustomStringConvertible", "NSUserDefaults"]
+- !private ["Ps23CustomStringConvertible", "String"]
+- !private ["Ps23CustomStringConvertible", "SubSequence"]
+- !private ["Ps23CustomStringConvertible", "UIBarButtonItem"]
+- !private ["Ps23CustomStringConvertible", "UIBarButtonItemStyle"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- ["Ps23CustomStringConvertible", "addUserData"]
+- !private ["Ps23CustomStringConvertible", "backBarButtonItem"]
+- ["Ps23CustomStringConvertible", "checkCoreData"]
+- !private ["Ps23CustomStringConvertible", "count"]
+- ["Ps23CustomStringConvertible", "createChange"]
+- ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
+- !private ["Ps23CustomStringConvertible", "dismissViewControllerAnimated"]
+- !private ["Ps23CustomStringConvertible", "executeFetchRequest"]
+- ["Ps23CustomStringConvertible", "followButton"]
+- ["Ps23CustomStringConvertible", "followingLabel"]
+- !private ["Ps23CustomStringConvertible", "hidden"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "instantiateViewControllerWithIdentifier"]
+- ["Ps23CustomStringConvertible", "logout"]
+- !private ["Ps23CustomStringConvertible", "navigationItem"]
+- !private ["Ps23CustomStringConvertible", "presentViewController"]
+- !private ["Ps23CustomStringConvertible", "print"]
+- ["Ps23CustomStringConvertible", "ref"]
+- !private ["Ps23CustomStringConvertible", "setValue"]
+- ["Ps23CustomStringConvertible", "sharedContext"]
+- ["Ps23CustomStringConvertible", "sharedContext.storage"]
+- !private ["Ps23CustomStringConvertible", "standardUserDefaults"]
+- !private ["Ps23CustomStringConvertible", "storyboard"]
+- !private ["Ps23CustomStringConvertible", "text"]
+- !private ["Ps23CustomStringConvertible", "unauth"]
+- !private ["Ps23CustomStringConvertible", "valueForKey"]
+- ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", "welcomeLabel"]
+- ["Ps23CustomStringConvertible", ""]
 - !private ["Sd", "deinit"]
-- !private ["PSs9Equatable", "CoreDataStackManager"]
-- !private ["PSs9Equatable", "Distance"]
-- !private ["PSs9Equatable", "Firebase"]
-- !private ["PSs9Equatable", "IntegerLiteralType"]
-- !private ["PSs9Equatable", "NSFetchRequest"]
-- !private ["PSs9Equatable", "NSUserDefaults"]
-- !private ["PSs9Equatable", "String"]
-- !private ["PSs9Equatable", "_getBuiltinLogicValue"]
-- ["PSs9Equatable", "addUserData"]
-- ["PSs9Equatable", "checkCoreData"]
-- ["PSs9Equatable", "createChange"]
-- ["PSs9Equatable", "didReceiveMemoryWarning"]
-- !private ["PSs9Equatable", "dismissViewControllerAnimated"]
-- !private ["PSs9Equatable", "executeFetchRequest"]
-- ["PSs9Equatable", "followButton"]
-- ["PSs9Equatable", "followingLabel"]
-- !private ["PSs9Equatable", "hidden"]
-- ["PSs9Equatable", "init"]
-- !private ["PSs9Equatable", "instantiateViewControllerWithIdentifier"]
-- ["PSs9Equatable", "logout"]
-- !private ["PSs9Equatable", "presentViewController"]
-- !private ["PSs9Equatable", "print"]
-- ["PSs9Equatable", "ref"]
-- !private ["PSs9Equatable", "setValue"]
-- ["PSs9Equatable", "sharedContext"]
-- ["PSs9Equatable", "sharedContext.storage"]
-- !private ["PSs9Equatable", "standardUserDefaults"]
-- !private ["PSs9Equatable", "storyboard"]
-- !private ["PSs9Equatable", "text"]
-- !private ["PSs9Equatable", "unauth"]
-- !private ["PSs9Equatable", "valueForKey"]
-- ["PSs9Equatable", "viewDidLoad"]
-- ["PSs9Equatable", "welcomeLabel"]
-- ["PSs9Equatable", ""]
-- !private ["PSs41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Ps9Equatable", "CoreDataStackManager"]
+- !private ["Ps9Equatable", "Distance"]
+- !private ["Ps9Equatable", "Firebase"]
+- !private ["Ps9Equatable", "IntegerLiteralType"]
+- !private ["Ps9Equatable", "NSFetchRequest"]
+- !private ["Ps9Equatable", "NSUserDefaults"]
+- !private ["Ps9Equatable", "Plain"]
+- !private ["Ps9Equatable", "String"]
+- !private ["Ps9Equatable", "UIBarButtonItem"]
+- !private ["Ps9Equatable", "UIBarButtonItemStyle"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- ["Ps9Equatable", "addUserData"]
+- !private ["Ps9Equatable", "backBarButtonItem"]
+- ["Ps9Equatable", "checkCoreData"]
+- ["Ps9Equatable", "createChange"]
+- ["Ps9Equatable", "didReceiveMemoryWarning"]
+- !private ["Ps9Equatable", "dismissViewControllerAnimated"]
+- !private ["Ps9Equatable", "executeFetchRequest"]
+- ["Ps9Equatable", "followButton"]
+- ["Ps9Equatable", "followingLabel"]
+- !private ["Ps9Equatable", "hidden"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "instantiateViewControllerWithIdentifier"]
+- ["Ps9Equatable", "logout"]
+- !private ["Ps9Equatable", "navigationItem"]
+- !private ["Ps9Equatable", "presentViewController"]
+- !private ["Ps9Equatable", "print"]
+- ["Ps9Equatable", "ref"]
+- !private ["Ps9Equatable", "setValue"]
+- ["Ps9Equatable", "sharedContext"]
+- ["Ps9Equatable", "sharedContext.storage"]
+- !private ["Ps9Equatable", "standardUserDefaults"]
+- !private ["Ps9Equatable", "storyboard"]
+- !private ["Ps9Equatable", "text"]
+- !private ["Ps9Equatable", "unauth"]
+- !private ["Ps9Equatable", "valueForKey"]
+- ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", "welcomeLabel"]
+- ["Ps9Equatable", ""]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["CSo6FQuery", "init"]
 - !private ["CSo6FQuery", "unauth"]
 - !private ["CSo8Firebase", "init"]
 - !private ["CSo8Firebase", "unauth"]
 - !private ["Sf", "deinit"]
-- !private ["PSs16ForwardIndexType", "Distance"]
-- !private ["PSs16ForwardIndexType", "IntegerLiteralType"]
-- !private ["PSs8Hashable", "CoreDataStackManager"]
-- !private ["PSs8Hashable", "Distance"]
-- !private ["PSs8Hashable", "Firebase"]
-- !private ["PSs8Hashable", "IntegerLiteralType"]
-- !private ["PSs8Hashable", "NSFetchRequest"]
-- !private ["PSs8Hashable", "NSUserDefaults"]
-- !private ["PSs8Hashable", "String"]
-- !private ["PSs8Hashable", "_getBuiltinLogicValue"]
-- ["PSs8Hashable", "addUserData"]
-- ["PSs8Hashable", "checkCoreData"]
-- ["PSs8Hashable", "createChange"]
-- ["PSs8Hashable", "didReceiveMemoryWarning"]
-- !private ["PSs8Hashable", "dismissViewControllerAnimated"]
-- !private ["PSs8Hashable", "executeFetchRequest"]
-- ["PSs8Hashable", "followButton"]
-- ["PSs8Hashable", "followingLabel"]
-- !private ["PSs8Hashable", "hidden"]
-- ["PSs8Hashable", "init"]
-- !private ["PSs8Hashable", "instantiateViewControllerWithIdentifier"]
-- ["PSs8Hashable", "logout"]
-- !private ["PSs8Hashable", "presentViewController"]
-- !private ["PSs8Hashable", "print"]
-- ["PSs8Hashable", "ref"]
-- !private ["PSs8Hashable", "setValue"]
-- ["PSs8Hashable", "sharedContext"]
-- ["PSs8Hashable", "sharedContext.storage"]
-- !private ["PSs8Hashable", "standardUserDefaults"]
-- !private ["PSs8Hashable", "storyboard"]
-- !private ["PSs8Hashable", "text"]
-- !private ["PSs8Hashable", "unauth"]
-- !private ["PSs8Hashable", "valueForKey"]
-- ["PSs8Hashable", "viewDidLoad"]
-- ["PSs8Hashable", "welcomeLabel"]
-- ["PSs8Hashable", ""]
+- !private ["Ps16ForwardIndexType", "Distance"]
+- !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
+- !private ["Ps8Hashable", "CoreDataStackManager"]
+- !private ["Ps8Hashable", "Distance"]
+- !private ["Ps8Hashable", "Firebase"]
+- !private ["Ps8Hashable", "IntegerLiteralType"]
+- !private ["Ps8Hashable", "NSFetchRequest"]
+- !private ["Ps8Hashable", "NSUserDefaults"]
+- !private ["Ps8Hashable", "Plain"]
+- !private ["Ps8Hashable", "String"]
+- !private ["Ps8Hashable", "UIBarButtonItem"]
+- !private ["Ps8Hashable", "UIBarButtonItemStyle"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- ["Ps8Hashable", "addUserData"]
+- !private ["Ps8Hashable", "backBarButtonItem"]
+- ["Ps8Hashable", "checkCoreData"]
+- ["Ps8Hashable", "createChange"]
+- ["Ps8Hashable", "didReceiveMemoryWarning"]
+- !private ["Ps8Hashable", "dismissViewControllerAnimated"]
+- !private ["Ps8Hashable", "executeFetchRequest"]
+- ["Ps8Hashable", "followButton"]
+- ["Ps8Hashable", "followingLabel"]
+- !private ["Ps8Hashable", "hidden"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "instantiateViewControllerWithIdentifier"]
+- ["Ps8Hashable", "logout"]
+- !private ["Ps8Hashable", "navigationItem"]
+- !private ["Ps8Hashable", "presentViewController"]
+- !private ["Ps8Hashable", "print"]
+- ["Ps8Hashable", "ref"]
+- !private ["Ps8Hashable", "setValue"]
+- ["Ps8Hashable", "sharedContext"]
+- ["Ps8Hashable", "sharedContext.storage"]
+- !private ["Ps8Hashable", "standardUserDefaults"]
+- !private ["Ps8Hashable", "storyboard"]
+- !private ["Ps8Hashable", "text"]
+- !private ["Ps8Hashable", "unauth"]
+- !private ["Ps8Hashable", "valueForKey"]
+- ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", "welcomeLabel"]
+- ["Ps8Hashable", ""]
 - !private ["C8GoChange18HomeViewController", "AnyObject"]
 - !private ["C8GoChange18HomeViewController", "Change"]
 - !private ["C8GoChange18HomeViewController", "CoreDataStackManager"]
@@ -261,6 +319,8 @@ depends-member:
 - ["C8GoChange18HomeViewController", "NSManagedObjectContext"]
 - !private ["C8GoChange18HomeViewController", "NSUserDefaults"]
 - !private ["C8GoChange18HomeViewController", "String"]
+- !private ["C8GoChange18HomeViewController", "UIBarButtonItem"]
+- !private ["C8GoChange18HomeViewController", "UIBarButtonItemStyle"]
 - ["C8GoChange18HomeViewController", "UIButton"]
 - ["C8GoChange18HomeViewController", "UILabel"]
 - !private ["C8GoChange18HomeViewController", "UINavigationController"]
@@ -275,6 +335,7 @@ depends-member:
 - ["C8GoChange18HomeViewController", "followingLabel"]
 - ["C8GoChange18HomeViewController", "init"]
 - ["C8GoChange18HomeViewController", "logout"]
+- !private ["C8GoChange18HomeViewController", "navigationItem"]
 - !private ["C8GoChange18HomeViewController", "presentViewController"]
 - !private ["C8GoChange18HomeViewController", "print"]
 - ["C8GoChange18HomeViewController", "ref"]
@@ -284,44 +345,47 @@ depends-member:
 - ["C8GoChange18HomeViewController", "viewDidLoad"]
 - ["C8GoChange18HomeViewController", "welcomeLabel"]
 - !private ["SQ", "deinit"]
-- !private ["PSs9Indexable", "Generator"]
-- !private ["PSs9Indexable", "Index"]
-- !private ["PSs9Indexable", "SubSequence"]
-- !private ["PSs9Indexable", "count"]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "count"]
 - !private ["Si", "Distance"]
 - !private ["Si", "IntegerLiteralType"]
 - !private ["Si", "deinit"]
-- !private ["VSs5Int16", "deinit"]
-- !private ["VSs5Int32", "deinit"]
-- !private ["VSs5Int64", "deinit"]
-- !private ["VSs4Int8", "deinit"]
-- !private ["PSs21IntegerArithmeticType", "Distance"]
-- !private ["PSs21IntegerArithmeticType", "IntegerLiteralType"]
-- !private ["PSs25IntegerLiteralConvertible", "Distance"]
-- !private ["PSs25IntegerLiteralConvertible", "IntegerLiteralType"]
-- !private ["PSs11IntegerType", "Distance"]
-- !private ["PSs11IntegerType", "IntegerLiteralType"]
-- !private ["PSs14MirrorPathType", "Distance"]
-- !private ["PSs14MirrorPathType", "IntegerLiteralType"]
-- !private ["PSs14MirrorPathType", "init"]
-- !private ["PSs21MutableCollectionType", "Generator"]
-- !private ["PSs21MutableCollectionType", "Index"]
-- !private ["PSs21MutableCollectionType", "SubSequence"]
-- !private ["PSs21MutableCollectionType", "count"]
-- !private ["PSs16MutableIndexable", "Generator"]
-- !private ["PSs16MutableIndexable", "Index"]
-- !private ["PSs16MutableIndexable", "SubSequence"]
-- !private ["PSs16MutableIndexable", "count"]
-- !private ["PSs16MutableSliceable", "Generator"]
-- !private ["PSs16MutableSliceable", "Index"]
-- !private ["PSs16MutableSliceable", "SubSequence"]
-- !private ["PSs16MutableSliceable", "count"]
+- !private ["Vs5Int16", "deinit"]
+- !private ["Vs5Int32", "deinit"]
+- !private ["Vs5Int64", "deinit"]
+- !private ["Vs4Int8", "deinit"]
+- !private ["Ps21IntegerArithmeticType", "Distance"]
+- !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps25IntegerLiteralConvertible", "Distance"]
+- !private ["Ps25IntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps11IntegerType", "Distance"]
+- !private ["Ps11IntegerType", "IntegerLiteralType"]
+- !private ["Ps14MirrorPathType", "Distance"]
+- !private ["Ps14MirrorPathType", "IntegerLiteralType"]
+- !private ["Ps14MirrorPathType", "init"]
+- !private ["Ps21MutableCollectionType", "Generator"]
+- !private ["Ps21MutableCollectionType", "Index"]
+- !private ["Ps21MutableCollectionType", "SubSequence"]
+- !private ["Ps21MutableCollectionType", "count"]
+- !private ["Ps16MutableIndexable", "Generator"]
+- !private ["Ps16MutableIndexable", "Index"]
+- !private ["Ps16MutableIndexable", "SubSequence"]
+- !private ["Ps16MutableIndexable", "count"]
+- !private ["Ps16MutableSliceable", "Generator"]
+- !private ["Ps16MutableSliceable", "Index"]
+- !private ["Ps16MutableSliceable", "SubSequence"]
+- !private ["Ps16MutableSliceable", "count"]
 - !private ["PSo8NSCoding", "CoreDataStackManager"]
 - !private ["PSo8NSCoding", "Firebase"]
 - !private ["PSo8NSCoding", "NSFetchRequest"]
 - !private ["PSo8NSCoding", "NSUserDefaults"]
 - !private ["PSo8NSCoding", "String"]
+- !private ["PSo8NSCoding", "UIBarButtonItem"]
+- !private ["PSo8NSCoding", "UIBarButtonItemStyle"]
 - ["PSo8NSCoding", "addUserData"]
+- !private ["PSo8NSCoding", "backBarButtonItem"]
 - ["PSo8NSCoding", "checkCoreData"]
 - ["PSo8NSCoding", "createChange"]
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
@@ -332,6 +396,7 @@ depends-member:
 - !private ["PSo8NSCoding", "hidden"]
 - ["PSo8NSCoding", "init"]
 - ["PSo8NSCoding", "logout"]
+- !private ["PSo8NSCoding", "navigationItem"]
 - !private ["PSo8NSCoding", "presentViewController"]
 - !private ["PSo8NSCoding", "print"]
 - ["PSo8NSCoding", "ref"]
@@ -348,6 +413,8 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "NSFetchRequest"]
 - !private ["PSo26NSExtensionRequestHandling", "NSUserDefaults"]
 - !private ["PSo26NSExtensionRequestHandling", "String"]
+- !private ["PSo26NSExtensionRequestHandling", "UIBarButtonItem"]
+- !private ["PSo26NSExtensionRequestHandling", "UIBarButtonItemStyle"]
 - ["PSo26NSExtensionRequestHandling", "addUserData"]
 - ["PSo26NSExtensionRequestHandling", "checkCoreData"]
 - ["PSo26NSExtensionRequestHandling", "createChange"]
@@ -357,6 +424,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "followingLabel"]
 - ["PSo26NSExtensionRequestHandling", "init"]
 - ["PSo26NSExtensionRequestHandling", "logout"]
+- !private ["PSo26NSExtensionRequestHandling", "navigationItem"]
 - !private ["PSo26NSExtensionRequestHandling", "presentViewController"]
 - !private ["PSo26NSExtensionRequestHandling", "print"]
 - ["PSo26NSExtensionRequestHandling", "ref"]
@@ -378,11 +446,14 @@ depends-member:
 - ["CSo8NSObject", "NSManagedObjectContext"]
 - !private ["CSo8NSObject", "NSUserDefaults"]
 - !private ["CSo8NSObject", "String"]
+- !private ["CSo8NSObject", "UIBarButtonItem"]
+- !private ["CSo8NSObject", "UIBarButtonItemStyle"]
 - ["CSo8NSObject", "UIButton"]
 - ["CSo8NSObject", "UILabel"]
 - !private ["CSo8NSObject", "UINavigationController"]
 - !private ["CSo8NSObject", "UpdateUserInfoController"]
 - ["CSo8NSObject", "addUserData"]
+- !private ["CSo8NSObject", "backBarButtonItem"]
 - ["CSo8NSObject", "checkCoreData"]
 - ["CSo8NSObject", "createChange"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
@@ -394,6 +465,7 @@ depends-member:
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "instantiateViewControllerWithIdentifier"]
 - ["CSo8NSObject", "logout"]
+- !private ["CSo8NSObject", "navigationItem"]
 - !private ["CSo8NSObject", "presentViewController"]
 - !private ["CSo8NSObject", "print"]
 - ["CSo8NSObject", "ref"]
@@ -412,7 +484,10 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "NSFetchRequest"]
 - !private ["PSo16NSObjectProtocol", "NSUserDefaults"]
 - !private ["PSo16NSObjectProtocol", "String"]
+- !private ["PSo16NSObjectProtocol", "UIBarButtonItem"]
+- !private ["PSo16NSObjectProtocol", "UIBarButtonItemStyle"]
 - ["PSo16NSObjectProtocol", "addUserData"]
+- !private ["PSo16NSObjectProtocol", "backBarButtonItem"]
 - ["PSo16NSObjectProtocol", "checkCoreData"]
 - ["PSo16NSObjectProtocol", "createChange"]
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
@@ -424,6 +499,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "instantiateViewControllerWithIdentifier"]
 - ["PSo16NSObjectProtocol", "logout"]
+- !private ["PSo16NSObjectProtocol", "navigationItem"]
 - !private ["PSo16NSObjectProtocol", "presentViewController"]
 - !private ["PSo16NSObjectProtocol", "print"]
 - ["PSo16NSObjectProtocol", "ref"]
@@ -445,37 +521,42 @@ depends-member:
 - !private ["CSo14NSUserDefaults", "standardUserDefaults"]
 - !private ["CSo14NSUserDefaults", "valueForKey"]
 - !private ["Sq", "deinit"]
-- !private ["PSs16OutputStreamType", "init"]
-- !private ["PSs21RandomAccessIndexType", "Distance"]
-- !private ["PSs21RandomAccessIndexType", "IntegerLiteralType"]
-- !private ["PSs30RangeReplaceableCollectionType", "Generator"]
-- !private ["PSs30RangeReplaceableCollectionType", "Index"]
-- !private ["PSs30RangeReplaceableCollectionType", "SubSequence"]
-- !private ["PSs30RangeReplaceableCollectionType", "count"]
-- !private ["PSs12SequenceType", "Generator"]
-- !private ["PSs12SequenceType", "Index"]
-- !private ["PSs12SequenceType", "SubSequence"]
-- !private ["PSs12SequenceType", "count"]
-- !private ["PSs17SignedIntegerType", "Distance"]
-- !private ["PSs17SignedIntegerType", "IntegerLiteralType"]
-- !private ["PSs16SignedNumberType", "Distance"]
-- !private ["PSs16SignedNumberType", "IntegerLiteralType"]
-- !private ["PSs10Streamable", "init"]
-- !private ["PSs10Strideable", "Distance"]
-- !private ["PSs10Strideable", "IntegerLiteralType"]
+- !private ["Ps16OutputStreamType", "init"]
+- !private ["Ps21RandomAccessIndexType", "Distance"]
+- !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
+- !private ["Ps30RangeReplaceableCollectionType", "Generator"]
+- !private ["Ps30RangeReplaceableCollectionType", "Index"]
+- !private ["Ps30RangeReplaceableCollectionType", "SubSequence"]
+- !private ["Ps30RangeReplaceableCollectionType", "count"]
+- !private ["Ps16RawRepresentable", "Plain"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- !private ["Ps12SequenceType", "count"]
+- !private ["Ps17SignedIntegerType", "Distance"]
+- !private ["Ps17SignedIntegerType", "IntegerLiteralType"]
+- !private ["Ps16SignedNumberType", "Distance"]
+- !private ["Ps16SignedNumberType", "IntegerLiteralType"]
+- !private ["Ps10Streamable", "init"]
+- !private ["Ps10Strideable", "Distance"]
+- !private ["Ps10Strideable", "IntegerLiteralType"]
 - !private ["SS", "deinit"]
 - !private ["SS", "init"]
-- !private ["PSs30StringInterpolationConvertible", "init"]
-- !private ["PSs24StringLiteralConvertible", "init"]
+- !private ["Ps30StringInterpolationConvertible", "init"]
+- !private ["Ps24StringLiteralConvertible", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "hidden"]
+- !private ["PSo29UIAccessibilityIdentification", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "text"]
 - !private ["PSo12UIAppearance", "hidden"]
+- !private ["PSo12UIAppearance", "init"]
 - !private ["PSo12UIAppearance", "text"]
 - !private ["PSo21UIAppearanceContainer", "CoreDataStackManager"]
 - !private ["PSo21UIAppearanceContainer", "Firebase"]
 - !private ["PSo21UIAppearanceContainer", "NSFetchRequest"]
 - !private ["PSo21UIAppearanceContainer", "NSUserDefaults"]
 - !private ["PSo21UIAppearanceContainer", "String"]
+- !private ["PSo21UIAppearanceContainer", "UIBarButtonItem"]
+- !private ["PSo21UIAppearanceContainer", "UIBarButtonItemStyle"]
 - ["PSo21UIAppearanceContainer", "addUserData"]
 - ["PSo21UIAppearanceContainer", "checkCoreData"]
 - ["PSo21UIAppearanceContainer", "createChange"]
@@ -486,6 +567,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "hidden"]
 - ["PSo21UIAppearanceContainer", "init"]
 - ["PSo21UIAppearanceContainer", "logout"]
+- !private ["PSo21UIAppearanceContainer", "navigationItem"]
 - !private ["PSo21UIAppearanceContainer", "presentViewController"]
 - !private ["PSo21UIAppearanceContainer", "print"]
 - ["PSo21UIAppearanceContainer", "ref"]
@@ -496,11 +578,16 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", "welcomeLabel"]
 - ["PSo21UIAppearanceContainer", ""]
+- !private ["CSo15UIBarButtonItem", "init"]
+- !private ["OSC20UIBarButtonItemStyle", "Plain"]
+- !private ["CSo9UIBarItem", "init"]
 - !private ["PSo18UIContentContainer", "CoreDataStackManager"]
 - !private ["PSo18UIContentContainer", "Firebase"]
 - !private ["PSo18UIContentContainer", "NSFetchRequest"]
 - !private ["PSo18UIContentContainer", "NSUserDefaults"]
 - !private ["PSo18UIContentContainer", "String"]
+- !private ["PSo18UIContentContainer", "UIBarButtonItem"]
+- !private ["PSo18UIContentContainer", "UIBarButtonItemStyle"]
 - ["PSo18UIContentContainer", "addUserData"]
 - ["PSo18UIContentContainer", "checkCoreData"]
 - ["PSo18UIContentContainer", "createChange"]
@@ -510,6 +597,7 @@ depends-member:
 - ["PSo18UIContentContainer", "followingLabel"]
 - ["PSo18UIContentContainer", "init"]
 - ["PSo18UIContentContainer", "logout"]
+- !private ["PSo18UIContentContainer", "navigationItem"]
 - !private ["PSo18UIContentContainer", "presentViewController"]
 - !private ["PSo18UIContentContainer", "print"]
 - ["PSo18UIContentContainer", "ref"]
@@ -528,6 +616,8 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "NSFetchRequest"]
 - !private ["PSo18UIFocusEnvironment", "NSUserDefaults"]
 - !private ["PSo18UIFocusEnvironment", "String"]
+- !private ["PSo18UIFocusEnvironment", "UIBarButtonItem"]
+- !private ["PSo18UIFocusEnvironment", "UIBarButtonItemStyle"]
 - ["PSo18UIFocusEnvironment", "addUserData"]
 - ["PSo18UIFocusEnvironment", "checkCoreData"]
 - ["PSo18UIFocusEnvironment", "createChange"]
@@ -538,6 +628,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "hidden"]
 - ["PSo18UIFocusEnvironment", "init"]
 - ["PSo18UIFocusEnvironment", "logout"]
+- !private ["PSo18UIFocusEnvironment", "navigationItem"]
 - !private ["PSo18UIFocusEnvironment", "presentViewController"]
 - !private ["PSo18UIFocusEnvironment", "print"]
 - ["PSo18UIFocusEnvironment", "ref"]
@@ -550,6 +641,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", ""]
 - !private ["CSo7UILabel", "hidden"]
 - !private ["CSo7UILabel", "text"]
+- !private ["CSo16UINavigationItem", "backBarButtonItem"]
 - !private ["CSo11UIResponder", "AnyObject"]
 - !private ["CSo11UIResponder", "Change"]
 - !private ["CSo11UIResponder", "CoreDataStackManager"]
@@ -558,6 +650,8 @@ depends-member:
 - ["CSo11UIResponder", "NSManagedObjectContext"]
 - !private ["CSo11UIResponder", "NSUserDefaults"]
 - !private ["CSo11UIResponder", "String"]
+- !private ["CSo11UIResponder", "UIBarButtonItem"]
+- !private ["CSo11UIResponder", "UIBarButtonItemStyle"]
 - ["CSo11UIResponder", "UIButton"]
 - ["CSo11UIResponder", "UILabel"]
 - !private ["CSo11UIResponder", "UINavigationController"]
@@ -572,6 +666,7 @@ depends-member:
 - !private ["CSo11UIResponder", "hidden"]
 - ["CSo11UIResponder", "init"]
 - ["CSo11UIResponder", "logout"]
+- !private ["CSo11UIResponder", "navigationItem"]
 - !private ["CSo11UIResponder", "presentViewController"]
 - !private ["CSo11UIResponder", "print"]
 - ["CSo11UIResponder", "ref"]
@@ -586,6 +681,8 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "NSFetchRequest"]
 - !private ["PSo16UIStateRestoring", "NSUserDefaults"]
 - !private ["PSo16UIStateRestoring", "String"]
+- !private ["PSo16UIStateRestoring", "UIBarButtonItem"]
+- !private ["PSo16UIStateRestoring", "UIBarButtonItemStyle"]
 - ["PSo16UIStateRestoring", "addUserData"]
 - ["PSo16UIStateRestoring", "checkCoreData"]
 - ["PSo16UIStateRestoring", "createChange"]
@@ -595,6 +692,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "followingLabel"]
 - ["PSo16UIStateRestoring", "init"]
 - ["PSo16UIStateRestoring", "logout"]
+- !private ["PSo16UIStateRestoring", "navigationItem"]
 - !private ["PSo16UIStateRestoring", "presentViewController"]
 - !private ["PSo16UIStateRestoring", "print"]
 - ["PSo16UIStateRestoring", "ref"]
@@ -610,6 +708,8 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "NSFetchRequest"]
 - !private ["PSo18UITraitEnvironment", "NSUserDefaults"]
 - !private ["PSo18UITraitEnvironment", "String"]
+- !private ["PSo18UITraitEnvironment", "UIBarButtonItem"]
+- !private ["PSo18UITraitEnvironment", "UIBarButtonItemStyle"]
 - ["PSo18UITraitEnvironment", "addUserData"]
 - ["PSo18UITraitEnvironment", "checkCoreData"]
 - ["PSo18UITraitEnvironment", "createChange"]
@@ -620,6 +720,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "hidden"]
 - ["PSo18UITraitEnvironment", "init"]
 - ["PSo18UITraitEnvironment", "logout"]
+- !private ["PSo18UITraitEnvironment", "navigationItem"]
 - !private ["PSo18UITraitEnvironment", "presentViewController"]
 - !private ["PSo18UITraitEnvironment", "print"]
 - ["PSo18UITraitEnvironment", "ref"]
@@ -640,6 +741,8 @@ depends-member:
 - ["CSo16UIViewController", "NSManagedObjectContext"]
 - !private ["CSo16UIViewController", "NSUserDefaults"]
 - !private ["CSo16UIViewController", "String"]
+- !private ["CSo16UIViewController", "UIBarButtonItem"]
+- !private ["CSo16UIViewController", "UIBarButtonItemStyle"]
 - ["CSo16UIViewController", "UIButton"]
 - ["CSo16UIViewController", "UILabel"]
 - !private ["CSo16UIViewController", "UINavigationController"]
@@ -653,6 +756,7 @@ depends-member:
 - ["CSo16UIViewController", "followingLabel"]
 - ["CSo16UIViewController", "init"]
 - ["CSo16UIViewController", "logout"]
+- !private ["CSo16UIViewController", "navigationItem"]
 - !private ["CSo16UIViewController", "presentViewController"]
 - !private ["CSo16UIViewController", "print"]
 - ["CSo16UIViewController", "ref"]
@@ -663,99 +767,96 @@ depends-member:
 - ["CSo16UIViewController", "welcomeLabel"]
 - ["CSo16UIViewController", ""]
 - !private ["Su", "deinit"]
-- !private ["VSs6UInt16", "deinit"]
-- !private ["VSs6UInt32", "deinit"]
-- !private ["VSs6UInt64", "deinit"]
-- !private ["VSs5UInt8", "deinit"]
+- !private ["Vs6UInt16", "deinit"]
+- !private ["Vs6UInt32", "deinit"]
+- !private ["Vs6UInt64", "deinit"]
+- !private ["Vs5UInt8", "deinit"]
 - !private ["Sc", "deinit"]
-- !private ["PSs31UnicodeScalarLiteralConvertible", "init"]
-- !private ["PSs10_ArrayType", "Generator"]
-- !private ["PSs10_ArrayType", "Index"]
-- !private ["PSs10_ArrayType", "SubSequence"]
-- !private ["PSs10_ArrayType", "count"]
-- !private ["PSs33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
-- !private ["PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
-- !private ["PSs33_BuiltinIntegerLiteralConvertible", "Distance"]
-- !private ["PSs33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
-- !private ["PSs32_BuiltinStringLiteralConvertible", "init"]
-- !private ["PSs37_BuiltinUTF16StringLiteralConvertible", "init"]
-- !private ["PSs39_BuiltinUnicodeScalarLiteralConvertible", "init"]
-- !private ["PSs16_CocoaStringType", "init"]
-- !private ["PSs24_DestructorSafeContainer", "Generator"]
-- !private ["PSs24_DestructorSafeContainer", "Index"]
-- !private ["PSs24_DestructorSafeContainer", "SubSequence"]
-- !private ["PSs24_DestructorSafeContainer", "count"]
-- !private ["PSs14_Incrementable", "Distance"]
-- !private ["PSs14_Incrementable", "IntegerLiteralType"]
-- !private ["PSs22_IntegerArithmeticType", "Distance"]
-- !private ["PSs22_IntegerArithmeticType", "IntegerLiteralType"]
-- !private ["PSs12_IntegerType", "Distance"]
-- !private ["PSs12_IntegerType", "IntegerLiteralType"]
-- !private ["PSs21_ObjectiveCBridgeable", "Distance"]
-- !private ["PSs21_ObjectiveCBridgeable", "Generator"]
-- !private ["PSs21_ObjectiveCBridgeable", "Index"]
-- !private ["PSs21_ObjectiveCBridgeable", "IntegerLiteralType"]
-- !private ["PSs21_ObjectiveCBridgeable", "SubSequence"]
-- !private ["PSs21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
-- !private ["PSs21_ObjectiveCBridgeable", "count"]
-- !private ["PSs21_ObjectiveCBridgeable", "init"]
-- !private ["VSs26_OptionalNilComparisonType", "deinit"]
-- !private ["PSs22_RandomAccessAmbiguity", "Distance"]
-- !private ["PSs22_RandomAccessAmbiguity", "IntegerLiteralType"]
-- !private ["PSs12_Reflectable", "Distance"]
-- !private ["PSs12_Reflectable", "Generator"]
-- !private ["PSs12_Reflectable", "Index"]
-- !private ["PSs12_Reflectable", "IntegerLiteralType"]
-- !private ["PSs12_Reflectable", "SubSequence"]
-- !private ["PSs12_Reflectable", "_getBuiltinLogicValue"]
-- !private ["PSs12_Reflectable", "count"]
-- !private ["PSs12_Reflectable", "hidden"]
-- !private ["PSs12_Reflectable", "init"]
-- !private ["PSs12_Reflectable", "text"]
-- !private ["PSs18_SignedIntegerType", "Distance"]
-- !private ["PSs18_SignedIntegerType", "IntegerLiteralType"]
-- !private ["PSs11_Strideable", "Distance"]
-- !private ["PSs11_Strideable", "IntegerLiteralType"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps10_ArrayType", "Generator"]
+- !private ["Ps10_ArrayType", "Index"]
+- !private ["Ps10_ArrayType", "SubSequence"]
+- !private ["Ps10_ArrayType", "count"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps24_DestructorSafeContainer", "Generator"]
+- !private ["Ps24_DestructorSafeContainer", "Index"]
+- !private ["Ps24_DestructorSafeContainer", "SubSequence"]
+- !private ["Ps24_DestructorSafeContainer", "count"]
+- !private ["Ps14_Incrementable", "Distance"]
+- !private ["Ps14_Incrementable", "IntegerLiteralType"]
+- !private ["Ps22_IntegerArithmeticType", "Distance"]
+- !private ["Ps22_IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps12_IntegerType", "Distance"]
+- !private ["Ps12_IntegerType", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "Distance"]
+- !private ["Ps21_ObjectiveCBridgeable", "Generator"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "count"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Vs26_OptionalNilComparisonType", "deinit"]
+- !private ["Ps22_RandomAccessAmbiguity", "Distance"]
+- !private ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
+- !private ["Ps12_Reflectable", "Distance"]
+- !private ["Ps12_Reflectable", "Generator"]
+- !private ["Ps12_Reflectable", "Index"]
+- !private ["Ps12_Reflectable", "IntegerLiteralType"]
+- !private ["Ps12_Reflectable", "SubSequence"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "count"]
+- !private ["Ps12_Reflectable", "hidden"]
+- !private ["Ps12_Reflectable", "init"]
+- !private ["Ps12_Reflectable", "text"]
+- !private ["Ps18_SignedIntegerType", "Distance"]
+- !private ["Ps18_SignedIntegerType", "IntegerLiteralType"]
 depends-nominal:
-- "PSs9AnyObject"
+- "Ps9AnyObject"
 - !private "Sa"
-- !private "PSs23ArrayLiteralConvertible"
-- !private "VSs10ArraySlice"
-- !private "PSs22BidirectionalIndexType"
-- !private "PSs21BitwiseOperationsType"
+- !private "Ps23ArrayLiteralConvertible"
+- !private "Vs10ArraySlice"
+- !private "Ps22BidirectionalIndexType"
+- !private "Ps21BitwiseOperationsType"
 - !private "Sb"
-- !private "PSs25BooleanLiteralConvertible"
-- !private "PSs11BooleanType"
-- "PSs11CVarArgType"
-- !private "VSs9Character"
-- !private "PSs14CollectionType"
-- !private "PSs10Comparable"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- "Ps11CVarArgType"
+- !private "Vs9Character"
+- !private "Ps14CollectionType"
+- !private "Ps10Comparable"
 - !private "C8GoChange20CoreDataStackManager"
-- !private "PSs28CustomDebugStringConvertible"
-- "PSs23CustomStringConvertible"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
 - !private "Sd"
-- "PSs9Equatable"
-- !private "PSs41ExtendedGraphemeClusterLiteralConvertible"
+- "Ps9Equatable"
+- !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
 - !private "CSo6FQuery"
 - !private "CSo8Firebase"
 - !private "Sf"
-- !private "PSs16ForwardIndexType"
-- "PSs8Hashable"
+- !private "Ps16ForwardIndexType"
+- "Ps8Hashable"
 - "C8GoChange18HomeViewController"
 - !private "SQ"
-- !private "PSs9Indexable"
+- !private "Ps9Indexable"
 - !private "Si"
-- !private "VSs5Int16"
-- !private "VSs5Int32"
-- !private "VSs5Int64"
-- !private "VSs4Int8"
-- !private "PSs21IntegerArithmeticType"
-- !private "PSs25IntegerLiteralConvertible"
-- !private "PSs11IntegerType"
-- !private "PSs14MirrorPathType"
-- !private "PSs21MutableCollectionType"
-- !private "PSs16MutableIndexable"
-- !private "PSs16MutableSliceable"
+- !private "Vs5Int16"
+- !private "Vs5Int32"
+- !private "Vs5Int64"
+- !private "Vs4Int8"
+- !private "Ps21IntegerArithmeticType"
+- !private "Ps25IntegerLiteralConvertible"
+- !private "Ps11IntegerType"
+- !private "Ps14MirrorPathType"
+- !private "Ps21MutableCollectionType"
+- !private "Ps16MutableIndexable"
+- !private "Ps16MutableSliceable"
 - "PSo8NSCoding"
 - !private "PSo9NSCopying"
 - "PSo26NSExtensionRequestHandling"
@@ -770,25 +871,30 @@ depends-nominal:
 - !private "CSo8NSString"
 - !private "CSo14NSUserDefaults"
 - !private "Sq"
-- !private "PSs16OutputStreamType"
-- !private "PSs21RandomAccessIndexType"
-- !private "PSs30RangeReplaceableCollectionType"
-- !private "PSs12SequenceType"
-- !private "PSs17SignedIntegerType"
-- !private "PSs16SignedNumberType"
-- !private "PSs10Streamable"
-- !private "PSs10Strideable"
+- !private "Ps16OutputStreamType"
+- !private "Ps21RandomAccessIndexType"
+- !private "Ps30RangeReplaceableCollectionType"
+- !private "Ps16RawRepresentable"
+- !private "Ps12SequenceType"
+- !private "Ps17SignedIntegerType"
+- !private "Ps16SignedNumberType"
+- !private "Ps10Streamable"
+- !private "Ps10Strideable"
 - !private "SS"
-- !private "PSs30StringInterpolationConvertible"
-- !private "PSs24StringLiteralConvertible"
+- !private "Ps30StringInterpolationConvertible"
+- !private "Ps24StringLiteralConvertible"
 - !private "PSo29UIAccessibilityIdentification"
 - !private "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"
+- !private "CSo15UIBarButtonItem"
+- !private "OSC20UIBarButtonItemStyle"
+- !private "CSo9UIBarItem"
 - "PSo18UIContentContainer"
 - !private "PSo17UICoordinateSpace"
 - !private "PSo13UIDynamicItem"
 - "PSo18UIFocusEnvironment"
 - !private "CSo7UILabel"
+- !private "CSo16UINavigationItem"
 - "CSo11UIResponder"
 - "PSo16UIStateRestoring"
 - !private "CSo12UIStoryboard"
@@ -796,30 +902,28 @@ depends-nominal:
 - !private "CSo6UIView"
 - "CSo16UIViewController"
 - !private "Su"
-- !private "VSs6UInt16"
-- !private "VSs6UInt32"
-- !private "VSs6UInt64"
-- !private "VSs5UInt8"
+- !private "Vs6UInt16"
+- !private "Vs6UInt32"
+- !private "Vs6UInt64"
+- !private "Vs5UInt8"
 - !private "Sc"
-- !private "PSs31UnicodeScalarLiteralConvertible"
-- !private "PSs10_ArrayType"
-- !private "PSs33_BuiltinBooleanLiteralConvertible"
-- !private "PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible"
-- !private "PSs33_BuiltinIntegerLiteralConvertible"
-- !private "PSs32_BuiltinStringLiteralConvertible"
-- !private "PSs37_BuiltinUTF16StringLiteralConvertible"
-- !private "PSs39_BuiltinUnicodeScalarLiteralConvertible"
-- !private "PSs16_CocoaStringType"
-- !private "PSs24_DestructorSafeContainer"
-- !private "PSs14_Incrementable"
-- !private "PSs22_IntegerArithmeticType"
-- !private "PSs12_IntegerType"
-- !private "PSs21_ObjectiveCBridgeable"
-- !private "VSs26_OptionalNilComparisonType"
-- !private "PSs22_RandomAccessAmbiguity"
-- !private "PSs12_Reflectable"
-- !private "PSs18_SignedIntegerType"
-- !private "PSs11_Strideable"
+- !private "Ps31UnicodeScalarLiteralConvertible"
+- !private "Ps10_ArrayType"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- !private "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps32_BuiltinStringLiteralConvertible"
+- !private "Ps37_BuiltinUTF16StringLiteralConvertible"
+- !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps14_Incrementable"
+- !private "Ps22_IntegerArithmeticType"
+- !private "Ps12_IntegerType"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Vs26_OptionalNilComparisonType"
+- !private "Ps22_RandomAccessAmbiguity"
+- !private "Ps12_Reflectable"
+- !private "Ps18_SignedIntegerType"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"

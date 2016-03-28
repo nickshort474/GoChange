@@ -20,11 +20,9 @@
 		36C37C8F1C7A00E3002B4FB1 /* GoChangeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37C8E1C7A00E3002B4FB1 /* GoChangeUITests.swift */; };
 		36C37CAE1C7A01AC002B4FB1 /* AddIdeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CA11C7A01AC002B4FB1 /* AddIdeaViewController.swift */; };
 		36C37CAF1C7A01AC002B4FB1 /* AddTweakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CA21C7A01AC002B4FB1 /* AddTweakViewController.swift */; };
-		36C37CB11C7A01AC002B4FB1 /* ChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CA41C7A01AC002B4FB1 /* ChangeViewController.swift */; };
 		36C37CB21C7A01AC002B4FB1 /* CreateChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CA51C7A01AC002B4FB1 /* CreateChangeViewController.swift */; };
 		36C37CB31C7A01AC002B4FB1 /* FollowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CA61C7A01AC002B4FB1 /* FollowingViewController.swift */; };
 		36C37CB41C7A01AC002B4FB1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CA71C7A01AC002B4FB1 /* HomeViewController.swift */; };
-		36C37CB51C7A01AC002B4FB1 /* IdeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CA81C7A01AC002B4FB1 /* IdeaViewController.swift */; };
 		36C37CB61C7A01AC002B4FB1 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CA91C7A01AC002B4FB1 /* loginViewController.swift */; };
 		36C37CB71C7A01AC002B4FB1 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CAA1C7A01AC002B4FB1 /* ResultsViewController.swift */; };
 		36C37CB81C7A01AC002B4FB1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CAB1C7A01AC002B4FB1 /* SearchViewController.swift */; };
@@ -33,6 +31,11 @@
 		36C37CBE1C7A01C5002B4FB1 /* GoChangeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CBB1C7A01C5002B4FB1 /* GoChangeClient.swift */; };
 		36C37CBF1C7A01C5002B4FB1 /* GoChangeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CBC1C7A01C5002B4FB1 /* GoChangeConstants.swift */; };
 		36C37CC01C7A01C5002B4FB1 /* GoChangeConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CBD1C7A01C5002B4FB1 /* GoChangeConvenience.swift */; };
+		36D7CA051CA542C100A73176 /* TempChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D7CA041CA542C100A73176 /* TempChange.swift */; };
+		36D7CA071CA597F200A73176 /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D7CA061CA597F200A73176 /* Solution.swift */; };
+		36D7CA091CA5987E00A73176 /* Tweak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D7CA081CA5987E00A73176 /* Tweak.swift */; };
+		36D7CA0B1CA5AB5E00A73176 /* CreateSolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D7CA0A1CA5AB5E00A73176 /* CreateSolution.swift */; };
+		36DB99551CA9336600CC4D9E /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB99541CA9336600CC4D9E /* PostData.swift */; };
 		9E2E103AEFF6A95CA26B7D7A /* Pods_GoChange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0961F4BBEE6401B9B1D0DE43 /* Pods_GoChange.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,11 +77,9 @@
 		36C37C901C7A00E3002B4FB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36C37CA11C7A01AC002B4FB1 /* AddIdeaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddIdeaViewController.swift; sourceTree = "<group>"; };
 		36C37CA21C7A01AC002B4FB1 /* AddTweakViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTweakViewController.swift; sourceTree = "<group>"; };
-		36C37CA41C7A01AC002B4FB1 /* ChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeViewController.swift; sourceTree = "<group>"; };
 		36C37CA51C7A01AC002B4FB1 /* CreateChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateChangeViewController.swift; sourceTree = "<group>"; };
 		36C37CA61C7A01AC002B4FB1 /* FollowingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowingViewController.swift; sourceTree = "<group>"; };
 		36C37CA71C7A01AC002B4FB1 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		36C37CA81C7A01AC002B4FB1 /* IdeaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdeaViewController.swift; sourceTree = "<group>"; };
 		36C37CA91C7A01AC002B4FB1 /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		36C37CAA1C7A01AC002B4FB1 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		36C37CAB1C7A01AC002B4FB1 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +88,11 @@
 		36C37CBB1C7A01C5002B4FB1 /* GoChangeClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoChangeClient.swift; sourceTree = "<group>"; };
 		36C37CBC1C7A01C5002B4FB1 /* GoChangeConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoChangeConstants.swift; sourceTree = "<group>"; };
 		36C37CBD1C7A01C5002B4FB1 /* GoChangeConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoChangeConvenience.swift; sourceTree = "<group>"; };
+		36D7CA041CA542C100A73176 /* TempChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempChange.swift; sourceTree = "<group>"; };
+		36D7CA061CA597F200A73176 /* Solution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solution.swift; sourceTree = "<group>"; };
+		36D7CA081CA5987E00A73176 /* Tweak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweak.swift; sourceTree = "<group>"; };
+		36D7CA0A1CA5AB5E00A73176 /* CreateSolution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateSolution.swift; sourceTree = "<group>"; };
+		36DB99541CA9336600CC4D9E /* PostData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		76C1E409458E88730EC69107 /* Pods-GoChange.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoChange.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoChange/Pods-GoChange.release.xcconfig"; sourceTree = "<group>"; };
 		A36C800A78EB4DBB6E2699CF /* Pods-GoChange.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoChange.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoChange/Pods-GoChange.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				36B03CC61C8DFBFF00E9427D /* CreateChange.swift */,
+				36DB99541CA9336600CC4D9E /* PostData.swift */,
+				36D7CA0A1CA5AB5E00A73176 /* CreateSolution.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -196,9 +204,7 @@
 				36AE6F351C8C37A50041B5CD /* UpdateUserInfoController.swift */,
 				36C37CA71C7A01AC002B4FB1 /* HomeViewController.swift */,
 				36C37CA51C7A01AC002B4FB1 /* CreateChangeViewController.swift */,
-				36C37CA41C7A01AC002B4FB1 /* ChangeViewController.swift */,
 				36C37CA11C7A01AC002B4FB1 /* AddIdeaViewController.swift */,
-				36C37CA81C7A01AC002B4FB1 /* IdeaViewController.swift */,
 				36C37CA21C7A01AC002B4FB1 /* AddTweakViewController.swift */,
 				36C37CAB1C7A01AC002B4FB1 /* SearchViewController.swift */,
 				36C37CA61C7A01AC002B4FB1 /* FollowingViewController.swift */,
@@ -215,6 +221,9 @@
 				369EF17E1C80C5D900D8D46A /* CoreDataStackManager.swift */,
 				36C37C721C7A00E3002B4FB1 /* GoChange.xcdatamodeld */,
 				369EF17C1C80C24600D8D46A /* Change.swift */,
+				36D7CA061CA597F200A73176 /* Solution.swift */,
+				36D7CA081CA5987E00A73176 /* Tweak.swift */,
+				36D7CA041CA542C100A73176 /* TempChange.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -437,11 +446,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				36C37CB21C7A01AC002B4FB1 /* CreateChangeViewController.swift in Sources */,
+				36DB99551CA9336600CC4D9E /* PostData.swift in Sources */,
+				36D7CA0B1CA5AB5E00A73176 /* CreateSolution.swift in Sources */,
 				36B03CC71C8DFBFF00E9427D /* CreateChange.swift in Sources */,
-				36C37CB11C7A01AC002B4FB1 /* ChangeViewController.swift in Sources */,
 				36C37CAF1C7A01AC002B4FB1 /* AddTweakViewController.swift in Sources */,
-				36C37CB51C7A01AC002B4FB1 /* IdeaViewController.swift in Sources */,
 				36C37CAE1C7A01AC002B4FB1 /* AddIdeaViewController.swift in Sources */,
+				36D7CA091CA5987E00A73176 /* Tweak.swift in Sources */,
 				36C37CB41C7A01AC002B4FB1 /* HomeViewController.swift in Sources */,
 				36C37CB81C7A01AC002B4FB1 /* SearchViewController.swift in Sources */,
 				36C37CBF1C7A01C5002B4FB1 /* GoChangeConstants.swift in Sources */,
@@ -449,6 +459,7 @@
 				36C37CC01C7A01C5002B4FB1 /* GoChangeConvenience.swift in Sources */,
 				36C37CB61C7A01AC002B4FB1 /* loginViewController.swift in Sources */,
 				36C37C6C1C7A00E3002B4FB1 /* AppDelegate.swift in Sources */,
+				36D7CA051CA542C100A73176 /* TempChange.swift in Sources */,
 				369EF17F1C80C5D900D8D46A /* CoreDataStackManager.swift in Sources */,
 				36C37CB71C7A01AC002B4FB1 /* ResultsViewController.swift in Sources */,
 				36C37CB91C7A01AC002B4FB1 /* SignupViewController.swift in Sources */,
@@ -457,6 +468,7 @@
 				36C37C741C7A00E3002B4FB1 /* GoChange.xcdatamodeld in Sources */,
 				369EF17D1C80C24600D8D46A /* Change.swift in Sources */,
 				36C37CBA1C7A01AC002B4FB1 /* WebViewController.swift in Sources */,
+				36D7CA071CA597F200A73176 /* Solution.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

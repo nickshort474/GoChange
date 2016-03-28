@@ -6,81 +6,85 @@ provides-nominal:
 provides-member:
 - ["C8GoChange12CreateChange", ""]
 provides-dynamic-lookup:
-- "createCoreDataChange"
-- "ref"
-- "saveChangeToFirebase"
 - "sharedContext"
+- "saveChangeToFirebase"
+- "createCoreDataChange"
+- "savedAutoID"
+- "ref"
 depends-top-level:
-- "Firebase"
-- !private "AnyObject"
-- !private "BooleanLiteralType"
-- "String"
-- "CreateChange"
-- !private "Change"
-- !private "print"
-- "NSManagedObjectContext"
-- "NSObject"
-- "Bool"
-- "StringLiteralType"
 - !private "Dictionary"
-- !private "CoreDataStackManager"
+- "Firebase"
 - !private "=="
+- !private "AnyObject"
+- "Change"
+- "StringLiteralType"
+- "String"
+- !private "print"
+- "CreateChange"
+- "Bool"
+- "NSObject"
+- !private "CoreDataStackManager"
+- !private "BooleanLiteralType"
+- "NSManagedObjectContext"
 depends-member:
-- !private ["PSs9AnyObject", "AnyObject"]
-- !private ["PSs9AnyObject", "Change"]
-- !private ["PSs9AnyObject", "CoreDataStackManager"]
-- ["PSs9AnyObject", "Firebase"]
-- !private ["PSs9AnyObject", "Keys"]
-- !private ["PSs9AnyObject", "String"]
-- !private ["PSs9AnyObject", "childByAutoId"]
-- ["PSs9AnyObject", "createCoreDataChange"]
-- ["PSs9AnyObject", "init"]
-- !private ["PSs9AnyObject", "managedObjectContext"]
-- !private ["PSs9AnyObject", "print"]
-- ["PSs9AnyObject", "ref"]
-- !private ["PSs9AnyObject", "save"]
-- ["PSs9AnyObject", "saveChangeToFirebase"]
-- !private ["PSs9AnyObject", "setValue"]
-- ["PSs9AnyObject", "sharedContext"]
-- ["PSs9AnyObject", "sharedContext.storage"]
-- !private ["PSs9AnyObject", "sharedInstance"]
-- ["PSs9AnyObject", ""]
+- !private ["Ps9AnyObject", "AnyObject"]
+- !private ["Ps9AnyObject", "Change"]
+- !private ["Ps9AnyObject", "CoreDataStackManager"]
+- ["Ps9AnyObject", "Firebase"]
+- !private ["Ps9AnyObject", "Keys"]
+- !private ["Ps9AnyObject", "String"]
+- !private ["Ps9AnyObject", "childByAutoId"]
+- ["Ps9AnyObject", "createCoreDataChange"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "managedObjectContext"]
+- !private ["Ps9AnyObject", "print"]
+- ["Ps9AnyObject", "ref"]
+- !private ["Ps9AnyObject", "save"]
+- ["Ps9AnyObject", "saveChangeToFirebase"]
+- ["Ps9AnyObject", "savedAutoID"]
+- !private ["Ps9AnyObject", "setValue"]
+- ["Ps9AnyObject", "sharedContext"]
+- ["Ps9AnyObject", "sharedContext.storage"]
+- !private ["Ps9AnyObject", "sharedInstance"]
+- ["Ps9AnyObject", ""]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["Sb", "deinit"]
-- !private ["PSs25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
-- !private ["PSs11BooleanType", "_getBuiltinLogicValue"]
-- !private ["PSs11CVarArgType", "AnyObject"]
-- !private ["PSs11CVarArgType", "Change"]
-- !private ["PSs11CVarArgType", "CoreDataStackManager"]
-- ["PSs11CVarArgType", "Firebase"]
-- !private ["PSs11CVarArgType", "Keys"]
-- !private ["PSs11CVarArgType", "String"]
-- !private ["PSs11CVarArgType", "childByAutoId"]
-- ["PSs11CVarArgType", "createCoreDataChange"]
-- ["PSs11CVarArgType", "init"]
-- !private ["PSs11CVarArgType", "print"]
-- ["PSs11CVarArgType", "ref"]
-- !private ["PSs11CVarArgType", "save"]
-- ["PSs11CVarArgType", "saveChangeToFirebase"]
-- !private ["PSs11CVarArgType", "setValue"]
-- ["PSs11CVarArgType", "sharedContext"]
-- ["PSs11CVarArgType", "sharedContext.storage"]
-- ["PSs11CVarArgType", ""]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["Ps11CVarArgType", "AnyObject"]
+- !private ["Ps11CVarArgType", "Change"]
+- !private ["Ps11CVarArgType", "CoreDataStackManager"]
+- ["Ps11CVarArgType", "Firebase"]
+- !private ["Ps11CVarArgType", "Keys"]
+- !private ["Ps11CVarArgType", "String"]
+- !private ["Ps11CVarArgType", "childByAutoId"]
+- ["Ps11CVarArgType", "createCoreDataChange"]
+- ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "print"]
+- ["Ps11CVarArgType", "ref"]
+- !private ["Ps11CVarArgType", "save"]
+- ["Ps11CVarArgType", "saveChangeToFirebase"]
+- ["Ps11CVarArgType", "savedAutoID"]
+- !private ["Ps11CVarArgType", "setValue"]
+- ["Ps11CVarArgType", "sharedContext"]
+- ["Ps11CVarArgType", "sharedContext.storage"]
+- ["Ps11CVarArgType", ""]
 - !private ["C8GoChange6Change", "Keys"]
 - !private ["C8GoChange6Change", "init"]
-- !private ["PSs14CollectionType", "Generator"]
-- !private ["PSs14CollectionType", "Index"]
-- !private ["PSs14CollectionType", "Key"]
-- !private ["PSs14CollectionType", "SubSequence"]
-- !private ["PSs14CollectionType", "Value"]
-- !private ["PSs14CollectionType", "_Element"]
-- !private ["PSs14CollectionType", "init"]
-- !private ["PSs14CollectionType", "subscript"]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "Key"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- !private ["Ps14CollectionType", "Value"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "init"]
+- !private ["Ps14CollectionType", "subscript"]
+- !private ["Ps10Comparable", "init"]
 - !private ["C8GoChange20CoreDataStackManager", "managedObjectContext"]
 - !private ["C8GoChange20CoreDataStackManager", "sharedInstance"]
 - !private ["C8GoChange12CreateChange", "AnyObject"]
 - ["C8GoChange12CreateChange", "Bool"]
-- !private ["C8GoChange12CreateChange", "Change"]
+- ["C8GoChange12CreateChange", "Change"]
 - !private ["C8GoChange12CreateChange", "CoreDataStackManager"]
 - ["C8GoChange12CreateChange", "Firebase"]
 - ["C8GoChange12CreateChange", "NSManagedObjectContext"]
@@ -91,98 +95,124 @@ depends-member:
 - !private ["C8GoChange12CreateChange", "print"]
 - ["C8GoChange12CreateChange", "ref"]
 - ["C8GoChange12CreateChange", "saveChangeToFirebase"]
+- ["C8GoChange12CreateChange", "savedAutoID"]
 - ["C8GoChange12CreateChange", "sharedContext"]
 - !private ["C8GoChange12CreateChange", "sharedContext.storage"]
-- !private ["PSs28CustomDebugStringConvertible", "Key"]
-- !private ["PSs28CustomDebugStringConvertible", "Value"]
-- !private ["PSs28CustomDebugStringConvertible", "init"]
-- !private ["PSs28CustomDebugStringConvertible", "subscript"]
-- !private ["PSs23CustomStringConvertible", "AnyObject"]
-- !private ["PSs23CustomStringConvertible", "Change"]
-- !private ["PSs23CustomStringConvertible", "CoreDataStackManager"]
-- ["PSs23CustomStringConvertible", "Firebase"]
-- !private ["PSs23CustomStringConvertible", "Key"]
-- !private ["PSs23CustomStringConvertible", "Keys"]
-- !private ["PSs23CustomStringConvertible", "String"]
-- !private ["PSs23CustomStringConvertible", "Value"]
-- !private ["PSs23CustomStringConvertible", "_getBuiltinLogicValue"]
-- !private ["PSs23CustomStringConvertible", "childByAutoId"]
-- ["PSs23CustomStringConvertible", "createCoreDataChange"]
-- ["PSs23CustomStringConvertible", "init"]
-- !private ["PSs23CustomStringConvertible", "print"]
-- ["PSs23CustomStringConvertible", "ref"]
-- !private ["PSs23CustomStringConvertible", "save"]
-- ["PSs23CustomStringConvertible", "saveChangeToFirebase"]
-- !private ["PSs23CustomStringConvertible", "setValue"]
-- ["PSs23CustomStringConvertible", "sharedContext"]
-- ["PSs23CustomStringConvertible", "sharedContext.storage"]
-- !private ["PSs23CustomStringConvertible", "subscript"]
-- ["PSs23CustomStringConvertible", ""]
-- !private ["VSs10Dictionary", "Key"]
-- !private ["VSs10Dictionary", "Value"]
-- !private ["VSs10Dictionary", "deinit"]
-- !private ["VSs10Dictionary", "init"]
-- !private ["VSs10Dictionary", "subscript"]
-- !private ["PSs28DictionaryLiteralConvertible", "Key"]
-- !private ["PSs28DictionaryLiteralConvertible", "Value"]
-- !private ["PSs28DictionaryLiteralConvertible", "init"]
-- !private ["PSs28DictionaryLiteralConvertible", "subscript"]
-- !private ["PSs9Equatable", "AnyObject"]
-- !private ["PSs9Equatable", "Change"]
-- !private ["PSs9Equatable", "CoreDataStackManager"]
-- ["PSs9Equatable", "Firebase"]
-- !private ["PSs9Equatable", "Keys"]
-- !private ["PSs9Equatable", "String"]
-- !private ["PSs9Equatable", "_getBuiltinLogicValue"]
-- !private ["PSs9Equatable", "childByAutoId"]
-- ["PSs9Equatable", "createCoreDataChange"]
-- ["PSs9Equatable", "init"]
-- !private ["PSs9Equatable", "print"]
-- ["PSs9Equatable", "ref"]
-- !private ["PSs9Equatable", "save"]
-- ["PSs9Equatable", "saveChangeToFirebase"]
-- !private ["PSs9Equatable", "setValue"]
-- ["PSs9Equatable", "sharedContext"]
-- ["PSs9Equatable", "sharedContext.storage"]
-- ["PSs9Equatable", ""]
+- !private ["Ps28CustomDebugStringConvertible", "AnyObject"]
+- !private ["Ps28CustomDebugStringConvertible", "Change"]
+- !private ["Ps28CustomDebugStringConvertible", "CoreDataStackManager"]
+- ["Ps28CustomDebugStringConvertible", "Firebase"]
+- !private ["Ps28CustomDebugStringConvertible", "Key"]
+- !private ["Ps28CustomDebugStringConvertible", "Keys"]
+- !private ["Ps28CustomDebugStringConvertible", "String"]
+- !private ["Ps28CustomDebugStringConvertible", "Value"]
+- !private ["Ps28CustomDebugStringConvertible", "childByAutoId"]
+- ["Ps28CustomDebugStringConvertible", "createCoreDataChange"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "print"]
+- ["Ps28CustomDebugStringConvertible", "ref"]
+- !private ["Ps28CustomDebugStringConvertible", "save"]
+- ["Ps28CustomDebugStringConvertible", "saveChangeToFirebase"]
+- ["Ps28CustomDebugStringConvertible", "savedAutoID"]
+- !private ["Ps28CustomDebugStringConvertible", "setValue"]
+- ["Ps28CustomDebugStringConvertible", "sharedContext"]
+- ["Ps28CustomDebugStringConvertible", "sharedContext.storage"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "AnyObject"]
+- !private ["Ps23CustomStringConvertible", "Change"]
+- !private ["Ps23CustomStringConvertible", "CoreDataStackManager"]
+- ["Ps23CustomStringConvertible", "Firebase"]
+- !private ["Ps23CustomStringConvertible", "Key"]
+- !private ["Ps23CustomStringConvertible", "Keys"]
+- !private ["Ps23CustomStringConvertible", "String"]
+- !private ["Ps23CustomStringConvertible", "Value"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "childByAutoId"]
+- ["Ps23CustomStringConvertible", "createCoreDataChange"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "print"]
+- ["Ps23CustomStringConvertible", "ref"]
+- !private ["Ps23CustomStringConvertible", "save"]
+- ["Ps23CustomStringConvertible", "saveChangeToFirebase"]
+- ["Ps23CustomStringConvertible", "savedAutoID"]
+- !private ["Ps23CustomStringConvertible", "setValue"]
+- ["Ps23CustomStringConvertible", "sharedContext"]
+- ["Ps23CustomStringConvertible", "sharedContext.storage"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Vs10Dictionary", "Key"]
+- !private ["Vs10Dictionary", "Value"]
+- !private ["Vs10Dictionary", "deinit"]
+- !private ["Vs10Dictionary", "init"]
+- !private ["Vs10Dictionary", "subscript"]
+- !private ["Ps28DictionaryLiteralConvertible", "Key"]
+- !private ["Ps28DictionaryLiteralConvertible", "Value"]
+- !private ["Ps28DictionaryLiteralConvertible", "init"]
+- !private ["Ps28DictionaryLiteralConvertible", "subscript"]
+- !private ["Ps9Equatable", "AnyObject"]
+- !private ["Ps9Equatable", "Change"]
+- !private ["Ps9Equatable", "CoreDataStackManager"]
+- ["Ps9Equatable", "Firebase"]
+- !private ["Ps9Equatable", "Keys"]
+- !private ["Ps9Equatable", "String"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "childByAutoId"]
+- ["Ps9Equatable", "createCoreDataChange"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "print"]
+- ["Ps9Equatable", "ref"]
+- !private ["Ps9Equatable", "save"]
+- ["Ps9Equatable", "saveChangeToFirebase"]
+- ["Ps9Equatable", "savedAutoID"]
+- !private ["Ps9Equatable", "setValue"]
+- ["Ps9Equatable", "sharedContext"]
+- ["Ps9Equatable", "sharedContext.storage"]
+- ["Ps9Equatable", ""]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["CSo6FQuery", "childByAutoId"]
+- !private ["CSo6FQuery", "deinit"]
 - ["CSo6FQuery", "init"]
 - !private ["CSo6FQuery", "setValue"]
 - !private ["CSo8Firebase", "childByAutoId"]
+- !private ["CSo8Firebase", "deinit"]
 - ["CSo8Firebase", "init"]
 - !private ["CSo8Firebase", "setValue"]
-- !private ["PSs13GeneratorType", "Element"]
-- !private ["PSs8Hashable", "AnyObject"]
-- !private ["PSs8Hashable", "Change"]
-- !private ["PSs8Hashable", "CoreDataStackManager"]
-- ["PSs8Hashable", "Firebase"]
-- !private ["PSs8Hashable", "Keys"]
-- !private ["PSs8Hashable", "String"]
-- !private ["PSs8Hashable", "_getBuiltinLogicValue"]
-- !private ["PSs8Hashable", "childByAutoId"]
-- ["PSs8Hashable", "createCoreDataChange"]
-- ["PSs8Hashable", "init"]
-- !private ["PSs8Hashable", "print"]
-- ["PSs8Hashable", "ref"]
-- !private ["PSs8Hashable", "save"]
-- ["PSs8Hashable", "saveChangeToFirebase"]
-- !private ["PSs8Hashable", "setValue"]
-- ["PSs8Hashable", "sharedContext"]
-- ["PSs8Hashable", "sharedContext.storage"]
-- ["PSs8Hashable", ""]
+- !private ["Ps13GeneratorType", "Element"]
+- !private ["Ps8Hashable", "AnyObject"]
+- !private ["Ps8Hashable", "Change"]
+- !private ["Ps8Hashable", "CoreDataStackManager"]
+- ["Ps8Hashable", "Firebase"]
+- !private ["Ps8Hashable", "Keys"]
+- !private ["Ps8Hashable", "String"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "childByAutoId"]
+- ["Ps8Hashable", "createCoreDataChange"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "print"]
+- ["Ps8Hashable", "ref"]
+- !private ["Ps8Hashable", "save"]
+- ["Ps8Hashable", "saveChangeToFirebase"]
+- ["Ps8Hashable", "savedAutoID"]
+- !private ["Ps8Hashable", "setValue"]
+- ["Ps8Hashable", "sharedContext"]
+- ["Ps8Hashable", "sharedContext.storage"]
+- ["Ps8Hashable", ""]
 - ["SQ", "deinit"]
-- !private ["PSs9Indexable", "Generator"]
-- !private ["PSs9Indexable", "Index"]
-- !private ["PSs9Indexable", "Key"]
-- !private ["PSs9Indexable", "SubSequence"]
-- !private ["PSs9Indexable", "Value"]
-- !private ["PSs9Indexable", "_Element"]
-- !private ["PSs9Indexable", "init"]
-- !private ["PSs9Indexable", "subscript"]
-- !private ["VSs17IndexingGenerator", "Element"]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "Key"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "Value"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "init"]
+- !private ["Ps9Indexable", "subscript"]
+- !private ["Vs17IndexingGenerator", "Element"]
 - !private ["VC8GoChange6Change4Keys", "changeDescription"]
 - !private ["VC8GoChange6Change4Keys", "changeName"]
+- !private ["VC8GoChange6Change4Keys", "firebaseLocation"]
 - !private ["VC8GoChange6Change4Keys", "owner"]
+- !private ["Ps14MirrorPathType", "init"]
 - !private ["PSo8NSCoding", "save"]
 - !private ["PSo9NSLocking", "save"]
 - !private ["CSo15NSManagedObject", "Keys"]
@@ -190,7 +220,7 @@ depends-member:
 - !private ["CSo22NSManagedObjectContext", "save"]
 - !private ["CSo8NSObject", "AnyObject"]
 - ["CSo8NSObject", "Bool"]
-- !private ["CSo8NSObject", "Change"]
+- ["CSo8NSObject", "Change"]
 - !private ["CSo8NSObject", "CoreDataStackManager"]
 - ["CSo8NSObject", "Firebase"]
 - !private ["CSo8NSObject", "Keys"]
@@ -198,11 +228,13 @@ depends-member:
 - ["CSo8NSObject", "String"]
 - !private ["CSo8NSObject", "childByAutoId"]
 - ["CSo8NSObject", "createCoreDataChange"]
+- !private ["CSo8NSObject", "deinit"]
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "print"]
 - ["CSo8NSObject", "ref"]
 - !private ["CSo8NSObject", "save"]
 - ["CSo8NSObject", "saveChangeToFirebase"]
+- ["CSo8NSObject", "savedAutoID"]
 - !private ["CSo8NSObject", "setValue"]
 - ["CSo8NSObject", "sharedContext"]
 - ["CSo8NSObject", "sharedContext.storage"]
@@ -220,72 +252,95 @@ depends-member:
 - ["PSo16NSObjectProtocol", "ref"]
 - !private ["PSo16NSObjectProtocol", "save"]
 - ["PSo16NSObjectProtocol", "saveChangeToFirebase"]
+- ["PSo16NSObjectProtocol", "savedAutoID"]
 - !private ["PSo16NSObjectProtocol", "setValue"]
 - ["PSo16NSObjectProtocol", "sharedContext"]
 - ["PSo16NSObjectProtocol", "sharedContext.storage"]
 - ["PSo16NSObjectProtocol", ""]
-- !private ["PSs12SequenceType", "Element"]
-- !private ["PSs12SequenceType", "Generator"]
-- !private ["PSs12SequenceType", "Index"]
-- !private ["PSs12SequenceType", "Key"]
-- !private ["PSs12SequenceType", "SubSequence"]
-- !private ["PSs12SequenceType", "Value"]
-- !private ["PSs12SequenceType", "_Element"]
-- !private ["PSs12SequenceType", "init"]
-- !private ["PSs12SequenceType", "subscript"]
-- !private ["VSs5Slice", "Generator"]
-- !private ["VSs5Slice", "Index"]
-- !private ["VSs5Slice", "SubSequence"]
-- !private ["VSs5Slice", "_Element"]
-- !private ["VSs12StaticString", "deinit"]
+- !private ["Ps16OutputStreamType", "init"]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "Key"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- !private ["Ps12SequenceType", "Value"]
+- !private ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "init"]
+- !private ["Ps12SequenceType", "subscript"]
+- !private ["Vs5Slice", "Generator"]
+- !private ["Vs5Slice", "Index"]
+- !private ["Vs5Slice", "SubSequence"]
+- !private ["Vs5Slice", "_Element"]
+- !private ["Vs12StaticString", "deinit"]
+- !private ["Ps10Streamable", "init"]
 - !private ["SS", "deinit"]
-- !private ["PSs33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
-- !private ["PSs21_ObjectiveCBridgeable", "Key"]
-- !private ["PSs21_ObjectiveCBridgeable", "Value"]
-- !private ["PSs21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
-- !private ["PSs21_ObjectiveCBridgeable", "init"]
-- !private ["PSs21_ObjectiveCBridgeable", "subscript"]
-- !private ["PSs12_Reflectable", "Key"]
-- !private ["PSs12_Reflectable", "Value"]
-- !private ["PSs12_Reflectable", "_getBuiltinLogicValue"]
-- !private ["PSs12_Reflectable", "init"]
-- !private ["PSs12_Reflectable", "subscript"]
+- !private ["SS", "init"]
+- !private ["Ps30StringInterpolationConvertible", "init"]
+- !private ["Ps24StringLiteralConvertible", "init"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "Key"]
+- !private ["Ps21_ObjectiveCBridgeable", "Value"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- !private ["Ps12_Reflectable", "Key"]
+- !private ["Ps12_Reflectable", "Value"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "init"]
+- !private ["Ps12_Reflectable", "subscript"]
 depends-nominal:
-- "PSs9AnyObject"
+- "Ps9AnyObject"
 - !private "Sb"
-- !private "PSs25BooleanLiteralConvertible"
-- !private "PSs11BooleanType"
-- "PSs11CVarArgType"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- "Ps11CVarArgType"
 - !private "C8GoChange6Change"
-- !private "PSs14CollectionType"
+- !private "Ps14CollectionType"
+- !private "Ps10Comparable"
 - !private "C8GoChange20CoreDataStackManager"
 - "C8GoChange12CreateChange"
-- !private "PSs28CustomDebugStringConvertible"
-- "PSs23CustomStringConvertible"
-- !private "VSs10Dictionary"
-- !private "PSs28DictionaryLiteralConvertible"
-- "PSs9Equatable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- !private "Vs10Dictionary"
+- !private "Ps28DictionaryLiteralConvertible"
+- "Ps9Equatable"
+- !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
 - "CSo6FQuery"
 - "CSo8Firebase"
-- !private "PSs13GeneratorType"
-- "PSs8Hashable"
+- !private "Ps13GeneratorType"
+- "Ps8Hashable"
 - "SQ"
-- !private "PSs9Indexable"
-- !private "VSs17IndexingGenerator"
+- !private "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
 - !private "VC8GoChange6Change4Keys"
+- !private "Ps14MirrorPathType"
 - !private "PSo8NSCoding"
 - !private "PSo9NSLocking"
 - !private "CSo15NSManagedObject"
 - !private "CSo22NSManagedObjectContext"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
-- !private "PSs12SequenceType"
-- !private "VSs5Slice"
-- !private "VSs12StaticString"
+- !private "Ps16OutputStreamType"
+- !private "Ps12SequenceType"
+- !private "Vs5Slice"
+- !private "Vs12StaticString"
+- !private "Ps10Streamable"
 - !private "SS"
-- !private "PSs33_BuiltinBooleanLiteralConvertible"
-- !private "PSs21_ObjectiveCBridgeable"
-- !private "PSs12_Reflectable"
+- !private "Ps30StringInterpolationConvertible"
+- !private "Ps24StringLiteralConvertible"
+- !private "Ps31UnicodeScalarLiteralConvertible"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- !private "Ps32_BuiltinStringLiteralConvertible"
+- !private "Ps37_BuiltinUTF16StringLiteralConvertible"
+- !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps12_Reflectable"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"
@@ -310,4 +365,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "dfb112c3198381ba881ee207cee5b71f"
+interface-hash: "2cd611dee485a0e732f5c84c12f732b6"

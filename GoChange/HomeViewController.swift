@@ -35,8 +35,8 @@ class HomeViewController: UIViewController {
         
         checkCoreData()
         
-        
-        
+        let barButtonItem = UIBarButtonItem(title: "Home", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = barButtonItem
     }
     
     lazy var sharedContext:NSManagedObjectContext = {
@@ -57,6 +57,16 @@ class HomeViewController: UIViewController {
         
         
     }
+    
+    /*
+    @IBAction func showfollowing(sender: UIButton) {
+        
+        var controller:FollowingViewController
+        controller = self.storyboard?.instantiateViewControllerWithIdentifier("FollowingViewController") as! FollowingViewController
+        
+        self.presentViewController(controller, animated: true, completion: nil)
+    }
+    */
     
     @IBAction func addUserData(sender: UIButton) {
         

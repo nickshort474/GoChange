@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddIdeaViewController: UIViewController {
+class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate,UITableViewDelegate {
     
     
     var petitionId:Int = 1
@@ -19,8 +19,13 @@ class AddIdeaViewController: UIViewController {
     @IBOutlet weak var addNameButton: UIButton!
     @IBOutlet weak var addDetailButton: UIButton!
     
+    @IBOutlet weak var tweakTable: UITableView!
+    
+    @IBOutlet weak var addSolution: UIButton!
+    
     var currentNameData:String!
     var currentDetailData:String!
+    
     
     
     override func viewDidLoad() {
@@ -30,7 +35,24 @@ class AddIdeaViewController: UIViewController {
         self.navigationController?.title = "Add Solution"
         addNameButton.hidden = true
         addDetailButton.hidden = true
+        addSolution.enabled = false
+        addSolution.alpha = 0.5
+        
+        nameTextField.delegate = self
+        detailTextView.delegate = self
+        
+        let barButtonItem = UIBarButtonItem(title: "Cancel Tweak", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
+        
+        self.navigationItem.backBarButtonItem = barButtonItem
+        
+        
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.tweakTable.reloadData()
+    }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -38,24 +60,72 @@ class AddIdeaViewController: UIViewController {
     }
     
     @IBAction func doneAddingIdea(sender: UIButton) {
+                
         
-        // save data locally and onto server
-        self.dismissViewControllerAnimated(true, completion: nil)
+        if(nameTextField.text != "" && detailTextView.text != ""){
+            
+            // save data locally
+            TempChange.sharedInstance().solutionNameArray.addObject(nameTextField.text!)
+            TempChange.sharedInstance().solutionDetailArray.addObject(detailTextView.text!)
+            
+            //TempChange.sharedInstance().solutionDictionary[nameTextField.text!] = detailTextView.text!
+            
+            // dismiss view controller forom navigation stack
+            self.navigationController?.popViewControllerAnimated(true)
+        }
+        
         
     }
     
-    @IBAction func cancelAddingIdea(sender: UIButton) {
-        self.dismissViewControllerAnimated(true, completion: nil)        
-    }
+    
     
     
     @IBAction func addNameClick(sender: AnyObject) {
-        var currentNameData = nameTextField.text
+        
+        nameTextField.resignFirstResponder()
+        addNameButton.hidden = true
+        
+        
+        currentNameData = nameTextField.text
+        
+        if(nameTextField.text != "" && detailTextView.text != ""){
+            addSolution.enabled = true
+            addSolution.alpha = 1
+        }
+        
     }
     
     @IBAction func addDetailClick(sender: UIButton) {
-        var currentDetailData = detailTextView.text
+        
+        detailTextView.resignFirstResponder()
+        addDetailButton.hidden = true
+        
+        currentDetailData = detailTextView.text
+        
+        //TODO: add check for "placeholder" text
+        
+        if(nameTextField.text != "" && detailTextView.text != ""){
+            addSolution.enabled = true
+            addSolution.alpha = 1
+        }
     }
+    
+    
+    
+    @IBAction func addTweak(sender: UIButton) {
+        
+        var controller:AddTweakViewController
+        
+        controller = self.storyboard?.instantiateViewControllerWithIdentifier("AddTweakViewController") as! AddTweakViewController
+        
+        self.navigationController?.pushViewController(controller, animated: true)
+        
+    }
+    
+    
+    
+    
+    
     
     //-------------textfield methods ---------------
     
@@ -89,7 +159,8 @@ class AddIdeaViewController: UIViewController {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1
+        
+        return TempChange.sharedInstance().tweakNameArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -97,7 +168,7 @@ class AddIdeaViewController: UIViewController {
         let cellID = "tweakCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath)
         
-        cell.textLabel!.text = "Add a tweak"
+        cell.textLabel!.text = TempChange.sharedInstance().tweakNameArray[indexPath.row] as? String
         
         return cell
         
@@ -105,11 +176,7 @@ class AddIdeaViewController: UIViewController {
     
     func tableView(tableView:UITableView,didSelectRowAtIndexPath indexPath: NSIndexPath){
         
-        var controller:AddTweakViewController
         
-        controller = self.storyboard?.instantiateViewControllerWithIdentifier("AddTweakViewController") as! AddTweakViewController
-        
-        self.navigationController?.pushViewController(controller, animated: true)
         
         
         

@@ -10,7 +10,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		EUe+hyS1h3Ja2vB5V5AiGrjcd80=
+		FPwvef5gNRIpNAkqc1mGh4iPg2s=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -20,13 +20,27 @@
 	<key>files2</key>
 	<dict>
 		<key>Headers/Pods-GoChange-umbrella.h</key>
-		<data>
-		+dMuc8tQGZr1KU0K8r+NlWPs5FE=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			+dMuc8tQGZr1KU0K8r+NlWPs5FE=
+			</data>
+			<key>hash2</key>
+			<data>
+			4p9rqoAYzf7+8rZ7alVqaBY69KJbcosgUr638zYiZQw=
+			</data>
+		</dict>
 		<key>Modules/module.modulemap</key>
-		<data>
-		ZN07WXLie1UavqPq3FZojs1hgdw=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			ZN07WXLie1UavqPq3FZojs1hgdw=
+			</data>
+			<key>hash2</key>
+			<data>
+			OaxzHSbe4N8854fs6Q4FY4AcIiXkmC+RkHNYiUhJ0ok=
+			</data>
+		</dict>
 	</dict>
 	<key>rules</key>
 	<dict>

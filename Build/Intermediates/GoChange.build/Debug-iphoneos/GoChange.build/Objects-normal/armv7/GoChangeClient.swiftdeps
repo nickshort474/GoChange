@@ -9,47 +9,53 @@ provides-dynamic-lookup:
 - "printName"
 - "sharedInstance"
 depends-top-level:
+- !private "print"
 - "GoChangeClient"
 - "NSObject"
-- !private "print"
 - !private "StringLiteralType"
 depends-member:
-- !private ["PSs9AnyObject", "GoChangeClient"]
-- ["PSs9AnyObject", "init"]
-- !private ["PSs9AnyObject", "print"]
-- ["PSs9AnyObject", "printName"]
-- ["PSs9AnyObject", "sharedInstance"]
-- ["PSs9AnyObject", ""]
-- !private ["PSs11CVarArgType", "GoChangeClient"]
-- ["PSs11CVarArgType", "init"]
-- !private ["PSs11CVarArgType", "print"]
-- ["PSs11CVarArgType", "printName"]
-- ["PSs11CVarArgType", "sharedInstance"]
-- ["PSs11CVarArgType", ""]
-- !private ["PSs23CustomStringConvertible", "GoChangeClient"]
-- ["PSs23CustomStringConvertible", "init"]
-- !private ["PSs23CustomStringConvertible", "print"]
-- ["PSs23CustomStringConvertible", "printName"]
-- ["PSs23CustomStringConvertible", "sharedInstance"]
-- ["PSs23CustomStringConvertible", ""]
-- !private ["PSs9Equatable", "GoChangeClient"]
-- ["PSs9Equatable", "init"]
-- !private ["PSs9Equatable", "print"]
-- ["PSs9Equatable", "printName"]
-- ["PSs9Equatable", "sharedInstance"]
-- ["PSs9Equatable", ""]
+- !private ["Ps9AnyObject", "GoChangeClient"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "print"]
+- ["Ps9AnyObject", "printName"]
+- ["Ps9AnyObject", "sharedInstance"]
+- ["Ps9AnyObject", ""]
+- !private ["Ps11CVarArgType", "GoChangeClient"]
+- ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "print"]
+- ["Ps11CVarArgType", "printName"]
+- ["Ps11CVarArgType", "sharedInstance"]
+- ["Ps11CVarArgType", ""]
+- !private ["Ps28CustomDebugStringConvertible", "GoChangeClient"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "print"]
+- ["Ps28CustomDebugStringConvertible", "printName"]
+- ["Ps28CustomDebugStringConvertible", "sharedInstance"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "GoChangeClient"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "print"]
+- ["Ps23CustomStringConvertible", "printName"]
+- ["Ps23CustomStringConvertible", "sharedInstance"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "GoChangeClient"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "print"]
+- ["Ps9Equatable", "printName"]
+- ["Ps9Equatable", "sharedInstance"]
+- ["Ps9Equatable", ""]
 - ["C8GoChange14GoChangeClient", "GoChangeClient"]
 - ["C8GoChange14GoChangeClient", "deinit"]
 - ["C8GoChange14GoChangeClient", "init"]
 - !private ["C8GoChange14GoChangeClient", "print"]
 - ["C8GoChange14GoChangeClient", "printName"]
 - ["C8GoChange14GoChangeClient", "sharedInstance"]
-- !private ["PSs8Hashable", "GoChangeClient"]
-- ["PSs8Hashable", "init"]
-- !private ["PSs8Hashable", "print"]
-- ["PSs8Hashable", "printName"]
-- ["PSs8Hashable", "sharedInstance"]
-- ["PSs8Hashable", ""]
+- !private ["Ps8Hashable", "GoChangeClient"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "print"]
+- ["Ps8Hashable", "printName"]
+- ["Ps8Hashable", "sharedInstance"]
+- ["Ps8Hashable", ""]
 - ["CSo8NSObject", "GoChangeClient"]
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "print"]
@@ -63,12 +69,13 @@ depends-member:
 - ["PSo16NSObjectProtocol", "sharedInstance"]
 - ["PSo16NSObjectProtocol", ""]
 depends-nominal:
-- "PSs9AnyObject"
-- "PSs11CVarArgType"
-- "PSs23CustomStringConvertible"
-- "PSs9Equatable"
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
 - "C8GoChange14GoChangeClient"
-- "PSs8Hashable"
+- "Ps8Hashable"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 depends-dynamic-lookup:
