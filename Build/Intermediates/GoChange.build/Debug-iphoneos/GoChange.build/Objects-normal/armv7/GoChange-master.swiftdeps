@@ -1,8 +1,8 @@
 version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
 options: "e36b1087e6234628d7f5a9ce7e31551a"
-build_time: [512845838, 793015000]
+build_time: [512847665, 635068000]
 inputs:
-  "/Users/nickshort/Git/GoChange/GoChange/CreateChangeViewController.swift": !private [512845837, 0]
+  "/Users/nickshort/Git/GoChange/GoChange/CreateChangeViewController.swift": [512847665, 0]
   "/Users/nickshort/Git/GoChange/GoChange/PostData.swift": [512845837, 0]
   "/Users/nickshort/Git/GoChange/GoChange/CreateSolution.swift": [512473191, 0]
   "/Users/nickshort/Git/GoChange/GoChange/CreateChange.swift": [512473191, 0]
@@ -11,7 +11,7 @@ inputs:
   "/Users/nickshort/Git/GoChange/GoChange/Tweak.swift": [512237394, 0]
   "/Users/nickshort/Git/GoChange/GoChange/HomeViewController.swift": [512496852, 0]
   "/Users/nickshort/Git/GoChange/GoChange/SearchViewController.swift": [512843745, 0]
-  "/Users/nickshort/Git/GoChange/GoChange/RetrieveChange.swift": [9223372036854775807, 0]
+  "/Users/nickshort/Git/GoChange/GoChange/RetrieveChange.swift": [512847665, 0]
   "/Users/nickshort/Git/GoChange/GoChange/GoChangeConstants.swift": [510226278, 0]
   "/Users/nickshort/Git/GoChange/GoChange/GoChangeClient.swift": [509023513, 0]
   "/Users/nickshort/Git/GoChange/GoChange/GoChangeConvenience.swift": [509373759, 0]

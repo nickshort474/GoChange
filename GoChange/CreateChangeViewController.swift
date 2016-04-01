@@ -62,14 +62,15 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
        
         
         //TODO: If coming from FollowingViewController load core data details
+        
         if(sendingController == "following"){
             // load core data 
             if(isOwner == "yes"){
                 // allow edit buttons for name and details
-                var retrievedChange = RetrieveChange(changeID: changeID){
+                _ = RetrieveChange(changeID: changeID){
                     (result) in
-                    print(result)
-                    
+                    let change = result as! Change
+                    print(change.changeName)
                 }
                 
             }

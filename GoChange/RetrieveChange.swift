@@ -12,15 +12,22 @@ import CoreData
 class RetrieveChange:NSObject{
     
     
-    init(changeID:String,completionHandler:AnyObject){
+    init(changeID:String,completionHandler:(result:AnyObject)-> Void){
        super.init()
         
-        let request = NSFetchRequest(entityName: "change")
+        //let retrievedEntity:Change?
+        
+        let request = NSFetchRequest(entityName: "Change")
         let predicate = NSPredicate(format: "changeID == %@", changeID)
         request.predicate = predicate
         
         do{
-            try sharedContext.executeFetchRequest(request)
+           var results =  try sharedContext.executeFetchRequest(request) as! [Change]
+            if let entity = results.first{
+                
+                completionHandler(result:entity)
+            }
+            
         }catch{
             //TODO: catch errors
         }

@@ -6,71 +6,72 @@ provides-nominal:
 provides-member:
 - ["C8GoChange26CreateChangeViewController", ""]
 provides-dynamic-lookup:
-- "viewDidLoad"
-- "nameField"
-- "didReceiveMemoryWarning"
-- "solutionTable"
-- "addSolution"
-- "PostInfo"
-- "nameActionButton"
-- "namePlusButton"
-- "sharedContext"
-- "isOwner"
-- "tableView"
-- "tableView"
-- "tableView"
-- "viewWillAppear"
-- "homeButtonClick"
-- "postButton"
-- "detailsActionButton"
-- "textViewDidBeginEditing"
-- "currentDetailData"
-- "detailsField"
-- "changeID"
-- "textFieldDidBeginEditing"
-- "currentNameData"
 - "detailsPlusButton"
+- "isOwner"
+- "sharedContext"
+- "homeButtonClick"
+- "tableView"
+- "tableView"
+- "tableView"
+- "textFieldDidBeginEditing"
+- "PostInfo"
+- "textViewDidBeginEditing"
+- "currentNameData"
+- "detailsField"
+- "namePlusButton"
+- "didReceiveMemoryWarning"
+- "nameActionButton"
+- "solutionTable"
 - "sendingController"
+- "viewWillAppear"
+- "viewDidLoad"
+- "addSolution"
+- "postButton"
+- "nameField"
+- "currentDetailData"
+- "changeID"
+- "detailsActionButton"
 depends-top-level:
-- "UIButton"
-- !private "=="
-- !private "AddIdeaViewController"
-- !private "CoreDataStackManager"
-- "Bool"
-- "UITableViewCell"
-- "UITableViewDelegate"
-- "StringLiteralType"
 - !private "UIBarButtonItemStyle"
-- !private "AnyObject"
-- !private "UIBarButtonItem"
-- "UIViewController"
-- "NSManagedObjectContext"
-- !private "retrieveChange"
-- "UITextFieldDelegate"
-- "UITextViewDelegate"
-- !private "UIColor"
-- "UITextView"
-- !private "TempChange"
 - !private "||"
+- !private "UIColor"
+- "CreateChangeViewController"
 - "String"
+- !private "UIBarButtonItem"
+- "UITextField"
+- !private "print"
+- !private "=="
+- "UITableView"
+- !private "&&"
+- "UITextView"
+- !private "AnyObject"
+- !private "AddIdeaViewController"
+- !private "!="
+- "NSIndexPath"
+- "StringLiteralType"
+- !private "Dictionary"
+- "UITableViewDelegate"
+- "UITextViewDelegate"
+- "UITextFieldDelegate"
+- "UIViewController"
+- !private "RetrieveChange"
+- "NSManagedObjectContext"
+- !private "TempChange"
+- !private "PostData"
 - !private "Array"
 - "Int"
-- !private "Dictionary"
-- !private "&&"
-- !private "PostData"
-- !private "print"
-- "CreateChangeViewController"
+- "UIButton"
+- "UITableViewCell"
+- "Bool"
 - !private "BooleanLiteralType"
-- "UITextField"
-- "NSIndexPath"
-- "UITableView"
-- !private "!="
+- !private "CoreDataStackManager"
 depends-member:
 - !private ["Ps9AnyObject", "AnyObject"]
 - !private ["Ps9AnyObject", "CoreDataStackManager"]
 - !private ["Ps9AnyObject", "Element"]
 - !private ["Ps9AnyObject", "PostData"]
 - ["Ps9AnyObject", "PostInfo"]
+- !private ["Ps9AnyObject", "RetrieveChange"]
 - !private ["Ps9AnyObject", "String"]
 - !private ["Ps9AnyObject", "TempChange"]
 - !private ["Ps9AnyObject", "UIBarButtonItem"]
@@ -112,7 +113,6 @@ depends-member:
 - !private ["Ps9AnyObject", "pushViewController"]
 - !private ["Ps9AnyObject", "reloadData"]
 - !private ["Ps9AnyObject", "resignFirstResponder"]
-- !private ["Ps9AnyObject", "retrieveChange"]
 - !private ["Ps9AnyObject", "row"]
 - ["Ps9AnyObject", "scrollViewDidEndDecelerating"]
 - ["Ps9AnyObject", "scrollViewDidEndDragging"]
@@ -171,6 +171,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "Element"]
 - !private ["Ps11CVarArgType", "PostData"]
 - ["Ps11CVarArgType", "PostInfo"]
+- !private ["Ps11CVarArgType", "RetrieveChange"]
 - !private ["Ps11CVarArgType", "String"]
 - !private ["Ps11CVarArgType", "TempChange"]
 - !private ["Ps11CVarArgType", "UIBarButtonItem"]
@@ -211,7 +212,6 @@ depends-member:
 - !private ["Ps11CVarArgType", "pushViewController"]
 - !private ["Ps11CVarArgType", "reloadData"]
 - !private ["Ps11CVarArgType", "resignFirstResponder"]
-- !private ["Ps11CVarArgType", "retrieveChange"]
 - !private ["Ps11CVarArgType", "row"]
 - ["Ps11CVarArgType", "scrollViewDidEndDecelerating"]
 - ["Ps11CVarArgType", "scrollViewDidEndDragging"]
@@ -271,6 +271,7 @@ depends-member:
 - ["C8GoChange26CreateChangeViewController", "NSManagedObjectContext"]
 - !private ["C8GoChange26CreateChangeViewController", "PostData"]
 - ["C8GoChange26CreateChangeViewController", "PostInfo"]
+- !private ["C8GoChange26CreateChangeViewController", "RetrieveChange"]
 - ["C8GoChange26CreateChangeViewController", "String"]
 - !private ["C8GoChange26CreateChangeViewController", "TempChange"]
 - !private ["C8GoChange26CreateChangeViewController", "UIBarButtonItem"]
@@ -301,7 +302,6 @@ depends-member:
 - !private ["C8GoChange26CreateChangeViewController", "navigationItem"]
 - ["C8GoChange26CreateChangeViewController", "postButton"]
 - !private ["C8GoChange26CreateChangeViewController", "print"]
-- !private ["C8GoChange26CreateChangeViewController", "retrieveChange"]
 - ["C8GoChange26CreateChangeViewController", "scrollViewDidEndDecelerating"]
 - ["C8GoChange26CreateChangeViewController", "scrollViewDidEndDragging"]
 - ["C8GoChange26CreateChangeViewController", "scrollViewDidEndScrollingAnimation"]
@@ -342,6 +342,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "Element"]
 - !private ["Ps28CustomDebugStringConvertible", "PostData"]
 - ["Ps28CustomDebugStringConvertible", "PostInfo"]
+- !private ["Ps28CustomDebugStringConvertible", "RetrieveChange"]
 - !private ["Ps28CustomDebugStringConvertible", "String"]
 - !private ["Ps28CustomDebugStringConvertible", "TempChange"]
 - !private ["Ps28CustomDebugStringConvertible", "UIBarButtonItem"]
@@ -382,7 +383,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "pushViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "reloadData"]
 - !private ["Ps28CustomDebugStringConvertible", "resignFirstResponder"]
-- !private ["Ps28CustomDebugStringConvertible", "retrieveChange"]
 - !private ["Ps28CustomDebugStringConvertible", "row"]
 - ["Ps28CustomDebugStringConvertible", "scrollViewDidEndDecelerating"]
 - ["Ps28CustomDebugStringConvertible", "scrollViewDidEndDragging"]
@@ -434,6 +434,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "Element"]
 - !private ["Ps23CustomStringConvertible", "PostData"]
 - ["Ps23CustomStringConvertible", "PostInfo"]
+- !private ["Ps23CustomStringConvertible", "RetrieveChange"]
 - !private ["Ps23CustomStringConvertible", "String"]
 - !private ["Ps23CustomStringConvertible", "TempChange"]
 - !private ["Ps23CustomStringConvertible", "UIBarButtonItem"]
@@ -475,7 +476,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "pushViewController"]
 - !private ["Ps23CustomStringConvertible", "reloadData"]
 - !private ["Ps23CustomStringConvertible", "resignFirstResponder"]
-- !private ["Ps23CustomStringConvertible", "retrieveChange"]
 - !private ["Ps23CustomStringConvertible", "row"]
 - ["Ps23CustomStringConvertible", "scrollViewDidEndDecelerating"]
 - ["Ps23CustomStringConvertible", "scrollViewDidEndDragging"]
@@ -530,6 +530,7 @@ depends-member:
 - !private ["Ps9Equatable", "Plain"]
 - !private ["Ps9Equatable", "PostData"]
 - ["Ps9Equatable", "PostInfo"]
+- !private ["Ps9Equatable", "RetrieveChange"]
 - !private ["Ps9Equatable", "String"]
 - !private ["Ps9Equatable", "TempChange"]
 - !private ["Ps9Equatable", "UIBarButtonItem"]
@@ -571,7 +572,6 @@ depends-member:
 - !private ["Ps9Equatable", "pushViewController"]
 - !private ["Ps9Equatable", "reloadData"]
 - !private ["Ps9Equatable", "resignFirstResponder"]
-- !private ["Ps9Equatable", "retrieveChange"]
 - !private ["Ps9Equatable", "row"]
 - ["Ps9Equatable", "scrollViewDidEndDecelerating"]
 - ["Ps9Equatable", "scrollViewDidEndDragging"]
@@ -624,6 +624,7 @@ depends-member:
 - !private ["Ps8Hashable", "Plain"]
 - !private ["Ps8Hashable", "PostData"]
 - ["Ps8Hashable", "PostInfo"]
+- !private ["Ps8Hashable", "RetrieveChange"]
 - !private ["Ps8Hashable", "String"]
 - !private ["Ps8Hashable", "TempChange"]
 - !private ["Ps8Hashable", "UIBarButtonItem"]
@@ -665,7 +666,6 @@ depends-member:
 - !private ["Ps8Hashable", "pushViewController"]
 - !private ["Ps8Hashable", "reloadData"]
 - !private ["Ps8Hashable", "resignFirstResponder"]
-- !private ["Ps8Hashable", "retrieveChange"]
 - !private ["Ps8Hashable", "row"]
 - ["Ps8Hashable", "scrollViewDidEndDecelerating"]
 - ["Ps8Hashable", "scrollViewDidEndDragging"]
@@ -722,6 +722,7 @@ depends-member:
 - !private ["PSo8NSCoding", "Element"]
 - !private ["PSo8NSCoding", "PostData"]
 - ["PSo8NSCoding", "PostInfo"]
+- !private ["PSo8NSCoding", "RetrieveChange"]
 - !private ["PSo8NSCoding", "String"]
 - !private ["PSo8NSCoding", "TempChange"]
 - !private ["PSo8NSCoding", "UIBarButtonItem"]
@@ -759,7 +760,6 @@ depends-member:
 - !private ["PSo8NSCoding", "pushViewController"]
 - !private ["PSo8NSCoding", "reloadData"]
 - !private ["PSo8NSCoding", "resignFirstResponder"]
-- !private ["PSo8NSCoding", "retrieveChange"]
 - !private ["PSo8NSCoding", "row"]
 - ["PSo8NSCoding", "scrollViewDidEndDecelerating"]
 - ["PSo8NSCoding", "scrollViewDidEndDragging"]
@@ -810,6 +810,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "CoreDataStackManager"]
 - !private ["PSo26NSExtensionRequestHandling", "PostData"]
 - ["PSo26NSExtensionRequestHandling", "PostInfo"]
+- !private ["PSo26NSExtensionRequestHandling", "RetrieveChange"]
 - !private ["PSo26NSExtensionRequestHandling", "String"]
 - !private ["PSo26NSExtensionRequestHandling", "TempChange"]
 - !private ["PSo26NSExtensionRequestHandling", "UIBarButtonItem"]
@@ -837,7 +838,6 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "postButton"]
 - !private ["PSo26NSExtensionRequestHandling", "print"]
 - !private ["PSo26NSExtensionRequestHandling", "pushViewController"]
-- !private ["PSo26NSExtensionRequestHandling", "retrieveChange"]
 - ["PSo26NSExtensionRequestHandling", "scrollViewDidEndDecelerating"]
 - ["PSo26NSExtensionRequestHandling", "scrollViewDidEndDragging"]
 - ["PSo26NSExtensionRequestHandling", "scrollViewDidEndScrollingAnimation"]
@@ -895,6 +895,7 @@ depends-member:
 - ["CSo8NSObject", "NSManagedObjectContext"]
 - !private ["CSo8NSObject", "PostData"]
 - ["CSo8NSObject", "PostInfo"]
+- !private ["CSo8NSObject", "RetrieveChange"]
 - ["CSo8NSObject", "String"]
 - !private ["CSo8NSObject", "TempChange"]
 - !private ["CSo8NSObject", "UIBarButtonItem"]
@@ -940,7 +941,6 @@ depends-member:
 - !private ["CSo8NSObject", "pushViewController"]
 - !private ["CSo8NSObject", "reloadData"]
 - !private ["CSo8NSObject", "resignFirstResponder"]
-- !private ["CSo8NSObject", "retrieveChange"]
 - !private ["CSo8NSObject", "row"]
 - ["CSo8NSObject", "scrollViewDidEndDecelerating"]
 - ["CSo8NSObject", "scrollViewDidEndDragging"]
@@ -991,6 +991,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "Element"]
 - !private ["PSo16NSObjectProtocol", "PostData"]
 - ["PSo16NSObjectProtocol", "PostInfo"]
+- !private ["PSo16NSObjectProtocol", "RetrieveChange"]
 - !private ["PSo16NSObjectProtocol", "String"]
 - !private ["PSo16NSObjectProtocol", "TempChange"]
 - !private ["PSo16NSObjectProtocol", "UIBarButtonItem"]
@@ -1031,7 +1032,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "pushViewController"]
 - !private ["PSo16NSObjectProtocol", "reloadData"]
 - !private ["PSo16NSObjectProtocol", "resignFirstResponder"]
-- !private ["PSo16NSObjectProtocol", "retrieveChange"]
 - !private ["PSo16NSObjectProtocol", "row"]
 - ["PSo16NSObjectProtocol", "scrollViewDidEndDecelerating"]
 - ["PSo16NSObjectProtocol", "scrollViewDidEndDragging"]
@@ -1086,6 +1086,7 @@ depends-member:
 - !private ["Sq", "deinit"]
 - !private ["C8GoChange8PostData", "init"]
 - !private ["Ps16RawRepresentable", "Plain"]
+- !private ["C8GoChange14RetrieveChange", "init"]
 - !private ["Ps12SequenceType", "Element"]
 - !private ["Ps12SequenceType", "count"]
 - !private ["Ps12SequenceType", "init"]
@@ -1124,6 +1125,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "CoreDataStackManager"]
 - !private ["PSo21UIAppearanceContainer", "PostData"]
 - ["PSo21UIAppearanceContainer", "PostInfo"]
+- !private ["PSo21UIAppearanceContainer", "RetrieveChange"]
 - !private ["PSo21UIAppearanceContainer", "String"]
 - !private ["PSo21UIAppearanceContainer", "TempChange"]
 - !private ["PSo21UIAppearanceContainer", "UIBarButtonItem"]
@@ -1158,7 +1160,6 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "pushViewController"]
 - !private ["PSo21UIAppearanceContainer", "reloadData"]
 - !private ["PSo21UIAppearanceContainer", "resignFirstResponder"]
-- !private ["PSo21UIAppearanceContainer", "retrieveChange"]
 - ["PSo21UIAppearanceContainer", "scrollViewDidEndDecelerating"]
 - ["PSo21UIAppearanceContainer", "scrollViewDidEndDragging"]
 - ["PSo21UIAppearanceContainer", "scrollViewDidEndScrollingAnimation"]
@@ -1209,6 +1210,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "CoreDataStackManager"]
 - !private ["PSo18UIContentContainer", "PostData"]
 - ["PSo18UIContentContainer", "PostInfo"]
+- !private ["PSo18UIContentContainer", "RetrieveChange"]
 - !private ["PSo18UIContentContainer", "String"]
 - !private ["PSo18UIContentContainer", "TempChange"]
 - !private ["PSo18UIContentContainer", "UIBarButtonItem"]
@@ -1236,7 +1238,6 @@ depends-member:
 - ["PSo18UIContentContainer", "postButton"]
 - !private ["PSo18UIContentContainer", "print"]
 - !private ["PSo18UIContentContainer", "pushViewController"]
-- !private ["PSo18UIContentContainer", "retrieveChange"]
 - ["PSo18UIContentContainer", "scrollViewDidEndDecelerating"]
 - ["PSo18UIContentContainer", "scrollViewDidEndDragging"]
 - ["PSo18UIContentContainer", "scrollViewDidEndScrollingAnimation"]
@@ -1303,6 +1304,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "CoreDataStackManager"]
 - !private ["PSo18UIFocusEnvironment", "PostData"]
 - ["PSo18UIFocusEnvironment", "PostInfo"]
+- !private ["PSo18UIFocusEnvironment", "RetrieveChange"]
 - !private ["PSo18UIFocusEnvironment", "String"]
 - !private ["PSo18UIFocusEnvironment", "TempChange"]
 - !private ["PSo18UIFocusEnvironment", "UIBarButtonItem"]
@@ -1337,7 +1339,6 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "pushViewController"]
 - !private ["PSo18UIFocusEnvironment", "reloadData"]
 - !private ["PSo18UIFocusEnvironment", "resignFirstResponder"]
-- !private ["PSo18UIFocusEnvironment", "retrieveChange"]
 - ["PSo18UIFocusEnvironment", "scrollViewDidEndDecelerating"]
 - ["PSo18UIFocusEnvironment", "scrollViewDidEndDragging"]
 - ["PSo18UIFocusEnvironment", "scrollViewDidEndScrollingAnimation"]
@@ -1397,6 +1398,7 @@ depends-member:
 - ["CSo11UIResponder", "NSManagedObjectContext"]
 - !private ["CSo11UIResponder", "PostData"]
 - ["CSo11UIResponder", "PostInfo"]
+- !private ["CSo11UIResponder", "RetrieveChange"]
 - ["CSo11UIResponder", "String"]
 - !private ["CSo11UIResponder", "TempChange"]
 - !private ["CSo11UIResponder", "UIBarButtonItem"]
@@ -1436,7 +1438,6 @@ depends-member:
 - !private ["CSo11UIResponder", "pushViewController"]
 - !private ["CSo11UIResponder", "reloadData"]
 - !private ["CSo11UIResponder", "resignFirstResponder"]
-- !private ["CSo11UIResponder", "retrieveChange"]
 - ["CSo11UIResponder", "scrollViewDidEndDecelerating"]
 - ["CSo11UIResponder", "scrollViewDidEndDragging"]
 - ["CSo11UIResponder", "scrollViewDidEndScrollingAnimation"]
@@ -1484,11 +1485,13 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "AnyObject"]
 - !private ["PSo20UIScrollViewDelegate", "CoreDataStackManager"]
 - !private ["PSo20UIScrollViewDelegate", "PostData"]
+- !private ["PSo20UIScrollViewDelegate", "RetrieveChange"]
 - !private ["PSo20UIScrollViewDelegate", "String"]
 - !private ["PSo20UIScrollViewDelegate", "TempChange"]
 - !private ["PSo20UIScrollViewDelegate", "UIBarButtonItem"]
 - !private ["PSo20UIScrollViewDelegate", "UIBarButtonItemStyle"]
 - !private ["PSo20UIScrollViewDelegate", "UIColor"]
+- !private ["PSo20UIScrollViewDelegate", "changeID"]
 - !private ["PSo20UIScrollViewDelegate", "currentDetailData"]
 - !private ["PSo20UIScrollViewDelegate", "currentNameData"]
 - !private ["PSo20UIScrollViewDelegate", "detailsField"]
@@ -1501,7 +1504,6 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "navigationItem"]
 - !private ["PSo20UIScrollViewDelegate", "postButton"]
 - !private ["PSo20UIScrollViewDelegate", "print"]
-- !private ["PSo20UIScrollViewDelegate", "retrieveChange"]
 - ["PSo20UIScrollViewDelegate", "scrollViewDidEndDecelerating"]
 - ["PSo20UIScrollViewDelegate", "scrollViewDidEndDragging"]
 - ["PSo20UIScrollViewDelegate", "scrollViewDidEndScrollingAnimation"]
@@ -1538,6 +1540,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "CoreDataStackManager"]
 - !private ["PSo16UIStateRestoring", "PostData"]
 - ["PSo16UIStateRestoring", "PostInfo"]
+- !private ["PSo16UIStateRestoring", "RetrieveChange"]
 - !private ["PSo16UIStateRestoring", "String"]
 - !private ["PSo16UIStateRestoring", "TempChange"]
 - !private ["PSo16UIStateRestoring", "UIBarButtonItem"]
@@ -1565,7 +1568,6 @@ depends-member:
 - ["PSo16UIStateRestoring", "postButton"]
 - !private ["PSo16UIStateRestoring", "print"]
 - !private ["PSo16UIStateRestoring", "pushViewController"]
-- !private ["PSo16UIStateRestoring", "retrieveChange"]
 - ["PSo16UIStateRestoring", "scrollViewDidEndDecelerating"]
 - ["PSo16UIStateRestoring", "scrollViewDidEndDragging"]
 - ["PSo16UIStateRestoring", "scrollViewDidEndScrollingAnimation"]
@@ -1610,11 +1612,13 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "AnyObject"]
 - !private ["PSo19UITableViewDelegate", "CoreDataStackManager"]
 - !private ["PSo19UITableViewDelegate", "PostData"]
+- !private ["PSo19UITableViewDelegate", "RetrieveChange"]
 - !private ["PSo19UITableViewDelegate", "String"]
 - !private ["PSo19UITableViewDelegate", "TempChange"]
 - !private ["PSo19UITableViewDelegate", "UIBarButtonItem"]
 - !private ["PSo19UITableViewDelegate", "UIBarButtonItemStyle"]
 - !private ["PSo19UITableViewDelegate", "UIColor"]
+- !private ["PSo19UITableViewDelegate", "changeID"]
 - !private ["PSo19UITableViewDelegate", "currentDetailData"]
 - !private ["PSo19UITableViewDelegate", "currentNameData"]
 - !private ["PSo19UITableViewDelegate", "detailsField"]
@@ -1627,7 +1631,6 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "navigationItem"]
 - !private ["PSo19UITableViewDelegate", "postButton"]
 - !private ["PSo19UITableViewDelegate", "print"]
-- !private ["PSo19UITableViewDelegate", "retrieveChange"]
 - ["PSo19UITableViewDelegate", "scrollViewDidEndDecelerating"]
 - ["PSo19UITableViewDelegate", "scrollViewDidEndDragging"]
 - ["PSo19UITableViewDelegate", "scrollViewDidEndScrollingAnimation"]
@@ -1666,11 +1669,13 @@ depends-member:
 - !private ["PSo19UITextFieldDelegate", "AnyObject"]
 - !private ["PSo19UITextFieldDelegate", "CoreDataStackManager"]
 - !private ["PSo19UITextFieldDelegate", "PostData"]
+- !private ["PSo19UITextFieldDelegate", "RetrieveChange"]
 - !private ["PSo19UITextFieldDelegate", "String"]
 - !private ["PSo19UITextFieldDelegate", "TempChange"]
 - !private ["PSo19UITextFieldDelegate", "UIBarButtonItem"]
 - !private ["PSo19UITextFieldDelegate", "UIBarButtonItemStyle"]
 - !private ["PSo19UITextFieldDelegate", "UIColor"]
+- !private ["PSo19UITextFieldDelegate", "changeID"]
 - !private ["PSo19UITextFieldDelegate", "currentDetailData"]
 - !private ["PSo19UITextFieldDelegate", "currentNameData"]
 - !private ["PSo19UITextFieldDelegate", "detailsField"]
@@ -1683,7 +1688,6 @@ depends-member:
 - !private ["PSo19UITextFieldDelegate", "navigationItem"]
 - !private ["PSo19UITextFieldDelegate", "postButton"]
 - !private ["PSo19UITextFieldDelegate", "print"]
-- !private ["PSo19UITextFieldDelegate", "retrieveChange"]
 - ["PSo19UITextFieldDelegate", "scrollViewDidEndDecelerating"]
 - ["PSo19UITextFieldDelegate", "scrollViewDidEndDragging"]
 - ["PSo19UITextFieldDelegate", "scrollViewDidEndScrollingAnimation"]
@@ -1731,11 +1735,13 @@ depends-member:
 - !private ["PSo18UITextViewDelegate", "AnyObject"]
 - !private ["PSo18UITextViewDelegate", "CoreDataStackManager"]
 - !private ["PSo18UITextViewDelegate", "PostData"]
+- !private ["PSo18UITextViewDelegate", "RetrieveChange"]
 - !private ["PSo18UITextViewDelegate", "String"]
 - !private ["PSo18UITextViewDelegate", "TempChange"]
 - !private ["PSo18UITextViewDelegate", "UIBarButtonItem"]
 - !private ["PSo18UITextViewDelegate", "UIBarButtonItemStyle"]
 - !private ["PSo18UITextViewDelegate", "UIColor"]
+- !private ["PSo18UITextViewDelegate", "changeID"]
 - !private ["PSo18UITextViewDelegate", "currentDetailData"]
 - !private ["PSo18UITextViewDelegate", "currentNameData"]
 - !private ["PSo18UITextViewDelegate", "detailsField"]
@@ -1748,7 +1754,6 @@ depends-member:
 - !private ["PSo18UITextViewDelegate", "navigationItem"]
 - !private ["PSo18UITextViewDelegate", "postButton"]
 - !private ["PSo18UITextViewDelegate", "print"]
-- !private ["PSo18UITextViewDelegate", "retrieveChange"]
 - ["PSo18UITextViewDelegate", "scrollViewDidEndDecelerating"]
 - ["PSo18UITextViewDelegate", "scrollViewDidEndDragging"]
 - ["PSo18UITextViewDelegate", "scrollViewDidEndScrollingAnimation"]
@@ -1785,6 +1790,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "CoreDataStackManager"]
 - !private ["PSo18UITraitEnvironment", "PostData"]
 - ["PSo18UITraitEnvironment", "PostInfo"]
+- !private ["PSo18UITraitEnvironment", "RetrieveChange"]
 - !private ["PSo18UITraitEnvironment", "String"]
 - !private ["PSo18UITraitEnvironment", "TempChange"]
 - !private ["PSo18UITraitEnvironment", "UIBarButtonItem"]
@@ -1819,7 +1825,6 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "pushViewController"]
 - !private ["PSo18UITraitEnvironment", "reloadData"]
 - !private ["PSo18UITraitEnvironment", "resignFirstResponder"]
-- !private ["PSo18UITraitEnvironment", "retrieveChange"]
 - ["PSo18UITraitEnvironment", "scrollViewDidEndDecelerating"]
 - ["PSo18UITraitEnvironment", "scrollViewDidEndDragging"]
 - ["PSo18UITraitEnvironment", "scrollViewDidEndScrollingAnimation"]
@@ -1879,6 +1884,7 @@ depends-member:
 - ["CSo16UIViewController", "NSManagedObjectContext"]
 - !private ["CSo16UIViewController", "PostData"]
 - ["CSo16UIViewController", "PostInfo"]
+- !private ["CSo16UIViewController", "RetrieveChange"]
 - ["CSo16UIViewController", "String"]
 - !private ["CSo16UIViewController", "TempChange"]
 - !private ["CSo16UIViewController", "UIBarButtonItem"]
@@ -1911,7 +1917,6 @@ depends-member:
 - ["CSo16UIViewController", "postButton"]
 - !private ["CSo16UIViewController", "print"]
 - !private ["CSo16UIViewController", "pushViewController"]
-- !private ["CSo16UIViewController", "retrieveChange"]
 - ["CSo16UIViewController", "scrollViewDidEndDecelerating"]
 - ["CSo16UIViewController", "scrollViewDidEndDragging"]
 - ["CSo16UIViewController", "scrollViewDidEndScrollingAnimation"]
@@ -2001,6 +2006,7 @@ depends-nominal:
 - !private "Sq"
 - !private "C8GoChange8PostData"
 - !private "Ps16RawRepresentable"
+- !private "C8GoChange14RetrieveChange"
 - !private "Ps12SequenceType"
 - !private "SS"
 - !private "C8GoChange10TempChange"

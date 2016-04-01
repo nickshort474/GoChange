@@ -195,6 +195,7 @@ SWIFT_CLASS("_TtC8GoChange6Change")
 @property (nonatomic, copy) NSString * _Nonnull changeDescription;
 @property (nonatomic, strong) NSNumber * _Nonnull owner;
 @property (nonatomic, copy) NSString * _Nonnull firebaseLocation;
+@property (nonatomic, copy) NSString * _Nonnull changeID;
 @property (nonatomic, copy) NSArray<Solution *> * _Nonnull changeNeedingSolution;
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithDictionary:(NSDictionary<NSString *, id> * _Nonnull)dictionary context:(NSManagedObjectContext * _Nonnull)context OBJC_DESIGNATED_INITIALIZER;
@@ -225,6 +226,7 @@ SWIFT_CLASS("_TtC8GoChange26CreateChangeViewController")
 @property (nonatomic, copy) NSString * _Nonnull currentDetailData;
 @property (nonatomic, copy) NSString * _Nonnull sendingController;
 @property (nonatomic, copy) NSString * _Nonnull isOwner;
+@property (nonatomic, copy) NSString * _Nonnull changeID;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
@@ -269,8 +271,6 @@ SWIFT_CLASS("_TtC8GoChange23FollowingViewController")
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-- (IBAction)HomeButtonClick:(UIButton * _Nonnull)sender;
-- (IBAction)FollowedChangeButton:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -319,6 +319,7 @@ SWIFT_CLASS("_TtC8GoChange18HomeViewController")
 SWIFT_CLASS("_TtC8GoChange8PostData")
 @interface PostData : NSObject
 @property (nonatomic, copy) NSString * _Nullable savedAutoID;
+@property (nonatomic, copy) NSString * _Nullable changeID;
 - (nonnull instancetype)initWithPostDictionary:(NSDictionary<NSString *, id> * _Nonnull)postDictionary OBJC_DESIGNATED_INITIALIZER;
 @property (nonatomic, strong) NSManagedObjectContext * _Nonnull sharedContext;
 - (void)saveChangeToFirebase;
@@ -333,6 +334,13 @@ SWIFT_CLASS("_TtC8GoChange21ResultsViewController")
 - (IBAction)ResultLinkButton:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8GoChange14RetrieveChange")
+@interface RetrieveChange : NSObject
+- (nonnull instancetype)initWithChangeID:(NSString * _Nonnull)changeID completionHandler:(void (^ _Nonnull)(id _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, strong) NSManagedObjectContext * _Nonnull sharedContext;
 @end
 
 
