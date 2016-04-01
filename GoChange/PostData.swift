@@ -13,7 +13,9 @@ import CoreData
 class PostData:NSObject{
     
     var savedAutoID:String?
-    var ref = Firebase(url:"https://gochange.firebaseio.com/change")
+    var changeID:String?
+    
+    //var ref = Firebase(url:"https://gochange.firebaseio.com/change/")
     
     
     init(postDictionary:[String:AnyObject]) {
@@ -31,25 +33,66 @@ class PostData:NSObject{
     
     func saveChangeToFirebase(){
         
-        let changeRef = ref.childByAutoId()
-        savedAutoID = String(changeRef)
+        var namesRef = Firebase(url:"https://gochange.firebaseio.com/change/names")
+        
+        //create location with unique ID in firebase database
+        let changeNameLocation = namesRef.childByAutoId()
+        
+        //save location as string for core data use
+        savedAutoID = String(changeNameLocation)
+        
+        // copy location ready for mutation
+        changeID = savedAutoID
+        
+        // create string of original firebase reference
+        let refString = String(namesRef)
+        
+        //get range of original firebase reference
+        let stringRange = savedAutoID?.rangeOfString(refString)
+        
+        //extract unique ID by removing original firebase reference from full location
+        changeID!.removeRange(stringRange!)
+        
+        //clear leading character
+        changeID?.removeAtIndex(changeID!.startIndex)
         
         
-        let changeValues = ["ChangeName":TempChange.sharedInstance().changeName,"ChangeDetail":TempChange.sharedInstance().changeDetail]
+        // set up values to be saved
+        let changeNameValues = ["ChangeName":TempChange.sharedInstance().changeName]
         
-        changeRef.setValue(changeValues)
+        //save name of change to firebase
+        changeNameLocation.setValue(changeNameValues)
         
+        // create reference to details section of firebase
+        let changeDetailLocation = Firebase(url:"https://gochange.firebaseio.com/change/details")
         
+        // append unique ID to path
+        let uniqueDetailLocation = changeDetailLocation.childByAppendingPath(changeID!)
         
+        //set up details values to be saved
+        let changeDetailValues = ["ChangeDetail":TempChange.sharedInstance().changeDetail]
+        
+        uniqueDetailLocation.setValue(changeDetailValues)
+        
+        //create reference to solutions location in firebase
+        let changeSolutionsLocation = Firebase(url:"https://gochange.firebaseio.com/change/solutions")
+        
+        //append unique ID
+        let uniqueSolutionLocation = changeSolutionsLocation.childByAppendingPath(changeID!)
+        
+        //loop through solutions array
         for var i in 0 ..< (TempChange.sharedInstance().solutionNameArray.count){
             
             //_ = CreateSolution(change:newChange, firebaseLocation:firebaseLocation,solutionName:TempChange.sharedInstance().solutionNameArray[i] as! String,solutionDescription:TempChange.sharedInstance().solutionDetailArray[i] as! String)
-            let newChangeRef = changeRef!.childByAutoId()
+            
+            //create unqiue location with ID within solutions section
+            let uniqueSolutionReference = uniqueSolutionLocation!.childByAutoId()
 
+            //set solution values
+            let changeSolutionValues = ["solutionName":TempChange.sharedInstance().solutionNameArray[i],"solutionDescription":TempChange.sharedInstance().solutionDetailArray[i]]
             
-            let newChangeValues = ["solutionName":TempChange.sharedInstance().solutionNameArray[i],"solutionDescription":TempChange.sharedInstance().solutionDetailArray[i]]
-            
-            newChangeRef.setValue(newChangeValues)
+            //save values to firebase
+            uniqueSolutionReference.setValue(changeSolutionValues)
         }
         
         
@@ -69,14 +112,17 @@ class PostData:NSObject{
         changeDictionary[Change.Keys.changeDescription] = TempChange.sharedInstance().changeDetail
         changeDictionary[Change.Keys.owner] = true
         changeDictionary[Change.Keys.firebaseLocation] = savedAutoID
+        changeDictionary[Change.Keys.changeID] = changeID
+        
 
         //create change object in core data
         let newChange = Change(dictionary: changeDictionary,context: sharedContext)
         
         
-        //create core data solution dictioary
+        //create core data solution dictionary
         
         for var i in 0 ..< TempChange.sharedInstance().solutionNameArray.count{
+            
             var solutionDictionary:[String:AnyObject] = [String:AnyObject]()
         
             solutionDictionary[Solution.Keys.solutionName] = TempChange.sharedInstance().solutionNameArray[i]

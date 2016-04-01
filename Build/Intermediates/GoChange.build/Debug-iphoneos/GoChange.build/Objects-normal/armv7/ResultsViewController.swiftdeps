@@ -6,13 +6,13 @@ provides-nominal:
 provides-member:
 - ["C8GoChange21ResultsViewController", ""]
 provides-dynamic-lookup:
+- "ResultLinkButton"
 - "viewDidLoad"
 - "didReceiveMemoryWarning"
-- "ResultLinkButton"
 depends-top-level:
 - "UIButton"
-- "UIViewController"
 - !private "StringLiteralType"
+- "UIViewController"
 - "ResultsViewController"
 - !private "CreateChangeViewController"
 - !private "BooleanLiteralType"

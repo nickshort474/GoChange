@@ -22,9 +22,10 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
     
     var currentNameData:String = ""
     var currentDetailData:String = ""
+    
     var sendingController:String = ""
     var isOwner:String = ""
-    
+    var changeID = ""
     
     
     override func viewDidLoad() {
@@ -49,7 +50,7 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         detailsField.delegate = self
         solutionTable.delegate = self
         
-        //hide / disable buttons
+        //hide and disable buttons
         namePlusButton.hidden = true
         detailsPlusButton.hidden = true
         postButton.alpha = 0.5
@@ -64,7 +65,13 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         if(sendingController == "following"){
             // load core data 
             if(isOwner == "yes"){
-                // allow edit buttons for name and details 
+                // allow edit buttons for name and details
+                var retrievedChange = RetrieveChange(changeID: changeID){
+                    (result) in
+                    print(result)
+                    
+                }
+                
             }
             
             

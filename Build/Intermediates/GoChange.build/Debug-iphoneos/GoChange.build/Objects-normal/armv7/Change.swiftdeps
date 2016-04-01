@@ -8,28 +8,30 @@ provides-member:
 - ["C8GoChange6Change", ""]
 - ["VC8GoChange6Change4Keys", ""]
 provides-dynamic-lookup:
-- "changeDescription"
 - "firebaseLocation"
-- "changeNeedingSolution"
+- "changeID"
+- "changeDescription"
 - "changeName"
 - "owner"
+- "changeNeedingSolution"
 depends-top-level:
-- "Change"
+- "NSEntityDescription"
+- "String"
 - "Solution"
+- "AnyObject"
 - "StringLiteralType"
 - "NSManagedObjectContext"
-- "String"
-- "NSEntityDescription"
 - "NSManagedObject"
-- "AnyObject"
-- "NSNumber"
 - !private "Bool"
+- "NSNumber"
+- "Change"
 depends-member:
 - !private ["Ps9AnyObject", "Change"]
 - !private ["Ps9AnyObject", "Keys"]
 - !private ["Ps9AnyObject", "NSEntityDescription"]
 - !private ["Ps9AnyObject", "NSNumber"]
 - ["Ps9AnyObject", "changeDescription"]
+- ["Ps9AnyObject", "changeID"]
 - ["Ps9AnyObject", "changeName"]
 - ["Ps9AnyObject", "changeNeedingSolution"]
 - !private ["Ps9AnyObject", "entityForName"]
@@ -43,6 +45,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "NSEntityDescription"]
 - !private ["Ps11CVarArgType", "NSNumber"]
 - ["Ps11CVarArgType", "changeDescription"]
+- ["Ps11CVarArgType", "changeID"]
 - ["Ps11CVarArgType", "changeName"]
 - ["Ps11CVarArgType", "changeNeedingSolution"]
 - !private ["Ps11CVarArgType", "entityForName"]
@@ -60,6 +63,7 @@ depends-member:
 - ["C8GoChange6Change", "Solution"]
 - ["C8GoChange6Change", "String"]
 - ["C8GoChange6Change", "changeDescription"]
+- ["C8GoChange6Change", "changeID"]
 - ["C8GoChange6Change", "changeName"]
 - ["C8GoChange6Change", "changeNeedingSolution"]
 - ["C8GoChange6Change", "deinit"]
@@ -77,6 +81,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "NSEntityDescription"]
 - !private ["Ps28CustomDebugStringConvertible", "NSNumber"]
 - ["Ps28CustomDebugStringConvertible", "changeDescription"]
+- ["Ps28CustomDebugStringConvertible", "changeID"]
 - ["Ps28CustomDebugStringConvertible", "changeName"]
 - ["Ps28CustomDebugStringConvertible", "changeNeedingSolution"]
 - !private ["Ps28CustomDebugStringConvertible", "entityForName"]
@@ -91,6 +96,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "NSEntityDescription"]
 - !private ["Ps23CustomStringConvertible", "NSNumber"]
 - ["Ps23CustomStringConvertible", "changeDescription"]
+- ["Ps23CustomStringConvertible", "changeID"]
 - ["Ps23CustomStringConvertible", "changeName"]
 - ["Ps23CustomStringConvertible", "changeNeedingSolution"]
 - !private ["Ps23CustomStringConvertible", "entityForName"]
@@ -109,6 +115,7 @@ depends-member:
 - !private ["Ps9Equatable", "NSEntityDescription"]
 - !private ["Ps9Equatable", "NSNumber"]
 - ["Ps9Equatable", "changeDescription"]
+- ["Ps9Equatable", "changeID"]
 - ["Ps9Equatable", "changeName"]
 - ["Ps9Equatable", "changeNeedingSolution"]
 - !private ["Ps9Equatable", "entityForName"]
@@ -123,6 +130,7 @@ depends-member:
 - !private ["Ps8Hashable", "NSEntityDescription"]
 - !private ["Ps8Hashable", "NSNumber"]
 - ["Ps8Hashable", "changeDescription"]
+- ["Ps8Hashable", "changeID"]
 - ["Ps8Hashable", "changeName"]
 - ["Ps8Hashable", "changeNeedingSolution"]
 - !private ["Ps8Hashable", "entityForName"]
@@ -138,6 +146,7 @@ depends-member:
 - !private ["Vs17IndexingGenerator", "Element"]
 - !private ["Ps25IntegerLiteralConvertible", "init"]
 - ["VC8GoChange6Change4Keys", "changeDescription"]
+- ["VC8GoChange6Change4Keys", "changeID"]
 - ["VC8GoChange6Change4Keys", "changeName"]
 - ["VC8GoChange6Change4Keys", "firebaseLocation"]
 - ["VC8GoChange6Change4Keys", "init"]
@@ -158,6 +167,7 @@ depends-member:
 - ["CSo15NSManagedObject", "Solution"]
 - ["CSo15NSManagedObject", "String"]
 - ["CSo15NSManagedObject", "changeDescription"]
+- ["CSo15NSManagedObject", "changeID"]
 - ["CSo15NSManagedObject", "changeName"]
 - ["CSo15NSManagedObject", "changeNeedingSolution"]
 - ["CSo15NSManagedObject", "firebaseLocation"]
@@ -175,6 +185,7 @@ depends-member:
 - ["CSo8NSObject", "Solution"]
 - ["CSo8NSObject", "String"]
 - ["CSo8NSObject", "changeDescription"]
+- ["CSo8NSObject", "changeID"]
 - ["CSo8NSObject", "changeName"]
 - ["CSo8NSObject", "changeNeedingSolution"]
 - !private ["CSo8NSObject", "entityForName"]
@@ -186,6 +197,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "NSEntityDescription"]
 - !private ["PSo16NSObjectProtocol", "NSNumber"]
 - ["PSo16NSObjectProtocol", "changeDescription"]
+- ["PSo16NSObjectProtocol", "changeID"]
 - ["PSo16NSObjectProtocol", "changeName"]
 - ["PSo16NSObjectProtocol", "changeNeedingSolution"]
 - !private ["PSo16NSObjectProtocol", "entityForName"]
@@ -267,4 +279,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "91f28bf60e2b38aa9e3e74e9a51bdae9"
+interface-hash: "d8b403a555356674da05cf071a5a56f4"

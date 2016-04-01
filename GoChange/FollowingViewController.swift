@@ -13,6 +13,7 @@ class FollowingViewController: UITableViewController,
  NSFetchedResultsControllerDelegate {
     
     @IBOutlet weak var followingTableView: UITableView!
+    @IBOutlet weak var homeButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +22,11 @@ class FollowingViewController: UITableViewController,
         // load all core data saved changes
         
         //followingTableView.delegate = self
-        followingTableView.backgroundColor = UIColor.whiteColor()
-        self.definesPresentationContext = true
+        //followingTableView.backgroundColor = UIColor.whiteColor()
+        //self.definesPresentationContext = true
+        
+        
+        
         
         do{
             try fetchedResultsController.performFetch()
@@ -32,6 +36,10 @@ class FollowingViewController: UITableViewController,
         
         
         
+    }
+    @IBAction func homeButtonClick(sender: UIButton) {
+        navigationController?.dismissViewControllerAnimated(true, completion: nil)
+        print("home clicked")
     }
     
     override func didReceiveMemoryWarning() {
@@ -75,9 +83,9 @@ class FollowingViewController: UITableViewController,
     
     override func tableView(tableView:UITableView,cellForRowAtIndexPath indexPath:NSIndexPath) -> UITableViewCell{
         
-        var cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         
-        var object = fetchedResultsController.objectAtIndexPath(indexPath) as! Change
+        let object = fetchedResultsController.objectAtIndexPath(indexPath) as! Change
         
         cell.textLabel?.text = object.changeName
         
@@ -88,19 +96,8 @@ class FollowingViewController: UITableViewController,
     }
     
     
-   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("following")
-    }
-    
-    
-    
-    @IBAction func HomeButtonClick(sender: UIButton) {
-        
-        navigationController?.dismissViewControllerAnimated(true, completion: nil)
-        
-    }
-    
-    @IBAction func FollowedChangeButton(sender: UIButton) {
         
         var controller:CreateChangeViewController
         
@@ -111,9 +108,18 @@ class FollowingViewController: UITableViewController,
         controller.sendingController = "following"
         controller.isOwner = "yes"
         
-        navigationController?.pushViewController(controller,animated: true)
+        let changeClicked = fetchedResultsController.objectAtIndexPath(indexPath) as! Change
+        controller.changeID = changeClicked.changeID
         
+        
+        navigationController?.pushViewController(controller,animated: true)
+    
+    
+    
+    
     }
+    
+   
 }
 
 

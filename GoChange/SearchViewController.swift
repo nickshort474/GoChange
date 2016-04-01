@@ -26,6 +26,24 @@ class SearchViewController: UIViewController {
         
     }
     
+    func searchResults(){
+        
+        
+        
+        
+        var returnStringArray = ["hello swift", "goodbye swift", "hello java", "goodbye android"]
+        var foundArray:NSMutableArray = []
+        
+        
+        for value in returnStringArray{
+            if value.rangeOfString("swift") != nil{
+                foundArray.addObject(value)
+                
+            }
+        }
+        print(foundArray)
+        
+    }
 }
 
 

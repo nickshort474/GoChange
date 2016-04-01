@@ -259,7 +259,9 @@ SWIFT_CLASS("_TtC8GoChange14CreateSolution")
 SWIFT_CLASS("_TtC8GoChange23FollowingViewController")
 @interface FollowingViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified followingTableView;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified homeButton;
 - (void)viewDidLoad;
+- (IBAction)homeButtonClick:(UIButton * _Nonnull)sender;
 - (void)didReceiveMemoryWarning;
 @property (nonatomic, strong) NSManagedObjectContext * _Nonnull sharedContext;
 @property (nonatomic, strong) NSFetchedResultsController * _Nonnull fetchedResultsController;
@@ -317,7 +319,6 @@ SWIFT_CLASS("_TtC8GoChange18HomeViewController")
 SWIFT_CLASS("_TtC8GoChange8PostData")
 @interface PostData : NSObject
 @property (nonatomic, copy) NSString * _Nullable savedAutoID;
-@property (nonatomic, strong) Firebase * _Null_unspecified ref;
 - (nonnull instancetype)initWithPostDictionary:(NSDictionary<NSString *, id> * _Nonnull)postDictionary OBJC_DESIGNATED_INITIALIZER;
 @property (nonatomic, strong) NSManagedObjectContext * _Nonnull sharedContext;
 - (void)saveChangeToFirebase;
@@ -340,6 +341,7 @@ SWIFT_CLASS("_TtC8GoChange20SearchViewController")
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (IBAction)homeButtonClick:(UIButton * _Nonnull)sender;
+- (void)searchResults;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

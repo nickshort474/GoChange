@@ -36,6 +36,7 @@
 		36D7CA091CA5987E00A73176 /* Tweak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D7CA081CA5987E00A73176 /* Tweak.swift */; };
 		36D7CA0B1CA5AB5E00A73176 /* CreateSolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D7CA0A1CA5AB5E00A73176 /* CreateSolution.swift */; };
 		36DB99551CA9336600CC4D9E /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB99541CA9336600CC4D9E /* PostData.swift */; };
+		36E703EF1CAEE30C007C880C /* RetrieveChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E703EE1CAEE30C007C880C /* RetrieveChange.swift */; };
 		9E2E103AEFF6A95CA26B7D7A /* Pods_GoChange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0961F4BBEE6401B9B1D0DE43 /* Pods_GoChange.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		36D7CA081CA5987E00A73176 /* Tweak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweak.swift; sourceTree = "<group>"; };
 		36D7CA0A1CA5AB5E00A73176 /* CreateSolution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateSolution.swift; sourceTree = "<group>"; };
 		36DB99541CA9336600CC4D9E /* PostData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		36E703EE1CAEE30C007C880C /* RetrieveChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveChange.swift; sourceTree = "<group>"; };
 		76C1E409458E88730EC69107 /* Pods-GoChange.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoChange.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoChange/Pods-GoChange.release.xcconfig"; sourceTree = "<group>"; };
 		A36C800A78EB4DBB6E2699CF /* Pods-GoChange.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoChange.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoChange/Pods-GoChange.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +130,7 @@
 			children = (
 				36B03CC61C8DFBFF00E9427D /* CreateChange.swift */,
 				36DB99541CA9336600CC4D9E /* PostData.swift */,
+				36E703EE1CAEE30C007C880C /* RetrieveChange.swift */,
 				36D7CA0A1CA5AB5E00A73176 /* CreateSolution.swift */,
 			);
 			name = Controllers;
@@ -454,6 +457,7 @@
 				36D7CA091CA5987E00A73176 /* Tweak.swift in Sources */,
 				36C37CB41C7A01AC002B4FB1 /* HomeViewController.swift in Sources */,
 				36C37CB81C7A01AC002B4FB1 /* SearchViewController.swift in Sources */,
+				36E703EF1CAEE30C007C880C /* RetrieveChange.swift in Sources */,
 				36C37CBF1C7A01C5002B4FB1 /* GoChangeConstants.swift in Sources */,
 				36C37CBE1C7A01C5002B4FB1 /* GoChangeClient.swift in Sources */,
 				36C37CC01C7A01C5002B4FB1 /* GoChangeConvenience.swift in Sources */,
