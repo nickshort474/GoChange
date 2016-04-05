@@ -6,6 +6,7 @@
 /Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/AddIdeaViewController.o
 /Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/Tweak.o
 /Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/HomeViewController.o
+/Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/RetrieveFromFirebase.o
 /Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/SearchViewController.o
 /Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/RetrieveChange.o
 /Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/GoChangeConstants.o
@@ -16,6 +17,8 @@
 /Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/TempChange.o
 /Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/CoreDataStackManager.o
 /Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/ResultsViewController.o
+/Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/RetrieveDetailsFromFirebase.o
+/Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/RetrieveSolutions.o
 /Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/SignupViewController.o
 /Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/UpdateUserInfoController.o
 /Users/nickshort/Git/GoChange/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/FollowingViewController.o

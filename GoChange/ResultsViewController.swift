@@ -8,7 +8,12 @@
 
 import UIKit
 
-class ResultsViewController: UIViewController {
+class ResultsViewController: UIViewController,UITableViewDelegate {
+    
+    @IBOutlet weak var resultsTable: UITableView!
+    
+    var refArray:NSMutableArray = []
+    var resultArray:NSMutableArray = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +25,34 @@ class ResultsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func ResultLinkButton(sender: UIButton) {
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        //TODO: If viewing change load from core data
+        return resultArray.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cellID = "resultCell"
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath)
+        
+        var solutionName:String = self.resultArray[indexPath.row] as! String
+        
+        
+        cell.textLabel!.text = solutionName
+        
+        return cell
+        
+    }
+    
+    
+    
+    
+    
+    
+    func ResultLinkButton(sender: UIButton) {
         //ChangeViewController
         
         var controller:CreateChangeViewController

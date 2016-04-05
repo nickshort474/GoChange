@@ -227,6 +227,7 @@ SWIFT_CLASS("_TtC8GoChange26CreateChangeViewController")
 @property (nonatomic, copy) NSString * _Nonnull sendingController;
 @property (nonatomic, copy) NSString * _Nonnull isOwner;
 @property (nonatomic, copy) NSString * _Nonnull changeID;
+@property (nonatomic, copy) NSArray<Solution *> * _Nonnull retrievedSolutionArray;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
@@ -326,12 +327,18 @@ SWIFT_CLASS("_TtC8GoChange8PostData")
 - (void)createCoreDataChange;
 @end
 
+@class NSMutableArray;
 
 SWIFT_CLASS("_TtC8GoChange21ResultsViewController")
-@interface ResultsViewController : UIViewController
+@interface ResultsViewController : UIViewController <UIScrollViewDelegate, UITableViewDelegate>
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified resultsTable;
+@property (nonatomic, strong) NSMutableArray * _Nonnull refArray;
+@property (nonatomic, strong) NSMutableArray * _Nonnull resultArray;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
-- (IBAction)ResultLinkButton:(UIButton * _Nonnull)sender;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)ResultLinkButton:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -343,13 +350,46 @@ SWIFT_CLASS("_TtC8GoChange14RetrieveChange")
 @property (nonatomic, strong) NSManagedObjectContext * _Nonnull sharedContext;
 @end
 
+@class FDataSnapshot;
+
+SWIFT_CLASS("_TtC8GoChange27RetrieveDetailsFromFirebase")
+@interface RetrieveDetailsFromFirebase : NSObject
+@property (nonatomic, strong) Firebase * _Null_unspecified ref;
+@property (nonatomic, strong) NSMutableArray * _Nonnull results;
+- (nonnull instancetype)initWithUserRefArray:(NSMutableArray * _Nonnull)userRefArray completionHandler:(void (^ _Nonnull)(FDataSnapshot * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8GoChange20RetrieveFromFirebase")
+@interface RetrieveFromFirebase : NSObject
+@property (nonatomic, strong) Firebase * _Null_unspecified ref;
+- (nonnull instancetype)initWithCompletionHandler:(void (^ _Nonnull)(FDataSnapshot * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8GoChange17RetrieveSolutions")
+@interface RetrieveSolutions : NSObject
+- (nonnull instancetype)initWithChange:(Change * _Nonnull)change completionHandler:(void (^ _Nonnull)(id _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, strong) NSManagedObjectContext * _Nonnull sharedContext;
+@end
+
 
 SWIFT_CLASS("_TtC8GoChange20SearchViewController")
-@interface SearchViewController : UIViewController
+@interface SearchViewController : UIViewController <UITextFieldDelegate>
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified searchTextField;
+@property (nonatomic, strong) NSMutableArray * _Nonnull returnedStringArray;
+@property (nonatomic, strong) NSMutableArray * _Nonnull returnedRefArray;
+@property (nonatomic, strong) NSMutableArray * _Nonnull countArray;
+@property (nonatomic, readonly, strong) NSMutableArray * _Nonnull useRefArray;
+@property (nonatomic, readonly, strong) NSMutableArray * _Nonnull foundArray;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (IBAction)homeButtonClick:(UIButton * _Nonnull)sender;
-- (void)searchResults;
+- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField;
+- (IBAction)searchForResults:(UIButton * _Nonnull)sender;
+- (void)checkResults;
+- (void)createRefArray;
+- (void)sendToResults;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -388,7 +428,6 @@ SWIFT_CLASS("_TtC8GoChange8Solution")
 - (nonnull instancetype)initWithDictionary:(NSDictionary<NSString *, id> * _Nonnull)dictionary context:(NSManagedObjectContext * _Nonnull)context OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSMutableArray;
 
 SWIFT_CLASS("_TtC8GoChange10TempChange")
 @interface TempChange : NSObject

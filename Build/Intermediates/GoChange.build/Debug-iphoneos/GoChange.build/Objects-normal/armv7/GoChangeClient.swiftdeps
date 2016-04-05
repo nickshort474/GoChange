@@ -6,12 +6,12 @@ provides-nominal:
 provides-member:
 - ["C8GoChange14GoChangeClient", ""]
 provides-dynamic-lookup:
-- "printName"
 - "sharedInstance"
+- "printName"
 depends-top-level:
+- "GoChangeClient"
 - !private "print"
 - !private "StringLiteralType"
-- "GoChangeClient"
 - "NSObject"
 depends-member:
 - !private ["Ps9AnyObject", "GoChangeClient"]

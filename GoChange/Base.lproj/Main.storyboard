@@ -563,7 +563,6 @@
         <!--Following-->
         <scene sceneID="hX6-OG-rhq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9XN-lG-vbr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="ghc-y8-rys" customClass="FollowingViewController" customModule="GoChange" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="YEU-sB-vsG">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -618,6 +617,7 @@
                         <outlet property="homeButton" destination="0qf-qG-Xj8" id="n3g-fi-3jP"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9XN-lG-vbr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1155" y="-47"/>
         </scene>
@@ -665,29 +665,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNQ-ol-IkH">
-                                <rect key="frame" x="478" y="280" width="72" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="Search"/>
-                                <connections>
-                                    <segue destination="ewO-OC-laT" kind="show" identifier="showResultsPage" id="rTG-dj-IDB">
-                                        <nil key="action"/>
-                                    </segue>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5E-qk-bp4">
                                 <rect key="frame" x="243" y="89" width="114" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ytw-U7-eT7">
+                                <rect key="frame" x="70" y="285" width="460" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNQ-ol-IkH">
+                                <rect key="frame" x="264" y="510" width="72" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="searchForResults:" destination="gbE-7d-A1C" eventType="touchUpInside" id="B7h-zl-kPr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xNQ-ol-IkH" firstAttribute="centerY" secondItem="mAf-Ns-S62" secondAttribute="centerY" id="GWG-To-MOc"/>
+                            <constraint firstItem="Ytw-U7-eT7" firstAttribute="centerY" secondItem="mAf-Ns-S62" secondAttribute="centerY" id="888-cw-eHQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ytw-U7-eT7" secondAttribute="trailing" constant="50" id="9LL-YE-i4i"/>
+                            <constraint firstItem="Ytw-U7-eT7" firstAttribute="leading" secondItem="mAf-Ns-S62" secondAttribute="leadingMargin" constant="50" id="Ei6-Fx-8MI"/>
                             <constraint firstItem="L5E-qk-bp4" firstAttribute="centerX" secondItem="mAf-Ns-S62" secondAttribute="centerX" id="K18-xp-H7f"/>
                             <constraint firstItem="L5E-qk-bp4" firstAttribute="top" secondItem="48c-qP-Dla" secondAttribute="bottom" constant="25" id="RYo-OF-UiZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xNQ-ol-IkH" secondAttribute="trailing" constant="30" id="sUe-7l-MvI"/>
+                            <constraint firstItem="xNQ-ol-IkH" firstAttribute="centerX" secondItem="mAf-Ns-S62" secondAttribute="centerX" id="YqB-ZN-JlK"/>
+                            <constraint firstItem="ZLV-OO-q2E" firstAttribute="top" secondItem="xNQ-ol-IkH" secondAttribute="bottom" constant="50" id="aet-2g-7bo"/>
+                            <constraint firstItem="Ytw-U7-eT7" firstAttribute="centerX" secondItem="mAf-Ns-S62" secondAttribute="centerX" id="iz7-fb-iEf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Hm8-0Y-rPt">
@@ -703,6 +710,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchTextField" destination="Ytw-U7-eT7" id="qHk-b4-wkt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o3b-Ch-K9o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -831,7 +841,7 @@
         <!--Results View Controller-->
         <scene sceneID="MAb-O0-oMx">
             <objects>
-                <viewController id="ewO-OC-laT" customClass="ResultsViewController" customModule="GoChange" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultsViewController" id="ewO-OC-laT" customClass="ResultsViewController" customModule="GoChange" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nw5-1Y-ie1"/>
                         <viewControllerLayoutGuide type="bottom" id="iJq-gX-HwU"/>
@@ -840,28 +850,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjf-rN-DGG">
-                                <rect key="frame" x="501" y="285" width="54" height="30"/>
-                                <state key="normal" title="Result 1"/>
-                                <connections>
-                                    <action selector="ResultLinkButton:" destination="ewO-OC-laT" eventType="touchUpInside" id="EJE-27-fu8"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNB-hH-rns">
-                                <rect key="frame" x="244" y="89" width="111" height="41"/>
+                                <rect key="frame" x="244" y="45" width="111" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IX4-PT-9nB">
+                                <rect key="frame" x="0.0" y="94" width="600" height="506"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="resultCell" id="Xlf-gW-U8P">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xlf-gW-U8P" id="hgD-a8-fOy">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ewO-OC-laT" id="CRf-PR-eqm"/>
+                                    <outlet property="delegate" destination="ewO-OC-laT" id="vxg-Rz-5lg"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="IX4-PT-9nB" firstAttribute="centerX" secondItem="xUq-Sn-HA7" secondAttribute="centerX" id="6ob-w8-hd5"/>
                             <constraint firstItem="bNB-hH-rns" firstAttribute="top" secondItem="nw5-1Y-ie1" secondAttribute="bottom" constant="25" id="KdV-k6-09t"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="tjf-rN-DGG" secondAttribute="trailing" constant="25" id="TsF-b0-6bV"/>
-                            <constraint firstItem="tjf-rN-DGG" firstAttribute="centerY" secondItem="xUq-Sn-HA7" secondAttribute="centerY" id="anx-w5-nc0"/>
+                            <constraint firstItem="IX4-PT-9nB" firstAttribute="leading" secondItem="xUq-Sn-HA7" secondAttribute="leadingMargin" constant="-20" id="UtC-LH-iKj"/>
                             <constraint firstItem="bNB-hH-rns" firstAttribute="centerX" secondItem="xUq-Sn-HA7" secondAttribute="centerX" id="gML-td-fEH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IX4-PT-9nB" secondAttribute="trailing" constant="-20" id="hpw-xJ-WJf"/>
+                            <constraint firstItem="iJq-gX-HwU" firstAttribute="top" secondItem="IX4-PT-9nB" secondAttribute="bottom" id="kRS-Kp-8qy"/>
+                            <constraint firstItem="IX4-PT-9nB" firstAttribute="top" secondItem="bNB-hH-rns" secondAttribute="bottom" constant="8" id="pd6-2D-Yia"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resultsTable" destination="IX4-PT-9nB" id="IDc-w5-mIG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P9w-Fo-Br9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

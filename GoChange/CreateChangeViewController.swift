@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 
 class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFieldDelegate,UITableViewDelegate {
@@ -27,6 +28,7 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
     var isOwner:String = ""
     var changeID = ""
     
+    var retrievedSolutionArray = [Solution]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,21 +66,70 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         //TODO: If coming from FollowingViewController load core data details
         
         if(sendingController == "following"){
-            // load core data 
-            if(isOwner == "yes"){
-                // allow edit buttons for name and details
-                _ = RetrieveChange(changeID: changeID){
-                    (result) in
-                    let change = result as! Change
-                    print(change.changeName)
-                }
-                
+            
+           //TODO: change title of VC to View Change
+            
+           var change:Change?
+            
+            
+            
+            
+            
+            //TODO: check for ownership and then dis/allow edit buttons for name and details
+            if isOwner == "true"{
+                // allow editing
+            }else{
+                // disallow editing
             }
+            
+            
+            
+            
+             // load core data
+            _ = RetrieveChange(changeID: changeID){
+                (result) in
+                change = result as? Change
+                print(change)
+                    
+                self.nameField.text = change!.changeName
+                self.detailsField.textColor = UIColor.blackColor()
+                self.detailsField.text = change!.changeDescription
+                    
+            }
+            _ = RetrieveSolutions(change:change!){
+                (result) in
+                print(result)
+                self.retrievedSolutionArray = result as! [Solution]
+            }
+          
+            
             
             
         }else if(sendingController == "results"){
             //TODO: load data from firebase
             
+            let dictionary = [String:AnyObject]()
+            
+            _ = RetrieveFromFirebase(){
+                (snapshot) in
+                
+                //var nameArray:NSMutableArray = []
+                //var refArray:NSMutableArray = []
+                
+                //for rest  in  results.children.allObjects as! [FDataSnapshot]{
+                    //print(rest.value)
+               // }
+                //print(snapshot.ref)
+                //print(snapshot.key)
+                
+                for name in snapshot.children.allObjects as! [FDataSnapshot]{
+                    print(name.value["ChangeName"]!)
+                    print(name.ref)
+                }
+               
+                
+                
+            }
             //TODO: change POST button to SAVE/FOLLOW change
         }
         
@@ -192,9 +243,15 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         //TODO: If viewing change load from core data 
+        if sendingController == "following"{
+            
+            return retrievedSolutionArray.count
+            
+        }else{
+            return TempChange.sharedInstance().solutionNameArray.count
+        }
         
         
-        return TempChange.sharedInstance().solutionNameArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -202,10 +259,16 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         let cellID = "solutionCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath)
         
+        var solutionName:String = ""
         
-        let solutionName = TempChange.sharedInstance().solutionNameArray[indexPath.row]
+        if sendingController == "following"{
+            solutionName = retrievedSolutionArray[indexPath.row].solutionName
+            
+        }else{
+            solutionName = TempChange.sharedInstance().solutionNameArray[indexPath.row] as! String
+        }
         
-        cell.textLabel!.text = solutionName as? String
+        cell.textLabel!.text = solutionName
         
         return cell
         
@@ -213,8 +276,11 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
     
     func tableView(tableView:UITableView,didSelectRowAtIndexPath indexPath: NSIndexPath){
         
+        var controller:AddIdeaViewController
         
+        controller = self.storyboard?.instantiateViewControllerWithIdentifier("AddIdeaViewController") as! AddIdeaViewController
         
+        self.navigationController?.pushViewController(controller, animated: true)
         
         
        
@@ -227,7 +293,7 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
     @IBAction func PostInfo(sender: UIButton) {
         
         //TODO: if button == POST save changes to core data and firebase
-        let owner = true
+        _ = true
         
         
         // else if button == SAVE/FOLLOW save changes to core data only
@@ -241,54 +307,14 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
             
         }else{
            
-            var postDictionary:Dictionary = [String:AnyObject]()
-            
-            var newPost = PostData(postDictionary:postDictionary)
-            
-            
-            /*
-            // Create new change in CoreData and firebase
-           let newChange = CreateChange(currentDetailData:currentDetailData,currentNameData:
-                currentNameData,owner:owner)
-            
-            //TODO: retrieve firebase unique ID from core data and use it to set solution in both core data and firebase
-            let request = NSFetchRequest()
-            
-            let entity = NSEntityDescription.entityForName("Change", inManagedObjectContext: sharedContext)
-            let predicate = NSPredicate(format: "changeName == %@", currentNameData)
-            
-            request.entity = entity
-            request.predicate = predicate
+            let postDictionary:Dictionary = [String:AnyObject]()
             
             
             
-            do{
-               let results =  try sharedContext.executeFetchRequest(request) as! [Change]
-               
-               if let entity = results.first{
-                
-                
-                    let firebaseLocation = entity.firebaseLocation
-                
-                    for var i in 0 ..< (TempChange.sharedInstance().solutionNameArray.count){
-                        _ = CreateSolution(change:newChange, firebaseLocation:firebaseLocation,solutionName:TempChange.sharedInstance().solutionNameArray[i] as! String,solutionDescription:TempChange.sharedInstance().solutionDetailArray[i] as! String)
-                    }
-                
-                    /*
-                    for (key,value) in TempChange.sharedInstance().solutionDictionary{
-                        
-                        _ = CreateSolution(firebaseLocation:firebaseLocation,solutionName: key, solutionDescription: value as! String)
-                    }
-                    */
-                }
-                
-            }catch{
-                //TODO: catch errors
-            }
-            */
-                        
+            _ = PostData(postDictionary:postDictionary)
             
-            self.navigationController?.popToRootViewControllerAnimated(true)
+            
+            self.dismissViewControllerAnimated(true, completion: nil)
             
             
         }
