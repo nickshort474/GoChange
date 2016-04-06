@@ -6,20 +6,20 @@ provides-nominal:
 provides-member:
 - ["C8GoChange10TempChange", ""]
 provides-dynamic-lookup:
-- "tweakNameArray"
+- "solutionDetailArray"
+- "tweakDetailArray"
+- "sharedInstance"
 - "changeName"
+- "tweakNameArray"
 - "solutionNameArray"
 - "changeDetail"
-- "sharedInstance"
-- "tweakDetailArray"
-- "solutionDetailArray"
 depends-top-level:
-- "Array"
-- "String"
-- "NSMutableArray"
-- "StringLiteralType"
 - "NSObject"
+- "NSMutableArray"
 - "TempChange"
+- "StringLiteralType"
+- "String"
+- "Array"
 depends-member:
 - ["Ps9AnyObject", "Element"]
 - !private ["Ps9AnyObject", "TempChange"]

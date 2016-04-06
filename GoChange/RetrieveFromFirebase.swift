@@ -12,25 +12,45 @@ import Firebase
 
 class RetrieveFromFirebase:NSObject{
     
-    var ref = Firebase(url: "https://gochange.firebaseio.com/change/names")
-    //var results = FDataSnapshot()
+    var nameRef = Firebase(url: "https://gochange.firebaseio.com/change/names")
+    var detailRef = Firebase(url: "https://gochange.firebaseio.com/change/details")
     
-    init(completionHandler:(results:FDataSnapshot)->Void){
+    init(changeID:String,completionHandler:(results:FDataSnapshot)->Void){
         
         super.init()
         
-        ref.queryOrderedByChild("ChangeName").observeEventType(.Value, withBlock: { snapshot in
+        // if changeID == "" then coming from searchViewController use nameRef
+        // else if changeID != "" coming from CreateChangeVC, use detailRef and append changeID
+        if (changeID == ""){
             
-           completionHandler(results:snapshot)
-           // print(snapshot.value)
+            nameRef.observeEventType(.Value, withBlock: { snapshot in
             
-        }, withCancelBlock:{ error in
-            print("error retrieving data")
-            print(error.description)
+                completionHandler(results:snapshot)
+           
+            }, withCancelBlock:{ error in
+                
+                print("error retrieving data")
+                print(error.description)
             
-        })
+            })
+        }else{
+            
+            let newDetailRef = detailRef.childByAppendingPath(changeID)
+            
+            newDetailRef.observeEventType(.Value, withBlock: {snapshot in
+                
+                completionHandler(results:snapshot)
+                
+            },withCancelBlock:{ error in
+                
+                print(error.description)
+                    
+            })
+            
+        }
         
-        //let results = [String:AnyObject]()
+        
+        
         
         
     }

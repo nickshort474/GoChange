@@ -9,20 +9,21 @@ provides-dynamic-lookup:
 - "ref"
 - "results"
 depends-top-level:
+- "Firebase"
+- "NSMutableArray"
 - "Void"
+- !private "=="
+- "RetrieveDetailsFromFirebase"
 - !private "String"
 - !private "print"
 - "Array"
-- "FDataSnapshot"
-- "RetrieveDetailsFromFirebase"
-- "Firebase"
-- "NSMutableArray"
-- !private "..<"
 - "StringLiteralType"
 - "NSObject"
+- !private "..<"
 depends-member:
 - ["Ps9AnyObject", "Element"]
 - ["Ps9AnyObject", "Firebase"]
+- !private ["Ps9AnyObject", "addObject"]
 - !private ["Ps9AnyObject", "childByAppendingPath"]
 - !private ["Ps9AnyObject", "count"]
 - !private ["Ps9AnyObject", "description"]
@@ -35,6 +36,7 @@ depends-member:
 - !private ["Ps9AnyObject", "value"]
 - ["Ps9AnyObject", ""]
 - ["Ps23ArrayLiteralConvertible", "Element"]
+- !private ["Ps23ArrayLiteralConvertible", "addObject"]
 - !private ["Ps23ArrayLiteralConvertible", "count"]
 - !private ["Ps23ArrayLiteralConvertible", "subscript"]
 - !private ["Ps22BidirectionalIndexType", "Distance"]
@@ -43,11 +45,15 @@ depends-member:
 - !private ["Ps21BitwiseOperationsType", "Distance"]
 - !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
 - !private ["Ps21BitwiseOperationsType", "_DisabledRangeIndex"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
 - !private ["Ps11CVarArgType", "Distance"]
 - ["Ps11CVarArgType", "Element"]
 - ["Ps11CVarArgType", "Firebase"]
 - !private ["Ps11CVarArgType", "IntegerLiteralType"]
 - !private ["Ps11CVarArgType", "_DisabledRangeIndex"]
+- !private ["Ps11CVarArgType", "addObject"]
 - !private ["Ps11CVarArgType", "childByAppendingPath"]
 - !private ["Ps11CVarArgType", "count"]
 - !private ["Ps11CVarArgType", "description"]
@@ -66,6 +72,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "Element"]
 - ["Ps28CustomDebugStringConvertible", "Firebase"]
 - !private ["Ps28CustomDebugStringConvertible", "Generator"]
+- !private ["Ps28CustomDebugStringConvertible", "addObject"]
 - !private ["Ps28CustomDebugStringConvertible", "childByAppendingPath"]
 - !private ["Ps28CustomDebugStringConvertible", "count"]
 - !private ["Ps28CustomDebugStringConvertible", "description"]
@@ -83,6 +90,8 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "Generator"]
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["Ps23CustomStringConvertible", "_DisabledRangeIndex"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "addObject"]
 - !private ["Ps23CustomStringConvertible", "childByAppendingPath"]
 - !private ["Ps23CustomStringConvertible", "count"]
 - !private ["Ps23CustomStringConvertible", "description"]
@@ -101,6 +110,8 @@ depends-member:
 - !private ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "Value"]
 - !private ["Ps9Equatable", "_DisabledRangeIndex"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "addObject"]
 - !private ["Ps9Equatable", "childByAppendingPath"]
 - !private ["Ps9Equatable", "count"]
 - !private ["Ps9Equatable", "description"]
@@ -132,6 +143,8 @@ depends-member:
 - !private ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "Value"]
 - !private ["Ps8Hashable", "_DisabledRangeIndex"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "addObject"]
 - !private ["Ps8Hashable", "childByAppendingPath"]
 - !private ["Ps8Hashable", "count"]
 - !private ["Ps8Hashable", "description"]
@@ -148,6 +161,7 @@ depends-member:
 - !private ["Si", "Distance"]
 - !private ["Si", "IntegerLiteralType"]
 - !private ["Si", "_DisabledRangeIndex"]
+- !private ["Si", "deinit"]
 - !private ["Ps21IntegerArithmeticType", "Distance"]
 - !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
 - !private ["Ps21IntegerArithmeticType", "_DisabledRangeIndex"]
@@ -161,32 +175,39 @@ depends-member:
 - !private ["Ps14MirrorPathType", "IntegerLiteralType"]
 - !private ["Ps14MirrorPathType", "_DisabledRangeIndex"]
 - ["CSo7NSArray", "Element"]
+- !private ["CSo7NSArray", "addObject"]
 - !private ["CSo7NSArray", "count"]
 - !private ["CSo7NSArray", "subscript"]
 - ["PSo8NSCoding", "Element"]
+- !private ["PSo8NSCoding", "addObject"]
 - !private ["PSo8NSCoding", "count"]
 - !private ["PSo8NSCoding", "description"]
 - !private ["PSo8NSCoding", "subscript"]
 - ["PSo9NSCopying", "Element"]
+- !private ["PSo9NSCopying", "addObject"]
 - !private ["PSo9NSCopying", "count"]
+- !private ["PSo9NSCopying", "deinit"]
 - !private ["PSo9NSCopying", "description"]
 - !private ["PSo9NSCopying", "subscript"]
 - !private ["CSo7NSError", "description"]
 - ["PSo17NSFastEnumeration", "Element"]
+- !private ["PSo17NSFastEnumeration", "addObject"]
 - !private ["PSo17NSFastEnumeration", "count"]
 - !private ["PSo17NSFastEnumeration", "subscript"]
 - ["CSo14NSMutableArray", "Element"]
+- !private ["CSo14NSMutableArray", "addObject"]
 - !private ["CSo14NSMutableArray", "count"]
 - !private ["CSo14NSMutableArray", "subscript"]
 - ["PSo16NSMutableCopying", "Element"]
+- !private ["PSo16NSMutableCopying", "addObject"]
 - !private ["PSo16NSMutableCopying", "count"]
 - !private ["PSo16NSMutableCopying", "subscript"]
 - ["CSo8NSObject", "Element"]
-- ["CSo8NSObject", "FDataSnapshot"]
 - ["CSo8NSObject", "Firebase"]
 - ["CSo8NSObject", "NSMutableArray"]
 - !private ["CSo8NSObject", "String"]
 - ["CSo8NSObject", "Void"]
+- !private ["CSo8NSObject", "addObject"]
 - !private ["CSo8NSObject", "childByAppendingPath"]
 - !private ["CSo8NSObject", "count"]
 - !private ["CSo8NSObject", "description"]
@@ -200,6 +221,7 @@ depends-member:
 - ["CSo8NSObject", ""]
 - ["PSo16NSObjectProtocol", "Element"]
 - ["PSo16NSObjectProtocol", "Firebase"]
+- !private ["PSo16NSObjectProtocol", "addObject"]
 - !private ["PSo16NSObjectProtocol", "childByAppendingPath"]
 - !private ["PSo16NSObjectProtocol", "count"]
 - !private ["PSo16NSObjectProtocol", "description"]
@@ -212,16 +234,17 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "value"]
 - ["PSo16NSObjectProtocol", ""]
 - ["PSo14NSSecureCoding", "Element"]
+- !private ["PSo14NSSecureCoding", "addObject"]
 - !private ["PSo14NSSecureCoding", "count"]
 - !private ["PSo14NSSecureCoding", "description"]
 - !private ["PSo14NSSecureCoding", "subscript"]
+- !private ["Sq", "deinit"]
 - !private ["Ps21RandomAccessIndexType", "Distance"]
 - !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
 - !private ["Ps21RandomAccessIndexType", "_DisabledRangeIndex"]
 - !private ["Vs5Range", "Generator"]
 - !private ["Vs14RangeGenerator", "Element"]
 - !private ["Ps16RawRepresentable", "Value"]
-- ["C8GoChange27RetrieveDetailsFromFirebase", "FDataSnapshot"]
 - ["C8GoChange27RetrieveDetailsFromFirebase", "Firebase"]
 - ["C8GoChange27RetrieveDetailsFromFirebase", "NSMutableArray"]
 - !private ["C8GoChange27RetrieveDetailsFromFirebase", "String"]
@@ -233,6 +256,7 @@ depends-member:
 - ["C8GoChange27RetrieveDetailsFromFirebase", "results"]
 - ["Ps12SequenceType", "Element"]
 - !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "addObject"]
 - !private ["Ps12SequenceType", "count"]
 - !private ["Ps12SequenceType", "subscript"]
 - !private ["Ps17SignedIntegerType", "Distance"]
@@ -245,6 +269,8 @@ depends-member:
 - !private ["Ps10Strideable", "Distance"]
 - !private ["Ps10Strideable", "IntegerLiteralType"]
 - !private ["Ps10Strideable", "_DisabledRangeIndex"]
+- !private ["SS", "deinit"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "_DisabledRangeIndex"]
@@ -260,6 +286,7 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "Distance"]
 - !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
 - !private ["Ps21_ObjectiveCBridgeable", "_DisabledRangeIndex"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["Ps22_RandomAccessAmbiguity", "Distance"]
 - !private ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
 - !private ["Ps22_RandomAccessAmbiguity", "_DisabledRangeIndex"]
@@ -268,6 +295,8 @@ depends-member:
 - !private ["Ps12_Reflectable", "Generator"]
 - !private ["Ps12_Reflectable", "IntegerLiteralType"]
 - !private ["Ps12_Reflectable", "_DisabledRangeIndex"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "addObject"]
 - !private ["Ps12_Reflectable", "count"]
 - !private ["Ps12_Reflectable", "subscript"]
 - !private ["Ps18_SignedIntegerType", "Distance"]
@@ -278,6 +307,9 @@ depends-nominal:
 - "Ps23ArrayLiteralConvertible"
 - !private "Ps22BidirectionalIndexType"
 - !private "Ps21BitwiseOperationsType"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
 - "Ps11CVarArgType"
 - !private "Ps14CollectionType"
 - !private "Ps10Comparable"
@@ -310,6 +342,7 @@ depends-nominal:
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - "PSo14NSSecureCoding"
+- !private "Sq"
 - !private "Ps21RandomAccessIndexType"
 - !private "Vs5Range"
 - !private "Vs14RangeGenerator"
@@ -320,6 +353,8 @@ depends-nominal:
 - !private "Ps16SignedNumberType"
 - !private "Vs12StaticString"
 - !private "Ps10Strideable"
+- !private "SS"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
 - !private "Ps33_BuiltinIntegerLiteralConvertible"
 - !private "Ps14_Incrementable"
 - !private "Ps22_IntegerArithmeticType"
@@ -329,6 +364,7 @@ depends-nominal:
 - "Ps12_Reflectable"
 - !private "Ps18_SignedIntegerType"
 depends-dynamic-lookup:
+- !private "subscript"
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"
@@ -352,4 +388,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "066ff6ea01c6e38a365fd17b3406669b"
+interface-hash: "f918128253fa464b1ccdff353e0ee7e0"

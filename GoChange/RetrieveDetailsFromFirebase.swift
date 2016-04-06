@@ -17,31 +17,38 @@ class RetrieveDetailsFromFirebase:NSObject{
     
     var results:NSMutableArray = []
     
-    init(userRefArray:NSMutableArray,completionHandler:(results:FDataSnapshot)->Void){
+    init(userRefArray:NSMutableArray,completionHandler:(results:NSMutableArray)->Void){
         
         super.init()
-        
         
         for var i in 0 ..< userRefArray.count{
             
             var changeRef = ref.childByAppendingPath(userRefArray[i] as! String)
             
             changeRef.observeEventType(.Value, withBlock: { snapshot in
-            
-            completionHandler(results:snapshot)
-                print(snapshot.value)
+                
+                self.results.addObject(snapshot.value["ChangeDetail"] as! String)
+                
+                print(userRefArray.count)
+                print(self.results.count)
+                
+                if(self.results.count == userRefArray.count){
+                    print("completing")
+                    completionHandler(results:self.results)
+                }
+                
             
             }, withCancelBlock:{ error in
                 print("error retrieving data")
                 print(error.description)
                 
-        })
-
+            })
+            
+            
             
         }
-                
-        //let results = [String:AnyObject]()
         
+        // if results.count == userRefArray
         
     }
     

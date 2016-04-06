@@ -217,8 +217,8 @@
 				36C37C6B1C7A00E3002B4FB1 /* AppDelegate.swift */,
 				36C37CA51C7A01AC002B4FB1 /* CreateChangeViewController.swift */,
 				36C37CA11C7A01AC002B4FB1 /* AddIdeaViewController.swift */,
-				36C37CAB1C7A01AC002B4FB1 /* SearchViewController.swift */,
 				36C37CA61C7A01AC002B4FB1 /* FollowingViewController.swift */,
+				36C37CAB1C7A01AC002B4FB1 /* SearchViewController.swift */,
 				36C37CAA1C7A01AC002B4FB1 /* ResultsViewController.swift */,
 				36C37CAD1C7A01AC002B4FB1 /* WebViewController.swift */,
 			);

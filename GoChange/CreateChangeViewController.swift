@@ -64,28 +64,21 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
        
         
         //TODO: If coming from FollowingViewController load core data details
+        if (isOwner == "true"){
+            // allow editing
+        }else{
+            // disallow editing
+        }
         
         if(sendingController == "following"){
             
            //TODO: change title of VC to View Change
-            
            var change:Change?
             
-            
-            
-            
-            
             //TODO: check for ownership and then dis/allow edit buttons for name and details
-            if isOwner == "true"{
-                // allow editing
-            }else{
-                // disallow editing
-            }
+                        
             
-            
-            
-            
-             // load core data
+             // load core data changes
             _ = RetrieveChange(changeID: changeID){
                 (result) in
                 change = result as? Change
@@ -96,40 +89,31 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
                 self.detailsField.text = change!.changeDescription
                     
             }
+            
+            //load core data solutions
             _ = RetrieveSolutions(change:change!){
                 (result) in
                 print(result)
                 self.retrievedSolutionArray = result as! [Solution]
             }
-          
-            
-            
+           
             
         }else if(sendingController == "results"){
+            
             //TODO: load data from firebase
-            
-            let dictionary = [String:AnyObject]()
-            
-            _ = RetrieveFromFirebase(){
-                (snapshot) in
+            //_ = RetrieveFromFirebase(changeID:changeID){
+               // (snapshot) in
+               // print(snapshot)
                 
-                //var nameArray:NSMutableArray = []
-                //var refArray:NSMutableArray = []
-                
-                //for rest  in  results.children.allObjects as! [FDataSnapshot]{
-                    //print(rest.value)
-               // }
-                //print(snapshot.ref)
-                //print(snapshot.key)
-                
+                /*
                 for name in snapshot.children.allObjects as! [FDataSnapshot]{
                     print(name.value["ChangeName"]!)
                     print(name.ref)
                 }
-               
+               */
                 
                 
-            }
+            //}
             //TODO: change POST button to SAVE/FOLLOW change
         }
         

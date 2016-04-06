@@ -21,13 +21,6 @@ class FollowingViewController: UITableViewController,
         
         // load all core data saved changes
         
-        //followingTableView.delegate = self
-        //followingTableView.backgroundColor = UIColor.whiteColor()
-        //self.definesPresentationContext = true
-        
-        
-        
-        
         do{
             try fetchedResultsController.performFetch()
         }catch{

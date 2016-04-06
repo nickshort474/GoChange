@@ -10,9 +10,9 @@ provides-dynamic-lookup:
 - "printName"
 depends-top-level:
 - "GoChangeClient"
-- !private "print"
 - !private "StringLiteralType"
 - "NSObject"
+- !private "print"
 depends-member:
 - !private ["Ps9AnyObject", "GoChangeClient"]
 - ["Ps9AnyObject", "init"]

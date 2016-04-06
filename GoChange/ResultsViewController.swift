@@ -13,7 +13,9 @@ class ResultsViewController: UIViewController,UITableViewDelegate {
     @IBOutlet weak var resultsTable: UITableView!
     
     var refArray:NSMutableArray = []
-    var resultArray:NSMutableArray = []
+    var resultNameArray:NSMutableArray = []
+    var resultDetailArray:NSMutableArray = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +30,7 @@ class ResultsViewController: UIViewController,UITableViewDelegate {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        //TODO: If viewing change load from core data
-        return resultArray.count
+        return resultNameArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -38,34 +39,33 @@ class ResultsViewController: UIViewController,UITableViewDelegate {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath)
         
-        var solutionName:String = self.resultArray[indexPath.row] as! String
+        var changeName:String = self.resultNameArray[indexPath.row] as! String
+        var changeDetail:String = self.resultDetailArray[indexPath.row] as! String
         
-        
-        cell.textLabel!.text = solutionName
+        cell.textLabel!.text = changeName
+        cell.detailTextLabel!.text = changeDetail
         
         return cell
         
     }
     
-    
-    
-    
-    
-    
-    func ResultLinkButton(sender: UIButton) {
-        //ChangeViewController
+   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("following")
         
         var controller:CreateChangeViewController
+        
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("CreateChangeViewController") as! CreateChangeViewController
+        
         let navigationController = self.navigationController
         
         controller.sendingController = "results"
-        controller.isOwner = "no"
+        controller.isOwner = "false"
+        controller.changeID = self.refArray[indexPath.row] as! String
         
         navigationController?.pushViewController(controller,animated: true)
-        
-        
+    
     }
+  
     
 }
 

@@ -7,26 +7,26 @@ provides-member:
 - ["C8GoChange8PostData", ""]
 provides-dynamic-lookup:
 - "sharedContext"
-- "savedAutoID"
 - "changeID"
 - "createCoreDataChange"
 - "saveChangeToFirebase"
+- "savedAutoID"
 depends-top-level:
-- !private "Change"
-- !private "Solution"
 - !private "Firebase"
 - !private "TempChange"
-- "NSManagedObjectContext"
-- "NSObject"
-- "AnyObject"
 - !private "Dictionary"
-- !private "BooleanLiteralType"
-- "PostData"
-- !private "print"
-- !private "CoreDataStackManager"
+- !private "..<"
+- "NSManagedObjectContext"
 - "String"
 - !private "StringLiteralType"
-- !private "..<"
+- !private "print"
+- "AnyObject"
+- !private "Solution"
+- "NSObject"
+- !private "CoreDataStackManager"
+- "PostData"
+- !private "Change"
+- !private "BooleanLiteralType"
 depends-member:
 - !private ["Ps9AnyObject", "AnyObject"]
 - !private ["Ps9AnyObject", "Change"]
