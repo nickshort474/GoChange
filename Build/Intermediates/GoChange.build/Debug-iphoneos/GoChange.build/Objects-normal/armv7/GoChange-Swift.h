@@ -213,6 +213,7 @@ SWIFT_CLASS("_TtC8GoChange12CreateChange")
 - (Change * _Nonnull)createCoreDataChange:(NSString * _Nonnull)currentDetailData currentNameData:(NSString * _Nonnull)currentNameData owner:(BOOL)owner;
 @end
 
+@class NSMutableArray;
 
 SWIFT_CLASS("_TtC8GoChange26CreateChangeViewController")
 @interface CreateChangeViewController : UIViewController <UIScrollViewDelegate, UITextFieldDelegate, UITableViewDelegate, UITextViewDelegate>
@@ -226,8 +227,12 @@ SWIFT_CLASS("_TtC8GoChange26CreateChangeViewController")
 @property (nonatomic, copy) NSString * _Nonnull currentDetailData;
 @property (nonatomic, copy) NSString * _Nonnull sendingController;
 @property (nonatomic, copy) NSString * _Nonnull isOwner;
+@property (nonatomic, copy) NSString * _Nonnull changeName;
+@property (nonatomic, copy) NSString * _Nonnull changeDetail;
 @property (nonatomic, copy) NSString * _Nonnull changeID;
 @property (nonatomic, copy) NSArray<Solution *> * _Nonnull retrievedSolutionArray;
+@property (nonatomic, strong) NSMutableArray * _Nonnull firebaseSolutionNames;
+@property (nonatomic, strong) NSMutableArray * _Nonnull firebaseSolutionDetails;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
@@ -327,7 +332,6 @@ SWIFT_CLASS("_TtC8GoChange8PostData")
 - (void)createCoreDataChange;
 @end
 
-@class NSMutableArray;
 
 SWIFT_CLASS("_TtC8GoChange21ResultsViewController")
 @interface ResultsViewController : UIViewController <UIScrollViewDelegate, UITableViewDelegate>
@@ -364,7 +368,6 @@ SWIFT_CLASS("_TtC8GoChange27RetrieveDetailsFromFirebase")
 SWIFT_CLASS("_TtC8GoChange20RetrieveFromFirebase")
 @interface RetrieveFromFirebase : NSObject
 @property (nonatomic, strong) Firebase * _Null_unspecified nameRef;
-@property (nonatomic, strong) Firebase * _Null_unspecified detailRef;
 - (nonnull instancetype)initWithChangeID:(NSString * _Nonnull)changeID completionHandler:(void (^ _Nonnull)(FDataSnapshot * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -373,6 +376,13 @@ SWIFT_CLASS("_TtC8GoChange17RetrieveSolutions")
 @interface RetrieveSolutions : NSObject
 - (nonnull instancetype)initWithChange:(Change * _Nonnull)change completionHandler:(void (^ _Nonnull)(id _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
 @property (nonatomic, strong) NSManagedObjectContext * _Nonnull sharedContext;
+@end
+
+
+SWIFT_CLASS("_TtC8GoChange29RetrieveSolutionsFromFirebase")
+@interface RetrieveSolutionsFromFirebase : NSObject
+@property (nonatomic, strong) Firebase * _Null_unspecified ref;
+- (nonnull instancetype)initWithChangeID:(NSString * _Nonnull)changeID completionHandler:(void (^ _Nonnull)(FDataSnapshot * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
 @end
 
 

@@ -50,8 +50,7 @@ class ResultsViewController: UIViewController,UITableViewDelegate {
     }
     
    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("following")
-        
+                
         var controller:CreateChangeViewController
         
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("CreateChangeViewController") as! CreateChangeViewController
@@ -60,6 +59,9 @@ class ResultsViewController: UIViewController,UITableViewDelegate {
         
         controller.sendingController = "results"
         controller.isOwner = "false"
+    
+        controller.changeName = self.resultNameArray[indexPath.row] as! String
+        controller.changeDetail = self.resultDetailArray[indexPath.row] as! String
         controller.changeID = self.refArray[indexPath.row] as! String
         
         navigationController?.pushViewController(controller,animated: true)

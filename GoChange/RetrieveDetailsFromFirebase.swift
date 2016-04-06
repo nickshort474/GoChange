@@ -13,8 +13,7 @@ import Firebase
 class RetrieveDetailsFromFirebase:NSObject{
     
     var ref = Firebase(url: "https://gochange.firebaseio.com/change/details")
-    //var results = FDataSnapshot()
-    
+        
     var results:NSMutableArray = []
     
     init(userRefArray:NSMutableArray,completionHandler:(results:NSMutableArray)->Void){
@@ -29,12 +28,10 @@ class RetrieveDetailsFromFirebase:NSObject{
                 
                 self.results.addObject(snapshot.value["ChangeDetail"] as! String)
                 
-                print(userRefArray.count)
-                print(self.results.count)
-                
                 if(self.results.count == userRefArray.count){
-                    print("completing")
+                    
                     completionHandler(results:self.results)
+                    
                 }
                 
             

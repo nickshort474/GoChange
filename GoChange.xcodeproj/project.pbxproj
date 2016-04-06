@@ -36,6 +36,7 @@
 		36D7CA071CA597F200A73176 /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D7CA061CA597F200A73176 /* Solution.swift */; };
 		36D7CA091CA5987E00A73176 /* Tweak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D7CA081CA5987E00A73176 /* Tweak.swift */; };
 		36D7CA0B1CA5AB5E00A73176 /* CreateSolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D7CA0A1CA5AB5E00A73176 /* CreateSolution.swift */; };
+		36D963F71CB556A1006F9D36 /* RetrieveSolutionsFromFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D963F61CB556A1006F9D36 /* RetrieveSolutionsFromFirebase.swift */; };
 		36DB99551CA9336600CC4D9E /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB99541CA9336600CC4D9E /* PostData.swift */; };
 		36DE37521CB12640005DEEEA /* RetrieveSolutions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DE37511CB12640005DEEEA /* RetrieveSolutions.swift */; };
 		36E703EF1CAEE30C007C880C /* RetrieveChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E703EE1CAEE30C007C880C /* RetrieveChange.swift */; };
@@ -97,6 +98,7 @@
 		36D7CA061CA597F200A73176 /* Solution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solution.swift; sourceTree = "<group>"; };
 		36D7CA081CA5987E00A73176 /* Tweak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweak.swift; sourceTree = "<group>"; };
 		36D7CA0A1CA5AB5E00A73176 /* CreateSolution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateSolution.swift; sourceTree = "<group>"; };
+		36D963F61CB556A1006F9D36 /* RetrieveSolutionsFromFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveSolutionsFromFirebase.swift; sourceTree = "<group>"; };
 		36DB99541CA9336600CC4D9E /* PostData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		36DE37511CB12640005DEEEA /* RetrieveSolutions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveSolutions.swift; sourceTree = "<group>"; };
 		36E703EE1CAEE30C007C880C /* RetrieveChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveChange.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 		36B03CC51C8DFBC700E9427D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				36D963F61CB556A1006F9D36 /* RetrieveSolutionsFromFirebase.swift */,
 				361A063F1CB2CD450066C07C /* RetrieveFromFirebase.swift */,
 				36EB1EB91CB42E9000EA0CC4 /* RetrieveDetailsFromFirebase.swift */,
 				36DE37511CB12640005DEEEA /* RetrieveSolutions.swift */,
@@ -214,7 +217,6 @@
 				36C37CAC1C7A01AC002B4FB1 /* SignupViewController.swift */,
 				36AE6F351C8C37A50041B5CD /* UpdateUserInfoController.swift */,
 				36C37CA71C7A01AC002B4FB1 /* HomeViewController.swift */,
-				36C37C6B1C7A00E3002B4FB1 /* AppDelegate.swift */,
 				36C37CA51C7A01AC002B4FB1 /* CreateChangeViewController.swift */,
 				36C37CA11C7A01AC002B4FB1 /* AddIdeaViewController.swift */,
 				36C37CA61C7A01AC002B4FB1 /* FollowingViewController.swift */,
@@ -228,6 +230,7 @@
 		36C37C9E1C7A010F002B4FB1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				36C37C6B1C7A00E3002B4FB1 /* AppDelegate.swift */,
 				36C37CBC1C7A01C5002B4FB1 /* GoChangeConstants.swift */,
 				369EF17E1C80C5D900D8D46A /* CoreDataStackManager.swift */,
 				36C37C721C7A00E3002B4FB1 /* GoChange.xcdatamodeld */,
@@ -490,6 +493,7 @@
 				36AE6F361C8C37A50041B5CD /* UpdateUserInfoController.swift in Sources */,
 				36C37CB31C7A01AC002B4FB1 /* FollowingViewController.swift in Sources */,
 				36C37C741C7A00E3002B4FB1 /* GoChange.xcdatamodeld in Sources */,
+				36D963F71CB556A1006F9D36 /* RetrieveSolutionsFromFirebase.swift in Sources */,
 				369EF17D1C80C24600D8D46A /* Change.swift in Sources */,
 				36C37CBA1C7A01AC002B4FB1 /* WebViewController.swift in Sources */,
 				36D7CA071CA597F200A73176 /* Solution.swift in Sources */,

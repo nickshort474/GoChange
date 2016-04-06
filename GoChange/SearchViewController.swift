@@ -129,6 +129,7 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
             useRefArray.addObject(returnedRefArray[intOfNum])
         }
         
+        // use refArray to collect details from firebase
         _ = RetrieveDetailsFromFirebase(userRefArray: useRefArray){
                 (result) in
             

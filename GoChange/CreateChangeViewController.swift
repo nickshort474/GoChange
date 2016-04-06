@@ -26,9 +26,15 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
     
     var sendingController:String = ""
     var isOwner:String = ""
+    
+    var changeName:String = ""
+    var changeDetail:String = ""
     var changeID = ""
     
     var retrievedSolutionArray = [Solution]()
+    
+    var firebaseSolutionNames:NSMutableArray = []
+    var firebaseSolutionDetails:NSMutableArray = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,21 +68,20 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         let barButtonItem = UIBarButtonItem(title: "Cancel Idea", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
         self.navigationItem.backBarButtonItem = barButtonItem
        
-        
-        //TODO: If coming from FollowingViewController load core data details
+        //TODO: change POST button to SAVE/FOLLOW change
+        //TODO: check for ownership and then dis/allow edit buttons for name and details
         if (isOwner == "true"){
             // allow editing
         }else{
             // disallow editing
         }
         
+        
+        // If coming from FollowingViewController load core data details
         if(sendingController == "following"){
             
            //TODO: change title of VC to View Change
            var change:Change?
-            
-            //TODO: check for ownership and then dis/allow edit buttons for name and details
-                        
             
              // load core data changes
             _ = RetrieveChange(changeID: changeID){
@@ -100,21 +105,29 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
             
         }else if(sendingController == "results"){
             
+            self.nameField.text = changeName
+            self.detailsField.textColor = UIColor.blackColor()
+            self.detailsField.text = changeDetail
+            
+            
             //TODO: load data from firebase
-            //_ = RetrieveFromFirebase(changeID:changeID){
-               // (snapshot) in
-               // print(snapshot)
+            _ = RetrieveSolutionsFromFirebase(changeID:changeID){
+                (snapshot) in
                 
-                /*
                 for name in snapshot.children.allObjects as! [FDataSnapshot]{
-                    print(name.value["ChangeName"]!)
-                    print(name.ref)
+                    
+                    //print(name.value["solutionName"]!!)
+                    //print(name.value["solutionDescription"]!!)
+                    
+                    self.firebaseSolutionNames.addObject(name.value["solutionName"]!!)
+                    self.firebaseSolutionDetails.addObject(name.value["solutionDescription"]!!)
+                    self.solutionTable.reloadData()
                 }
-               */
+              
                 
                 
-            //}
-            //TODO: change POST button to SAVE/FOLLOW change
+            }
+            
         }
         
     }
@@ -228,9 +241,9 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         
         //TODO: If viewing change load from core data 
         if sendingController == "following"{
-            
             return retrievedSolutionArray.count
-            
+        }else if(sendingController == "results"){
+            return firebaseSolutionNames.count
         }else{
             return TempChange.sharedInstance().solutionNameArray.count
         }
@@ -247,7 +260,8 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         
         if sendingController == "following"{
             solutionName = retrievedSolutionArray[indexPath.row].solutionName
-            
+        }else if(sendingController == "results"){
+            solutionName = firebaseSolutionNames[indexPath.row] as! String
         }else{
             solutionName = TempChange.sharedInstance().solutionNameArray[indexPath.row] as! String
         }
@@ -263,6 +277,8 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         var controller:AddIdeaViewController
         
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("AddIdeaViewController") as! AddIdeaViewController
+        
+        
         
         self.navigationController?.pushViewController(controller, animated: true)
         

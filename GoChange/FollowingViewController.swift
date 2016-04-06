@@ -81,8 +81,6 @@ class FollowingViewController: UITableViewController,
         let object = fetchedResultsController.objectAtIndexPath(indexPath) as! Change
         
         cell.textLabel?.text = object.changeName
-        
-        
         cell.detailTextLabel!.text = object.changeDescription
         
         return cell
@@ -90,7 +88,6 @@ class FollowingViewController: UITableViewController,
     
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("following")
         
         var controller:CreateChangeViewController
         
