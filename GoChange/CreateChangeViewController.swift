@@ -80,30 +80,78 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         // If coming from FollowingViewController load core data details
         if(sendingController == "following"){
             
-           //TODO: change title of VC to View Change
-           var change:Change?
+            //change title of VC to View Change
+            self.title = "View Change"
+                        
+            var change:Change?
+            var localSolutionCount:Int?
             
-             // load core data changes
+            // load core data changes
             _ = RetrieveChange(changeID: changeID){
                 (result) in
                 change = result as? Change
-                print(change)
-                    
+                //print(change)
+                
+                localSolutionCount = change?.solutionCount as? Int
+                
                 self.nameField.text = change!.changeName
                 self.detailsField.textColor = UIColor.blackColor()
                 self.detailsField.text = change!.changeDescription
                     
             }
             
+            //TODO: connect to firebase and check solution count for change
+            // compare to core data solution count and load extra solutions into core data
+            _ = RetrieveSolutionCountFirebase(changeID: changeID, completionHandler: {
+                (result) in
+                
+                let firebaseSolutionCount = result.value as! Int
+                
+                // if new solutions added to firebase load them into core data
+                if (firebaseSolutionCount != localSolutionCount){
+                   
+                    _ = RetrieveSolutionsFromFirebase(changeID: self.changeID, completionHandler: {
+                        (result) in
+                        
+                        for name in result.children.allObjects as! [FDataSnapshot]{
+                            
+                            //TODO: create dictionary of values from returned firebase data, pass to postData
+                            //TODO:     OR!  put data into TempChange.sharedInstance.solutionNameArray
+                            
+                            
+                            
+                            //self.firebaseSolutionNames.addObject(name.value["solutionName"]!!)
+                            //self.firebaseSolutionDetails.addObject(name.value["solutionDescription"]!!)
+                            //self.solutionTable.reloadData()
+                            
+                            let postType:String = "solutionPost"
+                            
+                            _ = PostData(postType:postType)
+                            
+                            
+                            
+                            
+                            
+                        }
+                        
+                    })
+                }
+                
+                
+            })
+            
+            
             //load core data solutions
             _ = RetrieveSolutions(change:change!){
                 (result) in
-                print(result)
+                //print(result)
                 self.retrievedSolutionArray = result as! [Solution]
             }
            
             
         }else if(sendingController == "results"){
+            
+            self.title = "View Change"
             
             self.nameField.text = changeName
             self.detailsField.textColor = UIColor.blackColor()
@@ -123,8 +171,7 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
                     self.firebaseSolutionDetails.addObject(name.value["solutionDescription"]!!)
                     self.solutionTable.reloadData()
                 }
-              
-                
+               
                 
             }
             
@@ -152,7 +199,15 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
     
     //-------------------Button methods---------------
     @IBAction func homeButtonClick(sender: UIButton) {
-        navigationController?.dismissViewControllerAnimated(true, completion: nil)
+        
+        if (sendingController == "following" || sendingController == "results"){
+            navigationController?.popViewControllerAnimated(true)
+        }else{
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
+        
+        
     }
     
     
@@ -307,11 +362,10 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
             
         }else{
            
-            let postDictionary:Dictionary = [String:AnyObject]()
+            let postType:String = "fullPost"
             
             
-            
-            _ = PostData(postDictionary:postDictionary)
+            _ = PostData(postType:postType)
             
             
             self.dismissViewControllerAnimated(true, completion: nil)

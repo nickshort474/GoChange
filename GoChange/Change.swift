@@ -18,6 +18,7 @@ class Change:NSManagedObject{
         static let owner = "owner"
         static let firebaseLocation = "firebaseLocation"
         static let changeID = "changeID"
+        static let solutionCount = "solutionCount"
     }
     
     
@@ -26,7 +27,7 @@ class Change:NSManagedObject{
     @NSManaged var owner:NSNumber
     @NSManaged var firebaseLocation:String
     @NSManaged var changeID:String
-    
+    @NSManaged var solutionCount:NSNumber
     @NSManaged var changeNeedingSolution:[Solution]
     
     
@@ -45,6 +46,8 @@ class Change:NSManagedObject{
         changeDescription = dictionary[Change.Keys.changeDescription] as! String
         firebaseLocation = dictionary[Change.Keys.firebaseLocation] as! String
         changeID = dictionary[Change.Keys.changeID] as! String
+        solutionCount = dictionary[Change.Keys.solutionCount] as! NSNumber
+        
         
         let boolValue = dictionary[Change.Keys.owner] as! Bool
         owner = NSNumber(bool: boolValue)

@@ -20,7 +20,6 @@ class Solution:NSManagedObject{
     
     @NSManaged var solutionName:String
     @NSManaged var solutionDescription:String
-    
     @NSManaged var solutionToChange:Change
     @NSManaged var solutionNeedingTweaking:[Tweak]
     

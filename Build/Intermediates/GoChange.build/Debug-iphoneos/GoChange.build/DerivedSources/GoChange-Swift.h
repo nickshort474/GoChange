@@ -163,10 +163,6 @@ SWIFT_CLASS("_TtC8GoChange22AddTweakViewController")
 @class UIWindow;
 @class UIApplication;
 @class NSObject;
-@class NSURL;
-@class NSManagedObjectModel;
-@class NSPersistentStoreCoordinator;
-@class NSManagedObjectContext;
 
 SWIFT_CLASS("_TtC8GoChange11AppDelegate")
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
@@ -177,17 +173,13 @@ SWIFT_CLASS("_TtC8GoChange11AppDelegate")
 - (void)applicationWillEnterForeground:(UIApplication * _Nonnull)application;
 - (void)applicationDidBecomeActive:(UIApplication * _Nonnull)application;
 - (void)applicationWillTerminate:(UIApplication * _Nonnull)application;
-@property (nonatomic, strong) NSURL * _Nonnull applicationDocumentsDirectory;
-@property (nonatomic, strong) NSManagedObjectModel * _Nonnull managedObjectModel;
-@property (nonatomic, strong) NSPersistentStoreCoordinator * _Nonnull persistentStoreCoordinator;
-@property (nonatomic, strong) NSManagedObjectContext * _Nonnull managedObjectContext;
-- (void)saveContext;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class NSNumber;
 @class Solution;
 @class NSEntityDescription;
+@class NSManagedObjectContext;
 
 SWIFT_CLASS("_TtC8GoChange6Change")
 @interface Change : NSManagedObject
@@ -196,6 +188,7 @@ SWIFT_CLASS("_TtC8GoChange6Change")
 @property (nonatomic, strong) NSNumber * _Nonnull owner;
 @property (nonatomic, copy) NSString * _Nonnull firebaseLocation;
 @property (nonatomic, copy) NSString * _Nonnull changeID;
+@property (nonatomic, strong) NSNumber * _Nonnull solutionCount;
 @property (nonatomic, copy) NSArray<Solution *> * _Nonnull changeNeedingSolution;
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithDictionary:(NSDictionary<NSString *, id> * _Nonnull)dictionary context:(NSManagedObjectContext * _Nonnull)context OBJC_DESIGNATED_INITIALIZER;
@@ -367,6 +360,13 @@ SWIFT_CLASS("_TtC8GoChange27RetrieveDetailsFromFirebase")
 
 SWIFT_CLASS("_TtC8GoChange20RetrieveFromFirebase")
 @interface RetrieveFromFirebase : NSObject
+@property (nonatomic, strong) Firebase * _Null_unspecified nameRef;
+- (nonnull instancetype)initWithChangeID:(NSString * _Nonnull)changeID completionHandler:(void (^ _Nonnull)(FDataSnapshot * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8GoChange29RetrieveSolutionCountFirebase")
+@interface RetrieveSolutionCountFirebase : NSObject
 @property (nonatomic, strong) Firebase * _Null_unspecified nameRef;
 - (nonnull instancetype)initWithChangeID:(NSString * _Nonnull)changeID completionHandler:(void (^ _Nonnull)(FDataSnapshot * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
 @end

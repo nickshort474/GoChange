@@ -699,10 +699,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="Hm8-0Y-rPt">
                         <barButtonItem key="leftBarButtonItem" style="done" id="7Ss-Bt-G70">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ya9-M1-omz">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ya9-M1-omz">
                                 <rect key="frame" x="20" y="7" width="133" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Home"/>
                                 <connections>
                                     <action selector="homeButtonClick:" destination="gbE-7d-A1C" eventType="touchUpInside" id="m2a-dq-SlG"/>

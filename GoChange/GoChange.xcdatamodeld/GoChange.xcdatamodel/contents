@@ -6,6 +6,7 @@
         <attribute name="changeName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="firebaseLocation" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="owner" optional="YES" attributeType="Integer 64" syncable="YES"/>
+        <attribute name="solutionCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="changeNeedingSolution" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Solution" inverseName="solutionToChange" inverseEntity="Solution" syncable="YES"/>
     </entity>
     <entity name="Solution" representedClassName=".Solution" syncable="YES">
@@ -20,7 +21,7 @@
         <relationship name="tweakForSolution" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Solution" inverseName="solutionNeedingTweak" inverseEntity="Solution" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Change" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="Change" positionX="-63" positionY="-18" width="128" height="150"/>
         <element name="Solution" positionX="-63" positionY="9" width="128" height="105"/>
         <element name="Tweak" positionX="-45" positionY="36" width="128" height="90"/>
     </elements>

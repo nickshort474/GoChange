@@ -18,13 +18,19 @@ class PostData:NSObject{
     //var ref = Firebase(url:"https://gochange.firebaseio.com/change/")
     
     
-    init(postDictionary:[String:AnyObject]) {
+    init(postType:String) {
         super.init()
         
         //TODO: If variable is only saving solutions...
         
-        saveChangeToFirebase()
-        createCoreDataChange()
+        if(postType == "fullPost"){
+            saveChangeToFirebase()
+            createCoreDataChange()
+        }else{
+            createCoreDataChange()
+        }
+        
+        
     }
     
     
@@ -89,9 +95,11 @@ class PostData:NSObject{
         for var i in 0 ..< (TempChange.sharedInstance().solutionNameArray.count){
             
             
+            uniqueSolutionLocation.setValue(["solutionCount":TempChange.sharedInstance().solutionNameArray.count])
+            
             //create unqiue location with ID within solutions section
             let uniqueSolutionReference = uniqueSolutionLocation!.childByAutoId()
-
+            
             //set solution values
             let changeSolutionValues = ["SolutionName":TempChange.sharedInstance().solutionNameArray[i],"solutionDescription":TempChange.sharedInstance().solutionDetailArray[i]]
             
@@ -117,7 +125,7 @@ class PostData:NSObject{
         changeDictionary[Change.Keys.owner] = true
         changeDictionary[Change.Keys.firebaseLocation] = savedAutoID
         changeDictionary[Change.Keys.changeID] = changeID
-        
+        changeDictionary[Change.Keys.solutionCount] = TempChange.sharedInstance().solutionNameArray.count
 
         //create change object in core data
         let newChange = Change(dictionary: changeDictionary,context: sharedContext)
@@ -152,6 +160,13 @@ class PostData:NSObject{
         }catch{
             //TODO: Catch errors!
         }
+        
+    }
+    
+    
+    func createCoreDataSolutions(){
+        
+        
         
     }
     

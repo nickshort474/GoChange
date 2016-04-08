@@ -41,6 +41,7 @@
 		36DE37521CB12640005DEEEA /* RetrieveSolutions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DE37511CB12640005DEEEA /* RetrieveSolutions.swift */; };
 		36E703EF1CAEE30C007C880C /* RetrieveChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E703EE1CAEE30C007C880C /* RetrieveChange.swift */; };
 		36EB1EBA1CB42E9000EA0CC4 /* RetrieveDetailsFromFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EB1EB91CB42E9000EA0CC4 /* RetrieveDetailsFromFirebase.swift */; };
+		36F871B71CB81503006706BD /* RetrieveSolutionCountFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F871B61CB81503006706BD /* RetrieveSolutionCountFirebase.swift */; };
 		9E2E103AEFF6A95CA26B7D7A /* Pods_GoChange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0961F4BBEE6401B9B1D0DE43 /* Pods_GoChange.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,7 @@
 		36DE37511CB12640005DEEEA /* RetrieveSolutions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveSolutions.swift; sourceTree = "<group>"; };
 		36E703EE1CAEE30C007C880C /* RetrieveChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveChange.swift; sourceTree = "<group>"; };
 		36EB1EB91CB42E9000EA0CC4 /* RetrieveDetailsFromFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveDetailsFromFirebase.swift; sourceTree = "<group>"; };
+		36F871B61CB81503006706BD /* RetrieveSolutionCountFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveSolutionCountFirebase.swift; sourceTree = "<group>"; };
 		76C1E409458E88730EC69107 /* Pods-GoChange.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoChange.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoChange/Pods-GoChange.release.xcconfig"; sourceTree = "<group>"; };
 		A36C800A78EB4DBB6E2699CF /* Pods-GoChange.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoChange.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoChange/Pods-GoChange.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,6 +140,7 @@
 			children = (
 				36D963F61CB556A1006F9D36 /* RetrieveSolutionsFromFirebase.swift */,
 				361A063F1CB2CD450066C07C /* RetrieveFromFirebase.swift */,
+				36F871B61CB81503006706BD /* RetrieveSolutionCountFirebase.swift */,
 				36EB1EB91CB42E9000EA0CC4 /* RetrieveDetailsFromFirebase.swift */,
 				36DE37511CB12640005DEEEA /* RetrieveSolutions.swift */,
 				36DB99541CA9336600CC4D9E /* PostData.swift */,
@@ -497,6 +500,7 @@
 				369EF17D1C80C24600D8D46A /* Change.swift in Sources */,
 				36C37CBA1C7A01AC002B4FB1 /* WebViewController.swift in Sources */,
 				36D7CA071CA597F200A73176 /* Solution.swift in Sources */,
+				36F871B71CB81503006706BD /* RetrieveSolutionCountFirebase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

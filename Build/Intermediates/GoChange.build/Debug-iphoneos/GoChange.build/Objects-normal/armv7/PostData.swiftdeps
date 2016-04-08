@@ -6,36 +6,38 @@ provides-nominal:
 provides-member:
 - ["C8GoChange8PostData", ""]
 provides-dynamic-lookup:
+- "savedAutoID"
 - "sharedContext"
 - "changeID"
-- "createCoreDataChange"
 - "saveChangeToFirebase"
-- "savedAutoID"
+- "createCoreDataChange"
 depends-top-level:
-- !private "Firebase"
-- !private "TempChange"
-- !private "Dictionary"
-- !private "..<"
-- "NSManagedObjectContext"
-- "String"
-- !private "StringLiteralType"
-- !private "print"
-- "AnyObject"
 - !private "Solution"
-- "NSObject"
 - !private "CoreDataStackManager"
+- !private "print"
+- "String"
+- !private "TempChange"
+- !private "..<"
+- "NSObject"
 - "PostData"
-- !private "Change"
 - !private "BooleanLiteralType"
+- "NSManagedObjectContext"
+- "AnyObject"
+- !private "Firebase"
+- !private "Change"
+- !private "StringLiteralType"
+- !private "Dictionary"
 depends-member:
 - !private ["Ps9AnyObject", "AnyObject"]
 - !private ["Ps9AnyObject", "Change"]
 - !private ["Ps9AnyObject", "CoreDataStackManager"]
 - !private ["Ps9AnyObject", "Firebase"]
+- !private ["Ps9AnyObject", "Key"]
 - !private ["Ps9AnyObject", "Keys"]
 - !private ["Ps9AnyObject", "Solution"]
 - !private ["Ps9AnyObject", "String"]
 - !private ["Ps9AnyObject", "TempChange"]
+- !private ["Ps9AnyObject", "Value"]
 - !private ["Ps9AnyObject", "changeDetail"]
 - ["Ps9AnyObject", "changeID"]
 - !private ["Ps9AnyObject", "changeName"]
@@ -95,10 +97,12 @@ depends-member:
 - !private ["Ps11CVarArgType", "Distance"]
 - !private ["Ps11CVarArgType", "Firebase"]
 - !private ["Ps11CVarArgType", "IntegerLiteralType"]
+- !private ["Ps11CVarArgType", "Key"]
 - !private ["Ps11CVarArgType", "Keys"]
 - !private ["Ps11CVarArgType", "Solution"]
 - !private ["Ps11CVarArgType", "String"]
 - !private ["Ps11CVarArgType", "TempChange"]
+- !private ["Ps11CVarArgType", "Value"]
 - !private ["Ps11CVarArgType", "_DisabledRangeIndex"]
 - !private ["Ps11CVarArgType", "changeDetail"]
 - ["Ps11CVarArgType", "changeID"]
@@ -246,10 +250,12 @@ depends-member:
 - !private ["Ps9Equatable", "Firebase"]
 - !private ["Ps9Equatable", "Generator"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
+- !private ["Ps9Equatable", "Key"]
 - !private ["Ps9Equatable", "Keys"]
 - !private ["Ps9Equatable", "Solution"]
 - !private ["Ps9Equatable", "String"]
 - !private ["Ps9Equatable", "TempChange"]
+- !private ["Ps9Equatable", "Value"]
 - !private ["Ps9Equatable", "_DisabledRangeIndex"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "changeDetail"]
@@ -303,10 +309,12 @@ depends-member:
 - !private ["Ps8Hashable", "Distance"]
 - !private ["Ps8Hashable", "Firebase"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
+- !private ["Ps8Hashable", "Key"]
 - !private ["Ps8Hashable", "Keys"]
 - !private ["Ps8Hashable", "Solution"]
 - !private ["Ps8Hashable", "String"]
 - !private ["Ps8Hashable", "TempChange"]
+- !private ["Ps8Hashable", "Value"]
 - !private ["Ps8Hashable", "_DisabledRangeIndex"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "changeDetail"]
@@ -348,6 +356,7 @@ depends-member:
 - !private ["Si", "Distance"]
 - !private ["Si", "IntegerLiteralType"]
 - !private ["Si", "_DisabledRangeIndex"]
+- !private ["Si", "deinit"]
 - !private ["Ps21IntegerArithmeticType", "Distance"]
 - !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
 - !private ["Ps21IntegerArithmeticType", "_DisabledRangeIndex"]
@@ -362,6 +371,7 @@ depends-member:
 - !private ["VC8GoChange6Change4Keys", "changeName"]
 - !private ["VC8GoChange6Change4Keys", "firebaseLocation"]
 - !private ["VC8GoChange6Change4Keys", "owner"]
+- !private ["VC8GoChange6Change4Keys", "solutionCount"]
 - !private ["VC8GoChange8Solution4Keys", "solutionDescription"]
 - !private ["VC8GoChange8Solution4Keys", "solutionName"]
 - !private ["Ps14MirrorPathType", "Distance"]
@@ -392,6 +402,8 @@ depends-member:
 - !private ["Ps16MutableSliceable", "init"]
 - !private ["CSo7NSArray", "count"]
 - !private ["CSo7NSArray", "subscript"]
+- !private ["PSo8NSCoding", "Key"]
+- !private ["PSo8NSCoding", "Value"]
 - !private ["PSo8NSCoding", "count"]
 - !private ["PSo8NSCoding", "rangeOfString"]
 - !private ["PSo8NSCoding", "removeAtIndex"]
@@ -399,12 +411,18 @@ depends-member:
 - !private ["PSo8NSCoding", "save"]
 - !private ["PSo8NSCoding", "startIndex"]
 - !private ["PSo8NSCoding", "subscript"]
+- !private ["PSo9NSCopying", "Key"]
+- !private ["PSo9NSCopying", "Value"]
 - !private ["PSo9NSCopying", "count"]
 - !private ["PSo9NSCopying", "rangeOfString"]
 - !private ["PSo9NSCopying", "removeAtIndex"]
 - !private ["PSo9NSCopying", "removeRange"]
 - !private ["PSo9NSCopying", "startIndex"]
 - !private ["PSo9NSCopying", "subscript"]
+- !private ["CSo12NSDictionary", "Key"]
+- !private ["CSo12NSDictionary", "Value"]
+- !private ["PSo17NSFastEnumeration", "Key"]
+- !private ["PSo17NSFastEnumeration", "Value"]
 - !private ["PSo17NSFastEnumeration", "count"]
 - !private ["PSo17NSFastEnumeration", "subscript"]
 - !private ["PSo9NSLocking", "save"]
@@ -414,6 +432,8 @@ depends-member:
 - !private ["CSo22NSManagedObjectContext", "save"]
 - !private ["CSo14NSMutableArray", "count"]
 - !private ["CSo14NSMutableArray", "subscript"]
+- !private ["PSo16NSMutableCopying", "Key"]
+- !private ["PSo16NSMutableCopying", "Value"]
 - !private ["PSo16NSMutableCopying", "count"]
 - !private ["PSo16NSMutableCopying", "rangeOfString"]
 - !private ["PSo16NSMutableCopying", "removeAtIndex"]
@@ -424,11 +444,13 @@ depends-member:
 - !private ["CSo8NSObject", "Change"]
 - !private ["CSo8NSObject", "CoreDataStackManager"]
 - !private ["CSo8NSObject", "Firebase"]
+- !private ["CSo8NSObject", "Key"]
 - !private ["CSo8NSObject", "Keys"]
 - ["CSo8NSObject", "NSManagedObjectContext"]
 - !private ["CSo8NSObject", "Solution"]
 - ["CSo8NSObject", "String"]
 - !private ["CSo8NSObject", "TempChange"]
+- !private ["CSo8NSObject", "Value"]
 - !private ["CSo8NSObject", "changeDetail"]
 - ["CSo8NSObject", "changeID"]
 - !private ["CSo8NSObject", "changeName"]
@@ -459,10 +481,12 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "Change"]
 - !private ["PSo16NSObjectProtocol", "CoreDataStackManager"]
 - !private ["PSo16NSObjectProtocol", "Firebase"]
+- !private ["PSo16NSObjectProtocol", "Key"]
 - !private ["PSo16NSObjectProtocol", "Keys"]
 - !private ["PSo16NSObjectProtocol", "Solution"]
 - !private ["PSo16NSObjectProtocol", "String"]
 - !private ["PSo16NSObjectProtocol", "TempChange"]
+- !private ["PSo16NSObjectProtocol", "Value"]
 - !private ["PSo16NSObjectProtocol", "changeDetail"]
 - ["PSo16NSObjectProtocol", "changeID"]
 - !private ["PSo16NSObjectProtocol", "changeName"]
@@ -488,6 +512,8 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "startIndex"]
 - !private ["PSo16NSObjectProtocol", "subscript"]
 - ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "Key"]
+- !private ["PSo14NSSecureCoding", "Value"]
 - !private ["PSo14NSSecureCoding", "count"]
 - !private ["PSo14NSSecureCoding", "rangeOfString"]
 - !private ["PSo14NSSecureCoding", "removeAtIndex"]
@@ -720,6 +746,7 @@ depends-nominal:
 - !private "CSo7NSArray"
 - !private "PSo8NSCoding"
 - !private "PSo9NSCopying"
+- !private "CSo12NSDictionary"
 - !private "PSo17NSFastEnumeration"
 - !private "PSo9NSLocking"
 - !private "CSo15NSManagedObject"

@@ -8,18 +8,18 @@ provides-member:
 - ["C8GoChange5Tweak", ""]
 - ["VC8GoChange5Tweak4Keys", ""]
 provides-dynamic-lookup:
-- "tweakDescription"
 - "tweakForSolution"
 - "tweakName"
+- "tweakDescription"
 depends-top-level:
-- "AnyObject"
 - "NSManagedObjectContext"
-- "Solution"
-- "StringLiteralType"
-- "Tweak"
-- "NSManagedObject"
-- "NSEntityDescription"
 - "String"
+- "AnyObject"
+- "StringLiteralType"
+- "Solution"
+- "Tweak"
+- "NSEntityDescription"
+- "NSManagedObject"
 depends-member:
 - !private ["Ps9AnyObject", "Keys"]
 - !private ["Ps9AnyObject", "NSEntityDescription"]
