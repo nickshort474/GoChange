@@ -33,24 +33,20 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
     
     var retrievedSolutionArray = [Solution]()
     
-    var firebaseSolutionNames:NSMutableArray = []
-    var firebaseSolutionDetails:NSMutableArray = []
+    //var firebaseSolutionNames:NSMutableArray = []
+    //var firebaseSolutionDetails:NSMutableArray = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         //clear TempChange ready for new change
-        
         TempChange.sharedInstance().changeName = ""
         TempChange.sharedInstance().changeDetail = ""
-        
         TempChange.sharedInstance().solutionDetailArray = []
         TempChange.sharedInstance().solutionNameArray = []
-               
         TempChange.sharedInstance().tweakDetailArray = []
         TempChange.sharedInstance().tweakNameArray = []
-        
         
         
         //set delegates
@@ -68,6 +64,8 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         let barButtonItem = UIBarButtonItem(title: "Cancel Idea", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
         self.navigationItem.backBarButtonItem = barButtonItem
        
+        
+        
         //TODO: change POST button to SAVE/FOLLOW change
         //TODO: check for ownership and then dis/allow edit buttons for name and details
         if (isOwner == "true"){
@@ -80,6 +78,9 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         // If coming from FollowingViewController load core data details
         if(sendingController == "following"){
             
+            
+            
+            
             //change title of VC to View Change
             self.title = "View Change"
                         
@@ -89,9 +90,8 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
             // load core data changes
             _ = RetrieveChange(changeID: changeID){
                 (result) in
-                change = result as? Change
-                //print(change)
                 
+                change = result as? Change
                 localSolutionCount = change?.solutionCount as? Int
                 
                 self.nameField.text = change!.changeName
@@ -100,54 +100,58 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
                     
             }
             
-            //TODO: connect to firebase and check solution count for change
-            // compare to core data solution count and load extra solutions into core data
+            //connect to firebase and check solution count for change
+           
             _ = RetrieveSolutionCountFirebase(changeID: changeID, completionHandler: {
                 (result) in
                 
                 let firebaseSolutionCount = result.value as! Int
                 
-                // if new solutions added to firebase load them into core data
-                if (firebaseSolutionCount != localSolutionCount){
-                   
+                 // compare to core data solution count and load extra solutions into core data
+                 if (firebaseSolutionCount != localSolutionCount){
+                    
                     _ = RetrieveSolutionsFromFirebase(changeID: self.changeID, completionHandler: {
                         (result) in
                         
                         for name in result.children.allObjects as! [FDataSnapshot]{
                             
-                            //TODO: create dictionary of values from returned firebase data, pass to postData
-                            //TODO:     OR!  put data into TempChange.sharedInstance.solutionNameArray
-                            
-                            
-                            
-                            //self.firebaseSolutionNames.addObject(name.value["solutionName"]!!)
-                            //self.firebaseSolutionDetails.addObject(name.value["solutionDescription"]!!)
-                            //self.solutionTable.reloadData()
-                            
-                            let postType:String = "solutionPost"
-                            
-                            _ = PostData(postType:postType)
-                            
-                            
-                            
-                            
+                            //assign results from firebase to Temp solutionArrays
+                            TempChange.sharedInstance().solutionNameArray.addObject(name.value["SolutionName"]!!)
+                            TempChange.sharedInstance().solutionDetailArray.addObject(name.value["SolutionDescription"]!!)
                             
                         }
+                        self.solutionTable.reloadData()
+                    
+                    
+                        //save the new set of solutions to core data
+                        let postType:String = "solutionPost"
+                        _ = PostData(postType:postType,change:change!)
                         
                     })
+                }else{
+                    //load core data solutions
+                    _ = RetrieveSolutions(change:change!){
+                        (result) in
+                        //print(result)
+                        //self.retrievedSolutionArray = result as! [Solution]
+                
+                        //TODO: assign results from coreData return to temp array then use TempArray for table
+                        let solutionArray = result as! [Solution]
+                        
+                        for solution in solutionArray{
+                            TempChange.sharedInstance().solutionNameArray.addObject(solution.solutionName)
+                            TempChange.sharedInstance().solutionDetailArray.addObject(solution.solutionDescription)
+                    
+                        }
+                        self.solutionTable.reloadData()
+                
+                    }
+
                 }
                 
                 
             })
             
-            
-            //load core data solutions
-            _ = RetrieveSolutions(change:change!){
-                (result) in
-                //print(result)
-                self.retrievedSolutionArray = result as! [Solution]
-            }
-           
             
         }else if(sendingController == "results"){
             
@@ -164,14 +168,14 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
                 
                 for name in snapshot.children.allObjects as! [FDataSnapshot]{
                     
-                    //print(name.value["solutionName"]!!)
-                    //print(name.value["solutionDescription"]!!)
+                    print(name)
+                    print(name.value["SolutionName"])
+                    //put results from firebase into TempChange solutionArray
+                    TempChange.sharedInstance().solutionNameArray.addObject(name.value["SolutionName"]!!)
+                    TempChange.sharedInstance().solutionDetailArray.addObject(name.value["SolutionDescription"]!!)
                     
-                    self.firebaseSolutionNames.addObject(name.value["solutionName"]!!)
-                    self.firebaseSolutionDetails.addObject(name.value["solutionDescription"]!!)
-                    self.solutionTable.reloadData()
                 }
-               
+                self.solutionTable.reloadData()
                 
             }
             
@@ -180,8 +184,10 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
     }
     
     override func viewWillAppear(animated: Bool) {
+        
         //reload table data when coming back from solution/tweak
         self.solutionTable.reloadData()
+        
     }
     
     
@@ -294,15 +300,23 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        //TODO: If viewing change load from core data 
-        if sendingController == "following"{
-            return retrievedSolutionArray.count
-        }else if(sendingController == "results"){
-            return firebaseSolutionNames.count
-        }else{
-            return TempChange.sharedInstance().solutionNameArray.count
-        }
         
+        return TempChange.sharedInstance().solutionNameArray.count
+        /*
+        if sendingController == "following"{
+            
+            return retrievedSolutionArray.count
+            
+        }else if(sendingController == "results"){
+            
+            return firebaseSolutionNames.count
+            
+        }else{
+            
+            return TempChange.sharedInstance().solutionNameArray.count
+            
+        }
+        */
         
     }
     
@@ -313,6 +327,10 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         
         var solutionName:String = ""
         
+        
+        solutionName = TempChange.sharedInstance().solutionNameArray[indexPath.row] as! String
+        
+        /*
         if sendingController == "following"{
             solutionName = retrievedSolutionArray[indexPath.row].solutionName
         }else if(sendingController == "results"){
@@ -320,7 +338,7 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         }else{
             solutionName = TempChange.sharedInstance().solutionNameArray[indexPath.row] as! String
         }
-        
+        */
         cell.textLabel!.text = solutionName
         
         return cell
@@ -363,7 +381,7 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         }else{
            
             let postType:String = "fullPost"
-            
+            //let change:Change!
             
             _ = PostData(postType:postType)
             

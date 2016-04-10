@@ -68,9 +68,7 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
             TempChange.sharedInstance().solutionNameArray.addObject(nameTextField.text!)
             TempChange.sharedInstance().solutionDetailArray.addObject(detailTextView.text!)
             
-            //TempChange.sharedInstance().solutionDictionary[nameTextField.text!] = detailTextView.text!
-            
-            // dismiss view controller forom navigation stack
+            // dismiss view controller from navigation stack
             self.navigationController?.popViewControllerAnimated(true)
         }
         

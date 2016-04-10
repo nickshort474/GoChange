@@ -206,7 +206,6 @@ SWIFT_CLASS("_TtC8GoChange12CreateChange")
 - (Change * _Nonnull)createCoreDataChange:(NSString * _Nonnull)currentDetailData currentNameData:(NSString * _Nonnull)currentNameData owner:(BOOL)owner;
 @end
 
-@class NSMutableArray;
 
 SWIFT_CLASS("_TtC8GoChange26CreateChangeViewController")
 @interface CreateChangeViewController : UIViewController <UIScrollViewDelegate, UITextFieldDelegate, UITableViewDelegate, UITextViewDelegate>
@@ -224,8 +223,6 @@ SWIFT_CLASS("_TtC8GoChange26CreateChangeViewController")
 @property (nonatomic, copy) NSString * _Nonnull changeDetail;
 @property (nonatomic, copy) NSString * _Nonnull changeID;
 @property (nonatomic, copy) NSArray<Solution *> * _Nonnull retrievedSolutionArray;
-@property (nonatomic, strong) NSMutableArray * _Nonnull firebaseSolutionNames;
-@property (nonatomic, strong) NSMutableArray * _Nonnull firebaseSolutionDetails;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
@@ -319,12 +316,17 @@ SWIFT_CLASS("_TtC8GoChange8PostData")
 @interface PostData : NSObject
 @property (nonatomic, copy) NSString * _Nullable savedAutoID;
 @property (nonatomic, copy) NSString * _Nullable changeID;
-- (nonnull instancetype)initWithPostDictionary:(NSDictionary<NSString *, id> * _Nonnull)postDictionary OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, strong) Change * _Null_unspecified newChange;
+@property (nonatomic, strong) Change * _Null_unspecified existingChange;
+@property (nonatomic, copy) NSString * _Nonnull postType;
+- (nonnull instancetype)initWithPostType:(NSString * _Nonnull)postType change:(Change * _Nullable)change OBJC_DESIGNATED_INITIALIZER;
 @property (nonatomic, strong) NSManagedObjectContext * _Nonnull sharedContext;
 - (void)saveChangeToFirebase;
 - (void)createCoreDataChange;
+- (void)createCoreDataSolutions;
 @end
 
+@class NSMutableArray;
 
 SWIFT_CLASS("_TtC8GoChange21ResultsViewController")
 @interface ResultsViewController : UIViewController <UIScrollViewDelegate, UITableViewDelegate>

@@ -1,13 +1,13 @@
 version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
 options: "e36b1087e6234628d7f5a9ce7e31551a"
-build_time: [513449708, 23960000]
+build_time: [513607521, 892868000]
 inputs:
-  "/Users/nickshort/Git/GoChange/GoChange/CreateChangeViewController.swift": [513449707, 0]
-  "/Users/nickshort/Git/GoChange/GoChange/PostData.swift": [513449137, 0]
+  "/Users/nickshort/Git/GoChange/GoChange/CreateChangeViewController.swift": [513606767, 0]
+  "/Users/nickshort/Git/GoChange/GoChange/PostData.swift": [513607380, 0]
   "/Users/nickshort/Git/GoChange/GoChange/CreateSolution.swift": [512473191, 0]
   "/Users/nickshort/Git/GoChange/GoChange/CreateChange.swift": [512473191, 0]
   "/Users/nickshort/Git/GoChange/GoChange/AddTweakViewController.swift": [512238211, 0]
-  "/Users/nickshort/Git/GoChange/GoChange/AddIdeaViewController.swift": [512472237, 0]
+  "/Users/nickshort/Git/GoChange/GoChange/AddIdeaViewController.swift": [513605864, 0]
   "/Users/nickshort/Git/GoChange/GoChange/Tweak.swift": [512237394, 0]
   "/Users/nickshort/Git/GoChange/GoChange/HomeViewController.swift": [513447887, 0]
   "/Users/nickshort/Git/GoChange/GoChange/RetrieveFromFirebase.swift": [513269135, 0]
@@ -30,4 +30,4 @@ inputs:
   "/Users/nickshort/Git/GoChange/GoChange/Change.swift": [513446831, 0]
   "/Users/nickshort/Git/GoChange/GoChange/WebViewController.swift": [508094637, 0]
   "/Users/nickshort/Git/GoChange/GoChange/Solution.swift": [513446831, 0]
-  "/Users/nickshort/Git/GoChange/GoChange/RetrieveSolutionCountFirebase.swift": [513449645, 0]
+  "/Users/nickshort/Git/GoChange/GoChange/RetrieveSolutionCountFirebase.swift": [513607521, 0]

@@ -14,20 +14,32 @@ class PostData:NSObject{
     
     var savedAutoID:String?
     var changeID:String?
+    var newChange:Change!
+    var existingChange:Change!
+    var postType:String = ""
+    
     
     //var ref = Firebase(url:"https://gochange.firebaseio.com/change/")
     
     
-    init(postType:String) {
+    init(postType:String,change:Change? = nil) {
         super.init()
         
         //TODO: If variable is only saving solutions...
+        self.postType = postType
+        
         
         if(postType == "fullPost"){
+            
             saveChangeToFirebase()
             createCoreDataChange()
-        }else{
-            createCoreDataChange()
+            
+        }else if(postType == "solutionPost"){
+            
+            // if just posting solutions...get change and link new solutions to existing change
+            existingChange = change
+            createCoreDataSolutions()
+            
         }
         
         
@@ -41,7 +53,10 @@ class PostData:NSObject{
     
     func saveChangeToFirebase(){
         
-        //TODO: look into snapshot.key to get unique ID back from firebase?
+        //TODO: if postType == solutionPost ...  post new solutions to firebase / overwrite existing ones
+        
+        
+        
         
         
         var namesRef = Firebase(url:"https://gochange.firebaseio.com/change/names")
@@ -74,6 +89,12 @@ class PostData:NSObject{
         //save name of change to firebase
         changeNameLocation.setValue(changeNameValues)
         
+        
+        
+        
+        
+        
+        
         // create reference to details section of firebase
         let changeDetailLocation = Firebase(url:"https://gochange.firebaseio.com/change/details")
         
@@ -85,6 +106,23 @@ class PostData:NSObject{
         
         uniqueDetailLocation.setValue(changeDetailValues)
         
+        
+        
+        
+        
+        // create ref to solution count location
+        let solutionCountLocation = Firebase(url:"https://gochange.firebaseio.com/change/solutionCount")
+        
+        var uniqueSolutionCountLocation = solutionCountLocation.childByAppendingPath(changeID!)
+        
+        uniqueSolutionCountLocation.setValue(["SolutionCount":TempChange.sharedInstance().solutionNameArray.count])
+        
+        
+        
+        
+        
+        
+        
         //create reference to solutions location in firebase
         let changeSolutionsLocation = Firebase(url:"https://gochange.firebaseio.com/change/solutions")
         
@@ -94,14 +132,12 @@ class PostData:NSObject{
         //loop through solutions array
         for var i in 0 ..< (TempChange.sharedInstance().solutionNameArray.count){
             
-            
-            uniqueSolutionLocation.setValue(["solutionCount":TempChange.sharedInstance().solutionNameArray.count])
-            
             //create unqiue location with ID within solutions section
             let uniqueSolutionReference = uniqueSolutionLocation!.childByAutoId()
             
+            
             //set solution values
-            let changeSolutionValues = ["SolutionName":TempChange.sharedInstance().solutionNameArray[i],"solutionDescription":TempChange.sharedInstance().solutionDetailArray[i]]
+            let changeSolutionValues = ["SolutionName":TempChange.sharedInstance().solutionNameArray[i],"SolutionDescription":TempChange.sharedInstance().solutionDetailArray[i]]
             
             //save values to firebase
             uniqueSolutionReference.setValue(changeSolutionValues)
@@ -115,7 +151,7 @@ class PostData:NSObject{
     func createCoreDataChange(){
         
         // solutionArray to link to change
-        var solutionArray = [Solution]()
+        //var solutionArray = [Solution]()
         
         // create core data change dictionary
         var changeDictionary:[String:AnyObject] = [String:AnyObject]()
@@ -128,11 +164,14 @@ class PostData:NSObject{
         changeDictionary[Change.Keys.solutionCount] = TempChange.sharedInstance().solutionNameArray.count
 
         //create change object in core data
-        let newChange = Change(dictionary: changeDictionary,context: sharedContext)
+        newChange = Change(dictionary: changeDictionary,context: sharedContext)
         
         
         //create core data solution dictionary
+        createCoreDataSolutions()
         
+        
+        /*
         for var i in 0 ..< TempChange.sharedInstance().solutionNameArray.count{
             
             var solutionDictionary:[String:AnyObject] = [String:AnyObject]()
@@ -144,12 +183,12 @@ class PostData:NSObject{
             //create core data solution object
             let newSolution = Solution(dictionary: solutionDictionary,context: sharedContext)
         
-            solutionArray.append(newSolution)
+            //solutionArray.append(newSolution)
             
             newSolution.solutionToChange = newChange
             
         }
-        
+        */
         
         
         
@@ -166,7 +205,50 @@ class PostData:NSObject{
     
     func createCoreDataSolutions(){
         
+        // delete all solutions if any exist? ready for all solutions from firebase to be added.
         
+        if(postType == "solutionPost"){
+            
+            let predicate = NSPredicate(format: "solutionToChange == %@", existingChange!)
+            let fetchRequest = NSFetchRequest(entityName: "Solution")
+            fetchRequest.predicate = predicate
+        
+            do{
+                let fetchEntities = try self.sharedContext.executeFetchRequest(fetchRequest) as! [Solution]
+            
+                for entity in fetchEntities{
+                    self.sharedContext.deleteObject(entity)
+                }
+            
+            }catch{
+                //TODO: deal with errors
+            }
+        }
+        
+        
+        for var i in 0 ..< TempChange.sharedInstance().solutionNameArray.count{
+            
+            var solutionDictionary:[String:AnyObject] = [String:AnyObject]()
+            
+            solutionDictionary[Solution.Keys.solutionName] = TempChange.sharedInstance().solutionNameArray[i]
+            solutionDictionary[Solution.Keys.solutionDescription] = TempChange.sharedInstance().solutionDetailArray[i]
+            
+            
+            //create core data solution object
+            let newSolution = Solution(dictionary: solutionDictionary,context: sharedContext)
+            
+            
+            //if creating a new change...
+            if(postType == "fullPost"){
+                newSolution.solutionToChange = newChange!
+            }
+            
+            //if adding solutions to existing change
+            if(postType == "solutionPost"){
+                newSolution.solutionToChange = existingChange
+            }
+            
+        }
         
     }
     

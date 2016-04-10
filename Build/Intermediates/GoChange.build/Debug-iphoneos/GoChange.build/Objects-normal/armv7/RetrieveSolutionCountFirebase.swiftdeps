@@ -8,14 +8,14 @@ provides-member:
 provides-dynamic-lookup:
 - "nameRef"
 depends-top-level:
-- "Firebase"
-- "NSObject"
-- !private "print"
-- "Void"
-- "RetrieveSolutionCountFirebase"
-- "FDataSnapshot"
 - "String"
+- "RetrieveSolutionCountFirebase"
+- "NSObject"
+- "Firebase"
+- "FDataSnapshot"
+- "Void"
 - "StringLiteralType"
+- !private "print"
 depends-member:
 - ["Ps9AnyObject", "Firebase"]
 - !private ["Ps9AnyObject", "childByAppendingPath"]
@@ -154,4 +154,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "90b739ac4b6cec544531438bbd1fbc0c"
+interface-hash: "06a057618aea4e58e0193d1d9d6e194a"

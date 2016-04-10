@@ -12,7 +12,7 @@ import Firebase
 
 class RetrieveSolutionCountFirebase:NSObject{
     
-    var nameRef = Firebase(url: "https://gochange.firebaseio.com/change/solutions")
+    var nameRef = Firebase(url: "https://gochange.firebaseio.com/change/solutionCount")
     
     
     init(changeID:String,completionHandler:(results:FDataSnapshot)->Void){
@@ -20,7 +20,7 @@ class RetrieveSolutionCountFirebase:NSObject{
         super.init()
         
         var solutionRef = nameRef.childByAppendingPath(changeID)
-        var countRef = solutionRef.childByAppendingPath("solutionCount")
+        var countRef = solutionRef.childByAppendingPath("SolutionCount")
         
         
         countRef.observeEventType(.Value, withBlock: { snapshot in
