@@ -8,20 +8,20 @@ provides-member:
 - ["C8GoChange8Solution", ""]
 - ["VC8GoChange8Solution4Keys", ""]
 provides-dynamic-lookup:
-- "solutionDescription"
-- "solutionToChange"
-- "solutionNeedingTweaking"
 - "solutionName"
+- "solutionNeedingTweaking"
+- "solutionToChange"
+- "solutionDescription"
 depends-top-level:
-- "String"
-- "NSEntityDescription"
-- "NSManagedObject"
-- "NSManagedObjectContext"
-- "Tweak"
 - "Solution"
-- "Change"
 - "StringLiteralType"
+- "NSManagedObject"
+- "NSEntityDescription"
+- "String"
 - "AnyObject"
+- "NSManagedObjectContext"
+- "Change"
+- "Tweak"
 depends-member:
 - !private ["Ps9AnyObject", "Keys"]
 - !private ["Ps9AnyObject", "NSEntityDescription"]

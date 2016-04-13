@@ -18,7 +18,13 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
     @IBOutlet weak var detailsField: UITextView!
     @IBOutlet weak var namePlusButton: UIButton!
     @IBOutlet weak var detailsPlusButton: UIButton!
+    
     @IBOutlet weak var postButton: UIButton!
+    @IBOutlet weak var followButton: UIButton!
+    @IBOutlet weak var addASolutionButton: UIButton!
+    
+    
+    
     @IBOutlet weak var solutionTable: UITableView!
     
     var currentNameData:String = ""
@@ -29,9 +35,12 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
     
     var changeName:String = ""
     var changeDetail:String = ""
-    var changeID = ""
+    var changeID:String = ""
     
     var retrievedSolutionArray = [Solution]()
+    
+    var change:Change?
+    
     
     //var firebaseSolutionNames:NSMutableArray = []
     //var firebaseSolutionDetails:NSMutableArray = []
@@ -64,39 +73,45 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         let barButtonItem = UIBarButtonItem(title: "Cancel Idea", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
         self.navigationItem.backBarButtonItem = barButtonItem
        
+        self.followButton.hidden = true
         
         
-        //TODO: change POST button to SAVE/FOLLOW change
-        //TODO: check for ownership and then dis/allow edit buttons for name and details
-        if (isOwner == "true"){
-            // allow editing
-        }else{
-            // disallow editing
-        }
+        
+        
         
         
         // If coming from FollowingViewController load core data details
         if(sendingController == "following"){
             
-            
-            
-            
             //change title of VC to View Change
             self.title = "View Change"
-                        
-            var change:Change?
+            self.followButton.hidden = true
+            
+            //TODO: check for ownership and then dis/allow edit buttons for name and details
+            if (isOwner == "true"){
+                // allow editing
+                
+                
+            }else{
+                // disallow editing
+                
+                
+                
+            }
+            
+            
             var localSolutionCount:Int?
             
             // load core data changes
             _ = RetrieveChange(changeID: changeID){
                 (result) in
                 
-                change = result as? Change
-                localSolutionCount = change?.solutionCount as? Int
+                self.change = result as? Change
+                localSolutionCount = self.change?.solutionCount as? Int
                 
-                self.nameField.text = change!.changeName
+                self.nameField.text = self.change!.changeName
                 self.detailsField.textColor = UIColor.blackColor()
-                self.detailsField.text = change!.changeDescription
+                self.detailsField.text = self.change!.changeDescription
                     
             }
             
@@ -118,19 +133,23 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
                             //assign results from firebase to Temp solutionArrays
                             TempChange.sharedInstance().solutionNameArray.addObject(name.value["SolutionName"]!!)
                             TempChange.sharedInstance().solutionDetailArray.addObject(name.value["SolutionDescription"]!!)
-                            
+                            TempChange.sharedInstance().solutionNewOldArray.addObject("old")
                         }
-                        self.solutionTable.reloadData()
+                        
                     
                     
                         //save the new set of solutions to core data
-                        let postType:String = "solutionPost"
-                        _ = PostData(postType:postType,change:change!)
+                        let postType:String = "updateCoreDataSolutions"
+                        let owner:String = "true"
+                        
+                        _ = SaveData(postType:postType,owner:owner,change:self.change!)
+                        
+                        self.solutionTable.reloadData()
                         
                     })
                 }else{
                     //load core data solutions
-                    _ = RetrieveSolutions(change:change!){
+                    _ = RetrieveSolutions(change:self.change!){
                         (result) in
                         //print(result)
                         //self.retrievedSolutionArray = result as! [Solution]
@@ -141,7 +160,7 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
                         for solution in solutionArray{
                             TempChange.sharedInstance().solutionNameArray.addObject(solution.solutionName)
                             TempChange.sharedInstance().solutionDetailArray.addObject(solution.solutionDescription)
-                    
+                            TempChange.sharedInstance().solutionNewOldArray.addObject("old")
                         }
                         self.solutionTable.reloadData()
                 
@@ -156,10 +175,22 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         }else if(sendingController == "results"){
             
             self.title = "View Change"
+            self.followButton.hidden = false
+            
             
             self.nameField.text = changeName
             self.detailsField.textColor = UIColor.blackColor()
             self.detailsField.text = changeDetail
+            
+            
+            
+            TempChange.sharedInstance().changeName = changeName
+            TempChange.sharedInstance().changeDetail = changeDetail
+            
+            //changeDictionary[Change.Keys.firebaseLocation] = savedAutoID
+            //changeDictionary[Change.Keys.changeID] = changeID
+            //changeDictionary[Change.Keys.solutionCount] = TempChange.sharedInstance().solutionNameArray.count
+            
             
             
             //TODO: load data from firebase
@@ -168,12 +199,10 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
                 
                 for name in snapshot.children.allObjects as! [FDataSnapshot]{
                     
-                    print(name)
-                    print(name.value["SolutionName"])
                     //put results from firebase into TempChange solutionArray
                     TempChange.sharedInstance().solutionNameArray.addObject(name.value["SolutionName"]!!)
                     TempChange.sharedInstance().solutionDetailArray.addObject(name.value["SolutionDescription"]!!)
-                    
+                    TempChange.sharedInstance().solutionNewOldArray.addObject("old")
                 }
                 self.solutionTable.reloadData()
                 
@@ -183,12 +212,33 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         
     }
     
+    
+    
+    
     override func viewWillAppear(animated: Bool) {
+        
+        if(sendingController == "following" && TempChange.sharedInstance().addingSolutions != "true"){
+            
+            self.postButton.hidden = true
+            self.followButton.hidden = true
+            
+        }else if(sendingController == "following" && TempChange.sharedInstance().addingSolutions == "true"){
+            
+            self.postButton.hidden = false
+        }
+        
+        if(sendingController == "results"){
+            self.addASolutionButton.hidden = true
+            self.followButton.hidden = false
+        }
         
         //reload table data when coming back from solution/tweak
         self.solutionTable.reloadData()
         
     }
+    
+    
+    
     
     
     override func didReceiveMemoryWarning() {
@@ -257,10 +307,9 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
     @IBAction func addSolution(sender: UIButton) {
         
         var controller:AddIdeaViewController
-        
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("AddIdeaViewController") as! AddIdeaViewController
-        
         self.navigationController?.pushViewController(controller, animated: true)
+        
     }
     
     
@@ -326,8 +375,6 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath)
         
         var solutionName:String = ""
-        
-        
         solutionName = TempChange.sharedInstance().solutionNameArray[indexPath.row] as! String
         
         /*
@@ -348,15 +395,9 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
     func tableView(tableView:UITableView,didSelectRowAtIndexPath indexPath: NSIndexPath){
         
         var controller:AddIdeaViewController
-        
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("AddIdeaViewController") as! AddIdeaViewController
-        
-        
-        
         self.navigationController?.pushViewController(controller, animated: true)
         
-        
-       
     }
 
     
@@ -365,34 +406,71 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
     //---------------------Posting/Saving data----------------
     @IBAction func PostInfo(sender: UIButton) {
         
-        //TODO: if button == POST save changes to core data and firebase
-        _ = true
-        
-        
-        // else if button == SAVE/FOLLOW save changes to core data only
-        // let owner = false
-        
-        
-        if (currentDetailData == "" || currentNameData == ""){
+        // if coming from following
+        if(sendingController == "following"){
             
-            //TODO: message to user to get them to fill in form
-            print("please input name and detail data")
+            // post solutions to firebase and add solutions to core data
+        
+            //loop through solutionNewOldArray to check for newly added solutions
+            for var i in 0 ..<  TempChange.sharedInstance().solutionNewOldArray.count{
+            
+                if(TempChange.sharedInstance().solutionNewOldArray[i] as! String == "new"){
+                
+                    // add newly added solutions to newSolution arrays
+                    TempChange.sharedInstance().newSolutionNameArray.addObject(TempChange.sharedInstance().solutionNameArray[i])
+                    TempChange.sharedInstance().newSolutionDetailArray.addObject(TempChange.sharedInstance().solutionDetailArray[i])
+                
+                }
+            }
+            
+            // then run postData with postType
+            let postType:String = "coreDataFirebaseSolutionPost"
+            let owner:String = self.isOwner
+            let change:Change = self.change!
+            
+            _ = SaveData(postType:postType,owner:owner,change:change)
             
         }else{
+            // if coming from homeViewController ...
+            // add everything to core data and firebase
+            if(currentDetailData == "" || currentNameData == ""){
+            
+                //TODO: message to user to get them to fill in form
+                print("please input name and detail data")
+            
+            }else{
            
-            let postType:String = "fullPost"
-            //let change:Change!
+                let postType:String = "fullPost"
+                let owner:String = "true"
             
-            _ = PostData(postType:postType)
+                _ = SaveData(postType:postType,owner:owner)
             
+                self.dismissViewControllerAnimated(true, completion: nil)
             
-            self.dismissViewControllerAnimated(true, completion: nil)
-            
-            
+            }
         }
         
     }
     
+    
+    
+    @IBAction func followChange(sender: UIButton) {
+        
+        // if coming from results, add everything to core data
+        
+        
+        
+        let postType:String = "fullResultPost"
+        let owner:String = "false"
+        //let change:Change = nil
+        let changeID:String = self.changeID
+        
+        _ = SaveData(postType:postType,owner:owner,changeID:changeID)
+        
+        //TODO: refresh page with buttons re/dis enabled
+        self.followButton.hidden = true
+        
+    }
     
 }
 

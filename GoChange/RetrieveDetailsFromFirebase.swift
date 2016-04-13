@@ -22,7 +22,7 @@ class RetrieveDetailsFromFirebase:NSObject{
         
         for var i in 0 ..< userRefArray.count{
             
-            var changeRef = ref.childByAppendingPath(userRefArray[i] as! String)
+            let changeRef = ref.childByAppendingPath(userRefArray[i] as! String)
             
             changeRef.observeEventType(.Value, withBlock: { snapshot in
                 

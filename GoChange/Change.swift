@@ -24,8 +24,7 @@ class Change:NSManagedObject{
     
     @NSManaged var changeName:String
     @NSManaged var changeDescription:String
-    @NSManaged var owner:NSNumber
-    @NSManaged var firebaseLocation:String
+    @NSManaged var owner:String
     @NSManaged var changeID:String
     @NSManaged var solutionCount:NSNumber
     @NSManaged var changeNeedingSolution:[Solution]
@@ -44,14 +43,11 @@ class Change:NSManagedObject{
         
         changeName = dictionary[Change.Keys.changeName] as! String
         changeDescription = dictionary[Change.Keys.changeDescription] as! String
-        firebaseLocation = dictionary[Change.Keys.firebaseLocation] as! String
         changeID = dictionary[Change.Keys.changeID] as! String
         solutionCount = dictionary[Change.Keys.solutionCount] as! NSNumber
+        owner = dictionary[Change.Keys.owner] as! String
         
-        
-        let boolValue = dictionary[Change.Keys.owner] as! Bool
-        owner = NSNumber(bool: boolValue)
-        
+               
     }
     
     

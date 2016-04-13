@@ -18,16 +18,17 @@ class PostData:NSObject{
     var existingChange:Change!
     var postType:String = ""
     
+    var isOwner:String?
     
     //var ref = Firebase(url:"https://gochange.firebaseio.com/change/")
     
     
-    init(postType:String,change:Change? = nil) {
+    init(postType:String,owner:String,change:Change? = nil) {
         super.init()
         
         //TODO: If variable is only saving solutions...
         self.postType = postType
-        
+        self.isOwner = owner
         
         if(postType == "fullPost"){
             
@@ -59,7 +60,7 @@ class PostData:NSObject{
         
         
         
-        var namesRef = Firebase(url:"https://gochange.firebaseio.com/change/names")
+        let namesRef = Firebase(url:"https://gochange.firebaseio.com/change/names")
         
         //create location with unique ID in firebase database
         let changeNameLocation = namesRef.childByAutoId()
@@ -113,7 +114,7 @@ class PostData:NSObject{
         // create ref to solution count location
         let solutionCountLocation = Firebase(url:"https://gochange.firebaseio.com/change/solutionCount")
         
-        var uniqueSolutionCountLocation = solutionCountLocation.childByAppendingPath(changeID!)
+        let uniqueSolutionCountLocation = solutionCountLocation.childByAppendingPath(changeID!)
         
         uniqueSolutionCountLocation.setValue(["SolutionCount":TempChange.sharedInstance().solutionNameArray.count])
         
@@ -158,7 +159,7 @@ class PostData:NSObject{
         
         changeDictionary[Change.Keys.changeName] = TempChange.sharedInstance().changeName
         changeDictionary[Change.Keys.changeDescription] = TempChange.sharedInstance().changeDetail
-        changeDictionary[Change.Keys.owner] = true
+        changeDictionary[Change.Keys.owner] = self.isOwner
         changeDictionary[Change.Keys.firebaseLocation] = savedAutoID
         changeDictionary[Change.Keys.changeID] = changeID
         changeDictionary[Change.Keys.solutionCount] = TempChange.sharedInstance().solutionNameArray.count

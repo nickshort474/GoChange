@@ -6,34 +6,34 @@ provides-nominal:
 provides-member:
 - ["C8GoChange8PostData", ""]
 provides-dynamic-lookup:
-- "saveChangeToFirebase"
-- "sharedContext"
-- "changeID"
-- "createCoreDataSolutions"
-- "newChange"
 - "createCoreDataChange"
-- "savedAutoID"
+- "changeID"
+- "newChange"
 - "postType"
+- "isOwner"
+- "sharedContext"
 - "existingChange"
+- "saveChangeToFirebase"
+- "savedAutoID"
+- "createCoreDataSolutions"
 depends-top-level:
-- "Change"
-- "String"
-- "NSObject"
-- !private "=="
+- !private "..<"
 - !private "print"
-- "PostData"
-- !private "Solution"
-- "StringLiteralType"
-- !private "CoreDataStackManager"
-- !private "NSPredicate"
 - !private "NSFetchRequest"
 - !private "Firebase"
-- !private "TempChange"
-- "NSManagedObjectContext"
 - !private "Dictionary"
+- "StringLiteralType"
+- !private "=="
+- "NSObject"
+- !private "TempChange"
+- "Change"
+- "String"
+- !private "NSPredicate"
 - !private "AnyObject"
-- !private "..<"
-- !private "BooleanLiteralType"
+- "PostData"
+- "NSManagedObjectContext"
+- !private "CoreDataStackManager"
+- !private "Solution"
 depends-member:
 - !private ["Ps9AnyObject", "AnyObject"]
 - !private ["Ps9AnyObject", "Change"]
@@ -60,6 +60,7 @@ depends-member:
 - !private ["Ps9AnyObject", "executeFetchRequest"]
 - ["Ps9AnyObject", "existingChange"]
 - ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "isOwner"]
 - !private ["Ps9AnyObject", "managedObjectContext"]
 - ["Ps9AnyObject", "newChange"]
 - ["Ps9AnyObject", "postType"]
@@ -101,7 +102,6 @@ depends-member:
 - !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
 - !private ["Ps21BitwiseOperationsType", "_DisabledRangeIndex"]
 - !private ["Sb", "_getBuiltinLogicValue"]
-- !private ["Sb", "deinit"]
 - !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
 - !private ["Ps11CVarArgType", "AnyObject"]
@@ -131,6 +131,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "executeFetchRequest"]
 - ["Ps11CVarArgType", "existingChange"]
 - ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "isOwner"]
 - ["Ps11CVarArgType", "newChange"]
 - ["Ps11CVarArgType", "postType"]
 - !private ["Ps11CVarArgType", "predicate"]
@@ -199,6 +200,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "executeFetchRequest"]
 - ["Ps28CustomDebugStringConvertible", "existingChange"]
 - ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "isOwner"]
 - ["Ps28CustomDebugStringConvertible", "newChange"]
 - ["Ps28CustomDebugStringConvertible", "postType"]
 - !private ["Ps28CustomDebugStringConvertible", "predicate"]
@@ -251,6 +253,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "executeFetchRequest"]
 - ["Ps23CustomStringConvertible", "existingChange"]
 - ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "isOwner"]
 - ["Ps23CustomStringConvertible", "newChange"]
 - ["Ps23CustomStringConvertible", "postType"]
 - !private ["Ps23CustomStringConvertible", "predicate"]
@@ -309,6 +312,7 @@ depends-member:
 - !private ["Ps9Equatable", "executeFetchRequest"]
 - ["Ps9Equatable", "existingChange"]
 - ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "isOwner"]
 - ["Ps9Equatable", "newChange"]
 - ["Ps9Equatable", "postType"]
 - !private ["Ps9Equatable", "predicate"]
@@ -377,6 +381,7 @@ depends-member:
 - !private ["Ps8Hashable", "executeFetchRequest"]
 - ["Ps8Hashable", "existingChange"]
 - ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "isOwner"]
 - ["Ps8Hashable", "newChange"]
 - ["Ps8Hashable", "postType"]
 - !private ["Ps8Hashable", "predicate"]
@@ -526,6 +531,7 @@ depends-member:
 - !private ["CSo8NSObject", "executeFetchRequest"]
 - ["CSo8NSObject", "existingChange"]
 - ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "isOwner"]
 - ["CSo8NSObject", "newChange"]
 - ["CSo8NSObject", "postType"]
 - !private ["CSo8NSObject", "predicate"]
@@ -570,6 +576,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "executeFetchRequest"]
 - ["PSo16NSObjectProtocol", "existingChange"]
 - ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "isOwner"]
 - ["PSo16NSObjectProtocol", "newChange"]
 - ["PSo16NSObjectProtocol", "postType"]
 - !private ["PSo16NSObjectProtocol", "predicate"]
@@ -628,6 +635,7 @@ depends-member:
 - ["C8GoChange8PostData", "deinit"]
 - ["C8GoChange8PostData", "existingChange"]
 - ["C8GoChange8PostData", "init"]
+- ["C8GoChange8PostData", "isOwner"]
 - ["C8GoChange8PostData", "newChange"]
 - ["C8GoChange8PostData", "postType"]
 - !private ["C8GoChange8PostData", "print"]
@@ -898,4 +906,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "6294bdb3cb605c1983b2a8806fd4e6fe"
+interface-hash: "fd40eaf1ce932a4dac70b67ef2f1b50f"

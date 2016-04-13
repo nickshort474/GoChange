@@ -185,8 +185,7 @@ SWIFT_CLASS("_TtC8GoChange6Change")
 @interface Change : NSManagedObject
 @property (nonatomic, copy) NSString * _Nonnull changeName;
 @property (nonatomic, copy) NSString * _Nonnull changeDescription;
-@property (nonatomic, strong) NSNumber * _Nonnull owner;
-@property (nonatomic, copy) NSString * _Nonnull firebaseLocation;
+@property (nonatomic, copy) NSString * _Nonnull owner;
 @property (nonatomic, copy) NSString * _Nonnull changeID;
 @property (nonatomic, strong) NSNumber * _Nonnull solutionCount;
 @property (nonatomic, copy) NSArray<Solution *> * _Nonnull changeNeedingSolution;
@@ -214,6 +213,8 @@ SWIFT_CLASS("_TtC8GoChange26CreateChangeViewController")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified namePlusButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified detailsPlusButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified postButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified followButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified addASolutionButton;
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified solutionTable;
 @property (nonatomic, copy) NSString * _Nonnull currentNameData;
 @property (nonatomic, copy) NSString * _Nonnull currentDetailData;
@@ -223,6 +224,7 @@ SWIFT_CLASS("_TtC8GoChange26CreateChangeViewController")
 @property (nonatomic, copy) NSString * _Nonnull changeDetail;
 @property (nonatomic, copy) NSString * _Nonnull changeID;
 @property (nonatomic, copy) NSArray<Solution *> * _Nonnull retrievedSolutionArray;
+@property (nonatomic, strong) Change * _Nullable change;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
@@ -237,6 +239,7 @@ SWIFT_CLASS("_TtC8GoChange26CreateChangeViewController")
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (IBAction)PostInfo:(UIButton * _Nonnull)sender;
+- (IBAction)followChange:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -319,7 +322,8 @@ SWIFT_CLASS("_TtC8GoChange8PostData")
 @property (nonatomic, strong) Change * _Null_unspecified newChange;
 @property (nonatomic, strong) Change * _Null_unspecified existingChange;
 @property (nonatomic, copy) NSString * _Nonnull postType;
-- (nonnull instancetype)initWithPostType:(NSString * _Nonnull)postType change:(Change * _Nullable)change OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, copy) NSString * _Nullable isOwner;
+- (nonnull instancetype)initWithPostType:(NSString * _Nonnull)postType owner:(NSString * _Nonnull)owner change:(Change * _Nullable)change OBJC_DESIGNATED_INITIALIZER;
 @property (nonatomic, strong) NSManagedObjectContext * _Nonnull sharedContext;
 - (void)saveChangeToFirebase;
 - (void)createCoreDataChange;
@@ -388,6 +392,24 @@ SWIFT_CLASS("_TtC8GoChange29RetrieveSolutionsFromFirebase")
 @end
 
 
+SWIFT_CLASS("_TtC8GoChange8SaveData")
+@interface SaveData : NSObject
+@property (nonatomic, copy) NSString * _Nullable savedAutoID;
+@property (nonatomic, copy) NSString * _Nullable changeID;
+@property (nonatomic, strong) Change * _Null_unspecified newChange;
+@property (nonatomic, strong) Change * _Null_unspecified existingChange;
+@property (nonatomic, copy) NSString * _Nonnull postType;
+@property (nonatomic, copy) NSString * _Nullable isOwner;
+- (nonnull instancetype)initWithPostType:(NSString * _Nonnull)postType owner:(NSString * _Nonnull)owner change:(Change * _Nullable)change changeID:(NSString * _Nullable)changeID OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, strong) NSManagedObjectContext * _Nonnull sharedContext;
+- (void)saveChangeToFirebase;
+- (void)saveDetailsToFirebase;
+- (void)saveSolutionsToFirebase;
+- (void)createCoreDataChange;
+- (void)createCoreDataSolutions;
+@end
+
+
 SWIFT_CLASS("_TtC8GoChange20SearchViewController")
 @interface SearchViewController : UIViewController <UITextFieldDelegate>
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified searchTextField;
@@ -450,8 +472,12 @@ SWIFT_CLASS("_TtC8GoChange10TempChange")
 @property (nonatomic, copy) NSString * _Nonnull changeDetail;
 @property (nonatomic, strong) NSMutableArray * _Nonnull solutionNameArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull solutionDetailArray;
+@property (nonatomic, strong) NSMutableArray * _Nonnull solutionNewOldArray;
+@property (nonatomic, strong) NSMutableArray * _Nonnull newSolutionNameArray;
+@property (nonatomic, strong) NSMutableArray * _Nonnull newSolutionDetailArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull tweakNameArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull tweakDetailArray;
+@property (nonatomic, copy) NSString * _Nonnull addingSolutions;
 + (TempChange * _Nonnull)sharedInstance;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end

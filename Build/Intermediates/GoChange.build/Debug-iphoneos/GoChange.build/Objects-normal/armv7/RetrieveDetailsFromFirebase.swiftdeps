@@ -9,17 +9,17 @@ provides-dynamic-lookup:
 - "ref"
 - "results"
 depends-top-level:
-- "Void"
-- "StringLiteralType"
-- "Array"
-- !private "=="
-- "Firebase"
-- "NSMutableArray"
-- "RetrieveDetailsFromFirebase"
-- "NSObject"
-- !private "..<"
-- !private "String"
 - !private "print"
+- !private "..<"
+- "StringLiteralType"
+- "NSMutableArray"
+- "Void"
+- !private "=="
+- "NSObject"
+- !private "String"
+- "Array"
+- "RetrieveDetailsFromFirebase"
+- "Firebase"
 depends-member:
 - ["Ps9AnyObject", "Element"]
 - ["Ps9AnyObject", "Firebase"]

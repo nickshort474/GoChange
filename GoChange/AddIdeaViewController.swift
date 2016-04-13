@@ -65,9 +65,12 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         if(nameTextField.text != "" && detailTextView.text != ""){
             
             // save data locally
+            
+            TempChange.sharedInstance().addingSolutions = "true"
+            
             TempChange.sharedInstance().solutionNameArray.addObject(nameTextField.text!)
             TempChange.sharedInstance().solutionDetailArray.addObject(detailTextView.text!)
-            
+            TempChange.sharedInstance().solutionNewOldArray.addObject("new")
             // dismiss view controller from navigation stack
             self.navigationController?.popViewControllerAnimated(true)
         }

@@ -154,8 +154,8 @@
                                     <constraint firstAttribute="height" constant="75" id="m7d-fl-C1s"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gkI-PS-lg4">
-                                <rect key="frame" x="0.0" y="93" width="600" height="430"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gkI-PS-lg4">
+                                <rect key="frame" x="0.0" y="95" width="600" height="430"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0BE-c2-xK1">
                                         <rect key="frame" x="75" y="50" width="55" height="40"/>
@@ -433,15 +433,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0FB-n3-DW7">
-                                <rect key="frame" x="526" y="554" width="44" height="36"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Post"/>
+                                <rect key="frame" x="466" y="557" width="104" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Post Change"/>
                                 <connections>
                                     <action selector="PostInfo:" destination="jla-2r-9q3" eventType="touchUpInside" id="gSv-AC-8I2"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fp9-c2-DJ3">
-                                <rect key="frame" x="0.0" y="64" width="600" height="480"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="483"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Please give you change a name...." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wUl-ml-dgM">
                                         <rect key="frame" x="8" y="35" width="542" height="17"/>
@@ -497,7 +497,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F21-5O-Qlr">
-                                        <rect key="frame" x="251" y="450" width="98" height="30"/>
+                                        <rect key="frame" x="251" y="453" width="98" height="30"/>
                                         <state key="normal" title="Add a solution"/>
                                         <connections>
                                             <action selector="addSolution:" destination="jla-2r-9q3" eventType="touchUpInside" id="lmd-NU-bDy"/>
@@ -513,6 +513,7 @@
                                     <constraint firstItem="eaS-ex-xaJ" firstAttribute="leading" secondItem="lPM-ny-u3c" secondAttribute="trailing" constant="8" id="JUo-iN-SmO"/>
                                     <constraint firstItem="wUl-ml-dgM" firstAttribute="top" secondItem="Fp9-c2-DJ3" secondAttribute="top" constant="35" id="RvG-fM-AZX"/>
                                     <constraint firstItem="lPM-ny-u3c" firstAttribute="top" secondItem="wUl-ml-dgM" secondAttribute="bottom" constant="8" id="Xam-D4-G9Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jei-Uk-BP3" secondAttribute="trailing" constant="8" id="bCQ-iQ-G1Z"/>
                                     <constraint firstItem="Jei-Uk-BP3" firstAttribute="leading" secondItem="Fp9-c2-DJ3" secondAttribute="leading" constant="8" id="fN4-9n-7qk"/>
                                     <constraint firstItem="eaS-ex-xaJ" firstAttribute="top" secondItem="lPM-ny-u3c" secondAttribute="top" id="mBV-mE-jqU"/>
                                     <constraint firstAttribute="trailing" secondItem="eaS-ex-xaJ" secondAttribute="trailing" constant="8" id="nES-Ce-cDC"/>
@@ -523,14 +524,24 @@
                                     <constraint firstItem="Jei-Uk-BP3" firstAttribute="height" secondItem="lPM-ny-u3c" secondAttribute="height" id="wyr-db-2Oy"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFU-ND-7Dq">
+                                <rect key="frame" x="30" y="557" width="120" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Follow Change"/>
+                                <connections>
+                                    <action selector="followChange:" destination="jla-2r-9q3" eventType="touchUpInside" id="Lik-fg-HS0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="JFU-ND-7Dq" firstAttribute="leading" secondItem="bip-QN-Yer" secondAttribute="leadingMargin" constant="10" id="9LQ-eb-vfC"/>
                             <constraint firstItem="0FB-n3-DW7" firstAttribute="top" secondItem="Fp9-c2-DJ3" secondAttribute="bottom" constant="10" id="HVP-fy-iT1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0FB-n3-DW7" secondAttribute="trailing" constant="10" id="Sb1-KM-PQr"/>
                             <constraint firstItem="Fp9-c2-DJ3" firstAttribute="top" secondItem="GAE-Cy-tYy" secondAttribute="bottom" id="e00-li-POL"/>
                             <constraint firstItem="PGB-N4-xMZ" firstAttribute="top" secondItem="0FB-n3-DW7" secondAttribute="bottom" constant="10" id="iPu-Pq-Ucn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Fp9-c2-DJ3" secondAttribute="trailing" constant="-20" id="ko7-ka-Fvu"/>
+                            <constraint firstItem="PGB-N4-xMZ" firstAttribute="top" secondItem="JFU-ND-7Dq" secondAttribute="bottom" constant="10" id="pS1-HS-fqA"/>
                             <constraint firstItem="Fp9-c2-DJ3" firstAttribute="leading" secondItem="bip-QN-Yer" secondAttribute="leadingMargin" constant="-20" id="xp1-OB-2dx"/>
                         </constraints>
                     </view>
@@ -548,8 +559,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addASolutionButton" destination="F21-5O-Qlr" id="PGs-ve-Cu6"/>
                         <outlet property="detailsField" destination="lPM-ny-u3c" id="iJk-UC-sew"/>
                         <outlet property="detailsPlusButton" destination="eaS-ex-xaJ" id="lSl-Ov-LMl"/>
+                        <outlet property="followButton" destination="JFU-ND-7Dq" id="8vE-fx-9uj"/>
                         <outlet property="nameField" destination="wUl-ml-dgM" id="Dno-Hm-z7A"/>
                         <outlet property="namePlusButton" destination="pHr-oT-t1z" id="7nb-7r-r6p"/>
                         <outlet property="postButton" destination="0FB-n3-DW7" id="kHF-tW-73o"/>
@@ -601,7 +614,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Following" id="aCA-AH-0fr">
                         <barButtonItem key="backBarButtonItem" title="Home" id="PZx-Tm-Sha"/>
-                        <barButtonItem key="leftBarButtonItem" title="Home" style="plain" id="23k-xO-nhl">
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="23k-xO-nhl">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0qf-qG-Xj8">
                                 <rect key="frame" x="20" y="7" width="133" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

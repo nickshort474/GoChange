@@ -1,0 +1,217 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Tweak"
+provides-nominal:
+- "C8GoChange5Tweak"
+- "VC8GoChange5Tweak4Keys"
+provides-member:
+- ["C8GoChange5Tweak", ""]
+- ["VC8GoChange5Tweak4Keys", ""]
+provides-dynamic-lookup:
+- "tweakName"
+- "tweakDescription"
+- "tweakForSolution"
+depends-top-level:
+- "Tweak"
+- "AnyObject"
+- "NSManagedObject"
+- "NSEntityDescription"
+- "StringLiteralType"
+- "Solution"
+- "NSManagedObjectContext"
+- "String"
+depends-member:
+- !private ["Ps9AnyObject", "Keys"]
+- !private ["Ps9AnyObject", "NSEntityDescription"]
+- !private ["Ps9AnyObject", "Tweak"]
+- !private ["Ps9AnyObject", "entityForName"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "tweakDescription"]
+- ["Ps9AnyObject", "tweakForSolution"]
+- ["Ps9AnyObject", "tweakName"]
+- ["Ps9AnyObject", ""]
+- !private ["Ps11CVarArgType", "Keys"]
+- !private ["Ps11CVarArgType", "NSEntityDescription"]
+- !private ["Ps11CVarArgType", "Tweak"]
+- !private ["Ps11CVarArgType", "entityForName"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "tweakDescription"]
+- ["Ps11CVarArgType", "tweakForSolution"]
+- ["Ps11CVarArgType", "tweakName"]
+- ["Ps11CVarArgType", ""]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "subscript"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
+- !private ["Ps28CustomDebugStringConvertible", "Keys"]
+- !private ["Ps28CustomDebugStringConvertible", "NSEntityDescription"]
+- !private ["Ps28CustomDebugStringConvertible", "Tweak"]
+- !private ["Ps28CustomDebugStringConvertible", "entityForName"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- ["Ps28CustomDebugStringConvertible", "tweakDescription"]
+- ["Ps28CustomDebugStringConvertible", "tweakForSolution"]
+- ["Ps28CustomDebugStringConvertible", "tweakName"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "Index"]
+- !private ["Ps23CustomStringConvertible", "Keys"]
+- !private ["Ps23CustomStringConvertible", "NSEntityDescription"]
+- !private ["Ps23CustomStringConvertible", "Tweak"]
+- !private ["Ps23CustomStringConvertible", "entityForName"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- ["Ps23CustomStringConvertible", "tweakDescription"]
+- ["Ps23CustomStringConvertible", "tweakForSolution"]
+- ["Ps23CustomStringConvertible", "tweakName"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Vs10Dictionary", "Index"]
+- !private ["Vs10Dictionary", "deinit"]
+- !private ["Vs10Dictionary", "subscript"]
+- !private ["Ps28DictionaryLiteralConvertible", "Index"]
+- !private ["Ps28DictionaryLiteralConvertible", "subscript"]
+- !private ["Ps9Equatable", "Keys"]
+- !private ["Ps9Equatable", "NSEntityDescription"]
+- !private ["Ps9Equatable", "Tweak"]
+- !private ["Ps9Equatable", "entityForName"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "tweakDescription"]
+- ["Ps9Equatable", "tweakForSolution"]
+- ["Ps9Equatable", "tweakName"]
+- ["Ps9Equatable", ""]
+- !private ["Ps13GeneratorType", "Element"]
+- !private ["Ps8Hashable", "Keys"]
+- !private ["Ps8Hashable", "NSEntityDescription"]
+- !private ["Ps8Hashable", "Tweak"]
+- !private ["Ps8Hashable", "entityForName"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "tweakDescription"]
+- ["Ps8Hashable", "tweakForSolution"]
+- ["Ps8Hashable", "tweakName"]
+- ["Ps8Hashable", ""]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "subscript"]
+- !private ["Vs17IndexingGenerator", "Element"]
+- ["VC8GoChange5Tweak4Keys", "init"]
+- ["VC8GoChange5Tweak4Keys", "tweakDescription"]
+- ["VC8GoChange5Tweak4Keys", "tweakName"]
+- !private ["PSo8NSCoding", "entityForName"]
+- !private ["PSo9NSCopying", "entityForName"]
+- !private ["CSo19NSEntityDescription", "entityForName"]
+- !private ["PSo17NSFastEnumeration", "entityForName"]
+- ["CSo15NSManagedObject", "AnyObject"]
+- !private ["CSo15NSManagedObject", "Keys"]
+- ["CSo15NSManagedObject", "NSEntityDescription"]
+- ["CSo15NSManagedObject", "NSManagedObjectContext"]
+- ["CSo15NSManagedObject", "Solution"]
+- ["CSo15NSManagedObject", "String"]
+- !private ["CSo15NSManagedObject", "Tweak"]
+- ["CSo15NSManagedObject", "init"]
+- ["CSo15NSManagedObject", "tweakDescription"]
+- ["CSo15NSManagedObject", "tweakForSolution"]
+- ["CSo15NSManagedObject", "tweakName"]
+- ["CSo15NSManagedObject", ""]
+- ["CSo8NSObject", "AnyObject"]
+- !private ["CSo8NSObject", "Keys"]
+- ["CSo8NSObject", "NSEntityDescription"]
+- ["CSo8NSObject", "NSManagedObjectContext"]
+- ["CSo8NSObject", "Solution"]
+- ["CSo8NSObject", "String"]
+- !private ["CSo8NSObject", "Tweak"]
+- !private ["CSo8NSObject", "entityForName"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "tweakDescription"]
+- ["CSo8NSObject", "tweakForSolution"]
+- ["CSo8NSObject", "tweakName"]
+- !private ["PSo16NSObjectProtocol", "Keys"]
+- !private ["PSo16NSObjectProtocol", "NSEntityDescription"]
+- !private ["PSo16NSObjectProtocol", "Tweak"]
+- !private ["PSo16NSObjectProtocol", "entityForName"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "tweakDescription"]
+- ["PSo16NSObjectProtocol", "tweakForSolution"]
+- ["PSo16NSObjectProtocol", "tweakName"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["Sq", "deinit"]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- !private ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "subscript"]
+- !private ["Vs5Slice", "Generator"]
+- !private ["Vs5Slice", "Index"]
+- !private ["Vs5Slice", "SubSequence"]
+- !private ["Vs5Slice", "_Element"]
+- ["C8GoChange5Tweak", "AnyObject"]
+- ["C8GoChange5Tweak", "Keys"]
+- ["C8GoChange5Tweak", "NSEntityDescription"]
+- ["C8GoChange5Tweak", "NSManagedObjectContext"]
+- ["C8GoChange5Tweak", "Solution"]
+- ["C8GoChange5Tweak", "String"]
+- !private ["C8GoChange5Tweak", "Tweak"]
+- ["C8GoChange5Tweak", "deinit"]
+- ["C8GoChange5Tweak", "init"]
+- ["C8GoChange5Tweak", "tweakDescription"]
+- ["C8GoChange5Tweak", "tweakForSolution"]
+- ["C8GoChange5Tweak", "tweakName"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- !private ["Ps12_Reflectable", "Index"]
+- !private ["Ps12_Reflectable", "subscript"]
+depends-nominal:
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
+- !private "Ps14CollectionType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- !private "Vs10Dictionary"
+- !private "Ps28DictionaryLiteralConvertible"
+- "Ps9Equatable"
+- !private "Ps13GeneratorType"
+- "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
+- "VC8GoChange5Tweak4Keys"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "CSo19NSEntityDescription"
+- !private "PSo17NSFastEnumeration"
+- "CSo15NSManagedObject"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "Sq"
+- !private "Ps12SequenceType"
+- !private "Vs5Slice"
+- "C8GoChange5Tweak"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
+- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FirebaseServerValue.h"
+- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FTransactionResult.h"
+- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FMutableData.h"
+- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FirebaseApp.h"
+- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FQuery.h"
+- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase.h"
+- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FEventType.h"
+- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FDataSnapshot.h"
+- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FConfig.h"
+- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthType.h"
+- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
+- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
+- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
+interface-hash: "0221dd4fdd91d6cdae60f0d0efd5069f"

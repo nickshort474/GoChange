@@ -51,7 +51,7 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         
         //var searchTerm = searchTextField.text
         
-        var changeID = ""
+        let changeID = ""
         
         _ = RetrieveFromFirebase(changeID:changeID){
             (snapshot) in

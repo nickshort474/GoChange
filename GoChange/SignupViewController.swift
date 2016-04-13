@@ -141,7 +141,7 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
         if(updateField == "username"){
             let oldUsername = usernameTextfield.text
             let newUsername = emailTextfield.text!
-            let password = passwordTextfield.text
+            _ = passwordTextfield.text
             
             NSUserDefaults.standardUserDefaults().setValue(newUsername, forKey: "username")
             
@@ -149,7 +149,7 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
             
             
             let userID = NSUserDefaults.standardUserDefaults().valueForKey("uid") as? String
-            var userRef = ref.childByAppendingPath("users/\(userID!)")
+            let userRef = ref.childByAppendingPath("users/\(userID!)")
             print(userRef)
             
             userRef.observeEventType(.Value, withBlock: { snapshot in

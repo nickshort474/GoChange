@@ -7,35 +7,35 @@ provides-member:
 - ["C8GoChange23FollowingViewController", ""]
 provides-dynamic-lookup:
 - "didReceiveMemoryWarning"
+- "sharedContext"
+- "homeButtonClick"
+- "viewDidLoad"
 - "followingTableView"
 - "tableView"
 - "tableView"
 - "tableView"
-- "numberOfSectionsInTableView"
 - "fetchedResultsController"
 - "homeButton"
-- "viewDidLoad"
-- "homeButtonClick"
-- "sharedContext"
+- "numberOfSectionsInTableView"
 depends-top-level:
 - "UITableViewCell"
-- "NSFetchedResultsControllerDelegate"
-- "UITableViewController"
-- !private "NSFetchRequest"
-- "Array"
-- !private "CreateChangeViewController"
-- !private "CoreDataStackManager"
-- !private "Change"
-- "StringLiteralType"
-- "UIButton"
 - "FollowingViewController"
-- !private "print"
-- "UITableView"
 - "NSManagedObjectContext"
-- "Int"
 - "NSFetchedResultsController"
+- !private "NSFetchRequest"
+- "NSFetchedResultsControllerDelegate"
+- "StringLiteralType"
+- !private "CoreDataStackManager"
+- !private "print"
 - "NSIndexPath"
+- !private "Change"
+- "UIButton"
+- "Int"
+- "UITableView"
+- "UITableViewController"
+- !private "CreateChangeViewController"
 - !private "BooleanLiteralType"
+- "Array"
 depends-member:
 - !private ["Ps9AnyObject", "CoreDataStackManager"]
 - !private ["Ps9AnyObject", "NSFetchRequest"]
@@ -63,6 +63,7 @@ depends-member:
 - !private ["Ps9AnyObject", "navigationController"]
 - ["Ps9AnyObject", "numberOfSectionsInTableView"]
 - !private ["Ps9AnyObject", "objectAtIndexPath"]
+- !private ["Ps9AnyObject", "owner"]
 - !private ["Ps9AnyObject", "performFetch"]
 - !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "pushViewController"]
@@ -127,6 +128,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "navigationController"]
 - ["Ps11CVarArgType", "numberOfSectionsInTableView"]
 - !private ["Ps11CVarArgType", "objectAtIndexPath"]
+- !private ["Ps11CVarArgType", "owner"]
 - !private ["Ps11CVarArgType", "performFetch"]
 - !private ["Ps11CVarArgType", "print"]
 - !private ["Ps11CVarArgType", "pushViewController"]
@@ -144,6 +146,7 @@ depends-member:
 - !private ["C8GoChange6Change", "changeDescription"]
 - !private ["C8GoChange6Change", "changeID"]
 - !private ["C8GoChange6Change", "changeName"]
+- !private ["C8GoChange6Change", "owner"]
 - !private ["Ps14CollectionType", "Element"]
 - !private ["Ps14CollectionType", "Generator"]
 - !private ["Ps14CollectionType", "Index"]
@@ -188,6 +191,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "navigationController"]
 - ["Ps28CustomDebugStringConvertible", "numberOfSectionsInTableView"]
 - !private ["Ps28CustomDebugStringConvertible", "objectAtIndexPath"]
+- !private ["Ps28CustomDebugStringConvertible", "owner"]
 - !private ["Ps28CustomDebugStringConvertible", "performFetch"]
 - !private ["Ps28CustomDebugStringConvertible", "print"]
 - !private ["Ps28CustomDebugStringConvertible", "pushViewController"]
@@ -236,6 +240,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "navigationController"]
 - ["Ps23CustomStringConvertible", "numberOfSectionsInTableView"]
 - !private ["Ps23CustomStringConvertible", "objectAtIndexPath"]
+- !private ["Ps23CustomStringConvertible", "owner"]
 - !private ["Ps23CustomStringConvertible", "performFetch"]
 - !private ["Ps23CustomStringConvertible", "print"]
 - !private ["Ps23CustomStringConvertible", "pushViewController"]
@@ -279,6 +284,7 @@ depends-member:
 - !private ["Ps9Equatable", "navigationController"]
 - ["Ps9Equatable", "numberOfSectionsInTableView"]
 - !private ["Ps9Equatable", "objectAtIndexPath"]
+- !private ["Ps9Equatable", "owner"]
 - !private ["Ps9Equatable", "performFetch"]
 - !private ["Ps9Equatable", "print"]
 - !private ["Ps9Equatable", "pushViewController"]
@@ -354,6 +360,7 @@ depends-member:
 - !private ["Ps8Hashable", "navigationController"]
 - ["Ps8Hashable", "numberOfSectionsInTableView"]
 - !private ["Ps8Hashable", "objectAtIndexPath"]
+- !private ["Ps8Hashable", "owner"]
 - !private ["Ps8Hashable", "performFetch"]
 - !private ["Ps8Hashable", "print"]
 - !private ["Ps8Hashable", "pushViewController"]
@@ -488,6 +495,7 @@ depends-member:
 - !private ["CSo15NSManagedObject", "changeDescription"]
 - !private ["CSo15NSManagedObject", "changeID"]
 - !private ["CSo15NSManagedObject", "changeName"]
+- !private ["CSo15NSManagedObject", "owner"]
 - !private ["CSo8NSObject", "Change"]
 - !private ["CSo8NSObject", "CoreDataStackManager"]
 - !private ["CSo8NSObject", "CreateChangeViewController"]
@@ -521,6 +529,7 @@ depends-member:
 - !private ["CSo8NSObject", "navigationController"]
 - ["CSo8NSObject", "numberOfSectionsInTableView"]
 - !private ["CSo8NSObject", "objectAtIndexPath"]
+- !private ["CSo8NSObject", "owner"]
 - !private ["CSo8NSObject", "performFetch"]
 - !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "pushViewController"]
@@ -559,6 +568,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "navigationController"]
 - ["PSo16NSObjectProtocol", "numberOfSectionsInTableView"]
 - !private ["PSo16NSObjectProtocol", "objectAtIndexPath"]
+- !private ["PSo16NSObjectProtocol", "owner"]
 - !private ["PSo16NSObjectProtocol", "performFetch"]
 - !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "pushViewController"]

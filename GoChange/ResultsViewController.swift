@@ -39,8 +39,8 @@ class ResultsViewController: UIViewController,UITableViewDelegate {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath)
         
-        var changeName:String = self.resultNameArray[indexPath.row] as! String
-        var changeDetail:String = self.resultDetailArray[indexPath.row] as! String
+        let changeName:String = self.resultNameArray[indexPath.row] as! String
+        let changeDetail:String = self.resultDetailArray[indexPath.row] as! String
         
         cell.textLabel!.text = changeName
         cell.detailTextLabel!.text = changeDetail

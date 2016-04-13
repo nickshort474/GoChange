@@ -32,6 +32,7 @@
 		36C37CBE1C7A01C5002B4FB1 /* GoChangeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CBB1C7A01C5002B4FB1 /* GoChangeClient.swift */; };
 		36C37CBF1C7A01C5002B4FB1 /* GoChangeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CBC1C7A01C5002B4FB1 /* GoChangeConstants.swift */; };
 		36C37CC01C7A01C5002B4FB1 /* GoChangeConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CBD1C7A01C5002B4FB1 /* GoChangeConvenience.swift */; };
+		36D743DF1CBE4B0C00C7C8A2 /* SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D743DE1CBE4B0C00C7C8A2 /* SaveData.swift */; };
 		36D7CA051CA542C100A73176 /* TempChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D7CA041CA542C100A73176 /* TempChange.swift */; };
 		36D7CA071CA597F200A73176 /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D7CA061CA597F200A73176 /* Solution.swift */; };
 		36D7CA091CA5987E00A73176 /* Tweak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D7CA081CA5987E00A73176 /* Tweak.swift */; };
@@ -95,6 +96,7 @@
 		36C37CBB1C7A01C5002B4FB1 /* GoChangeClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoChangeClient.swift; sourceTree = "<group>"; };
 		36C37CBC1C7A01C5002B4FB1 /* GoChangeConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoChangeConstants.swift; sourceTree = "<group>"; };
 		36C37CBD1C7A01C5002B4FB1 /* GoChangeConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoChangeConvenience.swift; sourceTree = "<group>"; };
+		36D743DE1CBE4B0C00C7C8A2 /* SaveData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveData.swift; sourceTree = "<group>"; };
 		36D7CA041CA542C100A73176 /* TempChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempChange.swift; sourceTree = "<group>"; };
 		36D7CA061CA597F200A73176 /* Solution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solution.swift; sourceTree = "<group>"; };
 		36D7CA081CA5987E00A73176 /* Tweak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweak.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				36EB1EB91CB42E9000EA0CC4 /* RetrieveDetailsFromFirebase.swift */,
 				36DE37511CB12640005DEEEA /* RetrieveSolutions.swift */,
 				36DB99541CA9336600CC4D9E /* PostData.swift */,
+				36D743DE1CBE4B0C00C7C8A2 /* SaveData.swift */,
 				36E703EE1CAEE30C007C880C /* RetrieveChange.swift */,
 			);
 			name = Controllers;
@@ -494,6 +497,7 @@
 				36DE37521CB12640005DEEEA /* RetrieveSolutions.swift in Sources */,
 				36C37CB91C7A01AC002B4FB1 /* SignupViewController.swift in Sources */,
 				36AE6F361C8C37A50041B5CD /* UpdateUserInfoController.swift in Sources */,
+				36D743DF1CBE4B0C00C7C8A2 /* SaveData.swift in Sources */,
 				36C37CB31C7A01AC002B4FB1 /* FollowingViewController.swift in Sources */,
 				36C37C741C7A00E3002B4FB1 /* GoChange.xcdatamodeld in Sources */,
 				36D963F71CB556A1006F9D36 /* RetrieveSolutionsFromFirebase.swift in Sources */,

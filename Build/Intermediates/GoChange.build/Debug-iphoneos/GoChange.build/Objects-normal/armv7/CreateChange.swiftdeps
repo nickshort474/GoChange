@@ -6,25 +6,25 @@ provides-nominal:
 provides-member:
 - ["C8GoChange12CreateChange", ""]
 provides-dynamic-lookup:
+- "sharedContext"
+- "saveChangeToFirebase"
 - "savedAutoID"
 - "createCoreDataChange"
-- "saveChangeToFirebase"
 - "ref"
-- "sharedContext"
 depends-top-level:
+- "NSManagedObjectContext"
 - "Firebase"
+- "String"
+- "Change"
+- !private "AnyObject"
+- !private "=="
+- "StringLiteralType"
+- !private "Dictionary"
+- "Bool"
+- "NSObject"
+- !private "CoreDataStackManager"
 - !private "print"
 - "CreateChange"
-- "Change"
-- !private "=="
-- !private "AnyObject"
-- "StringLiteralType"
-- "Bool"
-- "NSManagedObjectContext"
-- "NSObject"
-- "String"
-- !private "Dictionary"
-- !private "CoreDataStackManager"
 - !private "BooleanLiteralType"
 depends-member:
 - !private ["Ps9AnyObject", "AnyObject"]

@@ -17,7 +17,7 @@ class RetrieveSolutionsFromFirebase:NSObject{
     init(changeID:String,completionHandler:(result:FDataSnapshot)->Void){
         super.init()
         
-        var changeRef = ref.childByAppendingPath(changeID)
+        let changeRef = ref.childByAppendingPath(changeID)
         
         changeRef.observeEventType(.Value, withBlock: {snapshot in
             

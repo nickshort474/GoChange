@@ -22,7 +22,7 @@ class RetrieveChange:NSObject{
         request.predicate = predicate
         
         do{
-           var results =  try sharedContext.executeFetchRequest(request) as! [Change]
+           let results =  try sharedContext.executeFetchRequest(request) as! [Change]
             if let entity = results.first{
                 
                 completionHandler(result:entity)

@@ -96,9 +96,12 @@ class FollowingViewController: UITableViewController,
         let navigationController = self.navigationController
         
         controller.sendingController = "following"
-        controller.isOwner = "true"
+        
         
         let changeClicked = fetchedResultsController.objectAtIndexPath(indexPath) as! Change
+        
+        
+        controller.isOwner = changeClicked.owner 
         controller.changeID = changeClicked.changeID
         
         

@@ -19,8 +19,8 @@ class RetrieveSolutionCountFirebase:NSObject{
         
         super.init()
         
-        var solutionRef = nameRef.childByAppendingPath(changeID)
-        var countRef = solutionRef.childByAppendingPath("SolutionCount")
+        let solutionRef = nameRef.childByAppendingPath(changeID)
+        let countRef = solutionRef.childByAppendingPath("SolutionCount")
         
         
         countRef.observeEventType(.Value, withBlock: { snapshot in

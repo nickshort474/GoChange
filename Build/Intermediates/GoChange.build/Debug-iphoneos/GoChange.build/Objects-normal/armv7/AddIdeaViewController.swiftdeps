@@ -6,62 +6,62 @@ provides-nominal:
 provides-member:
 - ["C8GoChange21AddIdeaViewController", ""]
 provides-dynamic-lookup:
-- "addDetailClick"
-- "petitionId"
-- "addDetailButton"
+- "tweakTable"
+- "addNameClick"
+- "textFieldDidBeginEditing"
+- "currentDetailData"
+- "detailTextView"
+- "doneAddingIdea"
+- "viewDidLoad"
+- "textViewDidBeginEditing"
+- "session"
 - "didReceiveMemoryWarning"
+- "petitionId"
 - "addPetition"
-- "addTweak"
-- "nameTextField"
+- "addSolution"
+- "addDetailButton"
+- "addDetailClick"
 - "addNameButton"
 - "currentNameData"
-- "viewDidLoad"
-- "textFieldDidBeginEditing"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tweakTable"
-- "session"
-- "addNameClick"
-- "textViewDidBeginEditing"
-- "doneAddingIdea"
-- "detailTextView"
-- "addSolution"
-- "currentDetailData"
 - "viewWillAppear"
+- "tableView"
+- "tableView"
+- "tableView"
+- "nameTextField"
+- "addTweak"
 depends-top-level:
-- !private "GoChangeClient"
-- "UIButton"
-- "UITableView"
+- "UITextViewDelegate"
+- "UITextFieldDelegate"
+- !private "=="
+- !private "print"
+- "UIViewController"
+- "NSIndexPath"
+- "UITextView"
+- !private "UIBarButtonItemStyle"
+- !private "NSURL"
+- !private "+"
 - "Bool"
-- "UITextField"
-- !private "&&"
 - "Int"
+- !private "!="
+- "NSURLSession"
+- !private "StringLiteralType"
+- "UITableViewDelegate"
+- "UITableViewCell"
+- "String"
+- "AnyObject"
+- "AddIdeaViewController"
+- "UITextField"
+- !private "GoChangeClient"
+- !private "Dictionary"
+- !private "BooleanLiteralType"
+- !private "&&"
+- "UIButton"
+- !private "AddTweakViewController"
+- "UITableView"
 - !private "TempChange"
 - !private "NSURLRequest"
-- !private "Dictionary"
-- !private "StringLiteralType"
-- !private "=="
-- !private "+"
-- !private "print"
-- "UITableViewCell"
-- "NSURLSession"
-- !private "AddTweakViewController"
-- !private "UIBarButtonItemStyle"
-- "NSIndexPath"
-- "AnyObject"
 - !private "UIColor"
-- "UIViewController"
-- "UITextView"
-- "UITextFieldDelegate"
-- "UITextViewDelegate"
-- "String"
-- !private "NSURL"
-- "UITableViewDelegate"
-- !private "!="
-- "AddIdeaViewController"
 - !private "UIBarButtonItem"
-- !private "BooleanLiteralType"
 depends-member:
 - !private ["C8GoChange21AddIdeaViewController", "AddTweakViewController"]
 - ["C8GoChange21AddIdeaViewController", "AnyObject"]
@@ -152,6 +152,7 @@ depends-member:
 - ["Ps9AnyObject", "addPetition"]
 - ["Ps9AnyObject", "addSolution"]
 - ["Ps9AnyObject", "addTweak"]
+- !private ["Ps9AnyObject", "addingSolutions"]
 - !private ["Ps9AnyObject", "alpha"]
 - !private ["Ps9AnyObject", "backBarButtonItem"]
 - !private ["Ps9AnyObject", "blackColor"]
@@ -159,6 +160,7 @@ depends-member:
 - ["Ps9AnyObject", "currentDetailData"]
 - ["Ps9AnyObject", "currentNameData"]
 - !private ["Ps9AnyObject", "dataTaskWithRequest"]
+- !private ["Ps9AnyObject", "deinit"]
 - !private ["Ps9AnyObject", "delegate"]
 - !private ["Ps9AnyObject", "dequeueReusableCellWithIdentifier"]
 - ["Ps9AnyObject", "detailTextView"]
@@ -199,6 +201,7 @@ depends-member:
 - ["Ps9AnyObject", "sharedSession"]
 - !private ["Ps9AnyObject", "solutionDetailArray"]
 - !private ["Ps9AnyObject", "solutionNameArray"]
+- !private ["Ps9AnyObject", "solutionNewOldArray"]
 - !private ["Ps9AnyObject", "storyboard"]
 - !private ["Ps9AnyObject", "subscript"]
 - ["Ps9AnyObject", "tableView"]
@@ -251,6 +254,7 @@ depends-member:
 - ["Ps11CVarArgType", "addPetition"]
 - ["Ps11CVarArgType", "addSolution"]
 - ["Ps11CVarArgType", "addTweak"]
+- !private ["Ps11CVarArgType", "addingSolutions"]
 - !private ["Ps11CVarArgType", "alpha"]
 - !private ["Ps11CVarArgType", "backBarButtonItem"]
 - !private ["Ps11CVarArgType", "blackColor"]
@@ -298,6 +302,7 @@ depends-member:
 - ["Ps11CVarArgType", "sharedSession"]
 - !private ["Ps11CVarArgType", "solutionDetailArray"]
 - !private ["Ps11CVarArgType", "solutionNameArray"]
+- !private ["Ps11CVarArgType", "solutionNewOldArray"]
 - !private ["Ps11CVarArgType", "storyboard"]
 - !private ["Ps11CVarArgType", "subscript"]
 - ["Ps11CVarArgType", "tableView"]
@@ -351,6 +356,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "addPetition"]
 - ["Ps28CustomDebugStringConvertible", "addSolution"]
 - ["Ps28CustomDebugStringConvertible", "addTweak"]
+- !private ["Ps28CustomDebugStringConvertible", "addingSolutions"]
 - !private ["Ps28CustomDebugStringConvertible", "alpha"]
 - !private ["Ps28CustomDebugStringConvertible", "backBarButtonItem"]
 - !private ["Ps28CustomDebugStringConvertible", "blackColor"]
@@ -398,6 +404,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "sharedSession"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionDetailArray"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionNameArray"]
+- !private ["Ps28CustomDebugStringConvertible", "solutionNewOldArray"]
 - !private ["Ps28CustomDebugStringConvertible", "storyboard"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
 - ["Ps28CustomDebugStringConvertible", "tableView"]
@@ -445,6 +452,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "addPetition"]
 - ["Ps23CustomStringConvertible", "addSolution"]
 - ["Ps23CustomStringConvertible", "addTweak"]
+- !private ["Ps23CustomStringConvertible", "addingSolutions"]
 - !private ["Ps23CustomStringConvertible", "alpha"]
 - !private ["Ps23CustomStringConvertible", "backBarButtonItem"]
 - !private ["Ps23CustomStringConvertible", "blackColor"]
@@ -492,6 +500,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "sharedSession"]
 - !private ["Ps23CustomStringConvertible", "solutionDetailArray"]
 - !private ["Ps23CustomStringConvertible", "solutionNameArray"]
+- !private ["Ps23CustomStringConvertible", "solutionNewOldArray"]
 - !private ["Ps23CustomStringConvertible", "storyboard"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
 - ["Ps23CustomStringConvertible", "tableView"]
@@ -543,6 +552,7 @@ depends-member:
 - ["Ps9Equatable", "addPetition"]
 - ["Ps9Equatable", "addSolution"]
 - ["Ps9Equatable", "addTweak"]
+- !private ["Ps9Equatable", "addingSolutions"]
 - !private ["Ps9Equatable", "alpha"]
 - !private ["Ps9Equatable", "backBarButtonItem"]
 - !private ["Ps9Equatable", "blackColor"]
@@ -590,6 +600,7 @@ depends-member:
 - ["Ps9Equatable", "sharedSession"]
 - !private ["Ps9Equatable", "solutionDetailArray"]
 - !private ["Ps9Equatable", "solutionNameArray"]
+- !private ["Ps9Equatable", "solutionNewOldArray"]
 - !private ["Ps9Equatable", "storyboard"]
 - !private ["Ps9Equatable", "subscript"]
 - ["Ps9Equatable", "tableView"]
@@ -642,6 +653,7 @@ depends-member:
 - ["Ps8Hashable", "addPetition"]
 - ["Ps8Hashable", "addSolution"]
 - ["Ps8Hashable", "addTweak"]
+- !private ["Ps8Hashable", "addingSolutions"]
 - !private ["Ps8Hashable", "alpha"]
 - !private ["Ps8Hashable", "backBarButtonItem"]
 - !private ["Ps8Hashable", "blackColor"]
@@ -689,6 +701,7 @@ depends-member:
 - ["Ps8Hashable", "sharedSession"]
 - !private ["Ps8Hashable", "solutionDetailArray"]
 - !private ["Ps8Hashable", "solutionNameArray"]
+- !private ["Ps8Hashable", "solutionNewOldArray"]
 - !private ["Ps8Hashable", "storyboard"]
 - !private ["Ps8Hashable", "subscript"]
 - ["Ps8Hashable", "tableView"]
@@ -919,6 +932,7 @@ depends-member:
 - ["CSo8NSObject", "addPetition"]
 - ["CSo8NSObject", "addSolution"]
 - ["CSo8NSObject", "addTweak"]
+- !private ["CSo8NSObject", "addingSolutions"]
 - !private ["CSo8NSObject", "alpha"]
 - !private ["CSo8NSObject", "backBarButtonItem"]
 - !private ["CSo8NSObject", "blackColor"]
@@ -966,6 +980,7 @@ depends-member:
 - ["CSo8NSObject", "sharedSession"]
 - !private ["CSo8NSObject", "solutionDetailArray"]
 - !private ["CSo8NSObject", "solutionNameArray"]
+- !private ["CSo8NSObject", "solutionNewOldArray"]
 - !private ["CSo8NSObject", "storyboard"]
 - !private ["CSo8NSObject", "subscript"]
 - ["CSo8NSObject", "tableView"]
@@ -1009,6 +1024,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "addPetition"]
 - ["PSo16NSObjectProtocol", "addSolution"]
 - ["PSo16NSObjectProtocol", "addTweak"]
+- !private ["PSo16NSObjectProtocol", "addingSolutions"]
 - !private ["PSo16NSObjectProtocol", "alpha"]
 - !private ["PSo16NSObjectProtocol", "backBarButtonItem"]
 - !private ["PSo16NSObjectProtocol", "blackColor"]
@@ -1056,6 +1072,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "sharedSession"]
 - !private ["PSo16NSObjectProtocol", "solutionDetailArray"]
 - !private ["PSo16NSObjectProtocol", "solutionNameArray"]
+- !private ["PSo16NSObjectProtocol", "solutionNewOldArray"]
 - !private ["PSo16NSObjectProtocol", "storyboard"]
 - !private ["PSo16NSObjectProtocol", "subscript"]
 - ["PSo16NSObjectProtocol", "tableView"]
@@ -1110,9 +1127,11 @@ depends-member:
 - !private ["SS", "init"]
 - !private ["Ps30StringInterpolationConvertible", "init"]
 - !private ["Ps24StringLiteralConvertible", "init"]
+- !private ["C8GoChange10TempChange", "addingSolutions"]
 - !private ["C8GoChange10TempChange", "sharedInstance"]
 - !private ["C8GoChange10TempChange", "solutionDetailArray"]
 - !private ["C8GoChange10TempChange", "solutionNameArray"]
+- !private ["C8GoChange10TempChange", "solutionNewOldArray"]
 - !private ["C8GoChange10TempChange", "tweakNameArray"]
 - !private ["PSo29UIAccessibilityIdentification", "alpha"]
 - !private ["PSo29UIAccessibilityIdentification", "delegate"]
