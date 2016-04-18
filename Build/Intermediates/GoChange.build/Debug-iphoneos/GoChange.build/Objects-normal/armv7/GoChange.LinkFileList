@@ -1,33 +1,32 @@
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/CreateChangeViewController.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/PostData.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/CreateSolution.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/CreateChange.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/AddTweakViewController.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/AddIdeaViewController.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/Tweak.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/HomeViewController.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/RetrieveFromFirebase.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/SearchViewController.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/RetrieveChange.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/ViewResultChangeViewController.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/GoChangeConstants.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/GoChangeClient.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/GoChangeConvenience.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/loginViewController.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/AppDelegate.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/TempChange.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/CoreDataStackManager.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/NewViewController.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/ResultsViewController.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/RetrieveDetailsFromFirebase.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/RetrieveSolutions.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/SignupViewController.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/UpdateUserInfoController.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/SaveData.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/FollowingViewController.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/ViewFollowedChangeViewController.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/RetrieveSolutionsFromFirebase.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/Change.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/WebViewController.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/Solution.o
-/Users/nickshort/Git/GoChange copy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/RetrieveSolutionCountFirebase.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/CreateChangeViewController.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/PostData.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/CreateSolution.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/CreateChange.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/AddTweakViewController.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/AddIdeaViewController.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/Tweak.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/HomeViewController.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/RetrieveFromFirebase.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/SearchViewController.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/RetrieveChange.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/ViewResultChangeViewController.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/GoChangeConstants.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/GoChangeClient.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/GoChangeConvenience.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/loginViewController.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/AppDelegate.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/TempChange.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/CoreDataStackManager.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/ResultsViewController.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/RetrieveDetailsFromFirebase.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/RetrieveSolutions.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/SignupViewController.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/UpdateUserInfoController.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/SaveData.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/FollowingViewController.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/ViewFollowedChangeViewController.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/RetrieveSolutionsFromFirebase.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/Change.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/WebViewController.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/Solution.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/RetrieveSolutionCountFirebase.o
