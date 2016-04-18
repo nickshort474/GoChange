@@ -18,8 +18,8 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
    
     var countArray:NSMutableArray = []
     
-    let useRefArray:NSMutableArray = []
-    let matchedNameArray:NSMutableArray = []
+    var useRefArray:NSMutableArray = []
+    var matchedNameArray:NSMutableArray = []
     var useDetailArray:NSMutableArray = []
     
     override func viewDidLoad() {
@@ -29,6 +29,13 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         
         
     }
+    
+    override func viewWillAppear(animated: Bool) {
+       
+        
+    }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -49,36 +56,35 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
     
     @IBAction func searchForResults(sender: UIButton) {
         
-        //var searchTerm = searchTextField.text
+        //clear arrays after previous search
+        returnedRefArray = []
+        returnedNameArray = []
         
-        let changeID = ""
-        
-        _ = RetrieveFromFirebase(changeID:changeID){
+        _ = RetrieveFromFirebase(){
             (snapshot) in
-            
             
             for name in snapshot.children.allObjects as! [FDataSnapshot]{
                 
-                //TODO: add value of returned item to array
-                //print(name.value["ChangeName"]!)
-                
+                //add value of returned item to array
                 self.returnedNameArray.addObject(name.value["ChangeName"]!! as! String)
                 
-                //TODO: add ref to item to another array
+                //add ref to item to another array
                 self.returnedRefArray.addObject(String(name.key))
             }
+            
+            //TODO: check refArray changeID's against local core data change ID's
             
             self.checkResults()
             self.createRefArray()
             
         }
-        
-        
-        
-        
     }
+    
+    
     func checkResults(){
         
+        //clear matched array after previous search
+        matchedNameArray = []
         
         let searchTerm = searchTextField.text!
         let capitalisedTerm = searchTerm.capitalizedString
@@ -120,6 +126,9 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
     
     func createRefArray(){
         
+        //clear array after coming back from previous search
+        useDetailArray = []
+        useRefArray = []
         
         // for all results that match search term add their unique reference to useRefArray using countArray
         

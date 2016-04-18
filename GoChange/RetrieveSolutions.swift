@@ -15,7 +15,6 @@ class RetrieveSolutions:NSObject{
     init(change:Change,completionHandler:(result:AnyObject)-> Void){
         super.init()
         
-        //let retrievedEntity:Change?
         
         let request = NSFetchRequest(entityName: "Solution")
         let predicate = NSPredicate(format: "solutionToChange == %@", change)

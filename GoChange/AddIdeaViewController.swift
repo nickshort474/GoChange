@@ -27,6 +27,9 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     var currentDetailData:String!
     
     
+    var viewControllerStatus:String!
+    var loadedNameData:String!
+    var loadedDetailData:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +52,16 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     }
     
     override func viewWillAppear(animated: Bool) {
+        
+        
+        if(viewControllerStatus == "viewing"){
+            
+            //TODO: If viewing disable edit buttons
+            
+            nameTextField.text = loadedNameData
+            detailTextView.text = loadedDetailData
+        }
+        
         self.tweakTable.reloadData()
     }
     
@@ -70,7 +83,9 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
             
             TempChange.sharedInstance().solutionNameArray.addObject(nameTextField.text!)
             TempChange.sharedInstance().solutionDetailArray.addObject(detailTextView.text!)
+            
             TempChange.sharedInstance().solutionNewOldArray.addObject("new")
+            
             // dismiss view controller from navigation stack
             self.navigationController?.popViewControllerAnimated(true)
         }
@@ -223,7 +238,7 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
                     }else{
                         
                         self.petitionId = result["petition_id"] as! Int
-                        print(self.petitionId)
+                        
                     }
                 }
             }

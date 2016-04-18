@@ -121,6 +121,9 @@ SWIFT_CLASS("_TtC8GoChange21AddIdeaViewController")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified addSolution;
 @property (nonatomic, copy) NSString * _Null_unspecified currentNameData;
 @property (nonatomic, copy) NSString * _Null_unspecified currentDetailData;
+@property (nonatomic, copy) NSString * _Null_unspecified viewControllerStatus;
+@property (nonatomic, copy) NSString * _Null_unspecified loadedNameData;
+@property (nonatomic, copy) NSString * _Null_unspecified loadedDetailData;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
@@ -213,7 +216,6 @@ SWIFT_CLASS("_TtC8GoChange26CreateChangeViewController")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified namePlusButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified detailsPlusButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified postButton;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified followButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified addASolutionButton;
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified solutionTable;
 @property (nonatomic, copy) NSString * _Nonnull currentNameData;
@@ -223,11 +225,9 @@ SWIFT_CLASS("_TtC8GoChange26CreateChangeViewController")
 @property (nonatomic, copy) NSString * _Nonnull changeName;
 @property (nonatomic, copy) NSString * _Nonnull changeDetail;
 @property (nonatomic, copy) NSString * _Nonnull changeID;
-@property (nonatomic, copy) NSArray<Solution *> * _Nonnull retrievedSolutionArray;
 @property (nonatomic, strong) Change * _Nullable change;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
-- (void)didReceiveMemoryWarning;
 @property (nonatomic, strong) NSManagedObjectContext * _Nonnull sharedContext;
 - (IBAction)homeButtonClick:(UIButton * _Nonnull)sender;
 - (IBAction)nameActionButton:(UIButton * _Nonnull)sender;
@@ -239,7 +239,6 @@ SWIFT_CLASS("_TtC8GoChange26CreateChangeViewController")
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (IBAction)PostInfo:(UIButton * _Nonnull)sender;
-- (IBAction)followChange:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -278,7 +277,6 @@ SWIFT_CLASS("_TtC8GoChange23FollowingViewController")
 
 SWIFT_CLASS("_TtC8GoChange14GoChangeClient")
 @interface GoChangeClient : NSObject
-- (void)printName;
 + (GoChangeClient * _Nonnull)sharedInstance;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -340,6 +338,7 @@ SWIFT_CLASS("_TtC8GoChange21ResultsViewController")
 @property (nonatomic, strong) NSMutableArray * _Nonnull resultDetailArray;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+- (void)viewWillAppear:(BOOL)animated;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
@@ -367,7 +366,7 @@ SWIFT_CLASS("_TtC8GoChange27RetrieveDetailsFromFirebase")
 SWIFT_CLASS("_TtC8GoChange20RetrieveFromFirebase")
 @interface RetrieveFromFirebase : NSObject
 @property (nonatomic, strong) Firebase * _Null_unspecified nameRef;
-- (nonnull instancetype)initWithChangeID:(NSString * _Nonnull)changeID completionHandler:(void (^ _Nonnull)(FDataSnapshot * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithCompletionHandler:(void (^ _Nonnull)(FDataSnapshot * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -400,12 +399,12 @@ SWIFT_CLASS("_TtC8GoChange8SaveData")
 @property (nonatomic, strong) Change * _Null_unspecified existingChange;
 @property (nonatomic, copy) NSString * _Nonnull postType;
 @property (nonatomic, copy) NSString * _Nullable isOwner;
-- (nonnull instancetype)initWithPostType:(NSString * _Nonnull)postType owner:(NSString * _Nonnull)owner change:(Change * _Nullable)change changeID:(NSString * _Nullable)changeID OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithPostType:(NSString * _Nonnull)postType owner:(NSString * _Nullable)owner change:(Change * _Nullable)change changeID:(NSString * _Nullable)changeID completionHandler:(void (^ _Nonnull)(id _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
 @property (nonatomic, strong) NSManagedObjectContext * _Nonnull sharedContext;
 - (void)saveChangeToFirebase;
 - (void)saveDetailsToFirebase;
 - (void)saveSolutionsToFirebase;
-- (void)createCoreDataChange;
+- (void)createCoreDataChange:(void (^ _Nonnull)(id _Nonnull))completionHandler;
 - (void)createCoreDataSolutions;
 @end
 
@@ -416,10 +415,11 @@ SWIFT_CLASS("_TtC8GoChange20SearchViewController")
 @property (nonatomic, strong) NSMutableArray * _Nonnull returnedNameArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull returnedRefArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull countArray;
-@property (nonatomic, readonly, strong) NSMutableArray * _Nonnull useRefArray;
-@property (nonatomic, readonly, strong) NSMutableArray * _Nonnull matchedNameArray;
+@property (nonatomic, strong) NSMutableArray * _Nonnull useRefArray;
+@property (nonatomic, strong) NSMutableArray * _Nonnull matchedNameArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull useDetailArray;
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
 - (IBAction)homeButtonClick:(UIButton * _Nonnull)sender;
 - (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField;
@@ -503,6 +503,59 @@ SWIFT_CLASS("_TtC8GoChange24UpdateUserInfoController")
 - (IBAction)updateEmail:(UIButton * _Nonnull)sender;
 - (void)segueToInput;
 - (IBAction)cancelUpdate:(UIButton * _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8GoChange32ViewFollowedChangeViewController")
+@interface ViewFollowedChangeViewController : UIViewController <UIScrollViewDelegate, UITextFieldDelegate, UITableViewDelegate, UITextViewDelegate>
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified nameField;
+@property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified detailsField;
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified solutionTable;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified nameButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified detailButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified addASolutionButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified followChangeButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified postChangeButton;
+@property (nonatomic, strong) Change * _Null_unspecified changeClicked;
+@property (nonatomic, copy) NSString * _Null_unspecified changeID;
+@property (nonatomic, copy) NSString * _Null_unspecified sendingController;
+- (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
+- (IBAction)addNameClick:(UIButton * _Nonnull)sender;
+- (IBAction)addDetailClick:(UIButton * _Nonnull)sender;
+- (IBAction)addSolutionClick:(UIButton * _Nonnull)sender;
+- (IBAction)postChangeClick:(UIButton * _Nonnull)sender;
+- (void)textViewDidBeginEditing:(UITextView * _Nonnull)textView;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)goBackHome;
+- (IBAction)unfollowChange:(UIButton * _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8GoChange30ViewResultChangeViewController")
+@interface ViewResultChangeViewController : UIViewController <UIScrollViewDelegate, UITextFieldDelegate, UITableViewDelegate, UITextViewDelegate>
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified nameField;
+@property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified detailsField;
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified solutionTable;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified followChangeButton;
+@property (nonatomic, copy) NSString * _Null_unspecified isOwner;
+@property (nonatomic, copy) NSString * _Null_unspecified changeName;
+@property (nonatomic, copy) NSString * _Null_unspecified changeDetail;
+@property (nonatomic, copy) NSString * _Null_unspecified changeID;
+@property (nonatomic, strong) Change * _Null_unspecified currentChange;
+- (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
+- (IBAction)followChangeClick:(UIButton * _Nonnull)sender;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)goBackHome;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

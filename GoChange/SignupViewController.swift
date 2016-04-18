@@ -76,9 +76,7 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
             updateChildValues()
         }else{
         
-        
-        print("signing up")
-        
+       
         let username = usernameTextfield.text
         let email = emailTextfield.text
         let password = passwordTextfield.text
@@ -133,7 +131,6 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
     func updateChildValues(){
         
         //1. gather current user details and paste into boxes
-        print("update child values")
         
         if usernameTextfield.text != nil && emailTextfield.text != nil && passwordTextfield.text != nil{
         
@@ -147,10 +144,8 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
             
             let values = ["username":newUsername]
             
-            
             let userID = NSUserDefaults.standardUserDefaults().valueForKey("uid") as? String
             let userRef = ref.childByAppendingPath("users/\(userID!)")
-            print(userRef)
             
             userRef.observeEventType(.Value, withBlock: { snapshot in
                 

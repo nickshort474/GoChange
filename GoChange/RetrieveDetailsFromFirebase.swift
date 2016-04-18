@@ -26,27 +26,21 @@ class RetrieveDetailsFromFirebase:NSObject{
             
             changeRef.observeEventType(.Value, withBlock: { snapshot in
                 
-                self.results.addObject(snapshot.value["ChangeDetail"] as! String)
+            self.results.addObject(snapshot.value["ChangeDetail"] as! String)
                 
-                if(self.results.count == userRefArray.count){
+            if(self.results.count == userRefArray.count){
                     
-                    completionHandler(results:self.results)
+                completionHandler(results:self.results)
                     
-                }
+            }
                 
             
             }, withCancelBlock:{ error in
-                print("error retrieving data")
+                
                 print(error.description)
                 
             })
-            
-            
-            
         }
-        
-        // if results.count == userRefArray
-        
     }
     
     

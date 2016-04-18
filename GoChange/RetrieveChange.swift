@@ -25,7 +25,8 @@ class RetrieveChange:NSObject{
            let results =  try sharedContext.executeFetchRequest(request) as! [Change]
             if let entity = results.first{
                 
-                completionHandler(result:entity)
+               completionHandler(result:entity)
+                
             }
             
         }catch{

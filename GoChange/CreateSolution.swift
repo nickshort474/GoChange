@@ -54,9 +54,9 @@ class CreateSolution:NSObject{
         
         
         do{
-            print("attempting to save solution to core data")
+            
             try self.sharedContext.save()
-            print("solution saved to core data")
+            
         }catch{
             //TODO: Catch errors!
         }

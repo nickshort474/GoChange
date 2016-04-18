@@ -20,11 +20,17 @@ class ResultsViewController: UIViewController,UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let barButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = barButtonItem
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
     }
     
     
@@ -51,15 +57,14 @@ class ResultsViewController: UIViewController,UITableViewDelegate {
     
    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
                 
-        var controller:CreateChangeViewController
+        var controller:ViewResultChangeViewController
         
-        controller = self.storyboard?.instantiateViewControllerWithIdentifier("CreateChangeViewController") as! CreateChangeViewController
+        controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewResultChangeViewController") as! ViewResultChangeViewController
         
         let navigationController = self.navigationController
         
-        controller.sendingController = "results"
+        //controller.sendingController = "results"
         controller.isOwner = "false"
-    
         controller.changeName = self.resultNameArray[indexPath.row] as! String
         controller.changeDetail = self.resultDetailArray[indexPath.row] as! String
         controller.changeID = self.refArray[indexPath.row] as! String

@@ -11,17 +11,7 @@ import UIKit
 
 class GoChangeClient:NSObject{
     
-    func printName(){
-        print("Hello my name is..")
-    }
-    
-    
-    
-    
-    
-    
-    
-    
+       
     
     
     class func sharedInstance() -> GoChangeClient{

@@ -70,8 +70,9 @@ class CreateChange:NSObject{
         let newChange = Change(dictionary: changeDictionary,context: sharedContext)
         
         do{
+            
             try self.sharedContext.save()
-            print("change saved to core data")
+            
         }catch{
             //TODO: Catch errors!
         }

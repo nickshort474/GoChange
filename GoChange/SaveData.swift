@@ -17,16 +17,13 @@ class SaveData:NSObject{
     var newChange:Change!
     var existingChange:Change!
     var postType:String = ""
-    
     var isOwner:String?
     
-    //var ref = Firebase(url:"https://gochange.firebaseio.com/change/")
     
-    
-    init(postType:String,owner:String,change:Change? = nil,changeID:String? = nil) {
+    init(postType:String,owner:String? = nil,change:Change? = nil,changeID:String? = nil,completionHandler:(result:AnyObject)-> Void) {
         super.init()
         
-        //TODO: If variable is only saving solutions...
+        
         self.postType = postType
         self.isOwner = owner
         
@@ -34,7 +31,12 @@ class SaveData:NSObject{
             
             saveChangeToFirebase()
             
-            createCoreDataChange()
+            createCoreDataChange(){
+                (result) in
+                
+                completionHandler(result:result)
+                
+            }
             
         }else if(postType == "updateCoreDataSolutions"){
             
@@ -54,8 +56,12 @@ class SaveData:NSObject{
         }else if(postType == "fullResultPost"){
             
             self.changeID = changeID
-            createCoreDataChange()
             
+            createCoreDataChange(){
+                (result) in
+                
+                completionHandler(result:result)
+            }
         }
         
         
@@ -71,32 +77,13 @@ class SaveData:NSObject{
     
     func saveChangeToFirebase(){
         
-        //TODO: if postType == solutionPost ...  post new solutions to firebase / overwrite existing ones
-        
         
         let namesRef = Firebase(url:"https://gochange.firebaseio.com/change/names")
         
         //create location with unique ID in firebase database
         let changeNameLocation = namesRef.childByAutoId()
         
-        //save location as string for core data use
-        let savedAutoID = String(changeNameLocation)
-        
-        // copy location ready for mutation
-        changeID = savedAutoID
-        
-        // create string of original firebase reference
-        let refString = String(namesRef)
-        
-        //get range of original firebase reference
-        let stringRange = savedAutoID.rangeOfString(refString)
-        
-        //extract unique ID by removing original firebase reference from full location
-        changeID!.removeRange(stringRange!)
-        
-        //clear leading character
-        changeID?.removeAtIndex(changeID!.startIndex)
-        
+        changeID = changeNameLocation.key
         
         // set up values to be saved
         let changeNameValues = ["ChangeName":TempChange.sharedInstance().changeName]
@@ -138,7 +125,9 @@ class SaveData:NSObject{
             
             
             
-            //TODO: deal with solution count
+            //TODO: deal with solution count, get return of solutionCount then increment using TempArray.sharedInstance().newSolutionNameArray.count
+            
+            
             let solutionCountLocation = Firebase(url:"https://gochange.firebaseio.com/change/solutionCount")
             
             let uniqueSolutionCountLocation = solutionCountLocation.childByAppendingPath(changeID)
@@ -152,7 +141,7 @@ class SaveData:NSObject{
             //create reference to solutions location in firebase
             let changeSolutionsLocation = Firebase(url:"https://gochange.firebaseio.com/change/solutions")
             
-            //append unique ID
+            //append changeID
             let uniqueSolutionLocation = changeSolutionsLocation.childByAppendingPath(changeID)
             
             //loop through solutions array
@@ -206,7 +195,7 @@ class SaveData:NSObject{
     
     
     
-    func createCoreDataChange(){
+    func createCoreDataChange(completionHandler:(result:AnyObject)-> Void){
         
         var changeDictionary:[String:AnyObject] = [String:AnyObject]()
         
@@ -225,12 +214,15 @@ class SaveData:NSObject{
         
         
         do{
+            
             try self.sharedContext.save()
-            print("change saved to core data")
+           
         }catch{
             //TODO: Catch errors!
         }
         
+        //completion handler to pass back newly created change
+        completionHandler(result: newChange)
     }
     
     
@@ -270,16 +262,22 @@ class SaveData:NSObject{
             
             
             //if creating a new change...
-            if(postType == "fullPost"){
+            if(postType == "fullPost" || postType == "fullResultPost"){
+                
                 newSolution.solutionToChange = newChange!
+                
             }
             
             //if adding solutions to existing change
-            if(postType == "solutionPost"){
-                newSolution.solutionToChange = existingChange
+            if(postType == "updateCoreDataSolutions" || postType == "coreDataFirebaseSolutionPost"){
+                
+                newSolution.solutionToChange = existingChange!
+                
             }
             
         }
+        
+        
         
     }
 }

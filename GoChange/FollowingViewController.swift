@@ -26,13 +26,14 @@ class FollowingViewController: UITableViewController,
         }catch{
             //TODO: deal with errors
         }
-        
-        
+        let barButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = barButtonItem
         
     }
     @IBAction func homeButtonClick(sender: UIButton) {
+       
         navigationController?.dismissViewControllerAnimated(true, completion: nil)
-        print("home clicked")
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -89,21 +90,23 @@ class FollowingViewController: UITableViewController,
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        var controller:CreateChangeViewController
+        var controller:ViewFollowedChangeViewController
         
-        controller = self.storyboard?.instantiateViewControllerWithIdentifier("CreateChangeViewController") as! CreateChangeViewController
+        controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewFollowedChangeViewController") as! ViewFollowedChangeViewController
         
         let navigationController = self.navigationController
         
-        controller.sendingController = "following"
+        //controller.sendingController = "following"
         
         
-        let changeClicked = fetchedResultsController.objectAtIndexPath(indexPath) as! Change
-        
-        
+        controller.changeClicked = fetchedResultsController.objectAtIndexPath(indexPath) as! Change
+        controller.sendingController = "Following"
+        /*
         controller.isOwner = changeClicked.owner 
         controller.changeID = changeClicked.changeID
-        
+        controller.changeName = changeClicked.changeName
+        controller.changeDetail = changeClicked.changeDescription
+        */
         
         navigationController?.pushViewController(controller,animated: true)
     

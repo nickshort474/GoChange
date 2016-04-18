@@ -20,7 +20,7 @@ extension GoChangeClient{
         
         static var requestURL = "https://api.change.org/v1/petitions/get_id"
         static var petitionURL = "http://www.change.org/p/dunkin-donuts-stop-using-styrofoam-cups-and-switch-to-a-more-eco-friendly-solution"
-        
+        static var detailText:String = "Please enter details of the change you would like to see..."
     }
     
     

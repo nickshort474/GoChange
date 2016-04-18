@@ -15,7 +15,7 @@ class RetrieveFromFirebase:NSObject{
     var nameRef = Firebase(url: "https://gochange.firebaseio.com/change/names")
     
     
-    init(changeID:String,completionHandler:(results:FDataSnapshot)->Void){
+    init(completionHandler:(results:FDataSnapshot)->Void){
         
         super.init()
         
@@ -25,7 +25,6 @@ class RetrieveFromFirebase:NSObject{
            
         }, withCancelBlock:{ error in
                 
-            print("error retrieving data")
             print(error.description)
             
         })

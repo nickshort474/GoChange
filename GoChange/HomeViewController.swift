@@ -101,9 +101,6 @@ class HomeViewController: UIViewController {
             followingLabel.hidden = true
         }
         
-        
-        
-        
     }
     
     

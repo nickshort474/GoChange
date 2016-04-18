@@ -195,8 +195,9 @@ class PostData:NSObject{
         
         
         do{
+            
             try self.sharedContext.save()
-            print("change saved to core data")
+            
         }catch{
             //TODO: Catch errors!
         }

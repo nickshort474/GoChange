@@ -32,6 +32,7 @@
 		36C37CBE1C7A01C5002B4FB1 /* GoChangeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CBB1C7A01C5002B4FB1 /* GoChangeClient.swift */; };
 		36C37CBF1C7A01C5002B4FB1 /* GoChangeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CBC1C7A01C5002B4FB1 /* GoChangeConstants.swift */; };
 		36C37CC01C7A01C5002B4FB1 /* GoChangeConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CBD1C7A01C5002B4FB1 /* GoChangeConvenience.swift */; };
+		36C622121CC547AF00B4194E /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C622111CC547AF00B4194E /* NewViewController.swift */; };
 		36D743DF1CBE4B0C00C7C8A2 /* SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D743DE1CBE4B0C00C7C8A2 /* SaveData.swift */; };
 		36D7CA051CA542C100A73176 /* TempChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D7CA041CA542C100A73176 /* TempChange.swift */; };
 		36D7CA071CA597F200A73176 /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D7CA061CA597F200A73176 /* Solution.swift */; };
@@ -40,6 +41,8 @@
 		36D963F71CB556A1006F9D36 /* RetrieveSolutionsFromFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D963F61CB556A1006F9D36 /* RetrieveSolutionsFromFirebase.swift */; };
 		36DB99551CA9336600CC4D9E /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB99541CA9336600CC4D9E /* PostData.swift */; };
 		36DE37521CB12640005DEEEA /* RetrieveSolutions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DE37511CB12640005DEEEA /* RetrieveSolutions.swift */; };
+		36DEEA471CC158B1000FF3A4 /* ViewFollowedChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DEEA461CC158B1000FF3A4 /* ViewFollowedChangeViewController.swift */; };
+		36DEEA491CC1612E000FF3A4 /* ViewResultChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DEEA481CC1612E000FF3A4 /* ViewResultChangeViewController.swift */; };
 		36E703EF1CAEE30C007C880C /* RetrieveChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E703EE1CAEE30C007C880C /* RetrieveChange.swift */; };
 		36EB1EBA1CB42E9000EA0CC4 /* RetrieveDetailsFromFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EB1EB91CB42E9000EA0CC4 /* RetrieveDetailsFromFirebase.swift */; };
 		36F871B71CB81503006706BD /* RetrieveSolutionCountFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F871B61CB81503006706BD /* RetrieveSolutionCountFirebase.swift */; };
@@ -96,6 +99,7 @@
 		36C37CBB1C7A01C5002B4FB1 /* GoChangeClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoChangeClient.swift; sourceTree = "<group>"; };
 		36C37CBC1C7A01C5002B4FB1 /* GoChangeConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoChangeConstants.swift; sourceTree = "<group>"; };
 		36C37CBD1C7A01C5002B4FB1 /* GoChangeConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoChangeConvenience.swift; sourceTree = "<group>"; };
+		36C622111CC547AF00B4194E /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		36D743DE1CBE4B0C00C7C8A2 /* SaveData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveData.swift; sourceTree = "<group>"; };
 		36D7CA041CA542C100A73176 /* TempChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempChange.swift; sourceTree = "<group>"; };
 		36D7CA061CA597F200A73176 /* Solution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solution.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 		36D963F61CB556A1006F9D36 /* RetrieveSolutionsFromFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveSolutionsFromFirebase.swift; sourceTree = "<group>"; };
 		36DB99541CA9336600CC4D9E /* PostData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		36DE37511CB12640005DEEEA /* RetrieveSolutions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveSolutions.swift; sourceTree = "<group>"; };
+		36DEEA461CC158B1000FF3A4 /* ViewFollowedChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewFollowedChangeViewController.swift; sourceTree = "<group>"; };
+		36DEEA481CC1612E000FF3A4 /* ViewResultChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewResultChangeViewController.swift; sourceTree = "<group>"; };
 		36E703EE1CAEE30C007C880C /* RetrieveChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveChange.swift; sourceTree = "<group>"; };
 		36EB1EB91CB42E9000EA0CC4 /* RetrieveDetailsFromFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveDetailsFromFirebase.swift; sourceTree = "<group>"; };
 		36F871B61CB81503006706BD /* RetrieveSolutionCountFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveSolutionCountFirebase.swift; sourceTree = "<group>"; };
@@ -223,7 +229,10 @@
 				36C37CAC1C7A01AC002B4FB1 /* SignupViewController.swift */,
 				36AE6F351C8C37A50041B5CD /* UpdateUserInfoController.swift */,
 				36C37CA71C7A01AC002B4FB1 /* HomeViewController.swift */,
+				36C622111CC547AF00B4194E /* NewViewController.swift */,
 				36C37CA51C7A01AC002B4FB1 /* CreateChangeViewController.swift */,
+				36DEEA461CC158B1000FF3A4 /* ViewFollowedChangeViewController.swift */,
+				36DEEA481CC1612E000FF3A4 /* ViewResultChangeViewController.swift */,
 				36C37CA11C7A01AC002B4FB1 /* AddIdeaViewController.swift */,
 				36C37CA61C7A01AC002B4FB1 /* FollowingViewController.swift */,
 				36C37CAB1C7A01AC002B4FB1 /* SearchViewController.swift */,
@@ -485,6 +494,7 @@
 				361A06401CB2CD450066C07C /* RetrieveFromFirebase.swift in Sources */,
 				36C37CB81C7A01AC002B4FB1 /* SearchViewController.swift in Sources */,
 				36E703EF1CAEE30C007C880C /* RetrieveChange.swift in Sources */,
+				36DEEA491CC1612E000FF3A4 /* ViewResultChangeViewController.swift in Sources */,
 				36C37CBF1C7A01C5002B4FB1 /* GoChangeConstants.swift in Sources */,
 				36C37CBE1C7A01C5002B4FB1 /* GoChangeClient.swift in Sources */,
 				36C37CC01C7A01C5002B4FB1 /* GoChangeConvenience.swift in Sources */,
@@ -492,6 +502,7 @@
 				36C37C6C1C7A00E3002B4FB1 /* AppDelegate.swift in Sources */,
 				36D7CA051CA542C100A73176 /* TempChange.swift in Sources */,
 				369EF17F1C80C5D900D8D46A /* CoreDataStackManager.swift in Sources */,
+				36C622121CC547AF00B4194E /* NewViewController.swift in Sources */,
 				36C37CB71C7A01AC002B4FB1 /* ResultsViewController.swift in Sources */,
 				36EB1EBA1CB42E9000EA0CC4 /* RetrieveDetailsFromFirebase.swift in Sources */,
 				36DE37521CB12640005DEEEA /* RetrieveSolutions.swift in Sources */,
@@ -499,6 +510,7 @@
 				36AE6F361C8C37A50041B5CD /* UpdateUserInfoController.swift in Sources */,
 				36D743DF1CBE4B0C00C7C8A2 /* SaveData.swift in Sources */,
 				36C37CB31C7A01AC002B4FB1 /* FollowingViewController.swift in Sources */,
+				36DEEA471CC158B1000FF3A4 /* ViewFollowedChangeViewController.swift in Sources */,
 				36C37C741C7A00E3002B4FB1 /* GoChange.xcdatamodeld in Sources */,
 				36D963F71CB556A1006F9D36 /* RetrieveSolutionsFromFirebase.swift in Sources */,
 				369EF17D1C80C24600D8D46A /* Change.swift in Sources */,

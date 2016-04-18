@@ -6,35 +6,36 @@ provides-nominal:
 provides-member:
 - ["C8GoChange8SaveData", ""]
 provides-dynamic-lookup:
-- "saveSolutionsToFirebase"
-- "saveDetailsToFirebase"
-- "changeID"
-- "isOwner"
-- "saveChangeToFirebase"
-- "existingChange"
-- "savedAutoID"
-- "createCoreDataSolutions"
-- "createCoreDataChange"
-- "postType"
 - "sharedContext"
+- "createCoreDataSolutions"
+- "changeID"
 - "newChange"
+- "isOwner"
+- "existingChange"
+- "saveDetailsToFirebase"
+- "saveChangeToFirebase"
+- "createCoreDataChange"
+- "saveSolutionsToFirebase"
+- "postType"
+- "savedAutoID"
 depends-top-level:
 - "NSObject"
-- "SaveData"
-- !private "TempChange"
-- !private "NSFetchRequest"
-- "StringLiteralType"
-- "Change"
-- "String"
-- !private "=="
-- !private "Dictionary"
-- !private "print"
 - !private "NSPredicate"
-- !private "AnyObject"
-- !private "CoreDataStackManager"
 - "NSManagedObjectContext"
-- !private "Firebase"
+- "String"
+- "StringLiteralType"
 - !private "Solution"
+- !private "=="
+- !private "||"
+- !private "CoreDataStackManager"
+- "Void"
+- "SaveData"
+- !private "NSFetchRequest"
+- "Change"
+- !private "Firebase"
+- !private "Dictionary"
+- !private "TempChange"
+- "AnyObject"
 - !private "..<"
 depends-member:
 - !private ["Ps9AnyObject", "AnyObject"]
@@ -63,16 +64,13 @@ depends-member:
 - ["Ps9AnyObject", "existingChange"]
 - ["Ps9AnyObject", "init"]
 - ["Ps9AnyObject", "isOwner"]
+- !private ["Ps9AnyObject", "key"]
 - !private ["Ps9AnyObject", "managedObjectContext"]
 - ["Ps9AnyObject", "newChange"]
 - !private ["Ps9AnyObject", "newSolutionDetailArray"]
 - !private ["Ps9AnyObject", "newSolutionNameArray"]
 - ["Ps9AnyObject", "postType"]
 - !private ["Ps9AnyObject", "predicate"]
-- !private ["Ps9AnyObject", "print"]
-- !private ["Ps9AnyObject", "rangeOfString"]
-- !private ["Ps9AnyObject", "removeAtIndex"]
-- !private ["Ps9AnyObject", "removeRange"]
 - !private ["Ps9AnyObject", "save"]
 - ["Ps9AnyObject", "saveChangeToFirebase"]
 - ["Ps9AnyObject", "saveDetailsToFirebase"]
@@ -85,7 +83,6 @@ depends-member:
 - !private ["Ps9AnyObject", "solutionDetailArray"]
 - !private ["Ps9AnyObject", "solutionNameArray"]
 - !private ["Ps9AnyObject", "solutionToChange"]
-- !private ["Ps9AnyObject", "startIndex"]
 - !private ["Ps9AnyObject", "subscript"]
 - ["Ps9AnyObject", ""]
 - !private ["Sa", "Generator"]
@@ -138,15 +135,12 @@ depends-member:
 - ["Ps11CVarArgType", "existingChange"]
 - ["Ps11CVarArgType", "init"]
 - ["Ps11CVarArgType", "isOwner"]
+- !private ["Ps11CVarArgType", "key"]
 - ["Ps11CVarArgType", "newChange"]
 - !private ["Ps11CVarArgType", "newSolutionDetailArray"]
 - !private ["Ps11CVarArgType", "newSolutionNameArray"]
 - ["Ps11CVarArgType", "postType"]
 - !private ["Ps11CVarArgType", "predicate"]
-- !private ["Ps11CVarArgType", "print"]
-- !private ["Ps11CVarArgType", "rangeOfString"]
-- !private ["Ps11CVarArgType", "removeAtIndex"]
-- !private ["Ps11CVarArgType", "removeRange"]
 - !private ["Ps11CVarArgType", "save"]
 - ["Ps11CVarArgType", "saveChangeToFirebase"]
 - ["Ps11CVarArgType", "saveDetailsToFirebase"]
@@ -159,7 +153,6 @@ depends-member:
 - !private ["Ps11CVarArgType", "solutionDetailArray"]
 - !private ["Ps11CVarArgType", "solutionNameArray"]
 - !private ["Ps11CVarArgType", "solutionToChange"]
-- !private ["Ps11CVarArgType", "startIndex"]
 - !private ["Ps11CVarArgType", "subscript"]
 - ["Ps11CVarArgType", ""]
 - !private ["C8GoChange6Change", "Keys"]
@@ -176,11 +169,6 @@ depends-member:
 - !private ["Ps10Comparable", "Distance"]
 - !private ["Ps10Comparable", "IntegerLiteralType"]
 - !private ["Ps10Comparable", "_DisabledRangeIndex"]
-- !private ["Ps10Comparable", "init"]
-- !private ["Ps10Comparable", "rangeOfString"]
-- !private ["Ps10Comparable", "removeAtIndex"]
-- !private ["Ps10Comparable", "removeRange"]
-- !private ["Ps10Comparable", "startIndex"]
 - !private ["C8GoChange20CoreDataStackManager", "managedObjectContext"]
 - !private ["C8GoChange20CoreDataStackManager", "sharedInstance"]
 - !private ["Ps28CustomDebugStringConvertible", "AnyObject"]
@@ -212,15 +200,12 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "existingChange"]
 - ["Ps28CustomDebugStringConvertible", "init"]
 - ["Ps28CustomDebugStringConvertible", "isOwner"]
+- !private ["Ps28CustomDebugStringConvertible", "key"]
 - ["Ps28CustomDebugStringConvertible", "newChange"]
 - !private ["Ps28CustomDebugStringConvertible", "newSolutionDetailArray"]
 - !private ["Ps28CustomDebugStringConvertible", "newSolutionNameArray"]
 - ["Ps28CustomDebugStringConvertible", "postType"]
 - !private ["Ps28CustomDebugStringConvertible", "predicate"]
-- !private ["Ps28CustomDebugStringConvertible", "print"]
-- !private ["Ps28CustomDebugStringConvertible", "rangeOfString"]
-- !private ["Ps28CustomDebugStringConvertible", "removeAtIndex"]
-- !private ["Ps28CustomDebugStringConvertible", "removeRange"]
 - !private ["Ps28CustomDebugStringConvertible", "save"]
 - ["Ps28CustomDebugStringConvertible", "saveChangeToFirebase"]
 - ["Ps28CustomDebugStringConvertible", "saveDetailsToFirebase"]
@@ -233,7 +218,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "solutionDetailArray"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionNameArray"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionToChange"]
-- !private ["Ps28CustomDebugStringConvertible", "startIndex"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps23CustomStringConvertible", "AnyObject"]
@@ -269,15 +253,12 @@ depends-member:
 - ["Ps23CustomStringConvertible", "existingChange"]
 - ["Ps23CustomStringConvertible", "init"]
 - ["Ps23CustomStringConvertible", "isOwner"]
+- !private ["Ps23CustomStringConvertible", "key"]
 - ["Ps23CustomStringConvertible", "newChange"]
 - !private ["Ps23CustomStringConvertible", "newSolutionDetailArray"]
 - !private ["Ps23CustomStringConvertible", "newSolutionNameArray"]
 - ["Ps23CustomStringConvertible", "postType"]
 - !private ["Ps23CustomStringConvertible", "predicate"]
-- !private ["Ps23CustomStringConvertible", "print"]
-- !private ["Ps23CustomStringConvertible", "rangeOfString"]
-- !private ["Ps23CustomStringConvertible", "removeAtIndex"]
-- !private ["Ps23CustomStringConvertible", "removeRange"]
 - !private ["Ps23CustomStringConvertible", "save"]
 - ["Ps23CustomStringConvertible", "saveChangeToFirebase"]
 - ["Ps23CustomStringConvertible", "saveDetailsToFirebase"]
@@ -290,7 +271,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "solutionDetailArray"]
 - !private ["Ps23CustomStringConvertible", "solutionNameArray"]
 - !private ["Ps23CustomStringConvertible", "solutionToChange"]
-- !private ["Ps23CustomStringConvertible", "startIndex"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
 - ["Ps23CustomStringConvertible", ""]
 - !private ["Vs10Dictionary", "Key"]
@@ -332,15 +312,12 @@ depends-member:
 - ["Ps9Equatable", "existingChange"]
 - ["Ps9Equatable", "init"]
 - ["Ps9Equatable", "isOwner"]
+- !private ["Ps9Equatable", "key"]
 - ["Ps9Equatable", "newChange"]
 - !private ["Ps9Equatable", "newSolutionDetailArray"]
 - !private ["Ps9Equatable", "newSolutionNameArray"]
 - ["Ps9Equatable", "postType"]
 - !private ["Ps9Equatable", "predicate"]
-- !private ["Ps9Equatable", "print"]
-- !private ["Ps9Equatable", "rangeOfString"]
-- !private ["Ps9Equatable", "removeAtIndex"]
-- !private ["Ps9Equatable", "removeRange"]
 - !private ["Ps9Equatable", "save"]
 - ["Ps9Equatable", "saveChangeToFirebase"]
 - ["Ps9Equatable", "saveDetailsToFirebase"]
@@ -353,23 +330,17 @@ depends-member:
 - !private ["Ps9Equatable", "solutionDetailArray"]
 - !private ["Ps9Equatable", "solutionNameArray"]
 - !private ["Ps9Equatable", "solutionToChange"]
-- !private ["Ps9Equatable", "startIndex"]
 - !private ["Ps9Equatable", "subscript"]
 - ["Ps9Equatable", ""]
-- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
-- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "rangeOfString"]
-- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "removeAtIndex"]
-- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "removeRange"]
-- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "startIndex"]
 - !private ["CSo6FQuery", "childByAppendingPath"]
 - !private ["CSo6FQuery", "childByAutoId"]
-- !private ["CSo6FQuery", "deinit"]
 - !private ["CSo6FQuery", "init"]
+- !private ["CSo6FQuery", "key"]
 - !private ["CSo6FQuery", "setValue"]
 - !private ["CSo8Firebase", "childByAppendingPath"]
 - !private ["CSo8Firebase", "childByAutoId"]
-- !private ["CSo8Firebase", "deinit"]
 - !private ["CSo8Firebase", "init"]
+- !private ["CSo8Firebase", "key"]
 - !private ["CSo8Firebase", "setValue"]
 - !private ["Ps16ForwardIndexType", "Distance"]
 - !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
@@ -405,15 +376,12 @@ depends-member:
 - ["Ps8Hashable", "existingChange"]
 - ["Ps8Hashable", "init"]
 - ["Ps8Hashable", "isOwner"]
+- !private ["Ps8Hashable", "key"]
 - ["Ps8Hashable", "newChange"]
 - !private ["Ps8Hashable", "newSolutionDetailArray"]
 - !private ["Ps8Hashable", "newSolutionNameArray"]
 - ["Ps8Hashable", "postType"]
 - !private ["Ps8Hashable", "predicate"]
-- !private ["Ps8Hashable", "print"]
-- !private ["Ps8Hashable", "rangeOfString"]
-- !private ["Ps8Hashable", "removeAtIndex"]
-- !private ["Ps8Hashable", "removeRange"]
 - !private ["Ps8Hashable", "save"]
 - ["Ps8Hashable", "saveChangeToFirebase"]
 - ["Ps8Hashable", "saveDetailsToFirebase"]
@@ -426,7 +394,6 @@ depends-member:
 - !private ["Ps8Hashable", "solutionDetailArray"]
 - !private ["Ps8Hashable", "solutionNameArray"]
 - !private ["Ps8Hashable", "solutionToChange"]
-- !private ["Ps8Hashable", "startIndex"]
 - !private ["Ps8Hashable", "subscript"]
 - ["Ps8Hashable", ""]
 - !private ["SQ", "deinit"]
@@ -462,11 +429,6 @@ depends-member:
 - !private ["Ps14MirrorPathType", "Distance"]
 - !private ["Ps14MirrorPathType", "IntegerLiteralType"]
 - !private ["Ps14MirrorPathType", "_DisabledRangeIndex"]
-- !private ["Ps14MirrorPathType", "init"]
-- !private ["Ps14MirrorPathType", "rangeOfString"]
-- !private ["Ps14MirrorPathType", "removeAtIndex"]
-- !private ["Ps14MirrorPathType", "removeRange"]
-- !private ["Ps14MirrorPathType", "startIndex"]
 - !private ["Ps21MutableCollectionType", "Generator"]
 - !private ["Ps21MutableCollectionType", "Index"]
 - !private ["Ps21MutableCollectionType", "SubSequence"]
@@ -488,21 +450,13 @@ depends-member:
 - !private ["PSo8NSCoding", "executeFetchRequest"]
 - !private ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "predicate"]
-- !private ["PSo8NSCoding", "rangeOfString"]
-- !private ["PSo8NSCoding", "removeAtIndex"]
-- !private ["PSo8NSCoding", "removeRange"]
 - !private ["PSo8NSCoding", "save"]
-- !private ["PSo8NSCoding", "startIndex"]
 - !private ["PSo8NSCoding", "subscript"]
 - !private ["PSo9NSCopying", "Key"]
 - !private ["PSo9NSCopying", "Value"]
 - !private ["PSo9NSCopying", "count"]
 - !private ["PSo9NSCopying", "init"]
 - !private ["PSo9NSCopying", "predicate"]
-- !private ["PSo9NSCopying", "rangeOfString"]
-- !private ["PSo9NSCopying", "removeAtIndex"]
-- !private ["PSo9NSCopying", "removeRange"]
-- !private ["PSo9NSCopying", "startIndex"]
 - !private ["PSo9NSCopying", "subscript"]
 - !private ["CSo12NSDictionary", "Key"]
 - !private ["CSo12NSDictionary", "Value"]
@@ -527,12 +481,8 @@ depends-member:
 - !private ["PSo16NSMutableCopying", "Key"]
 - !private ["PSo16NSMutableCopying", "Value"]
 - !private ["PSo16NSMutableCopying", "count"]
-- !private ["PSo16NSMutableCopying", "rangeOfString"]
-- !private ["PSo16NSMutableCopying", "removeAtIndex"]
-- !private ["PSo16NSMutableCopying", "removeRange"]
-- !private ["PSo16NSMutableCopying", "startIndex"]
 - !private ["PSo16NSMutableCopying", "subscript"]
-- !private ["CSo8NSObject", "AnyObject"]
+- ["CSo8NSObject", "AnyObject"]
 - ["CSo8NSObject", "Change"]
 - !private ["CSo8NSObject", "CoreDataStackManager"]
 - !private ["CSo8NSObject", "Firebase"]
@@ -545,6 +495,7 @@ depends-member:
 - ["CSo8NSObject", "String"]
 - !private ["CSo8NSObject", "TempChange"]
 - !private ["CSo8NSObject", "Value"]
+- ["CSo8NSObject", "Void"]
 - !private ["CSo8NSObject", "changeDetail"]
 - ["CSo8NSObject", "changeID"]
 - !private ["CSo8NSObject", "changeName"]
@@ -553,21 +504,17 @@ depends-member:
 - !private ["CSo8NSObject", "count"]
 - ["CSo8NSObject", "createCoreDataChange"]
 - ["CSo8NSObject", "createCoreDataSolutions"]
-- !private ["CSo8NSObject", "deinit"]
 - !private ["CSo8NSObject", "deleteObject"]
 - !private ["CSo8NSObject", "executeFetchRequest"]
 - ["CSo8NSObject", "existingChange"]
 - ["CSo8NSObject", "init"]
 - ["CSo8NSObject", "isOwner"]
+- !private ["CSo8NSObject", "key"]
 - ["CSo8NSObject", "newChange"]
 - !private ["CSo8NSObject", "newSolutionDetailArray"]
 - !private ["CSo8NSObject", "newSolutionNameArray"]
 - ["CSo8NSObject", "postType"]
 - !private ["CSo8NSObject", "predicate"]
-- !private ["CSo8NSObject", "print"]
-- !private ["CSo8NSObject", "rangeOfString"]
-- !private ["CSo8NSObject", "removeAtIndex"]
-- !private ["CSo8NSObject", "removeRange"]
 - !private ["CSo8NSObject", "save"]
 - ["CSo8NSObject", "saveChangeToFirebase"]
 - ["CSo8NSObject", "saveDetailsToFirebase"]
@@ -580,7 +527,6 @@ depends-member:
 - !private ["CSo8NSObject", "solutionDetailArray"]
 - !private ["CSo8NSObject", "solutionNameArray"]
 - !private ["CSo8NSObject", "solutionToChange"]
-- !private ["CSo8NSObject", "startIndex"]
 - !private ["CSo8NSObject", "subscript"]
 - ["CSo8NSObject", ""]
 - !private ["PSo16NSObjectProtocol", "AnyObject"]
@@ -608,15 +554,12 @@ depends-member:
 - ["PSo16NSObjectProtocol", "existingChange"]
 - ["PSo16NSObjectProtocol", "init"]
 - ["PSo16NSObjectProtocol", "isOwner"]
+- !private ["PSo16NSObjectProtocol", "key"]
 - ["PSo16NSObjectProtocol", "newChange"]
 - !private ["PSo16NSObjectProtocol", "newSolutionDetailArray"]
 - !private ["PSo16NSObjectProtocol", "newSolutionNameArray"]
 - ["PSo16NSObjectProtocol", "postType"]
 - !private ["PSo16NSObjectProtocol", "predicate"]
-- !private ["PSo16NSObjectProtocol", "print"]
-- !private ["PSo16NSObjectProtocol", "rangeOfString"]
-- !private ["PSo16NSObjectProtocol", "removeAtIndex"]
-- !private ["PSo16NSObjectProtocol", "removeRange"]
 - !private ["PSo16NSObjectProtocol", "save"]
 - ["PSo16NSObjectProtocol", "saveChangeToFirebase"]
 - ["PSo16NSObjectProtocol", "saveDetailsToFirebase"]
@@ -629,7 +572,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "solutionDetailArray"]
 - !private ["PSo16NSObjectProtocol", "solutionNameArray"]
 - !private ["PSo16NSObjectProtocol", "solutionToChange"]
-- !private ["PSo16NSObjectProtocol", "startIndex"]
 - !private ["PSo16NSObjectProtocol", "subscript"]
 - ["PSo16NSObjectProtocol", ""]
 - !private ["CSo24NSPersistentStoreRequest", "init"]
@@ -639,21 +581,8 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "Value"]
 - !private ["PSo14NSSecureCoding", "count"]
 - !private ["PSo14NSSecureCoding", "init"]
-- !private ["PSo14NSSecureCoding", "rangeOfString"]
-- !private ["PSo14NSSecureCoding", "removeAtIndex"]
-- !private ["PSo14NSSecureCoding", "removeRange"]
-- !private ["PSo14NSSecureCoding", "startIndex"]
 - !private ["PSo14NSSecureCoding", "subscript"]
-- !private ["CSo8NSString", "rangeOfString"]
-- !private ["CSo8NSString", "removeAtIndex"]
-- !private ["CSo8NSString", "removeRange"]
-- !private ["CSo8NSString", "startIndex"]
 - !private ["Sq", "deinit"]
-- !private ["Ps16OutputStreamType", "init"]
-- !private ["Ps16OutputStreamType", "rangeOfString"]
-- !private ["Ps16OutputStreamType", "removeAtIndex"]
-- !private ["Ps16OutputStreamType", "removeRange"]
-- !private ["Ps16OutputStreamType", "startIndex"]
 - !private ["Ps21RandomAccessIndexType", "Distance"]
 - !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
 - !private ["Ps21RandomAccessIndexType", "_DisabledRangeIndex"]
@@ -663,7 +592,7 @@ depends-member:
 - !private ["Ps30RangeReplaceableCollectionType", "Index"]
 - !private ["Ps30RangeReplaceableCollectionType", "SubSequence"]
 - !private ["Ps30RangeReplaceableCollectionType", "_Element"]
-- !private ["C8GoChange8SaveData", "AnyObject"]
+- ["C8GoChange8SaveData", "AnyObject"]
 - ["C8GoChange8SaveData", "Change"]
 - !private ["C8GoChange8SaveData", "CoreDataStackManager"]
 - !private ["C8GoChange8SaveData", "Firebase"]
@@ -673,6 +602,7 @@ depends-member:
 - !private ["C8GoChange8SaveData", "Solution"]
 - ["C8GoChange8SaveData", "String"]
 - !private ["C8GoChange8SaveData", "TempChange"]
+- ["C8GoChange8SaveData", "Void"]
 - ["C8GoChange8SaveData", "changeID"]
 - ["C8GoChange8SaveData", "createCoreDataChange"]
 - ["C8GoChange8SaveData", "createCoreDataSolutions"]
@@ -682,7 +612,6 @@ depends-member:
 - ["C8GoChange8SaveData", "isOwner"]
 - ["C8GoChange8SaveData", "newChange"]
 - ["C8GoChange8SaveData", "postType"]
-- !private ["C8GoChange8SaveData", "print"]
 - ["C8GoChange8SaveData", "saveChangeToFirebase"]
 - ["C8GoChange8SaveData", "saveDetailsToFirebase"]
 - ["C8GoChange8SaveData", "saveSolutionsToFirebase"]
@@ -713,30 +642,10 @@ depends-member:
 - !private ["C8GoChange8Solution", "init"]
 - !private ["C8GoChange8Solution", "solutionToChange"]
 - !private ["Vs12StaticString", "deinit"]
-- !private ["Ps10Streamable", "init"]
-- !private ["Ps10Streamable", "rangeOfString"]
-- !private ["Ps10Streamable", "removeAtIndex"]
-- !private ["Ps10Streamable", "removeRange"]
-- !private ["Ps10Streamable", "startIndex"]
 - !private ["Ps10Strideable", "Distance"]
 - !private ["Ps10Strideable", "IntegerLiteralType"]
 - !private ["Ps10Strideable", "_DisabledRangeIndex"]
 - !private ["SS", "deinit"]
-- !private ["SS", "init"]
-- !private ["SS", "rangeOfString"]
-- !private ["SS", "removeAtIndex"]
-- !private ["SS", "removeRange"]
-- !private ["SS", "startIndex"]
-- !private ["Ps30StringInterpolationConvertible", "init"]
-- !private ["Ps30StringInterpolationConvertible", "rangeOfString"]
-- !private ["Ps30StringInterpolationConvertible", "removeAtIndex"]
-- !private ["Ps30StringInterpolationConvertible", "removeRange"]
-- !private ["Ps30StringInterpolationConvertible", "startIndex"]
-- !private ["Ps24StringLiteralConvertible", "init"]
-- !private ["Ps24StringLiteralConvertible", "rangeOfString"]
-- !private ["Ps24StringLiteralConvertible", "removeAtIndex"]
-- !private ["Ps24StringLiteralConvertible", "removeRange"]
-- !private ["Ps24StringLiteralConvertible", "startIndex"]
 - !private ["C8GoChange10TempChange", "changeDetail"]
 - !private ["C8GoChange10TempChange", "changeName"]
 - !private ["C8GoChange10TempChange", "newSolutionDetailArray"]
@@ -744,39 +653,14 @@ depends-member:
 - !private ["C8GoChange10TempChange", "sharedInstance"]
 - !private ["C8GoChange10TempChange", "solutionDetailArray"]
 - !private ["C8GoChange10TempChange", "solutionNameArray"]
-- !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
-- !private ["Ps31UnicodeScalarLiteralConvertible", "rangeOfString"]
-- !private ["Ps31UnicodeScalarLiteralConvertible", "removeAtIndex"]
-- !private ["Ps31UnicodeScalarLiteralConvertible", "removeRange"]
-- !private ["Ps31UnicodeScalarLiteralConvertible", "startIndex"]
 - !private ["Ps10_ArrayType", "Generator"]
 - !private ["Ps10_ArrayType", "Index"]
 - !private ["Ps10_ArrayType", "SubSequence"]
 - !private ["Ps10_ArrayType", "_Element"]
 - !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
-- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
-- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "rangeOfString"]
-- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "removeAtIndex"]
-- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "removeRange"]
-- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "startIndex"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "_DisabledRangeIndex"]
-- !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
-- !private ["Ps32_BuiltinStringLiteralConvertible", "rangeOfString"]
-- !private ["Ps32_BuiltinStringLiteralConvertible", "removeAtIndex"]
-- !private ["Ps32_BuiltinStringLiteralConvertible", "removeRange"]
-- !private ["Ps32_BuiltinStringLiteralConvertible", "startIndex"]
-- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
-- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "rangeOfString"]
-- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "removeAtIndex"]
-- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "removeRange"]
-- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "startIndex"]
-- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
-- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "rangeOfString"]
-- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "removeAtIndex"]
-- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "removeRange"]
-- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "startIndex"]
 - !private ["Ps24_DestructorSafeContainer", "Generator"]
 - !private ["Ps24_DestructorSafeContainer", "Index"]
 - !private ["Ps24_DestructorSafeContainer", "SubSequence"]
@@ -801,10 +685,6 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "_Element"]
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "init"]
-- !private ["Ps21_ObjectiveCBridgeable", "rangeOfString"]
-- !private ["Ps21_ObjectiveCBridgeable", "removeAtIndex"]
-- !private ["Ps21_ObjectiveCBridgeable", "removeRange"]
-- !private ["Ps21_ObjectiveCBridgeable", "startIndex"]
 - !private ["Ps21_ObjectiveCBridgeable", "subscript"]
 - !private ["Ps22_RandomAccessAmbiguity", "Distance"]
 - !private ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
@@ -821,10 +701,6 @@ depends-member:
 - !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
 - !private ["Ps12_Reflectable", "count"]
 - !private ["Ps12_Reflectable", "init"]
-- !private ["Ps12_Reflectable", "rangeOfString"]
-- !private ["Ps12_Reflectable", "removeAtIndex"]
-- !private ["Ps12_Reflectable", "removeRange"]
-- !private ["Ps12_Reflectable", "startIndex"]
 - !private ["Ps12_Reflectable", "subscript"]
 - !private ["Ps18_SignedIntegerType", "Distance"]
 - !private ["Ps18_SignedIntegerType", "IntegerLiteralType"]
@@ -849,7 +725,6 @@ depends-nominal:
 - !private "Vs10Dictionary"
 - !private "Ps28DictionaryLiteralConvertible"
 - "Ps9Equatable"
-- !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
 - !private "CSo6FQuery"
 - !private "CSo8Firebase"
 - !private "Ps16ForwardIndexType"
@@ -885,9 +760,7 @@ depends-nominal:
 - !private "CSo24NSPersistentStoreRequest"
 - !private "CSo11NSPredicate"
 - !private "PSo14NSSecureCoding"
-- !private "CSo8NSString"
 - !private "Sq"
-- !private "Ps16OutputStreamType"
 - !private "Ps21RandomAccessIndexType"
 - !private "Vs5Range"
 - !private "Vs14RangeGenerator"
@@ -899,20 +772,12 @@ depends-nominal:
 - !private "Vs5Slice"
 - !private "C8GoChange8Solution"
 - !private "Vs12StaticString"
-- !private "Ps10Streamable"
 - !private "Ps10Strideable"
 - !private "SS"
-- !private "Ps30StringInterpolationConvertible"
-- !private "Ps24StringLiteralConvertible"
 - !private "C8GoChange10TempChange"
-- !private "Ps31UnicodeScalarLiteralConvertible"
 - !private "Ps10_ArrayType"
 - !private "Ps33_BuiltinBooleanLiteralConvertible"
-- !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
 - !private "Ps33_BuiltinIntegerLiteralConvertible"
-- !private "Ps32_BuiltinStringLiteralConvertible"
-- !private "Ps37_BuiltinUTF16StringLiteralConvertible"
-- !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
 - !private "Ps24_DestructorSafeContainer"
 - !private "Ps14_Incrementable"
 - !private "Ps22_IntegerArithmeticType"
@@ -932,17 +797,17 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreData.swiftmodule"
-- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FirebaseServerValue.h"
-- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FTransactionResult.h"
-- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FMutableData.h"
-- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FirebaseApp.h"
-- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FQuery.h"
-- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase.h"
-- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FEventType.h"
-- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FDataSnapshot.h"
-- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FConfig.h"
-- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthType.h"
-- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
-- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
-- "/Users/nickshort/Git/GoChange/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "ece89d4453be8c5e79c6c58e7c1c4857"
+- "/Users/nickshort/Git/GoChange copy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FirebaseServerValue.h"
+- "/Users/nickshort/Git/GoChange copy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FTransactionResult.h"
+- "/Users/nickshort/Git/GoChange copy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FMutableData.h"
+- "/Users/nickshort/Git/GoChange copy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FirebaseApp.h"
+- "/Users/nickshort/Git/GoChange copy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FQuery.h"
+- "/Users/nickshort/Git/GoChange copy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase.h"
+- "/Users/nickshort/Git/GoChange copy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FEventType.h"
+- "/Users/nickshort/Git/GoChange copy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FDataSnapshot.h"
+- "/Users/nickshort/Git/GoChange copy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FConfig.h"
+- "/Users/nickshort/Git/GoChange copy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthType.h"
+- "/Users/nickshort/Git/GoChange copy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
+- "/Users/nickshort/Git/GoChange copy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
+- "/Users/nickshort/Git/GoChange copy/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
+interface-hash: "a5f472ff667dfd091d0c267640d65af8"

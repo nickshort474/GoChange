@@ -36,15 +36,16 @@ class loginViewController:UIViewController,UITextFieldDelegate{
         userID = NSUserDefaults.standardUserDefaults().valueForKey("uid") as? String
         
         if (userID != nil){
-            //print("user ID not nil")
+            
             segueToHomeScreen()
+            
         }
     }
     
     
     
     @IBAction func login(sender: AnyObject) {
-        print("Attempting to log in")
+        
         let email = emailTextfield.text
         let password = passwordTextfield.text
         
@@ -57,10 +58,8 @@ class loginViewController:UIViewController,UITextFieldDelegate{
                     //TODO: code for error
                     print("error: \(error)")
                 }else{
-                    print("user is authorized")
+                    
                     let usernameRef = self.ref.childByAppendingPath("users/\(authData.uid!)")
-                   
-                    print(usernameRef)
                     
                     usernameRef.observeEventType(.Value, withBlock: {snapshot in
                         

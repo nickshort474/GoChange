@@ -29,7 +29,6 @@ class RetrieveSolutionCountFirebase:NSObject{
             
             }, withCancelBlock:{ error in
                 
-                print("error retrieving data")
                 print(error.description)
                 
         })
