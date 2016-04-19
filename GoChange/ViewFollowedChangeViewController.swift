@@ -36,6 +36,8 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
     var changeClicked:Change!
     var localSolutionCount:Int!
     var changeID:String!
+    var changeIDArray:NSMutableArray = []
+    
     
     var sendingController:String!
     
@@ -85,14 +87,21 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
         localSolutionCount = changeClicked.solutionCount as Int
         changeID = changeClicked.changeID
         
+        //add changeID to changeID array ready for passing to RetrieveSolutions
+        changeIDArray.addObject(changeID)
+        
         
         
         //check to see whether solution count in database matches that in core data
-        //Even if coming from results can check to see whether any new solutions added since search was conducted
-        _ = RetrieveSolutionCountFirebase(changeID: changeID, completionHandler: {
+       //Even if coming from results can check to see whether any new solutions added since search was conducted
+        
+        
+        
+        _ = RetrieveSolutionCountFirebase(changeArray: changeIDArray, completionHandler: {
             (result) in
             
-            let firebaseSolutionCount = result.value as! Int
+            //TODO: process returned snapshot
+            let firebaseSolutionCount = result[0] as! Int
             
             // if new solutions exist
             if (firebaseSolutionCount != self.localSolutionCount){

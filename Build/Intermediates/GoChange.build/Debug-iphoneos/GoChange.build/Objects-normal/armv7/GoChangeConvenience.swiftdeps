@@ -6,25 +6,25 @@ provides-member:
 - ["C8GoChange14GoChangeClient", "escapedParameters"]
 - ["C8GoChange14GoChangeClient", "parseJSON"]
 provides-dynamic-lookup:
-- "parseJSON"
 - "escapedParameters"
+- "parseJSON"
 depends-top-level:
-- "AnyObject"
-- !private "NSCharacterSet"
-- "NSError"
-- !private "NSJSONSerialization"
-- !private "+="
-- !private "StringLiteralType"
+- "Void"
+- !private "NSLocalizedDescriptionKey"
+- "NSData"
 - "String"
 - !private "+"
-- !private "NSLocalizedDescriptionKey"
-- !private "Array"
-- !private "UnicodeScalarType"
-- "Void"
-- "NSData"
-- "GoChangeClient"
-- !private "Dictionary"
+- !private "StringLiteralType"
 - !private "!"
+- !private "Dictionary"
+- "NSError"
+- !private "NSJSONSerialization"
+- !private "NSCharacterSet"
+- "AnyObject"
+- !private "+="
+- "GoChangeClient"
+- !private "UnicodeScalarType"
+- !private "Array"
 depends-member:
 - !private ["Ps9AnyObject", "JSONObjectWithData"]
 - !private ["Ps9AnyObject", "NSCharacterSet"]

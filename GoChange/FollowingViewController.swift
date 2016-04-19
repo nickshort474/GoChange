@@ -82,7 +82,7 @@ class FollowingViewController: UITableViewController,
         let object = fetchedResultsController.objectAtIndexPath(indexPath) as! Change
         
         cell.textLabel?.text = object.changeName
-        cell.detailTextLabel!.text = object.changeDescription
+        cell.detailTextLabel!.text = "Solutions:\(String(object.solutionCount))"
         
         return cell
     }

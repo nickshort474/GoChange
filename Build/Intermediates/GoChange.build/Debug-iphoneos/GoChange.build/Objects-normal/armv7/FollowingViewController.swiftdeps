@@ -7,45 +7,46 @@ provides-member:
 - ["C8GoChange23FollowingViewController", ""]
 provides-dynamic-lookup:
 - "homeButton"
-- "viewDidLoad"
 - "fetchedResultsController"
+- "viewDidLoad"
 - "didReceiveMemoryWarning"
-- "homeButtonClick"
-- "tableView"
-- "tableView"
-- "tableView"
-- "followingTableView"
 - "numberOfSectionsInTableView"
+- "followingTableView"
+- "tableView"
+- "tableView"
+- "tableView"
 - "sharedContext"
+- "homeButtonClick"
 depends-top-level:
-- "FollowingViewController"
-- !private "UIBarButtonItem"
-- "UITableViewCell"
-- "UITableView"
-- !private "UIBarButtonItemStyle"
-- "Array"
-- !private "BooleanLiteralType"
-- "NSFetchedResultsControllerDelegate"
-- "UITableViewController"
-- "UIButton"
-- !private "CoreDataStackManager"
-- !private "ViewFollowedChangeViewController"
-- "NSIndexPath"
 - "Int"
 - !private "NSFetchRequest"
-- "NSManagedObjectContext"
+- !private "ViewFollowedChangeViewController"
+- "UITableView"
 - "NSFetchedResultsController"
-- !private "Change"
 - "StringLiteralType"
+- "FollowingViewController"
+- "Array"
+- !private "String"
+- "UIButton"
+- "NSIndexPath"
+- !private "CoreDataStackManager"
+- "UITableViewCell"
+- !private "UIBarButtonItemStyle"
+- "UITableViewController"
+- "NSManagedObjectContext"
+- !private "UIBarButtonItem"
+- !private "BooleanLiteralType"
+- !private "Change"
+- "NSFetchedResultsControllerDelegate"
 depends-member:
 - !private ["Ps9AnyObject", "CoreDataStackManager"]
 - !private ["Ps9AnyObject", "NSFetchRequest"]
 - !private ["Ps9AnyObject", "NSFetchedResultsController"]
+- !private ["Ps9AnyObject", "String"]
 - !private ["Ps9AnyObject", "UIBarButtonItem"]
 - !private ["Ps9AnyObject", "UIBarButtonItemStyle"]
 - !private ["Ps9AnyObject", "backBarButtonItem"]
 - !private ["Ps9AnyObject", "changeClicked"]
-- !private ["Ps9AnyObject", "changeDescription"]
 - !private ["Ps9AnyObject", "changeName"]
 - ["Ps9AnyObject", "controller"]
 - ["Ps9AnyObject", "controllerDidChangeContent"]
@@ -74,6 +75,7 @@ depends-member:
 - ["Ps9AnyObject", "sharedContext"]
 - ["Ps9AnyObject", "sharedContext.storage"]
 - !private ["Ps9AnyObject", "sharedInstance"]
+- !private ["Ps9AnyObject", "solutionCount"]
 - !private ["Ps9AnyObject", "sortDescriptors"]
 - !private ["Ps9AnyObject", "storyboard"]
 - ["Ps9AnyObject", "tableView"]
@@ -101,6 +103,7 @@ depends-member:
 - !private ["Ps21BitwiseOperationsType", "Distance"]
 - !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
 - !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Sb", "deinit"]
 - !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
 - !private ["Ps11CVarArgType", "CoreDataStackManager"]
@@ -108,11 +111,11 @@ depends-member:
 - !private ["Ps11CVarArgType", "IntegerLiteralType"]
 - !private ["Ps11CVarArgType", "NSFetchRequest"]
 - !private ["Ps11CVarArgType", "NSFetchedResultsController"]
+- !private ["Ps11CVarArgType", "String"]
 - !private ["Ps11CVarArgType", "UIBarButtonItem"]
 - !private ["Ps11CVarArgType", "UIBarButtonItemStyle"]
 - !private ["Ps11CVarArgType", "backBarButtonItem"]
 - !private ["Ps11CVarArgType", "changeClicked"]
-- !private ["Ps11CVarArgType", "changeDescription"]
 - !private ["Ps11CVarArgType", "changeName"]
 - ["Ps11CVarArgType", "controller"]
 - ["Ps11CVarArgType", "controllerDidChangeContent"]
@@ -139,6 +142,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "sendingController"]
 - ["Ps11CVarArgType", "sharedContext"]
 - ["Ps11CVarArgType", "sharedContext.storage"]
+- !private ["Ps11CVarArgType", "solutionCount"]
 - !private ["Ps11CVarArgType", "sortDescriptors"]
 - !private ["Ps11CVarArgType", "storyboard"]
 - ["Ps11CVarArgType", "tableView"]
@@ -146,8 +150,9 @@ depends-member:
 - !private ["Ps11CVarArgType", "textLabel"]
 - ["Ps11CVarArgType", "viewDidLoad"]
 - ["Ps11CVarArgType", ""]
-- !private ["C8GoChange6Change", "changeDescription"]
 - !private ["C8GoChange6Change", "changeName"]
+- !private ["C8GoChange6Change", "solutionCount"]
+- !private ["Vs9Character", "deinit"]
 - !private ["Ps14CollectionType", "Element"]
 - !private ["Ps14CollectionType", "Generator"]
 - !private ["Ps14CollectionType", "Index"]
@@ -157,6 +162,7 @@ depends-member:
 - !private ["Ps14CollectionType", "subscript"]
 - !private ["Ps10Comparable", "Distance"]
 - !private ["Ps10Comparable", "IntegerLiteralType"]
+- !private ["Ps10Comparable", "init"]
 - !private ["C8GoChange20CoreDataStackManager", "managedObjectContext"]
 - !private ["C8GoChange20CoreDataStackManager", "sharedInstance"]
 - !private ["Ps28CustomDebugStringConvertible", "CoreDataStackManager"]
@@ -165,12 +171,12 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "NSFetchRequest"]
 - !private ["Ps28CustomDebugStringConvertible", "NSFetchedResultsController"]
+- !private ["Ps28CustomDebugStringConvertible", "String"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
 - !private ["Ps28CustomDebugStringConvertible", "UIBarButtonItem"]
 - !private ["Ps28CustomDebugStringConvertible", "UIBarButtonItemStyle"]
 - !private ["Ps28CustomDebugStringConvertible", "backBarButtonItem"]
 - !private ["Ps28CustomDebugStringConvertible", "changeClicked"]
-- !private ["Ps28CustomDebugStringConvertible", "changeDescription"]
 - !private ["Ps28CustomDebugStringConvertible", "changeName"]
 - ["Ps28CustomDebugStringConvertible", "controller"]
 - ["Ps28CustomDebugStringConvertible", "controllerDidChangeContent"]
@@ -198,6 +204,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "sendingController"]
 - ["Ps28CustomDebugStringConvertible", "sharedContext"]
 - ["Ps28CustomDebugStringConvertible", "sharedContext.storage"]
+- !private ["Ps28CustomDebugStringConvertible", "solutionCount"]
 - !private ["Ps28CustomDebugStringConvertible", "sortDescriptors"]
 - !private ["Ps28CustomDebugStringConvertible", "storyboard"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
@@ -214,13 +221,13 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["Ps23CustomStringConvertible", "NSFetchRequest"]
 - !private ["Ps23CustomStringConvertible", "NSFetchedResultsController"]
+- !private ["Ps23CustomStringConvertible", "String"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
 - !private ["Ps23CustomStringConvertible", "UIBarButtonItem"]
 - !private ["Ps23CustomStringConvertible", "UIBarButtonItemStyle"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps23CustomStringConvertible", "backBarButtonItem"]
 - !private ["Ps23CustomStringConvertible", "changeClicked"]
-- !private ["Ps23CustomStringConvertible", "changeDescription"]
 - !private ["Ps23CustomStringConvertible", "changeName"]
 - ["Ps23CustomStringConvertible", "controller"]
 - ["Ps23CustomStringConvertible", "controllerDidChangeContent"]
@@ -248,6 +255,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "sendingController"]
 - ["Ps23CustomStringConvertible", "sharedContext"]
 - ["Ps23CustomStringConvertible", "sharedContext.storage"]
+- !private ["Ps23CustomStringConvertible", "solutionCount"]
 - !private ["Ps23CustomStringConvertible", "sortDescriptors"]
 - !private ["Ps23CustomStringConvertible", "storyboard"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
@@ -256,18 +264,19 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "textLabel"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
 - ["Ps23CustomStringConvertible", ""]
+- !private ["Sd", "deinit"]
 - !private ["Ps9Equatable", "CoreDataStackManager"]
 - !private ["Ps9Equatable", "Distance"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "NSFetchRequest"]
 - !private ["Ps9Equatable", "NSFetchedResultsController"]
 - !private ["Ps9Equatable", "Plain"]
+- !private ["Ps9Equatable", "String"]
 - !private ["Ps9Equatable", "UIBarButtonItem"]
 - !private ["Ps9Equatable", "UIBarButtonItemStyle"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "backBarButtonItem"]
 - !private ["Ps9Equatable", "changeClicked"]
-- !private ["Ps9Equatable", "changeDescription"]
 - !private ["Ps9Equatable", "changeName"]
 - ["Ps9Equatable", "controller"]
 - ["Ps9Equatable", "controllerDidChangeContent"]
@@ -294,6 +303,7 @@ depends-member:
 - !private ["Ps9Equatable", "sendingController"]
 - ["Ps9Equatable", "sharedContext"]
 - ["Ps9Equatable", "sharedContext.storage"]
+- !private ["Ps9Equatable", "solutionCount"]
 - !private ["Ps9Equatable", "sortDescriptors"]
 - !private ["Ps9Equatable", "storyboard"]
 - ["Ps9Equatable", "tableView"]
@@ -301,6 +311,8 @@ depends-member:
 - !private ["Ps9Equatable", "textLabel"]
 - ["Ps9Equatable", "viewDidLoad"]
 - ["Ps9Equatable", ""]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Sf", "deinit"]
 - !private ["C8GoChange23FollowingViewController", "Change"]
 - !private ["C8GoChange23FollowingViewController", "CoreDataStackManager"]
 - ["C8GoChange23FollowingViewController", "Int"]
@@ -308,6 +320,7 @@ depends-member:
 - ["C8GoChange23FollowingViewController", "NSFetchedResultsController"]
 - ["C8GoChange23FollowingViewController", "NSIndexPath"]
 - ["C8GoChange23FollowingViewController", "NSManagedObjectContext"]
+- !private ["C8GoChange23FollowingViewController", "String"]
 - !private ["C8GoChange23FollowingViewController", "UIBarButtonItem"]
 - !private ["C8GoChange23FollowingViewController", "UIBarButtonItemStyle"]
 - ["C8GoChange23FollowingViewController", "UIButton"]
@@ -342,12 +355,12 @@ depends-member:
 - !private ["Ps8Hashable", "NSFetchRequest"]
 - !private ["Ps8Hashable", "NSFetchedResultsController"]
 - !private ["Ps8Hashable", "Plain"]
+- !private ["Ps8Hashable", "String"]
 - !private ["Ps8Hashable", "UIBarButtonItem"]
 - !private ["Ps8Hashable", "UIBarButtonItemStyle"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "backBarButtonItem"]
 - !private ["Ps8Hashable", "changeClicked"]
-- !private ["Ps8Hashable", "changeDescription"]
 - !private ["Ps8Hashable", "changeName"]
 - ["Ps8Hashable", "controller"]
 - ["Ps8Hashable", "controllerDidChangeContent"]
@@ -374,6 +387,7 @@ depends-member:
 - !private ["Ps8Hashable", "sendingController"]
 - ["Ps8Hashable", "sharedContext"]
 - ["Ps8Hashable", "sharedContext.storage"]
+- !private ["Ps8Hashable", "solutionCount"]
 - !private ["Ps8Hashable", "sortDescriptors"]
 - !private ["Ps8Hashable", "storyboard"]
 - ["Ps8Hashable", "tableView"]
@@ -392,6 +406,11 @@ depends-member:
 - !private ["Vs17IndexingGenerator", "Element"]
 - !private ["Si", "Distance"]
 - !private ["Si", "IntegerLiteralType"]
+- !private ["Si", "deinit"]
+- !private ["Vs5Int16", "deinit"]
+- !private ["Vs5Int32", "deinit"]
+- !private ["Vs5Int64", "deinit"]
+- !private ["Vs4Int8", "deinit"]
 - !private ["Ps21IntegerArithmeticType", "Distance"]
 - !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
 - !private ["Ps25IntegerLiteralConvertible", "Distance"]
@@ -400,6 +419,7 @@ depends-member:
 - !private ["Ps11IntegerType", "IntegerLiteralType"]
 - !private ["Ps14MirrorPathType", "Distance"]
 - !private ["Ps14MirrorPathType", "IntegerLiteralType"]
+- !private ["Ps14MirrorPathType", "init"]
 - !private ["Ps21MutableCollectionType", "Element"]
 - !private ["Ps21MutableCollectionType", "Generator"]
 - !private ["Ps21MutableCollectionType", "Index"]
@@ -421,6 +441,7 @@ depends-member:
 - !private ["PSo8NSCoding", "CoreDataStackManager"]
 - !private ["PSo8NSCoding", "NSFetchRequest"]
 - !private ["PSo8NSCoding", "NSFetchedResultsController"]
+- !private ["PSo8NSCoding", "String"]
 - !private ["PSo8NSCoding", "UIBarButtonItem"]
 - !private ["PSo8NSCoding", "UIBarButtonItemStyle"]
 - !private ["PSo8NSCoding", "backBarButtonItem"]
@@ -457,6 +478,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "CoreDataStackManager"]
 - !private ["PSo26NSExtensionRequestHandling", "NSFetchRequest"]
 - !private ["PSo26NSExtensionRequestHandling", "NSFetchedResultsController"]
+- !private ["PSo26NSExtensionRequestHandling", "String"]
 - !private ["PSo26NSExtensionRequestHandling", "UIBarButtonItem"]
 - !private ["PSo26NSExtensionRequestHandling", "UIBarButtonItemStyle"]
 - !private ["PSo26NSExtensionRequestHandling", "changeClicked"]
@@ -492,6 +514,7 @@ depends-member:
 - !private ["PSo34NSFetchedResultsControllerDelegate", "CoreDataStackManager"]
 - !private ["PSo34NSFetchedResultsControllerDelegate", "NSFetchRequest"]
 - !private ["PSo34NSFetchedResultsControllerDelegate", "NSFetchedResultsController"]
+- !private ["PSo34NSFetchedResultsControllerDelegate", "String"]
 - !private ["PSo34NSFetchedResultsControllerDelegate", "UIBarButtonItem"]
 - !private ["PSo34NSFetchedResultsControllerDelegate", "UIBarButtonItemStyle"]
 - ["PSo34NSFetchedResultsControllerDelegate", "controller"]
@@ -504,8 +527,10 @@ depends-member:
 - !private ["PSo34NSFetchedResultsControllerDelegate", "storyboard"]
 - ["PSo34NSFetchedResultsControllerDelegate", ""]
 - !private ["PSo27NSFetchedResultsSectionInfo", "numberOfObjects"]
-- !private ["CSo15NSManagedObject", "changeDescription"]
 - !private ["CSo15NSManagedObject", "changeName"]
+- !private ["CSo15NSManagedObject", "solutionCount"]
+- !private ["PSo16NSMutableCopying", "init"]
+- !private ["CSo8NSNumber", "deinit"]
 - !private ["CSo8NSObject", "Change"]
 - !private ["CSo8NSObject", "CoreDataStackManager"]
 - ["CSo8NSObject", "Int"]
@@ -513,6 +538,7 @@ depends-member:
 - ["CSo8NSObject", "NSFetchedResultsController"]
 - ["CSo8NSObject", "NSIndexPath"]
 - ["CSo8NSObject", "NSManagedObjectContext"]
+- !private ["CSo8NSObject", "String"]
 - !private ["CSo8NSObject", "UIBarButtonItem"]
 - !private ["CSo8NSObject", "UIBarButtonItemStyle"]
 - ["CSo8NSObject", "UIButton"]
@@ -521,11 +547,11 @@ depends-member:
 - !private ["CSo8NSObject", "ViewFollowedChangeViewController"]
 - !private ["CSo8NSObject", "backBarButtonItem"]
 - !private ["CSo8NSObject", "changeClicked"]
-- !private ["CSo8NSObject", "changeDescription"]
 - !private ["CSo8NSObject", "changeName"]
 - ["CSo8NSObject", "controller"]
 - ["CSo8NSObject", "controllerDidChangeContent"]
 - ["CSo8NSObject", "controllerWillChangeContent"]
+- !private ["CSo8NSObject", "deinit"]
 - !private ["CSo8NSObject", "delegate"]
 - !private ["CSo8NSObject", "dequeueReusableCellWithIdentifier"]
 - !private ["CSo8NSObject", "detailTextLabel"]
@@ -548,6 +574,7 @@ depends-member:
 - !private ["CSo8NSObject", "sendingController"]
 - ["CSo8NSObject", "sharedContext"]
 - ["CSo8NSObject", "sharedContext.storage"]
+- !private ["CSo8NSObject", "solutionCount"]
 - !private ["CSo8NSObject", "sortDescriptors"]
 - !private ["CSo8NSObject", "storyboard"]
 - ["CSo8NSObject", "tableView"]
@@ -557,11 +584,11 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "CoreDataStackManager"]
 - !private ["PSo16NSObjectProtocol", "NSFetchRequest"]
 - !private ["PSo16NSObjectProtocol", "NSFetchedResultsController"]
+- !private ["PSo16NSObjectProtocol", "String"]
 - !private ["PSo16NSObjectProtocol", "UIBarButtonItem"]
 - !private ["PSo16NSObjectProtocol", "UIBarButtonItemStyle"]
 - !private ["PSo16NSObjectProtocol", "backBarButtonItem"]
 - !private ["PSo16NSObjectProtocol", "changeClicked"]
-- !private ["PSo16NSObjectProtocol", "changeDescription"]
 - !private ["PSo16NSObjectProtocol", "changeName"]
 - ["PSo16NSObjectProtocol", "controller"]
 - ["PSo16NSObjectProtocol", "controllerDidChangeContent"]
@@ -588,6 +615,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "sendingController"]
 - ["PSo16NSObjectProtocol", "sharedContext"]
 - ["PSo16NSObjectProtocol", "sharedContext.storage"]
+- !private ["PSo16NSObjectProtocol", "solutionCount"]
 - !private ["PSo16NSObjectProtocol", "sortDescriptors"]
 - !private ["PSo16NSObjectProtocol", "storyboard"]
 - ["PSo16NSObjectProtocol", "tableView"]
@@ -597,7 +625,11 @@ depends-member:
 - ["PSo16NSObjectProtocol", ""]
 - !private ["CSo24NSPersistentStoreRequest", "init"]
 - !private ["CSo24NSPersistentStoreRequest", "sortDescriptors"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
+- !private ["CSo7NSValue", "deinit"]
 - !private ["Sq", "deinit"]
+- !private ["Ps16OutputStreamType", "init"]
 - !private ["Ps21RandomAccessIndexType", "Distance"]
 - !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
 - !private ["Ps30RangeReplaceableCollectionType", "Element"]
@@ -622,8 +654,12 @@ depends-member:
 - !private ["Vs5Slice", "Index"]
 - !private ["Vs5Slice", "SubSequence"]
 - !private ["Vs5Slice", "_Element"]
+- !private ["Ps10Streamable", "init"]
 - !private ["Ps10Strideable", "Distance"]
 - !private ["Ps10Strideable", "IntegerLiteralType"]
+- !private ["SS", "init"]
+- !private ["Ps30StringInterpolationConvertible", "init"]
+- !private ["Ps24StringLiteralConvertible", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo29UIAccessibilityIdentification", "detailTextLabel"]
 - !private ["PSo29UIAccessibilityIdentification", "init"]
@@ -637,6 +673,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "CoreDataStackManager"]
 - !private ["PSo21UIAppearanceContainer", "NSFetchRequest"]
 - !private ["PSo21UIAppearanceContainer", "NSFetchedResultsController"]
+- !private ["PSo21UIAppearanceContainer", "String"]
 - !private ["PSo21UIAppearanceContainer", "UIBarButtonItem"]
 - !private ["PSo21UIAppearanceContainer", "UIBarButtonItemStyle"]
 - !private ["PSo21UIAppearanceContainer", "changeClicked"]
@@ -672,6 +709,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "CoreDataStackManager"]
 - !private ["PSo18UIContentContainer", "NSFetchRequest"]
 - !private ["PSo18UIContentContainer", "NSFetchedResultsController"]
+- !private ["PSo18UIContentContainer", "String"]
 - !private ["PSo18UIContentContainer", "UIBarButtonItem"]
 - !private ["PSo18UIContentContainer", "UIBarButtonItemStyle"]
 - !private ["PSo18UIContentContainer", "changeClicked"]
@@ -708,6 +746,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "CoreDataStackManager"]
 - !private ["PSo18UIFocusEnvironment", "NSFetchRequest"]
 - !private ["PSo18UIFocusEnvironment", "NSFetchedResultsController"]
+- !private ["PSo18UIFocusEnvironment", "String"]
 - !private ["PSo18UIFocusEnvironment", "UIBarButtonItem"]
 - !private ["PSo18UIFocusEnvironment", "UIBarButtonItemStyle"]
 - !private ["PSo18UIFocusEnvironment", "changeClicked"]
@@ -750,6 +789,7 @@ depends-member:
 - ["CSo11UIResponder", "NSFetchedResultsController"]
 - ["CSo11UIResponder", "NSIndexPath"]
 - ["CSo11UIResponder", "NSManagedObjectContext"]
+- !private ["CSo11UIResponder", "String"]
 - !private ["CSo11UIResponder", "UIBarButtonItem"]
 - !private ["CSo11UIResponder", "UIBarButtonItemStyle"]
 - ["CSo11UIResponder", "UIButton"]
@@ -786,6 +826,7 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "CoreDataStackManager"]
 - !private ["PSo20UIScrollViewDelegate", "NSFetchRequest"]
 - !private ["PSo20UIScrollViewDelegate", "NSFetchedResultsController"]
+- !private ["PSo20UIScrollViewDelegate", "String"]
 - !private ["PSo20UIScrollViewDelegate", "UIBarButtonItem"]
 - !private ["PSo20UIScrollViewDelegate", "UIBarButtonItemStyle"]
 - !private ["PSo20UIScrollViewDelegate", "changeClicked"]
@@ -812,6 +853,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "CoreDataStackManager"]
 - !private ["PSo16UIStateRestoring", "NSFetchRequest"]
 - !private ["PSo16UIStateRestoring", "NSFetchedResultsController"]
+- !private ["PSo16UIStateRestoring", "String"]
 - !private ["PSo16UIStateRestoring", "UIBarButtonItem"]
 - !private ["PSo16UIStateRestoring", "UIBarButtonItemStyle"]
 - !private ["PSo16UIStateRestoring", "changeClicked"]
@@ -848,6 +890,7 @@ depends-member:
 - ["CSo21UITableViewController", "NSFetchedResultsController"]
 - ["CSo21UITableViewController", "NSIndexPath"]
 - ["CSo21UITableViewController", "NSManagedObjectContext"]
+- !private ["CSo21UITableViewController", "String"]
 - !private ["CSo21UITableViewController", "UIBarButtonItem"]
 - !private ["CSo21UITableViewController", "UIBarButtonItemStyle"]
 - ["CSo21UITableViewController", "UIButton"]
@@ -876,6 +919,7 @@ depends-member:
 - !private ["PSo21UITableViewDataSource", "CoreDataStackManager"]
 - !private ["PSo21UITableViewDataSource", "NSFetchRequest"]
 - !private ["PSo21UITableViewDataSource", "NSFetchedResultsController"]
+- !private ["PSo21UITableViewDataSource", "String"]
 - !private ["PSo21UITableViewDataSource", "UIBarButtonItem"]
 - !private ["PSo21UITableViewDataSource", "UIBarButtonItemStyle"]
 - ["PSo21UITableViewDataSource", "controller"]
@@ -900,6 +944,7 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "CoreDataStackManager"]
 - !private ["PSo19UITableViewDelegate", "NSFetchRequest"]
 - !private ["PSo19UITableViewDelegate", "NSFetchedResultsController"]
+- !private ["PSo19UITableViewDelegate", "String"]
 - !private ["PSo19UITableViewDelegate", "UIBarButtonItem"]
 - !private ["PSo19UITableViewDelegate", "UIBarButtonItemStyle"]
 - !private ["PSo19UITableViewDelegate", "changeClicked"]
@@ -930,6 +975,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "CoreDataStackManager"]
 - !private ["PSo18UITraitEnvironment", "NSFetchRequest"]
 - !private ["PSo18UITraitEnvironment", "NSFetchedResultsController"]
+- !private ["PSo18UITraitEnvironment", "String"]
 - !private ["PSo18UITraitEnvironment", "UIBarButtonItem"]
 - !private ["PSo18UITraitEnvironment", "UIBarButtonItemStyle"]
 - !private ["PSo18UITraitEnvironment", "changeClicked"]
@@ -970,6 +1016,7 @@ depends-member:
 - ["CSo16UIViewController", "NSFetchedResultsController"]
 - ["CSo16UIViewController", "NSIndexPath"]
 - ["CSo16UIViewController", "NSManagedObjectContext"]
+- !private ["CSo16UIViewController", "String"]
 - !private ["CSo16UIViewController", "UIBarButtonItem"]
 - !private ["CSo16UIViewController", "UIBarButtonItemStyle"]
 - ["CSo16UIViewController", "UIButton"]
@@ -998,6 +1045,13 @@ depends-member:
 - !private ["CSo16UIViewController", "storyboard"]
 - ["CSo16UIViewController", "tableView"]
 - ["CSo16UIViewController", "viewDidLoad"]
+- !private ["Su", "deinit"]
+- !private ["Vs6UInt16", "deinit"]
+- !private ["Vs6UInt32", "deinit"]
+- !private ["Vs6UInt64", "deinit"]
+- !private ["Vs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
 - !private ["C8GoChange32ViewFollowedChangeViewController", "changeClicked"]
 - !private ["C8GoChange32ViewFollowedChangeViewController", "sendingController"]
 - !private ["Ps10_ArrayType", "Element"]
@@ -1007,8 +1061,12 @@ depends-member:
 - !private ["Ps10_ArrayType", "count"]
 - !private ["Ps10_ArrayType", "subscript"]
 - !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
 - !private ["Ps24_DestructorSafeContainer", "Element"]
 - !private ["Ps24_DestructorSafeContainer", "Generator"]
 - !private ["Ps24_DestructorSafeContainer", "Index"]
@@ -1029,6 +1087,7 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "count"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
 - !private ["Ps21_ObjectiveCBridgeable", "subscript"]
 - !private ["Ps22_RandomAccessAmbiguity", "Distance"]
 - !private ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
@@ -1042,6 +1101,7 @@ depends-member:
 - !private ["Ps12_Reflectable", "count"]
 - !private ["Ps12_Reflectable", "dequeueReusableCellWithIdentifier"]
 - !private ["Ps12_Reflectable", "detailTextLabel"]
+- !private ["Ps12_Reflectable", "init"]
 - !private ["Ps12_Reflectable", "subscript"]
 - !private ["Ps12_Reflectable", "text"]
 - !private ["Ps12_Reflectable", "textLabel"]
@@ -1059,12 +1119,16 @@ depends-nominal:
 - !private "Ps11BooleanType"
 - "Ps11CVarArgType"
 - !private "C8GoChange6Change"
+- !private "Vs9Character"
 - !private "Ps14CollectionType"
 - !private "Ps10Comparable"
 - !private "C8GoChange20CoreDataStackManager"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
+- !private "Sd"
 - "Ps9Equatable"
+- !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
+- !private "Sf"
 - "C8GoChange23FollowingViewController"
 - !private "Ps16ForwardIndexType"
 - !private "Ps13GeneratorType"
@@ -1073,6 +1137,10 @@ depends-nominal:
 - !private "Ps9Indexable"
 - !private "Vs17IndexingGenerator"
 - !private "Si"
+- !private "Vs5Int16"
+- !private "Vs5Int32"
+- !private "Vs5Int64"
+- !private "Vs4Int8"
 - !private "Ps21IntegerArithmeticType"
 - !private "Ps25IntegerLiteralConvertible"
 - !private "Ps11IntegerType"
@@ -1088,10 +1156,16 @@ depends-nominal:
 - "PSo34NSFetchedResultsControllerDelegate"
 - !private "PSo27NSFetchedResultsSectionInfo"
 - !private "CSo15NSManagedObject"
+- !private "PSo16NSMutableCopying"
+- !private "CSo8NSNumber"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - !private "CSo24NSPersistentStoreRequest"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "CSo7NSValue"
 - !private "Sq"
+- !private "Ps16OutputStreamType"
 - !private "Ps21RandomAccessIndexType"
 - !private "Ps30RangeReplaceableCollectionType"
 - !private "Ps16RawRepresentable"
@@ -1099,7 +1173,11 @@ depends-nominal:
 - !private "Ps17SignedIntegerType"
 - !private "Ps16SignedNumberType"
 - !private "Vs5Slice"
+- !private "Ps10Streamable"
 - !private "Ps10Strideable"
+- !private "SS"
+- !private "Ps30StringInterpolationConvertible"
+- !private "Ps24StringLiteralConvertible"
 - !private "PSo29UIAccessibilityIdentification"
 - !private "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"
@@ -1129,10 +1207,21 @@ depends-nominal:
 - "PSo18UITraitEnvironment"
 - !private "CSo6UIView"
 - "CSo16UIViewController"
+- !private "Su"
+- !private "Vs6UInt16"
+- !private "Vs6UInt32"
+- !private "Vs6UInt64"
+- !private "Vs5UInt8"
+- !private "Sc"
+- !private "Ps31UnicodeScalarLiteralConvertible"
 - !private "C8GoChange32ViewFollowedChangeViewController"
 - !private "Ps10_ArrayType"
 - !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
 - !private "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps32_BuiltinStringLiteralConvertible"
+- !private "Ps37_BuiltinUTF16StringLiteralConvertible"
+- !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
 - !private "Ps24_DestructorSafeContainer"
 - !private "Ps14_Incrementable"
 - !private "Ps22_IntegerArithmeticType"

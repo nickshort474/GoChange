@@ -336,6 +336,7 @@ SWIFT_CLASS("_TtC8GoChange21ResultsViewController")
 @property (nonatomic, strong) NSMutableArray * _Nonnull refArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull resultNameArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull resultDetailArray;
+@property (nonatomic, strong) NSMutableArray * _Nonnull resultSolutionCountArray;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (void)viewWillAppear:(BOOL)animated;
@@ -373,7 +374,8 @@ SWIFT_CLASS("_TtC8GoChange20RetrieveFromFirebase")
 SWIFT_CLASS("_TtC8GoChange29RetrieveSolutionCountFirebase")
 @interface RetrieveSolutionCountFirebase : NSObject
 @property (nonatomic, strong) Firebase * _Null_unspecified nameRef;
-- (nonnull instancetype)initWithChangeID:(NSString * _Nonnull)changeID completionHandler:(void (^ _Nonnull)(FDataSnapshot * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, strong) NSMutableArray * _Nonnull resultsArray;
+- (nonnull instancetype)initWithChangeArray:(NSMutableArray * _Nonnull)changeArray completionHandler:(void (^ _Nonnull)(NSMutableArray * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -415,9 +417,10 @@ SWIFT_CLASS("_TtC8GoChange20SearchViewController")
 @property (nonatomic, strong) NSMutableArray * _Nonnull returnedNameArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull returnedRefArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull countArray;
-@property (nonatomic, strong) NSMutableArray * _Nonnull useRefArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull matchedNameArray;
+@property (nonatomic, strong) NSMutableArray * _Nonnull useRefArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull useDetailArray;
+@property (nonatomic, strong) NSMutableArray * _Nonnull useSolutionCountArray;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
@@ -520,6 +523,7 @@ SWIFT_CLASS("_TtC8GoChange32ViewFollowedChangeViewController")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified postChangeButton;
 @property (nonatomic, strong) Change * _Null_unspecified changeClicked;
 @property (nonatomic, copy) NSString * _Null_unspecified changeID;
+@property (nonatomic, strong) NSMutableArray * _Nonnull changeIDArray;
 @property (nonatomic, copy) NSString * _Null_unspecified sendingController;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;

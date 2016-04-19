@@ -15,7 +15,7 @@ class ResultsViewController: UIViewController,UITableViewDelegate {
     var refArray:NSMutableArray = []
     var resultNameArray:NSMutableArray = []
     var resultDetailArray:NSMutableArray = []
-    
+    var resultSolutionCountArray:NSMutableArray = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,10 +46,13 @@ class ResultsViewController: UIViewController,UITableViewDelegate {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath)
         
         let changeName:String = self.resultNameArray[indexPath.row] as! String
-        let changeDetail:String = self.resultDetailArray[indexPath.row] as! String
+        //let changeDetail:String = self.resultDetailArray[indexPath.row] as! String
+        
+        
+        let solutionCount:String = String(self.resultSolutionCountArray[indexPath.row])
         
         cell.textLabel!.text = changeName
-        cell.detailTextLabel!.text = changeDetail
+        cell.detailTextLabel!.text = solutionCount
         
         return cell
         

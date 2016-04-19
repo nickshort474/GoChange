@@ -6,11 +6,11 @@ provides-nominal:
 provides-member:
 - ["C8GoChange17WebViewController", ""]
 provides-dynamic-lookup:
-- "didReceiveMemoryWarning"
 - "viewDidLoad"
+- "didReceiveMemoryWarning"
 depends-top-level:
-- "UIViewController"
 - "WebViewController"
+- "UIViewController"
 depends-member:
 - ["Ps9AnyObject", "didReceiveMemoryWarning"]
 - ["Ps9AnyObject", "init"]

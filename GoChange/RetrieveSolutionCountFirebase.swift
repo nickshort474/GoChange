@@ -13,25 +13,41 @@ import Firebase
 class RetrieveSolutionCountFirebase:NSObject{
     
     var nameRef = Firebase(url: "https://gochange.firebaseio.com/change/solutionCount")
+    var resultsArray:NSMutableArray = []
     
-    
-    init(changeID:String,completionHandler:(results:FDataSnapshot)->Void){
-        
+    init(changeArray:NSMutableArray,completionHandler:(results:NSMutableArray)->Void){
         super.init()
         
-        let solutionRef = nameRef.childByAppendingPath(changeID)
-        let countRef = solutionRef.childByAppendingPath("SolutionCount")
-        
-        
-        countRef.observeEventType(.Value, withBlock: { snapshot in
+        for var i in 0 ..< changeArray.count{
             
-            completionHandler(results:snapshot)
+            let solutionRef = nameRef.childByAppendingPath(changeArray[i] as! String)
+            let countRef = solutionRef.childByAppendingPath("SolutionCount")
             
+            countRef.observeEventType(.Value, withBlock: { snapshot in
+            
+                self.resultsArray.addObject(snapshot.value)
+                
+                if(self.resultsArray.count == changeArray.count){
+                    completionHandler(results:self.resultsArray)
+                }
+                
+                
+                
+                
             }, withCancelBlock:{ error in
                 
                 print(error.description)
                 
-        })
+            })
+            
+        }
+        
+        
+        
+        
+        
+        
+        
         
     }
     

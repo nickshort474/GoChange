@@ -7,19 +7,19 @@ provides-member:
 - ["C8GoChange11AppDelegate", ""]
 provides-dynamic-lookup:
 - "applicationWillEnterForeground"
+- "applicationWillResignActive"
 - "application"
 - "applicationDidEnterBackground"
 - "window"
-- "applicationWillResignActive"
 - "applicationWillTerminate"
 - "applicationDidBecomeActive"
 depends-top-level:
-- "NSObject"
 - "AppDelegate"
 - "UIApplication"
+- "NSObject"
+- "AnyObject"
 - "Bool"
 - "UIWindow"
-- "AnyObject"
 - "UIResponder"
 - "UIApplicationDelegate"
 - !private "BooleanLiteralType"

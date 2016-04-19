@@ -18,9 +18,12 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
    
     var countArray:NSMutableArray = []
     
-    var useRefArray:NSMutableArray = []
     var matchedNameArray:NSMutableArray = []
+    
+    var useRefArray:NSMutableArray = []
     var useDetailArray:NSMutableArray = []
+    var useSolutionCountArray:NSMutableArray = []
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -130,27 +133,39 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         useDetailArray = []
         useRefArray = []
         
+        var detailsRetrieved:String = "false"
+        
         // for all results that match search term add their unique reference to useRefArray using countArray
         
         for num in countArray{
             let intOfNum = num as! Int
             
             useRefArray.addObject(returnedRefArray[intOfNum])
+            
         }
         
         // use refArray to collect details from firebase
         _ = RetrieveDetailsFromFirebase(userRefArray: useRefArray){
                 (result) in
             
-            self.useDetailArray = result
-            self.sendToResults()
+                self.useDetailArray = result
+            
+                _ = RetrieveSolutionCountFirebase(changeArray:self.useRefArray){
+                    (result) in
+               
+                    self.useSolutionCountArray = result
+                    self.sendToResults()
+                }
+
         }
         
+        // use userRefArray to collect solutionCounts from firebase
         
-        
+                
         
         
     }
+    
     
     
     func sendToResults(){
@@ -164,6 +179,9 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         controller.resultNameArray = matchedNameArray
         
         controller.resultDetailArray = useDetailArray
+        
+        controller.resultSolutionCountArray = useSolutionCountArray
+        
         controller.refArray = useRefArray
         
         navigationController?.pushViewController(controller,animated: true)
