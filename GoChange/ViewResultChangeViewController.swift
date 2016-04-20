@@ -59,6 +59,7 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
         //clear out temp arrays ready for new result to be viewed:
         TempChange.sharedInstance().solutionNameArray = []
         TempChange.sharedInstance().solutionDetailArray = []
+        TempChange.sharedInstance().solutionVoteArray = []
         TempChange.sharedInstance().solutionNewOldArray = []
         
         
@@ -81,6 +82,7 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
                 //put results from firebase into TempChange solutionArray
                 TempChange.sharedInstance().solutionNameArray.addObject(name.value["SolutionName"]!!)
                 TempChange.sharedInstance().solutionDetailArray.addObject(name.value["SolutionDescription"]!!)
+                TempChange.sharedInstance().solutionVoteArray.addObject(name.value["SolutionVoteCount"]!! as! Int)
                 
                 //TODO:Check for use
                 TempChange.sharedInstance().solutionNewOldArray.addObject("old")
@@ -127,11 +129,21 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
         let changeID:String = self.changeID
         
         
-        //TODO: add possible completion handler to return newly created change
+        //completion handler to return newly created change
         _ = SaveData(postType:postType,owner:owner,changeID:changeID){
             (result) in
             
             self.currentChange = result as! Change
+            
+            //segue to Viewfollowed change VC
+            var controller:ViewFollowedChangeViewController
+        
+            controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewFollowedChangeViewController") as! ViewFollowedChangeViewController
+        
+            controller.changeClicked = self.currentChange
+            controller.sendingController = "ViewResult"
+            
+            self.navigationController?.pushViewController(controller, animated: false)
             
         }
         
@@ -139,41 +151,6 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
         
         //TODO: need to add activity indicator to storyboard
         
-        //segue to Viewfollowed change VC
-        var controller:ViewFollowedChangeViewController
-        
-        controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewFollowedChangeViewController") as! ViewFollowedChangeViewController
-        
-        controller.changeClicked = self.currentChange
-        controller.sendingController = "ViewResult"
-        //self.presentViewController(controller, animated: false, completion: nil)
-        
-        
-        self.navigationController?.pushViewController(controller, animated: false)
-        
-        //let navigationController = self.navigationController
-        
-        //navigationController?.pushViewController(controller,animated: true)
-                
-        //TODO: refresh page with buttons re/dis enabled
-        //self.followButton.hidden = true
-        
-        //self.addASolutionButton.hidden = false
-        //self.title = "following"
-        //self.sendingController = "following"
-        
-        
-        //controller.sendingController = "following"
-        
-        
-        //controller.changeClicked = fetchedResultsController.objectAtIndexPath(indexPath) as! Change
-        
-        /*
-         controller.isOwner = changeClicked.owner
-         controller.changeID = changeClicked.changeID
-         controller.changeName = changeClicked.changeName
-         controller.changeDetail = changeClicked.changeDescription
-         */
         
         
     }

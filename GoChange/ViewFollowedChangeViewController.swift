@@ -25,31 +25,21 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
     @IBOutlet weak var followChangeButton: UIButton!
     @IBOutlet weak var postChangeButton: UIButton!
     
-    
-    /*
-    var isOwner:String!
-    
-    var changeName:String!
-    var changeDetail:String!
-    */
-    
     var changeClicked:Change!
     var localSolutionCount:Int!
     var changeID:String!
     var changeIDArray:NSMutableArray = []
     
-    
     var sendingController:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view, typically from a nib.
+        
         //set delegates
         nameField.delegate = self
         detailsField.delegate = self
         solutionTable.delegate = self
-        
         
         postChangeButton.enabled = false
         postChangeButton.alpha = 0.5
@@ -58,16 +48,15 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
         //TODO: Decide whether to allow owner of change to edit question once posted
         nameButton.hidden = true
         detailButton.hidden = true
-        
         nameField.enabled = false
         detailsField.selectable = false
-        
         
         self.title = "Following"
         
         
-        //if coming from ViewResultChangeViewController need tback button to go home
+        //if coming from ViewResultChangeViewController need back button to go home
         if(sendingController == "ViewResult"){
+            
             let barButtonItem = UIBarButtonItem(title: "Home", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ViewFollowedChangeViewController.goBackHome))
             self.navigationItem.leftBarButtonItem = barButtonItem
             
@@ -90,8 +79,6 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
         //add changeID to changeID array ready for passing to RetrieveSolutions
         changeIDArray.addObject(changeID)
         
-        
-        
         //check to see whether solution count in database matches that in core data
        //Even if coming from results can check to see whether any new solutions added since search was conducted
         
@@ -113,6 +100,7 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
                     // empty TempArrays ready to be populate with new data
                     TempChange.sharedInstance().solutionNameArray = []
                     TempChange.sharedInstance().solutionDetailArray = []
+                    TempChange.sharedInstance().solutionVoteArray = []
                     TempChange.sharedInstance().solutionNewOldArray = []
                     
                     //loop through returned array to extract data
@@ -121,6 +109,7 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
                        //assign results from firebase to Temp solutionArrays
                         TempChange.sharedInstance().solutionNameArray.addObject(name.value["SolutionName"]!!)
                         TempChange.sharedInstance().solutionDetailArray.addObject(name.value["SolutionDescription"]!!)
+                        TempChange.sharedInstance().solutionVoteArray.addObject(name.value["SolutionVoteCount"]!! as! Int)
                         TempChange.sharedInstance().solutionNewOldArray.addObject("old")
                     }
                     
@@ -151,6 +140,7 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
                     // empty TempArrays ready to be populate with new data
                     TempChange.sharedInstance().solutionNameArray = []
                     TempChange.sharedInstance().solutionDetailArray = []
+                     TempChange.sharedInstance().solutionVoteArray = []
                     TempChange.sharedInstance().solutionNewOldArray = []
                     
                     //assign results from coreData return to temp array then use TempArray for table
@@ -158,6 +148,7 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
                         
                         TempChange.sharedInstance().solutionNameArray.addObject(solution.solutionName)
                         TempChange.sharedInstance().solutionDetailArray.addObject(solution.solutionDescription)
+                         TempChange.sharedInstance().solutionVoteArray.addObject(solution.voteCount)
                         TempChange.sharedInstance().solutionNewOldArray.addObject("old")
                         
                     }
@@ -183,6 +174,8 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
     override func viewWillAppear(animated: Bool) {
         
         if(TempChange.sharedInstance().addingSolutions == "true"){
+            
+            print("have added solutions")
             self.postChangeButton.enabled = true
             self.postChangeButton.alpha = 1
         }
@@ -214,6 +207,8 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("AddIdeaViewController") as! AddIdeaViewController
         
         controller.viewControllerStatus = "adding"
+        controller.changeID = changeID
+        
         self.navigationController?.pushViewController(controller, animated: true)
         
         
@@ -295,6 +290,10 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
         
         var solutionName:String = ""
         solutionName = TempChange.sharedInstance().solutionNameArray[indexPath.row] as! String
+        
+         //TODO: Gather vote numbers from firebase populated into Temp.sharedInstance().solutionVoteArray
+        let voteCount:String = String(TempChange.sharedInstance().solutionVoteArray[indexPath.row])
+        cell.detailTextLabel!.text = voteCount
         cell.textLabel!.text = solutionName
         
         return cell

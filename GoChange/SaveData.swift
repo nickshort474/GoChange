@@ -27,10 +27,12 @@ class SaveData:NSObject{
         self.postType = postType
         self.isOwner = owner
         
+        
+        //TODO: RE-write as switch statement
+        
         if(postType == "fullPost"){
             
             saveChangeToFirebase()
-            
             createCoreDataChange(){
                 (result) in
                 
@@ -42,26 +44,24 @@ class SaveData:NSObject{
             
             // if just posting solutions...get change and link new solutions to existing change
             existingChange = change
-            
             createCoreDataSolutions()
             
         }else if(postType == "coreDataFirebaseSolutionPost"){
             
             existingChange = change
-            
             saveSolutionsToFirebase()
-            
             createCoreDataSolutions()
         
         }else if(postType == "fullResultPost"){
             
             self.changeID = changeID
-            
             createCoreDataChange(){
                 (result) in
                 
                 completionHandler(result:result)
             }
+        }else if(postType == "voteForSolution"){
+            
         }
         
         
@@ -184,7 +184,7 @@ class SaveData:NSObject{
                 
                 
                 //set solution values
-                let changeSolutionValues = ["SolutionName":TempChange.sharedInstance().solutionNameArray[i],"SolutionDescription":TempChange.sharedInstance().solutionDetailArray[i]]
+                let changeSolutionValues = ["SolutionName":TempChange.sharedInstance().solutionNameArray[i],"SolutionDescription":TempChange.sharedInstance().solutionDetailArray[i],"SolutionVoteCount":TempChange.sharedInstance().solutionVoteArray[i]]
                 
                 //save values to firebase
                 uniqueSolutionReference.setValue(changeSolutionValues)
@@ -251,10 +251,13 @@ class SaveData:NSObject{
         
         for var i in 0 ..< TempChange.sharedInstance().solutionNameArray.count{
             
+           
+            
             var solutionDictionary:[String:AnyObject] = [String:AnyObject]()
             
             solutionDictionary[Solution.Keys.solutionName] = TempChange.sharedInstance().solutionNameArray[i]
             solutionDictionary[Solution.Keys.solutionDescription] = TempChange.sharedInstance().solutionDetailArray[i]
+            solutionDictionary[Solution.Keys.voteCount] = TempChange.sharedInstance().solutionVoteArray[i]
             
             
             //create core data solution object

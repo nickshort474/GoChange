@@ -31,6 +31,9 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     var loadedNameData:String!
     var loadedDetailData:String!
     
+    var changeID:String!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -56,10 +59,18 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         
         if(viewControllerStatus == "viewing"){
             
-            //TODO: If viewing disable edit buttons
+            //Disbale editing of name and detail fields
+            nameTextField.enabled = false
+            detailTextView.selectable = false
             
+            //Set controller title
+            self.title = "Solution"
+            
+            //load data into fields
             nameTextField.text = loadedNameData
             detailTextView.text = loadedDetailData
+            
+            addSolution.setTitle("Vote For Solution", forState: .Normal)
         }
         
         self.tweakTable.reloadData()
@@ -74,22 +85,32 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     
     @IBAction func doneAddingIdea(sender: UIButton) {
                 
-        
-        if(nameTextField.text != "" && detailTextView.text != ""){
+        if(viewControllerStatus == "viewing"){
+           
+            //TODO: Vote for solution, need to pass something in to get solution to vote for
+            _ = VoteForSolution(changeID){
+                (result) in
+                
+                
+                
+            }
             
-            // save data locally
+        }else{
             
-            TempChange.sharedInstance().addingSolutions = "true"
+            if(nameTextField.text != "" && detailTextView.text != ""){
             
-            TempChange.sharedInstance().solutionNameArray.addObject(nameTextField.text!)
-            TempChange.sharedInstance().solutionDetailArray.addObject(detailTextView.text!)
+                // save data locally
+                TempChange.sharedInstance().addingSolutions = "true"
             
-            TempChange.sharedInstance().solutionNewOldArray.addObject("new")
+                TempChange.sharedInstance().solutionNameArray.addObject(nameTextField.text!)
+                TempChange.sharedInstance().solutionDetailArray.addObject(detailTextView.text!)
+                TempChange.sharedInstance().solutionVoteArray.addObject(0)
+                TempChange.sharedInstance().solutionNewOldArray.addObject("new")
             
-            // dismiss view controller from navigation stack
-            self.navigationController?.popViewControllerAnimated(true)
+                // dismiss view controller from navigation stack
+                self.navigationController?.popViewControllerAnimated(true)
+            }
         }
-        
         
     }
     
@@ -192,7 +213,7 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     
     func tableView(tableView:UITableView,didSelectRowAtIndexPath indexPath: NSIndexPath){
         
-        
+        //For tweak view controller
         
         
         
@@ -206,7 +227,7 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         
         
         //TODO: put all petition code into outside file
-        
+        //TODO: Add button to add petition
         
         let parameterDictionary = [
             "api_key":GoChangeClient.Constants.apiKey,

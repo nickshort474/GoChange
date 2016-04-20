@@ -6,67 +6,67 @@ provides-nominal:
 provides-member:
 - ["C8GoChange26CreateChangeViewController", ""]
 provides-dynamic-lookup:
-- "textFieldDidBeginEditing"
+- "changeName"
+- "change"
+- "currentDetailData"
+- "homeButtonClick"
+- "sharedContext"
+- "nameField"
+- "viewWillAppear"
+- "detailsActionButton"
+- "addASolutionButton"
+- "textViewDidBeginEditing"
+- "nameActionButton"
 - "detailsField"
+- "detailsPlusButton"
+- "tableView"
+- "tableView"
+- "tableView"
+- "postButton"
+- "sendingController"
+- "changeID"
+- "solutionTable"
+- "namePlusButton"
+- "isOwner"
 - "changeDetail"
 - "viewDidLoad"
-- "tableView"
-- "tableView"
-- "tableView"
-- "detailsPlusButton"
-- "currentDetailData"
-- "viewWillAppear"
-- "PostInfo"
-- "nameField"
-- "addASolutionButton"
-- "changeID"
-- "namePlusButton"
-- "nameActionButton"
-- "isOwner"
 - "currentNameData"
-- "changeName"
-- "textViewDidBeginEditing"
-- "change"
-- "sharedContext"
-- "homeButtonClick"
-- "postButton"
-- "detailsActionButton"
+- "textFieldDidBeginEditing"
 - "addSolution"
-- "sendingController"
-- "solutionTable"
+- "PostInfo"
 depends-top-level:
 - !private "BooleanLiteralType"
-- !private "GoChangeClient"
-- "CreateChangeViewController"
-- !private "print"
-- "Int"
-- !private "UIColor"
-- !private "AddIdeaViewController"
-- !private "SaveData"
-- !private "||"
-- !private "&&"
-- "UITextField"
-- !private "!="
-- "UIButton"
 - "NSIndexPath"
-- "String"
-- "UITableViewDelegate"
-- "Bool"
-- !private "CoreDataStackManager"
-- "StringLiteralType"
 - !private "Array"
-- !private "TempChange"
-- "UITableViewCell"
-- "UITextView"
-- !private "=="
-- "UITableView"
-- !private "UIBarButtonItem"
-- "UITextFieldDelegate"
-- !private "UIBarButtonItemStyle"
-- "UITextViewDelegate"
 - "Change"
 - "NSManagedObjectContext"
+- "UIButton"
+- !private "GoChangeClient"
+- "UITextField"
+- "CreateChangeViewController"
+- !private "TempChange"
+- "Int"
+- !private "CoreDataStackManager"
+- !private "!="
+- "UITextView"
+- !private "UIBarButtonItemStyle"
+- "UITableView"
+- "UITableViewCell"
+- !private "&&"
+- "UITextFieldDelegate"
+- "UITextViewDelegate"
 - "UIViewController"
+- !private "AddIdeaViewController"
+- "String"
+- !private "||"
+- "UITableViewDelegate"
+- "Bool"
+- !private "=="
+- "StringLiteralType"
+- !private "UIBarButtonItem"
+- !private "print"
+- !private "UIColor"
+- !private "SaveData"
 depends-member:
 - !private ["C8GoChange21AddIdeaViewController", "loadedDetailData"]
 - !private ["C8GoChange21AddIdeaViewController", "loadedNameData"]
@@ -139,6 +139,7 @@ depends-member:
 - !private ["Ps9AnyObject", "solutionDetailArray"]
 - !private ["Ps9AnyObject", "solutionNameArray"]
 - ["Ps9AnyObject", "solutionTable"]
+- !private ["Ps9AnyObject", "solutionVoteArray"]
 - !private ["Ps9AnyObject", "storyboard"]
 - !private ["Ps9AnyObject", "subscript"]
 - ["Ps9AnyObject", "tableView"]
@@ -240,6 +241,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "solutionDetailArray"]
 - !private ["Ps11CVarArgType", "solutionNameArray"]
 - ["Ps11CVarArgType", "solutionTable"]
+- !private ["Ps11CVarArgType", "solutionVoteArray"]
 - !private ["Ps11CVarArgType", "storyboard"]
 - !private ["Ps11CVarArgType", "subscript"]
 - ["Ps11CVarArgType", "tableView"]
@@ -416,6 +418,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "solutionDetailArray"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionNameArray"]
 - ["Ps28CustomDebugStringConvertible", "solutionTable"]
+- !private ["Ps28CustomDebugStringConvertible", "solutionVoteArray"]
 - !private ["Ps28CustomDebugStringConvertible", "storyboard"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
 - ["Ps28CustomDebugStringConvertible", "tableView"]
@@ -511,6 +514,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "solutionDetailArray"]
 - !private ["Ps23CustomStringConvertible", "solutionNameArray"]
 - ["Ps23CustomStringConvertible", "solutionTable"]
+- !private ["Ps23CustomStringConvertible", "solutionVoteArray"]
 - !private ["Ps23CustomStringConvertible", "storyboard"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
 - ["Ps23CustomStringConvertible", "tableView"]
@@ -607,6 +611,7 @@ depends-member:
 - !private ["Ps9Equatable", "solutionDetailArray"]
 - !private ["Ps9Equatable", "solutionNameArray"]
 - ["Ps9Equatable", "solutionTable"]
+- !private ["Ps9Equatable", "solutionVoteArray"]
 - !private ["Ps9Equatable", "storyboard"]
 - !private ["Ps9Equatable", "subscript"]
 - ["Ps9Equatable", "tableView"]
@@ -704,6 +709,7 @@ depends-member:
 - !private ["Ps8Hashable", "solutionDetailArray"]
 - !private ["Ps8Hashable", "solutionNameArray"]
 - ["Ps8Hashable", "solutionTable"]
+- !private ["Ps8Hashable", "solutionVoteArray"]
 - !private ["Ps8Hashable", "storyboard"]
 - !private ["Ps8Hashable", "subscript"]
 - ["Ps8Hashable", "tableView"]
@@ -987,6 +993,7 @@ depends-member:
 - !private ["CSo8NSObject", "solutionDetailArray"]
 - !private ["CSo8NSObject", "solutionNameArray"]
 - ["CSo8NSObject", "solutionTable"]
+- !private ["CSo8NSObject", "solutionVoteArray"]
 - !private ["CSo8NSObject", "storyboard"]
 - !private ["CSo8NSObject", "subscript"]
 - ["CSo8NSObject", "tableView"]
@@ -1080,6 +1087,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "solutionDetailArray"]
 - !private ["PSo16NSObjectProtocol", "solutionNameArray"]
 - ["PSo16NSObjectProtocol", "solutionTable"]
+- !private ["PSo16NSObjectProtocol", "solutionVoteArray"]
 - !private ["PSo16NSObjectProtocol", "storyboard"]
 - !private ["PSo16NSObjectProtocol", "subscript"]
 - ["PSo16NSObjectProtocol", "tableView"]
@@ -1124,6 +1132,7 @@ depends-member:
 - !private ["C8GoChange10TempChange", "sharedInstance"]
 - !private ["C8GoChange10TempChange", "solutionDetailArray"]
 - !private ["C8GoChange10TempChange", "solutionNameArray"]
+- !private ["C8GoChange10TempChange", "solutionVoteArray"]
 - !private ["C8GoChange10TempChange", "tweakDetailArray"]
 - !private ["C8GoChange10TempChange", "tweakNameArray"]
 - !private ["PSo29UIAccessibilityIdentification", "alpha"]

@@ -14,12 +14,13 @@ class Solution:NSManagedObject{
     struct Keys{
         static let solutionName = "solutionName"
         static let solutionDescription = "solutionDescription"
-        
+        static let voteCount = "voteCount"
     }
     
     
     @NSManaged var solutionName:String
     @NSManaged var solutionDescription:String
+    @NSManaged var voteCount:NSNumber
     @NSManaged var solutionToChange:Change
     @NSManaged var solutionNeedingTweaking:[Tweak]
     
@@ -36,7 +37,7 @@ class Solution:NSManagedObject{
         
         solutionName = dictionary[Solution.Keys.solutionName] as! String
         solutionDescription = dictionary[Solution.Keys.solutionDescription] as! String
-        
+        voteCount = dictionary[Solution.Keys.voteCount] as! Int
     }
    
 }

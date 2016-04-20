@@ -18,9 +18,9 @@ class TempChange:NSObject{
     
     var solutionNameArray:NSMutableArray = []
     var solutionDetailArray:NSMutableArray = []
-    
+    var solutionVoteArray:NSMutableArray = []
     var solutionNewOldArray:NSMutableArray = []
-    //var solutionDictionary:Dictionary = [String:AnyObject]()
+    
     
     var newSolutionNameArray:NSMutableArray = []
     var newSolutionDetailArray:NSMutableArray = []

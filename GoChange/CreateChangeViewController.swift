@@ -61,6 +61,7 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         TempChange.sharedInstance().changeDetail = ""
         TempChange.sharedInstance().solutionDetailArray = []
         TempChange.sharedInstance().solutionNameArray = []
+        TempChange.sharedInstance().solutionVoteArray = []
         TempChange.sharedInstance().tweakDetailArray = []
         TempChange.sharedInstance().tweakNameArray = []
         

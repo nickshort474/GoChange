@@ -6,48 +6,48 @@ provides-nominal:
 provides-member:
 - ["C8GoChange30ViewResultChangeViewController", ""]
 provides-dynamic-lookup:
-- "followChangeButton"
-- "changeName"
+- "isOwner"
 - "tableView"
 - "tableView"
 - "tableView"
-- "currentChange"
 - "followChangeClick"
-- "changeDetail"
+- "currentChange"
+- "followChangeButton"
+- "changeID"
 - "solutionTable"
-- "detailsField"
-- "goBackHome"
+- "changeDetail"
 - "viewDidLoad"
 - "viewWillAppear"
-- "changeID"
 - "nameField"
-- "isOwner"
+- "goBackHome"
+- "detailsField"
+- "changeName"
 depends-top-level:
-- "UIButton"
-- !private "TempChange"
-- "UITableViewDelegate"
-- !private "RetrieveSolutionsFromFirebase"
-- "UITextViewDelegate"
-- "UITextFieldDelegate"
-- !private "AddIdeaViewController"
-- "Change"
 - "UIViewController"
 - "UITextView"
-- !private "StringLiteralType"
-- "UITableViewCell"
-- "Bool"
-- !private "Array"
-- "Int"
-- !private "UIColor"
-- "UITableView"
-- !private "SaveData"
-- "ViewResultChangeViewController"
-- "NSIndexPath"
-- "UITextField"
-- !private "FDataSnapshot"
+- "UITextFieldDelegate"
+- "UITextViewDelegate"
 - !private "ViewFollowedChangeViewController"
-- !private "BooleanLiteralType"
+- !private "AddIdeaViewController"
+- "UITableViewCell"
 - "String"
+- !private "UIColor"
+- !private "SaveData"
+- !private "FDataSnapshot"
+- "UITableViewDelegate"
+- "UITableView"
+- !private "StringLiteralType"
+- "UITextField"
+- !private "Array"
+- !private "RetrieveSolutionsFromFirebase"
+- "ViewResultChangeViewController"
+- "Bool"
+- "Change"
+- "NSIndexPath"
+- "UIButton"
+- "BooleanLiteralType"
+- "Int"
+- !private "TempChange"
 depends-member:
 - !private ["C8GoChange21AddIdeaViewController", "loadedDetailData"]
 - !private ["C8GoChange21AddIdeaViewController", "loadedNameData"]
@@ -103,6 +103,7 @@ depends-member:
 - !private ["Ps9AnyObject", "solutionNameArray"]
 - !private ["Ps9AnyObject", "solutionNewOldArray"]
 - ["Ps9AnyObject", "solutionTable"]
+- !private ["Ps9AnyObject", "solutionVoteArray"]
 - !private ["Ps9AnyObject", "storyboard"]
 - !private ["Ps9AnyObject", "subscript"]
 - ["Ps9AnyObject", "tableView"]
@@ -201,6 +202,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "solutionNameArray"]
 - !private ["Ps11CVarArgType", "solutionNewOldArray"]
 - ["Ps11CVarArgType", "solutionTable"]
+- !private ["Ps11CVarArgType", "solutionVoteArray"]
 - !private ["Ps11CVarArgType", "storyboard"]
 - !private ["Ps11CVarArgType", "subscript"]
 - ["Ps11CVarArgType", "tableView"]
@@ -288,6 +290,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "solutionNameArray"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionNewOldArray"]
 - ["Ps28CustomDebugStringConvertible", "solutionTable"]
+- !private ["Ps28CustomDebugStringConvertible", "solutionVoteArray"]
 - !private ["Ps28CustomDebugStringConvertible", "storyboard"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
 - ["Ps28CustomDebugStringConvertible", "tableView"]
@@ -371,6 +374,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "solutionNameArray"]
 - !private ["Ps23CustomStringConvertible", "solutionNewOldArray"]
 - ["Ps23CustomStringConvertible", "solutionTable"]
+- !private ["Ps23CustomStringConvertible", "solutionVoteArray"]
 - !private ["Ps23CustomStringConvertible", "storyboard"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
 - ["Ps23CustomStringConvertible", "tableView"]
@@ -450,6 +454,7 @@ depends-member:
 - !private ["Ps9Equatable", "solutionNameArray"]
 - !private ["Ps9Equatable", "solutionNewOldArray"]
 - ["Ps9Equatable", "solutionTable"]
+- !private ["Ps9Equatable", "solutionVoteArray"]
 - !private ["Ps9Equatable", "storyboard"]
 - !private ["Ps9Equatable", "subscript"]
 - ["Ps9Equatable", "tableView"]
@@ -534,6 +539,7 @@ depends-member:
 - !private ["Ps8Hashable", "solutionNameArray"]
 - !private ["Ps8Hashable", "solutionNewOldArray"]
 - ["Ps8Hashable", "solutionTable"]
+- !private ["Ps8Hashable", "solutionVoteArray"]
 - !private ["Ps8Hashable", "storyboard"]
 - !private ["Ps8Hashable", "subscript"]
 - ["Ps8Hashable", "tableView"]
@@ -805,6 +811,7 @@ depends-member:
 - !private ["CSo8NSObject", "solutionNameArray"]
 - !private ["CSo8NSObject", "solutionNewOldArray"]
 - ["CSo8NSObject", "solutionTable"]
+- !private ["CSo8NSObject", "solutionVoteArray"]
 - !private ["CSo8NSObject", "storyboard"]
 - !private ["CSo8NSObject", "subscript"]
 - ["CSo8NSObject", "tableView"]
@@ -881,6 +888,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "solutionNameArray"]
 - !private ["PSo16NSObjectProtocol", "solutionNewOldArray"]
 - ["PSo16NSObjectProtocol", "solutionTable"]
+- !private ["PSo16NSObjectProtocol", "solutionVoteArray"]
 - !private ["PSo16NSObjectProtocol", "storyboard"]
 - !private ["PSo16NSObjectProtocol", "subscript"]
 - ["PSo16NSObjectProtocol", "tableView"]
@@ -945,6 +953,7 @@ depends-member:
 - !private ["C8GoChange10TempChange", "solutionDetailArray"]
 - !private ["C8GoChange10TempChange", "solutionNameArray"]
 - !private ["C8GoChange10TempChange", "solutionNewOldArray"]
+- !private ["C8GoChange10TempChange", "solutionVoteArray"]
 - !private ["PSo29UIAccessibilityIdentification", "delegate"]
 - !private ["PSo29UIAccessibilityIdentification", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo29UIAccessibilityIdentification", "reloadData"]

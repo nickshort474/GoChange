@@ -6,65 +6,65 @@ provides-nominal:
 provides-member:
 - ["C8GoChange21AddIdeaViewController", ""]
 provides-dynamic-lookup:
-- "petitionId"
-- "addDetailButton"
-- "addDetailClick"
-- "currentDetailData"
-- "loadedNameData"
 - "addNameClick"
-- "addSolution"
-- "detailTextView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tweakTable"
-- "session"
-- "loadedDetailData"
-- "doneAddingIdea"
-- "didReceiveMemoryWarning"
-- "textFieldDidBeginEditing"
-- "addTweak"
-- "viewControllerStatus"
-- "addNameButton"
-- "textViewDidBeginEditing"
-- "addPetition"
-- "viewDidLoad"
-- "viewWillAppear"
-- "currentNameData"
 - "nameTextField"
+- "currentNameData"
+- "addTweak"
+- "textViewDidBeginEditing"
+- "addNameButton"
+- "loadedDetailData"
+- "viewWillAppear"
+- "addDetailClick"
+- "didReceiveMemoryWarning"
+- "viewDidLoad"
+- "textFieldDidBeginEditing"
+- "tweakTable"
+- "viewControllerStatus"
+- "detailTextView"
+- "addSolution"
+- "tableView"
+- "tableView"
+- "tableView"
+- "loadedNameData"
+- "session"
+- "addPetition"
+- "petitionId"
+- "doneAddingIdea"
+- "currentDetailData"
+- "addDetailButton"
 depends-top-level:
-- !private "!="
-- !private "=="
-- !private "TempChange"
-- "UITableViewDelegate"
 - "UITextViewDelegate"
-- !private "+"
 - "UITextFieldDelegate"
 - "UIViewController"
-- "AnyObject"
+- !private "+"
 - "UITextView"
+- !private "BooleanLiteralType"
+- "NSIndexPath"
+- !private "!="
+- "String"
+- !private "UIBarButtonItem"
+- !private "GoChangeClient"
+- !private "UIBarButtonItemStyle"
+- "AddIdeaViewController"
+- "UITableView"
+- !private "NSURL"
+- "Int"
+- "UITableViewDelegate"
+- !private "UIColor"
+- "UITextField"
 - !private "StringLiteralType"
 - "Bool"
-- "AddIdeaViewController"
-- !private "UIBarButtonItem"
-- !private "UIColor"
-- !private "GoChangeClient"
-- "UITableViewCell"
-- !private "UIBarButtonItemStyle"
-- "Int"
-- !private "AddTweakViewController"
-- !private "print"
-- "UITableView"
-- !private "NSURLRequest"
-- "NSIndexPath"
-- !private "NSURL"
-- "UITextField"
-- !private "BooleanLiteralType"
-- !private "&&"
-- "String"
 - "UIButton"
-- !private "Dictionary"
+- "UITableViewCell"
+- !private "AddTweakViewController"
+- !private "&&"
+- !private "print"
 - "NSURLSession"
+- !private "NSURLRequest"
+- !private "=="
+- !private "TempChange"
+- "AnyObject"
+- !private "Dictionary"
 depends-member:
 - !private ["C8GoChange21AddIdeaViewController", "AddTweakViewController"]
 - ["C8GoChange21AddIdeaViewController", "AnyObject"]
@@ -210,6 +210,7 @@ depends-member:
 - !private ["Ps9AnyObject", "solutionDetailArray"]
 - !private ["Ps9AnyObject", "solutionNameArray"]
 - !private ["Ps9AnyObject", "solutionNewOldArray"]
+- !private ["Ps9AnyObject", "solutionVoteArray"]
 - !private ["Ps9AnyObject", "storyboard"]
 - !private ["Ps9AnyObject", "subscript"]
 - ["Ps9AnyObject", "tableView"]
@@ -314,6 +315,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "solutionDetailArray"]
 - !private ["Ps11CVarArgType", "solutionNameArray"]
 - !private ["Ps11CVarArgType", "solutionNewOldArray"]
+- !private ["Ps11CVarArgType", "solutionVoteArray"]
 - !private ["Ps11CVarArgType", "storyboard"]
 - !private ["Ps11CVarArgType", "subscript"]
 - ["Ps11CVarArgType", "tableView"]
@@ -419,6 +421,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "solutionDetailArray"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionNameArray"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionNewOldArray"]
+- !private ["Ps28CustomDebugStringConvertible", "solutionVoteArray"]
 - !private ["Ps28CustomDebugStringConvertible", "storyboard"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
 - ["Ps28CustomDebugStringConvertible", "tableView"]
@@ -518,6 +521,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "solutionDetailArray"]
 - !private ["Ps23CustomStringConvertible", "solutionNameArray"]
 - !private ["Ps23CustomStringConvertible", "solutionNewOldArray"]
+- !private ["Ps23CustomStringConvertible", "solutionVoteArray"]
 - !private ["Ps23CustomStringConvertible", "storyboard"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
 - ["Ps23CustomStringConvertible", "tableView"]
@@ -621,6 +625,7 @@ depends-member:
 - !private ["Ps9Equatable", "solutionDetailArray"]
 - !private ["Ps9Equatable", "solutionNameArray"]
 - !private ["Ps9Equatable", "solutionNewOldArray"]
+- !private ["Ps9Equatable", "solutionVoteArray"]
 - !private ["Ps9Equatable", "storyboard"]
 - !private ["Ps9Equatable", "subscript"]
 - ["Ps9Equatable", "tableView"]
@@ -725,6 +730,7 @@ depends-member:
 - !private ["Ps8Hashable", "solutionDetailArray"]
 - !private ["Ps8Hashable", "solutionNameArray"]
 - !private ["Ps8Hashable", "solutionNewOldArray"]
+- !private ["Ps8Hashable", "solutionVoteArray"]
 - !private ["Ps8Hashable", "storyboard"]
 - !private ["Ps8Hashable", "subscript"]
 - ["Ps8Hashable", "tableView"]
@@ -1013,6 +1019,7 @@ depends-member:
 - !private ["CSo8NSObject", "solutionDetailArray"]
 - !private ["CSo8NSObject", "solutionNameArray"]
 - !private ["CSo8NSObject", "solutionNewOldArray"]
+- !private ["CSo8NSObject", "solutionVoteArray"]
 - !private ["CSo8NSObject", "storyboard"]
 - !private ["CSo8NSObject", "subscript"]
 - ["CSo8NSObject", "tableView"]
@@ -1108,6 +1115,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "solutionDetailArray"]
 - !private ["PSo16NSObjectProtocol", "solutionNameArray"]
 - !private ["PSo16NSObjectProtocol", "solutionNewOldArray"]
+- !private ["PSo16NSObjectProtocol", "solutionVoteArray"]
 - !private ["PSo16NSObjectProtocol", "storyboard"]
 - !private ["PSo16NSObjectProtocol", "subscript"]
 - ["PSo16NSObjectProtocol", "tableView"]
@@ -1168,6 +1176,7 @@ depends-member:
 - !private ["C8GoChange10TempChange", "solutionDetailArray"]
 - !private ["C8GoChange10TempChange", "solutionNameArray"]
 - !private ["C8GoChange10TempChange", "solutionNewOldArray"]
+- !private ["C8GoChange10TempChange", "solutionVoteArray"]
 - !private ["C8GoChange10TempChange", "tweakNameArray"]
 - !private ["PSo29UIAccessibilityIdentification", "alpha"]
 - !private ["PSo29UIAccessibilityIdentification", "delegate"]

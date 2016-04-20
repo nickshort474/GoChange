@@ -6,23 +6,24 @@ provides-nominal:
 provides-member:
 - ["C8GoChange10TempChange", ""]
 provides-dynamic-lookup:
-- "tweakDetailArray"
-- "solutionNewOldArray"
-- "newSolutionNameArray"
 - "changeDetail"
 - "addingSolutions"
-- "tweakNameArray"
 - "solutionNameArray"
+- "tweakNameArray"
+- "tweakDetailArray"
+- "newSolutionDetailArray"
 - "solutionDetailArray"
 - "sharedInstance"
 - "changeName"
-- "newSolutionDetailArray"
+- "solutionVoteArray"
+- "newSolutionNameArray"
+- "solutionNewOldArray"
 depends-top-level:
-- "String"
 - "Array"
-- "StringLiteralType"
-- "NSMutableArray"
 - "NSObject"
+- "StringLiteralType"
+- "String"
+- "NSMutableArray"
 - "TempChange"
 depends-member:
 - ["Ps9AnyObject", "Element"]
@@ -37,6 +38,7 @@ depends-member:
 - ["Ps9AnyObject", "solutionDetailArray"]
 - ["Ps9AnyObject", "solutionNameArray"]
 - ["Ps9AnyObject", "solutionNewOldArray"]
+- ["Ps9AnyObject", "solutionVoteArray"]
 - ["Ps9AnyObject", "tweakDetailArray"]
 - ["Ps9AnyObject", "tweakNameArray"]
 - ["Ps9AnyObject", ""]
@@ -53,6 +55,7 @@ depends-member:
 - ["Ps11CVarArgType", "solutionDetailArray"]
 - ["Ps11CVarArgType", "solutionNameArray"]
 - ["Ps11CVarArgType", "solutionNewOldArray"]
+- ["Ps11CVarArgType", "solutionVoteArray"]
 - ["Ps11CVarArgType", "tweakDetailArray"]
 - ["Ps11CVarArgType", "tweakNameArray"]
 - ["Ps11CVarArgType", ""]
@@ -68,6 +71,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "solutionDetailArray"]
 - ["Ps28CustomDebugStringConvertible", "solutionNameArray"]
 - ["Ps28CustomDebugStringConvertible", "solutionNewOldArray"]
+- ["Ps28CustomDebugStringConvertible", "solutionVoteArray"]
 - ["Ps28CustomDebugStringConvertible", "tweakDetailArray"]
 - ["Ps28CustomDebugStringConvertible", "tweakNameArray"]
 - ["Ps28CustomDebugStringConvertible", ""]
@@ -83,6 +87,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "solutionDetailArray"]
 - ["Ps23CustomStringConvertible", "solutionNameArray"]
 - ["Ps23CustomStringConvertible", "solutionNewOldArray"]
+- ["Ps23CustomStringConvertible", "solutionVoteArray"]
 - ["Ps23CustomStringConvertible", "tweakDetailArray"]
 - ["Ps23CustomStringConvertible", "tweakNameArray"]
 - ["Ps23CustomStringConvertible", ""]
@@ -98,6 +103,7 @@ depends-member:
 - ["Ps9Equatable", "solutionDetailArray"]
 - ["Ps9Equatable", "solutionNameArray"]
 - ["Ps9Equatable", "solutionNewOldArray"]
+- ["Ps9Equatable", "solutionVoteArray"]
 - ["Ps9Equatable", "tweakDetailArray"]
 - ["Ps9Equatable", "tweakNameArray"]
 - ["Ps9Equatable", ""]
@@ -113,6 +119,7 @@ depends-member:
 - ["Ps8Hashable", "solutionDetailArray"]
 - ["Ps8Hashable", "solutionNameArray"]
 - ["Ps8Hashable", "solutionNewOldArray"]
+- ["Ps8Hashable", "solutionVoteArray"]
 - ["Ps8Hashable", "tweakDetailArray"]
 - ["Ps8Hashable", "tweakNameArray"]
 - ["Ps8Hashable", ""]
@@ -136,6 +143,7 @@ depends-member:
 - ["CSo8NSObject", "solutionDetailArray"]
 - ["CSo8NSObject", "solutionNameArray"]
 - ["CSo8NSObject", "solutionNewOldArray"]
+- ["CSo8NSObject", "solutionVoteArray"]
 - ["CSo8NSObject", "tweakDetailArray"]
 - ["CSo8NSObject", "tweakNameArray"]
 - ["CSo8NSObject", ""]
@@ -151,6 +159,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "solutionDetailArray"]
 - ["PSo16NSObjectProtocol", "solutionNameArray"]
 - ["PSo16NSObjectProtocol", "solutionNewOldArray"]
+- ["PSo16NSObjectProtocol", "solutionVoteArray"]
 - ["PSo16NSObjectProtocol", "tweakDetailArray"]
 - ["PSo16NSObjectProtocol", "tweakNameArray"]
 - ["PSo16NSObjectProtocol", ""]
@@ -170,6 +179,7 @@ depends-member:
 - ["C8GoChange10TempChange", "solutionDetailArray"]
 - ["C8GoChange10TempChange", "solutionNameArray"]
 - ["C8GoChange10TempChange", "solutionNewOldArray"]
+- ["C8GoChange10TempChange", "solutionVoteArray"]
 - ["C8GoChange10TempChange", "tweakDetailArray"]
 - ["C8GoChange10TempChange", "tweakNameArray"]
 - ["Ps12_Reflectable", "Element"]
@@ -217,4 +227,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "6d18cd1b0814992e74021a1de2312328"
+interface-hash: "1acef9f292bb26adb261e5e64faa6d2d"

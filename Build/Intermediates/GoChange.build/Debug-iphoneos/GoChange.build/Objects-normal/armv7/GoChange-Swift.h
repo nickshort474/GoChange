@@ -462,6 +462,7 @@ SWIFT_CLASS("_TtC8GoChange8Solution")
 @interface Solution : NSManagedObject
 @property (nonatomic, copy) NSString * _Nonnull solutionName;
 @property (nonatomic, copy) NSString * _Nonnull solutionDescription;
+@property (nonatomic, strong) NSNumber * _Nonnull voteCount;
 @property (nonatomic, strong) Change * _Nonnull solutionToChange;
 @property (nonatomic, copy) NSArray<Tweak *> * _Nonnull solutionNeedingTweaking;
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
@@ -475,6 +476,7 @@ SWIFT_CLASS("_TtC8GoChange10TempChange")
 @property (nonatomic, copy) NSString * _Nonnull changeDetail;
 @property (nonatomic, strong) NSMutableArray * _Nonnull solutionNameArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull solutionDetailArray;
+@property (nonatomic, strong) NSMutableArray * _Nonnull solutionVoteArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull solutionNewOldArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull newSolutionNameArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull newSolutionDetailArray;
