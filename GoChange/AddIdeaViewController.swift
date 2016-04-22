@@ -31,7 +31,11 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     var loadedNameData:String!
     var loadedDetailData:String!
     
+    var change:Change!
     var changeID:String!
+    
+    var solutionID:String!
+    
     
     
     override func viewDidLoad() {
@@ -70,7 +74,11 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
             nameTextField.text = loadedNameData
             detailTextView.text = loadedDetailData
             
+            
             addSolution.setTitle("Vote For Solution", forState: .Normal)
+            addSolution.enabled = true
+            addSolution.alpha = 1
+        
         }
         
         self.tweakTable.reloadData()
@@ -88,7 +96,7 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         if(viewControllerStatus == "viewing"){
            
             //TODO: Vote for solution, need to pass something in to get solution to vote for
-            _ = VoteForSolution(changeID){
+            _ = VoteForSolution(change: change,changeID:changeID,solutionID:solutionID){
                 (result) in
                 
                 

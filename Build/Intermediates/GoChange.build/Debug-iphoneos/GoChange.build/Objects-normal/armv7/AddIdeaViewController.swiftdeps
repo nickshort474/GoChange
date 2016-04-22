@@ -6,69 +6,75 @@ provides-nominal:
 provides-member:
 - ["C8GoChange21AddIdeaViewController", ""]
 provides-dynamic-lookup:
-- "addNameClick"
-- "nameTextField"
-- "currentNameData"
-- "addTweak"
-- "textViewDidBeginEditing"
-- "addNameButton"
-- "loadedDetailData"
-- "viewWillAppear"
-- "addDetailClick"
-- "didReceiveMemoryWarning"
-- "viewDidLoad"
-- "textFieldDidBeginEditing"
-- "tweakTable"
-- "viewControllerStatus"
-- "detailTextView"
-- "addSolution"
-- "tableView"
-- "tableView"
-- "tableView"
-- "loadedNameData"
-- "session"
-- "addPetition"
-- "petitionId"
 - "doneAddingIdea"
-- "currentDetailData"
+- "petitionId"
 - "addDetailButton"
+- "currentNameData"
+- "textFieldDidBeginEditing"
+- "solutionID"
+- "addPetition"
+- "viewControllerStatus"
+- "change"
+- "loadedNameData"
+- "viewWillAppear"
+- "detailTextView"
+- "tweakTable"
+- "didReceiveMemoryWarning"
+- "session"
+- "addDetailClick"
+- "addTweak"
+- "viewDidLoad"
+- "addNameClick"
+- "loadedDetailData"
+- "addNameButton"
+- "addSolution"
+- "currentDetailData"
+- "tableView"
+- "tableView"
+- "tableView"
+- "nameTextField"
+- "changeID"
+- "textViewDidBeginEditing"
 depends-top-level:
-- "UITextViewDelegate"
-- "UITextFieldDelegate"
-- "UIViewController"
-- !private "+"
-- "UITextView"
-- !private "BooleanLiteralType"
-- "NSIndexPath"
-- !private "!="
-- "String"
-- !private "UIBarButtonItem"
-- !private "GoChangeClient"
-- !private "UIBarButtonItemStyle"
-- "AddIdeaViewController"
-- "UITableView"
-- !private "NSURL"
 - "Int"
+- !private "VoteForSolution"
+- "String"
 - "UITableViewDelegate"
+- !private "print"
 - !private "UIColor"
+- "NSURLSession"
+- !private "TempChange"
+- "UITextView"
+- "NSIndexPath"
+- "UITableView"
+- "UITextFieldDelegate"
+- !private "BooleanLiteralType"
+- !private "&&"
+- "UITextViewDelegate"
+- "Change"
+- !private "NSURLRequest"
+- "AnyObject"
+- "UIViewController"
+- !private "AddTweakViewController"
+- !private "+"
+- "Bool"
+- !private "UIBarButtonItem"
+- !private "=="
+- !private "!="
+- !private "Dictionary"
+- "AddIdeaViewController"
 - "UITextField"
 - !private "StringLiteralType"
-- "Bool"
-- "UIButton"
+- !private "UIBarButtonItemStyle"
 - "UITableViewCell"
-- !private "AddTweakViewController"
-- !private "&&"
-- !private "print"
-- "NSURLSession"
-- !private "NSURLRequest"
-- !private "=="
-- !private "TempChange"
-- "AnyObject"
-- !private "Dictionary"
+- "UIButton"
+- !private "GoChangeClient"
+- !private "NSURL"
 depends-member:
 - !private ["C8GoChange21AddIdeaViewController", "AddTweakViewController"]
 - ["C8GoChange21AddIdeaViewController", "AnyObject"]
 - ["C8GoChange21AddIdeaViewController", "Bool"]
+- ["C8GoChange21AddIdeaViewController", "Change"]
 - !private ["C8GoChange21AddIdeaViewController", "GoChangeClient"]
 - ["C8GoChange21AddIdeaViewController", "Int"]
 - ["C8GoChange21AddIdeaViewController", "NSIndexPath"]
@@ -85,6 +91,7 @@ depends-member:
 - ["C8GoChange21AddIdeaViewController", "UITableViewCell"]
 - ["C8GoChange21AddIdeaViewController", "UITextField"]
 - ["C8GoChange21AddIdeaViewController", "UITextView"]
+- !private ["C8GoChange21AddIdeaViewController", "VoteForSolution"]
 - ["C8GoChange21AddIdeaViewController", "addDetailButton"]
 - ["C8GoChange21AddIdeaViewController", "addDetailClick"]
 - ["C8GoChange21AddIdeaViewController", "addNameButton"]
@@ -92,6 +99,8 @@ depends-member:
 - ["C8GoChange21AddIdeaViewController", "addPetition"]
 - ["C8GoChange21AddIdeaViewController", "addSolution"]
 - ["C8GoChange21AddIdeaViewController", "addTweak"]
+- ["C8GoChange21AddIdeaViewController", "change"]
+- ["C8GoChange21AddIdeaViewController", "changeID"]
 - ["C8GoChange21AddIdeaViewController", "currentDetailData"]
 - ["C8GoChange21AddIdeaViewController", "currentNameData"]
 - ["C8GoChange21AddIdeaViewController", "deinit"]
@@ -120,6 +129,7 @@ depends-member:
 - ["C8GoChange21AddIdeaViewController", "scrollViewWillBeginZooming"]
 - ["C8GoChange21AddIdeaViewController", "scrollViewWillEndDragging"]
 - ["C8GoChange21AddIdeaViewController", "session"]
+- ["C8GoChange21AddIdeaViewController", "solutionID"]
 - !private ["C8GoChange21AddIdeaViewController", "storyboard"]
 - ["C8GoChange21AddIdeaViewController", "tableView"]
 - ["C8GoChange21AddIdeaViewController", "textField"]
@@ -136,6 +146,7 @@ depends-member:
 - ["C8GoChange21AddIdeaViewController", "textViewDidEndEditing"]
 - ["C8GoChange21AddIdeaViewController", "textViewShouldBeginEditing"]
 - ["C8GoChange21AddIdeaViewController", "textViewShouldEndEditing"]
+- !private ["C8GoChange21AddIdeaViewController", "title"]
 - ["C8GoChange21AddIdeaViewController", "tweakTable"]
 - ["C8GoChange21AddIdeaViewController", "viewControllerStatus"]
 - ["C8GoChange21AddIdeaViewController", "viewDidLoad"]
@@ -150,6 +161,7 @@ depends-member:
 - !private ["Ps9AnyObject", "UIBarButtonItem"]
 - !private ["Ps9AnyObject", "UIBarButtonItemStyle"]
 - !private ["Ps9AnyObject", "UIColor"]
+- !private ["Ps9AnyObject", "VoteForSolution"]
 - ["Ps9AnyObject", "addDetailButton"]
 - ["Ps9AnyObject", "addDetailClick"]
 - ["Ps9AnyObject", "addNameButton"]
@@ -162,6 +174,8 @@ depends-member:
 - !private ["Ps9AnyObject", "alpha"]
 - !private ["Ps9AnyObject", "backBarButtonItem"]
 - !private ["Ps9AnyObject", "blackColor"]
+- ["Ps9AnyObject", "change"]
+- ["Ps9AnyObject", "changeID"]
 - !private ["Ps9AnyObject", "count"]
 - ["Ps9AnyObject", "currentDetailData"]
 - ["Ps9AnyObject", "currentNameData"]
@@ -204,10 +218,13 @@ depends-member:
 - ["Ps9AnyObject", "scrollViewWillBeginDragging"]
 - ["Ps9AnyObject", "scrollViewWillBeginZooming"]
 - ["Ps9AnyObject", "scrollViewWillEndDragging"]
+- !private ["Ps9AnyObject", "selectable"]
 - ["Ps9AnyObject", "session"]
+- !private ["Ps9AnyObject", "setTitle"]
 - !private ["Ps9AnyObject", "sharedInstance"]
 - ["Ps9AnyObject", "sharedSession"]
 - !private ["Ps9AnyObject", "solutionDetailArray"]
+- ["Ps9AnyObject", "solutionID"]
 - !private ["Ps9AnyObject", "solutionNameArray"]
 - !private ["Ps9AnyObject", "solutionNewOldArray"]
 - !private ["Ps9AnyObject", "solutionVoteArray"]
@@ -239,6 +256,7 @@ depends-member:
 - ["Ps9AnyObject", "viewForZoomingInScrollView"]
 - ["Ps9AnyObject", "viewWillAppear"]
 - ["Ps9AnyObject", ""]
+- !private ["Ps23ArrayLiteralConvertible", "Normal"]
 - !private ["Ps23ArrayLiteralConvertible", "addObject"]
 - !private ["Ps23ArrayLiteralConvertible", "count"]
 - !private ["Ps23ArrayLiteralConvertible", "subscript"]
@@ -256,6 +274,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "UIBarButtonItem"]
 - !private ["Ps11CVarArgType", "UIBarButtonItemStyle"]
 - !private ["Ps11CVarArgType", "UIColor"]
+- !private ["Ps11CVarArgType", "VoteForSolution"]
 - ["Ps11CVarArgType", "addDetailButton"]
 - ["Ps11CVarArgType", "addDetailClick"]
 - ["Ps11CVarArgType", "addNameButton"]
@@ -268,6 +287,8 @@ depends-member:
 - !private ["Ps11CVarArgType", "alpha"]
 - !private ["Ps11CVarArgType", "backBarButtonItem"]
 - !private ["Ps11CVarArgType", "blackColor"]
+- ["Ps11CVarArgType", "change"]
+- ["Ps11CVarArgType", "changeID"]
 - !private ["Ps11CVarArgType", "count"]
 - ["Ps11CVarArgType", "currentDetailData"]
 - ["Ps11CVarArgType", "currentNameData"]
@@ -309,10 +330,13 @@ depends-member:
 - ["Ps11CVarArgType", "scrollViewWillBeginDragging"]
 - ["Ps11CVarArgType", "scrollViewWillBeginZooming"]
 - ["Ps11CVarArgType", "scrollViewWillEndDragging"]
+- !private ["Ps11CVarArgType", "selectable"]
 - ["Ps11CVarArgType", "session"]
+- !private ["Ps11CVarArgType", "setTitle"]
 - !private ["Ps11CVarArgType", "sharedInstance"]
 - ["Ps11CVarArgType", "sharedSession"]
 - !private ["Ps11CVarArgType", "solutionDetailArray"]
+- ["Ps11CVarArgType", "solutionID"]
 - !private ["Ps11CVarArgType", "solutionNameArray"]
 - !private ["Ps11CVarArgType", "solutionNewOldArray"]
 - !private ["Ps11CVarArgType", "solutionVoteArray"]
@@ -362,6 +386,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "UIBarButtonItemStyle"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
 - !private ["Ps28CustomDebugStringConvertible", "Value"]
+- !private ["Ps28CustomDebugStringConvertible", "VoteForSolution"]
 - ["Ps28CustomDebugStringConvertible", "addDetailButton"]
 - ["Ps28CustomDebugStringConvertible", "addDetailClick"]
 - ["Ps28CustomDebugStringConvertible", "addNameButton"]
@@ -374,6 +399,8 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "alpha"]
 - !private ["Ps28CustomDebugStringConvertible", "backBarButtonItem"]
 - !private ["Ps28CustomDebugStringConvertible", "blackColor"]
+- ["Ps28CustomDebugStringConvertible", "change"]
+- ["Ps28CustomDebugStringConvertible", "changeID"]
 - !private ["Ps28CustomDebugStringConvertible", "count"]
 - ["Ps28CustomDebugStringConvertible", "currentDetailData"]
 - ["Ps28CustomDebugStringConvertible", "currentNameData"]
@@ -415,10 +442,13 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "scrollViewWillBeginDragging"]
 - ["Ps28CustomDebugStringConvertible", "scrollViewWillBeginZooming"]
 - ["Ps28CustomDebugStringConvertible", "scrollViewWillEndDragging"]
+- !private ["Ps28CustomDebugStringConvertible", "selectable"]
 - ["Ps28CustomDebugStringConvertible", "session"]
+- !private ["Ps28CustomDebugStringConvertible", "setTitle"]
 - !private ["Ps28CustomDebugStringConvertible", "sharedInstance"]
 - ["Ps28CustomDebugStringConvertible", "sharedSession"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionDetailArray"]
+- ["Ps28CustomDebugStringConvertible", "solutionID"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionNameArray"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionNewOldArray"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionVoteArray"]
@@ -461,6 +491,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "UIBarButtonItemStyle"]
 - !private ["Ps23CustomStringConvertible", "UIColor"]
 - !private ["Ps23CustomStringConvertible", "Value"]
+- !private ["Ps23CustomStringConvertible", "VoteForSolution"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - ["Ps23CustomStringConvertible", "addDetailButton"]
 - ["Ps23CustomStringConvertible", "addDetailClick"]
@@ -474,6 +505,8 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "alpha"]
 - !private ["Ps23CustomStringConvertible", "backBarButtonItem"]
 - !private ["Ps23CustomStringConvertible", "blackColor"]
+- ["Ps23CustomStringConvertible", "change"]
+- ["Ps23CustomStringConvertible", "changeID"]
 - !private ["Ps23CustomStringConvertible", "count"]
 - ["Ps23CustomStringConvertible", "currentDetailData"]
 - ["Ps23CustomStringConvertible", "currentNameData"]
@@ -515,10 +548,13 @@ depends-member:
 - ["Ps23CustomStringConvertible", "scrollViewWillBeginDragging"]
 - ["Ps23CustomStringConvertible", "scrollViewWillBeginZooming"]
 - ["Ps23CustomStringConvertible", "scrollViewWillEndDragging"]
+- !private ["Ps23CustomStringConvertible", "selectable"]
 - ["Ps23CustomStringConvertible", "session"]
+- !private ["Ps23CustomStringConvertible", "setTitle"]
 - !private ["Ps23CustomStringConvertible", "sharedInstance"]
 - ["Ps23CustomStringConvertible", "sharedSession"]
 - !private ["Ps23CustomStringConvertible", "solutionDetailArray"]
+- ["Ps23CustomStringConvertible", "solutionID"]
 - !private ["Ps23CustomStringConvertible", "solutionNameArray"]
 - !private ["Ps23CustomStringConvertible", "solutionNewOldArray"]
 - !private ["Ps23CustomStringConvertible", "solutionVoteArray"]
@@ -560,11 +596,13 @@ depends-member:
 - !private ["Ps9Equatable", "NSURL"]
 - !private ["Ps9Equatable", "NSURLRequest"]
 - ["Ps9Equatable", "NSURLSession"]
+- !private ["Ps9Equatable", "Normal"]
 - !private ["Ps9Equatable", "Plain"]
 - !private ["Ps9Equatable", "TempChange"]
 - !private ["Ps9Equatable", "UIBarButtonItem"]
 - !private ["Ps9Equatable", "UIBarButtonItemStyle"]
 - !private ["Ps9Equatable", "UIColor"]
+- !private ["Ps9Equatable", "VoteForSolution"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - ["Ps9Equatable", "addDetailButton"]
 - ["Ps9Equatable", "addDetailClick"]
@@ -578,6 +616,8 @@ depends-member:
 - !private ["Ps9Equatable", "alpha"]
 - !private ["Ps9Equatable", "backBarButtonItem"]
 - !private ["Ps9Equatable", "blackColor"]
+- ["Ps9Equatable", "change"]
+- ["Ps9Equatable", "changeID"]
 - !private ["Ps9Equatable", "count"]
 - ["Ps9Equatable", "currentDetailData"]
 - ["Ps9Equatable", "currentNameData"]
@@ -619,10 +659,13 @@ depends-member:
 - ["Ps9Equatable", "scrollViewWillBeginDragging"]
 - ["Ps9Equatable", "scrollViewWillBeginZooming"]
 - ["Ps9Equatable", "scrollViewWillEndDragging"]
+- !private ["Ps9Equatable", "selectable"]
 - ["Ps9Equatable", "session"]
+- !private ["Ps9Equatable", "setTitle"]
 - !private ["Ps9Equatable", "sharedInstance"]
 - ["Ps9Equatable", "sharedSession"]
 - !private ["Ps9Equatable", "solutionDetailArray"]
+- ["Ps9Equatable", "solutionID"]
 - !private ["Ps9Equatable", "solutionNameArray"]
 - !private ["Ps9Equatable", "solutionNewOldArray"]
 - !private ["Ps9Equatable", "solutionVoteArray"]
@@ -670,6 +713,7 @@ depends-member:
 - !private ["Ps8Hashable", "UIBarButtonItem"]
 - !private ["Ps8Hashable", "UIBarButtonItemStyle"]
 - !private ["Ps8Hashable", "UIColor"]
+- !private ["Ps8Hashable", "VoteForSolution"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - ["Ps8Hashable", "addDetailButton"]
 - ["Ps8Hashable", "addDetailClick"]
@@ -683,6 +727,8 @@ depends-member:
 - !private ["Ps8Hashable", "alpha"]
 - !private ["Ps8Hashable", "backBarButtonItem"]
 - !private ["Ps8Hashable", "blackColor"]
+- ["Ps8Hashable", "change"]
+- ["Ps8Hashable", "changeID"]
 - !private ["Ps8Hashable", "count"]
 - ["Ps8Hashable", "currentDetailData"]
 - ["Ps8Hashable", "currentNameData"]
@@ -724,10 +770,13 @@ depends-member:
 - ["Ps8Hashable", "scrollViewWillBeginDragging"]
 - ["Ps8Hashable", "scrollViewWillBeginZooming"]
 - ["Ps8Hashable", "scrollViewWillEndDragging"]
+- !private ["Ps8Hashable", "selectable"]
 - ["Ps8Hashable", "session"]
+- !private ["Ps8Hashable", "setTitle"]
 - !private ["Ps8Hashable", "sharedInstance"]
 - ["Ps8Hashable", "sharedSession"]
 - !private ["Ps8Hashable", "solutionDetailArray"]
+- ["Ps8Hashable", "solutionID"]
 - !private ["Ps8Hashable", "solutionNameArray"]
 - !private ["Ps8Hashable", "solutionNewOldArray"]
 - !private ["Ps8Hashable", "solutionVoteArray"]
@@ -779,6 +828,7 @@ depends-member:
 - !private ["PSo8NSCoding", "UIBarButtonItem"]
 - !private ["PSo8NSCoding", "UIBarButtonItemStyle"]
 - !private ["PSo8NSCoding", "UIColor"]
+- !private ["PSo8NSCoding", "VoteForSolution"]
 - ["PSo8NSCoding", "addDetailButton"]
 - ["PSo8NSCoding", "addDetailClick"]
 - ["PSo8NSCoding", "addNameButton"]
@@ -790,6 +840,8 @@ depends-member:
 - !private ["PSo8NSCoding", "alpha"]
 - !private ["PSo8NSCoding", "backBarButtonItem"]
 - !private ["PSo8NSCoding", "blackColor"]
+- ["PSo8NSCoding", "change"]
+- ["PSo8NSCoding", "changeID"]
 - !private ["PSo8NSCoding", "count"]
 - ["PSo8NSCoding", "currentDetailData"]
 - ["PSo8NSCoding", "currentNameData"]
@@ -826,7 +878,10 @@ depends-member:
 - ["PSo8NSCoding", "scrollViewWillBeginDragging"]
 - ["PSo8NSCoding", "scrollViewWillBeginZooming"]
 - ["PSo8NSCoding", "scrollViewWillEndDragging"]
+- !private ["PSo8NSCoding", "selectable"]
 - ["PSo8NSCoding", "session"]
+- !private ["PSo8NSCoding", "setTitle"]
+- ["PSo8NSCoding", "solutionID"]
 - !private ["PSo8NSCoding", "storyboard"]
 - !private ["PSo8NSCoding", "subscript"]
 - ["PSo8NSCoding", "tableView"]
@@ -870,6 +925,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "UIBarButtonItem"]
 - !private ["PSo26NSExtensionRequestHandling", "UIBarButtonItemStyle"]
 - !private ["PSo26NSExtensionRequestHandling", "UIColor"]
+- !private ["PSo26NSExtensionRequestHandling", "VoteForSolution"]
 - ["PSo26NSExtensionRequestHandling", "addDetailButton"]
 - ["PSo26NSExtensionRequestHandling", "addDetailClick"]
 - ["PSo26NSExtensionRequestHandling", "addNameButton"]
@@ -877,6 +933,8 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "addPetition"]
 - ["PSo26NSExtensionRequestHandling", "addSolution"]
 - ["PSo26NSExtensionRequestHandling", "addTweak"]
+- ["PSo26NSExtensionRequestHandling", "change"]
+- ["PSo26NSExtensionRequestHandling", "changeID"]
 - ["PSo26NSExtensionRequestHandling", "currentDetailData"]
 - ["PSo26NSExtensionRequestHandling", "currentNameData"]
 - ["PSo26NSExtensionRequestHandling", "detailTextView"]
@@ -906,6 +964,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "scrollViewWillBeginZooming"]
 - ["PSo26NSExtensionRequestHandling", "scrollViewWillEndDragging"]
 - ["PSo26NSExtensionRequestHandling", "session"]
+- ["PSo26NSExtensionRequestHandling", "solutionID"]
 - !private ["PSo26NSExtensionRequestHandling", "storyboard"]
 - ["PSo26NSExtensionRequestHandling", "tableView"]
 - ["PSo26NSExtensionRequestHandling", "textField"]
@@ -943,6 +1002,7 @@ depends-member:
 - !private ["CSo8NSObject", "AddTweakViewController"]
 - ["CSo8NSObject", "AnyObject"]
 - ["CSo8NSObject", "Bool"]
+- ["CSo8NSObject", "Change"]
 - !private ["CSo8NSObject", "Constants"]
 - !private ["CSo8NSObject", "GoChangeClient"]
 - ["CSo8NSObject", "Int"]
@@ -960,6 +1020,7 @@ depends-member:
 - ["CSo8NSObject", "UITableViewCell"]
 - ["CSo8NSObject", "UITextField"]
 - ["CSo8NSObject", "UITextView"]
+- !private ["CSo8NSObject", "VoteForSolution"]
 - ["CSo8NSObject", "addDetailButton"]
 - ["CSo8NSObject", "addDetailClick"]
 - ["CSo8NSObject", "addNameButton"]
@@ -972,6 +1033,8 @@ depends-member:
 - !private ["CSo8NSObject", "alpha"]
 - !private ["CSo8NSObject", "backBarButtonItem"]
 - !private ["CSo8NSObject", "blackColor"]
+- ["CSo8NSObject", "change"]
+- ["CSo8NSObject", "changeID"]
 - !private ["CSo8NSObject", "count"]
 - ["CSo8NSObject", "currentDetailData"]
 - ["CSo8NSObject", "currentNameData"]
@@ -1013,10 +1076,13 @@ depends-member:
 - ["CSo8NSObject", "scrollViewWillBeginDragging"]
 - ["CSo8NSObject", "scrollViewWillBeginZooming"]
 - ["CSo8NSObject", "scrollViewWillEndDragging"]
+- !private ["CSo8NSObject", "selectable"]
 - ["CSo8NSObject", "session"]
+- !private ["CSo8NSObject", "setTitle"]
 - !private ["CSo8NSObject", "sharedInstance"]
 - ["CSo8NSObject", "sharedSession"]
 - !private ["CSo8NSObject", "solutionDetailArray"]
+- ["CSo8NSObject", "solutionID"]
 - !private ["CSo8NSObject", "solutionNameArray"]
 - !private ["CSo8NSObject", "solutionNewOldArray"]
 - !private ["CSo8NSObject", "solutionVoteArray"]
@@ -1056,6 +1122,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "UIBarButtonItem"]
 - !private ["PSo16NSObjectProtocol", "UIBarButtonItemStyle"]
 - !private ["PSo16NSObjectProtocol", "UIColor"]
+- !private ["PSo16NSObjectProtocol", "VoteForSolution"]
 - ["PSo16NSObjectProtocol", "addDetailButton"]
 - ["PSo16NSObjectProtocol", "addDetailClick"]
 - ["PSo16NSObjectProtocol", "addNameButton"]
@@ -1068,6 +1135,8 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "alpha"]
 - !private ["PSo16NSObjectProtocol", "backBarButtonItem"]
 - !private ["PSo16NSObjectProtocol", "blackColor"]
+- ["PSo16NSObjectProtocol", "change"]
+- ["PSo16NSObjectProtocol", "changeID"]
 - !private ["PSo16NSObjectProtocol", "count"]
 - ["PSo16NSObjectProtocol", "currentDetailData"]
 - ["PSo16NSObjectProtocol", "currentNameData"]
@@ -1109,10 +1178,13 @@ depends-member:
 - ["PSo16NSObjectProtocol", "scrollViewWillBeginDragging"]
 - ["PSo16NSObjectProtocol", "scrollViewWillBeginZooming"]
 - ["PSo16NSObjectProtocol", "scrollViewWillEndDragging"]
+- !private ["PSo16NSObjectProtocol", "selectable"]
 - ["PSo16NSObjectProtocol", "session"]
+- !private ["PSo16NSObjectProtocol", "setTitle"]
 - !private ["PSo16NSObjectProtocol", "sharedInstance"]
 - ["PSo16NSObjectProtocol", "sharedSession"]
 - !private ["PSo16NSObjectProtocol", "solutionDetailArray"]
+- ["PSo16NSObjectProtocol", "solutionID"]
 - !private ["PSo16NSObjectProtocol", "solutionNameArray"]
 - !private ["PSo16NSObjectProtocol", "solutionNewOldArray"]
 - !private ["PSo16NSObjectProtocol", "solutionVoteArray"]
@@ -1158,14 +1230,17 @@ depends-member:
 - ["CSo12NSURLSession", "sharedSession"]
 - !private ["CSo20NSURLSessionDataTask", "resume"]
 - !private ["CSo16NSURLSessionTask", "resume"]
+- !private ["Ps13OptionSetType", "Normal"]
 - !private ["Sq", "deinit"]
 - !private ["Ps16OutputStreamType", "init"]
+- !private ["Ps16RawRepresentable", "Normal"]
 - !private ["Ps16RawRepresentable", "Plain"]
 - !private ["Ps12SequenceType", "Key"]
 - !private ["Ps12SequenceType", "Value"]
 - !private ["Ps12SequenceType", "addObject"]
 - !private ["Ps12SequenceType", "count"]
 - !private ["Ps12SequenceType", "subscript"]
+- !private ["Ps14SetAlgebraType", "Normal"]
 - !private ["Ps10Streamable", "init"]
 - !private ["SS", "deinit"]
 - !private ["SS", "init"]
@@ -1186,6 +1261,8 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "reloadData"]
 - !private ["PSo29UIAccessibilityIdentification", "resignFirstResponder"]
+- !private ["PSo29UIAccessibilityIdentification", "selectable"]
+- !private ["PSo29UIAccessibilityIdentification", "setTitle"]
 - !private ["PSo29UIAccessibilityIdentification", "text"]
 - !private ["PSo29UIAccessibilityIdentification", "textColor"]
 - !private ["PSo29UIAccessibilityIdentification", "textLabel"]
@@ -1197,6 +1274,8 @@ depends-member:
 - !private ["PSo12UIAppearance", "init"]
 - !private ["PSo12UIAppearance", "reloadData"]
 - !private ["PSo12UIAppearance", "resignFirstResponder"]
+- !private ["PSo12UIAppearance", "selectable"]
+- !private ["PSo12UIAppearance", "setTitle"]
 - !private ["PSo12UIAppearance", "text"]
 - !private ["PSo12UIAppearance", "textColor"]
 - !private ["PSo12UIAppearance", "textLabel"]
@@ -1208,6 +1287,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "UIBarButtonItem"]
 - !private ["PSo21UIAppearanceContainer", "UIBarButtonItemStyle"]
 - !private ["PSo21UIAppearanceContainer", "UIColor"]
+- !private ["PSo21UIAppearanceContainer", "VoteForSolution"]
 - ["PSo21UIAppearanceContainer", "addDetailButton"]
 - ["PSo21UIAppearanceContainer", "addDetailClick"]
 - ["PSo21UIAppearanceContainer", "addNameButton"]
@@ -1216,6 +1296,8 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "addSolution"]
 - ["PSo21UIAppearanceContainer", "addTweak"]
 - !private ["PSo21UIAppearanceContainer", "alpha"]
+- ["PSo21UIAppearanceContainer", "change"]
+- ["PSo21UIAppearanceContainer", "changeID"]
 - ["PSo21UIAppearanceContainer", "currentDetailData"]
 - ["PSo21UIAppearanceContainer", "currentNameData"]
 - !private ["PSo21UIAppearanceContainer", "delegate"]
@@ -1250,7 +1332,10 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "scrollViewWillBeginDragging"]
 - ["PSo21UIAppearanceContainer", "scrollViewWillBeginZooming"]
 - ["PSo21UIAppearanceContainer", "scrollViewWillEndDragging"]
+- !private ["PSo21UIAppearanceContainer", "selectable"]
 - ["PSo21UIAppearanceContainer", "session"]
+- !private ["PSo21UIAppearanceContainer", "setTitle"]
+- ["PSo21UIAppearanceContainer", "solutionID"]
 - !private ["PSo21UIAppearanceContainer", "storyboard"]
 - ["PSo21UIAppearanceContainer", "tableView"]
 - !private ["PSo21UIAppearanceContainer", "text"]
@@ -1283,6 +1368,7 @@ depends-member:
 - !private ["CSo8UIButton", "alpha"]
 - !private ["CSo8UIButton", "enabled"]
 - !private ["CSo8UIButton", "hidden"]
+- !private ["CSo8UIButton", "setTitle"]
 - !private ["CSo7UIColor", "blackColor"]
 - !private ["PSo18UIContentContainer", "GoChangeClient"]
 - !private ["PSo18UIContentContainer", "NSURL"]
@@ -1292,6 +1378,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "UIBarButtonItem"]
 - !private ["PSo18UIContentContainer", "UIBarButtonItemStyle"]
 - !private ["PSo18UIContentContainer", "UIColor"]
+- !private ["PSo18UIContentContainer", "VoteForSolution"]
 - ["PSo18UIContentContainer", "addDetailButton"]
 - ["PSo18UIContentContainer", "addDetailClick"]
 - ["PSo18UIContentContainer", "addNameButton"]
@@ -1299,6 +1386,8 @@ depends-member:
 - ["PSo18UIContentContainer", "addPetition"]
 - ["PSo18UIContentContainer", "addSolution"]
 - ["PSo18UIContentContainer", "addTweak"]
+- ["PSo18UIContentContainer", "change"]
+- ["PSo18UIContentContainer", "changeID"]
 - ["PSo18UIContentContainer", "currentDetailData"]
 - ["PSo18UIContentContainer", "currentNameData"]
 - ["PSo18UIContentContainer", "detailTextView"]
@@ -1328,6 +1417,7 @@ depends-member:
 - ["PSo18UIContentContainer", "scrollViewWillBeginZooming"]
 - ["PSo18UIContentContainer", "scrollViewWillEndDragging"]
 - ["PSo18UIContentContainer", "session"]
+- ["PSo18UIContentContainer", "solutionID"]
 - !private ["PSo18UIContentContainer", "storyboard"]
 - ["PSo18UIContentContainer", "tableView"]
 - ["PSo18UIContentContainer", "textField"]
@@ -1356,7 +1446,9 @@ depends-member:
 - !private ["CSo9UIControl", "enabled"]
 - !private ["CSo9UIControl", "hidden"]
 - !private ["CSo9UIControl", "resignFirstResponder"]
+- !private ["CSo9UIControl", "setTitle"]
 - !private ["CSo9UIControl", "text"]
+- !private ["VSC14UIControlState", "Normal"]
 - !private ["PSo17UICoordinateSpace", "alpha"]
 - !private ["PSo17UICoordinateSpace", "delegate"]
 - !private ["PSo17UICoordinateSpace", "dequeueReusableCellWithIdentifier"]
@@ -1364,6 +1456,8 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "hidden"]
 - !private ["PSo17UICoordinateSpace", "reloadData"]
 - !private ["PSo17UICoordinateSpace", "resignFirstResponder"]
+- !private ["PSo17UICoordinateSpace", "selectable"]
+- !private ["PSo17UICoordinateSpace", "setTitle"]
 - !private ["PSo17UICoordinateSpace", "text"]
 - !private ["PSo17UICoordinateSpace", "textColor"]
 - !private ["PSo17UICoordinateSpace", "textLabel"]
@@ -1374,6 +1468,8 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "hidden"]
 - !private ["PSo13UIDynamicItem", "reloadData"]
 - !private ["PSo13UIDynamicItem", "resignFirstResponder"]
+- !private ["PSo13UIDynamicItem", "selectable"]
+- !private ["PSo13UIDynamicItem", "setTitle"]
 - !private ["PSo13UIDynamicItem", "text"]
 - !private ["PSo13UIDynamicItem", "textColor"]
 - !private ["PSo13UIDynamicItem", "textLabel"]
@@ -1385,6 +1481,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "UIBarButtonItem"]
 - !private ["PSo18UIFocusEnvironment", "UIBarButtonItemStyle"]
 - !private ["PSo18UIFocusEnvironment", "UIColor"]
+- !private ["PSo18UIFocusEnvironment", "VoteForSolution"]
 - ["PSo18UIFocusEnvironment", "addDetailButton"]
 - ["PSo18UIFocusEnvironment", "addDetailClick"]
 - ["PSo18UIFocusEnvironment", "addNameButton"]
@@ -1393,6 +1490,8 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "addSolution"]
 - ["PSo18UIFocusEnvironment", "addTweak"]
 - !private ["PSo18UIFocusEnvironment", "alpha"]
+- ["PSo18UIFocusEnvironment", "change"]
+- ["PSo18UIFocusEnvironment", "changeID"]
 - ["PSo18UIFocusEnvironment", "currentDetailData"]
 - ["PSo18UIFocusEnvironment", "currentNameData"]
 - !private ["PSo18UIFocusEnvironment", "delegate"]
@@ -1427,7 +1526,10 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "scrollViewWillBeginDragging"]
 - ["PSo18UIFocusEnvironment", "scrollViewWillBeginZooming"]
 - ["PSo18UIFocusEnvironment", "scrollViewWillEndDragging"]
+- !private ["PSo18UIFocusEnvironment", "selectable"]
 - ["PSo18UIFocusEnvironment", "session"]
+- !private ["PSo18UIFocusEnvironment", "setTitle"]
+- ["PSo18UIFocusEnvironment", "solutionID"]
 - !private ["PSo18UIFocusEnvironment", "storyboard"]
 - ["PSo18UIFocusEnvironment", "tableView"]
 - !private ["PSo18UIFocusEnvironment", "text"]
@@ -1456,7 +1558,9 @@ depends-member:
 - ["PSo18UIFocusEnvironment", ""]
 - !private ["PSo27UIGestureRecognizerDelegate", "textLabel"]
 - !private ["PSo10UIKeyInput", "delegate"]
+- !private ["PSo10UIKeyInput", "enabled"]
 - !private ["PSo10UIKeyInput", "resignFirstResponder"]
+- !private ["PSo10UIKeyInput", "selectable"]
 - !private ["PSo10UIKeyInput", "text"]
 - !private ["PSo10UIKeyInput", "textColor"]
 - !private ["CSo7UILabel", "text"]
@@ -1467,6 +1571,7 @@ depends-member:
 - !private ["CSo11UIResponder", "AddTweakViewController"]
 - ["CSo11UIResponder", "AnyObject"]
 - ["CSo11UIResponder", "Bool"]
+- ["CSo11UIResponder", "Change"]
 - !private ["CSo11UIResponder", "GoChangeClient"]
 - ["CSo11UIResponder", "Int"]
 - ["CSo11UIResponder", "NSIndexPath"]
@@ -1483,6 +1588,7 @@ depends-member:
 - ["CSo11UIResponder", "UITableViewCell"]
 - ["CSo11UIResponder", "UITextField"]
 - ["CSo11UIResponder", "UITextView"]
+- !private ["CSo11UIResponder", "VoteForSolution"]
 - ["CSo11UIResponder", "addDetailButton"]
 - ["CSo11UIResponder", "addDetailClick"]
 - ["CSo11UIResponder", "addNameButton"]
@@ -1491,6 +1597,8 @@ depends-member:
 - ["CSo11UIResponder", "addSolution"]
 - ["CSo11UIResponder", "addTweak"]
 - !private ["CSo11UIResponder", "alpha"]
+- ["CSo11UIResponder", "change"]
+- ["CSo11UIResponder", "changeID"]
 - ["CSo11UIResponder", "currentDetailData"]
 - ["CSo11UIResponder", "currentNameData"]
 - !private ["CSo11UIResponder", "delegate"]
@@ -1525,7 +1633,10 @@ depends-member:
 - ["CSo11UIResponder", "scrollViewWillBeginDragging"]
 - ["CSo11UIResponder", "scrollViewWillBeginZooming"]
 - ["CSo11UIResponder", "scrollViewWillEndDragging"]
+- !private ["CSo11UIResponder", "selectable"]
 - ["CSo11UIResponder", "session"]
+- !private ["CSo11UIResponder", "setTitle"]
+- ["CSo11UIResponder", "solutionID"]
 - !private ["CSo11UIResponder", "storyboard"]
 - ["CSo11UIResponder", "tableView"]
 - !private ["CSo11UIResponder", "text"]
@@ -1555,6 +1666,7 @@ depends-member:
 - !private ["CSo12UIScrollView", "dequeueReusableCellWithIdentifier"]
 - !private ["CSo12UIScrollView", "reloadData"]
 - !private ["CSo12UIScrollView", "resignFirstResponder"]
+- !private ["CSo12UIScrollView", "selectable"]
 - !private ["CSo12UIScrollView", "text"]
 - !private ["CSo12UIScrollView", "textColor"]
 - !private ["PSo20UIScrollViewDelegate", "GoChangeClient"]
@@ -1565,9 +1677,12 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "UIBarButtonItem"]
 - !private ["PSo20UIScrollViewDelegate", "UIBarButtonItemStyle"]
 - !private ["PSo20UIScrollViewDelegate", "UIColor"]
+- !private ["PSo20UIScrollViewDelegate", "VoteForSolution"]
 - !private ["PSo20UIScrollViewDelegate", "addDetailButton"]
 - !private ["PSo20UIScrollViewDelegate", "addNameButton"]
 - !private ["PSo20UIScrollViewDelegate", "addSolution"]
+- !private ["PSo20UIScrollViewDelegate", "change"]
+- !private ["PSo20UIScrollViewDelegate", "changeID"]
 - !private ["PSo20UIScrollViewDelegate", "currentDetailData"]
 - !private ["PSo20UIScrollViewDelegate", "currentNameData"]
 - !private ["PSo20UIScrollViewDelegate", "detailTextView"]
@@ -1592,6 +1707,7 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "scrollViewWillBeginZooming"]
 - ["PSo20UIScrollViewDelegate", "scrollViewWillEndDragging"]
 - !private ["PSo20UIScrollViewDelegate", "session"]
+- !private ["PSo20UIScrollViewDelegate", "solutionID"]
 - !private ["PSo20UIScrollViewDelegate", "storyboard"]
 - ["PSo20UIScrollViewDelegate", "tableView"]
 - ["PSo20UIScrollViewDelegate", "textField"]
@@ -1608,6 +1724,7 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "textViewDidEndEditing"]
 - ["PSo20UIScrollViewDelegate", "textViewShouldBeginEditing"]
 - ["PSo20UIScrollViewDelegate", "textViewShouldEndEditing"]
+- !private ["PSo20UIScrollViewDelegate", "title"]
 - !private ["PSo20UIScrollViewDelegate", "tweakTable"]
 - !private ["PSo20UIScrollViewDelegate", "viewControllerStatus"]
 - ["PSo20UIScrollViewDelegate", "viewForZoomingInScrollView"]
@@ -1620,6 +1737,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "UIBarButtonItem"]
 - !private ["PSo16UIStateRestoring", "UIBarButtonItemStyle"]
 - !private ["PSo16UIStateRestoring", "UIColor"]
+- !private ["PSo16UIStateRestoring", "VoteForSolution"]
 - ["PSo16UIStateRestoring", "addDetailButton"]
 - ["PSo16UIStateRestoring", "addDetailClick"]
 - ["PSo16UIStateRestoring", "addNameButton"]
@@ -1627,6 +1745,8 @@ depends-member:
 - ["PSo16UIStateRestoring", "addPetition"]
 - ["PSo16UIStateRestoring", "addSolution"]
 - ["PSo16UIStateRestoring", "addTweak"]
+- ["PSo16UIStateRestoring", "change"]
+- ["PSo16UIStateRestoring", "changeID"]
 - ["PSo16UIStateRestoring", "currentDetailData"]
 - ["PSo16UIStateRestoring", "currentNameData"]
 - ["PSo16UIStateRestoring", "detailTextView"]
@@ -1656,6 +1776,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "scrollViewWillBeginZooming"]
 - ["PSo16UIStateRestoring", "scrollViewWillEndDragging"]
 - ["PSo16UIStateRestoring", "session"]
+- ["PSo16UIStateRestoring", "solutionID"]
 - !private ["PSo16UIStateRestoring", "storyboard"]
 - ["PSo16UIStateRestoring", "tableView"]
 - ["PSo16UIStateRestoring", "textField"]
@@ -1691,9 +1812,12 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "UIBarButtonItem"]
 - !private ["PSo19UITableViewDelegate", "UIBarButtonItemStyle"]
 - !private ["PSo19UITableViewDelegate", "UIColor"]
+- !private ["PSo19UITableViewDelegate", "VoteForSolution"]
 - !private ["PSo19UITableViewDelegate", "addDetailButton"]
 - !private ["PSo19UITableViewDelegate", "addNameButton"]
 - !private ["PSo19UITableViewDelegate", "addSolution"]
+- !private ["PSo19UITableViewDelegate", "change"]
+- !private ["PSo19UITableViewDelegate", "changeID"]
 - !private ["PSo19UITableViewDelegate", "currentDetailData"]
 - !private ["PSo19UITableViewDelegate", "currentNameData"]
 - !private ["PSo19UITableViewDelegate", "detailTextView"]
@@ -1718,6 +1842,7 @@ depends-member:
 - ["PSo19UITableViewDelegate", "scrollViewWillBeginZooming"]
 - ["PSo19UITableViewDelegate", "scrollViewWillEndDragging"]
 - !private ["PSo19UITableViewDelegate", "session"]
+- !private ["PSo19UITableViewDelegate", "solutionID"]
 - !private ["PSo19UITableViewDelegate", "storyboard"]
 - ["PSo19UITableViewDelegate", "tableView"]
 - ["PSo19UITableViewDelegate", "textField"]
@@ -1734,11 +1859,13 @@ depends-member:
 - ["PSo19UITableViewDelegate", "textViewDidEndEditing"]
 - ["PSo19UITableViewDelegate", "textViewShouldBeginEditing"]
 - ["PSo19UITableViewDelegate", "textViewShouldEndEditing"]
+- !private ["PSo19UITableViewDelegate", "title"]
 - !private ["PSo19UITableViewDelegate", "tweakTable"]
 - !private ["PSo19UITableViewDelegate", "viewControllerStatus"]
 - ["PSo19UITableViewDelegate", "viewForZoomingInScrollView"]
 - ["PSo19UITableViewDelegate", ""]
 - !private ["CSo11UITextField", "delegate"]
+- !private ["CSo11UITextField", "enabled"]
 - !private ["CSo11UITextField", "resignFirstResponder"]
 - !private ["CSo11UITextField", "text"]
 - !private ["PSo19UITextFieldDelegate", "GoChangeClient"]
@@ -1749,9 +1876,12 @@ depends-member:
 - !private ["PSo19UITextFieldDelegate", "UIBarButtonItem"]
 - !private ["PSo19UITextFieldDelegate", "UIBarButtonItemStyle"]
 - !private ["PSo19UITextFieldDelegate", "UIColor"]
+- !private ["PSo19UITextFieldDelegate", "VoteForSolution"]
 - !private ["PSo19UITextFieldDelegate", "addDetailButton"]
 - !private ["PSo19UITextFieldDelegate", "addNameButton"]
 - !private ["PSo19UITextFieldDelegate", "addSolution"]
+- !private ["PSo19UITextFieldDelegate", "change"]
+- !private ["PSo19UITextFieldDelegate", "changeID"]
 - !private ["PSo19UITextFieldDelegate", "currentDetailData"]
 - !private ["PSo19UITextFieldDelegate", "currentNameData"]
 - !private ["PSo19UITextFieldDelegate", "detailTextView"]
@@ -1776,6 +1906,7 @@ depends-member:
 - ["PSo19UITextFieldDelegate", "scrollViewWillBeginZooming"]
 - ["PSo19UITextFieldDelegate", "scrollViewWillEndDragging"]
 - !private ["PSo19UITextFieldDelegate", "session"]
+- !private ["PSo19UITextFieldDelegate", "solutionID"]
 - !private ["PSo19UITextFieldDelegate", "storyboard"]
 - ["PSo19UITextFieldDelegate", "tableView"]
 - ["PSo19UITextFieldDelegate", "textField"]
@@ -1792,20 +1923,26 @@ depends-member:
 - ["PSo19UITextFieldDelegate", "textViewDidEndEditing"]
 - ["PSo19UITextFieldDelegate", "textViewShouldBeginEditing"]
 - ["PSo19UITextFieldDelegate", "textViewShouldEndEditing"]
+- !private ["PSo19UITextFieldDelegate", "title"]
 - !private ["PSo19UITextFieldDelegate", "tweakTable"]
 - !private ["PSo19UITextFieldDelegate", "viewControllerStatus"]
 - ["PSo19UITextFieldDelegate", "viewForZoomingInScrollView"]
 - ["PSo19UITextFieldDelegate", ""]
 - !private ["PSo11UITextInput", "delegate"]
+- !private ["PSo11UITextInput", "enabled"]
 - !private ["PSo11UITextInput", "resignFirstResponder"]
+- !private ["PSo11UITextInput", "selectable"]
 - !private ["PSo11UITextInput", "text"]
 - !private ["PSo11UITextInput", "textColor"]
 - !private ["PSo17UITextInputTraits", "delegate"]
+- !private ["PSo17UITextInputTraits", "enabled"]
 - !private ["PSo17UITextInputTraits", "resignFirstResponder"]
+- !private ["PSo17UITextInputTraits", "selectable"]
 - !private ["PSo17UITextInputTraits", "text"]
 - !private ["PSo17UITextInputTraits", "textColor"]
 - !private ["CSo10UITextView", "delegate"]
 - !private ["CSo10UITextView", "resignFirstResponder"]
+- !private ["CSo10UITextView", "selectable"]
 - !private ["CSo10UITextView", "text"]
 - !private ["CSo10UITextView", "textColor"]
 - !private ["PSo18UITextViewDelegate", "GoChangeClient"]
@@ -1816,9 +1953,12 @@ depends-member:
 - !private ["PSo18UITextViewDelegate", "UIBarButtonItem"]
 - !private ["PSo18UITextViewDelegate", "UIBarButtonItemStyle"]
 - !private ["PSo18UITextViewDelegate", "UIColor"]
+- !private ["PSo18UITextViewDelegate", "VoteForSolution"]
 - !private ["PSo18UITextViewDelegate", "addDetailButton"]
 - !private ["PSo18UITextViewDelegate", "addNameButton"]
 - !private ["PSo18UITextViewDelegate", "addSolution"]
+- !private ["PSo18UITextViewDelegate", "change"]
+- !private ["PSo18UITextViewDelegate", "changeID"]
 - !private ["PSo18UITextViewDelegate", "currentDetailData"]
 - !private ["PSo18UITextViewDelegate", "currentNameData"]
 - !private ["PSo18UITextViewDelegate", "detailTextView"]
@@ -1843,6 +1983,7 @@ depends-member:
 - ["PSo18UITextViewDelegate", "scrollViewWillBeginZooming"]
 - ["PSo18UITextViewDelegate", "scrollViewWillEndDragging"]
 - !private ["PSo18UITextViewDelegate", "session"]
+- !private ["PSo18UITextViewDelegate", "solutionID"]
 - !private ["PSo18UITextViewDelegate", "storyboard"]
 - ["PSo18UITextViewDelegate", "tableView"]
 - ["PSo18UITextViewDelegate", "textField"]
@@ -1859,6 +2000,7 @@ depends-member:
 - ["PSo18UITextViewDelegate", "textViewDidEndEditing"]
 - ["PSo18UITextViewDelegate", "textViewShouldBeginEditing"]
 - ["PSo18UITextViewDelegate", "textViewShouldEndEditing"]
+- !private ["PSo18UITextViewDelegate", "title"]
 - !private ["PSo18UITextViewDelegate", "tweakTable"]
 - !private ["PSo18UITextViewDelegate", "viewControllerStatus"]
 - ["PSo18UITextViewDelegate", "viewForZoomingInScrollView"]
@@ -1871,6 +2013,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "UIBarButtonItem"]
 - !private ["PSo18UITraitEnvironment", "UIBarButtonItemStyle"]
 - !private ["PSo18UITraitEnvironment", "UIColor"]
+- !private ["PSo18UITraitEnvironment", "VoteForSolution"]
 - ["PSo18UITraitEnvironment", "addDetailButton"]
 - ["PSo18UITraitEnvironment", "addDetailClick"]
 - ["PSo18UITraitEnvironment", "addNameButton"]
@@ -1879,6 +2022,8 @@ depends-member:
 - ["PSo18UITraitEnvironment", "addSolution"]
 - ["PSo18UITraitEnvironment", "addTweak"]
 - !private ["PSo18UITraitEnvironment", "alpha"]
+- ["PSo18UITraitEnvironment", "change"]
+- ["PSo18UITraitEnvironment", "changeID"]
 - ["PSo18UITraitEnvironment", "currentDetailData"]
 - ["PSo18UITraitEnvironment", "currentNameData"]
 - !private ["PSo18UITraitEnvironment", "delegate"]
@@ -1913,7 +2058,10 @@ depends-member:
 - ["PSo18UITraitEnvironment", "scrollViewWillBeginDragging"]
 - ["PSo18UITraitEnvironment", "scrollViewWillBeginZooming"]
 - ["PSo18UITraitEnvironment", "scrollViewWillEndDragging"]
+- !private ["PSo18UITraitEnvironment", "selectable"]
 - ["PSo18UITraitEnvironment", "session"]
+- !private ["PSo18UITraitEnvironment", "setTitle"]
+- ["PSo18UITraitEnvironment", "solutionID"]
 - !private ["PSo18UITraitEnvironment", "storyboard"]
 - ["PSo18UITraitEnvironment", "tableView"]
 - !private ["PSo18UITraitEnvironment", "text"]
@@ -1947,12 +2095,15 @@ depends-member:
 - !private ["CSo6UIView", "hidden"]
 - !private ["CSo6UIView", "reloadData"]
 - !private ["CSo6UIView", "resignFirstResponder"]
+- !private ["CSo6UIView", "selectable"]
+- !private ["CSo6UIView", "setTitle"]
 - !private ["CSo6UIView", "text"]
 - !private ["CSo6UIView", "textColor"]
 - !private ["CSo6UIView", "textLabel"]
 - !private ["CSo16UIViewController", "AddTweakViewController"]
 - ["CSo16UIViewController", "AnyObject"]
 - ["CSo16UIViewController", "Bool"]
+- ["CSo16UIViewController", "Change"]
 - !private ["CSo16UIViewController", "GoChangeClient"]
 - ["CSo16UIViewController", "Int"]
 - ["CSo16UIViewController", "NSIndexPath"]
@@ -1969,6 +2120,7 @@ depends-member:
 - ["CSo16UIViewController", "UITableViewCell"]
 - ["CSo16UIViewController", "UITextField"]
 - ["CSo16UIViewController", "UITextView"]
+- !private ["CSo16UIViewController", "VoteForSolution"]
 - ["CSo16UIViewController", "addDetailButton"]
 - ["CSo16UIViewController", "addDetailClick"]
 - ["CSo16UIViewController", "addNameButton"]
@@ -1976,6 +2128,8 @@ depends-member:
 - ["CSo16UIViewController", "addPetition"]
 - ["CSo16UIViewController", "addSolution"]
 - ["CSo16UIViewController", "addTweak"]
+- ["CSo16UIViewController", "change"]
+- ["CSo16UIViewController", "changeID"]
 - ["CSo16UIViewController", "currentDetailData"]
 - ["CSo16UIViewController", "currentNameData"]
 - ["CSo16UIViewController", "detailTextView"]
@@ -2005,6 +2159,7 @@ depends-member:
 - ["CSo16UIViewController", "scrollViewWillBeginZooming"]
 - ["CSo16UIViewController", "scrollViewWillEndDragging"]
 - ["CSo16UIViewController", "session"]
+- ["CSo16UIViewController", "solutionID"]
 - !private ["CSo16UIViewController", "storyboard"]
 - ["CSo16UIViewController", "tableView"]
 - ["CSo16UIViewController", "textField"]
@@ -2035,6 +2190,7 @@ depends-member:
 - !private ["Vs5UInt8", "deinit"]
 - !private ["Sc", "deinit"]
 - !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
+- !private ["C8GoChange15VoteForSolution", "init"]
 - !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
@@ -2060,6 +2216,8 @@ depends-member:
 - !private ["Ps12_Reflectable", "init"]
 - !private ["Ps12_Reflectable", "reloadData"]
 - !private ["Ps12_Reflectable", "resignFirstResponder"]
+- !private ["Ps12_Reflectable", "selectable"]
+- !private ["Ps12_Reflectable", "setTitle"]
 - !private ["Ps12_Reflectable", "subscript"]
 - !private ["Ps12_Reflectable", "text"]
 - !private ["Ps12_Reflectable", "textColor"]
@@ -2112,10 +2270,12 @@ depends-nominal:
 - "CSo12NSURLSession"
 - !private "CSo20NSURLSessionDataTask"
 - !private "CSo16NSURLSessionTask"
+- !private "Ps13OptionSetType"
 - !private "Sq"
 - !private "Ps16OutputStreamType"
 - !private "Ps16RawRepresentable"
 - !private "Ps12SequenceType"
+- !private "Ps14SetAlgebraType"
 - !private "Ps10Streamable"
 - !private "SS"
 - !private "Ps30StringInterpolationConvertible"
@@ -2131,6 +2291,7 @@ depends-nominal:
 - !private "CSo7UIColor"
 - "PSo18UIContentContainer"
 - !private "CSo9UIControl"
+- !private "VSC14UIControlState"
 - !private "PSo17UICoordinateSpace"
 - !private "PSo13UIDynamicItem"
 - "PSo18UIFocusEnvironment"
@@ -2163,6 +2324,7 @@ depends-nominal:
 - !private "Vs5UInt8"
 - !private "Sc"
 - !private "Ps31UnicodeScalarLiteralConvertible"
+- !private "C8GoChange15VoteForSolution"
 - !private "Ps33_BuiltinBooleanLiteralConvertible"
 - !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
 - !private "Ps32_BuiltinStringLiteralConvertible"
@@ -2198,4 +2360,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "6724cd174433ceca2f99577d79aa4d5a"
+interface-hash: "4395c9c677cb430a202942d4c15dd0dc"

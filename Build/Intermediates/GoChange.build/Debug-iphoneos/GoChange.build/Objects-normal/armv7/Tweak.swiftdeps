@@ -12,14 +12,14 @@ provides-dynamic-lookup:
 - "tweakForSolution"
 - "tweakName"
 depends-top-level:
-- "String"
-- "NSManagedObject"
 - "Tweak"
-- "Solution"
-- "NSManagedObjectContext"
-- "NSEntityDescription"
-- "StringLiteralType"
 - "AnyObject"
+- "StringLiteralType"
+- "String"
+- "Solution"
+- "NSEntityDescription"
+- "NSManagedObjectContext"
+- "NSManagedObject"
 depends-member:
 - !private ["Ps9AnyObject", "Keys"]
 - !private ["Ps9AnyObject", "NSEntityDescription"]

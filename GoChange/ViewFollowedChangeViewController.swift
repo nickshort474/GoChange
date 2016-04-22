@@ -26,11 +26,15 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
     @IBOutlet weak var postChangeButton: UIButton!
     
     var changeClicked:Change!
-    var localSolutionCount:Int!
     var changeID:String!
+    var solutionID:String!
+    
+    var localSolutionCount:Int!
     var changeIDArray:NSMutableArray = []
     
     var sendingController:String!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,6 +105,7 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
                     TempChange.sharedInstance().solutionNameArray = []
                     TempChange.sharedInstance().solutionDetailArray = []
                     TempChange.sharedInstance().solutionVoteArray = []
+                    TempChange.sharedInstance().solutionIDArray = []
                     TempChange.sharedInstance().solutionNewOldArray = []
                     
                     //loop through returned array to extract data
@@ -110,6 +115,8 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
                         TempChange.sharedInstance().solutionNameArray.addObject(name.value["SolutionName"]!!)
                         TempChange.sharedInstance().solutionDetailArray.addObject(name.value["SolutionDescription"]!!)
                         TempChange.sharedInstance().solutionVoteArray.addObject(name.value["SolutionVoteCount"]!! as! Int)
+                        TempChange.sharedInstance().solutionIDArray.addObject(name.key)
+                        
                         TempChange.sharedInstance().solutionNewOldArray.addObject("old")
                     }
                     
@@ -149,6 +156,7 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
                         TempChange.sharedInstance().solutionNameArray.addObject(solution.solutionName)
                         TempChange.sharedInstance().solutionDetailArray.addObject(solution.solutionDescription)
                          TempChange.sharedInstance().solutionVoteArray.addObject(solution.voteCount)
+                        TempChange.sharedInstance().solutionIDArray.addObject(solution.solutionID)
                         TempChange.sharedInstance().solutionNewOldArray.addObject("old")
                         
                     }
@@ -207,7 +215,11 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("AddIdeaViewController") as! AddIdeaViewController
         
         controller.viewControllerStatus = "adding"
+     
+        controller.change = changeClicked
         controller.changeID = changeID
+        
+        
         
         self.navigationController?.pushViewController(controller, animated: true)
         
@@ -312,6 +324,11 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
         controller.viewControllerStatus = "viewing"
         controller.loadedNameData = TempChange.sharedInstance().solutionNameArray[indexPath.row] as? String
         controller.loadedDetailData = TempChange.sharedInstance().solutionDetailArray[indexPath.row] as? String
+        
+        controller.change = changeClicked
+        controller.changeID = changeID
+        
+        controller.solutionID = TempChange.sharedInstance().solutionIDArray[indexPath.row] as? String
         
         self.navigationController?.pushViewController(controller, animated: true)
         

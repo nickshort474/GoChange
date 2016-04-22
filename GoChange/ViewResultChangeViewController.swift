@@ -60,6 +60,7 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
         TempChange.sharedInstance().solutionNameArray = []
         TempChange.sharedInstance().solutionDetailArray = []
         TempChange.sharedInstance().solutionVoteArray = []
+        TempChange.sharedInstance().solutionIDArray = []
         TempChange.sharedInstance().solutionNewOldArray = []
         
         
@@ -83,7 +84,7 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
                 TempChange.sharedInstance().solutionNameArray.addObject(name.value["SolutionName"]!!)
                 TempChange.sharedInstance().solutionDetailArray.addObject(name.value["SolutionDescription"]!!)
                 TempChange.sharedInstance().solutionVoteArray.addObject(name.value["SolutionVoteCount"]!! as! Int)
-                
+                TempChange.sharedInstance().solutionIDArray.addObject(name.key)
                 //TODO:Check for use
                 TempChange.sharedInstance().solutionNewOldArray.addObject("old")
                 
@@ -128,10 +129,12 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
         let owner:String = "false"
         let changeID:String = self.changeID
         
-        
+       
         //completion handler to return newly created change
         _ = SaveData(postType:postType,owner:owner,changeID:changeID){
             (result) in
+            
+            print(result)
             
             self.currentChange = result as! Change
             

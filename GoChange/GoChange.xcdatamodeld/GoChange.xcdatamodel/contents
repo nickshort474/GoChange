@@ -10,6 +10,7 @@
     </entity>
     <entity name="Solution" representedClassName=".Solution" syncable="YES">
         <attribute name="solutionDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="solutionID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="solutionName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="voteCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="solutionNeedingTweak" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tweak" inverseName="tweakForSolution" inverseEntity="Tweak" syncable="YES"/>
@@ -22,7 +23,7 @@
     </entity>
     <elements>
         <element name="Change" positionX="-63" positionY="-18" width="128" height="135"/>
-        <element name="Solution" positionX="-63" positionY="9" width="128" height="120"/>
+        <element name="Solution" positionX="-63" positionY="9" width="128" height="135"/>
         <element name="Tweak" positionX="-45" positionY="36" width="128" height="90"/>
     </elements>
 </model>

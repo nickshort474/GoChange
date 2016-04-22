@@ -100,6 +100,7 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
 @class NSURLSession;
+@class Change;
 @class UIButton;
 @class UITextField;
 @class UITextView;
@@ -124,6 +125,9 @@ SWIFT_CLASS("_TtC8GoChange21AddIdeaViewController")
 @property (nonatomic, copy) NSString * _Null_unspecified viewControllerStatus;
 @property (nonatomic, copy) NSString * _Null_unspecified loadedNameData;
 @property (nonatomic, copy) NSString * _Null_unspecified loadedDetailData;
+@property (nonatomic, strong) Change * _Null_unspecified change;
+@property (nonatomic, copy) NSString * _Null_unspecified changeID;
+@property (nonatomic, copy) NSString * _Null_unspecified solutionID;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
@@ -397,6 +401,7 @@ SWIFT_CLASS("_TtC8GoChange8SaveData")
 @interface SaveData : NSObject
 @property (nonatomic, copy) NSString * _Nullable savedAutoID;
 @property (nonatomic, copy) NSString * _Nullable changeID;
+@property (nonatomic, strong) NSMutableArray * _Nonnull solutionIDArray;
 @property (nonatomic, strong) Change * _Null_unspecified newChange;
 @property (nonatomic, strong) Change * _Null_unspecified existingChange;
 @property (nonatomic, copy) NSString * _Nonnull postType;
@@ -463,6 +468,7 @@ SWIFT_CLASS("_TtC8GoChange8Solution")
 @property (nonatomic, copy) NSString * _Nonnull solutionName;
 @property (nonatomic, copy) NSString * _Nonnull solutionDescription;
 @property (nonatomic, strong) NSNumber * _Nonnull voteCount;
+@property (nonatomic, copy) NSString * _Nonnull solutionID;
 @property (nonatomic, strong) Change * _Nonnull solutionToChange;
 @property (nonatomic, copy) NSArray<Tweak *> * _Nonnull solutionNeedingTweaking;
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
@@ -478,6 +484,7 @@ SWIFT_CLASS("_TtC8GoChange10TempChange")
 @property (nonatomic, strong) NSMutableArray * _Nonnull solutionDetailArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull solutionVoteArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull solutionNewOldArray;
+@property (nonatomic, strong) NSMutableArray * _Nonnull solutionIDArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull newSolutionNameArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull newSolutionDetailArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull tweakNameArray;
@@ -525,6 +532,7 @@ SWIFT_CLASS("_TtC8GoChange32ViewFollowedChangeViewController")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified postChangeButton;
 @property (nonatomic, strong) Change * _Null_unspecified changeClicked;
 @property (nonatomic, copy) NSString * _Null_unspecified changeID;
+@property (nonatomic, copy) NSString * _Null_unspecified solutionID;
 @property (nonatomic, strong) NSMutableArray * _Nonnull changeIDArray;
 @property (nonatomic, copy) NSString * _Null_unspecified sendingController;
 - (void)viewDidLoad;
@@ -564,6 +572,18 @@ SWIFT_CLASS("_TtC8GoChange30ViewResultChangeViewController")
 - (void)goBackHome;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8GoChange15VoteForSolution")
+@interface VoteForSolution : NSObject
+@property (nonatomic, strong) Change * _Null_unspecified change;
+@property (nonatomic, copy) NSString * _Null_unspecified changeID;
+@property (nonatomic, copy) NSString * _Null_unspecified solutionID;
+- (nonnull instancetype)initWithChange:(Change * _Nonnull)change changeID:(NSString * _Nonnull)changeID solutionID:(NSString * _Nonnull)solutionID completionHandler:(void (^ _Nonnull)(id _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, strong) NSManagedObjectContext * _Nonnull sharedContext;
+- (void)addVoteToCoreData;
+- (void)addVoteToFirebase;
 @end
 
 

@@ -14,6 +14,9 @@ class SaveData:NSObject{
     
     var savedAutoID:String?
     var changeID:String?
+    
+    var solutionIDArray:NSMutableArray = []
+    
     var newChange:Change!
     var existingChange:Change!
     var postType:String = ""
@@ -55,6 +58,7 @@ class SaveData:NSObject{
         }else if(postType == "fullResultPost"){
             
             self.changeID = changeID
+            
             createCoreDataChange(){
                 (result) in
                 
@@ -121,21 +125,11 @@ class SaveData:NSObject{
             
             let changeID = existingChange.changeID
             
-            
-            
-            
-            
-            //TODO: deal with solution count, get return of solutionCount then increment using TempArray.sharedInstance().newSolutionNameArray.count
-            
-            
             let solutionCountLocation = Firebase(url:"https://gochange.firebaseio.com/change/solutionCount")
             
             let uniqueSolutionCountLocation = solutionCountLocation.childByAppendingPath(changeID)
             
             uniqueSolutionCountLocation.setValue(["SolutionCount":TempChange.sharedInstance().solutionNameArray.count])
-            
-            
-            
             
             
             //create reference to solutions location in firebase
@@ -151,8 +145,13 @@ class SaveData:NSObject{
                 let uniqueSolutionReference = uniqueSolutionLocation!.childByAutoId()
                 
                 
+                //save uniqueSolutionReference to array for later use
+                self.solutionIDArray.addObject(uniqueSolutionReference.key)
+                //TempChange.sharedInstance().solutionVoteArray[i].addObject(uniqueSolutionReference.key)
+                
+                
                 //set solution values
-                let changeSolutionValues = ["SolutionName":TempChange.sharedInstance().newSolutionNameArray[i],"SolutionDescription":TempChange.sharedInstance().newSolutionDetailArray[i]]
+                let changeSolutionValues = ["SolutionName":TempChange.sharedInstance().newSolutionNameArray[i],"SolutionDescription":TempChange.sharedInstance().newSolutionDetailArray[i],"SolutionVoteCount":TempChange.sharedInstance().solutionVoteArray[i]]
                 
                 //save values to firebase
                 uniqueSolutionReference.setValue(changeSolutionValues)
@@ -204,6 +203,9 @@ class SaveData:NSObject{
         changeDictionary[Change.Keys.changeDescription] = TempChange.sharedInstance().changeDetail
         changeDictionary[Change.Keys.owner] = self.isOwner
         changeDictionary[Change.Keys.changeID] = self.changeID
+        
+        
+        
         changeDictionary[Change.Keys.solutionCount] = TempChange.sharedInstance().solutionNameArray.count
         
         //create change object in core data
@@ -257,9 +259,12 @@ class SaveData:NSObject{
             
             solutionDictionary[Solution.Keys.solutionName] = TempChange.sharedInstance().solutionNameArray[i]
             solutionDictionary[Solution.Keys.solutionDescription] = TempChange.sharedInstance().solutionDetailArray[i]
+            
             solutionDictionary[Solution.Keys.voteCount] = TempChange.sharedInstance().solutionVoteArray[i]
+                        //TODO: Sort issue with fullResultPost
             
-            
+            solutionDictionary[Solution.Keys.solutionID] = TempChange.sharedInstance().solutionIDArray[i]
+            print("saved IDArray")
             //create core data solution object
             let newSolution = Solution(dictionary: solutionDictionary,context: sharedContext)
             

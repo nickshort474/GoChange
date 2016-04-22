@@ -6,25 +6,26 @@ provides-nominal:
 provides-member:
 - ["C8GoChange10TempChange", ""]
 provides-dynamic-lookup:
-- "changeDetail"
-- "addingSolutions"
-- "solutionNameArray"
-- "tweakNameArray"
-- "tweakDetailArray"
-- "newSolutionDetailArray"
-- "solutionDetailArray"
+- "solutionNewOldArray"
 - "sharedInstance"
 - "changeName"
-- "solutionVoteArray"
+- "tweakNameArray"
+- "addingSolutions"
+- "solutionNameArray"
+- "tweakDetailArray"
+- "newSolutionDetailArray"
 - "newSolutionNameArray"
-- "solutionNewOldArray"
+- "changeDetail"
+- "solutionIDArray"
+- "solutionVoteArray"
+- "solutionDetailArray"
 depends-top-level:
+- "TempChange"
 - "Array"
+- "NSMutableArray"
 - "NSObject"
 - "StringLiteralType"
 - "String"
-- "NSMutableArray"
-- "TempChange"
 depends-member:
 - ["Ps9AnyObject", "Element"]
 - !private ["Ps9AnyObject", "TempChange"]
@@ -36,6 +37,7 @@ depends-member:
 - ["Ps9AnyObject", "newSolutionNameArray"]
 - ["Ps9AnyObject", "sharedInstance"]
 - ["Ps9AnyObject", "solutionDetailArray"]
+- ["Ps9AnyObject", "solutionIDArray"]
 - ["Ps9AnyObject", "solutionNameArray"]
 - ["Ps9AnyObject", "solutionNewOldArray"]
 - ["Ps9AnyObject", "solutionVoteArray"]
@@ -53,6 +55,7 @@ depends-member:
 - ["Ps11CVarArgType", "newSolutionNameArray"]
 - ["Ps11CVarArgType", "sharedInstance"]
 - ["Ps11CVarArgType", "solutionDetailArray"]
+- ["Ps11CVarArgType", "solutionIDArray"]
 - ["Ps11CVarArgType", "solutionNameArray"]
 - ["Ps11CVarArgType", "solutionNewOldArray"]
 - ["Ps11CVarArgType", "solutionVoteArray"]
@@ -69,6 +72,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "newSolutionNameArray"]
 - ["Ps28CustomDebugStringConvertible", "sharedInstance"]
 - ["Ps28CustomDebugStringConvertible", "solutionDetailArray"]
+- ["Ps28CustomDebugStringConvertible", "solutionIDArray"]
 - ["Ps28CustomDebugStringConvertible", "solutionNameArray"]
 - ["Ps28CustomDebugStringConvertible", "solutionNewOldArray"]
 - ["Ps28CustomDebugStringConvertible", "solutionVoteArray"]
@@ -85,6 +89,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "newSolutionNameArray"]
 - ["Ps23CustomStringConvertible", "sharedInstance"]
 - ["Ps23CustomStringConvertible", "solutionDetailArray"]
+- ["Ps23CustomStringConvertible", "solutionIDArray"]
 - ["Ps23CustomStringConvertible", "solutionNameArray"]
 - ["Ps23CustomStringConvertible", "solutionNewOldArray"]
 - ["Ps23CustomStringConvertible", "solutionVoteArray"]
@@ -101,6 +106,7 @@ depends-member:
 - ["Ps9Equatable", "newSolutionNameArray"]
 - ["Ps9Equatable", "sharedInstance"]
 - ["Ps9Equatable", "solutionDetailArray"]
+- ["Ps9Equatable", "solutionIDArray"]
 - ["Ps9Equatable", "solutionNameArray"]
 - ["Ps9Equatable", "solutionNewOldArray"]
 - ["Ps9Equatable", "solutionVoteArray"]
@@ -117,6 +123,7 @@ depends-member:
 - ["Ps8Hashable", "newSolutionNameArray"]
 - ["Ps8Hashable", "sharedInstance"]
 - ["Ps8Hashable", "solutionDetailArray"]
+- ["Ps8Hashable", "solutionIDArray"]
 - ["Ps8Hashable", "solutionNameArray"]
 - ["Ps8Hashable", "solutionNewOldArray"]
 - ["Ps8Hashable", "solutionVoteArray"]
@@ -141,6 +148,7 @@ depends-member:
 - ["CSo8NSObject", "newSolutionNameArray"]
 - ["CSo8NSObject", "sharedInstance"]
 - ["CSo8NSObject", "solutionDetailArray"]
+- ["CSo8NSObject", "solutionIDArray"]
 - ["CSo8NSObject", "solutionNameArray"]
 - ["CSo8NSObject", "solutionNewOldArray"]
 - ["CSo8NSObject", "solutionVoteArray"]
@@ -157,6 +165,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "newSolutionNameArray"]
 - ["PSo16NSObjectProtocol", "sharedInstance"]
 - ["PSo16NSObjectProtocol", "solutionDetailArray"]
+- ["PSo16NSObjectProtocol", "solutionIDArray"]
 - ["PSo16NSObjectProtocol", "solutionNameArray"]
 - ["PSo16NSObjectProtocol", "solutionNewOldArray"]
 - ["PSo16NSObjectProtocol", "solutionVoteArray"]
@@ -177,6 +186,7 @@ depends-member:
 - ["C8GoChange10TempChange", "newSolutionNameArray"]
 - ["C8GoChange10TempChange", "sharedInstance"]
 - ["C8GoChange10TempChange", "solutionDetailArray"]
+- ["C8GoChange10TempChange", "solutionIDArray"]
 - ["C8GoChange10TempChange", "solutionNameArray"]
 - ["C8GoChange10TempChange", "solutionNewOldArray"]
 - ["C8GoChange10TempChange", "solutionVoteArray"]
@@ -227,4 +237,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "1acef9f292bb26adb261e5e64faa6d2d"
+interface-hash: "e8f9a210a216bf270ceb181684852241"
