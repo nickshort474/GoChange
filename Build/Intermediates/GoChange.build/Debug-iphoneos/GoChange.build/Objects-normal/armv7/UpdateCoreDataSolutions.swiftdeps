@@ -6,23 +6,23 @@ provides-nominal:
 provides-member:
 - ["C8GoChange23UpdateCoreDataSolutions", ""]
 provides-dynamic-lookup:
-- "existingChange"
-- "sharedContext"
-- "createCoreDataSolutions"
 - "haveVotedArray"
+- "sharedContext"
+- "existingChange"
+- "createCoreDataSolutions"
 depends-top-level:
-- "Change"
+- !private "..<"
+- !private "AnyObject"
+- "Array"
+- !private "Solution"
 - "UpdateCoreDataSolutions"
 - "NSMutableArray"
-- !private "TempChange"
-- !private "AnyObject"
-- !private "Solution"
-- !private "..<"
-- "Array"
-- "NSManagedObjectContext"
 - !private "String"
 - !private "CoreDataStackManager"
+- !private "TempChange"
 - "NSObject"
+- "NSManagedObjectContext"
+- "Change"
 depends-member:
 - !private ["Ps9AnyObject", "AnyObject"]
 - !private ["Ps9AnyObject", "CoreDataStackManager"]

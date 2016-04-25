@@ -6,66 +6,66 @@ provides-nominal:
 provides-member:
 - ["C8GoChange32ViewFollowedChangeViewController", ""]
 provides-dynamic-lookup:
-- "textViewDidBeginEditing"
-- "addDetailClick"
-- "unfollowChange"
-- "tableView"
-- "tableView"
-- "tableView"
-- "detailsField"
-- "detailButton"
-- "postChangeButton"
-- "changeClicked"
-- "solutionID"
-- "addSolutionClick"
-- "nameField"
-- "followChangeButton"
-- "addASolutionButton"
-- "postChangeClick"
-- "viewWillAppear"
-- "goBackHome"
-- "changeID"
-- "changeIDArray"
-- "addNameClick"
 - "nameButton"
+- "goBackHome"
+- "postChangeButton"
+- "unfollowChange"
+- "changeClicked"
+- "tableView"
+- "tableView"
+- "tableView"
+- "addSolutionClick"
+- "textViewDidBeginEditing"
+- "changeIDArray"
 - "solutionTable"
-- "sendingController"
+- "detailsField"
 - "viewDidLoad"
+- "sendingController"
+- "addNameClick"
+- "postChangeClick"
+- "followChangeButton"
+- "viewWillAppear"
+- "addDetailClick"
+- "addASolutionButton"
+- "changeID"
+- "nameField"
+- "detailButton"
+- "solutionID"
 depends-top-level:
-- "UITableView"
-- "Change"
-- !private "UIBarButtonItemStyle"
-- !private "print"
-- "Int"
-- "UITableViewCell"
-- "ViewFollowedChangeViewController"
-- !private "UIBarButtonItem"
-- !private "RetrieveSolutionsFromFirebase"
-- !private "!="
-- "UIButton"
-- !private "FDataSnapshot"
-- !private "UpdateCoreDataSolutions"
-- "UITextField"
-- !private "AddIdeaViewController"
 - !private "..<"
-- "NSMutableArray"
-- !private "BooleanLiteralType"
-- "UITableViewDelegate"
-- !private "TempChange"
-- "NSIndexPath"
 - "String"
-- "Bool"
-- !private "=="
-- !private "SaveNewSolution"
-- "Array"
-- !private "StringLiteralType"
 - !private "Solution"
+- !private "FDataSnapshot"
+- "UITableViewDelegate"
+- "NSMutableArray"
+- !private "=="
+- !private "TempChange"
+- "Array"
 - "UIViewController"
+- "UITableViewCell"
 - "UITextView"
-- !private "RetrieveSolutions"
+- !private "UIBarButtonItem"
 - "UITextViewDelegate"
-- !private "RetrieveSolutionCountFirebase"
 - "UITextFieldDelegate"
+- "UITableView"
+- !private "StringLiteralType"
+- !private "RetrieveSolutionsFromFirebase"
+- !private "UIBarButtonItemStyle"
+- "Bool"
+- !private "AddIdeaViewController"
+- "Change"
+- !private "UpdateCoreDataSolutions"
+- !private "RetrieveSolutionCountFirebase"
+- "Int"
+- !private "SaveNewSolution"
+- !private "print"
+- "ViewFollowedChangeViewController"
+- "UITextField"
+- !private "RetrieveSolutions"
+- !private "!="
+- "NSIndexPath"
+- !private "BooleanLiteralType"
+- "UIButton"
 depends-member:
 - !private ["C8GoChange21AddIdeaViewController", "change"]
 - !private ["C8GoChange21AddIdeaViewController", "changeID"]
@@ -212,7 +212,6 @@ depends-member:
 - !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
 - !private ["Ps21BitwiseOperationsType", "_DisabledRangeIndex"]
 - !private ["Sb", "_getBuiltinLogicValue"]
-- !private ["Sb", "deinit"]
 - !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
 - !private ["V12CoreGraphics7CGFloat", "deinit"]
@@ -336,7 +335,6 @@ depends-member:
 - !private ["C8GoChange6Change", "changeID"]
 - !private ["C8GoChange6Change", "changeName"]
 - !private ["C8GoChange6Change", "solutionCount"]
-- !private ["Vs9Character", "deinit"]
 - !private ["Ps14CollectionType", "Generator"]
 - !private ["Ps14CollectionType", "Index"]
 - !private ["Ps14CollectionType", "SubSequence"]
@@ -583,7 +581,6 @@ depends-member:
 - ["Ps23CustomStringConvertible", "viewWillAppear"]
 - !private ["Ps23CustomStringConvertible", "voteCount"]
 - ["Ps23CustomStringConvertible", ""]
-- !private ["Sd", "deinit"]
 - !private ["Ps9Equatable", "Distance"]
 - ["Ps9Equatable", "Element"]
 - !private ["Ps9Equatable", "Generator"]
@@ -707,7 +704,6 @@ depends-member:
 - !private ["CSo13FDataSnapshot", "children"]
 - !private ["CSo13FDataSnapshot", "key"]
 - !private ["CSo13FDataSnapshot", "value"]
-- !private ["Sf", "deinit"]
 - !private ["Ps16ForwardIndexType", "Distance"]
 - !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
 - !private ["Ps16ForwardIndexType", "_DisabledRangeIndex"]
@@ -841,10 +837,6 @@ depends-member:
 - !private ["Si", "IntegerLiteralType"]
 - !private ["Si", "_DisabledRangeIndex"]
 - !private ["Si", "deinit"]
-- !private ["Vs5Int16", "deinit"]
-- !private ["Vs5Int32", "deinit"]
-- !private ["Vs5Int64", "deinit"]
-- !private ["Vs4Int8", "deinit"]
 - !private ["Ps21IntegerArithmeticType", "Distance"]
 - !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
 - !private ["Ps21IntegerArithmeticType", "_DisabledRangeIndex"]
@@ -973,7 +965,6 @@ depends-member:
 - !private ["PSo9NSCopying", "addObject"]
 - !private ["PSo9NSCopying", "count"]
 - !private ["PSo9NSCopying", "deinit"]
-- !private ["PSo9NSCopying", "init"]
 - !private ["PSo9NSCopying", "removeObjectAtIndex"]
 - !private ["PSo9NSCopying", "row"]
 - !private ["PSo9NSCopying", "subscript"]
@@ -1077,7 +1068,6 @@ depends-member:
 - ["PSo16NSMutableCopying", "Element"]
 - !private ["PSo16NSMutableCopying", "addObject"]
 - !private ["PSo16NSMutableCopying", "count"]
-- !private ["PSo16NSMutableCopying", "init"]
 - !private ["PSo16NSMutableCopying", "removeObjectAtIndex"]
 - !private ["PSo16NSMutableCopying", "subscript"]
 - !private ["CSo8NSNumber", "deinit"]
@@ -1322,12 +1312,9 @@ depends-member:
 - ["PSo14NSSecureCoding", "Element"]
 - !private ["PSo14NSSecureCoding", "addObject"]
 - !private ["PSo14NSSecureCoding", "count"]
-- !private ["PSo14NSSecureCoding", "init"]
 - !private ["PSo14NSSecureCoding", "removeObjectAtIndex"]
 - !private ["PSo14NSSecureCoding", "row"]
 - !private ["PSo14NSSecureCoding", "subscript"]
-- !private ["CSo8NSString", "deinit"]
-- !private ["CSo8NSString", "init"]
 - !private ["Sq", "deinit"]
 - !private ["Ps16OutputStreamType", "init"]
 - !private ["Ps21RandomAccessIndexType", "Distance"]
@@ -2333,12 +2320,6 @@ depends-member:
 - ["CSo16UIViewController", "viewForZoomingInScrollView"]
 - ["CSo16UIViewController", "viewWillAppear"]
 - ["CSo16UIViewController", ""]
-- !private ["Su", "deinit"]
-- !private ["Vs6UInt16", "deinit"]
-- !private ["Vs6UInt32", "deinit"]
-- !private ["Vs6UInt64", "deinit"]
-- !private ["Vs5UInt8", "deinit"]
-- !private ["Sc", "deinit"]
 - !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
 - !private ["C8GoChange23UpdateCoreDataSolutions", "init"]
 - !private ["C8GoChange32ViewFollowedChangeViewController", "AddIdeaViewController"]
@@ -2500,16 +2481,13 @@ depends-nominal:
 - !private "V12CoreGraphics7CGFloat"
 - "Ps11CVarArgType"
 - !private "C8GoChange6Change"
-- !private "Vs9Character"
 - !private "Ps14CollectionType"
 - !private "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
-- !private "Sd"
 - "Ps9Equatable"
 - !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
 - !private "CSo13FDataSnapshot"
-- !private "Sf"
 - !private "Ps16ForwardIndexType"
 - !private "Ps13GeneratorType"
 - !private "Vs16HalfOpenInterval"
@@ -2518,10 +2496,6 @@ depends-nominal:
 - !private "Ps9Indexable"
 - !private "Vs17IndexingGenerator"
 - !private "Si"
-- !private "Vs5Int16"
-- !private "Vs5Int32"
-- !private "Vs5Int64"
-- !private "Vs4Int8"
 - !private "Ps21IntegerArithmeticType"
 - !private "Ps25IntegerLiteralConvertible"
 - !private "Ps11IntegerType"
@@ -2543,7 +2517,6 @@ depends-nominal:
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - "PSo14NSSecureCoding"
-- !private "CSo8NSString"
 - !private "Sq"
 - !private "Ps16OutputStreamType"
 - !private "Ps21RandomAccessIndexType"
@@ -2599,12 +2572,6 @@ depends-nominal:
 - "PSo18UITraitEnvironment"
 - !private "CSo6UIView"
 - "CSo16UIViewController"
-- !private "Su"
-- !private "Vs6UInt16"
-- !private "Vs6UInt32"
-- !private "Vs6UInt64"
-- !private "Vs5UInt8"
-- !private "Sc"
 - !private "Ps31UnicodeScalarLiteralConvertible"
 - !private "C8GoChange23UpdateCoreDataSolutions"
 - "C8GoChange32ViewFollowedChangeViewController"

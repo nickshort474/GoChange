@@ -101,12 +101,6 @@ class FollowingViewController: UITableViewController,
         
         controller.changeClicked = fetchedResultsController.objectAtIndexPath(indexPath) as! Change
         controller.sendingController = "Following"
-        /*
-        controller.isOwner = changeClicked.owner 
-        controller.changeID = changeClicked.changeID
-        controller.changeName = changeClicked.changeName
-        controller.changeDetail = changeClicked.changeDescription
-        */
         
         navigationController?.pushViewController(controller,animated: true)
     

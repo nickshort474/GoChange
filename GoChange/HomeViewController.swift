@@ -58,15 +58,6 @@ class HomeViewController: UIViewController {
         
     }
     
-    /*
-    @IBAction func showfollowing(sender: UIButton) {
-        
-        var controller:FollowingViewController
-        controller = self.storyboard?.instantiateViewControllerWithIdentifier("FollowingViewController") as! FollowingViewController
-        
-        self.presentViewController(controller, animated: true, completion: nil)
-    }
-    */
     
     @IBAction func addUserData(sender: UIButton) {
         

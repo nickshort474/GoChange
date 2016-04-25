@@ -6,20 +6,20 @@ provides-nominal:
 provides-member:
 - ["C8GoChange29RetrieveSolutionCountFirebase", ""]
 provides-dynamic-lookup:
-- "nameRef"
 - "resultsArray"
+- "nameRef"
 depends-top-level:
-- !private "..<"
-- !private "String"
-- "NSObject"
-- !private "print"
-- "RetrieveSolutionCountFirebase"
-- "Array"
-- "NSMutableArray"
 - !private "=="
-- "StringLiteralType"
-- "Void"
+- !private "..<"
+- "Array"
 - "Firebase"
+- "RetrieveSolutionCountFirebase"
+- !private "print"
+- !private "String"
+- "NSMutableArray"
+- "StringLiteralType"
+- "NSObject"
+- "Void"
 depends-member:
 - ["Ps9AnyObject", "Element"]
 - ["Ps9AnyObject", "Firebase"]
@@ -29,7 +29,7 @@ depends-member:
 - !private ["Ps9AnyObject", "description"]
 - ["Ps9AnyObject", "init"]
 - ["Ps9AnyObject", "nameRef"]
-- !private ["Ps9AnyObject", "observeEventType"]
+- !private ["Ps9AnyObject", "observeSingleEventOfType"]
 - !private ["Ps9AnyObject", "print"]
 - ["Ps9AnyObject", "resultsArray"]
 - !private ["Ps9AnyObject", "subscript"]
@@ -59,7 +59,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "description"]
 - ["Ps11CVarArgType", "init"]
 - ["Ps11CVarArgType", "nameRef"]
-- !private ["Ps11CVarArgType", "observeEventType"]
+- !private ["Ps11CVarArgType", "observeSingleEventOfType"]
 - !private ["Ps11CVarArgType", "print"]
 - ["Ps11CVarArgType", "resultsArray"]
 - !private ["Ps11CVarArgType", "subscript"]
@@ -78,7 +78,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "description"]
 - ["Ps28CustomDebugStringConvertible", "init"]
 - ["Ps28CustomDebugStringConvertible", "nameRef"]
-- !private ["Ps28CustomDebugStringConvertible", "observeEventType"]
+- !private ["Ps28CustomDebugStringConvertible", "observeSingleEventOfType"]
 - !private ["Ps28CustomDebugStringConvertible", "print"]
 - ["Ps28CustomDebugStringConvertible", "resultsArray"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
@@ -97,7 +97,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "description"]
 - ["Ps23CustomStringConvertible", "init"]
 - ["Ps23CustomStringConvertible", "nameRef"]
-- !private ["Ps23CustomStringConvertible", "observeEventType"]
+- !private ["Ps23CustomStringConvertible", "observeSingleEventOfType"]
 - !private ["Ps23CustomStringConvertible", "print"]
 - ["Ps23CustomStringConvertible", "resultsArray"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
@@ -117,7 +117,7 @@ depends-member:
 - !private ["Ps9Equatable", "description"]
 - ["Ps9Equatable", "init"]
 - ["Ps9Equatable", "nameRef"]
-- !private ["Ps9Equatable", "observeEventType"]
+- !private ["Ps9Equatable", "observeSingleEventOfType"]
 - !private ["Ps9Equatable", "print"]
 - ["Ps9Equatable", "resultsArray"]
 - !private ["Ps9Equatable", "subscript"]
@@ -128,10 +128,10 @@ depends-member:
 - !private ["OSC10FEventType", "Value"]
 - !private ["CSo6FQuery", "childByAppendingPath"]
 - ["CSo6FQuery", "init"]
-- !private ["CSo6FQuery", "observeEventType"]
+- !private ["CSo6FQuery", "observeSingleEventOfType"]
 - !private ["CSo8Firebase", "childByAppendingPath"]
 - ["CSo8Firebase", "init"]
-- !private ["CSo8Firebase", "observeEventType"]
+- !private ["CSo8Firebase", "observeSingleEventOfType"]
 - !private ["Ps16ForwardIndexType", "Distance"]
 - !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
 - !private ["Ps16ForwardIndexType", "_DisabledRangeIndex"]
@@ -150,7 +150,7 @@ depends-member:
 - !private ["Ps8Hashable", "description"]
 - ["Ps8Hashable", "init"]
 - ["Ps8Hashable", "nameRef"]
-- !private ["Ps8Hashable", "observeEventType"]
+- !private ["Ps8Hashable", "observeSingleEventOfType"]
 - !private ["Ps8Hashable", "print"]
 - ["Ps8Hashable", "resultsArray"]
 - !private ["Ps8Hashable", "subscript"]
@@ -211,7 +211,7 @@ depends-member:
 - !private ["CSo8NSObject", "description"]
 - ["CSo8NSObject", "init"]
 - ["CSo8NSObject", "nameRef"]
-- !private ["CSo8NSObject", "observeEventType"]
+- !private ["CSo8NSObject", "observeSingleEventOfType"]
 - !private ["CSo8NSObject", "print"]
 - ["CSo8NSObject", "resultsArray"]
 - !private ["CSo8NSObject", "subscript"]
@@ -225,7 +225,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "description"]
 - ["PSo16NSObjectProtocol", "init"]
 - ["PSo16NSObjectProtocol", "nameRef"]
-- !private ["PSo16NSObjectProtocol", "observeEventType"]
+- !private ["PSo16NSObjectProtocol", "observeSingleEventOfType"]
 - !private ["PSo16NSObjectProtocol", "print"]
 - ["PSo16NSObjectProtocol", "resultsArray"]
 - !private ["PSo16NSObjectProtocol", "subscript"]

@@ -39,7 +39,7 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        print("viewFollowed: viewDidLoad")
+        
         //set delegates
         nameField.delegate = self
         detailsField.delegate = self
@@ -78,15 +78,12 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
         
         
         //check to see whether solution count in database matches that in core data
-       //Even if coming from results can check to see whether any new solutions added since search was conducted
+        //Even if coming from results can check to see whether any new solutions added since search was conducted
         _ = RetrieveSolutionCountFirebase(changeArray: changeIDArray, completionHandler: {
             (result) in
             
             //process returned snapshot
             let firebaseSolutionCount = result[0] as! Int
-            
-            //print(firebaseSolutionCount)
-            //print(self.localSolutionCount)
             
             // if new solutions exist
             if (firebaseSolutionCount != self.localSolutionCount){
@@ -108,7 +105,6 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
                     //loop through retrieved firebase solutions and save into TempArrays
                     for solution in result.children.allObjects as! [FDataSnapshot]{
                         
-                        print("2 Adding to arrays")
                         TempChange.sharedInstance().solutionIDArray.addObject(solution.key)
                         TempChange.sharedInstance().solutionNameArray.addObject(solution.value["SolutionName"]!!)
                         TempChange.sharedInstance().solutionDetailArray.addObject(solution.value["SolutionDescription"]!!)
@@ -123,35 +119,29 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
                         (result) in
                         
                         for solution in result as! [Solution]{
-                            
                             localSolutionIDArray.addObject(solution.solutionID)
-                            
                         }
                         
                         //Test whether any of the solutions from firebase already exist in retrieved coredata array
                         for var i in 0 ..< TempChange.sharedInstance().solutionIDArray.count{
                         
-                                for var j in 0 ..< localSolutionIDArray.count{
+                            for var j in 0 ..< localSolutionIDArray.count{
                                     
                                     
-                                    if(TempChange.sharedInstance().solutionIDArray[i] as? String == localSolutionIDArray[j] as? String){
+                                if(TempChange.sharedInstance().solutionIDArray[i] as? String == localSolutionIDArray[j] as? String){
                                 
-                                        // IF there is a match between firebase solutions and coreData remove from arrays
-                                        TempChange.sharedInstance().solutionIDArray.removeObjectAtIndex(i)
-                                        TempChange.sharedInstance().solutionNameArray.removeObjectAtIndex(i)
-                                        TempChange.sharedInstance().solutionDetailArray.removeObjectAtIndex(i)
-                                        TempChange.sharedInstance().solutionVoteArray.removeObjectAtIndex(i)
-                                    }
+                                    // IF there is a match between firebase solutions and coreData remove from arrays
+                                    TempChange.sharedInstance().solutionIDArray.removeObjectAtIndex(i)
+                                    TempChange.sharedInstance().solutionNameArray.removeObjectAtIndex(i)
+                                    TempChange.sharedInstance().solutionDetailArray.removeObjectAtIndex(i)
+                                    TempChange.sharedInstance().solutionVoteArray.removeObjectAtIndex(i)
                                 }
-                        
-                        }
-
-                        
-                    })
-                                        
+                            }
+                         }
+                     })
+                    
+                    //save any newly downloaded solutions to firebase
                     _ = UpdateCoreDataSolutions(change: self.changeClicked!)                    
-                    
-                    
                     self.solutionTable.reloadData()
                     
                 })
@@ -160,7 +150,7 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
                 
                 _ = RetrieveSolutions(change:self.changeClicked!){
                     (result) in
-                    print("3 Adding to arrays")
+                    
                     // empty TempArrays ready to be populate with new data
                     TempChange.sharedInstance().solutionNameArray = []
                     TempChange.sharedInstance().solutionDetailArray = []
@@ -171,7 +161,6 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
                     //assign results from coreData return to temp array then use TempArray for table
                     for solution in result as! [Solution]{
                         
-                        print("4 Adding to arrays")
                         TempChange.sharedInstance().solutionNameArray.addObject(solution.solutionName)
                         TempChange.sharedInstance().solutionDetailArray.addObject(solution.solutionDescription)
                         TempChange.sharedInstance().solutionVoteArray.addObject(solution.voteCount)
@@ -193,12 +182,9 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
         
         if(TempChange.sharedInstance().addingSolutions == "true"){
             
-            print("have added solutions")
             self.postChangeButton.enabled = true
             self.postChangeButton.alpha = 1
         }
-        
-        print(TempChange.sharedInstance().solutionNameArray)
         
         self.solutionTable.reloadData()
         
@@ -243,49 +229,24 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
 
     @IBAction func postChangeClick(sender: UIButton) {
         
-        
-        
         //loop through solutionNewOldArray to check for the newly added solutions
         for var i in 0 ..<  TempChange.sharedInstance().solutionNewOldArray.count{
             
             if(TempChange.sharedInstance().solutionNewOldArray[i] as! String == "new"){
-                print("5 adding to array")
+                
                 // add newly added solutions to newSolution arrays
                 TempChange.sharedInstance().newSolutionNameArray.addObject(TempChange.sharedInstance().solutionNameArray[i])
                 TempChange.sharedInstance().newSolutionDetailArray.addObject(TempChange.sharedInstance().solutionDetailArray[i])
                     
             }
-            
         }
-            
-        // then run saveData with postType
-        //let postType:String = "coreDataFirebaseSolutionPost"
-        
-        //TODO: have only solutions tagged as new saved to core data with owner as true
-        //let owner:String = self.changeClicked.owner
         
         let change:Change = self.changeClicked! //TODO: returned from new completion handler
-        
         
         _ = SaveNewSolution(change: change){
             (result) in
             
-            
-            
         }
-        
-        
-        
-        /*
-        _ = SaveData(postType:postType,change:change){
-            (result) in
-            
-            //TODO: do i nedd result here? (change object)
-            print("completion handler")
-            
-        }
-        */
-        
         
         //set addingSolutions back to false
         TempChange.sharedInstance().addingSolutions = "false"
@@ -329,9 +290,6 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
         
          //TODO: Gather vote numbers from firebase populated into Temp.sharedInstance().solutionVoteArray
         let voteCount:String = String(TempChange.sharedInstance().solutionVoteArray[indexPath.row])
-        
-        print("vote count in table is: \(voteCount)")
-        
         
         cell.detailTextLabel!.text = voteCount
         cell.textLabel!.text = solutionName

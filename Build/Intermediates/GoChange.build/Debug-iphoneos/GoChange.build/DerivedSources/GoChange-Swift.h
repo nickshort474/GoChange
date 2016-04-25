@@ -316,22 +316,6 @@ SWIFT_CLASS("_TtC8GoChange18HomeViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-
-SWIFT_CLASS("_TtC8GoChange8PostData")
-@interface PostData : NSObject
-@property (nonatomic, copy) NSString * _Nullable savedAutoID;
-@property (nonatomic, copy) NSString * _Nullable changeID;
-@property (nonatomic, strong) Change * _Null_unspecified newChange;
-@property (nonatomic, strong) Change * _Null_unspecified existingChange;
-@property (nonatomic, copy) NSString * _Nonnull postType;
-@property (nonatomic, copy) NSString * _Nullable isOwner;
-- (nonnull instancetype)initWithPostType:(NSString * _Nonnull)postType owner:(NSString * _Nonnull)owner change:(Change * _Nullable)change OBJC_DESIGNATED_INITIALIZER;
-@property (nonatomic, strong) NSManagedObjectContext * _Nonnull sharedContext;
-- (void)saveChangeToFirebase;
-- (void)createCoreDataChange;
-- (void)createCoreDataSolutions;
-@end
-
 @class NSMutableArray;
 
 SWIFT_CLASS("_TtC8GoChange21ResultsViewController")

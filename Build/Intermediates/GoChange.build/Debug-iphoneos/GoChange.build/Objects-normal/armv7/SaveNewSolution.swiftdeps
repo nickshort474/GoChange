@@ -7,27 +7,27 @@ provides-member:
 - ["C8GoChange15SaveNewSolution", ""]
 provides-dynamic-lookup:
 - "saveSolutionsToFirebase"
+- "solutionIDArray"
+- "createCoreDataSolutions"
 - "sharedContext"
 - "existingChange"
-- "createCoreDataSolutions"
-- "solutionIDArray"
 depends-top-level:
-- "SaveNewSolution"
-- !private "Firebase"
-- "Array"
 - "Change"
-- !private "TempChange"
-- !private "Solution"
+- !private "Firebase"
+- "Void"
+- "SaveNewSolution"
+- !private "Dictionary"
 - !private "StringLiteralType"
-- "NSMutableArray"
+- !private "TempChange"
 - "AnyObject"
 - !private "..<"
+- !private "Solution"
+- !private "String"
+- "NSMutableArray"
 - "NSManagedObjectContext"
 - "NSObject"
-- !private "Dictionary"
+- "Array"
 - !private "CoreDataStackManager"
-- !private "String"
-- "Void"
 depends-member:
 - !private ["Ps9AnyObject", "AnyObject"]
 - !private ["Ps9AnyObject", "CoreDataStackManager"]

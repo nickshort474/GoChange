@@ -35,20 +35,15 @@ class ResultsViewController: UIViewController,UITableViewDelegate {
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return resultNameArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cellID = "resultCell"
-        
         let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath)
         
         let changeName:String = self.resultNameArray[indexPath.row] as! String
-        //let changeDetail:String = self.resultDetailArray[indexPath.row] as! String
-        
-        
         let solutionCount:String = String(self.resultSolutionCountArray[indexPath.row])
         
         cell.textLabel!.text = changeName
@@ -61,12 +56,9 @@ class ResultsViewController: UIViewController,UITableViewDelegate {
    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
                 
         var controller:ViewResultChangeViewController
-        
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewResultChangeViewController") as! ViewResultChangeViewController
-        
         let navigationController = self.navigationController
         
-        //controller.sendingController = "results"
         controller.isOwner = "false"
         controller.changeName = self.resultNameArray[indexPath.row] as! String
         controller.changeDetail = self.resultDetailArray[indexPath.row] as! String

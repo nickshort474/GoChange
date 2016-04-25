@@ -9,13 +9,13 @@ provides-dynamic-lookup:
 - "ref"
 depends-top-level:
 - "FDataSnapshot"
-- "String"
 - "StringLiteralType"
-- "NSObject"
 - "RetrieveSolutionsFromFirebase"
 - "Void"
-- "Firebase"
 - !private "print"
+- "NSObject"
+- "Firebase"
+- "String"
 depends-member:
 - ["Ps9AnyObject", "Firebase"]
 - !private ["Ps9AnyObject", "childByAppendingPath"]

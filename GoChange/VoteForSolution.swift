@@ -56,12 +56,7 @@ class VoteForSolution:NSObject{
             
             let entity = fetchEntities.first
             var currentVoteCount = entity?.voteCount as! Int
-            
-            //print("old cd voteCount = \(currentVoteCount)")
-            
             currentVoteCount += 1
-            
-            //print("new cd voteCount = \(currentVoteCount)")
             entity?.voteCount = currentVoteCount //as NSNumber
             
             

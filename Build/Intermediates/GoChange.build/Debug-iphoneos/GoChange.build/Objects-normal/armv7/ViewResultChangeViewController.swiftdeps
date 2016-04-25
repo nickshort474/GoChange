@@ -6,48 +6,47 @@ provides-nominal:
 provides-member:
 - ["C8GoChange30ViewResultChangeViewController", ""]
 provides-dynamic-lookup:
-- "isOwner"
-- "changeID"
-- "followChangeClick"
-- "changeDetail"
-- "solutionTable"
-- "viewDidLoad"
 - "currentChange"
-- "detailsField"
-- "tableView"
-- "tableView"
-- "tableView"
 - "changeName"
-- "nameField"
-- "viewWillAppear"
+- "followChangeClick"
 - "followChangeButton"
+- "solutionTable"
+- "detailsField"
+- "viewDidLoad"
+- "changeDetail"
+- "viewWillAppear"
+- "tableView"
+- "tableView"
+- "tableView"
+- "changeID"
+- "nameField"
+- "isOwner"
 depends-top-level:
-- "UITableViewDelegate"
-- "Bool"
-- !private "TempChange"
-- "NSIndexPath"
 - "String"
-- "UITableView"
-- "UITableViewCell"
-- !private "StringLiteralType"
-- "Int"
-- "UIViewController"
-- "UITextFieldDelegate"
-- "UITextView"
-- !private "Array"
-- "UITextViewDelegate"
 - !private "UIColor"
-- !private "AddIdeaViewController"
-- "Change"
-- "ViewResultChangeViewController"
-- !private "print"
-- !private "FDataSnapshot"
+- "UITableViewDelegate"
+- "Int"
+- !private "Array"
+- !private "TempChange"
+- "UIViewController"
 - !private "ViewFollowedChangeViewController"
-- !private "SaveResultToCoreData"
-- !private "RetrieveSolutionsFromFirebase"
-- "UIButton"
+- "UITextView"
+- "NSIndexPath"
+- "UITextViewDelegate"
+- "UITextFieldDelegate"
+- "UITableView"
 - "BooleanLiteralType"
+- !private "FDataSnapshot"
+- "ViewResultChangeViewController"
+- "Bool"
+- "Change"
+- !private "StringLiteralType"
+- !private "AddIdeaViewController"
 - "UITextField"
+- !private "RetrieveSolutionsFromFirebase"
+- !private "SaveResultToCoreData"
+- "UIButton"
+- "UITableViewCell"
 depends-member:
 - !private ["C8GoChange21AddIdeaViewController", "loadedDetailData"]
 - !private ["C8GoChange21AddIdeaViewController", "loadedNameData"]
@@ -82,7 +81,6 @@ depends-member:
 - !private ["Ps9AnyObject", "loadedNameData"]
 - ["Ps9AnyObject", "nameField"]
 - !private ["Ps9AnyObject", "navigationController"]
-- !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "pushViewController"]
 - !private ["Ps9AnyObject", "reloadData"]
 - !private ["Ps9AnyObject", "row"]
@@ -183,7 +181,6 @@ depends-member:
 - !private ["Ps11CVarArgType", "loadedNameData"]
 - ["Ps11CVarArgType", "nameField"]
 - !private ["Ps11CVarArgType", "navigationController"]
-- !private ["Ps11CVarArgType", "print"]
 - !private ["Ps11CVarArgType", "pushViewController"]
 - !private ["Ps11CVarArgType", "reloadData"]
 - !private ["Ps11CVarArgType", "row"]
@@ -273,7 +270,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "loadedNameData"]
 - ["Ps28CustomDebugStringConvertible", "nameField"]
 - !private ["Ps28CustomDebugStringConvertible", "navigationController"]
-- !private ["Ps28CustomDebugStringConvertible", "print"]
 - !private ["Ps28CustomDebugStringConvertible", "pushViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "reloadData"]
 - !private ["Ps28CustomDebugStringConvertible", "row"]
@@ -359,7 +355,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "loadedNameData"]
 - ["Ps23CustomStringConvertible", "nameField"]
 - !private ["Ps23CustomStringConvertible", "navigationController"]
-- !private ["Ps23CustomStringConvertible", "print"]
 - !private ["Ps23CustomStringConvertible", "pushViewController"]
 - !private ["Ps23CustomStringConvertible", "reloadData"]
 - !private ["Ps23CustomStringConvertible", "row"]
@@ -441,7 +436,6 @@ depends-member:
 - !private ["Ps9Equatable", "loadedNameData"]
 - ["Ps9Equatable", "nameField"]
 - !private ["Ps9Equatable", "navigationController"]
-- !private ["Ps9Equatable", "print"]
 - !private ["Ps9Equatable", "pushViewController"]
 - !private ["Ps9Equatable", "reloadData"]
 - !private ["Ps9Equatable", "row"]
@@ -529,7 +523,6 @@ depends-member:
 - !private ["Ps8Hashable", "loadedNameData"]
 - ["Ps8Hashable", "nameField"]
 - !private ["Ps8Hashable", "navigationController"]
-- !private ["Ps8Hashable", "print"]
 - !private ["Ps8Hashable", "pushViewController"]
 - !private ["Ps8Hashable", "reloadData"]
 - !private ["Ps8Hashable", "row"]
@@ -638,7 +631,6 @@ depends-member:
 - !private ["PSo8NSCoding", "loadedNameData"]
 - ["PSo8NSCoding", "nameField"]
 - !private ["PSo8NSCoding", "navigationController"]
-- !private ["PSo8NSCoding", "print"]
 - !private ["PSo8NSCoding", "pushViewController"]
 - !private ["PSo8NSCoding", "reloadData"]
 - !private ["PSo8NSCoding", "row"]
@@ -709,7 +701,6 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "loadedNameData"]
 - ["PSo26NSExtensionRequestHandling", "nameField"]
 - !private ["PSo26NSExtensionRequestHandling", "navigationController"]
-- !private ["PSo26NSExtensionRequestHandling", "print"]
 - !private ["PSo26NSExtensionRequestHandling", "pushViewController"]
 - ["PSo26NSExtensionRequestHandling", "scrollViewDidEndDecelerating"]
 - ["PSo26NSExtensionRequestHandling", "scrollViewDidEndDragging"]
@@ -803,7 +794,6 @@ depends-member:
 - !private ["CSo8NSObject", "loadedNameData"]
 - ["CSo8NSObject", "nameField"]
 - !private ["CSo8NSObject", "navigationController"]
-- !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "pushViewController"]
 - !private ["CSo8NSObject", "reloadData"]
 - !private ["CSo8NSObject", "row"]
@@ -882,7 +872,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "loadedNameData"]
 - ["PSo16NSObjectProtocol", "nameField"]
 - !private ["PSo16NSObjectProtocol", "navigationController"]
-- !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "pushViewController"]
 - !private ["PSo16NSObjectProtocol", "reloadData"]
 - !private ["PSo16NSObjectProtocol", "row"]
@@ -1005,7 +994,6 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "loadedNameData"]
 - ["PSo21UIAppearanceContainer", "nameField"]
 - !private ["PSo21UIAppearanceContainer", "navigationController"]
-- !private ["PSo21UIAppearanceContainer", "print"]
 - !private ["PSo21UIAppearanceContainer", "pushViewController"]
 - !private ["PSo21UIAppearanceContainer", "reloadData"]
 - ["PSo21UIAppearanceContainer", "scrollViewDidEndDecelerating"]
@@ -1067,7 +1055,6 @@ depends-member:
 - !private ["PSo18UIContentContainer", "loadedNameData"]
 - ["PSo18UIContentContainer", "nameField"]
 - !private ["PSo18UIContentContainer", "navigationController"]
-- !private ["PSo18UIContentContainer", "print"]
 - !private ["PSo18UIContentContainer", "pushViewController"]
 - ["PSo18UIContentContainer", "scrollViewDidEndDecelerating"]
 - ["PSo18UIContentContainer", "scrollViewDidEndDragging"]
@@ -1140,7 +1127,6 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "loadedNameData"]
 - ["PSo18UIFocusEnvironment", "nameField"]
 - !private ["PSo18UIFocusEnvironment", "navigationController"]
-- !private ["PSo18UIFocusEnvironment", "print"]
 - !private ["PSo18UIFocusEnvironment", "pushViewController"]
 - !private ["PSo18UIFocusEnvironment", "reloadData"]
 - ["PSo18UIFocusEnvironment", "scrollViewDidEndDecelerating"]
@@ -1222,7 +1208,6 @@ depends-member:
 - !private ["CSo11UIResponder", "loadedNameData"]
 - ["CSo11UIResponder", "nameField"]
 - !private ["CSo11UIResponder", "navigationController"]
-- !private ["CSo11UIResponder", "print"]
 - !private ["CSo11UIResponder", "pushViewController"]
 - !private ["CSo11UIResponder", "reloadData"]
 - ["CSo11UIResponder", "scrollViewDidEndDecelerating"]
@@ -1283,7 +1268,6 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "loadedNameData"]
 - !private ["PSo20UIScrollViewDelegate", "nameField"]
 - !private ["PSo20UIScrollViewDelegate", "navigationController"]
-- !private ["PSo20UIScrollViewDelegate", "print"]
 - ["PSo20UIScrollViewDelegate", "scrollViewDidEndDecelerating"]
 - ["PSo20UIScrollViewDelegate", "scrollViewDidEndDragging"]
 - ["PSo20UIScrollViewDelegate", "scrollViewDidEndScrollingAnimation"]
@@ -1337,7 +1321,6 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "loadedNameData"]
 - ["PSo16UIStateRestoring", "nameField"]
 - !private ["PSo16UIStateRestoring", "navigationController"]
-- !private ["PSo16UIStateRestoring", "print"]
 - !private ["PSo16UIStateRestoring", "pushViewController"]
 - ["PSo16UIStateRestoring", "scrollViewDidEndDecelerating"]
 - ["PSo16UIStateRestoring", "scrollViewDidEndDragging"]
@@ -1395,7 +1378,6 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "loadedNameData"]
 - !private ["PSo19UITableViewDelegate", "nameField"]
 - !private ["PSo19UITableViewDelegate", "navigationController"]
-- !private ["PSo19UITableViewDelegate", "print"]
 - ["PSo19UITableViewDelegate", "scrollViewDidEndDecelerating"]
 - ["PSo19UITableViewDelegate", "scrollViewDidEndDragging"]
 - ["PSo19UITableViewDelegate", "scrollViewDidEndScrollingAnimation"]
@@ -1447,7 +1429,6 @@ depends-member:
 - !private ["PSo19UITextFieldDelegate", "loadedNameData"]
 - !private ["PSo19UITextFieldDelegate", "nameField"]
 - !private ["PSo19UITextFieldDelegate", "navigationController"]
-- !private ["PSo19UITextFieldDelegate", "print"]
 - ["PSo19UITextFieldDelegate", "scrollViewDidEndDecelerating"]
 - ["PSo19UITextFieldDelegate", "scrollViewDidEndDragging"]
 - ["PSo19UITextFieldDelegate", "scrollViewDidEndScrollingAnimation"]
@@ -1506,7 +1487,6 @@ depends-member:
 - !private ["PSo18UITextViewDelegate", "loadedNameData"]
 - !private ["PSo18UITextViewDelegate", "nameField"]
 - !private ["PSo18UITextViewDelegate", "navigationController"]
-- !private ["PSo18UITextViewDelegate", "print"]
 - ["PSo18UITextViewDelegate", "scrollViewDidEndDecelerating"]
 - ["PSo18UITextViewDelegate", "scrollViewDidEndDragging"]
 - ["PSo18UITextViewDelegate", "scrollViewDidEndScrollingAnimation"]
@@ -1562,7 +1542,6 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "loadedNameData"]
 - ["PSo18UITraitEnvironment", "nameField"]
 - !private ["PSo18UITraitEnvironment", "navigationController"]
-- !private ["PSo18UITraitEnvironment", "print"]
 - !private ["PSo18UITraitEnvironment", "pushViewController"]
 - !private ["PSo18UITraitEnvironment", "reloadData"]
 - ["PSo18UITraitEnvironment", "scrollViewDidEndDecelerating"]
@@ -1642,7 +1621,6 @@ depends-member:
 - !private ["CSo16UIViewController", "loadedNameData"]
 - ["CSo16UIViewController", "nameField"]
 - !private ["CSo16UIViewController", "navigationController"]
-- !private ["CSo16UIViewController", "print"]
 - !private ["CSo16UIViewController", "pushViewController"]
 - ["CSo16UIViewController", "scrollViewDidEndDecelerating"]
 - ["CSo16UIViewController", "scrollViewDidEndDragging"]
@@ -1712,7 +1690,6 @@ depends-member:
 - ["C8GoChange30ViewResultChangeViewController", "isOwner"]
 - ["C8GoChange30ViewResultChangeViewController", "nameField"]
 - !private ["C8GoChange30ViewResultChangeViewController", "navigationController"]
-- !private ["C8GoChange30ViewResultChangeViewController", "print"]
 - ["C8GoChange30ViewResultChangeViewController", "scrollViewDidEndDecelerating"]
 - ["C8GoChange30ViewResultChangeViewController", "scrollViewDidEndDragging"]
 - ["C8GoChange30ViewResultChangeViewController", "scrollViewDidEndScrollingAnimation"]

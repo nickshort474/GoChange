@@ -15,11 +15,8 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
     
     var returnedNameArray:NSMutableArray = []
     var returnedRefArray:NSMutableArray = []
-   
     var countArray:NSMutableArray = []
-    
     var matchedNameArray:NSMutableArray = []
-    
     var useRefArray:NSMutableArray = []
     var useDetailArray:NSMutableArray = []
     var useSolutionCountArray:NSMutableArray = []
@@ -74,8 +71,6 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
                 //add ref to item to another array
                 self.returnedRefArray.addObject(String(name.key))
             }
-            
-            //TODO: check refArray changeID's against local core data change ID's
             
             self.checkResults()
             self.createRefArray()
@@ -133,13 +128,10 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         useDetailArray = []
         useRefArray = []
         
-        var detailsRetrieved:String = "false"
-        
         // for all results that match search term add their unique reference to useRefArray using countArray
-        
         for num in countArray{
+           
             let intOfNum = num as! Int
-            
             useRefArray.addObject(returnedRefArray[intOfNum])
             
         }
@@ -156,14 +148,7 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
                     self.useSolutionCountArray = result
                     self.sendToResults()
                 }
-
         }
-        
-        // use userRefArray to collect solutionCounts from firebase
-        
-                
-        
-        
     }
     
     

@@ -8,20 +8,20 @@ provides-member:
 - ["C8GoChange6Change", ""]
 - ["VC8GoChange6Change4Keys", ""]
 provides-dynamic-lookup:
-- "solutionCount"
 - "owner"
 - "changeName"
-- "changeID"
 - "changeDescription"
 - "changeNeedingSolution"
+- "changeID"
+- "solutionCount"
 depends-top-level:
 - "Change"
-- "AnyObject"
 - "NSEntityDescription"
-- "NSManagedObjectContext"
 - "NSNumber"
+- "AnyObject"
 - "NSManagedObject"
 - "String"
+- "NSManagedObjectContext"
 - "StringLiteralType"
 - "Solution"
 depends-member:

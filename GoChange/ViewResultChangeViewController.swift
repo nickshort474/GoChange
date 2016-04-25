@@ -43,21 +43,11 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
         
         
         //TODO: have prompt for user to follow change if they try clicking fields?
-        
-        
-        //once followed then segue to followed VC with editing allowed???
-        
-        //let barButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: "goBackHome:", action: nil)
-        //self.navigationItem.backBarButtonItem = barButtonItem
-        
-        //self.navigationItem.leftBarButtonItem = barButtonItem
+       
     
     }
     
     override func viewWillAppear(animated: Bool) {
-        
-        print("viewResults...viewWillAppear")
-        
         
         //clear out temp arrays ready for new result to be viewed:
         TempChange.sharedInstance().solutionNameArray = []
@@ -65,8 +55,6 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
         TempChange.sharedInstance().solutionVoteArray = []
         TempChange.sharedInstance().solutionIDArray = []
         TempChange.sharedInstance().solutionNewOldArray = []
-        
-        
         
         //load passed data into Temp variables to hold for use
         TempChange.sharedInstance().changeName = changeName
@@ -82,7 +70,7 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
             (snapshot) in
             
             for name in snapshot.children.allObjects as! [FDataSnapshot]{
-                print("6 adding to array")
+                
                 //put results from firebase into TempChange solutionArray
                 TempChange.sharedInstance().solutionNameArray.addObject(name.value["SolutionName"]!!)
                 TempChange.sharedInstance().solutionDetailArray.addObject(name.value["SolutionDescription"]!!)
@@ -102,59 +90,9 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
         
     }
     
-    /*
-    @IBAction func addNameClick(sender: UIButton) {
-        // if owner == true
-        //enable button
-        
-        //
-        
-        
-    }
-    
-    
-    @IBAction func addDetailClick(sender: UIButton) {
-        // if owner == true
-        //enable button
-    }
-    */
-    
-    
-    /*
-    @IBAction func addSolutionClick(sender: UIButton) {
-        
-    }
-    */
-    
     @IBAction func followChangeClick(sender: UIButton) {
         
         
-        //save details of currently viewed Change -- saved in TempArray
-        //let postType:String = "fullResultPost"
-       // let owner:String = "false"
-        //let changeID:String = self.changeID
-        
-       /*
-        //completion handler to return newly created change
-        _ = SaveData(postType:postType,owner:owner,changeID:changeID){
-            (result) in
-            
-            print(result)
-            
-            self.currentChange = result as! Change
-            
-            //segue to Viewfollowed change VC
-            var controller:ViewFollowedChangeViewController
-        
-            controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewFollowedChangeViewController") as! ViewFollowedChangeViewController
-        
-            controller.changeClicked = self.currentChange
-            controller.sendingController = "ViewResult"
-            
-            self.navigationController?.pushViewController(controller, animated: false)
-            
-        }
-        */
         _ = SaveResultToCoreData(changeID:self.changeID){
             (result) in
             
@@ -181,23 +119,6 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
         
     }
     
-    /*
-    @IBAction func postChangeClick(sender: UIButton) {
-        
-    }
- 
-    
-    
-    //---------------------textView methods------------
-    func textViewDidBeginEditing(textView: UITextView) {
-        
-        
-        
-    }
-    
-    
-    */
-    
     
     //--------------------Table view methods--------------
     
@@ -222,10 +143,7 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
     
     func tableView(tableView:UITableView,didSelectRowAtIndexPath indexPath: NSIndexPath){
         
-        //change back button on addIdeaVC to Back instead of "Cancel Idea"
-        
-        
-        
+                
         var controller:AddIdeaViewController
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("AddIdeaViewController") as! AddIdeaViewController
         
