@@ -16,7 +16,7 @@ class VoteForSolution:NSObject{
     var change:Change!
     var changeID:String!
     var solutionID:String!
-    var currentVoteCount:Int!
+    var currentVoteCount:Int = 0
     
     init(change:Change,changeID:String,solutionID:String,completionHandler:(result:AnyObject)->Void){
         super.init()
@@ -25,7 +25,7 @@ class VoteForSolution:NSObject{
         self.changeID = changeID
         self.solutionID = solutionID
         
-        //addVoteToCoreData()
+        addVoteToCoreData()
         addVoteToFirebase()
         
     }
@@ -41,16 +41,27 @@ class VoteForSolution:NSObject{
     
     func addVoteToCoreData(){
         
-        let predicate = NSPredicate(format: "solutionToChange == %@", change)
+        //TODO: Sort issue when switching between solutions viewed
+        //Still on same change, whichever solution viewed and only incrementing on fetchEntities.first!! 
+        //Only interacting with first solution!
+        
+        let predicate = NSPredicate(format: "solutionID == %@",solutionID)
         let fetchRequest = NSFetchRequest(entityName: "Solution")
         fetchRequest.predicate = predicate
         
+        //let predicate = NSPredicate(format: "solutionToChange == %@", change)
+ 
         do{
             let fetchEntities = try self.sharedContext.executeFetchRequest(fetchRequest) as! [Solution]
             
             let entity = fetchEntities.first
             var currentVoteCount = entity?.voteCount as! Int
+            
+            //print("old cd voteCount = \(currentVoteCount)")
+            
             currentVoteCount += 1
+            
+            //print("new cd voteCount = \(currentVoteCount)")
             entity?.voteCount = currentVoteCount //as NSNumber
             
             
@@ -69,20 +80,16 @@ class VoteForSolution:NSObject{
     
     func addVoteToFirebase(){
         
-        let ref = Firebase(url: "https://gochange.firebaseio.com/change/solutions")
-        let childRef = ref.childByAppendingPath(changeID).childByAppendingPath(solutionID).childByAppendingPath("SolutionVoteCount")
         
+        let ref = Firebase(url: "https://gochange.firebaseio.com/change/solutions")
+        let childRef = ref.childByAppendingPath(changeID).childByAppendingPath(solutionID)
         
         
         childRef.observeSingleEventOfType(.Value, withBlock:{snapshot in
             
-            print(snapshot)
-            print(snapshot.value)
-            print(snapshot.value["SolutionVoteCount"])
             self.currentVoteCount = snapshot.value["SolutionVoteCount"] as! Int
-            self.currentVoteCount! += 1
-            
-            childRef.setValue(["SolutionVoteCount":self.currentVoteCount])
+            self.currentVoteCount += 1
+            childRef.updateChildValues(["SolutionVoteCount":self.currentVoteCount])
             
             
         }, withCancelBlock:{error in

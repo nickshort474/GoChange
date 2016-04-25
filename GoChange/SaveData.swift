@@ -22,6 +22,7 @@ class SaveData:NSObject{
     var postType:String = ""
     var isOwner:String?
     
+    var haveVoted:String = ""
     
     init(postType:String,owner:String? = nil,change:Change? = nil,changeID:String? = nil,completionHandler:(result:AnyObject)-> Void) {
         super.init()
@@ -64,8 +65,6 @@ class SaveData:NSObject{
                 
                 completionHandler(result:result)
             }
-        }else if(postType == "voteForSolution"){
-            
         }
         
         
@@ -122,6 +121,8 @@ class SaveData:NSObject{
         
         if(postType == "coreDataFirebaseSolutionPost"){
             // save only new solutions from newSolutionNameArray
+            
+           
             
             let changeID = existingChange.changeID
             
@@ -232,6 +233,8 @@ class SaveData:NSObject{
         
         // delete all solutions if any exist? ready for all solutions from firebase to be added.
         
+        
+        
         if(postType == "updateCoreDataSolutions"){
             
             let predicate = NSPredicate(format: "solutionToChange == %@", existingChange!)
@@ -242,6 +245,11 @@ class SaveData:NSObject{
                 let fetchEntities = try self.sharedContext.executeFetchRequest(fetchRequest) as! [Solution]
                 
                 for entity in fetchEntities{
+                    
+                    //TODO: get current state of coreData haveVoted before delete
+                    
+                    haveVoted = entity.haveVotedFor
+                    
                     self.sharedContext.deleteObject(entity)
                 }
                 
@@ -251,20 +259,76 @@ class SaveData:NSObject{
        }
         
         
+        
+        //TODO: when coming from coreDataFirebaseSolutionPost need to loop through newSolutionNameArray
+        if(postType == ""){
+            
+        }
+        
         for var i in 0 ..< TempChange.sharedInstance().solutionNameArray.count{
             
-           
+           //TODO: sort new solution array problem...
+            //When coming from coreDataFirebaseSolutionPost need to use newSolutionNameArray and newSolutionDetailArray
             
             var solutionDictionary:[String:AnyObject] = [String:AnyObject]()
             
-            solutionDictionary[Solution.Keys.solutionName] = TempChange.sharedInstance().solutionNameArray[i]
-            solutionDictionary[Solution.Keys.solutionDescription] = TempChange.sharedInstance().solutionDetailArray[i]
             
-            solutionDictionary[Solution.Keys.voteCount] = TempChange.sharedInstance().solutionVoteArray[i]
-                        //TODO: Sort issue with fullResultPost
+           if(postType == "fullResultPost"){
+                haveVoted = "yes"
+            }else if(postType == "coreDataFirebaseSolutionPost"){
+                haveVoted = "yes"
+            }
             
-            solutionDictionary[Solution.Keys.solutionID] = TempChange.sharedInstance().solutionIDArray[i]
-            print("saved IDArray")
+            if(postType == "fullPost"){
+                
+                solutionDictionary[Solution.Keys.solutionName] = TempChange.sharedInstance().solutionNameArray[i]
+                solutionDictionary[Solution.Keys.solutionDescription] = TempChange.sharedInstance().solutionDetailArray[i]
+                solutionDictionary[Solution.Keys.voteCount] = TempChange.sharedInstance().solutionVoteArray[i]
+                solutionDictionary[Solution.Keys.solutionID] = TempChange.sharedInstance().solutionIDArray[i]
+                solutionDictionary[Solution.Keys.haveVotedFor] = "no"
+                
+            }else if(postType == "coreDataFirebaseSolutionPost"){
+                
+                solutionDictionary[Solution.Keys.solutionName] = TempChange.sharedInstance().newSolutionNameArray[i]
+                solutionDictionary[Solution.Keys.solutionDescription] = TempChange.sharedInstance().newSolutionDetailArray[i]
+                
+                //TODO: verify values going in here
+                solutionDictionary[Solution.Keys.voteCount] = TempChange.sharedInstance().solutionVoteArray[i] // zero as new solution?
+                
+                
+                solutionDictionary[Solution.Keys.solutionID] = TempChange.sharedInstance().solutionIDArray[i]
+                solutionDictionary[Solution.Keys.haveVotedFor] = "no"
+                
+            }else if(postType == "fullResultPost"){
+                
+                solutionDictionary[Solution.Keys.solutionName] = TempChange.sharedInstance().solutionNameArray[i]
+                solutionDictionary[Solution.Keys.solutionDescription] = TempChange.sharedInstance().solutionDetailArray[i]
+                solutionDictionary[Solution.Keys.voteCount] = TempChange.sharedInstance().solutionVoteArray[i]
+                solutionDictionary[Solution.Keys.solutionID] = TempChange.sharedInstance().solutionIDArray[i]
+                solutionDictionary[Solution.Keys.haveVotedFor] = "no"
+                
+            }else if(postType == "updateCoreDataSolutions"){
+                
+                solutionDictionary[Solution.Keys.solutionName] = TempChange.sharedInstance().solutionNameArray[i]
+                solutionDictionary[Solution.Keys.solutionDescription] = TempChange.sharedInstance().solutionDetailArray[i]
+                solutionDictionary[Solution.Keys.voteCount] = TempChange.sharedInstance().solutionVoteArray[i]
+                solutionDictionary[Solution.Keys.solutionID] = TempChange.sharedInstance().solutionIDArray[i]
+                solutionDictionary[Solution.Keys.haveVotedFor] = haveVoted
+                
+            }
+            
+            
+            
+            
+            //TODO: need to decide how to differentiate between initial creation of user solution so var is "yes"
+            //And downloaded / followed solutions that are being saved to core data
+            
+           
+            
+            
+            
+            
+           
             //create core data solution object
             let newSolution = Solution(dictionary: solutionDictionary,context: sharedContext)
             

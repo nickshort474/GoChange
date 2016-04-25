@@ -35,8 +35,8 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     var changeID:String!
     
     var solutionID:String!
-    
-    
+    var solutionCount:Int!
+    var index:Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +72,7 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
             
             //load data into fields
             nameTextField.text = loadedNameData
+            detailTextView.textColor = UIColor.blackColor()
             detailTextView.text = loadedDetailData
             
             
@@ -98,10 +99,18 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
             //TODO: Vote for solution, need to pass something in to get solution to vote for
             _ = VoteForSolution(change: change,changeID:changeID,solutionID:solutionID){
                 (result) in
-                
+                //TODO: once voted for solution need to save in coreData that have voted for solution.
+                //Or save reference to preson voted in Firebase?? - Will take up space, but more secure than coreData. With core data save, person could unFollow Change which clears coreData, re-follow and gain access to another vote...unlikely / time consuming but possible - flaw in system!
                 
                 
             }
+            
+            
+            var currentVoteCount = TempChange.sharedInstance().solutionVoteArray[self.index] as! Int
+            currentVoteCount += 1
+            TempChange.sharedInstance().solutionVoteArray[self.index] = currentVoteCount
+                
+           
             
         }else{
             
@@ -109,10 +118,12 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
             
                 // save data locally
                 TempChange.sharedInstance().addingSolutions = "true"
-            
+                print("1 Adding to arrays")
                 TempChange.sharedInstance().solutionNameArray.addObject(nameTextField.text!)
                 TempChange.sharedInstance().solutionDetailArray.addObject(detailTextView.text!)
                 TempChange.sharedInstance().solutionVoteArray.addObject(0)
+                
+                
                 TempChange.sharedInstance().solutionNewOldArray.addObject("new")
             
                 // dismiss view controller from navigation stack

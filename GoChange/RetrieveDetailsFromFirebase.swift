@@ -24,7 +24,7 @@ class RetrieveDetailsFromFirebase:NSObject{
             
             let changeRef = ref.childByAppendingPath(userRefArray[i] as! String)
             
-            changeRef.observeEventType(.Value, withBlock: { snapshot in
+            changeRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
                 
             self.results.addObject(snapshot.value["ChangeDetail"] as! String)
                 

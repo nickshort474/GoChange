@@ -7,22 +7,22 @@ provides-member:
 - ["C8GoChange24UpdateUserInfoController", ""]
 provides-dynamic-lookup:
 - "viewDidLoad"
+- "currentlyUpdating"
+- "updateUsername"
+- "updateEmail"
 - "segueToInput"
 - "updatePassword"
 - "cancelUpdate"
-- "updateEmail"
-- "currentlyUpdating"
-- "updateUsername"
 - "ref"
 depends-top-level:
-- "UIButton"
-- "Firebase"
 - "UpdateUserInfoController"
+- "Firebase"
+- !private "BooleanLiteralType"
+- "UIButton"
+- "String"
 - "StringLiteralType"
 - "UIViewController"
-- "String"
 - !private "SignupViewController"
-- !private "BooleanLiteralType"
 depends-member:
 - ["Ps9AnyObject", "Firebase"]
 - ["Ps9AnyObject", "cancelUpdate"]

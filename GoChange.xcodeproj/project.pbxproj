@@ -42,6 +42,10 @@
 		36DE37521CB12640005DEEEA /* RetrieveSolutions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DE37511CB12640005DEEEA /* RetrieveSolutions.swift */; };
 		36DEEA471CC158B1000FF3A4 /* ViewFollowedChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DEEA461CC158B1000FF3A4 /* ViewFollowedChangeViewController.swift */; };
 		36DEEA491CC1612E000FF3A4 /* ViewResultChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DEEA481CC1612E000FF3A4 /* ViewResultChangeViewController.swift */; };
+		36E5649F1CCCA72E008656EC /* SaveResultToCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E5649E1CCCA72E008656EC /* SaveResultToCoreData.swift */; };
+		36E564A11CCCA79E008656EC /* SaveNewChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E564A01CCCA79E008656EC /* SaveNewChange.swift */; };
+		36E564A31CCCA7D9008656EC /* UpdateCoreDataSolutions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E564A21CCCA7D9008656EC /* UpdateCoreDataSolutions.swift */; };
+		36E564A51CCCA815008656EC /* SaveNewSolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E564A41CCCA815008656EC /* SaveNewSolution.swift */; };
 		36E703EF1CAEE30C007C880C /* RetrieveChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E703EE1CAEE30C007C880C /* RetrieveChange.swift */; };
 		36E705B41CC79802003F5C6A /* VoteForSolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E705B31CC79802003F5C6A /* VoteForSolution.swift */; };
 		36EB1EBA1CB42E9000EA0CC4 /* RetrieveDetailsFromFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EB1EB91CB42E9000EA0CC4 /* RetrieveDetailsFromFirebase.swift */; };
@@ -109,6 +113,10 @@
 		36DE37511CB12640005DEEEA /* RetrieveSolutions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveSolutions.swift; sourceTree = "<group>"; };
 		36DEEA461CC158B1000FF3A4 /* ViewFollowedChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewFollowedChangeViewController.swift; sourceTree = "<group>"; };
 		36DEEA481CC1612E000FF3A4 /* ViewResultChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewResultChangeViewController.swift; sourceTree = "<group>"; };
+		36E5649E1CCCA72E008656EC /* SaveResultToCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveResultToCoreData.swift; sourceTree = "<group>"; };
+		36E564A01CCCA79E008656EC /* SaveNewChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveNewChange.swift; sourceTree = "<group>"; };
+		36E564A21CCCA7D9008656EC /* UpdateCoreDataSolutions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateCoreDataSolutions.swift; sourceTree = "<group>"; };
+		36E564A41CCCA815008656EC /* SaveNewSolution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveNewSolution.swift; sourceTree = "<group>"; };
 		36E703EE1CAEE30C007C880C /* RetrieveChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveChange.swift; sourceTree = "<group>"; };
 		36E705B31CC79802003F5C6A /* VoteForSolution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteForSolution.swift; sourceTree = "<group>"; };
 		36EB1EB91CB42E9000EA0CC4 /* RetrieveDetailsFromFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveDetailsFromFirebase.swift; sourceTree = "<group>"; };
@@ -150,11 +158,13 @@
 				361A063F1CB2CD450066C07C /* RetrieveFromFirebase.swift */,
 				36F871B61CB81503006706BD /* RetrieveSolutionCountFirebase.swift */,
 				36EB1EB91CB42E9000EA0CC4 /* RetrieveDetailsFromFirebase.swift */,
-				36E705B31CC79802003F5C6A /* VoteForSolution.swift */,
 				36DE37511CB12640005DEEEA /* RetrieveSolutions.swift */,
-				36DB99541CA9336600CC4D9E /* PostData.swift */,
-				36D743DE1CBE4B0C00C7C8A2 /* SaveData.swift */,
 				36E703EE1CAEE30C007C880C /* RetrieveChange.swift */,
+				36E705B31CC79802003F5C6A /* VoteForSolution.swift */,
+				36E5649E1CCCA72E008656EC /* SaveResultToCoreData.swift */,
+				36E564A21CCCA7D9008656EC /* UpdateCoreDataSolutions.swift */,
+				36E564A01CCCA79E008656EC /* SaveNewChange.swift */,
+				36E564A41CCCA815008656EC /* SaveNewSolution.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -277,6 +287,8 @@
 		36DE37501CB10EBD005DEEEA /* Old files */ = {
 			isa = PBXGroup;
 			children = (
+				36D743DE1CBE4B0C00C7C8A2 /* SaveData.swift */,
+				36DB99541CA9336600CC4D9E /* PostData.swift */,
 				36C37CA21C7A01AC002B4FB1 /* AddTweakViewController.swift */,
 				36B03CC61C8DFBFF00E9427D /* CreateChange.swift */,
 				36D7CA0A1CA5AB5E00A73176 /* CreateSolution.swift */,
@@ -500,7 +512,10 @@
 				36C37CC01C7A01C5002B4FB1 /* GoChangeConvenience.swift in Sources */,
 				36C37CB61C7A01AC002B4FB1 /* loginViewController.swift in Sources */,
 				36C37C6C1C7A00E3002B4FB1 /* AppDelegate.swift in Sources */,
+				36E564A11CCCA79E008656EC /* SaveNewChange.swift in Sources */,
+				36E564A51CCCA815008656EC /* SaveNewSolution.swift in Sources */,
 				36D7CA051CA542C100A73176 /* TempChange.swift in Sources */,
+				36E564A31CCCA7D9008656EC /* UpdateCoreDataSolutions.swift in Sources */,
 				369EF17F1C80C5D900D8D46A /* CoreDataStackManager.swift in Sources */,
 				36C37CB71C7A01AC002B4FB1 /* ResultsViewController.swift in Sources */,
 				36EB1EBA1CB42E9000EA0CC4 /* RetrieveDetailsFromFirebase.swift in Sources */,
@@ -511,6 +526,7 @@
 				36C37CB31C7A01AC002B4FB1 /* FollowingViewController.swift in Sources */,
 				36E705B41CC79802003F5C6A /* VoteForSolution.swift in Sources */,
 				36DEEA471CC158B1000FF3A4 /* ViewFollowedChangeViewController.swift in Sources */,
+				36E5649F1CCCA72E008656EC /* SaveResultToCoreData.swift in Sources */,
 				36C37C741C7A00E3002B4FB1 /* GoChange.xcdatamodeld in Sources */,
 				36D963F71CB556A1006F9D36 /* RetrieveSolutionsFromFirebase.swift in Sources */,
 				369EF17D1C80C24600D8D46A /* Change.swift in Sources */,

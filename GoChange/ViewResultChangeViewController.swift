@@ -56,6 +56,9 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
     
     override func viewWillAppear(animated: Bool) {
         
+        print("viewResults...viewWillAppear")
+        
+        
         //clear out temp arrays ready for new result to be viewed:
         TempChange.sharedInstance().solutionNameArray = []
         TempChange.sharedInstance().solutionDetailArray = []
@@ -79,12 +82,14 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
             (snapshot) in
             
             for name in snapshot.children.allObjects as! [FDataSnapshot]{
-                
+                print("6 adding to array")
                 //put results from firebase into TempChange solutionArray
                 TempChange.sharedInstance().solutionNameArray.addObject(name.value["SolutionName"]!!)
                 TempChange.sharedInstance().solutionDetailArray.addObject(name.value["SolutionDescription"]!!)
                 TempChange.sharedInstance().solutionVoteArray.addObject(name.value["SolutionVoteCount"]!! as! Int)
                 TempChange.sharedInstance().solutionIDArray.addObject(name.key)
+                
+                
                 //TODO:Check for use
                 TempChange.sharedInstance().solutionNewOldArray.addObject("old")
                 
@@ -125,11 +130,11 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
         
         
         //save details of currently viewed Change -- saved in TempArray
-        let postType:String = "fullResultPost"
-        let owner:String = "false"
-        let changeID:String = self.changeID
+        //let postType:String = "fullResultPost"
+       // let owner:String = "false"
+        //let changeID:String = self.changeID
         
-       
+       /*
         //completion handler to return newly created change
         _ = SaveData(postType:postType,owner:owner,changeID:changeID){
             (result) in
@@ -149,6 +154,24 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
             self.navigationController?.pushViewController(controller, animated: false)
             
         }
+        */
+        _ = SaveResultToCoreData(changeID:self.changeID){
+            (result) in
+            
+            
+            self.currentChange = result as! Change
+            
+            //segue to Viewfollowed change VC
+            var controller:ViewFollowedChangeViewController
+            
+            controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewFollowedChangeViewController") as! ViewFollowedChangeViewController
+            
+            controller.changeClicked = self.currentChange
+            controller.sendingController = "ViewResult"
+            
+            self.navigationController?.pushViewController(controller, animated: false)
+        }
+        
         
         
         
@@ -214,9 +237,6 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
         
     }
     
-    func goBackHome(){
-        
-    }
     
     
 }

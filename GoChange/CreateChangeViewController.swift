@@ -59,11 +59,14 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         //clear TempChange ready for new change
         TempChange.sharedInstance().changeName = ""
         TempChange.sharedInstance().changeDetail = ""
+       
         TempChange.sharedInstance().solutionDetailArray = []
         TempChange.sharedInstance().solutionNameArray = []
         TempChange.sharedInstance().solutionVoteArray = []
-        TempChange.sharedInstance().tweakDetailArray = []
-        TempChange.sharedInstance().tweakNameArray = []
+        TempChange.sharedInstance().solutionIDArray = []
+        
+        //TempChange.sharedInstance().tweakDetailArray = []
+        //TempChange.sharedInstance().tweakNameArray = []
         
         
         // if coming from home VC hide follow button
@@ -439,15 +442,22 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
             
         }else{
             
+            /*
             let postType:String = "fullPost"
             let owner:String = "true"
-            
-            _ = SaveData(postType:postType,owner:owner){
+             = SaveData(postType:postType,owner:owner){
                 (result) in
                 //TODO: do i nedd result here? (change object) 
-                
-                
             }
+            */
+            _ = SaveNewChange(completionHandler:{
+                (result) in
+                
+                //result is the newly created change!
+                
+            })
+            
+            
             
             self.dismissViewControllerAnimated(true, completion: nil)
             

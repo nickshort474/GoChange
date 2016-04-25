@@ -23,7 +23,7 @@ class RetrieveSolutionCountFirebase:NSObject{
             let solutionRef = nameRef.childByAppendingPath(changeArray[i] as! String)
             let countRef = solutionRef.childByAppendingPath("SolutionCount")
             
-            countRef.observeEventType(.Value, withBlock: { snapshot in
+            countRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
             
                 self.resultsArray.addObject(snapshot.value)
                 

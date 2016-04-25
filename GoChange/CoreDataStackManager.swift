@@ -33,10 +33,9 @@ class CoreDataStackManager {
     
     lazy var applicationDocumentsDirectory: NSURL = {
         
-        
-        
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
         return urls[urls.count-1]
+        
     }()
     
     
@@ -95,7 +94,7 @@ class CoreDataStackManager {
     
     //
     
-    func saveContext () {
+    func saveContext() {
         if managedObjectContext.hasChanges {
             do {
                 try managedObjectContext.save()

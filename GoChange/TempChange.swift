@@ -23,9 +23,11 @@ class TempChange:NSObject{
     
     var solutionIDArray:NSMutableArray = []
     
+    
+    var newSolutionIDArray:NSMutableArray = []
     var newSolutionNameArray:NSMutableArray = []
     var newSolutionDetailArray:NSMutableArray = []
-    
+    var newSolutionVoteArray:NSMutableArray = []
     
     var tweakNameArray:NSMutableArray = []
     var tweakDetailArray:NSMutableArray = []

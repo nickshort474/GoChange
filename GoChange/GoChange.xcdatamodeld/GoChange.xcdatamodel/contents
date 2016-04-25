@@ -9,6 +9,7 @@
         <relationship name="changeNeedingSolution" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Solution" inverseName="solutionToChange" inverseEntity="Solution" syncable="YES"/>
     </entity>
     <entity name="Solution" representedClassName=".Solution" syncable="YES">
+        <attribute name="haveVotedFor" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="solutionDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="solutionID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="solutionName" optional="YES" attributeType="String" syncable="YES"/>
@@ -23,7 +24,7 @@
     </entity>
     <elements>
         <element name="Change" positionX="-63" positionY="-18" width="128" height="135"/>
-        <element name="Solution" positionX="-63" positionY="9" width="128" height="135"/>
+        <element name="Solution" positionX="-63" positionY="9" width="128" height="150"/>
         <element name="Tweak" positionX="-45" positionY="36" width="128" height="90"/>
     </elements>
 </model>

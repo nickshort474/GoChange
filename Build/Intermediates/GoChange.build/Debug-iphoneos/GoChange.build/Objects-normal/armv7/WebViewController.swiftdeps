@@ -6,8 +6,8 @@ provides-nominal:
 provides-member:
 - ["C8GoChange17WebViewController", ""]
 provides-dynamic-lookup:
-- "viewDidLoad"
 - "didReceiveMemoryWarning"
+- "viewDidLoad"
 depends-top-level:
 - "WebViewController"
 - "UIViewController"

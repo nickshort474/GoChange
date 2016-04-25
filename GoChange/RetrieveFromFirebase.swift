@@ -19,7 +19,7 @@ class RetrieveFromFirebase:NSObject{
         
         super.init()
         
-        nameRef.observeEventType(.Value, withBlock: { snapshot in
+        nameRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
             
             completionHandler(results:snapshot)
            
