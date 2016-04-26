@@ -20,7 +20,7 @@ class SaveData:NSObject{
     var newChange:Change!
     var existingChange:Change!
     var postType:String = ""
-    var isOwner:String?
+    
     
     var haveVoted:String = ""
     
@@ -29,7 +29,7 @@ class SaveData:NSObject{
         
         
         self.postType = postType
-        self.isOwner = owner
+        
         
         
         //TODO: RE-write as switch statement
@@ -202,7 +202,7 @@ class SaveData:NSObject{
         // create core data change dictionary
         changeDictionary[Change.Keys.changeName] = TempChange.sharedInstance().changeName
         changeDictionary[Change.Keys.changeDescription] = TempChange.sharedInstance().changeDetail
-        changeDictionary[Change.Keys.owner] = self.isOwner
+        
         changeDictionary[Change.Keys.changeID] = self.changeID
         
         

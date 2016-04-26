@@ -41,9 +41,6 @@ class VoteForSolution:NSObject{
     
     func addVoteToCoreData(){
         
-        //TODO: Sort issue when switching between solutions viewed
-        //Still on same change, whichever solution viewed and only incrementing on fetchEntities.first!! 
-        //Only interacting with first solution!
         
         let predicate = NSPredicate(format: "solutionID == %@",solutionID)
         let fetchRequest = NSFetchRequest(entityName: "Solution")

@@ -582,7 +582,7 @@
                                             <rect key="frame" x="15" y="12" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ks6-v3-fEu">
@@ -788,10 +788,19 @@
                                             <outlet property="delegate" destination="GYX-c8-uwM" id="eFF-L8-yKJ"/>
                                         </connections>
                                     </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMr-RW-HHp">
+                                        <rect key="frame" x="412" y="209" width="163" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="Add a petition at Change.org"/>
+                                        <connections>
+                                            <action selector="addPetition:" destination="GYX-c8-uwM" eventType="touchUpInside" id="DNP-uJ-FSn"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="wsX-iJ-DcV" secondAttribute="trailing" constant="8" id="2WK-hj-44x"/>
+                                    <constraint firstAttribute="trailing" secondItem="QMr-RW-HHp" secondAttribute="trailing" constant="25" id="3QH-b8-h7m"/>
                                     <constraint firstItem="ES5-S7-10A" firstAttribute="top" secondItem="wuV-ff-IxT" secondAttribute="top" id="5qu-jQ-awr"/>
                                     <constraint firstAttribute="trailing" secondItem="ES5-S7-10A" secondAttribute="trailing" constant="8" id="6LZ-FP-h82"/>
                                     <constraint firstItem="CBm-Sy-q1H" firstAttribute="centerX" secondItem="Pbc-Xt-r0a" secondAttribute="centerX" id="C2B-sl-lRY"/>
@@ -800,6 +809,7 @@
                                     <constraint firstItem="wsX-iJ-DcV" firstAttribute="leading" secondItem="vZy-It-Oqd" secondAttribute="trailing" constant="8" id="H4I-71-ahn"/>
                                     <constraint firstItem="vZy-It-Oqd" firstAttribute="leading" secondItem="Pbc-Xt-r0a" secondAttribute="leading" constant="8" id="Luk-HL-JNp"/>
                                     <constraint firstItem="wuV-ff-IxT" firstAttribute="leading" secondItem="Pbc-Xt-r0a" secondAttribute="leading" constant="8" id="RwI-dY-AfM"/>
+                                    <constraint firstItem="yDm-Et-h54" firstAttribute="top" secondItem="QMr-RW-HHp" secondAttribute="bottom" constant="10" id="VLf-Ed-Fc1"/>
                                     <constraint firstItem="vZy-It-Oqd" firstAttribute="top" secondItem="Pbc-Xt-r0a" secondAttribute="top" constant="8" id="ZSp-rw-WVB"/>
                                     <constraint firstItem="CBm-Sy-q1H" firstAttribute="top" secondItem="yDm-Et-h54" secondAttribute="bottom" constant="25" id="evM-3B-qpn"/>
                                     <constraint firstItem="yDm-Et-h54" firstAttribute="height" secondItem="wuV-ff-IxT" secondAttribute="height" id="jO5-8H-bv2"/>
@@ -833,6 +843,7 @@
                         <outlet property="addSolution" destination="7dD-HK-3cs" id="91q-Zg-PP9"/>
                         <outlet property="detailTextView" destination="wuV-ff-IxT" id="dJM-UI-rov"/>
                         <outlet property="nameTextField" destination="vZy-It-Oqd" id="Yxv-en-cV0"/>
+                        <outlet property="petitionButton" destination="QMr-RW-HHp" id="uQE-n6-67L"/>
                         <outlet property="tweakTable" destination="yDm-Et-h54" id="zYN-Bu-y6V"/>
                     </connections>
                 </viewController>
@@ -985,6 +996,59 @@
             </objects>
             <point key="canvasLocation" x="1802" y="-1708"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="XlB-90-ezm">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="jOH-pR-YGb" customClass="WebViewController" customModule="GoChange" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uiC-9i-KiA"/>
+                        <viewControllerLayoutGuide type="bottom" id="zcE-pe-efB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dS1-UJ-dko">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6t7-lk-I1U">
+                                <rect key="frame" x="0.0" y="-30" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xyW-bP-hb7">
+                                <rect key="frame" x="138" y="570" width="442" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hi1-3Z-t7l">
+                                <rect key="frame" x="12" y="569" width="118" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Link this petition:"/>
+                                <connections>
+                                    <action selector="linkPetitionClick:" destination="jOH-pR-YGb" eventType="touchUpInside" id="8oM-da-FjW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="6t7-lk-I1U" secondAttribute="trailing" constant="-20" id="PNl-U5-HQt"/>
+                            <constraint firstItem="6t7-lk-I1U" firstAttribute="leading" secondItem="dS1-UJ-dko" secondAttribute="leadingMargin" constant="-20" id="Q3B-aG-sEC"/>
+                            <constraint firstItem="Hi1-3Z-t7l" firstAttribute="leading" secondItem="dS1-UJ-dko" secondAttribute="leadingMargin" id="XUC-DH-bC7"/>
+                            <constraint firstItem="6t7-lk-I1U" firstAttribute="top" secondItem="uiC-9i-KiA" secondAttribute="bottom" constant="-50" id="hZ6-Of-4Af"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="6t7-lk-I1U" secondAttribute="bottom" constant="30" id="lbZ-XF-f9R"/>
+                            <constraint firstItem="xyW-bP-hb7" firstAttribute="leading" secondItem="Hi1-3Z-t7l" secondAttribute="trailing" constant="5" id="p7x-Mp-gbW"/>
+                            <constraint firstItem="zcE-pe-efB" firstAttribute="top" secondItem="Hi1-3Z-t7l" secondAttribute="bottom" id="pdW-20-7G0"/>
+                            <constraint firstItem="xyW-bP-hb7" firstAttribute="trailing" secondItem="dS1-UJ-dko" secondAttribute="trailingMargin" id="rba-M2-M9q"/>
+                            <constraint firstItem="zcE-pe-efB" firstAttribute="top" secondItem="xyW-bP-hb7" secondAttribute="bottom" id="rif-nz-bpC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="linkPetition" destination="Hi1-3Z-t7l" id="7Kb-FT-dby"/>
+                        <outlet property="petitionText" destination="xyW-bP-hb7" id="49e-L8-1VC"/>
+                        <outlet property="webView" destination="6t7-lk-I1U" id="kya-qh-vTI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5iO-bA-r2N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1791" y="-1008"/>
+        </scene>
         <!--View Followed Change View Controller-->
         <scene sceneID="48u-ex-h6l">
             <objects>
@@ -1073,7 +1137,7 @@
                                                             <rect key="frame" x="15" y="12" width="32" height="20"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UCw-yM-GF6">

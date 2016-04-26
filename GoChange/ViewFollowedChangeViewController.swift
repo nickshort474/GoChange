@@ -64,8 +64,6 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
             let barButtonItem = UIBarButtonItem(title: "Home", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ViewFollowedChangeViewController.goBackHome))
             self.navigationItem.leftBarButtonItem = barButtonItem
             
-        }else if(sendingController == "Following"){
-            
         }
         
         nameField.text = changeClicked.changeName
@@ -97,7 +95,7 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
                     TempChange.sharedInstance().solutionDetailArray = []
                     TempChange.sharedInstance().solutionVoteArray = []
                     TempChange.sharedInstance().solutionIDArray = []
-                    
+                    TempChange.sharedInstance().solutionOwnerArray = []
                     //TODO: decide whether needed
                     TempChange.sharedInstance().solutionNewOldArray = []
                     
@@ -109,7 +107,7 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
                         TempChange.sharedInstance().solutionNameArray.addObject(solution.value["SolutionName"]!!)
                         TempChange.sharedInstance().solutionDetailArray.addObject(solution.value["SolutionDescription"]!!)
                         TempChange.sharedInstance().solutionVoteArray.addObject(solution.value["SolutionVoteCount"]!! as! Int)
-                        
+                        TempChange.sharedInstance().solutionOwnerArray.addObject(solution.value["SolutionOwner"]!! as!String)
                     }
                     
                     let localSolutionIDArray:NSMutableArray = []
@@ -130,11 +128,12 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
                                     
                                 if(TempChange.sharedInstance().solutionIDArray[i] as? String == localSolutionIDArray[j] as? String){
                                 
-                                    // IF there is a match between firebase solutions and coreData remove from arrays
+                                    // IF there is a match between a firebase solution and coreData remove it from arrays
                                     TempChange.sharedInstance().solutionIDArray.removeObjectAtIndex(i)
                                     TempChange.sharedInstance().solutionNameArray.removeObjectAtIndex(i)
                                     TempChange.sharedInstance().solutionDetailArray.removeObjectAtIndex(i)
                                     TempChange.sharedInstance().solutionVoteArray.removeObjectAtIndex(i)
+                                    TempChange.sharedInstance().solutionOwnerArray.removeObjectAtIndex(i)
                                 }
                             }
                          }
@@ -156,6 +155,7 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
                     TempChange.sharedInstance().solutionDetailArray = []
                     TempChange.sharedInstance().solutionVoteArray = []
                     TempChange.sharedInstance().solutionIDArray = []
+                    TempChange.sharedInstance().solutionOwnerArray = []
                     TempChange.sharedInstance().solutionNewOldArray = []
                     
                     //assign results from coreData return to temp array then use TempArray for table
@@ -166,7 +166,7 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
                         TempChange.sharedInstance().solutionVoteArray.addObject(solution.voteCount)
                         TempChange.sharedInstance().solutionIDArray.addObject(solution.solutionID)
                         TempChange.sharedInstance().solutionNewOldArray.addObject("old")
-                        
+                        TempChange.sharedInstance().solutionOwnerArray.addObject(solution.solutionOwner)
                     }
                     self.solutionTable.reloadData()
                     
@@ -191,14 +191,14 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
     }
 
     @IBAction func addNameClick(sender: UIButton) {
-        // if owner == true
-        //enable button
+        
+        //enable button if owner
     }
 
 
     @IBAction func addDetailClick(sender: UIButton) {
-        // if owner == true
-        //enable button
+        
+        //enable button if owner
     }
 
 

@@ -15,18 +15,18 @@ class Change:NSManagedObject{
     struct Keys{
         static let changeName = "changeName"
         static let changeDescription = "changeDescription"
-        static let owner = "owner"
         static let firebaseLocation = "firebaseLocation"
         static let changeID = "changeID"
         static let solutionCount = "solutionCount"
+        static let changeOwner = "changeOwner"
     }
     
     
     @NSManaged var changeName:String
     @NSManaged var changeDescription:String
-    @NSManaged var owner:String
     @NSManaged var changeID:String
     @NSManaged var solutionCount:NSNumber
+    @NSManaged var changeOwner:String
     @NSManaged var changeNeedingSolution:[Solution]
     
     
@@ -45,8 +45,7 @@ class Change:NSManagedObject{
         changeDescription = dictionary[Change.Keys.changeDescription] as! String
         changeID = dictionary[Change.Keys.changeID] as! String
         solutionCount = dictionary[Change.Keys.solutionCount] as! NSNumber
-        owner = dictionary[Change.Keys.owner] as! String
-        
+        changeOwner = dictionary[Change.Keys.changeOwner] as! String
                
     }
     

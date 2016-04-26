@@ -23,11 +23,12 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
     
     @IBOutlet weak var followChangeButton: UIButton!
     
-    
-    var isOwner:String!
+     
     var changeName:String!
     var changeDetail:String!
     var changeID:String!
+    var owner:String!
+    
     
     var currentChange:Change!
     
@@ -58,6 +59,7 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
         
         //load passed data into Temp variables to hold for use
         TempChange.sharedInstance().changeName = changeName
+        TempChange.sharedInstance().changeOwner = owner
         TempChange.sharedInstance().changeDetail = changeDetail
         
         
@@ -76,7 +78,7 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
                 TempChange.sharedInstance().solutionDetailArray.addObject(name.value["SolutionDescription"]!!)
                 TempChange.sharedInstance().solutionVoteArray.addObject(name.value["SolutionVoteCount"]!! as! Int)
                 TempChange.sharedInstance().solutionIDArray.addObject(name.key)
-                
+                TempChange.sharedInstance().solutionOwnerArray.addObject(name.value["SolutionOwner"]!! as! String)
                 
                 //TODO:Check for use
                 TempChange.sharedInstance().solutionNewOldArray.addObject("old")

@@ -48,6 +48,9 @@ class SaveNewSolution:NSObject{
         let changeSolutionsLocation = Firebase(url:"https://gochange.firebaseio.com/change/solutions")
         let uniqueSolutionLocation = changeSolutionsLocation.childByAppendingPath(changeID)
         
+        let solutionOwner = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
+        
+        
         //loop through solutions array
         for var i in 0 ..< (TempChange.sharedInstance().newSolutionNameArray.count){
             
@@ -59,7 +62,7 @@ class SaveNewSolution:NSObject{
             self.solutionIDArray.addObject(uniqueSolutionReference.key)
             
             //set solution values
-            let changeSolutionValues = ["SolutionName":TempChange.sharedInstance().newSolutionNameArray[i],"SolutionDescription":TempChange.sharedInstance().newSolutionDetailArray[i],"SolutionVoteCount":0]
+            let changeSolutionValues = ["SolutionName":TempChange.sharedInstance().newSolutionNameArray[i],"SolutionDescription":TempChange.sharedInstance().newSolutionDetailArray[i],"SolutionVoteCount":0,"SolutionOwner":solutionOwner]
             
             //save values to firebase
             uniqueSolutionReference.setValue(changeSolutionValues)
@@ -73,6 +76,8 @@ class SaveNewSolution:NSObject{
     
     func createCoreDataSolutions(){
         
+        let solutionOwner = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
+        
         for var i in 0 ..< TempChange.sharedInstance().newSolutionNameArray.count{
             
             var solutionDictionary:[String:AnyObject] = [String:AnyObject]()
@@ -82,7 +87,7 @@ class SaveNewSolution:NSObject{
             solutionDictionary[Solution.Keys.voteCount] = 0
             solutionDictionary[Solution.Keys.solutionID] = self.solutionIDArray[i]
             solutionDictionary[Solution.Keys.haveVotedFor] = "no"
-       
+            solutionDictionary[Solution.Keys.solutionOwner] = solutionOwner
             
             //create core data solution object
             let newSolution = Solution(dictionary: solutionDictionary,context: sharedContext)

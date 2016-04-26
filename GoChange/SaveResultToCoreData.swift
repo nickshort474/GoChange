@@ -42,9 +42,10 @@ class SaveResultToCoreData:NSObject{
         // create core data change dictionary
         changeDictionary[Change.Keys.changeName] = TempChange.sharedInstance().changeName
         changeDictionary[Change.Keys.changeDescription] = TempChange.sharedInstance().changeDetail
-        changeDictionary[Change.Keys.owner] = "no"
         changeDictionary[Change.Keys.changeID] = self.changeID
         changeDictionary[Change.Keys.solutionCount] = TempChange.sharedInstance().solutionNameArray.count
+        changeDictionary[Change.Keys.changeOwner] = TempChange.sharedInstance().changeOwner
+        
         
         //create change object in core data
         newChange = Change(dictionary: changeDictionary,context: sharedContext)
@@ -82,6 +83,8 @@ class SaveResultToCoreData:NSObject{
             solutionDictionary[Solution.Keys.voteCount] = TempChange.sharedInstance().solutionVoteArray[i]
             solutionDictionary[Solution.Keys.solutionID] = TempChange.sharedInstance().solutionIDArray[i]
             solutionDictionary[Solution.Keys.haveVotedFor] = "no"
+            solutionDictionary[Solution.Keys.solutionOwner] = TempChange.sharedInstance().solutionOwnerArray[i]
+            
             
             //create core data solution object
             let newSolution = Solution(dictionary: solutionDictionary,context: sharedContext)

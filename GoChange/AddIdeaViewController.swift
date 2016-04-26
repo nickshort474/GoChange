@@ -11,8 +11,7 @@ import UIKit
 class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate,UITableViewDelegate {
     
     
-    var petitionId:Int = 1
-    var session = NSURLSession.sharedSession()
+    
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var detailTextView: UITextView!
@@ -22,6 +21,8 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     @IBOutlet weak var tweakTable: UITableView!
     
     @IBOutlet weak var addSolution: UIButton!
+    
+    @IBOutlet weak var petitionButton: UIButton!
     
     var currentNameData:String!
     var currentDetailData:String!
@@ -38,6 +39,9 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     var solutionCount:Int!
     var index:Int!
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -45,6 +49,7 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         self.navigationController?.title = "Add Solution"
         addNameButton.hidden = true
         addDetailButton.hidden = true
+        
         addSolution.enabled = false
         addSolution.alpha = 0.5
         
@@ -61,6 +66,8 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     override func viewWillAppear(animated: Bool) {
         
         
+        
+        
         if(viewControllerStatus == "viewing"){
             
             //Disbale editing of name and detail fields
@@ -70,11 +77,25 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
             //Set controller title
             self.title = "Solution"
             
+            //petitionButton.setTitle(`, forState: <#T##UIControlState#>)
+            
             //load data into fields
             nameTextField.text = loadedNameData
             detailTextView.textColor = UIColor.blackColor()
-            detailTextView.text = loadedDetailData
             
+            var localText:String = ""
+            
+            
+            
+            if(GoChangeClient.Constants.dynamicPetitionURL != ""){
+                
+                localText = loadedDetailData
+                localText += GoChangeClient.Constants.dynamicPetitionURL
+                detailTextView.text = localText
+                
+            }else{
+                detailTextView.text = loadedDetailData
+            }
             
             addSolution.setTitle("Vote For Solution", forState: .Normal)
             addSolution.enabled = true
@@ -96,7 +117,7 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
                 
         if(viewControllerStatus == "viewing"){
            
-            //TODO: Vote for solution, need to pass something in to get solution to vote for
+            //Vote for solution
             _ = VoteForSolution(change: change,changeID:changeID,solutionID:solutionID){
                 (result) in
                 
@@ -105,6 +126,10 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
             var currentVoteCount = TempChange.sharedInstance().solutionVoteArray[self.index] as! Int
             currentVoteCount += 1
             TempChange.sharedInstance().solutionVoteArray[self.index] = currentVoteCount
+            
+            //TODO: decide whether to change button to Have Voted instead of alpha change
+            self.addSolution.enabled = false
+            self.addSolution.alpha = 0.5
             
         }else{
             
@@ -235,10 +260,24 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     
     @IBAction func addPetition(sender: UIButton) {
         
+        //open web browser to go to change.org
+        
+        var controller:WebViewController
+        controller = storyboard?.instantiateViewControllerWithIdentifier("WebViewController") as! WebViewController
+        
+        controller.urlString = GoChangeClient.Constants.dynamicPetitionURL
+        
+        self.navigationController?.pushViewController(controller, animated: true)
+        
+        //self.presentViewController(controller, animated: true, completion: nil)
+        
+        
+        //_ = ChangeOrgCode()
+        
         
         //TODO: put all petition code into outside file
         //TODO: Add button to add petition
-        
+        /*
         let parameterDictionary = [
             "api_key":GoChangeClient.Constants.apiKey,
             "petition_url":GoChangeClient.Constants.petitionURL
@@ -275,6 +314,7 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
             }
         }
         task.resume()
+    */
     }
     
     

@@ -29,7 +29,7 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
     var currentDetailData:String = ""
     
     var sendingController:String = ""
-    var isOwner:String = ""
+    
     
     var changeName:String = ""
     var changeDetail:String = ""

@@ -47,8 +47,10 @@ class SaveNewChange:NSObject{
         
         changeID = changeNameLocation.key
         
+        let changeOwner = NSUserDefaults.standardUserDefaults().valueForKey("uid") as? String
+        
         // set up values to be saved
-        let changeNameValues = ["ChangeName":TempChange.sharedInstance().changeName]
+        let changeNameValues = ["ChangeName":TempChange.sharedInstance().changeName,"ChangeOwner": changeOwner!]
         
         //save name of change to firebase
         changeNameLocation.setValue(changeNameValues)
@@ -87,6 +89,8 @@ class SaveNewChange:NSObject{
         let changeSolutionsLocation = Firebase(url:"https://gochange.firebaseio.com/change/solutions")
         let uniqueSolutionLocation = changeSolutionsLocation.childByAppendingPath(changeID!)
         
+        let solutionOwner = NSUserDefaults.standardUserDefaults().valueForKey("uid") as? String
+        
         //loop through solutions array
         for var i in 0 ..< (TempChange.sharedInstance().solutionNameArray.count){
             
@@ -96,8 +100,9 @@ class SaveNewChange:NSObject{
             //save unique locationID into IDArray so can be saved in coreData
             self.solutionIDArray.addObject(uniqueSolutionReference.key)
             
+            
             //set solution values
-            let changeSolutionValues = ["SolutionName":TempChange.sharedInstance().solutionNameArray[i],"SolutionDescription":TempChange.sharedInstance().solutionDetailArray[i],"SolutionVoteCount":0]
+            let changeSolutionValues = ["SolutionName":TempChange.sharedInstance().solutionNameArray[i],"SolutionDescription":TempChange.sharedInstance().solutionDetailArray[i],"SolutionVoteCount":0,"SolutionOwner":solutionOwner!]
             
             //save values to firebase
             uniqueSolutionReference.setValue(changeSolutionValues)
@@ -115,9 +120,12 @@ class SaveNewChange:NSObject{
         // create core data change dictionary
         changeDictionary[Change.Keys.changeName] = TempChange.sharedInstance().changeName
         changeDictionary[Change.Keys.changeDescription] = TempChange.sharedInstance().changeDetail
-        changeDictionary[Change.Keys.owner] = "yes"
         changeDictionary[Change.Keys.changeID] = self.changeID
         changeDictionary[Change.Keys.solutionCount] = TempChange.sharedInstance().solutionNameArray.count
+        
+        let changeOwner = NSUserDefaults.standardUserDefaults().valueForKey("uid") as? String
+        changeDictionary[Change.Keys.changeOwner] = changeOwner!
+        
         
         //create change object in core data
         newChange = Change(dictionary: changeDictionary,context: sharedContext)
@@ -142,6 +150,8 @@ class SaveNewChange:NSObject{
     
     func createCoreDataSolutions(){
         
+        let solutionOwner = NSUserDefaults.standardUserDefaults().valueForKey("uid") as? String
+        
         for var i in 0 ..< TempChange.sharedInstance().solutionNameArray.count{
             
             var solutionDictionary:[String:AnyObject] = [String:AnyObject]()
@@ -149,9 +159,9 @@ class SaveNewChange:NSObject{
             solutionDictionary[Solution.Keys.solutionName] = TempChange.sharedInstance().solutionNameArray[i]
             solutionDictionary[Solution.Keys.solutionDescription] = TempChange.sharedInstance().solutionDetailArray[i]
             solutionDictionary[Solution.Keys.voteCount] = 0
-            solutionDictionary[Solution.Keys.solutionID] = self.solutionIDArray[i]//TempChange.sharedInstance().solutionIDArray[i]
-            solutionDictionary[Solution.Keys.haveVotedFor] = "yes" //user created solutions can not be voted for themselves
-            
+            solutionDictionary[Solution.Keys.solutionID] = self.solutionIDArray[i]
+            solutionDictionary[Solution.Keys.haveVotedFor] = "yes" //user created solution, can not be voted for themselves
+            solutionDictionary[Solution.Keys.solutionOwner] = solutionOwner!
             
             //create core data solution object
             let newSolution = Solution(dictionary: solutionDictionary,context: sharedContext)

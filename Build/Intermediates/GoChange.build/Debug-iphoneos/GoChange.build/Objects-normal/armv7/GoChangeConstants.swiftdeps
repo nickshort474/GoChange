@@ -9,12 +9,13 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - "GoChangeClient"
-- "String"
 - "StringLiteralType"
+- "String"
 depends-member:
 - ["VC8GoChange14GoChangeClient9Constants", "String"]
 - ["VC8GoChange14GoChangeClient9Constants", "apiKey"]
 - ["VC8GoChange14GoChangeClient9Constants", "detailText"]
+- ["VC8GoChange14GoChangeClient9Constants", "dynamicPetitionURL"]
 - ["VC8GoChange14GoChangeClient9Constants", "init"]
 - ["VC8GoChange14GoChangeClient9Constants", "petitionURL"]
 - ["VC8GoChange14GoChangeClient9Constants", "requestURL"]
@@ -51,4 +52,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "f81ac07fd722c6bfa1761164b7516d85"
+interface-hash: "704e9e3f84667906f37543e75be5c408"

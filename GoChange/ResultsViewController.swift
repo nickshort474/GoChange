@@ -17,6 +17,11 @@ class ResultsViewController: UIViewController,UITableViewDelegate {
     var resultDetailArray:NSMutableArray = []
     var resultSolutionCountArray:NSMutableArray = []
     
+    
+    //TODO: Display owner of change somewhere
+    var solutionOwnerArray:NSMutableArray = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -59,11 +64,12 @@ class ResultsViewController: UIViewController,UITableViewDelegate {
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewResultChangeViewController") as! ViewResultChangeViewController
         let navigationController = self.navigationController
         
-        controller.isOwner = "false"
         controller.changeName = self.resultNameArray[indexPath.row] as! String
         controller.changeDetail = self.resultDetailArray[indexPath.row] as! String
         controller.changeID = self.refArray[indexPath.row] as! String
-        
+        controller.owner = self.solutionOwnerArray[indexPath.row] as! String
+    
+    
         navigationController?.pushViewController(controller,animated: true)
     
     }

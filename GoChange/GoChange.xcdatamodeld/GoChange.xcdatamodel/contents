@@ -4,7 +4,7 @@
         <attribute name="changeDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="changeID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="changeName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="owner" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="changeOwner" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="solutionCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="changeNeedingSolution" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Solution" inverseName="solutionToChange" inverseEntity="Solution" syncable="YES"/>
     </entity>
@@ -13,6 +13,7 @@
         <attribute name="solutionDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="solutionID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="solutionName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="solutionOwner" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="voteCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="solutionNeedingTweak" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tweak" inverseName="tweakForSolution" inverseEntity="Tweak" syncable="YES"/>
         <relationship name="solutionToChange" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Change" inverseName="changeNeedingSolution" inverseEntity="Change" syncable="YES"/>
@@ -24,7 +25,7 @@
     </entity>
     <elements>
         <element name="Change" positionX="-63" positionY="-18" width="128" height="135"/>
-        <element name="Solution" positionX="-63" positionY="9" width="128" height="150"/>
+        <element name="Solution" positionX="-63" positionY="9" width="128" height="165"/>
         <element name="Tweak" positionX="-45" positionY="36" width="128" height="90"/>
     </elements>
 </model>

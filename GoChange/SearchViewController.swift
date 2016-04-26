@@ -14,6 +14,9 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var searchTextField: UITextField!
     
     var returnedNameArray:NSMutableArray = []
+    var returnedOwnerArray:NSMutableArray = []
+    var useOwnerArray:NSMutableArray = []
+    
     var returnedRefArray:NSMutableArray = []
     var countArray:NSMutableArray = []
     var matchedNameArray:NSMutableArray = []
@@ -67,6 +70,7 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
                 
                 //add value of returned item to array
                 self.returnedNameArray.addObject(name.value["ChangeName"]!! as! String)
+                self.returnedOwnerArray.addObject(name.value["ChangeOwner"]!! as! String)
                 
                 //add ref to item to another array
                 self.returnedRefArray.addObject(String(name.key))
@@ -133,7 +137,7 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
            
             let intOfNum = num as! Int
             useRefArray.addObject(returnedRefArray[intOfNum])
-            
+            useOwnerArray.addObject(returnedOwnerArray[intOfNum])
         }
         
         // use refArray to collect details from firebase
@@ -168,6 +172,8 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         controller.resultSolutionCountArray = useSolutionCountArray
         
         controller.refArray = useRefArray
+        controller.solutionOwnerArray = useOwnerArray
+        
         
         navigationController?.pushViewController(controller,animated: true)
     }

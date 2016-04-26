@@ -99,7 +99,6 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
-@class NSURLSession;
 @class Change;
 @class UIButton;
 @class UITextField;
@@ -112,14 +111,13 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 
 SWIFT_CLASS("_TtC8GoChange21AddIdeaViewController")
 @interface AddIdeaViewController : UIViewController <UIScrollViewDelegate, UITextViewDelegate, UITableViewDelegate, UITextFieldDelegate>
-@property (nonatomic) NSInteger petitionId;
-@property (nonatomic, strong) NSURLSession * _Nonnull session;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified nameTextField;
 @property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified detailTextView;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified addNameButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified addDetailButton;
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tweakTable;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified addSolution;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified petitionButton;
 @property (nonatomic, copy) NSString * _Null_unspecified currentNameData;
 @property (nonatomic, copy) NSString * _Null_unspecified currentDetailData;
 @property (nonatomic, copy) NSString * _Null_unspecified viewControllerStatus;
@@ -198,6 +196,17 @@ SWIFT_CLASS("_TtC8GoChange6Change")
 @property (nonatomic, copy) NSArray<Solution *> * _Nonnull changeNeedingSolution;
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithDictionary:(NSDictionary<NSString *, id> * _Nonnull)dictionary context:(NSManagedObjectContext * _Nonnull)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSURLSession;
+
+SWIFT_CLASS("_TtC8GoChange13ChangeOrgCode")
+@interface ChangeOrgCode : NSObject
+@property (nonatomic) NSInteger petitionId;
+@property (nonatomic, strong) NSURLSession * _Nonnull session;
+@property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nonnull parameterDictionary;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)performCall;
 @end
 
 @class Firebase;
@@ -621,10 +630,18 @@ SWIFT_CLASS("_TtC8GoChange15VoteForSolution")
 - (void)addVoteToFirebase;
 @end
 
+@class UIWebView;
 
 SWIFT_CLASS("_TtC8GoChange17WebViewController")
-@interface WebViewController : UIViewController
+@interface WebViewController : UIViewController <UIWebViewDelegate>
+@property (nonatomic, weak) IBOutlet UIWebView * _Null_unspecified webView;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified linkPetition;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified petitionText;
+@property (nonatomic, copy) NSString * _Null_unspecified petitionString;
+@property (nonatomic, copy) NSString * _Nonnull urlString;
 - (void)viewDidLoad;
+- (void)webViewDidFinishLoad:(UIWebView * _Nonnull)webView;
+- (IBAction)linkPetitionClick:(UIButton * _Nonnull)sender;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;

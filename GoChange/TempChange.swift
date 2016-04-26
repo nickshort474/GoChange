@@ -13,6 +13,7 @@ class TempChange:NSObject{
     
     
     var changeName:String = ""
+    var changeOwner:String = ""
     var changeDetail:String = ""
     
     
@@ -20,9 +21,9 @@ class TempChange:NSObject{
     var solutionDetailArray:NSMutableArray = []
     var solutionVoteArray:NSMutableArray = []
     var solutionNewOldArray:NSMutableArray = []
-    
     var solutionIDArray:NSMutableArray = []
     
+    var solutionOwnerArray:NSMutableArray = []
     
     var newSolutionIDArray:NSMutableArray = []
     var newSolutionNameArray:NSMutableArray = []

@@ -17,6 +17,7 @@ class Solution:NSManagedObject{
         static let voteCount = "voteCount"
         static let solutionID = "solutionID"
         static let haveVotedFor = "haveVotedFor"
+        static let solutionOwner = "solutionOwner"
     }
     
     
@@ -25,6 +26,9 @@ class Solution:NSManagedObject{
     @NSManaged var voteCount:NSNumber
     @NSManaged var solutionID:String
     @NSManaged var haveVotedFor:String
+    @NSManaged var solutionOwner:String
+    
+    
     @NSManaged var solutionToChange:Change
     @NSManaged var solutionNeedingTweaking:[Tweak]
     
@@ -44,6 +48,7 @@ class Solution:NSManagedObject{
         voteCount = dictionary[Solution.Keys.voteCount] as! Int
         solutionID = dictionary[Solution.Keys.solutionID] as! String
         haveVotedFor = dictionary[Solution.Keys.haveVotedFor] as! String
+        solutionOwner = dictionary[Solution.Keys.solutionOwner] as! String
     }
    
 }
