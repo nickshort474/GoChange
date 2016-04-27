@@ -6,43 +6,46 @@ provides-nominal:
 provides-member:
 - ["C8GoChange20SearchViewController", ""]
 provides-dynamic-lookup:
-- "returnedRefArray"
 - "viewWillAppear"
-- "viewDidLoad"
-- "useRefArray"
-- "matchedNameArray"
-- "textFieldShouldReturn"
 - "homeButtonClick"
-- "useSolutionCountArray"
-- "checkResults"
-- "createRefArray"
-- "useDetailArray"
-- "didReceiveMemoryWarning"
-- "sendToResults"
-- "returnedNameArray"
+- "useOwnerArray"
+- "viewDidLoad"
 - "searchForResults"
-- "searchTextField"
+- "textFieldShouldReturn"
+- "returnedRefArray"
+- "matchedNameArray"
+- "useSolutionCountArray"
+- "returnedNameArray"
 - "countArray"
+- "returnedOwnerArray"
+- "useDetailArray"
+- "checkResults"
+- "didReceiveMemoryWarning"
+- "useRefArray"
+- "searchTextField"
+- "createRefArray"
+- "sendToResults"
 depends-top-level:
-- !private "!="
-- !private "+="
+- !private "print"
+- !private "RetrieveFromFirebase"
+- "Bool"
 - "NSMutableArray"
+- !private "+="
+- "UIButton"
+- !private "Int"
+- !private "FDataSnapshot"
 - "UITextField"
+- !private "StringLiteralType"
+- "UITextFieldDelegate"
+- !private "RetrieveDetailsFromFirebase"
+- !private "ResultsViewController"
+- !private "!="
+- "UIViewController"
 - !private "String"
 - "SearchViewController"
-- !private "FDataSnapshot"
-- "StringLiteralType"
-- !private "ResultsViewController"
-- "UIButton"
-- !private "RetrieveDetailsFromFirebase"
-- !private "Int"
 - !private "RetrieveSolutionCountFirebase"
-- "UITextFieldDelegate"
-- "Array"
 - !private "BooleanLiteralType"
-- !private "RetrieveFromFirebase"
-- "UIViewController"
-- "Bool"
+- "Array"
 depends-member:
 - ["Ps9AnyObject", "Element"]
 - !private ["Ps9AnyObject", "Generator"]
@@ -67,6 +70,7 @@ depends-member:
 - !private ["Ps9AnyObject", "key"]
 - ["Ps9AnyObject", "matchedNameArray"]
 - !private ["Ps9AnyObject", "navigationController"]
+- !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "pushViewController"]
 - !private ["Ps9AnyObject", "rangeOfString"]
 - !private ["Ps9AnyObject", "refArray"]
@@ -75,10 +79,12 @@ depends-member:
 - !private ["Ps9AnyObject", "resultNameArray"]
 - !private ["Ps9AnyObject", "resultSolutionCountArray"]
 - ["Ps9AnyObject", "returnedNameArray"]
+- ["Ps9AnyObject", "returnedOwnerArray"]
 - ["Ps9AnyObject", "returnedRefArray"]
 - ["Ps9AnyObject", "searchForResults"]
 - ["Ps9AnyObject", "searchTextField"]
 - ["Ps9AnyObject", "sendToResults"]
+- !private ["Ps9AnyObject", "solutionOwnerArray"]
 - !private ["Ps9AnyObject", "storyboard"]
 - !private ["Ps9AnyObject", "subscript"]
 - !private ["Ps9AnyObject", "text"]
@@ -90,6 +96,7 @@ depends-member:
 - ["Ps9AnyObject", "textFieldShouldEndEditing"]
 - ["Ps9AnyObject", "textFieldShouldReturn"]
 - ["Ps9AnyObject", "useDetailArray"]
+- ["Ps9AnyObject", "useOwnerArray"]
 - ["Ps9AnyObject", "useRefArray"]
 - ["Ps9AnyObject", "useSolutionCountArray"]
 - !private ["Ps9AnyObject", "value"]
@@ -142,6 +149,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "key"]
 - ["Ps11CVarArgType", "matchedNameArray"]
 - !private ["Ps11CVarArgType", "navigationController"]
+- !private ["Ps11CVarArgType", "print"]
 - !private ["Ps11CVarArgType", "pushViewController"]
 - !private ["Ps11CVarArgType", "rangeOfString"]
 - !private ["Ps11CVarArgType", "refArray"]
@@ -150,10 +158,12 @@ depends-member:
 - !private ["Ps11CVarArgType", "resultNameArray"]
 - !private ["Ps11CVarArgType", "resultSolutionCountArray"]
 - ["Ps11CVarArgType", "returnedNameArray"]
+- ["Ps11CVarArgType", "returnedOwnerArray"]
 - ["Ps11CVarArgType", "returnedRefArray"]
 - ["Ps11CVarArgType", "searchForResults"]
 - ["Ps11CVarArgType", "searchTextField"]
 - ["Ps11CVarArgType", "sendToResults"]
+- !private ["Ps11CVarArgType", "solutionOwnerArray"]
 - !private ["Ps11CVarArgType", "storyboard"]
 - !private ["Ps11CVarArgType", "subscript"]
 - !private ["Ps11CVarArgType", "text"]
@@ -165,6 +175,7 @@ depends-member:
 - ["Ps11CVarArgType", "textFieldShouldEndEditing"]
 - ["Ps11CVarArgType", "textFieldShouldReturn"]
 - ["Ps11CVarArgType", "useDetailArray"]
+- ["Ps11CVarArgType", "useOwnerArray"]
 - ["Ps11CVarArgType", "useRefArray"]
 - ["Ps11CVarArgType", "useSolutionCountArray"]
 - !private ["Ps11CVarArgType", "value"]
@@ -206,6 +217,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "key"]
 - ["Ps28CustomDebugStringConvertible", "matchedNameArray"]
 - !private ["Ps28CustomDebugStringConvertible", "navigationController"]
+- !private ["Ps28CustomDebugStringConvertible", "print"]
 - !private ["Ps28CustomDebugStringConvertible", "pushViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "rangeOfString"]
 - !private ["Ps28CustomDebugStringConvertible", "refArray"]
@@ -214,10 +226,12 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "resultNameArray"]
 - !private ["Ps28CustomDebugStringConvertible", "resultSolutionCountArray"]
 - ["Ps28CustomDebugStringConvertible", "returnedNameArray"]
+- ["Ps28CustomDebugStringConvertible", "returnedOwnerArray"]
 - ["Ps28CustomDebugStringConvertible", "returnedRefArray"]
 - ["Ps28CustomDebugStringConvertible", "searchForResults"]
 - ["Ps28CustomDebugStringConvertible", "searchTextField"]
 - ["Ps28CustomDebugStringConvertible", "sendToResults"]
+- !private ["Ps28CustomDebugStringConvertible", "solutionOwnerArray"]
 - !private ["Ps28CustomDebugStringConvertible", "storyboard"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
 - !private ["Ps28CustomDebugStringConvertible", "text"]
@@ -229,6 +243,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "textFieldShouldEndEditing"]
 - ["Ps28CustomDebugStringConvertible", "textFieldShouldReturn"]
 - ["Ps28CustomDebugStringConvertible", "useDetailArray"]
+- ["Ps28CustomDebugStringConvertible", "useOwnerArray"]
 - ["Ps28CustomDebugStringConvertible", "useRefArray"]
 - ["Ps28CustomDebugStringConvertible", "useSolutionCountArray"]
 - !private ["Ps28CustomDebugStringConvertible", "value"]
@@ -263,6 +278,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "key"]
 - ["Ps23CustomStringConvertible", "matchedNameArray"]
 - !private ["Ps23CustomStringConvertible", "navigationController"]
+- !private ["Ps23CustomStringConvertible", "print"]
 - !private ["Ps23CustomStringConvertible", "pushViewController"]
 - !private ["Ps23CustomStringConvertible", "rangeOfString"]
 - !private ["Ps23CustomStringConvertible", "refArray"]
@@ -271,10 +287,12 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "resultNameArray"]
 - !private ["Ps23CustomStringConvertible", "resultSolutionCountArray"]
 - ["Ps23CustomStringConvertible", "returnedNameArray"]
+- ["Ps23CustomStringConvertible", "returnedOwnerArray"]
 - ["Ps23CustomStringConvertible", "returnedRefArray"]
 - ["Ps23CustomStringConvertible", "searchForResults"]
 - ["Ps23CustomStringConvertible", "searchTextField"]
 - ["Ps23CustomStringConvertible", "sendToResults"]
+- !private ["Ps23CustomStringConvertible", "solutionOwnerArray"]
 - !private ["Ps23CustomStringConvertible", "storyboard"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
 - !private ["Ps23CustomStringConvertible", "text"]
@@ -286,6 +304,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "textFieldShouldEndEditing"]
 - ["Ps23CustomStringConvertible", "textFieldShouldReturn"]
 - ["Ps23CustomStringConvertible", "useDetailArray"]
+- ["Ps23CustomStringConvertible", "useOwnerArray"]
 - ["Ps23CustomStringConvertible", "useRefArray"]
 - ["Ps23CustomStringConvertible", "useSolutionCountArray"]
 - !private ["Ps23CustomStringConvertible", "value"]
@@ -318,6 +337,7 @@ depends-member:
 - !private ["Ps9Equatable", "key"]
 - ["Ps9Equatable", "matchedNameArray"]
 - !private ["Ps9Equatable", "navigationController"]
+- !private ["Ps9Equatable", "print"]
 - !private ["Ps9Equatable", "pushViewController"]
 - !private ["Ps9Equatable", "rangeOfString"]
 - !private ["Ps9Equatable", "refArray"]
@@ -326,10 +346,12 @@ depends-member:
 - !private ["Ps9Equatable", "resultNameArray"]
 - !private ["Ps9Equatable", "resultSolutionCountArray"]
 - ["Ps9Equatable", "returnedNameArray"]
+- ["Ps9Equatable", "returnedOwnerArray"]
 - ["Ps9Equatable", "returnedRefArray"]
 - ["Ps9Equatable", "searchForResults"]
 - ["Ps9Equatable", "searchTextField"]
 - ["Ps9Equatable", "sendToResults"]
+- !private ["Ps9Equatable", "solutionOwnerArray"]
 - !private ["Ps9Equatable", "storyboard"]
 - !private ["Ps9Equatable", "subscript"]
 - !private ["Ps9Equatable", "text"]
@@ -341,6 +363,7 @@ depends-member:
 - ["Ps9Equatable", "textFieldShouldEndEditing"]
 - ["Ps9Equatable", "textFieldShouldReturn"]
 - ["Ps9Equatable", "useDetailArray"]
+- ["Ps9Equatable", "useOwnerArray"]
 - ["Ps9Equatable", "useRefArray"]
 - ["Ps9Equatable", "useSolutionCountArray"]
 - !private ["Ps9Equatable", "value"]
@@ -382,6 +405,7 @@ depends-member:
 - !private ["Ps8Hashable", "key"]
 - ["Ps8Hashable", "matchedNameArray"]
 - !private ["Ps8Hashable", "navigationController"]
+- !private ["Ps8Hashable", "print"]
 - !private ["Ps8Hashable", "pushViewController"]
 - !private ["Ps8Hashable", "rangeOfString"]
 - !private ["Ps8Hashable", "refArray"]
@@ -390,10 +414,12 @@ depends-member:
 - !private ["Ps8Hashable", "resultNameArray"]
 - !private ["Ps8Hashable", "resultSolutionCountArray"]
 - ["Ps8Hashable", "returnedNameArray"]
+- ["Ps8Hashable", "returnedOwnerArray"]
 - ["Ps8Hashable", "returnedRefArray"]
 - ["Ps8Hashable", "searchForResults"]
 - ["Ps8Hashable", "searchTextField"]
 - ["Ps8Hashable", "sendToResults"]
+- !private ["Ps8Hashable", "solutionOwnerArray"]
 - !private ["Ps8Hashable", "storyboard"]
 - !private ["Ps8Hashable", "subscript"]
 - !private ["Ps8Hashable", "text"]
@@ -405,6 +431,7 @@ depends-member:
 - ["Ps8Hashable", "textFieldShouldEndEditing"]
 - ["Ps8Hashable", "textFieldShouldReturn"]
 - ["Ps8Hashable", "useDetailArray"]
+- ["Ps8Hashable", "useOwnerArray"]
 - ["Ps8Hashable", "useRefArray"]
 - ["Ps8Hashable", "useSolutionCountArray"]
 - !private ["Ps8Hashable", "value"]
@@ -469,6 +496,7 @@ depends-member:
 - ["PSo8NSCoding", "init"]
 - ["PSo8NSCoding", "matchedNameArray"]
 - !private ["PSo8NSCoding", "navigationController"]
+- !private ["PSo8NSCoding", "print"]
 - !private ["PSo8NSCoding", "pushViewController"]
 - !private ["PSo8NSCoding", "rangeOfString"]
 - !private ["PSo8NSCoding", "refArray"]
@@ -477,10 +505,12 @@ depends-member:
 - !private ["PSo8NSCoding", "resultNameArray"]
 - !private ["PSo8NSCoding", "resultSolutionCountArray"]
 - ["PSo8NSCoding", "returnedNameArray"]
+- ["PSo8NSCoding", "returnedOwnerArray"]
 - ["PSo8NSCoding", "returnedRefArray"]
 - ["PSo8NSCoding", "searchForResults"]
 - ["PSo8NSCoding", "searchTextField"]
 - ["PSo8NSCoding", "sendToResults"]
+- !private ["PSo8NSCoding", "solutionOwnerArray"]
 - !private ["PSo8NSCoding", "storyboard"]
 - !private ["PSo8NSCoding", "subscript"]
 - !private ["PSo8NSCoding", "text"]
@@ -492,6 +522,7 @@ depends-member:
 - ["PSo8NSCoding", "textFieldShouldEndEditing"]
 - ["PSo8NSCoding", "textFieldShouldReturn"]
 - ["PSo8NSCoding", "useDetailArray"]
+- ["PSo8NSCoding", "useOwnerArray"]
 - ["PSo8NSCoding", "useRefArray"]
 - ["PSo8NSCoding", "useSolutionCountArray"]
 - ["PSo8NSCoding", "viewDidLoad"]
@@ -519,16 +550,19 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "init"]
 - ["PSo26NSExtensionRequestHandling", "matchedNameArray"]
 - !private ["PSo26NSExtensionRequestHandling", "navigationController"]
+- !private ["PSo26NSExtensionRequestHandling", "print"]
 - !private ["PSo26NSExtensionRequestHandling", "pushViewController"]
 - !private ["PSo26NSExtensionRequestHandling", "refArray"]
 - !private ["PSo26NSExtensionRequestHandling", "resultDetailArray"]
 - !private ["PSo26NSExtensionRequestHandling", "resultNameArray"]
 - !private ["PSo26NSExtensionRequestHandling", "resultSolutionCountArray"]
 - ["PSo26NSExtensionRequestHandling", "returnedNameArray"]
+- ["PSo26NSExtensionRequestHandling", "returnedOwnerArray"]
 - ["PSo26NSExtensionRequestHandling", "returnedRefArray"]
 - ["PSo26NSExtensionRequestHandling", "searchForResults"]
 - ["PSo26NSExtensionRequestHandling", "searchTextField"]
 - ["PSo26NSExtensionRequestHandling", "sendToResults"]
+- !private ["PSo26NSExtensionRequestHandling", "solutionOwnerArray"]
 - !private ["PSo26NSExtensionRequestHandling", "storyboard"]
 - ["PSo26NSExtensionRequestHandling", "textField"]
 - ["PSo26NSExtensionRequestHandling", "textFieldDidBeginEditing"]
@@ -538,6 +572,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "textFieldShouldEndEditing"]
 - ["PSo26NSExtensionRequestHandling", "textFieldShouldReturn"]
 - ["PSo26NSExtensionRequestHandling", "useDetailArray"]
+- ["PSo26NSExtensionRequestHandling", "useOwnerArray"]
 - ["PSo26NSExtensionRequestHandling", "useRefArray"]
 - ["PSo26NSExtensionRequestHandling", "useSolutionCountArray"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
@@ -589,6 +624,7 @@ depends-member:
 - !private ["CSo8NSObject", "key"]
 - ["CSo8NSObject", "matchedNameArray"]
 - !private ["CSo8NSObject", "navigationController"]
+- !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "pushViewController"]
 - !private ["CSo8NSObject", "rangeOfString"]
 - !private ["CSo8NSObject", "refArray"]
@@ -597,10 +633,12 @@ depends-member:
 - !private ["CSo8NSObject", "resultNameArray"]
 - !private ["CSo8NSObject", "resultSolutionCountArray"]
 - ["CSo8NSObject", "returnedNameArray"]
+- ["CSo8NSObject", "returnedOwnerArray"]
 - ["CSo8NSObject", "returnedRefArray"]
 - ["CSo8NSObject", "searchForResults"]
 - ["CSo8NSObject", "searchTextField"]
 - ["CSo8NSObject", "sendToResults"]
+- !private ["CSo8NSObject", "solutionOwnerArray"]
 - !private ["CSo8NSObject", "storyboard"]
 - !private ["CSo8NSObject", "subscript"]
 - !private ["CSo8NSObject", "text"]
@@ -612,6 +650,7 @@ depends-member:
 - ["CSo8NSObject", "textFieldShouldEndEditing"]
 - ["CSo8NSObject", "textFieldShouldReturn"]
 - ["CSo8NSObject", "useDetailArray"]
+- ["CSo8NSObject", "useOwnerArray"]
 - ["CSo8NSObject", "useRefArray"]
 - ["CSo8NSObject", "useSolutionCountArray"]
 - !private ["CSo8NSObject", "value"]
@@ -639,6 +678,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "key"]
 - ["PSo16NSObjectProtocol", "matchedNameArray"]
 - !private ["PSo16NSObjectProtocol", "navigationController"]
+- !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "pushViewController"]
 - !private ["PSo16NSObjectProtocol", "rangeOfString"]
 - !private ["PSo16NSObjectProtocol", "refArray"]
@@ -647,10 +687,12 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "resultNameArray"]
 - !private ["PSo16NSObjectProtocol", "resultSolutionCountArray"]
 - ["PSo16NSObjectProtocol", "returnedNameArray"]
+- ["PSo16NSObjectProtocol", "returnedOwnerArray"]
 - ["PSo16NSObjectProtocol", "returnedRefArray"]
 - ["PSo16NSObjectProtocol", "searchForResults"]
 - ["PSo16NSObjectProtocol", "searchTextField"]
 - ["PSo16NSObjectProtocol", "sendToResults"]
+- !private ["PSo16NSObjectProtocol", "solutionOwnerArray"]
 - !private ["PSo16NSObjectProtocol", "storyboard"]
 - !private ["PSo16NSObjectProtocol", "subscript"]
 - !private ["PSo16NSObjectProtocol", "text"]
@@ -662,6 +704,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "textFieldShouldEndEditing"]
 - ["PSo16NSObjectProtocol", "textFieldShouldReturn"]
 - ["PSo16NSObjectProtocol", "useDetailArray"]
+- ["PSo16NSObjectProtocol", "useOwnerArray"]
 - ["PSo16NSObjectProtocol", "useRefArray"]
 - ["PSo16NSObjectProtocol", "useSolutionCountArray"]
 - !private ["PSo16NSObjectProtocol", "value"]
@@ -692,6 +735,7 @@ depends-member:
 - !private ["C8GoChange21ResultsViewController", "resultDetailArray"]
 - !private ["C8GoChange21ResultsViewController", "resultNameArray"]
 - !private ["C8GoChange21ResultsViewController", "resultSolutionCountArray"]
+- !private ["C8GoChange21ResultsViewController", "solutionOwnerArray"]
 - !private ["C8GoChange27RetrieveDetailsFromFirebase", "init"]
 - !private ["C8GoChange20RetrieveFromFirebase", "init"]
 - !private ["C8GoChange29RetrieveSolutionCountFirebase", "init"]
@@ -715,7 +759,9 @@ depends-member:
 - ["C8GoChange20SearchViewController", "init"]
 - ["C8GoChange20SearchViewController", "matchedNameArray"]
 - !private ["C8GoChange20SearchViewController", "navigationController"]
+- !private ["C8GoChange20SearchViewController", "print"]
 - ["C8GoChange20SearchViewController", "returnedNameArray"]
+- ["C8GoChange20SearchViewController", "returnedOwnerArray"]
 - ["C8GoChange20SearchViewController", "returnedRefArray"]
 - ["C8GoChange20SearchViewController", "searchForResults"]
 - ["C8GoChange20SearchViewController", "searchTextField"]
@@ -729,6 +775,7 @@ depends-member:
 - ["C8GoChange20SearchViewController", "textFieldShouldEndEditing"]
 - ["C8GoChange20SearchViewController", "textFieldShouldReturn"]
 - ["C8GoChange20SearchViewController", "useDetailArray"]
+- ["C8GoChange20SearchViewController", "useOwnerArray"]
 - ["C8GoChange20SearchViewController", "useRefArray"]
 - ["C8GoChange20SearchViewController", "useSolutionCountArray"]
 - ["C8GoChange20SearchViewController", "viewDidLoad"]
@@ -780,6 +827,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "init"]
 - ["PSo21UIAppearanceContainer", "matchedNameArray"]
 - !private ["PSo21UIAppearanceContainer", "navigationController"]
+- !private ["PSo21UIAppearanceContainer", "print"]
 - !private ["PSo21UIAppearanceContainer", "pushViewController"]
 - !private ["PSo21UIAppearanceContainer", "refArray"]
 - !private ["PSo21UIAppearanceContainer", "resignFirstResponder"]
@@ -787,10 +835,12 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "resultNameArray"]
 - !private ["PSo21UIAppearanceContainer", "resultSolutionCountArray"]
 - ["PSo21UIAppearanceContainer", "returnedNameArray"]
+- ["PSo21UIAppearanceContainer", "returnedOwnerArray"]
 - ["PSo21UIAppearanceContainer", "returnedRefArray"]
 - ["PSo21UIAppearanceContainer", "searchForResults"]
 - ["PSo21UIAppearanceContainer", "searchTextField"]
 - ["PSo21UIAppearanceContainer", "sendToResults"]
+- !private ["PSo21UIAppearanceContainer", "solutionOwnerArray"]
 - !private ["PSo21UIAppearanceContainer", "storyboard"]
 - !private ["PSo21UIAppearanceContainer", "text"]
 - ["PSo21UIAppearanceContainer", "textField"]
@@ -801,6 +851,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "textFieldShouldEndEditing"]
 - ["PSo21UIAppearanceContainer", "textFieldShouldReturn"]
 - ["PSo21UIAppearanceContainer", "useDetailArray"]
+- ["PSo21UIAppearanceContainer", "useOwnerArray"]
 - ["PSo21UIAppearanceContainer", "useRefArray"]
 - ["PSo21UIAppearanceContainer", "useSolutionCountArray"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
@@ -819,16 +870,19 @@ depends-member:
 - ["PSo18UIContentContainer", "init"]
 - ["PSo18UIContentContainer", "matchedNameArray"]
 - !private ["PSo18UIContentContainer", "navigationController"]
+- !private ["PSo18UIContentContainer", "print"]
 - !private ["PSo18UIContentContainer", "pushViewController"]
 - !private ["PSo18UIContentContainer", "refArray"]
 - !private ["PSo18UIContentContainer", "resultDetailArray"]
 - !private ["PSo18UIContentContainer", "resultNameArray"]
 - !private ["PSo18UIContentContainer", "resultSolutionCountArray"]
 - ["PSo18UIContentContainer", "returnedNameArray"]
+- ["PSo18UIContentContainer", "returnedOwnerArray"]
 - ["PSo18UIContentContainer", "returnedRefArray"]
 - ["PSo18UIContentContainer", "searchForResults"]
 - ["PSo18UIContentContainer", "searchTextField"]
 - ["PSo18UIContentContainer", "sendToResults"]
+- !private ["PSo18UIContentContainer", "solutionOwnerArray"]
 - !private ["PSo18UIContentContainer", "storyboard"]
 - ["PSo18UIContentContainer", "textField"]
 - ["PSo18UIContentContainer", "textFieldDidBeginEditing"]
@@ -838,6 +892,7 @@ depends-member:
 - ["PSo18UIContentContainer", "textFieldShouldEndEditing"]
 - ["PSo18UIContentContainer", "textFieldShouldReturn"]
 - ["PSo18UIContentContainer", "useDetailArray"]
+- ["PSo18UIContentContainer", "useOwnerArray"]
 - ["PSo18UIContentContainer", "useRefArray"]
 - ["PSo18UIContentContainer", "useSolutionCountArray"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
@@ -866,6 +921,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "init"]
 - ["PSo18UIFocusEnvironment", "matchedNameArray"]
 - !private ["PSo18UIFocusEnvironment", "navigationController"]
+- !private ["PSo18UIFocusEnvironment", "print"]
 - !private ["PSo18UIFocusEnvironment", "pushViewController"]
 - !private ["PSo18UIFocusEnvironment", "refArray"]
 - !private ["PSo18UIFocusEnvironment", "resignFirstResponder"]
@@ -873,10 +929,12 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "resultNameArray"]
 - !private ["PSo18UIFocusEnvironment", "resultSolutionCountArray"]
 - ["PSo18UIFocusEnvironment", "returnedNameArray"]
+- ["PSo18UIFocusEnvironment", "returnedOwnerArray"]
 - ["PSo18UIFocusEnvironment", "returnedRefArray"]
 - ["PSo18UIFocusEnvironment", "searchForResults"]
 - ["PSo18UIFocusEnvironment", "searchTextField"]
 - ["PSo18UIFocusEnvironment", "sendToResults"]
+- !private ["PSo18UIFocusEnvironment", "solutionOwnerArray"]
 - !private ["PSo18UIFocusEnvironment", "storyboard"]
 - !private ["PSo18UIFocusEnvironment", "text"]
 - ["PSo18UIFocusEnvironment", "textField"]
@@ -887,6 +945,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "textFieldShouldEndEditing"]
 - ["PSo18UIFocusEnvironment", "textFieldShouldReturn"]
 - ["PSo18UIFocusEnvironment", "useDetailArray"]
+- ["PSo18UIFocusEnvironment", "useOwnerArray"]
 - ["PSo18UIFocusEnvironment", "useRefArray"]
 - ["PSo18UIFocusEnvironment", "useSolutionCountArray"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
@@ -918,6 +977,7 @@ depends-member:
 - ["CSo11UIResponder", "init"]
 - ["CSo11UIResponder", "matchedNameArray"]
 - !private ["CSo11UIResponder", "navigationController"]
+- !private ["CSo11UIResponder", "print"]
 - !private ["CSo11UIResponder", "pushViewController"]
 - !private ["CSo11UIResponder", "refArray"]
 - !private ["CSo11UIResponder", "resignFirstResponder"]
@@ -925,10 +985,12 @@ depends-member:
 - !private ["CSo11UIResponder", "resultNameArray"]
 - !private ["CSo11UIResponder", "resultSolutionCountArray"]
 - ["CSo11UIResponder", "returnedNameArray"]
+- ["CSo11UIResponder", "returnedOwnerArray"]
 - ["CSo11UIResponder", "returnedRefArray"]
 - ["CSo11UIResponder", "searchForResults"]
 - ["CSo11UIResponder", "searchTextField"]
 - ["CSo11UIResponder", "sendToResults"]
+- !private ["CSo11UIResponder", "solutionOwnerArray"]
 - !private ["CSo11UIResponder", "storyboard"]
 - !private ["CSo11UIResponder", "text"]
 - ["CSo11UIResponder", "textField"]
@@ -939,6 +1001,7 @@ depends-member:
 - ["CSo11UIResponder", "textFieldShouldEndEditing"]
 - ["CSo11UIResponder", "textFieldShouldReturn"]
 - ["CSo11UIResponder", "useDetailArray"]
+- ["CSo11UIResponder", "useOwnerArray"]
 - ["CSo11UIResponder", "useRefArray"]
 - ["CSo11UIResponder", "useSolutionCountArray"]
 - ["CSo11UIResponder", "viewDidLoad"]
@@ -947,6 +1010,7 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "resultDetailArray"]
 - !private ["PSo20UIScrollViewDelegate", "resultNameArray"]
 - !private ["PSo20UIScrollViewDelegate", "resultSolutionCountArray"]
+- !private ["PSo20UIScrollViewDelegate", "solutionOwnerArray"]
 - !private ["PSo16UIStateRestoring", "RetrieveDetailsFromFirebase"]
 - !private ["PSo16UIStateRestoring", "RetrieveFromFirebase"]
 - !private ["PSo16UIStateRestoring", "RetrieveSolutionCountFirebase"]
@@ -960,16 +1024,19 @@ depends-member:
 - ["PSo16UIStateRestoring", "init"]
 - ["PSo16UIStateRestoring", "matchedNameArray"]
 - !private ["PSo16UIStateRestoring", "navigationController"]
+- !private ["PSo16UIStateRestoring", "print"]
 - !private ["PSo16UIStateRestoring", "pushViewController"]
 - !private ["PSo16UIStateRestoring", "refArray"]
 - !private ["PSo16UIStateRestoring", "resultDetailArray"]
 - !private ["PSo16UIStateRestoring", "resultNameArray"]
 - !private ["PSo16UIStateRestoring", "resultSolutionCountArray"]
 - ["PSo16UIStateRestoring", "returnedNameArray"]
+- ["PSo16UIStateRestoring", "returnedOwnerArray"]
 - ["PSo16UIStateRestoring", "returnedRefArray"]
 - ["PSo16UIStateRestoring", "searchForResults"]
 - ["PSo16UIStateRestoring", "searchTextField"]
 - ["PSo16UIStateRestoring", "sendToResults"]
+- !private ["PSo16UIStateRestoring", "solutionOwnerArray"]
 - !private ["PSo16UIStateRestoring", "storyboard"]
 - ["PSo16UIStateRestoring", "textField"]
 - ["PSo16UIStateRestoring", "textFieldDidBeginEditing"]
@@ -979,6 +1046,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "textFieldShouldEndEditing"]
 - ["PSo16UIStateRestoring", "textFieldShouldReturn"]
 - ["PSo16UIStateRestoring", "useDetailArray"]
+- ["PSo16UIStateRestoring", "useOwnerArray"]
 - ["PSo16UIStateRestoring", "useRefArray"]
 - ["PSo16UIStateRestoring", "useSolutionCountArray"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
@@ -989,6 +1057,7 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "resultDetailArray"]
 - !private ["PSo19UITableViewDelegate", "resultNameArray"]
 - !private ["PSo19UITableViewDelegate", "resultSolutionCountArray"]
+- !private ["PSo19UITableViewDelegate", "solutionOwnerArray"]
 - !private ["CSo11UITextField", "delegate"]
 - !private ["CSo11UITextField", "resignFirstResponder"]
 - !private ["CSo11UITextField", "text"]
@@ -1001,7 +1070,9 @@ depends-member:
 - !private ["PSo19UITextFieldDelegate", "createRefArray"]
 - !private ["PSo19UITextFieldDelegate", "matchedNameArray"]
 - !private ["PSo19UITextFieldDelegate", "navigationController"]
+- !private ["PSo19UITextFieldDelegate", "print"]
 - !private ["PSo19UITextFieldDelegate", "returnedNameArray"]
+- !private ["PSo19UITextFieldDelegate", "returnedOwnerArray"]
 - !private ["PSo19UITextFieldDelegate", "returnedRefArray"]
 - !private ["PSo19UITextFieldDelegate", "searchTextField"]
 - !private ["PSo19UITextFieldDelegate", "sendToResults"]
@@ -1014,6 +1085,7 @@ depends-member:
 - ["PSo19UITextFieldDelegate", "textFieldShouldEndEditing"]
 - ["PSo19UITextFieldDelegate", "textFieldShouldReturn"]
 - !private ["PSo19UITextFieldDelegate", "useDetailArray"]
+- !private ["PSo19UITextFieldDelegate", "useOwnerArray"]
 - !private ["PSo19UITextFieldDelegate", "useRefArray"]
 - !private ["PSo19UITextFieldDelegate", "useSolutionCountArray"]
 - ["PSo19UITextFieldDelegate", ""]
@@ -1037,6 +1109,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "init"]
 - ["PSo18UITraitEnvironment", "matchedNameArray"]
 - !private ["PSo18UITraitEnvironment", "navigationController"]
+- !private ["PSo18UITraitEnvironment", "print"]
 - !private ["PSo18UITraitEnvironment", "pushViewController"]
 - !private ["PSo18UITraitEnvironment", "refArray"]
 - !private ["PSo18UITraitEnvironment", "resignFirstResponder"]
@@ -1044,10 +1117,12 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "resultNameArray"]
 - !private ["PSo18UITraitEnvironment", "resultSolutionCountArray"]
 - ["PSo18UITraitEnvironment", "returnedNameArray"]
+- ["PSo18UITraitEnvironment", "returnedOwnerArray"]
 - ["PSo18UITraitEnvironment", "returnedRefArray"]
 - ["PSo18UITraitEnvironment", "searchForResults"]
 - ["PSo18UITraitEnvironment", "searchTextField"]
 - ["PSo18UITraitEnvironment", "sendToResults"]
+- !private ["PSo18UITraitEnvironment", "solutionOwnerArray"]
 - !private ["PSo18UITraitEnvironment", "storyboard"]
 - !private ["PSo18UITraitEnvironment", "text"]
 - ["PSo18UITraitEnvironment", "textField"]
@@ -1058,6 +1133,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "textFieldShouldEndEditing"]
 - ["PSo18UITraitEnvironment", "textFieldShouldReturn"]
 - ["PSo18UITraitEnvironment", "useDetailArray"]
+- ["PSo18UITraitEnvironment", "useOwnerArray"]
 - ["PSo18UITraitEnvironment", "useRefArray"]
 - ["PSo18UITraitEnvironment", "useSolutionCountArray"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
@@ -1086,16 +1162,19 @@ depends-member:
 - ["CSo16UIViewController", "init"]
 - ["CSo16UIViewController", "matchedNameArray"]
 - !private ["CSo16UIViewController", "navigationController"]
+- !private ["CSo16UIViewController", "print"]
 - !private ["CSo16UIViewController", "pushViewController"]
 - !private ["CSo16UIViewController", "refArray"]
 - !private ["CSo16UIViewController", "resultDetailArray"]
 - !private ["CSo16UIViewController", "resultNameArray"]
 - !private ["CSo16UIViewController", "resultSolutionCountArray"]
 - ["CSo16UIViewController", "returnedNameArray"]
+- ["CSo16UIViewController", "returnedOwnerArray"]
 - ["CSo16UIViewController", "returnedRefArray"]
 - ["CSo16UIViewController", "searchForResults"]
 - ["CSo16UIViewController", "searchTextField"]
 - ["CSo16UIViewController", "sendToResults"]
+- !private ["CSo16UIViewController", "solutionOwnerArray"]
 - !private ["CSo16UIViewController", "storyboard"]
 - ["CSo16UIViewController", "textField"]
 - ["CSo16UIViewController", "textFieldDidBeginEditing"]
@@ -1105,6 +1184,7 @@ depends-member:
 - ["CSo16UIViewController", "textFieldShouldEndEditing"]
 - ["CSo16UIViewController", "textFieldShouldReturn"]
 - ["CSo16UIViewController", "useDetailArray"]
+- ["CSo16UIViewController", "useOwnerArray"]
 - ["CSo16UIViewController", "useRefArray"]
 - ["CSo16UIViewController", "useSolutionCountArray"]
 - ["CSo16UIViewController", "viewDidLoad"]
@@ -1318,4 +1398,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "6f76bff8523a491ec0f04db6994d603a"
+interface-hash: "9a0ba553721cb2d712ff809514f3f574"

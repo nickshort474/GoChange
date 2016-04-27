@@ -6,66 +6,64 @@ provides-nominal:
 provides-member:
 - ["C8GoChange32ViewFollowedChangeViewController", ""]
 provides-dynamic-lookup:
-- "textViewDidBeginEditing"
-- "nameButton"
-- "changeID"
-- "solutionTable"
-- "viewDidLoad"
-- "unfollowChange"
-- "addSolutionClick"
-- "sendingController"
-- "addNameClick"
-- "changeClicked"
-- "addDetailClick"
-- "goBackHome"
-- "postChangeButton"
-- "tableView"
-- "tableView"
-- "tableView"
-- "followChangeButton"
 - "addASolutionButton"
 - "nameField"
-- "solutionID"
-- "detailsField"
-- "detailButton"
-- "postChangeClick"
-- "viewWillAppear"
+- "textViewDidBeginEditing"
+- "nameButton"
+- "changeClicked"
 - "changeIDArray"
+- "addNameClick"
+- "followChangeButton"
+- "tableView"
+- "tableView"
+- "tableView"
+- "detailsField"
+- "addDetailClick"
+- "viewDidLoad"
+- "goBackHome"
+- "solutionTable"
+- "postChangeButton"
+- "unfollowChange"
+- "sendingController"
+- "changeID"
+- "viewWillAppear"
+- "addSolutionClick"
+- "solutionID"
+- "detailButton"
 depends-top-level:
-- !private "print"
-- "UIViewController"
-- "UITextView"
-- "UITextFieldDelegate"
-- "UITextViewDelegate"
-- !private "BooleanLiteralType"
-- "Bool"
-- "String"
-- "NSMutableArray"
-- "NSIndexPath"
-- "Int"
-- !private "UpdateCoreDataSolutions"
-- !private "RetrieveSolutions"
-- !private "Solution"
-- "UITableViewDelegate"
-- "UITableView"
 - "ViewFollowedChangeViewController"
+- !private "=="
+- "UIButton"
+- !private "UpdateCoreDataSolutions"
+- !private "FDataSnapshot"
 - "UITextField"
 - "UITableViewCell"
-- !private "SaveNewSolution"
 - !private "UIBarButtonItemStyle"
-- !private "AddIdeaViewController"
-- !private "!="
-- !private "UIBarButtonItem"
 - "Change"
-- !private "RetrieveSolutionsFromFirebase"
-- !private "FDataSnapshot"
-- "UIButton"
+- "NSIndexPath"
 - !private "..<"
+- "NSMutableArray"
+- !private "AddIdeaViewController"
 - !private "StringLiteralType"
-- !private "=="
-- "Array"
-- !private "RetrieveSolutionCountFirebase"
+- "Int"
 - !private "TempChange"
+- "Bool"
+- !private "print"
+- !private "!="
+- "UIViewController"
+- "Array"
+- "UITextView"
+- !private "RetrieveSolutionCountFirebase"
+- "UITextViewDelegate"
+- "UITextFieldDelegate"
+- "UITableView"
+- !private "BooleanLiteralType"
+- "UITableViewDelegate"
+- !private "RetrieveSolutionsFromFirebase"
+- !private "UIBarButtonItem"
+- !private "Solution"
+- "String"
+- !private "RetrieveSolutions"
 depends-member:
 - !private ["C8GoChange21AddIdeaViewController", "change"]
 - !private ["C8GoChange21AddIdeaViewController", "changeID"]
@@ -79,7 +77,6 @@ depends-member:
 - !private ["Ps9AnyObject", "RetrieveSolutionCountFirebase"]
 - !private ["Ps9AnyObject", "RetrieveSolutions"]
 - !private ["Ps9AnyObject", "RetrieveSolutionsFromFirebase"]
-- !private ["Ps9AnyObject", "SaveNewSolution"]
 - !private ["Ps9AnyObject", "String"]
 - !private ["Ps9AnyObject", "TempChange"]
 - !private ["Ps9AnyObject", "UIBarButtonItem"]
@@ -91,7 +88,6 @@ depends-member:
 - ["Ps9AnyObject", "addNameClick"]
 - !private ["Ps9AnyObject", "addObject"]
 - ["Ps9AnyObject", "addSolutionClick"]
-- !private ["Ps9AnyObject", "addingSolutions"]
 - !private ["Ps9AnyObject", "allObjects"]
 - !private ["Ps9AnyObject", "alpha"]
 - !private ["Ps9AnyObject", "backBarButtonItem"]
@@ -126,11 +122,8 @@ depends-member:
 - ["Ps9AnyObject", "nameField"]
 - !private ["Ps9AnyObject", "navigationController"]
 - !private ["Ps9AnyObject", "navigationItem"]
-- !private ["Ps9AnyObject", "newSolutionDetailArray"]
-- !private ["Ps9AnyObject", "newSolutionNameArray"]
 - !private ["Ps9AnyObject", "popToRootViewControllerAnimated"]
 - ["Ps9AnyObject", "postChangeButton"]
-- ["Ps9AnyObject", "postChangeClick"]
 - !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "pushViewController"]
 - !private ["Ps9AnyObject", "reloadData"]
@@ -158,7 +151,8 @@ depends-member:
 - !private ["Ps9AnyObject", "solutionIDArray"]
 - !private ["Ps9AnyObject", "solutionName"]
 - !private ["Ps9AnyObject", "solutionNameArray"]
-- !private ["Ps9AnyObject", "solutionNewOldArray"]
+- !private ["Ps9AnyObject", "solutionOwner"]
+- !private ["Ps9AnyObject", "solutionOwnerArray"]
 - ["Ps9AnyObject", "solutionTable"]
 - !private ["Ps9AnyObject", "solutionVoteArray"]
 - !private ["Ps9AnyObject", "storyboard"]
@@ -221,7 +215,6 @@ depends-member:
 - !private ["Ps11CVarArgType", "RetrieveSolutionCountFirebase"]
 - !private ["Ps11CVarArgType", "RetrieveSolutions"]
 - !private ["Ps11CVarArgType", "RetrieveSolutionsFromFirebase"]
-- !private ["Ps11CVarArgType", "SaveNewSolution"]
 - !private ["Ps11CVarArgType", "String"]
 - !private ["Ps11CVarArgType", "TempChange"]
 - !private ["Ps11CVarArgType", "UIBarButtonItem"]
@@ -234,7 +227,6 @@ depends-member:
 - ["Ps11CVarArgType", "addNameClick"]
 - !private ["Ps11CVarArgType", "addObject"]
 - ["Ps11CVarArgType", "addSolutionClick"]
-- !private ["Ps11CVarArgType", "addingSolutions"]
 - !private ["Ps11CVarArgType", "allObjects"]
 - !private ["Ps11CVarArgType", "alpha"]
 - !private ["Ps11CVarArgType", "backBarButtonItem"]
@@ -268,11 +260,8 @@ depends-member:
 - ["Ps11CVarArgType", "nameField"]
 - !private ["Ps11CVarArgType", "navigationController"]
 - !private ["Ps11CVarArgType", "navigationItem"]
-- !private ["Ps11CVarArgType", "newSolutionDetailArray"]
-- !private ["Ps11CVarArgType", "newSolutionNameArray"]
 - !private ["Ps11CVarArgType", "popToRootViewControllerAnimated"]
 - ["Ps11CVarArgType", "postChangeButton"]
-- ["Ps11CVarArgType", "postChangeClick"]
 - !private ["Ps11CVarArgType", "print"]
 - !private ["Ps11CVarArgType", "pushViewController"]
 - !private ["Ps11CVarArgType", "reloadData"]
@@ -300,7 +289,8 @@ depends-member:
 - !private ["Ps11CVarArgType", "solutionIDArray"]
 - !private ["Ps11CVarArgType", "solutionName"]
 - !private ["Ps11CVarArgType", "solutionNameArray"]
-- !private ["Ps11CVarArgType", "solutionNewOldArray"]
+- !private ["Ps11CVarArgType", "solutionOwner"]
+- !private ["Ps11CVarArgType", "solutionOwnerArray"]
 - ["Ps11CVarArgType", "solutionTable"]
 - !private ["Ps11CVarArgType", "solutionVoteArray"]
 - !private ["Ps11CVarArgType", "storyboard"]
@@ -349,7 +339,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "RetrieveSolutionCountFirebase"]
 - !private ["Ps28CustomDebugStringConvertible", "RetrieveSolutions"]
 - !private ["Ps28CustomDebugStringConvertible", "RetrieveSolutionsFromFirebase"]
-- !private ["Ps28CustomDebugStringConvertible", "SaveNewSolution"]
 - !private ["Ps28CustomDebugStringConvertible", "String"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
 - !private ["Ps28CustomDebugStringConvertible", "TempChange"]
@@ -363,7 +352,6 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "addNameClick"]
 - !private ["Ps28CustomDebugStringConvertible", "addObject"]
 - ["Ps28CustomDebugStringConvertible", "addSolutionClick"]
-- !private ["Ps28CustomDebugStringConvertible", "addingSolutions"]
 - !private ["Ps28CustomDebugStringConvertible", "allObjects"]
 - !private ["Ps28CustomDebugStringConvertible", "alpha"]
 - !private ["Ps28CustomDebugStringConvertible", "backBarButtonItem"]
@@ -397,11 +385,8 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "nameField"]
 - !private ["Ps28CustomDebugStringConvertible", "navigationController"]
 - !private ["Ps28CustomDebugStringConvertible", "navigationItem"]
-- !private ["Ps28CustomDebugStringConvertible", "newSolutionDetailArray"]
-- !private ["Ps28CustomDebugStringConvertible", "newSolutionNameArray"]
 - !private ["Ps28CustomDebugStringConvertible", "popToRootViewControllerAnimated"]
 - ["Ps28CustomDebugStringConvertible", "postChangeButton"]
-- ["Ps28CustomDebugStringConvertible", "postChangeClick"]
 - !private ["Ps28CustomDebugStringConvertible", "print"]
 - !private ["Ps28CustomDebugStringConvertible", "pushViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "reloadData"]
@@ -429,7 +414,8 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "solutionIDArray"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionName"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionNameArray"]
-- !private ["Ps28CustomDebugStringConvertible", "solutionNewOldArray"]
+- !private ["Ps28CustomDebugStringConvertible", "solutionOwner"]
+- !private ["Ps28CustomDebugStringConvertible", "solutionOwnerArray"]
 - ["Ps28CustomDebugStringConvertible", "solutionTable"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionVoteArray"]
 - !private ["Ps28CustomDebugStringConvertible", "storyboard"]
@@ -468,7 +454,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "RetrieveSolutionCountFirebase"]
 - !private ["Ps23CustomStringConvertible", "RetrieveSolutions"]
 - !private ["Ps23CustomStringConvertible", "RetrieveSolutionsFromFirebase"]
-- !private ["Ps23CustomStringConvertible", "SaveNewSolution"]
 - !private ["Ps23CustomStringConvertible", "String"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
 - !private ["Ps23CustomStringConvertible", "TempChange"]
@@ -484,7 +469,6 @@ depends-member:
 - ["Ps23CustomStringConvertible", "addNameClick"]
 - !private ["Ps23CustomStringConvertible", "addObject"]
 - ["Ps23CustomStringConvertible", "addSolutionClick"]
-- !private ["Ps23CustomStringConvertible", "addingSolutions"]
 - !private ["Ps23CustomStringConvertible", "allObjects"]
 - !private ["Ps23CustomStringConvertible", "alpha"]
 - !private ["Ps23CustomStringConvertible", "backBarButtonItem"]
@@ -518,11 +502,8 @@ depends-member:
 - ["Ps23CustomStringConvertible", "nameField"]
 - !private ["Ps23CustomStringConvertible", "navigationController"]
 - !private ["Ps23CustomStringConvertible", "navigationItem"]
-- !private ["Ps23CustomStringConvertible", "newSolutionDetailArray"]
-- !private ["Ps23CustomStringConvertible", "newSolutionNameArray"]
 - !private ["Ps23CustomStringConvertible", "popToRootViewControllerAnimated"]
 - ["Ps23CustomStringConvertible", "postChangeButton"]
-- ["Ps23CustomStringConvertible", "postChangeClick"]
 - !private ["Ps23CustomStringConvertible", "print"]
 - !private ["Ps23CustomStringConvertible", "pushViewController"]
 - !private ["Ps23CustomStringConvertible", "reloadData"]
@@ -550,7 +531,8 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "solutionIDArray"]
 - !private ["Ps23CustomStringConvertible", "solutionName"]
 - !private ["Ps23CustomStringConvertible", "solutionNameArray"]
-- !private ["Ps23CustomStringConvertible", "solutionNewOldArray"]
+- !private ["Ps23CustomStringConvertible", "solutionOwner"]
+- !private ["Ps23CustomStringConvertible", "solutionOwnerArray"]
 - ["Ps23CustomStringConvertible", "solutionTable"]
 - !private ["Ps23CustomStringConvertible", "solutionVoteArray"]
 - !private ["Ps23CustomStringConvertible", "storyboard"]
@@ -589,7 +571,6 @@ depends-member:
 - !private ["Ps9Equatable", "RetrieveSolutionCountFirebase"]
 - !private ["Ps9Equatable", "RetrieveSolutions"]
 - !private ["Ps9Equatable", "RetrieveSolutionsFromFirebase"]
-- !private ["Ps9Equatable", "SaveNewSolution"]
 - !private ["Ps9Equatable", "String"]
 - !private ["Ps9Equatable", "TempChange"]
 - !private ["Ps9Equatable", "UIBarButtonItem"]
@@ -603,7 +584,6 @@ depends-member:
 - ["Ps9Equatable", "addNameClick"]
 - !private ["Ps9Equatable", "addObject"]
 - ["Ps9Equatable", "addSolutionClick"]
-- !private ["Ps9Equatable", "addingSolutions"]
 - !private ["Ps9Equatable", "allObjects"]
 - !private ["Ps9Equatable", "alpha"]
 - !private ["Ps9Equatable", "backBarButtonItem"]
@@ -637,11 +617,8 @@ depends-member:
 - ["Ps9Equatable", "nameField"]
 - !private ["Ps9Equatable", "navigationController"]
 - !private ["Ps9Equatable", "navigationItem"]
-- !private ["Ps9Equatable", "newSolutionDetailArray"]
-- !private ["Ps9Equatable", "newSolutionNameArray"]
 - !private ["Ps9Equatable", "popToRootViewControllerAnimated"]
 - ["Ps9Equatable", "postChangeButton"]
-- ["Ps9Equatable", "postChangeClick"]
 - !private ["Ps9Equatable", "print"]
 - !private ["Ps9Equatable", "pushViewController"]
 - !private ["Ps9Equatable", "reloadData"]
@@ -669,7 +646,8 @@ depends-member:
 - !private ["Ps9Equatable", "solutionIDArray"]
 - !private ["Ps9Equatable", "solutionName"]
 - !private ["Ps9Equatable", "solutionNameArray"]
-- !private ["Ps9Equatable", "solutionNewOldArray"]
+- !private ["Ps9Equatable", "solutionOwner"]
+- !private ["Ps9Equatable", "solutionOwnerArray"]
 - ["Ps9Equatable", "solutionTable"]
 - !private ["Ps9Equatable", "solutionVoteArray"]
 - !private ["Ps9Equatable", "storyboard"]
@@ -716,7 +694,6 @@ depends-member:
 - !private ["Ps8Hashable", "RetrieveSolutionCountFirebase"]
 - !private ["Ps8Hashable", "RetrieveSolutions"]
 - !private ["Ps8Hashable", "RetrieveSolutionsFromFirebase"]
-- !private ["Ps8Hashable", "SaveNewSolution"]
 - !private ["Ps8Hashable", "String"]
 - !private ["Ps8Hashable", "TempChange"]
 - !private ["Ps8Hashable", "UIBarButtonItem"]
@@ -730,7 +707,6 @@ depends-member:
 - ["Ps8Hashable", "addNameClick"]
 - !private ["Ps8Hashable", "addObject"]
 - ["Ps8Hashable", "addSolutionClick"]
-- !private ["Ps8Hashable", "addingSolutions"]
 - !private ["Ps8Hashable", "allObjects"]
 - !private ["Ps8Hashable", "alpha"]
 - !private ["Ps8Hashable", "backBarButtonItem"]
@@ -764,11 +740,8 @@ depends-member:
 - ["Ps8Hashable", "nameField"]
 - !private ["Ps8Hashable", "navigationController"]
 - !private ["Ps8Hashable", "navigationItem"]
-- !private ["Ps8Hashable", "newSolutionDetailArray"]
-- !private ["Ps8Hashable", "newSolutionNameArray"]
 - !private ["Ps8Hashable", "popToRootViewControllerAnimated"]
 - ["Ps8Hashable", "postChangeButton"]
-- ["Ps8Hashable", "postChangeClick"]
 - !private ["Ps8Hashable", "print"]
 - !private ["Ps8Hashable", "pushViewController"]
 - !private ["Ps8Hashable", "reloadData"]
@@ -796,7 +769,8 @@ depends-member:
 - !private ["Ps8Hashable", "solutionIDArray"]
 - !private ["Ps8Hashable", "solutionName"]
 - !private ["Ps8Hashable", "solutionNameArray"]
-- !private ["Ps8Hashable", "solutionNewOldArray"]
+- !private ["Ps8Hashable", "solutionOwner"]
+- !private ["Ps8Hashable", "solutionOwnerArray"]
 - ["Ps8Hashable", "solutionTable"]
 - !private ["Ps8Hashable", "solutionVoteArray"]
 - !private ["Ps8Hashable", "storyboard"]
@@ -871,7 +845,6 @@ depends-member:
 - !private ["PSo8NSCoding", "RetrieveSolutionCountFirebase"]
 - !private ["PSo8NSCoding", "RetrieveSolutions"]
 - !private ["PSo8NSCoding", "RetrieveSolutionsFromFirebase"]
-- !private ["PSo8NSCoding", "SaveNewSolution"]
 - !private ["PSo8NSCoding", "String"]
 - !private ["PSo8NSCoding", "TempChange"]
 - !private ["PSo8NSCoding", "UIBarButtonItem"]
@@ -912,7 +885,6 @@ depends-member:
 - !private ["PSo8NSCoding", "navigationItem"]
 - !private ["PSo8NSCoding", "popToRootViewControllerAnimated"]
 - ["PSo8NSCoding", "postChangeButton"]
-- ["PSo8NSCoding", "postChangeClick"]
 - !private ["PSo8NSCoding", "print"]
 - !private ["PSo8NSCoding", "pushViewController"]
 - !private ["PSo8NSCoding", "reloadData"]
@@ -972,7 +944,6 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "RetrieveSolutionCountFirebase"]
 - !private ["PSo26NSExtensionRequestHandling", "RetrieveSolutions"]
 - !private ["PSo26NSExtensionRequestHandling", "RetrieveSolutionsFromFirebase"]
-- !private ["PSo26NSExtensionRequestHandling", "SaveNewSolution"]
 - !private ["PSo26NSExtensionRequestHandling", "String"]
 - !private ["PSo26NSExtensionRequestHandling", "TempChange"]
 - !private ["PSo26NSExtensionRequestHandling", "UIBarButtonItem"]
@@ -1003,7 +974,6 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "navigationItem"]
 - !private ["PSo26NSExtensionRequestHandling", "popToRootViewControllerAnimated"]
 - ["PSo26NSExtensionRequestHandling", "postChangeButton"]
-- ["PSo26NSExtensionRequestHandling", "postChangeClick"]
 - !private ["PSo26NSExtensionRequestHandling", "print"]
 - !private ["PSo26NSExtensionRequestHandling", "pushViewController"]
 - ["PSo26NSExtensionRequestHandling", "scrollViewDidEndDecelerating"]
@@ -1059,6 +1029,7 @@ depends-member:
 - !private ["CSo15NSManagedObject", "solutionDescription"]
 - !private ["CSo15NSManagedObject", "solutionID"]
 - !private ["CSo15NSManagedObject", "solutionName"]
+- !private ["CSo15NSManagedObject", "solutionOwner"]
 - !private ["CSo15NSManagedObject", "voteCount"]
 - ["CSo14NSMutableArray", "Element"]
 - !private ["CSo14NSMutableArray", "addObject"]
@@ -1082,7 +1053,6 @@ depends-member:
 - !private ["CSo8NSObject", "RetrieveSolutionCountFirebase"]
 - !private ["CSo8NSObject", "RetrieveSolutions"]
 - !private ["CSo8NSObject", "RetrieveSolutionsFromFirebase"]
-- !private ["CSo8NSObject", "SaveNewSolution"]
 - !private ["CSo8NSObject", "Solution"]
 - ["CSo8NSObject", "String"]
 - !private ["CSo8NSObject", "TempChange"]
@@ -1100,7 +1070,6 @@ depends-member:
 - ["CSo8NSObject", "addNameClick"]
 - !private ["CSo8NSObject", "addObject"]
 - ["CSo8NSObject", "addSolutionClick"]
-- !private ["CSo8NSObject", "addingSolutions"]
 - !private ["CSo8NSObject", "allObjects"]
 - !private ["CSo8NSObject", "alpha"]
 - !private ["CSo8NSObject", "backBarButtonItem"]
@@ -1134,11 +1103,8 @@ depends-member:
 - ["CSo8NSObject", "nameField"]
 - !private ["CSo8NSObject", "navigationController"]
 - !private ["CSo8NSObject", "navigationItem"]
-- !private ["CSo8NSObject", "newSolutionDetailArray"]
-- !private ["CSo8NSObject", "newSolutionNameArray"]
 - !private ["CSo8NSObject", "popToRootViewControllerAnimated"]
 - ["CSo8NSObject", "postChangeButton"]
-- ["CSo8NSObject", "postChangeClick"]
 - !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "pushViewController"]
 - !private ["CSo8NSObject", "reloadData"]
@@ -1166,7 +1132,8 @@ depends-member:
 - !private ["CSo8NSObject", "solutionIDArray"]
 - !private ["CSo8NSObject", "solutionName"]
 - !private ["CSo8NSObject", "solutionNameArray"]
-- !private ["CSo8NSObject", "solutionNewOldArray"]
+- !private ["CSo8NSObject", "solutionOwner"]
+- !private ["CSo8NSObject", "solutionOwnerArray"]
 - ["CSo8NSObject", "solutionTable"]
 - !private ["CSo8NSObject", "solutionVoteArray"]
 - !private ["CSo8NSObject", "storyboard"]
@@ -1200,7 +1167,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "RetrieveSolutionCountFirebase"]
 - !private ["PSo16NSObjectProtocol", "RetrieveSolutions"]
 - !private ["PSo16NSObjectProtocol", "RetrieveSolutionsFromFirebase"]
-- !private ["PSo16NSObjectProtocol", "SaveNewSolution"]
 - !private ["PSo16NSObjectProtocol", "String"]
 - !private ["PSo16NSObjectProtocol", "TempChange"]
 - !private ["PSo16NSObjectProtocol", "UIBarButtonItem"]
@@ -1212,7 +1178,6 @@ depends-member:
 - ["PSo16NSObjectProtocol", "addNameClick"]
 - !private ["PSo16NSObjectProtocol", "addObject"]
 - ["PSo16NSObjectProtocol", "addSolutionClick"]
-- !private ["PSo16NSObjectProtocol", "addingSolutions"]
 - !private ["PSo16NSObjectProtocol", "allObjects"]
 - !private ["PSo16NSObjectProtocol", "alpha"]
 - !private ["PSo16NSObjectProtocol", "backBarButtonItem"]
@@ -1246,11 +1211,8 @@ depends-member:
 - ["PSo16NSObjectProtocol", "nameField"]
 - !private ["PSo16NSObjectProtocol", "navigationController"]
 - !private ["PSo16NSObjectProtocol", "navigationItem"]
-- !private ["PSo16NSObjectProtocol", "newSolutionDetailArray"]
-- !private ["PSo16NSObjectProtocol", "newSolutionNameArray"]
 - !private ["PSo16NSObjectProtocol", "popToRootViewControllerAnimated"]
 - ["PSo16NSObjectProtocol", "postChangeButton"]
-- ["PSo16NSObjectProtocol", "postChangeClick"]
 - !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "pushViewController"]
 - !private ["PSo16NSObjectProtocol", "reloadData"]
@@ -1278,7 +1240,8 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "solutionIDArray"]
 - !private ["PSo16NSObjectProtocol", "solutionName"]
 - !private ["PSo16NSObjectProtocol", "solutionNameArray"]
-- !private ["PSo16NSObjectProtocol", "solutionNewOldArray"]
+- !private ["PSo16NSObjectProtocol", "solutionOwner"]
+- !private ["PSo16NSObjectProtocol", "solutionOwnerArray"]
 - ["PSo16NSObjectProtocol", "solutionTable"]
 - !private ["PSo16NSObjectProtocol", "solutionVoteArray"]
 - !private ["PSo16NSObjectProtocol", "storyboard"]
@@ -1330,7 +1293,6 @@ depends-member:
 - !private ["C8GoChange29RetrieveSolutionCountFirebase", "init"]
 - !private ["C8GoChange17RetrieveSolutions", "init"]
 - !private ["C8GoChange29RetrieveSolutionsFromFirebase", "init"]
-- !private ["C8GoChange15SaveNewSolution", "init"]
 - ["Ps12SequenceType", "Element"]
 - !private ["Ps12SequenceType", "Generator"]
 - !private ["Ps12SequenceType", "Index"]
@@ -1350,6 +1312,7 @@ depends-member:
 - !private ["C8GoChange8Solution", "solutionDescription"]
 - !private ["C8GoChange8Solution", "solutionID"]
 - !private ["C8GoChange8Solution", "solutionName"]
+- !private ["C8GoChange8Solution", "solutionOwner"]
 - !private ["C8GoChange8Solution", "voteCount"]
 - !private ["Ps10Streamable", "init"]
 - !private ["Ps10Strideable", "Distance"]
@@ -1359,14 +1322,11 @@ depends-member:
 - !private ["SS", "init"]
 - !private ["Ps30StringInterpolationConvertible", "init"]
 - !private ["Ps24StringLiteralConvertible", "init"]
-- !private ["C8GoChange10TempChange", "addingSolutions"]
-- !private ["C8GoChange10TempChange", "newSolutionDetailArray"]
-- !private ["C8GoChange10TempChange", "newSolutionNameArray"]
 - !private ["C8GoChange10TempChange", "sharedInstance"]
 - !private ["C8GoChange10TempChange", "solutionDetailArray"]
 - !private ["C8GoChange10TempChange", "solutionIDArray"]
 - !private ["C8GoChange10TempChange", "solutionNameArray"]
-- !private ["C8GoChange10TempChange", "solutionNewOldArray"]
+- !private ["C8GoChange10TempChange", "solutionOwnerArray"]
 - !private ["C8GoChange10TempChange", "solutionVoteArray"]
 - !private ["PSo29UIAccessibilityIdentification", "alpha"]
 - !private ["PSo29UIAccessibilityIdentification", "delegate"]
@@ -1393,7 +1353,6 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "RetrieveSolutionCountFirebase"]
 - !private ["PSo21UIAppearanceContainer", "RetrieveSolutions"]
 - !private ["PSo21UIAppearanceContainer", "RetrieveSolutionsFromFirebase"]
-- !private ["PSo21UIAppearanceContainer", "SaveNewSolution"]
 - !private ["PSo21UIAppearanceContainer", "String"]
 - !private ["PSo21UIAppearanceContainer", "TempChange"]
 - !private ["PSo21UIAppearanceContainer", "UIBarButtonItem"]
@@ -1430,7 +1389,6 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "navigationItem"]
 - !private ["PSo21UIAppearanceContainer", "popToRootViewControllerAnimated"]
 - ["PSo21UIAppearanceContainer", "postChangeButton"]
-- ["PSo21UIAppearanceContainer", "postChangeClick"]
 - !private ["PSo21UIAppearanceContainer", "print"]
 - !private ["PSo21UIAppearanceContainer", "pushViewController"]
 - !private ["PSo21UIAppearanceContainer", "reloadData"]
@@ -1485,7 +1443,6 @@ depends-member:
 - !private ["PSo18UIContentContainer", "RetrieveSolutionCountFirebase"]
 - !private ["PSo18UIContentContainer", "RetrieveSolutions"]
 - !private ["PSo18UIContentContainer", "RetrieveSolutionsFromFirebase"]
-- !private ["PSo18UIContentContainer", "SaveNewSolution"]
 - !private ["PSo18UIContentContainer", "String"]
 - !private ["PSo18UIContentContainer", "TempChange"]
 - !private ["PSo18UIContentContainer", "UIBarButtonItem"]
@@ -1516,7 +1473,6 @@ depends-member:
 - !private ["PSo18UIContentContainer", "navigationItem"]
 - !private ["PSo18UIContentContainer", "popToRootViewControllerAnimated"]
 - ["PSo18UIContentContainer", "postChangeButton"]
-- ["PSo18UIContentContainer", "postChangeClick"]
 - !private ["PSo18UIContentContainer", "print"]
 - !private ["PSo18UIContentContainer", "pushViewController"]
 - ["PSo18UIContentContainer", "scrollViewDidEndDecelerating"]
@@ -1586,7 +1542,6 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "RetrieveSolutionCountFirebase"]
 - !private ["PSo18UIFocusEnvironment", "RetrieveSolutions"]
 - !private ["PSo18UIFocusEnvironment", "RetrieveSolutionsFromFirebase"]
-- !private ["PSo18UIFocusEnvironment", "SaveNewSolution"]
 - !private ["PSo18UIFocusEnvironment", "String"]
 - !private ["PSo18UIFocusEnvironment", "TempChange"]
 - !private ["PSo18UIFocusEnvironment", "UIBarButtonItem"]
@@ -1623,7 +1578,6 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "navigationItem"]
 - !private ["PSo18UIFocusEnvironment", "popToRootViewControllerAnimated"]
 - ["PSo18UIFocusEnvironment", "postChangeButton"]
-- ["PSo18UIFocusEnvironment", "postChangeClick"]
 - !private ["PSo18UIFocusEnvironment", "print"]
 - !private ["PSo18UIFocusEnvironment", "pushViewController"]
 - !private ["PSo18UIFocusEnvironment", "reloadData"]
@@ -1690,7 +1644,6 @@ depends-member:
 - !private ["CSo11UIResponder", "RetrieveSolutionCountFirebase"]
 - !private ["CSo11UIResponder", "RetrieveSolutions"]
 - !private ["CSo11UIResponder", "RetrieveSolutionsFromFirebase"]
-- !private ["CSo11UIResponder", "SaveNewSolution"]
 - !private ["CSo11UIResponder", "Solution"]
 - ["CSo11UIResponder", "String"]
 - !private ["CSo11UIResponder", "TempChange"]
@@ -1733,7 +1686,6 @@ depends-member:
 - !private ["CSo11UIResponder", "navigationItem"]
 - !private ["CSo11UIResponder", "popToRootViewControllerAnimated"]
 - ["CSo11UIResponder", "postChangeButton"]
-- ["CSo11UIResponder", "postChangeClick"]
 - !private ["CSo11UIResponder", "print"]
 - !private ["CSo11UIResponder", "pushViewController"]
 - !private ["CSo11UIResponder", "reloadData"]
@@ -1786,7 +1738,6 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "RetrieveSolutionCountFirebase"]
 - !private ["PSo20UIScrollViewDelegate", "RetrieveSolutions"]
 - !private ["PSo20UIScrollViewDelegate", "RetrieveSolutionsFromFirebase"]
-- !private ["PSo20UIScrollViewDelegate", "SaveNewSolution"]
 - !private ["PSo20UIScrollViewDelegate", "String"]
 - !private ["PSo20UIScrollViewDelegate", "TempChange"]
 - !private ["PSo20UIScrollViewDelegate", "UIBarButtonItem"]
@@ -1850,7 +1801,6 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "RetrieveSolutionCountFirebase"]
 - !private ["PSo16UIStateRestoring", "RetrieveSolutions"]
 - !private ["PSo16UIStateRestoring", "RetrieveSolutionsFromFirebase"]
-- !private ["PSo16UIStateRestoring", "SaveNewSolution"]
 - !private ["PSo16UIStateRestoring", "String"]
 - !private ["PSo16UIStateRestoring", "TempChange"]
 - !private ["PSo16UIStateRestoring", "UIBarButtonItem"]
@@ -1881,7 +1831,6 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "navigationItem"]
 - !private ["PSo16UIStateRestoring", "popToRootViewControllerAnimated"]
 - ["PSo16UIStateRestoring", "postChangeButton"]
-- ["PSo16UIStateRestoring", "postChangeClick"]
 - !private ["PSo16UIStateRestoring", "print"]
 - !private ["PSo16UIStateRestoring", "pushViewController"]
 - ["PSo16UIStateRestoring", "scrollViewDidEndDecelerating"]
@@ -1932,7 +1881,6 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "RetrieveSolutionCountFirebase"]
 - !private ["PSo19UITableViewDelegate", "RetrieveSolutions"]
 - !private ["PSo19UITableViewDelegate", "RetrieveSolutionsFromFirebase"]
-- !private ["PSo19UITableViewDelegate", "SaveNewSolution"]
 - !private ["PSo19UITableViewDelegate", "String"]
 - !private ["PSo19UITableViewDelegate", "TempChange"]
 - !private ["PSo19UITableViewDelegate", "UIBarButtonItem"]
@@ -1999,7 +1947,6 @@ depends-member:
 - !private ["PSo19UITextFieldDelegate", "RetrieveSolutionCountFirebase"]
 - !private ["PSo19UITextFieldDelegate", "RetrieveSolutions"]
 - !private ["PSo19UITextFieldDelegate", "RetrieveSolutionsFromFirebase"]
-- !private ["PSo19UITextFieldDelegate", "SaveNewSolution"]
 - !private ["PSo19UITextFieldDelegate", "String"]
 - !private ["PSo19UITextFieldDelegate", "TempChange"]
 - !private ["PSo19UITextFieldDelegate", "UIBarButtonItem"]
@@ -2074,7 +2021,6 @@ depends-member:
 - !private ["PSo18UITextViewDelegate", "RetrieveSolutionCountFirebase"]
 - !private ["PSo18UITextViewDelegate", "RetrieveSolutions"]
 - !private ["PSo18UITextViewDelegate", "RetrieveSolutionsFromFirebase"]
-- !private ["PSo18UITextViewDelegate", "SaveNewSolution"]
 - !private ["PSo18UITextViewDelegate", "String"]
 - !private ["PSo18UITextViewDelegate", "TempChange"]
 - !private ["PSo18UITextViewDelegate", "UIBarButtonItem"]
@@ -2138,7 +2084,6 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "RetrieveSolutionCountFirebase"]
 - !private ["PSo18UITraitEnvironment", "RetrieveSolutions"]
 - !private ["PSo18UITraitEnvironment", "RetrieveSolutionsFromFirebase"]
-- !private ["PSo18UITraitEnvironment", "SaveNewSolution"]
 - !private ["PSo18UITraitEnvironment", "String"]
 - !private ["PSo18UITraitEnvironment", "TempChange"]
 - !private ["PSo18UITraitEnvironment", "UIBarButtonItem"]
@@ -2175,7 +2120,6 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "navigationItem"]
 - !private ["PSo18UITraitEnvironment", "popToRootViewControllerAnimated"]
 - ["PSo18UITraitEnvironment", "postChangeButton"]
-- ["PSo18UITraitEnvironment", "postChangeClick"]
 - !private ["PSo18UITraitEnvironment", "print"]
 - !private ["PSo18UITraitEnvironment", "pushViewController"]
 - !private ["PSo18UITraitEnvironment", "reloadData"]
@@ -2241,7 +2185,6 @@ depends-member:
 - !private ["CSo16UIViewController", "RetrieveSolutionCountFirebase"]
 - !private ["CSo16UIViewController", "RetrieveSolutions"]
 - !private ["CSo16UIViewController", "RetrieveSolutionsFromFirebase"]
-- !private ["CSo16UIViewController", "SaveNewSolution"]
 - !private ["CSo16UIViewController", "Solution"]
 - ["CSo16UIViewController", "String"]
 - !private ["CSo16UIViewController", "TempChange"]
@@ -2278,7 +2221,6 @@ depends-member:
 - !private ["CSo16UIViewController", "navigationItem"]
 - !private ["CSo16UIViewController", "popToRootViewControllerAnimated"]
 - ["CSo16UIViewController", "postChangeButton"]
-- ["CSo16UIViewController", "postChangeClick"]
 - !private ["CSo16UIViewController", "print"]
 - !private ["CSo16UIViewController", "pushViewController"]
 - ["CSo16UIViewController", "scrollViewDidEndDecelerating"]
@@ -2332,7 +2274,6 @@ depends-member:
 - !private ["C8GoChange32ViewFollowedChangeViewController", "RetrieveSolutionCountFirebase"]
 - !private ["C8GoChange32ViewFollowedChangeViewController", "RetrieveSolutions"]
 - !private ["C8GoChange32ViewFollowedChangeViewController", "RetrieveSolutionsFromFirebase"]
-- !private ["C8GoChange32ViewFollowedChangeViewController", "SaveNewSolution"]
 - !private ["C8GoChange32ViewFollowedChangeViewController", "Solution"]
 - ["C8GoChange32ViewFollowedChangeViewController", "String"]
 - !private ["C8GoChange32ViewFollowedChangeViewController", "TempChange"]
@@ -2365,7 +2306,6 @@ depends-member:
 - !private ["C8GoChange32ViewFollowedChangeViewController", "navigationController"]
 - !private ["C8GoChange32ViewFollowedChangeViewController", "navigationItem"]
 - ["C8GoChange32ViewFollowedChangeViewController", "postChangeButton"]
-- ["C8GoChange32ViewFollowedChangeViewController", "postChangeClick"]
 - !private ["C8GoChange32ViewFollowedChangeViewController", "print"]
 - ["C8GoChange32ViewFollowedChangeViewController", "scrollViewDidEndDecelerating"]
 - ["C8GoChange32ViewFollowedChangeViewController", "scrollViewDidEndDragging"]
@@ -2527,7 +2467,6 @@ depends-nominal:
 - !private "C8GoChange29RetrieveSolutionCountFirebase"
 - !private "C8GoChange17RetrieveSolutions"
 - !private "C8GoChange29RetrieveSolutionsFromFirebase"
-- !private "C8GoChange15SaveNewSolution"
 - "Ps12SequenceType"
 - !private "Ps17SignedIntegerType"
 - !private "Ps16SignedNumberType"
@@ -2615,4 +2554,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "5cdb2fd12b77bc0f273c9b07196ad5be"
+interface-hash: "8ff47eead5914288e117d2823b486189"

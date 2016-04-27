@@ -763,31 +763,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBm-Sy-q1H">
-                                        <rect key="frame" x="258" y="471" width="85" height="30"/>
-                                        <state key="normal" title="Add a tweak"/>
-                                        <connections>
-                                            <action selector="addTweak:" destination="GYX-c8-uwM" eventType="touchUpInside" id="jPP-ZM-Gv1"/>
-                                        </connections>
-                                    </button>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="31" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yDm-Et-h54">
-                                        <rect key="frame" x="0.0" y="246" width="600" height="217"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweakCell" rowHeight="31" id="fOc-S7-hSQ">
-                                                <rect key="frame" x="0.0" y="28" width="600" height="31"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fOc-S7-hSQ" id="8iy-2E-3Hm">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                        </prototypes>
-                                        <connections>
-                                            <outlet property="dataSource" destination="GYX-c8-uwM" id="U4m-5o-Ne6"/>
-                                            <outlet property="delegate" destination="GYX-c8-uwM" id="eFF-L8-yKJ"/>
-                                        </connections>
-                                    </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMr-RW-HHp">
                                         <rect key="frame" x="412" y="209" width="163" height="27"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -803,19 +778,12 @@
                                     <constraint firstAttribute="trailing" secondItem="QMr-RW-HHp" secondAttribute="trailing" constant="25" id="3QH-b8-h7m"/>
                                     <constraint firstItem="ES5-S7-10A" firstAttribute="top" secondItem="wuV-ff-IxT" secondAttribute="top" id="5qu-jQ-awr"/>
                                     <constraint firstAttribute="trailing" secondItem="ES5-S7-10A" secondAttribute="trailing" constant="8" id="6LZ-FP-h82"/>
-                                    <constraint firstItem="CBm-Sy-q1H" firstAttribute="centerX" secondItem="Pbc-Xt-r0a" secondAttribute="centerX" id="C2B-sl-lRY"/>
                                     <constraint firstItem="ES5-S7-10A" firstAttribute="leading" secondItem="wuV-ff-IxT" secondAttribute="trailing" constant="8" id="Eeh-OS-hJ4"/>
                                     <constraint firstItem="wsX-iJ-DcV" firstAttribute="centerY" secondItem="vZy-It-Oqd" secondAttribute="centerY" id="GIm-R3-KHN"/>
                                     <constraint firstItem="wsX-iJ-DcV" firstAttribute="leading" secondItem="vZy-It-Oqd" secondAttribute="trailing" constant="8" id="H4I-71-ahn"/>
                                     <constraint firstItem="vZy-It-Oqd" firstAttribute="leading" secondItem="Pbc-Xt-r0a" secondAttribute="leading" constant="8" id="Luk-HL-JNp"/>
                                     <constraint firstItem="wuV-ff-IxT" firstAttribute="leading" secondItem="Pbc-Xt-r0a" secondAttribute="leading" constant="8" id="RwI-dY-AfM"/>
-                                    <constraint firstItem="yDm-Et-h54" firstAttribute="top" secondItem="QMr-RW-HHp" secondAttribute="bottom" constant="10" id="VLf-Ed-Fc1"/>
                                     <constraint firstItem="vZy-It-Oqd" firstAttribute="top" secondItem="Pbc-Xt-r0a" secondAttribute="top" constant="8" id="ZSp-rw-WVB"/>
-                                    <constraint firstItem="CBm-Sy-q1H" firstAttribute="top" secondItem="yDm-Et-h54" secondAttribute="bottom" constant="25" id="evM-3B-qpn"/>
-                                    <constraint firstItem="yDm-Et-h54" firstAttribute="height" secondItem="wuV-ff-IxT" secondAttribute="height" id="jO5-8H-bv2"/>
-                                    <constraint firstItem="yDm-Et-h54" firstAttribute="leading" secondItem="Pbc-Xt-r0a" secondAttribute="leading" constant="8" id="nKo-Zc-IIR"/>
-                                    <constraint firstAttribute="bottom" secondItem="CBm-Sy-q1H" secondAttribute="bottom" constant="25" id="oNu-aK-Bwz"/>
-                                    <constraint firstAttribute="trailing" secondItem="yDm-Et-h54" secondAttribute="trailing" constant="8" id="yvD-iW-nBH"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dD-HK-3cs">
@@ -844,7 +812,6 @@
                         <outlet property="detailTextView" destination="wuV-ff-IxT" id="dJM-UI-rov"/>
                         <outlet property="nameTextField" destination="vZy-It-Oqd" id="Yxv-en-cV0"/>
                         <outlet property="petitionButton" destination="QMr-RW-HHp" id="uQE-n6-67L"/>
-                        <outlet property="tweakTable" destination="yDm-Et-h54" id="zYN-Bu-y6V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XZ5-cW-2Zh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -922,79 +889,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P9w-Fo-Br9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="198" y="-919"/>
-        </scene>
-        <!--Add Tweak View Controller-->
-        <scene sceneID="s4x-mD-5qS">
-            <objects>
-                <viewController storyboardIdentifier="AddTweakViewController" id="SmK-xx-Jab" customClass="AddTweakViewController" customModule="GoChange" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="NXp-72-CWi"/>
-                        <viewControllerLayoutGuide type="bottom" id="yEU-mL-vLm"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Spg-hX-xAQ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please name your tweak" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CGk-yF-6Gm">
-                                <rect key="frame" x="28" y="28" width="502" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g99-mu-zrQ">
-                                <rect key="frame" x="538" y="28" width="34" height="34"/>
-                                <state key="normal" image="plus"/>
-                                <connections>
-                                    <action selector="nameButtonClick:" destination="SmK-xx-Jab" eventType="touchUpInside" id="fLF-2B-fDI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zd-Hr-unm">
-                                <rect key="frame" x="538" y="78" width="34" height="34"/>
-                                <state key="normal" image="plus"/>
-                                <connections>
-                                    <action selector="detailButtonClick:" destination="SmK-xx-Jab" eventType="touchUpInside" id="zVt-iZ-zQB"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Please give details of the tweak..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hU1-iI-jXL">
-                                <rect key="frame" x="28" y="78" width="502" height="422"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2L5-Rx-wwE">
-                                <rect key="frame" x="262" y="550" width="76" height="30"/>
-                                <state key="normal" title="Add Tweak"/>
-                                <connections>
-                                    <action selector="addTweakClick:" destination="SmK-xx-Jab" eventType="touchUpInside" id="HIe-4I-Yy3"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="0zd-Hr-unm" firstAttribute="top" secondItem="hU1-iI-jXL" secondAttribute="top" id="KA0-9a-fKo"/>
-                            <constraint firstItem="0zd-Hr-unm" firstAttribute="leading" secondItem="hU1-iI-jXL" secondAttribute="trailing" constant="8" id="M3i-KL-X5E"/>
-                            <constraint firstItem="hU1-iI-jXL" firstAttribute="top" secondItem="CGk-yF-6Gm" secondAttribute="bottom" constant="20" id="R0K-dD-JEH"/>
-                            <constraint firstItem="yEU-mL-vLm" firstAttribute="top" secondItem="2L5-Rx-wwE" secondAttribute="bottom" constant="20" id="SLk-a1-6n2"/>
-                            <constraint firstItem="2L5-Rx-wwE" firstAttribute="centerX" secondItem="Spg-hX-xAQ" secondAttribute="centerX" id="UM8-O0-PEf"/>
-                            <constraint firstItem="g99-mu-zrQ" firstAttribute="leading" secondItem="CGk-yF-6Gm" secondAttribute="trailing" constant="8" id="V98-kC-ow2"/>
-                            <constraint firstItem="g99-mu-zrQ" firstAttribute="top" secondItem="NXp-72-CWi" secondAttribute="bottom" constant="8" id="acy-yd-CcN"/>
-                            <constraint firstItem="hU1-iI-jXL" firstAttribute="leading" secondItem="Spg-hX-xAQ" secondAttribute="leadingMargin" constant="8" id="j83-Zp-OLH"/>
-                            <constraint firstItem="CGk-yF-6Gm" firstAttribute="leading" secondItem="Spg-hX-xAQ" secondAttribute="leadingMargin" constant="8" id="jD7-rR-vNQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="g99-mu-zrQ" secondAttribute="trailing" constant="8" id="kup-au-U3M"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0zd-Hr-unm" secondAttribute="trailing" constant="8" id="s5P-ay-wpV"/>
-                            <constraint firstItem="CGk-yF-6Gm" firstAttribute="top" secondItem="NXp-72-CWi" secondAttribute="bottom" constant="8" id="zbb-04-rdx"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="detailButton" destination="0zd-Hr-unm" id="J7Y-eH-0QP"/>
-                        <outlet property="detailText" destination="hU1-iI-jXL" id="wDk-eA-phF"/>
-                        <outlet property="nameButton" destination="g99-mu-zrQ" id="Ura-vc-YOk"/>
-                        <outlet property="nameText" destination="CGk-yF-6Gm" id="QrJ-J3-WOH"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PiC-hX-ecn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1802" y="-1708"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="XlB-90-ezm">

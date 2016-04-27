@@ -6,23 +6,23 @@ provides-nominal:
 provides-member:
 - ["C8GoChange23UpdateCoreDataSolutions", ""]
 provides-dynamic-lookup:
+- "createCoreDataSolutions"
 - "haveVotedArray"
 - "sharedContext"
 - "existingChange"
-- "createCoreDataSolutions"
 depends-top-level:
-- !private "..<"
-- !private "AnyObject"
-- "Array"
 - !private "Solution"
-- "UpdateCoreDataSolutions"
-- "NSMutableArray"
+- "NSObject"
 - !private "String"
 - !private "CoreDataStackManager"
+- "UpdateCoreDataSolutions"
+- "NSMutableArray"
+- !private "..<"
+- "Array"
 - !private "TempChange"
-- "NSObject"
-- "NSManagedObjectContext"
+- !private "AnyObject"
 - "Change"
+- "NSManagedObjectContext"
 depends-member:
 - !private ["Ps9AnyObject", "AnyObject"]
 - !private ["Ps9AnyObject", "CoreDataStackManager"]
@@ -45,6 +45,7 @@ depends-member:
 - !private ["Ps9AnyObject", "solutionDetailArray"]
 - !private ["Ps9AnyObject", "solutionIDArray"]
 - !private ["Ps9AnyObject", "solutionNameArray"]
+- !private ["Ps9AnyObject", "solutionOwnerArray"]
 - !private ["Ps9AnyObject", "solutionToChange"]
 - !private ["Ps9AnyObject", "solutionVoteArray"]
 - !private ["Ps9AnyObject", "subscript"]
@@ -83,6 +84,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "solutionDetailArray"]
 - !private ["Ps11CVarArgType", "solutionIDArray"]
 - !private ["Ps11CVarArgType", "solutionNameArray"]
+- !private ["Ps11CVarArgType", "solutionOwnerArray"]
 - !private ["Ps11CVarArgType", "solutionToChange"]
 - !private ["Ps11CVarArgType", "solutionVoteArray"]
 - !private ["Ps11CVarArgType", "subscript"]
@@ -118,6 +120,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "solutionDetailArray"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionIDArray"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionNameArray"]
+- !private ["Ps28CustomDebugStringConvertible", "solutionOwnerArray"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionToChange"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionVoteArray"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
@@ -146,6 +149,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "solutionDetailArray"]
 - !private ["Ps23CustomStringConvertible", "solutionIDArray"]
 - !private ["Ps23CustomStringConvertible", "solutionNameArray"]
+- !private ["Ps23CustomStringConvertible", "solutionOwnerArray"]
 - !private ["Ps23CustomStringConvertible", "solutionToChange"]
 - !private ["Ps23CustomStringConvertible", "solutionVoteArray"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
@@ -178,6 +182,7 @@ depends-member:
 - !private ["Ps9Equatable", "solutionDetailArray"]
 - !private ["Ps9Equatable", "solutionIDArray"]
 - !private ["Ps9Equatable", "solutionNameArray"]
+- !private ["Ps9Equatable", "solutionOwnerArray"]
 - !private ["Ps9Equatable", "solutionToChange"]
 - !private ["Ps9Equatable", "solutionVoteArray"]
 - !private ["Ps9Equatable", "subscript"]
@@ -210,6 +215,7 @@ depends-member:
 - !private ["Ps8Hashable", "solutionDetailArray"]
 - !private ["Ps8Hashable", "solutionIDArray"]
 - !private ["Ps8Hashable", "solutionNameArray"]
+- !private ["Ps8Hashable", "solutionOwnerArray"]
 - !private ["Ps8Hashable", "solutionToChange"]
 - !private ["Ps8Hashable", "solutionVoteArray"]
 - !private ["Ps8Hashable", "subscript"]
@@ -237,6 +243,7 @@ depends-member:
 - !private ["VC8GoChange8Solution4Keys", "solutionDescription"]
 - !private ["VC8GoChange8Solution4Keys", "solutionID"]
 - !private ["VC8GoChange8Solution4Keys", "solutionName"]
+- !private ["VC8GoChange8Solution4Keys", "solutionOwner"]
 - !private ["VC8GoChange8Solution4Keys", "voteCount"]
 - !private ["Ps14MirrorPathType", "Distance"]
 - !private ["Ps14MirrorPathType", "IntegerLiteralType"]
@@ -287,6 +294,7 @@ depends-member:
 - !private ["CSo8NSObject", "solutionDetailArray"]
 - !private ["CSo8NSObject", "solutionIDArray"]
 - !private ["CSo8NSObject", "solutionNameArray"]
+- !private ["CSo8NSObject", "solutionOwnerArray"]
 - !private ["CSo8NSObject", "solutionToChange"]
 - !private ["CSo8NSObject", "solutionVoteArray"]
 - !private ["CSo8NSObject", "subscript"]
@@ -310,6 +318,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "solutionDetailArray"]
 - !private ["PSo16NSObjectProtocol", "solutionIDArray"]
 - !private ["PSo16NSObjectProtocol", "solutionNameArray"]
+- !private ["PSo16NSObjectProtocol", "solutionOwnerArray"]
 - !private ["PSo16NSObjectProtocol", "solutionToChange"]
 - !private ["PSo16NSObjectProtocol", "solutionVoteArray"]
 - !private ["PSo16NSObjectProtocol", "subscript"]
@@ -353,6 +362,7 @@ depends-member:
 - !private ["C8GoChange10TempChange", "solutionDetailArray"]
 - !private ["C8GoChange10TempChange", "solutionIDArray"]
 - !private ["C8GoChange10TempChange", "solutionNameArray"]
+- !private ["C8GoChange10TempChange", "solutionOwnerArray"]
 - !private ["C8GoChange10TempChange", "solutionVoteArray"]
 - !private ["C8GoChange23UpdateCoreDataSolutions", "AnyObject"]
 - ["C8GoChange23UpdateCoreDataSolutions", "Change"]

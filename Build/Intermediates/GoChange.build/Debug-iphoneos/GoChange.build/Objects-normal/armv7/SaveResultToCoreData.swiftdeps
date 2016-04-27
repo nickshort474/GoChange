@@ -6,23 +6,23 @@ provides-nominal:
 provides-member:
 - ["C8GoChange20SaveResultToCoreData", ""]
 provides-dynamic-lookup:
-- "sharedContext"
-- "changeID"
-- "newChange"
 - "createCoreDataChange"
 - "createCoreDataSolutions"
+- "changeID"
+- "newChange"
+- "sharedContext"
 depends-top-level:
-- "NSObject"
 - !private "..<"
-- "NSManagedObjectContext"
-- "String"
+- "SaveResultToCoreData"
+- "NSObject"
 - !private "CoreDataStackManager"
+- !private "TempChange"
+- "String"
+- "Change"
+- "NSManagedObjectContext"
+- "Void"
 - "AnyObject"
 - !private "Solution"
-- "Change"
-- "SaveResultToCoreData"
-- "Void"
-- !private "TempChange"
 depends-member:
 - !private ["Ps9AnyObject", "AnyObject"]
 - !private ["Ps9AnyObject", "Change"]
@@ -34,6 +34,7 @@ depends-member:
 - !private ["Ps9AnyObject", "changeDetail"]
 - ["Ps9AnyObject", "changeID"]
 - !private ["Ps9AnyObject", "changeName"]
+- !private ["Ps9AnyObject", "changeOwner"]
 - !private ["Ps9AnyObject", "count"]
 - ["Ps9AnyObject", "createCoreDataChange"]
 - ["Ps9AnyObject", "createCoreDataSolutions"]
@@ -48,6 +49,7 @@ depends-member:
 - !private ["Ps9AnyObject", "solutionDetailArray"]
 - !private ["Ps9AnyObject", "solutionIDArray"]
 - !private ["Ps9AnyObject", "solutionNameArray"]
+- !private ["Ps9AnyObject", "solutionOwnerArray"]
 - !private ["Ps9AnyObject", "solutionToChange"]
 - !private ["Ps9AnyObject", "solutionVoteArray"]
 - !private ["Ps9AnyObject", "subscript"]
@@ -76,6 +78,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "changeDetail"]
 - ["Ps11CVarArgType", "changeID"]
 - !private ["Ps11CVarArgType", "changeName"]
+- !private ["Ps11CVarArgType", "changeOwner"]
 - !private ["Ps11CVarArgType", "count"]
 - ["Ps11CVarArgType", "createCoreDataChange"]
 - ["Ps11CVarArgType", "createCoreDataSolutions"]
@@ -88,6 +91,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "solutionDetailArray"]
 - !private ["Ps11CVarArgType", "solutionIDArray"]
 - !private ["Ps11CVarArgType", "solutionNameArray"]
+- !private ["Ps11CVarArgType", "solutionOwnerArray"]
 - !private ["Ps11CVarArgType", "solutionToChange"]
 - !private ["Ps11CVarArgType", "solutionVoteArray"]
 - !private ["Ps11CVarArgType", "subscript"]
@@ -116,6 +120,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "changeDetail"]
 - ["Ps28CustomDebugStringConvertible", "changeID"]
 - !private ["Ps28CustomDebugStringConvertible", "changeName"]
+- !private ["Ps28CustomDebugStringConvertible", "changeOwner"]
 - !private ["Ps28CustomDebugStringConvertible", "count"]
 - ["Ps28CustomDebugStringConvertible", "createCoreDataChange"]
 - ["Ps28CustomDebugStringConvertible", "createCoreDataSolutions"]
@@ -128,6 +133,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "solutionDetailArray"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionIDArray"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionNameArray"]
+- !private ["Ps28CustomDebugStringConvertible", "solutionOwnerArray"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionToChange"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionVoteArray"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
@@ -147,6 +153,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "changeDetail"]
 - ["Ps23CustomStringConvertible", "changeID"]
 - !private ["Ps23CustomStringConvertible", "changeName"]
+- !private ["Ps23CustomStringConvertible", "changeOwner"]
 - !private ["Ps23CustomStringConvertible", "count"]
 - ["Ps23CustomStringConvertible", "createCoreDataChange"]
 - ["Ps23CustomStringConvertible", "createCoreDataSolutions"]
@@ -159,6 +166,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "solutionDetailArray"]
 - !private ["Ps23CustomStringConvertible", "solutionIDArray"]
 - !private ["Ps23CustomStringConvertible", "solutionNameArray"]
+- !private ["Ps23CustomStringConvertible", "solutionOwnerArray"]
 - !private ["Ps23CustomStringConvertible", "solutionToChange"]
 - !private ["Ps23CustomStringConvertible", "solutionVoteArray"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
@@ -182,6 +190,7 @@ depends-member:
 - !private ["Ps9Equatable", "changeDetail"]
 - ["Ps9Equatable", "changeID"]
 - !private ["Ps9Equatable", "changeName"]
+- !private ["Ps9Equatable", "changeOwner"]
 - !private ["Ps9Equatable", "count"]
 - ["Ps9Equatable", "createCoreDataChange"]
 - ["Ps9Equatable", "createCoreDataSolutions"]
@@ -194,6 +203,7 @@ depends-member:
 - !private ["Ps9Equatable", "solutionDetailArray"]
 - !private ["Ps9Equatable", "solutionIDArray"]
 - !private ["Ps9Equatable", "solutionNameArray"]
+- !private ["Ps9Equatable", "solutionOwnerArray"]
 - !private ["Ps9Equatable", "solutionToChange"]
 - !private ["Ps9Equatable", "solutionVoteArray"]
 - !private ["Ps9Equatable", "subscript"]
@@ -217,6 +227,7 @@ depends-member:
 - !private ["Ps8Hashable", "changeDetail"]
 - ["Ps8Hashable", "changeID"]
 - !private ["Ps8Hashable", "changeName"]
+- !private ["Ps8Hashable", "changeOwner"]
 - !private ["Ps8Hashable", "count"]
 - ["Ps8Hashable", "createCoreDataChange"]
 - ["Ps8Hashable", "createCoreDataSolutions"]
@@ -229,6 +240,7 @@ depends-member:
 - !private ["Ps8Hashable", "solutionDetailArray"]
 - !private ["Ps8Hashable", "solutionIDArray"]
 - !private ["Ps8Hashable", "solutionNameArray"]
+- !private ["Ps8Hashable", "solutionOwnerArray"]
 - !private ["Ps8Hashable", "solutionToChange"]
 - !private ["Ps8Hashable", "solutionVoteArray"]
 - !private ["Ps8Hashable", "subscript"]
@@ -257,12 +269,13 @@ depends-member:
 - !private ["VC8GoChange6Change4Keys", "changeDescription"]
 - !private ["VC8GoChange6Change4Keys", "changeID"]
 - !private ["VC8GoChange6Change4Keys", "changeName"]
-- !private ["VC8GoChange6Change4Keys", "owner"]
+- !private ["VC8GoChange6Change4Keys", "changeOwner"]
 - !private ["VC8GoChange6Change4Keys", "solutionCount"]
 - !private ["VC8GoChange8Solution4Keys", "haveVotedFor"]
 - !private ["VC8GoChange8Solution4Keys", "solutionDescription"]
 - !private ["VC8GoChange8Solution4Keys", "solutionID"]
 - !private ["VC8GoChange8Solution4Keys", "solutionName"]
+- !private ["VC8GoChange8Solution4Keys", "solutionOwner"]
 - !private ["VC8GoChange8Solution4Keys", "voteCount"]
 - !private ["Ps14MirrorPathType", "Distance"]
 - !private ["Ps14MirrorPathType", "IntegerLiteralType"]
@@ -297,6 +310,7 @@ depends-member:
 - !private ["CSo8NSObject", "changeDetail"]
 - ["CSo8NSObject", "changeID"]
 - !private ["CSo8NSObject", "changeName"]
+- !private ["CSo8NSObject", "changeOwner"]
 - !private ["CSo8NSObject", "count"]
 - ["CSo8NSObject", "createCoreDataChange"]
 - ["CSo8NSObject", "createCoreDataSolutions"]
@@ -309,6 +323,7 @@ depends-member:
 - !private ["CSo8NSObject", "solutionDetailArray"]
 - !private ["CSo8NSObject", "solutionIDArray"]
 - !private ["CSo8NSObject", "solutionNameArray"]
+- !private ["CSo8NSObject", "solutionOwnerArray"]
 - !private ["CSo8NSObject", "solutionToChange"]
 - !private ["CSo8NSObject", "solutionVoteArray"]
 - !private ["CSo8NSObject", "subscript"]
@@ -323,6 +338,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "changeDetail"]
 - ["PSo16NSObjectProtocol", "changeID"]
 - !private ["PSo16NSObjectProtocol", "changeName"]
+- !private ["PSo16NSObjectProtocol", "changeOwner"]
 - !private ["PSo16NSObjectProtocol", "count"]
 - ["PSo16NSObjectProtocol", "createCoreDataChange"]
 - ["PSo16NSObjectProtocol", "createCoreDataSolutions"]
@@ -335,6 +351,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "solutionDetailArray"]
 - !private ["PSo16NSObjectProtocol", "solutionIDArray"]
 - !private ["PSo16NSObjectProtocol", "solutionNameArray"]
+- !private ["PSo16NSObjectProtocol", "solutionOwnerArray"]
 - !private ["PSo16NSObjectProtocol", "solutionToChange"]
 - !private ["PSo16NSObjectProtocol", "solutionVoteArray"]
 - !private ["PSo16NSObjectProtocol", "subscript"]
@@ -391,10 +408,12 @@ depends-member:
 - !private ["SS", "deinit"]
 - !private ["C8GoChange10TempChange", "changeDetail"]
 - !private ["C8GoChange10TempChange", "changeName"]
+- !private ["C8GoChange10TempChange", "changeOwner"]
 - !private ["C8GoChange10TempChange", "sharedInstance"]
 - !private ["C8GoChange10TempChange", "solutionDetailArray"]
 - !private ["C8GoChange10TempChange", "solutionIDArray"]
 - !private ["C8GoChange10TempChange", "solutionNameArray"]
+- !private ["C8GoChange10TempChange", "solutionOwnerArray"]
 - !private ["C8GoChange10TempChange", "solutionVoteArray"]
 - !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]

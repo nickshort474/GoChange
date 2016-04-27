@@ -6,25 +6,25 @@ provides-nominal:
 provides-member:
 - ["C8GoChange12CreateChange", ""]
 provides-dynamic-lookup:
-- "sharedContext"
-- "savedAutoID"
-- "ref"
-- "createCoreDataChange"
 - "saveChangeToFirebase"
+- "savedAutoID"
+- "sharedContext"
+- "createCoreDataChange"
+- "ref"
 depends-top-level:
-- "Bool"
-- "String"
-- "NSManagedObjectContext"
-- !private "Dictionary"
-- "CreateChange"
-- !private "=="
-- !private "CoreDataStackManager"
-- "StringLiteralType"
 - "NSObject"
-- "Change"
-- !private "BooleanLiteralType"
 - !private "AnyObject"
+- !private "CoreDataStackManager"
+- !private "Dictionary"
+- "String"
+- !private "BooleanLiteralType"
+- "CreateChange"
 - "Firebase"
+- !private "=="
+- "StringLiteralType"
+- "Bool"
+- "Change"
+- "NSManagedObjectContext"
 depends-member:
 - !private ["Ps9AnyObject", "AnyObject"]
 - !private ["Ps9AnyObject", "Change"]
@@ -46,7 +46,6 @@ depends-member:
 - !private ["Ps9AnyObject", "sharedInstance"]
 - ["Ps9AnyObject", ""]
 - !private ["Sb", "_getBuiltinLogicValue"]
-- !private ["Sb", "deinit"]
 - !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
 - !private ["Ps11CVarArgType", "AnyObject"]
@@ -203,7 +202,6 @@ depends-member:
 - !private ["VC8GoChange6Change4Keys", "changeDescription"]
 - !private ["VC8GoChange6Change4Keys", "changeName"]
 - !private ["VC8GoChange6Change4Keys", "firebaseLocation"]
-- !private ["VC8GoChange6Change4Keys", "owner"]
 - !private ["Ps14MirrorPathType", "init"]
 - !private ["PSo8NSCoding", "save"]
 - !private ["PSo9NSLocking", "save"]

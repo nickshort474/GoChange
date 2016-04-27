@@ -17,20 +17,15 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var detailsField: UITextView!
     @IBOutlet weak var solutionTable: UITableView!
-    
-    //@IBOutlet weak var nameButton: UIButton!
-    //@IBOutlet weak var detailButton: UIButton!
-    
     @IBOutlet weak var followChangeButton: UIButton!
     
-     
     var changeName:String!
     var changeDetail:String!
     var changeID:String!
     var owner:String!
-    
-    
     var currentChange:Change!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,10 +37,9 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
         detailsField.delegate = self
         solutionTable.delegate = self
         
+        nameField.enabled = false
+        detailsField.selectable = false
         
-        //TODO: have prompt for user to follow change if they try clicking fields?
-       
-    
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -55,7 +49,6 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
         TempChange.sharedInstance().solutionDetailArray = []
         TempChange.sharedInstance().solutionVoteArray = []
         TempChange.sharedInstance().solutionIDArray = []
-        TempChange.sharedInstance().solutionNewOldArray = []
         
         //load passed data into Temp variables to hold for use
         TempChange.sharedInstance().changeName = changeName
@@ -79,11 +72,6 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
                 TempChange.sharedInstance().solutionVoteArray.addObject(name.value["SolutionVoteCount"]!! as! Int)
                 TempChange.sharedInstance().solutionIDArray.addObject(name.key)
                 TempChange.sharedInstance().solutionOwnerArray.addObject(name.value["SolutionOwner"]!! as! String)
-                
-                //TODO:Check for use
-                TempChange.sharedInstance().solutionNewOldArray.addObject("old")
-                
-                
                 
             }
             self.solutionTable.reloadData()

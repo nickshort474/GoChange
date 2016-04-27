@@ -103,9 +103,6 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 @class UIButton;
 @class UITextField;
 @class UITextView;
-@class UITableView;
-@class NSIndexPath;
-@class UITableViewCell;
 @class NSBundle;
 @class NSCoder;
 
@@ -115,7 +112,6 @@ SWIFT_CLASS("_TtC8GoChange21AddIdeaViewController")
 @property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified detailTextView;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified addNameButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified addDetailButton;
-@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tweakTable;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified addSolution;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified petitionButton;
 @property (nonatomic, copy) NSString * _Null_unspecified currentNameData;
@@ -132,12 +128,8 @@ SWIFT_CLASS("_TtC8GoChange21AddIdeaViewController")
 - (IBAction)doneAddingIdea:(UIButton * _Nonnull)sender;
 - (IBAction)addNameClick:(id _Nonnull)sender;
 - (IBAction)addDetailClick:(UIButton * _Nonnull)sender;
-- (IBAction)addTweak:(UIButton * _Nonnull)sender;
 - (void)textFieldDidBeginEditing:(UITextField * _Nonnull)textField;
 - (void)textViewDidBeginEditing:(UITextView * _Nonnull)textView;
-- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
-- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (IBAction)addPetition:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -190,9 +182,9 @@ SWIFT_CLASS("_TtC8GoChange6Change")
 @interface Change : NSManagedObject
 @property (nonatomic, copy) NSString * _Nonnull changeName;
 @property (nonatomic, copy) NSString * _Nonnull changeDescription;
-@property (nonatomic, copy) NSString * _Nonnull owner;
 @property (nonatomic, copy) NSString * _Nonnull changeID;
 @property (nonatomic, strong) NSNumber * _Nonnull solutionCount;
+@property (nonatomic, copy) NSString * _Nonnull changeOwner;
 @property (nonatomic, copy) NSArray<Solution *> * _Nonnull changeNeedingSolution;
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithDictionary:(NSDictionary<NSString *, id> * _Nonnull)dictionary context:(NSManagedObjectContext * _Nonnull)context OBJC_DESIGNATED_INITIALIZER;
@@ -221,6 +213,9 @@ SWIFT_CLASS("_TtC8GoChange12CreateChange")
 - (Change * _Nonnull)createCoreDataChange:(NSString * _Nonnull)currentDetailData currentNameData:(NSString * _Nonnull)currentNameData owner:(BOOL)owner;
 @end
 
+@class UITableView;
+@class NSIndexPath;
+@class UITableViewCell;
 
 SWIFT_CLASS("_TtC8GoChange26CreateChangeViewController")
 @interface CreateChangeViewController : UIViewController <UIScrollViewDelegate, UITextFieldDelegate, UITableViewDelegate, UITextViewDelegate>
@@ -234,7 +229,6 @@ SWIFT_CLASS("_TtC8GoChange26CreateChangeViewController")
 @property (nonatomic, copy) NSString * _Nonnull currentNameData;
 @property (nonatomic, copy) NSString * _Nonnull currentDetailData;
 @property (nonatomic, copy) NSString * _Nonnull sendingController;
-@property (nonatomic, copy) NSString * _Nonnull isOwner;
 @property (nonatomic, copy) NSString * _Nonnull changeName;
 @property (nonatomic, copy) NSString * _Nonnull changeDetail;
 @property (nonatomic, copy) NSString * _Nonnull changeID;
@@ -334,6 +328,7 @@ SWIFT_CLASS("_TtC8GoChange21ResultsViewController")
 @property (nonatomic, strong) NSMutableArray * _Nonnull resultNameArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull resultDetailArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull resultSolutionCountArray;
+@property (nonatomic, strong) NSMutableArray * _Nonnull solutionOwnerArray;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (void)viewWillAppear:(BOOL)animated;
@@ -398,7 +393,6 @@ SWIFT_CLASS("_TtC8GoChange8SaveData")
 @property (nonatomic, strong) Change * _Null_unspecified newChange;
 @property (nonatomic, strong) Change * _Null_unspecified existingChange;
 @property (nonatomic, copy) NSString * _Nonnull postType;
-@property (nonatomic, copy) NSString * _Nullable isOwner;
 @property (nonatomic, copy) NSString * _Nonnull haveVoted;
 - (nonnull instancetype)initWithPostType:(NSString * _Nonnull)postType owner:(NSString * _Nullable)owner change:(Change * _Nullable)change changeID:(NSString * _Nullable)changeID completionHandler:(void (^ _Nonnull)(id _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
 @property (nonatomic, strong) NSManagedObjectContext * _Nonnull sharedContext;
@@ -451,6 +445,8 @@ SWIFT_CLASS("_TtC8GoChange20SearchViewController")
 @interface SearchViewController : UIViewController <UITextFieldDelegate>
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified searchTextField;
 @property (nonatomic, strong) NSMutableArray * _Nonnull returnedNameArray;
+@property (nonatomic, strong) NSMutableArray * _Nonnull returnedOwnerArray;
+@property (nonatomic, strong) NSMutableArray * _Nonnull useOwnerArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull returnedRefArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull countArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull matchedNameArray;
@@ -501,6 +497,7 @@ SWIFT_CLASS("_TtC8GoChange8Solution")
 @property (nonatomic, strong) NSNumber * _Nonnull voteCount;
 @property (nonatomic, copy) NSString * _Nonnull solutionID;
 @property (nonatomic, copy) NSString * _Nonnull haveVotedFor;
+@property (nonatomic, copy) NSString * _Nonnull solutionOwner;
 @property (nonatomic, strong) Change * _Nonnull solutionToChange;
 @property (nonatomic, copy) NSArray<Tweak *> * _Nonnull solutionNeedingTweaking;
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
@@ -511,19 +508,19 @@ SWIFT_CLASS("_TtC8GoChange8Solution")
 SWIFT_CLASS("_TtC8GoChange10TempChange")
 @interface TempChange : NSObject
 @property (nonatomic, copy) NSString * _Nonnull changeName;
+@property (nonatomic, copy) NSString * _Nonnull changeOwner;
 @property (nonatomic, copy) NSString * _Nonnull changeDetail;
 @property (nonatomic, strong) NSMutableArray * _Nonnull solutionNameArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull solutionDetailArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull solutionVoteArray;
-@property (nonatomic, strong) NSMutableArray * _Nonnull solutionNewOldArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull solutionIDArray;
+@property (nonatomic, strong) NSMutableArray * _Nonnull solutionOwnerArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull newSolutionIDArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull newSolutionNameArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull newSolutionDetailArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull newSolutionVoteArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull tweakNameArray;
 @property (nonatomic, strong) NSMutableArray * _Nonnull tweakDetailArray;
-@property (nonatomic, copy) NSString * _Nonnull addingSolutions;
 + (TempChange * _Nonnull)sharedInstance;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -584,7 +581,6 @@ SWIFT_CLASS("_TtC8GoChange32ViewFollowedChangeViewController")
 - (IBAction)addNameClick:(UIButton * _Nonnull)sender;
 - (IBAction)addDetailClick:(UIButton * _Nonnull)sender;
 - (IBAction)addSolutionClick:(UIButton * _Nonnull)sender;
-- (IBAction)postChangeClick:(UIButton * _Nonnull)sender;
 - (void)textViewDidBeginEditing:(UITextView * _Nonnull)textView;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
@@ -602,10 +598,10 @@ SWIFT_CLASS("_TtC8GoChange30ViewResultChangeViewController")
 @property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified detailsField;
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified solutionTable;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified followChangeButton;
-@property (nonatomic, copy) NSString * _Null_unspecified isOwner;
 @property (nonatomic, copy) NSString * _Null_unspecified changeName;
 @property (nonatomic, copy) NSString * _Null_unspecified changeDetail;
 @property (nonatomic, copy) NSString * _Null_unspecified changeID;
+@property (nonatomic, copy) NSString * _Null_unspecified owner;
 @property (nonatomic, strong) Change * _Null_unspecified currentChange;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;

@@ -8,21 +8,21 @@ provides-member:
 provides-dynamic-lookup:
 - "saveChangeToFirebase"
 - "linkedChange"
+- "sharedContext"
 - "createCoreDataChange"
 - "ref"
-- "sharedContext"
 depends-top-level:
 - "Change"
-- !private "Dictionary"
-- !private "AnyObject"
-- !private "StringLiteralType"
-- "Firebase"
 - "String"
-- !private "Solution"
-- "NSManagedObjectContext"
 - "NSObject"
 - !private "CoreDataStackManager"
+- !private "StringLiteralType"
+- !private "Dictionary"
+- !private "AnyObject"
+- !private "Solution"
 - "CreateSolution"
+- "Firebase"
+- "NSManagedObjectContext"
 depends-member:
 - !private ["Ps9AnyObject", "AnyObject"]
 - !private ["Ps9AnyObject", "CoreDataStackManager"]

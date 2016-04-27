@@ -62,7 +62,7 @@ class CreateChange:NSObject{
         
         changeDictionary[Change.Keys.changeName] = currentNameData
         changeDictionary[Change.Keys.changeDescription] = currentDetailData
-        changeDictionary[Change.Keys.owner] = owner
+        //changeDictionary[Change.Keys.owner] = owner
         changeDictionary[Change.Keys.firebaseLocation] = savedAutoID
         
       

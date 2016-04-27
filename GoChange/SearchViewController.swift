@@ -59,9 +59,11 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
     
     @IBAction func searchForResults(sender: UIButton) {
         
+        print("new search")
         //clear arrays after previous search
         returnedRefArray = []
         returnedNameArray = []
+        returnedOwnerArray = []
         
         _ = RetrieveFromFirebase(){
             (snapshot) in
@@ -87,6 +89,7 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         
         //clear matched array after previous search
         matchedNameArray = []
+        countArray = []
         
         let searchTerm = searchTextField.text!
         let capitalisedTerm = searchTerm.capitalizedString
@@ -131,6 +134,7 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         //clear array after coming back from previous search
         useDetailArray = []
         useRefArray = []
+        useOwnerArray = []
         
         // for all results that match search term add their unique reference to useRefArray using countArray
         for num in countArray{

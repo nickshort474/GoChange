@@ -13,15 +13,15 @@ import Firebase
 
 class VoteForSolution:NSObject{
     
-    var change:Change!
+    
     var changeID:String!
     var solutionID:String!
     var currentVoteCount:Int = 0
     
-    init(change:Change,changeID:String,solutionID:String,completionHandler:(result:AnyObject)->Void){
+    init(changeID:String,solutionID:String,completionHandler:(result:AnyObject)->Void){
         super.init()
         
-        self.change = change
+        
         self.changeID = changeID
         self.solutionID = solutionID
         

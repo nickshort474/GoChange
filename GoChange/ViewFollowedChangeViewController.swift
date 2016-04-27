@@ -96,8 +96,7 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
                     TempChange.sharedInstance().solutionVoteArray = []
                     TempChange.sharedInstance().solutionIDArray = []
                     TempChange.sharedInstance().solutionOwnerArray = []
-                    //TODO: decide whether needed
-                    TempChange.sharedInstance().solutionNewOldArray = []
+                    
                     
                     
                     //loop through retrieved firebase solutions and save into TempArrays
@@ -156,7 +155,7 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
                     TempChange.sharedInstance().solutionVoteArray = []
                     TempChange.sharedInstance().solutionIDArray = []
                     TempChange.sharedInstance().solutionOwnerArray = []
-                    TempChange.sharedInstance().solutionNewOldArray = []
+                    
                     
                     //assign results from coreData return to temp array then use TempArray for table
                     for solution in result as! [Solution]{
@@ -165,7 +164,6 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
                         TempChange.sharedInstance().solutionDetailArray.addObject(solution.solutionDescription)
                         TempChange.sharedInstance().solutionVoteArray.addObject(solution.voteCount)
                         TempChange.sharedInstance().solutionIDArray.addObject(solution.solutionID)
-                        TempChange.sharedInstance().solutionNewOldArray.addObject("old")
                         TempChange.sharedInstance().solutionOwnerArray.addObject(solution.solutionOwner)
                     }
                     self.solutionTable.reloadData()
@@ -179,12 +177,6 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
     }
     
     override func viewWillAppear(animated: Bool) {
-        
-        if(TempChange.sharedInstance().addingSolutions == "true"){
-            
-            self.postChangeButton.enabled = true
-            self.postChangeButton.alpha = 1
-        }
         
         self.solutionTable.reloadData()
         
@@ -213,64 +205,13 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("AddIdeaViewController") as! AddIdeaViewController
         
         controller.viewControllerStatus = "adding"
-     
-        controller.change = changeClicked
         controller.changeID = changeID
-        
-        
         
         self.navigationController?.pushViewController(controller, animated: true)
         
-        
     }
 
-
-
-
-    @IBAction func postChangeClick(sender: UIButton) {
-        
-        //loop through solutionNewOldArray to check for the newly added solutions
-        for var i in 0 ..<  TempChange.sharedInstance().solutionNewOldArray.count{
-            
-            if(TempChange.sharedInstance().solutionNewOldArray[i] as! String == "new"){
-                
-                // add newly added solutions to newSolution arrays
-                TempChange.sharedInstance().newSolutionNameArray.addObject(TempChange.sharedInstance().solutionNameArray[i])
-                TempChange.sharedInstance().newSolutionDetailArray.addObject(TempChange.sharedInstance().solutionDetailArray[i])
-                    
-            }
-        }
-        
-        let change:Change = self.changeClicked! //TODO: returned from new completion handler
-        
-        _ = SaveNewSolution(change: change){
-            (result) in
-            
-        }
-        
-        //set addingSolutions back to false
-        TempChange.sharedInstance().addingSolutions = "false"
-        self.postChangeButton.enabled = false
-        self.postChangeButton.alpha = 0.5
-        
-        //empty newSolutionArrays ready for any addtional solutions to be added
-        TempChange.sharedInstance().newSolutionNameArray = []
-        TempChange.sharedInstance().newSolutionDetailArray = []
-    }
-
-    
-    
-    
-    //---------------------textView methods------------
-    func textViewDidBeginEditing(textView: UITextView) {
-        
-        
-        
-    }
-    
-    
-    
-    
+   
     
     //--------------------Table view methods--------------
     
@@ -300,21 +241,20 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
     
     func tableView(tableView:UITableView,didSelectRowAtIndexPath indexPath: NSIndexPath){
         
-        //change back button on addIdeaVC to Back instead of "Cancel Idea"
-        
-        
         
         var controller:AddIdeaViewController
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("AddIdeaViewController") as! AddIdeaViewController
         
-        controller.viewControllerStatus = "viewing"
+        
         controller.loadedNameData = TempChange.sharedInstance().solutionNameArray[indexPath.row] as? String
         controller.loadedDetailData = TempChange.sharedInstance().solutionDetailArray[indexPath.row] as? String
         
-        controller.change = changeClicked
-        controller.changeID = changeID
+        
         controller.solutionCount = TempChange.sharedInstance().solutionVoteArray[indexPath.row] as? Int
         controller.solutionID = TempChange.sharedInstance().solutionIDArray[indexPath.row] as? String
+        
+        controller.viewControllerStatus = "viewing"
+        controller.changeID = changeID
         controller.index = indexPath.row
         
         

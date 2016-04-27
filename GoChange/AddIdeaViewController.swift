@@ -18,8 +18,6 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     @IBOutlet weak var addNameButton: UIButton!
     @IBOutlet weak var addDetailButton: UIButton!
     
-    @IBOutlet weak var tweakTable: UITableView!
-    
     @IBOutlet weak var addSolution: UIButton!
     
     @IBOutlet weak var petitionButton: UIButton!
@@ -32,9 +30,7 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     var loadedNameData:String!
     var loadedDetailData:String!
     
-    var change:Change!
     var changeID:String!
-    
     var solutionID:String!
     var solutionCount:Int!
     var index:Int!
@@ -65,28 +61,32 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     
     override func viewWillAppear(animated: Bool) {
         
-        
-        
-        
         if(viewControllerStatus == "viewing"){
             
-            //Disbale editing of name and detail fields
+            //Disable editing of name and detail fields
             nameTextField.enabled = false
             detailTextView.selectable = false
             
+            
+            if(solutionID == "newSolution"){
+                addSolution.enabled = false
+                addSolution.alpha = 0.5
+            }else{
+                addSolution.setTitle("Vote For Solution", forState: .Normal)
+                addSolution.enabled = true
+                addSolution.alpha = 1
+            }
+            
             //Set controller title
             self.title = "Solution"
+            petitionButton.setTitle("View Petition", forState: UIControlState.Normal)
             
-            //petitionButton.setTitle(`, forState: <#T##UIControlState#>)
             
             //load data into fields
             nameTextField.text = loadedNameData
             detailTextView.textColor = UIColor.blackColor()
             
             var localText:String = ""
-            
-            
-            
             if(GoChangeClient.Constants.dynamicPetitionURL != ""){
                 
                 localText = loadedDetailData
@@ -96,14 +96,12 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
             }else{
                 detailTextView.text = loadedDetailData
             }
+        }else{
             
-            addSolution.setTitle("Vote For Solution", forState: .Normal)
-            addSolution.enabled = true
-            addSolution.alpha = 1
-        
+            //clear newSolutionArrays ready for new input
+            TempChange.sharedInstance().newSolutionNameArray = []
+            TempChange.sharedInstance().newSolutionDetailArray = []
         }
-        
-        self.tweakTable.reloadData()
     }
     
     
@@ -113,12 +111,13 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         // Dispose of any resources that can be recreated.
     }
     
+    
     @IBAction func doneAddingIdea(sender: UIButton) {
-                
+        
         if(viewControllerStatus == "viewing"){
            
             //Vote for solution
-            _ = VoteForSolution(change: change,changeID:changeID,solutionID:solutionID){
+            _ = VoteForSolution(changeID:changeID,solutionID:solutionID){
                 (result) in
                 
             }
@@ -127,7 +126,7 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
             currentVoteCount += 1
             TempChange.sharedInstance().solutionVoteArray[self.index] = currentVoteCount
             
-            //TODO: decide whether to change button to Have Voted instead of alpha change
+            //decide whether to change button to Have Voted instead of alpha change
             self.addSolution.enabled = false
             self.addSolution.alpha = 0.5
             
@@ -135,13 +134,25 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
             
             if(nameTextField.text != "" && detailTextView.text != ""){
             
-                // save data locally
-                TempChange.sharedInstance().addingSolutions = "true"
+                
+                //Add data to existing arrays ready for going back to ViewFollowing to display in table and for firebase solutionCount
                 TempChange.sharedInstance().solutionNameArray.addObject(nameTextField.text!)
                 TempChange.sharedInstance().solutionDetailArray.addObject(detailTextView.text!)
                 TempChange.sharedInstance().solutionVoteArray.addObject(0)
-                TempChange.sharedInstance().solutionNewOldArray.addObject("new")
-            
+                TempChange.sharedInstance().solutionIDArray.addObject("newSolution")
+                
+                
+                //Save data to newSolutionArrays ready for posting of SaveNewSoltion
+                TempChange.sharedInstance().newSolutionNameArray.addObject(nameTextField.text!)
+                TempChange.sharedInstance().newSolutionDetailArray.addObject(detailTextView.text!)
+                
+                
+                
+                _ = SaveNewSolution(change: self.change){
+                    (result) in
+                    
+                }
+                
                 // dismiss view controller from navigation stack
                 self.navigationController?.popViewControllerAnimated(true)
             }
@@ -156,8 +167,6 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         
         nameTextField.resignFirstResponder()
         addNameButton.hidden = true
-        
-        
         currentNameData = nameTextField.text
         
         if(nameTextField.text != "" && detailTextView.text != ""){
@@ -171,31 +180,14 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         
         detailTextView.resignFirstResponder()
         addDetailButton.hidden = true
-        
         currentDetailData = detailTextView.text
         
         //TODO: add check for "placeholder" text
-        
         if(nameTextField.text != "" && detailTextView.text != ""){
             addSolution.enabled = true
             addSolution.alpha = 1
         }
     }
-    
-    
-    
-    @IBAction func addTweak(sender: UIButton) {
-        
-        var controller:AddTweakViewController
-        
-        controller = self.storyboard?.instantiateViewControllerWithIdentifier("AddTweakViewController") as! AddTweakViewController
-        
-        self.navigationController?.pushViewController(controller, animated: true)
-        
-    }
-    
-    
-    
     
     
     
@@ -205,9 +197,6 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     func textFieldDidBeginEditing(textField: UITextField) {
         addNameButton.hidden = false
     }
-    
-    
-    
     
     
     
@@ -227,34 +216,6 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     
     
     
-    //--------------------Table view methods--------------
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        
-        return TempChange.sharedInstance().tweakNameArray.count
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        let cellID = "tweakCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath)
-        
-        cell.textLabel!.text = TempChange.sharedInstance().tweakNameArray[indexPath.row] as? String
-        
-        return cell
-        
-    }
-    
-    func tableView(tableView:UITableView,didSelectRowAtIndexPath indexPath: NSIndexPath){
-        
-        //For tweak view controller
-        
-        
-        
-        
-    }
-    
     
     //---------------petition methods--------------------
     
@@ -262,59 +223,15 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         
         //open web browser to go to change.org
         
-        var controller:WebViewController
-        controller = storyboard?.instantiateViewControllerWithIdentifier("WebViewController") as! WebViewController
+        if(viewControllerStatus == "viewing"){
+            var controller:WebViewController
+            controller = storyboard?.instantiateViewControllerWithIdentifier("WebViewController") as! WebViewController
         
-        controller.urlString = GoChangeClient.Constants.dynamicPetitionURL
+            controller.urlString = GoChangeClient.Constants.dynamicPetitionURL
         
-        self.navigationController?.pushViewController(controller, animated: true)
+            self.navigationController?.pushViewController(controller, animated: true)
         
-        //self.presentViewController(controller, animated: true, completion: nil)
-        
-        
-        //_ = ChangeOrgCode()
-        
-        
-        //TODO: put all petition code into outside file
-        //TODO: Add button to add petition
-        /*
-        let parameterDictionary = [
-            "api_key":GoChangeClient.Constants.apiKey,
-            "petition_url":GoChangeClient.Constants.petitionURL
-        ]
-        
-       let queryString =  GoChangeClient.sharedInstance().escapedParameters(parameterDictionary)
-       let finalString = GoChangeClient.Constants.requestURL + queryString
-       
-       let url = NSURL(string: finalString)!
-       let request = NSURLRequest(URL: url)
-        
-        let task = session.dataTaskWithRequest(request){
-            data, response, downloadError in
-            
-            if downloadError != nil{
-                
-                //TODO: Deal with error
-                print("error with request \(downloadError)")
-                
-            }else{
-                
-                GoChangeClient.sharedInstance().parseJSON(data!){
-                    result,error in
-                    
-                    if error != nil{
-                        //TODO: deal with error
-                        print("error parsing JSON \(error)")
-                    }else{
-                        
-                        self.petitionId = result["petition_id"] as! Int
-                        
-                    }
-                }
-            }
         }
-        task.resume()
-    */
     }
     
     
