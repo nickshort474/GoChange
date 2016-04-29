@@ -41,6 +41,7 @@
 		36D7CA0B1CA5AB5E00A73176 /* CreateSolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D7CA0A1CA5AB5E00A73176 /* CreateSolution.swift */; };
 		36D82C1F1CD3506400FDA274 /* ViewFollowingChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D82C1E1CD3506400FDA274 /* ViewFollowingChangeViewController.swift */; };
 		36D82C211CD37EC300FDA274 /* RetrieveNamesFromFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D82C201CD37EC300FDA274 /* RetrieveNamesFromFirebase.swift */; };
+		36D82C231CD3A56E00FDA274 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D82C221CD3A56E00FDA274 /* SearchController.swift */; };
 		36D963F71CB556A1006F9D36 /* RetrieveSolutionsFromFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D963F61CB556A1006F9D36 /* RetrieveSolutionsFromFirebase.swift */; };
 		36DE37521CB12640005DEEEA /* RetrieveSolutions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DE37511CB12640005DEEEA /* RetrieveSolutions.swift */; };
 		36DEEA471CC158B1000FF3A4 /* ViewFollowedChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DEEA461CC158B1000FF3A4 /* ViewFollowedChangeViewController.swift */; };
@@ -115,6 +116,7 @@
 		36D7CA0A1CA5AB5E00A73176 /* CreateSolution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateSolution.swift; sourceTree = "<group>"; };
 		36D82C1E1CD3506400FDA274 /* ViewFollowingChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewFollowingChangeViewController.swift; sourceTree = "<group>"; };
 		36D82C201CD37EC300FDA274 /* RetrieveNamesFromFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveNamesFromFirebase.swift; sourceTree = "<group>"; };
+		36D82C221CD3A56E00FDA274 /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		36D963F61CB556A1006F9D36 /* RetrieveSolutionsFromFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveSolutionsFromFirebase.swift; sourceTree = "<group>"; };
 		36DE37511CB12640005DEEEA /* RetrieveSolutions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveSolutions.swift; sourceTree = "<group>"; };
 		36DEEA461CC158B1000FF3A4 /* ViewFollowedChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewFollowedChangeViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		36B03CC51C8DFBC700E9427D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				36D82C221CD3A56E00FDA274 /* SearchController.swift */,
 				36CB44131CCF504A000AD3C5 /* ChangeOrgCode.swift */,
 				36D963F61CB556A1006F9D36 /* RetrieveSolutionsFromFirebase.swift */,
 				36D82C201CD37EC300FDA274 /* RetrieveNamesFromFirebase.swift */,
@@ -535,6 +538,7 @@
 				36C37CB91C7A01AC002B4FB1 /* SignupViewController.swift in Sources */,
 				36AE6F361C8C37A50041B5CD /* UpdateUserInfoController.swift in Sources */,
 				36D743DF1CBE4B0C00C7C8A2 /* SaveData.swift in Sources */,
+				36D82C231CD3A56E00FDA274 /* SearchController.swift in Sources */,
 				36C37CB31C7A01AC002B4FB1 /* FollowingViewController.swift in Sources */,
 				36E705B41CC79802003F5C6A /* VoteForSolution.swift in Sources */,
 				36DEEA471CC158B1000FF3A4 /* ViewFollowedChangeViewController.swift in Sources */,

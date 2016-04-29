@@ -455,9 +455,9 @@ SWIFT_CLASS("_TtC8GoChange20SaveResultToCoreData")
 @end
 
 
-SWIFT_CLASS("_TtC8GoChange20SearchViewController")
-@interface SearchViewController : UIViewController <UITextFieldDelegate>
-@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified searchTextField;
+SWIFT_CLASS("_TtC8GoChange16SearchController")
+@interface SearchController : NSObject
+@property (nonatomic, copy) NSString * _Null_unspecified searchText;
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull returnedNameArray;
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull returnedRefArray;
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull matchedNameArray;
@@ -468,16 +468,22 @@ SWIFT_CLASS("_TtC8GoChange20SearchViewController")
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull useDetailArray;
 @property (nonatomic, copy) NSArray<NSNumber *> * _Nonnull useSolutionCountArray;
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull refsNotInCoreData;
+- (nonnull instancetype)initWithSearchText:(NSString * _Nonnull)searchText completionHandler:(void (^ _Nonnull)(NSArray<NSString *> * _Nonnull, NSArray<NSString *> * _Nonnull, NSArray<NSString *> * _Nonnull, NSArray<NSNumber *> * _Nonnull, NSArray<NSString *> * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
+- (void)checkResults;
+- (void)createRefArray:(void (^ _Nonnull)(NSArray<NSString *> * _Nonnull, NSArray<NSString *> * _Nonnull, NSArray<NSString *> * _Nonnull, NSArray<NSNumber *> * _Nonnull, NSArray<NSString *> * _Nonnull))completionHandler;
+- (void)checkIfInCoreData;
+@end
+
+
+SWIFT_CLASS("_TtC8GoChange20SearchViewController")
+@interface SearchViewController : UIViewController <UITextFieldDelegate>
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified searchTextField;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
 - (IBAction)homeButtonClick:(UIButton * _Nonnull)sender;
 - (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField;
 - (IBAction)searchForResults:(UIButton * _Nonnull)sender;
-- (void)checkResults;
-- (void)createRefArray;
-- (void)checkIfInCoreData;
-- (void)sendToResults;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

@@ -72,8 +72,6 @@ class ViewIdeaViewController:UIViewController{
     
     @IBAction func voteSolutionClick(sender: UIButton) {
         
-        
-        
         //Vote for solution
         _ = VoteForSolution(changeID:changeID,solutionID:solutionID){
             (result) in

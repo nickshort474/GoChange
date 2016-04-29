@@ -60,6 +60,8 @@ class RetrieveSolutionsFromFirebase:NSObject{
                 self.createLocalArray()
             }
             
+            
+            //TODO: decide whather completion handler needed
             completionHandler(result: snapshot)
 
             
@@ -152,6 +154,9 @@ class RetrieveSolutionsFromFirebase:NSObject{
                 TempChange.sharedInstance().solutionOwnerArray.append(snapshot.value["SolutionOwner"] as! String)
                 
                 if(TempChange.sharedInstance().solutionIDArray.count == self.nonMatches.count){
+                    
+                    //TODO: call UpdateCoreDataSolutions class rather than function
+                    
                     self.updateCoreDataSolutions()
                 }
                 

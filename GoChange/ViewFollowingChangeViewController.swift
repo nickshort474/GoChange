@@ -235,8 +235,6 @@ class ViewFollowingChangeViewController: UIViewController,UITextViewDelegate,UIT
         
         var solutionName:String = ""
         solutionName = TempChange.sharedInstance().solutionNameArray[indexPath.row]
-        
-        //TODO: Gather vote numbers from firebase populated into Temp.sharedInstance().solutionVoteArray
         let voteCount:String = String(TempChange.sharedInstance().solutionVoteArray[indexPath.row])
         
         cell.detailTextLabel!.text = voteCount

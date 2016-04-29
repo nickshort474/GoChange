@@ -13,24 +13,18 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
     
     @IBOutlet weak var searchTextField: UITextField!
     
+    /*
     var returnedNameArray:[String] = []
     var returnedRefArray:[String] = []
-    
     var matchedNameArray:[String] = []
     var countArray:[Int] = []
     var matchedRefArray:[String] = []
-    
-    
     var useNameArray:[String] = []
     var useOwnerArray:[String] = []
-    
     var useDetailArray:[String] = []
     var useSolutionCountArray:[Int] = []
-    
-   
-    
     var refsNotInCoreData:[String] = []
-    
+    */
     
     
     override func viewDidLoad() {
@@ -67,6 +61,25 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
     
     @IBAction func searchForResults(sender: UIButton) {
         
+        _ = SearchController(searchText: searchTextField.text!){
+            (nameResult,detailResult,ownerResult,solutionCountResult,refResult) in
+            
+            var controller:ResultsViewController
+            controller = self.storyboard?.instantiateViewControllerWithIdentifier("ResultsViewController") as! ResultsViewController
+            let navigationController = self.navigationController
+            
+            
+            controller.resultNameArray = nameResult
+            controller.resultDetailArray = detailResult
+            controller.changeOwnerArray = ownerResult
+            controller.resultSolutionCountArray = solutionCountResult
+            controller.refArray = refResult
+            
+            
+            navigationController?.pushViewController(controller,animated: true)
+        }
+        
+        /*
         //clear arrays after previous search
         returnedRefArray = []
         returnedNameArray = []
@@ -88,9 +101,10 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
             self.createRefArray()
             
         }
+         */
     }
     
-    
+    /*
     func checkResults(){
         
         //clear matched array after previous search
@@ -202,6 +216,7 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
  
      
     }
+   
     
     func sendToResults(){
         
@@ -228,7 +243,7 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         
         navigationController?.pushViewController(controller,animated: true)
     }
-    
+     */
 }
 
 

@@ -66,16 +66,6 @@ class WebViewController: UIViewController,UIWebViewDelegate {
     }
         
         
-        
-        
-        //self.navigationController!.dismissViewControllerAnimated(true, completion:{
-          //result in
-           // print(self.petitionString)
-            
-        //})
-    
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
