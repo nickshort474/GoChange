@@ -6,22 +6,22 @@ provides-nominal:
 provides-member:
 - ["C8GoChange13ChangeOrgCode", ""]
 provides-dynamic-lookup:
-- "parameterDictionary"
-- "performCall"
 - "session"
+- "performCall"
+- "parameterDictionary"
 - "petitionId"
 depends-top-level:
-- !private "!="
-- "ChangeOrgCode"
-- !private "NSURLRequest"
 - !private "print"
-- "GoChangeClient"
 - !private "NSURL"
 - "NSURLSession"
+- !private "!="
+- !private "NSURLRequest"
 - "NSObject"
+- "ChangeOrgCode"
+- !private "+"
 - "Int"
 - "Dictionary"
-- !private "+"
+- "GoChangeClient"
 depends-member:
 - ["Ps9AnyObject", "Constants"]
 - ["Ps9AnyObject", "GoChangeClient"]

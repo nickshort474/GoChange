@@ -28,14 +28,14 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
     var currentNameData:String = ""
     var currentDetailData:String = ""
     
-    var sendingController:String = ""
+    //var sendingController:String = ""
     
     
-    var changeName:String = ""
-    var changeDetail:String = ""
-    var changeID:String = ""
+    //var changeName:String = ""
+    //var changeDetail:String = ""
+    //var changeID:String = ""
     
-    var change:Change?
+    //var change:Change?
     
     
     
@@ -190,7 +190,7 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath)
         
         var solutionName:String = ""
-        solutionName = TempChange.sharedInstance().solutionNameArray[indexPath.row] as! String
+        solutionName = TempChange.sharedInstance().solutionNameArray[indexPath.row]
         cell.textLabel!.text = solutionName
         
         return cell
@@ -208,8 +208,8 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewIdeaViewController") as! ViewIdeaViewController
         
         //controller.viewControllerStatus = "viewing"
-        controller.loadedNameData = TempChange.sharedInstance().solutionNameArray[indexPath.row] as? String
-        controller.loadedDetailData = TempChange.sharedInstance().solutionDetailArray[indexPath.row] as? String
+        controller.loadedNameData = TempChange.sharedInstance().solutionNameArray[indexPath.row]
+        controller.loadedDetailData = TempChange.sharedInstance().solutionDetailArray[indexPath.row]
         
         
         //TODO: Fix empty change do we need to view solutions after adding them

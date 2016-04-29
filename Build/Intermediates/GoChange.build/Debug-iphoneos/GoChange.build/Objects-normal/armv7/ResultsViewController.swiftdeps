@@ -6,37 +6,34 @@ provides-nominal:
 provides-member:
 - ["C8GoChange21ResultsViewController", ""]
 provides-dynamic-lookup:
-- "tableView"
-- "tableView"
-- "tableView"
-- "resultDetailArray"
-- "solutionOwnerArray"
-- "viewDidLoad"
 - "didReceiveMemoryWarning"
-- "resultSolutionCountArray"
 - "refArray"
 - "resultsTable"
 - "resultNameArray"
 - "viewWillAppear"
+- "resultSolutionCountArray"
+- "tableView"
+- "tableView"
+- "tableView"
+- "resultDetailArray"
+- "viewDidLoad"
+- "changeOwnerArray"
 depends-top-level:
-- "NSMutableArray"
-- "UITableViewCell"
-- !private "ViewResultChangeViewController"
-- !private "UIBarButtonItem"
-- "NSIndexPath"
-- !private "StringLiteralType"
-- "UITableView"
-- "Array"
 - "UIViewController"
+- !private "ViewResultChangeViewController"
 - "Bool"
-- "ResultsViewController"
-- "UITableViewDelegate"
-- !private "UIBarButtonItemStyle"
-- !private "BooleanLiteralType"
-- !private "String"
+- "UITableViewCell"
 - "Int"
+- !private "UIBarButtonItemStyle"
+- !private "UIBarButtonItem"
+- "UITableViewDelegate"
+- "String"
+- !private "StringLiteralType"
+- "ResultsViewController"
+- "NSIndexPath"
+- "UITableView"
+- !private "BooleanLiteralType"
 depends-member:
-- ["Ps9AnyObject", "Element"]
 - !private ["Ps9AnyObject", "String"]
 - !private ["Ps9AnyObject", "UIBarButtonItem"]
 - !private ["Ps9AnyObject", "UIBarButtonItemStyle"]
@@ -44,8 +41,7 @@ depends-member:
 - !private ["Ps9AnyObject", "changeDetail"]
 - !private ["Ps9AnyObject", "changeID"]
 - !private ["Ps9AnyObject", "changeName"]
-- !private ["Ps9AnyObject", "count"]
-- !private ["Ps9AnyObject", "deinit"]
+- ["Ps9AnyObject", "changeOwnerArray"]
 - !private ["Ps9AnyObject", "dequeueReusableCellWithIdentifier"]
 - !private ["Ps9AnyObject", "detailTextLabel"]
 - ["Ps9AnyObject", "didReceiveMemoryWarning"]
@@ -74,9 +70,7 @@ depends-member:
 - ["Ps9AnyObject", "scrollViewWillBeginDragging"]
 - ["Ps9AnyObject", "scrollViewWillBeginZooming"]
 - ["Ps9AnyObject", "scrollViewWillEndDragging"]
-- ["Ps9AnyObject", "solutionOwnerArray"]
 - !private ["Ps9AnyObject", "storyboard"]
-- !private ["Ps9AnyObject", "subscript"]
 - ["Ps9AnyObject", "tableView"]
 - !private ["Ps9AnyObject", "text"]
 - !private ["Ps9AnyObject", "textLabel"]
@@ -84,10 +78,25 @@ depends-member:
 - ["Ps9AnyObject", "viewForZoomingInScrollView"]
 - ["Ps9AnyObject", "viewWillAppear"]
 - ["Ps9AnyObject", ""]
-- ["Ps23ArrayLiteralConvertible", "Element"]
+- !private ["Sa", "Generator"]
+- !private ["Sa", "Index"]
+- !private ["Sa", "SubSequence"]
+- !private ["Sa", "count"]
+- !private ["Sa", "deinit"]
+- !private ["Sa", "subscript"]
+- !private ["Ps23ArrayLiteralConvertible", "Generator"]
+- !private ["Ps23ArrayLiteralConvertible", "Index"]
+- !private ["Ps23ArrayLiteralConvertible", "SubSequence"]
 - !private ["Ps23ArrayLiteralConvertible", "count"]
 - !private ["Ps23ArrayLiteralConvertible", "subscript"]
-- ["Ps11CVarArgType", "Element"]
+- !private ["Vs10ArraySlice", "Generator"]
+- !private ["Vs10ArraySlice", "Index"]
+- !private ["Ps22BidirectionalIndexType", "Distance"]
+- !private ["Ps22BidirectionalIndexType", "IntegerLiteralType"]
+- !private ["Ps21BitwiseOperationsType", "Distance"]
+- !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
+- !private ["Ps11CVarArgType", "Distance"]
+- !private ["Ps11CVarArgType", "IntegerLiteralType"]
 - !private ["Ps11CVarArgType", "String"]
 - !private ["Ps11CVarArgType", "UIBarButtonItem"]
 - !private ["Ps11CVarArgType", "UIBarButtonItemStyle"]
@@ -95,7 +104,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "changeDetail"]
 - !private ["Ps11CVarArgType", "changeID"]
 - !private ["Ps11CVarArgType", "changeName"]
-- !private ["Ps11CVarArgType", "count"]
+- ["Ps11CVarArgType", "changeOwnerArray"]
 - !private ["Ps11CVarArgType", "dequeueReusableCellWithIdentifier"]
 - !private ["Ps11CVarArgType", "detailTextLabel"]
 - ["Ps11CVarArgType", "didReceiveMemoryWarning"]
@@ -124,9 +133,7 @@ depends-member:
 - ["Ps11CVarArgType", "scrollViewWillBeginDragging"]
 - ["Ps11CVarArgType", "scrollViewWillBeginZooming"]
 - ["Ps11CVarArgType", "scrollViewWillEndDragging"]
-- ["Ps11CVarArgType", "solutionOwnerArray"]
 - !private ["Ps11CVarArgType", "storyboard"]
-- !private ["Ps11CVarArgType", "subscript"]
 - ["Ps11CVarArgType", "tableView"]
 - !private ["Ps11CVarArgType", "text"]
 - !private ["Ps11CVarArgType", "textLabel"]
@@ -134,15 +141,26 @@ depends-member:
 - ["Ps11CVarArgType", "viewForZoomingInScrollView"]
 - ["Ps11CVarArgType", "viewWillAppear"]
 - ["Ps11CVarArgType", ""]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "count"]
+- !private ["Ps14CollectionType", "subscript"]
+- !private ["Ps10Comparable", "Distance"]
+- !private ["Ps10Comparable", "IntegerLiteralType"]
 - !private ["Ps10Comparable", "init"]
-- ["Ps28CustomDebugStringConvertible", "Element"]
+- !private ["Ps28CustomDebugStringConvertible", "Generator"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "String"]
+- !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
 - !private ["Ps28CustomDebugStringConvertible", "UIBarButtonItem"]
 - !private ["Ps28CustomDebugStringConvertible", "UIBarButtonItemStyle"]
 - !private ["Ps28CustomDebugStringConvertible", "backBarButtonItem"]
 - !private ["Ps28CustomDebugStringConvertible", "changeDetail"]
 - !private ["Ps28CustomDebugStringConvertible", "changeID"]
 - !private ["Ps28CustomDebugStringConvertible", "changeName"]
+- ["Ps28CustomDebugStringConvertible", "changeOwnerArray"]
 - !private ["Ps28CustomDebugStringConvertible", "count"]
 - !private ["Ps28CustomDebugStringConvertible", "dequeueReusableCellWithIdentifier"]
 - !private ["Ps28CustomDebugStringConvertible", "detailTextLabel"]
@@ -172,7 +190,6 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "scrollViewWillBeginDragging"]
 - ["Ps28CustomDebugStringConvertible", "scrollViewWillBeginZooming"]
 - ["Ps28CustomDebugStringConvertible", "scrollViewWillEndDragging"]
-- ["Ps28CustomDebugStringConvertible", "solutionOwnerArray"]
 - !private ["Ps28CustomDebugStringConvertible", "storyboard"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
 - ["Ps28CustomDebugStringConvertible", "tableView"]
@@ -182,14 +199,19 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "viewForZoomingInScrollView"]
 - ["Ps28CustomDebugStringConvertible", "viewWillAppear"]
 - ["Ps28CustomDebugStringConvertible", ""]
-- ["Ps23CustomStringConvertible", "Element"]
+- !private ["Ps23CustomStringConvertible", "Distance"]
+- !private ["Ps23CustomStringConvertible", "Generator"]
+- !private ["Ps23CustomStringConvertible", "Index"]
+- !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["Ps23CustomStringConvertible", "String"]
+- !private ["Ps23CustomStringConvertible", "SubSequence"]
 - !private ["Ps23CustomStringConvertible", "UIBarButtonItem"]
 - !private ["Ps23CustomStringConvertible", "UIBarButtonItemStyle"]
 - !private ["Ps23CustomStringConvertible", "backBarButtonItem"]
 - !private ["Ps23CustomStringConvertible", "changeDetail"]
 - !private ["Ps23CustomStringConvertible", "changeID"]
 - !private ["Ps23CustomStringConvertible", "changeName"]
+- ["Ps23CustomStringConvertible", "changeOwnerArray"]
 - !private ["Ps23CustomStringConvertible", "count"]
 - !private ["Ps23CustomStringConvertible", "dequeueReusableCellWithIdentifier"]
 - !private ["Ps23CustomStringConvertible", "detailTextLabel"]
@@ -219,7 +241,6 @@ depends-member:
 - ["Ps23CustomStringConvertible", "scrollViewWillBeginDragging"]
 - ["Ps23CustomStringConvertible", "scrollViewWillBeginZooming"]
 - ["Ps23CustomStringConvertible", "scrollViewWillEndDragging"]
-- ["Ps23CustomStringConvertible", "solutionOwnerArray"]
 - !private ["Ps23CustomStringConvertible", "storyboard"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
 - ["Ps23CustomStringConvertible", "tableView"]
@@ -229,7 +250,8 @@ depends-member:
 - ["Ps23CustomStringConvertible", "viewForZoomingInScrollView"]
 - ["Ps23CustomStringConvertible", "viewWillAppear"]
 - ["Ps23CustomStringConvertible", ""]
-- ["Ps9Equatable", "Element"]
+- !private ["Ps9Equatable", "Distance"]
+- !private ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "Plain"]
 - !private ["Ps9Equatable", "String"]
 - !private ["Ps9Equatable", "UIBarButtonItem"]
@@ -238,7 +260,7 @@ depends-member:
 - !private ["Ps9Equatable", "changeDetail"]
 - !private ["Ps9Equatable", "changeID"]
 - !private ["Ps9Equatable", "changeName"]
-- !private ["Ps9Equatable", "count"]
+- ["Ps9Equatable", "changeOwnerArray"]
 - !private ["Ps9Equatable", "dequeueReusableCellWithIdentifier"]
 - !private ["Ps9Equatable", "detailTextLabel"]
 - ["Ps9Equatable", "didReceiveMemoryWarning"]
@@ -267,9 +289,7 @@ depends-member:
 - ["Ps9Equatable", "scrollViewWillBeginDragging"]
 - ["Ps9Equatable", "scrollViewWillBeginZooming"]
 - ["Ps9Equatable", "scrollViewWillEndDragging"]
-- ["Ps9Equatable", "solutionOwnerArray"]
 - !private ["Ps9Equatable", "storyboard"]
-- !private ["Ps9Equatable", "subscript"]
 - ["Ps9Equatable", "tableView"]
 - !private ["Ps9Equatable", "text"]
 - !private ["Ps9Equatable", "textLabel"]
@@ -278,7 +298,11 @@ depends-member:
 - ["Ps9Equatable", "viewWillAppear"]
 - ["Ps9Equatable", ""]
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
-- ["Ps8Hashable", "Element"]
+- !private ["Ps16ForwardIndexType", "Distance"]
+- !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
+- !private ["Ps13GeneratorType", "Element"]
+- !private ["Ps8Hashable", "Distance"]
+- !private ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "Plain"]
 - !private ["Ps8Hashable", "String"]
 - !private ["Ps8Hashable", "UIBarButtonItem"]
@@ -287,7 +311,7 @@ depends-member:
 - !private ["Ps8Hashable", "changeDetail"]
 - !private ["Ps8Hashable", "changeID"]
 - !private ["Ps8Hashable", "changeName"]
-- !private ["Ps8Hashable", "count"]
+- ["Ps8Hashable", "changeOwnerArray"]
 - !private ["Ps8Hashable", "dequeueReusableCellWithIdentifier"]
 - !private ["Ps8Hashable", "detailTextLabel"]
 - ["Ps8Hashable", "didReceiveMemoryWarning"]
@@ -316,9 +340,7 @@ depends-member:
 - ["Ps8Hashable", "scrollViewWillBeginDragging"]
 - ["Ps8Hashable", "scrollViewWillBeginZooming"]
 - ["Ps8Hashable", "scrollViewWillEndDragging"]
-- ["Ps8Hashable", "solutionOwnerArray"]
 - !private ["Ps8Hashable", "storyboard"]
-- !private ["Ps8Hashable", "subscript"]
 - ["Ps8Hashable", "tableView"]
 - !private ["Ps8Hashable", "text"]
 - !private ["Ps8Hashable", "textLabel"]
@@ -326,11 +348,40 @@ depends-member:
 - ["Ps8Hashable", "viewForZoomingInScrollView"]
 - ["Ps8Hashable", "viewWillAppear"]
 - ["Ps8Hashable", ""]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "count"]
+- !private ["Ps9Indexable", "subscript"]
+- !private ["Vs17IndexingGenerator", "Element"]
+- !private ["Si", "Distance"]
+- !private ["Si", "IntegerLiteralType"]
+- !private ["Si", "deinit"]
+- !private ["Ps21IntegerArithmeticType", "Distance"]
+- !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps25IntegerLiteralConvertible", "Distance"]
+- !private ["Ps25IntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps11IntegerType", "Distance"]
+- !private ["Ps11IntegerType", "IntegerLiteralType"]
+- !private ["Ps14MirrorPathType", "Distance"]
+- !private ["Ps14MirrorPathType", "IntegerLiteralType"]
 - !private ["Ps14MirrorPathType", "init"]
-- ["CSo7NSArray", "Element"]
-- !private ["CSo7NSArray", "count"]
-- !private ["CSo7NSArray", "subscript"]
-- ["PSo8NSCoding", "Element"]
+- !private ["Ps21MutableCollectionType", "Generator"]
+- !private ["Ps21MutableCollectionType", "Index"]
+- !private ["Ps21MutableCollectionType", "SubSequence"]
+- !private ["Ps21MutableCollectionType", "count"]
+- !private ["Ps21MutableCollectionType", "subscript"]
+- !private ["Ps16MutableIndexable", "Generator"]
+- !private ["Ps16MutableIndexable", "Index"]
+- !private ["Ps16MutableIndexable", "SubSequence"]
+- !private ["Ps16MutableIndexable", "count"]
+- !private ["Ps16MutableIndexable", "subscript"]
+- !private ["Ps16MutableSliceable", "Generator"]
+- !private ["Ps16MutableSliceable", "Index"]
+- !private ["Ps16MutableSliceable", "SubSequence"]
+- !private ["Ps16MutableSliceable", "count"]
+- !private ["Ps16MutableSliceable", "subscript"]
 - !private ["PSo8NSCoding", "String"]
 - !private ["PSo8NSCoding", "UIBarButtonItem"]
 - !private ["PSo8NSCoding", "UIBarButtonItemStyle"]
@@ -338,7 +389,7 @@ depends-member:
 - !private ["PSo8NSCoding", "changeDetail"]
 - !private ["PSo8NSCoding", "changeID"]
 - !private ["PSo8NSCoding", "changeName"]
-- !private ["PSo8NSCoding", "count"]
+- ["PSo8NSCoding", "changeOwnerArray"]
 - !private ["PSo8NSCoding", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo8NSCoding", "detailTextLabel"]
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
@@ -366,9 +417,7 @@ depends-member:
 - ["PSo8NSCoding", "scrollViewWillBeginDragging"]
 - ["PSo8NSCoding", "scrollViewWillBeginZooming"]
 - ["PSo8NSCoding", "scrollViewWillEndDragging"]
-- ["PSo8NSCoding", "solutionOwnerArray"]
 - !private ["PSo8NSCoding", "storyboard"]
-- !private ["PSo8NSCoding", "subscript"]
 - ["PSo8NSCoding", "tableView"]
 - !private ["PSo8NSCoding", "text"]
 - !private ["PSo8NSCoding", "textLabel"]
@@ -376,16 +425,14 @@ depends-member:
 - ["PSo8NSCoding", "viewForZoomingInScrollView"]
 - ["PSo8NSCoding", "viewWillAppear"]
 - ["PSo8NSCoding", ""]
-- ["PSo9NSCopying", "Element"]
-- !private ["PSo9NSCopying", "count"]
 - !private ["PSo9NSCopying", "row"]
-- !private ["PSo9NSCopying", "subscript"]
 - !private ["PSo26NSExtensionRequestHandling", "String"]
 - !private ["PSo26NSExtensionRequestHandling", "UIBarButtonItem"]
 - !private ["PSo26NSExtensionRequestHandling", "UIBarButtonItemStyle"]
 - !private ["PSo26NSExtensionRequestHandling", "changeDetail"]
 - !private ["PSo26NSExtensionRequestHandling", "changeID"]
 - !private ["PSo26NSExtensionRequestHandling", "changeName"]
+- ["PSo26NSExtensionRequestHandling", "changeOwnerArray"]
 - ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
 - ["PSo26NSExtensionRequestHandling", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSo26NSExtensionRequestHandling", "init"]
@@ -410,29 +457,17 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "scrollViewWillBeginDragging"]
 - ["PSo26NSExtensionRequestHandling", "scrollViewWillBeginZooming"]
 - ["PSo26NSExtensionRequestHandling", "scrollViewWillEndDragging"]
-- ["PSo26NSExtensionRequestHandling", "solutionOwnerArray"]
 - !private ["PSo26NSExtensionRequestHandling", "storyboard"]
 - ["PSo26NSExtensionRequestHandling", "tableView"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", "viewForZoomingInScrollView"]
 - ["PSo26NSExtensionRequestHandling", "viewWillAppear"]
 - ["PSo26NSExtensionRequestHandling", ""]
-- ["PSo17NSFastEnumeration", "Element"]
-- !private ["PSo17NSFastEnumeration", "count"]
-- !private ["PSo17NSFastEnumeration", "subscript"]
 - !private ["CSo11NSIndexPath", "row"]
-- ["CSo14NSMutableArray", "Element"]
-- !private ["CSo14NSMutableArray", "count"]
-- !private ["CSo14NSMutableArray", "subscript"]
-- ["PSo16NSMutableCopying", "Element"]
-- !private ["PSo16NSMutableCopying", "count"]
-- !private ["PSo16NSMutableCopying", "subscript"]
 - ["CSo8NSObject", "Bool"]
-- ["CSo8NSObject", "Element"]
 - ["CSo8NSObject", "Int"]
 - ["CSo8NSObject", "NSIndexPath"]
-- ["CSo8NSObject", "NSMutableArray"]
-- !private ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "String"]
 - !private ["CSo8NSObject", "UIBarButtonItem"]
 - !private ["CSo8NSObject", "UIBarButtonItemStyle"]
 - ["CSo8NSObject", "UITableView"]
@@ -442,7 +477,7 @@ depends-member:
 - !private ["CSo8NSObject", "changeDetail"]
 - !private ["CSo8NSObject", "changeID"]
 - !private ["CSo8NSObject", "changeName"]
-- !private ["CSo8NSObject", "count"]
+- ["CSo8NSObject", "changeOwnerArray"]
 - !private ["CSo8NSObject", "dequeueReusableCellWithIdentifier"]
 - !private ["CSo8NSObject", "detailTextLabel"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
@@ -471,16 +506,13 @@ depends-member:
 - ["CSo8NSObject", "scrollViewWillBeginDragging"]
 - ["CSo8NSObject", "scrollViewWillBeginZooming"]
 - ["CSo8NSObject", "scrollViewWillEndDragging"]
-- ["CSo8NSObject", "solutionOwnerArray"]
 - !private ["CSo8NSObject", "storyboard"]
-- !private ["CSo8NSObject", "subscript"]
 - ["CSo8NSObject", "tableView"]
 - !private ["CSo8NSObject", "text"]
 - !private ["CSo8NSObject", "textLabel"]
 - ["CSo8NSObject", "viewDidLoad"]
 - ["CSo8NSObject", "viewForZoomingInScrollView"]
 - ["CSo8NSObject", "viewWillAppear"]
-- ["PSo16NSObjectProtocol", "Element"]
 - !private ["PSo16NSObjectProtocol", "String"]
 - !private ["PSo16NSObjectProtocol", "UIBarButtonItem"]
 - !private ["PSo16NSObjectProtocol", "UIBarButtonItemStyle"]
@@ -488,7 +520,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "changeDetail"]
 - !private ["PSo16NSObjectProtocol", "changeID"]
 - !private ["PSo16NSObjectProtocol", "changeName"]
-- !private ["PSo16NSObjectProtocol", "count"]
+- ["PSo16NSObjectProtocol", "changeOwnerArray"]
 - !private ["PSo16NSObjectProtocol", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo16NSObjectProtocol", "detailTextLabel"]
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
@@ -517,9 +549,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "scrollViewWillBeginDragging"]
 - ["PSo16NSObjectProtocol", "scrollViewWillBeginZooming"]
 - ["PSo16NSObjectProtocol", "scrollViewWillEndDragging"]
-- ["PSo16NSObjectProtocol", "solutionOwnerArray"]
 - !private ["PSo16NSObjectProtocol", "storyboard"]
-- !private ["PSo16NSObjectProtocol", "subscript"]
 - ["PSo16NSObjectProtocol", "tableView"]
 - !private ["PSo16NSObjectProtocol", "text"]
 - !private ["PSo16NSObjectProtocol", "textLabel"]
@@ -527,23 +557,27 @@ depends-member:
 - ["PSo16NSObjectProtocol", "viewForZoomingInScrollView"]
 - ["PSo16NSObjectProtocol", "viewWillAppear"]
 - ["PSo16NSObjectProtocol", ""]
-- ["PSo14NSSecureCoding", "Element"]
-- !private ["PSo14NSSecureCoding", "count"]
 - !private ["PSo14NSSecureCoding", "row"]
-- !private ["PSo14NSSecureCoding", "subscript"]
 - !private ["Sq", "deinit"]
 - !private ["Ps16OutputStreamType", "init"]
+- !private ["Ps21RandomAccessIndexType", "Distance"]
+- !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
+- !private ["Ps30RangeReplaceableCollectionType", "Generator"]
+- !private ["Ps30RangeReplaceableCollectionType", "Index"]
+- !private ["Ps30RangeReplaceableCollectionType", "SubSequence"]
+- !private ["Ps30RangeReplaceableCollectionType", "count"]
+- !private ["Ps30RangeReplaceableCollectionType", "subscript"]
 - !private ["Ps16RawRepresentable", "Plain"]
 - ["C8GoChange21ResultsViewController", "Bool"]
 - ["C8GoChange21ResultsViewController", "Int"]
 - ["C8GoChange21ResultsViewController", "NSIndexPath"]
-- ["C8GoChange21ResultsViewController", "NSMutableArray"]
-- !private ["C8GoChange21ResultsViewController", "String"]
+- ["C8GoChange21ResultsViewController", "String"]
 - !private ["C8GoChange21ResultsViewController", "UIBarButtonItem"]
 - !private ["C8GoChange21ResultsViewController", "UIBarButtonItemStyle"]
 - ["C8GoChange21ResultsViewController", "UITableView"]
 - ["C8GoChange21ResultsViewController", "UITableViewCell"]
 - !private ["C8GoChange21ResultsViewController", "ViewResultChangeViewController"]
+- ["C8GoChange21ResultsViewController", "changeOwnerArray"]
 - ["C8GoChange21ResultsViewController", "deinit"]
 - ["C8GoChange21ResultsViewController", "didReceiveMemoryWarning"]
 - ["C8GoChange21ResultsViewController", "indexPathForPreferredFocusedViewInTableView"]
@@ -567,16 +601,29 @@ depends-member:
 - ["C8GoChange21ResultsViewController", "scrollViewWillBeginDragging"]
 - ["C8GoChange21ResultsViewController", "scrollViewWillBeginZooming"]
 - ["C8GoChange21ResultsViewController", "scrollViewWillEndDragging"]
-- ["C8GoChange21ResultsViewController", "solutionOwnerArray"]
 - !private ["C8GoChange21ResultsViewController", "storyboard"]
 - ["C8GoChange21ResultsViewController", "tableView"]
 - ["C8GoChange21ResultsViewController", "viewDidLoad"]
 - ["C8GoChange21ResultsViewController", "viewForZoomingInScrollView"]
 - ["C8GoChange21ResultsViewController", "viewWillAppear"]
-- ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- !private ["Ps12SequenceType", "_Element"]
 - !private ["Ps12SequenceType", "count"]
 - !private ["Ps12SequenceType", "subscript"]
+- !private ["Ps17SignedIntegerType", "Distance"]
+- !private ["Ps17SignedIntegerType", "IntegerLiteralType"]
+- !private ["Ps16SignedNumberType", "Distance"]
+- !private ["Ps16SignedNumberType", "IntegerLiteralType"]
+- !private ["Vs5Slice", "Generator"]
+- !private ["Vs5Slice", "Index"]
+- !private ["Vs5Slice", "SubSequence"]
+- !private ["Vs5Slice", "_Element"]
 - !private ["Ps10Streamable", "init"]
+- !private ["Ps10Strideable", "Distance"]
+- !private ["Ps10Strideable", "IntegerLiteralType"]
 - !private ["SS", "init"]
 - !private ["Ps30StringInterpolationConvertible", "init"]
 - !private ["Ps24StringLiteralConvertible", "init"]
@@ -596,6 +643,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "changeDetail"]
 - !private ["PSo21UIAppearanceContainer", "changeID"]
 - !private ["PSo21UIAppearanceContainer", "changeName"]
+- ["PSo21UIAppearanceContainer", "changeOwnerArray"]
 - !private ["PSo21UIAppearanceContainer", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo21UIAppearanceContainer", "detailTextLabel"]
 - ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
@@ -622,7 +670,6 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "scrollViewWillBeginDragging"]
 - ["PSo21UIAppearanceContainer", "scrollViewWillBeginZooming"]
 - ["PSo21UIAppearanceContainer", "scrollViewWillEndDragging"]
-- ["PSo21UIAppearanceContainer", "solutionOwnerArray"]
 - !private ["PSo21UIAppearanceContainer", "storyboard"]
 - ["PSo21UIAppearanceContainer", "tableView"]
 - !private ["PSo21UIAppearanceContainer", "text"]
@@ -640,6 +687,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "changeDetail"]
 - !private ["PSo18UIContentContainer", "changeID"]
 - !private ["PSo18UIContentContainer", "changeName"]
+- ["PSo18UIContentContainer", "changeOwnerArray"]
 - ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
 - ["PSo18UIContentContainer", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSo18UIContentContainer", "init"]
@@ -664,7 +712,6 @@ depends-member:
 - ["PSo18UIContentContainer", "scrollViewWillBeginDragging"]
 - ["PSo18UIContentContainer", "scrollViewWillBeginZooming"]
 - ["PSo18UIContentContainer", "scrollViewWillEndDragging"]
-- ["PSo18UIContentContainer", "solutionOwnerArray"]
 - !private ["PSo18UIContentContainer", "storyboard"]
 - ["PSo18UIContentContainer", "tableView"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
@@ -685,6 +732,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "changeDetail"]
 - !private ["PSo18UIFocusEnvironment", "changeID"]
 - !private ["PSo18UIFocusEnvironment", "changeName"]
+- ["PSo18UIFocusEnvironment", "changeOwnerArray"]
 - !private ["PSo18UIFocusEnvironment", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo18UIFocusEnvironment", "detailTextLabel"]
 - ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
@@ -711,7 +759,6 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "scrollViewWillBeginDragging"]
 - ["PSo18UIFocusEnvironment", "scrollViewWillBeginZooming"]
 - ["PSo18UIFocusEnvironment", "scrollViewWillEndDragging"]
-- ["PSo18UIFocusEnvironment", "solutionOwnerArray"]
 - !private ["PSo18UIFocusEnvironment", "storyboard"]
 - ["PSo18UIFocusEnvironment", "tableView"]
 - !private ["PSo18UIFocusEnvironment", "text"]
@@ -728,8 +775,7 @@ depends-member:
 - ["CSo11UIResponder", "Bool"]
 - ["CSo11UIResponder", "Int"]
 - ["CSo11UIResponder", "NSIndexPath"]
-- ["CSo11UIResponder", "NSMutableArray"]
-- !private ["CSo11UIResponder", "String"]
+- ["CSo11UIResponder", "String"]
 - !private ["CSo11UIResponder", "UIBarButtonItem"]
 - !private ["CSo11UIResponder", "UIBarButtonItemStyle"]
 - ["CSo11UIResponder", "UITableView"]
@@ -738,6 +784,7 @@ depends-member:
 - !private ["CSo11UIResponder", "changeDetail"]
 - !private ["CSo11UIResponder", "changeID"]
 - !private ["CSo11UIResponder", "changeName"]
+- ["CSo11UIResponder", "changeOwnerArray"]
 - !private ["CSo11UIResponder", "dequeueReusableCellWithIdentifier"]
 - !private ["CSo11UIResponder", "detailTextLabel"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
@@ -764,7 +811,6 @@ depends-member:
 - ["CSo11UIResponder", "scrollViewWillBeginDragging"]
 - ["CSo11UIResponder", "scrollViewWillBeginZooming"]
 - ["CSo11UIResponder", "scrollViewWillEndDragging"]
-- ["CSo11UIResponder", "solutionOwnerArray"]
 - !private ["CSo11UIResponder", "storyboard"]
 - ["CSo11UIResponder", "tableView"]
 - !private ["CSo11UIResponder", "text"]
@@ -779,6 +825,7 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "changeDetail"]
 - !private ["PSo20UIScrollViewDelegate", "changeID"]
 - !private ["PSo20UIScrollViewDelegate", "changeName"]
+- !private ["PSo20UIScrollViewDelegate", "changeOwnerArray"]
 - ["PSo20UIScrollViewDelegate", "indexPathForPreferredFocusedViewInTableView"]
 - !private ["PSo20UIScrollViewDelegate", "navigationController"]
 - !private ["PSo20UIScrollViewDelegate", "navigationItem"]
@@ -799,7 +846,6 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "scrollViewWillBeginDragging"]
 - ["PSo20UIScrollViewDelegate", "scrollViewWillBeginZooming"]
 - ["PSo20UIScrollViewDelegate", "scrollViewWillEndDragging"]
-- !private ["PSo20UIScrollViewDelegate", "solutionOwnerArray"]
 - !private ["PSo20UIScrollViewDelegate", "storyboard"]
 - ["PSo20UIScrollViewDelegate", "tableView"]
 - ["PSo20UIScrollViewDelegate", "viewForZoomingInScrollView"]
@@ -810,6 +856,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "changeDetail"]
 - !private ["PSo16UIStateRestoring", "changeID"]
 - !private ["PSo16UIStateRestoring", "changeName"]
+- ["PSo16UIStateRestoring", "changeOwnerArray"]
 - ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
 - ["PSo16UIStateRestoring", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSo16UIStateRestoring", "init"]
@@ -834,7 +881,6 @@ depends-member:
 - ["PSo16UIStateRestoring", "scrollViewWillBeginDragging"]
 - ["PSo16UIStateRestoring", "scrollViewWillBeginZooming"]
 - ["PSo16UIStateRestoring", "scrollViewWillEndDragging"]
-- ["PSo16UIStateRestoring", "solutionOwnerArray"]
 - !private ["PSo16UIStateRestoring", "storyboard"]
 - ["PSo16UIStateRestoring", "tableView"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
@@ -851,6 +897,7 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "changeDetail"]
 - !private ["PSo19UITableViewDelegate", "changeID"]
 - !private ["PSo19UITableViewDelegate", "changeName"]
+- !private ["PSo19UITableViewDelegate", "changeOwnerArray"]
 - ["PSo19UITableViewDelegate", "indexPathForPreferredFocusedViewInTableView"]
 - !private ["PSo19UITableViewDelegate", "navigationController"]
 - !private ["PSo19UITableViewDelegate", "navigationItem"]
@@ -871,7 +918,6 @@ depends-member:
 - ["PSo19UITableViewDelegate", "scrollViewWillBeginDragging"]
 - ["PSo19UITableViewDelegate", "scrollViewWillBeginZooming"]
 - ["PSo19UITableViewDelegate", "scrollViewWillEndDragging"]
-- !private ["PSo19UITableViewDelegate", "solutionOwnerArray"]
 - !private ["PSo19UITableViewDelegate", "storyboard"]
 - ["PSo19UITableViewDelegate", "tableView"]
 - ["PSo19UITableViewDelegate", "viewForZoomingInScrollView"]
@@ -890,6 +936,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "changeDetail"]
 - !private ["PSo18UITraitEnvironment", "changeID"]
 - !private ["PSo18UITraitEnvironment", "changeName"]
+- ["PSo18UITraitEnvironment", "changeOwnerArray"]
 - !private ["PSo18UITraitEnvironment", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo18UITraitEnvironment", "detailTextLabel"]
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
@@ -916,7 +963,6 @@ depends-member:
 - ["PSo18UITraitEnvironment", "scrollViewWillBeginDragging"]
 - ["PSo18UITraitEnvironment", "scrollViewWillBeginZooming"]
 - ["PSo18UITraitEnvironment", "scrollViewWillEndDragging"]
-- ["PSo18UITraitEnvironment", "solutionOwnerArray"]
 - !private ["PSo18UITraitEnvironment", "storyboard"]
 - ["PSo18UITraitEnvironment", "tableView"]
 - !private ["PSo18UITraitEnvironment", "text"]
@@ -932,8 +978,7 @@ depends-member:
 - ["CSo16UIViewController", "Bool"]
 - ["CSo16UIViewController", "Int"]
 - ["CSo16UIViewController", "NSIndexPath"]
-- ["CSo16UIViewController", "NSMutableArray"]
-- !private ["CSo16UIViewController", "String"]
+- ["CSo16UIViewController", "String"]
 - !private ["CSo16UIViewController", "UIBarButtonItem"]
 - !private ["CSo16UIViewController", "UIBarButtonItemStyle"]
 - ["CSo16UIViewController", "UITableView"]
@@ -942,6 +987,7 @@ depends-member:
 - !private ["CSo16UIViewController", "changeDetail"]
 - !private ["CSo16UIViewController", "changeID"]
 - !private ["CSo16UIViewController", "changeName"]
+- ["CSo16UIViewController", "changeOwnerArray"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
 - ["CSo16UIViewController", "indexPathForPreferredFocusedViewInTableView"]
 - ["CSo16UIViewController", "init"]
@@ -966,7 +1012,6 @@ depends-member:
 - ["CSo16UIViewController", "scrollViewWillBeginDragging"]
 - ["CSo16UIViewController", "scrollViewWillBeginZooming"]
 - ["CSo16UIViewController", "scrollViewWillEndDragging"]
-- ["CSo16UIViewController", "solutionOwnerArray"]
 - !private ["CSo16UIViewController", "storyboard"]
 - ["CSo16UIViewController", "tableView"]
 - ["CSo16UIViewController", "viewDidLoad"]
@@ -978,12 +1023,43 @@ depends-member:
 - !private ["C8GoChange30ViewResultChangeViewController", "changeID"]
 - !private ["C8GoChange30ViewResultChangeViewController", "changeName"]
 - !private ["C8GoChange30ViewResultChangeViewController", "owner"]
+- !private ["Ps10_ArrayType", "Generator"]
+- !private ["Ps10_ArrayType", "Index"]
+- !private ["Ps10_ArrayType", "SubSequence"]
+- !private ["Ps10_ArrayType", "count"]
+- !private ["Ps10_ArrayType", "subscript"]
 - !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
 - !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
 - !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
 - !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps24_DestructorSafeContainer", "Generator"]
+- !private ["Ps24_DestructorSafeContainer", "Index"]
+- !private ["Ps24_DestructorSafeContainer", "SubSequence"]
+- !private ["Ps24_DestructorSafeContainer", "count"]
+- !private ["Ps24_DestructorSafeContainer", "subscript"]
+- !private ["Ps14_Incrementable", "Distance"]
+- !private ["Ps14_Incrementable", "IntegerLiteralType"]
+- !private ["Ps22_IntegerArithmeticType", "Distance"]
+- !private ["Ps22_IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps12_IntegerType", "Distance"]
+- !private ["Ps12_IntegerType", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "Distance"]
+- !private ["Ps21_ObjectiveCBridgeable", "Generator"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
+- !private ["Ps21_ObjectiveCBridgeable", "count"]
 - !private ["Ps21_ObjectiveCBridgeable", "init"]
-- ["Ps12_Reflectable", "Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- !private ["Ps22_RandomAccessAmbiguity", "Distance"]
+- !private ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
+- !private ["Ps12_Reflectable", "Distance"]
+- !private ["Ps12_Reflectable", "Generator"]
+- !private ["Ps12_Reflectable", "Index"]
+- !private ["Ps12_Reflectable", "IntegerLiteralType"]
+- !private ["Ps12_Reflectable", "SubSequence"]
 - !private ["Ps12_Reflectable", "count"]
 - !private ["Ps12_Reflectable", "dequeueReusableCellWithIdentifier"]
 - !private ["Ps12_Reflectable", "detailTextLabel"]
@@ -991,34 +1067,54 @@ depends-member:
 - !private ["Ps12_Reflectable", "subscript"]
 - !private ["Ps12_Reflectable", "text"]
 - !private ["Ps12_Reflectable", "textLabel"]
+- !private ["Ps18_SignedIntegerType", "Distance"]
+- !private ["Ps18_SignedIntegerType", "IntegerLiteralType"]
 depends-nominal:
 - "Ps9AnyObject"
-- "Ps23ArrayLiteralConvertible"
+- !private "Sa"
+- !private "Ps23ArrayLiteralConvertible"
+- !private "Vs10ArraySlice"
+- !private "Ps22BidirectionalIndexType"
+- !private "Ps21BitwiseOperationsType"
 - "Ps11CVarArgType"
+- !private "Ps14CollectionType"
 - !private "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
 - "Ps9Equatable"
 - !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
+- !private "Ps16ForwardIndexType"
+- !private "Ps13GeneratorType"
 - "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
+- !private "Si"
+- !private "Ps21IntegerArithmeticType"
+- !private "Ps25IntegerLiteralConvertible"
+- !private "Ps11IntegerType"
 - !private "Ps14MirrorPathType"
-- "CSo7NSArray"
+- !private "Ps21MutableCollectionType"
+- !private "Ps16MutableIndexable"
+- !private "Ps16MutableSliceable"
 - "PSo8NSCoding"
-- "PSo9NSCopying"
+- !private "PSo9NSCopying"
 - "PSo26NSExtensionRequestHandling"
-- "PSo17NSFastEnumeration"
 - !private "CSo11NSIndexPath"
-- "CSo14NSMutableArray"
-- "PSo16NSMutableCopying"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
-- "PSo14NSSecureCoding"
+- !private "PSo14NSSecureCoding"
 - !private "Sq"
 - !private "Ps16OutputStreamType"
+- !private "Ps21RandomAccessIndexType"
+- !private "Ps30RangeReplaceableCollectionType"
 - !private "Ps16RawRepresentable"
 - "C8GoChange21ResultsViewController"
-- "Ps12SequenceType"
+- !private "Ps12SequenceType"
+- !private "Ps17SignedIntegerType"
+- !private "Ps16SignedNumberType"
+- !private "Vs5Slice"
 - !private "Ps10Streamable"
+- !private "Ps10Strideable"
 - !private "SS"
 - !private "Ps30StringInterpolationConvertible"
 - !private "Ps24StringLiteralConvertible"
@@ -1051,12 +1147,20 @@ depends-nominal:
 - "CSo16UIViewController"
 - !private "Ps31UnicodeScalarLiteralConvertible"
 - !private "C8GoChange30ViewResultChangeViewController"
+- !private "Ps10_ArrayType"
 - !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- !private "Ps33_BuiltinIntegerLiteralConvertible"
 - !private "Ps32_BuiltinStringLiteralConvertible"
 - !private "Ps37_BuiltinUTF16StringLiteralConvertible"
 - !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps14_Incrementable"
+- !private "Ps22_IntegerArithmeticType"
+- !private "Ps12_IntegerType"
 - !private "Ps21_ObjectiveCBridgeable"
-- "Ps12_Reflectable"
+- !private "Ps22_RandomAccessAmbiguity"
+- !private "Ps12_Reflectable"
+- !private "Ps18_SignedIntegerType"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"
@@ -1081,4 +1185,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "09470eb1ee0659bc6e3e1db703d6dfbc"
+interface-hash: "7dd70e385f3601e7262a480e3e99cb2b"

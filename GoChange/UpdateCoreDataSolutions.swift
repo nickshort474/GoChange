@@ -56,7 +56,7 @@ class UpdateCoreDataSolutions:NSObject{
         */
         
         
-        for var i in 0 ..< TempChange.sharedInstance().solutionNameArray.count{
+        for i in 0 ..< TempChange.sharedInstance().solutionNameArray.count{
             
             var solutionDictionary:[String:AnyObject] = [String:AnyObject]()
         

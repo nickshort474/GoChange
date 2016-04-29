@@ -16,12 +16,31 @@ class RetrieveSolutions:NSObject{
         super.init()
         
         
+        // empty TempArrays ready to be populate with new data
+        TempChange.sharedInstance().solutionNameArray = []
+        TempChange.sharedInstance().solutionDetailArray = []
+        TempChange.sharedInstance().solutionVoteArray = []
+        TempChange.sharedInstance().solutionIDArray = []
+        TempChange.sharedInstance().solutionOwnerArray = []
+        
+        
         let request = NSFetchRequest(entityName: "Solution")
         let predicate = NSPredicate(format: "solutionToChange == %@", change)
         request.predicate = predicate
         
         do{
             let results =  try sharedContext.executeFetchRequest(request) as! [Solution]
+            
+            
+            //assign results from coreData return to temp array then use TempArray for table
+            for solution in results{
+                
+                TempChange.sharedInstance().solutionNameArray.append(solution.solutionName)
+                TempChange.sharedInstance().solutionDetailArray.append(solution.solutionDescription)
+                TempChange.sharedInstance().solutionVoteArray.append(solution.voteCount as Int)
+                TempChange.sharedInstance().solutionIDArray.append(solution.solutionID)
+                TempChange.sharedInstance().solutionOwnerArray.append(solution.solutionOwner)
+            }
             
             completionHandler(result:results)
             

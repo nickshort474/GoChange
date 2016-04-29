@@ -92,7 +92,7 @@ class SaveNewChange:NSObject{
         let solutionOwner = NSUserDefaults.standardUserDefaults().valueForKey("uid") as? String
         
         //loop through solutions array
-        for var i in 0 ..< (TempChange.sharedInstance().solutionNameArray.count){
+        for i in 0 ..< (TempChange.sharedInstance().solutionNameArray.count){
             
             //create unqiue location with ID within solutions section
             let uniqueSolutionReference = uniqueSolutionLocation!.childByAutoId()
@@ -152,7 +152,7 @@ class SaveNewChange:NSObject{
         
         let solutionOwner = NSUserDefaults.standardUserDefaults().valueForKey("uid") as? String
         
-        for var i in 0 ..< TempChange.sharedInstance().solutionNameArray.count{
+        for i in 0 ..< TempChange.sharedInstance().solutionNameArray.count{
             
             var solutionDictionary:[String:AnyObject] = [String:AnyObject]()
             

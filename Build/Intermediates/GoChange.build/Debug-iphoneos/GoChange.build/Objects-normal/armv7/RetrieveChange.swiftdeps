@@ -8,17 +8,16 @@ provides-member:
 provides-dynamic-lookup:
 - "sharedContext"
 depends-top-level:
-- !private "NSPredicate"
-- "String"
-- "NSManagedObjectContext"
-- !private "NSFetchRequest"
-- !private "StringLiteralType"
-- "RetrieveChange"
 - !private "CoreDataStackManager"
+- "String"
+- !private "NSFetchRequest"
+- "RetrieveChange"
+- !private "StringLiteralType"
 - "NSObject"
-- !private "Change"
-- "AnyObject"
+- "NSManagedObjectContext"
 - "Void"
+- "Change"
+- !private "NSPredicate"
 depends-member:
 - !private ["Ps9AnyObject", "CoreDataStackManager"]
 - !private ["Ps9AnyObject", "NSFetchRequest"]
@@ -170,8 +169,7 @@ depends-member:
 - !private ["CSo14NSFetchRequest", "predicate"]
 - !private ["PSo9NSLocking", "executeFetchRequest"]
 - !private ["CSo22NSManagedObjectContext", "executeFetchRequest"]
-- ["CSo8NSObject", "AnyObject"]
-- !private ["CSo8NSObject", "Change"]
+- ["CSo8NSObject", "Change"]
 - !private ["CSo8NSObject", "CoreDataStackManager"]
 - !private ["CSo8NSObject", "NSFetchRequest"]
 - ["CSo8NSObject", "NSManagedObjectContext"]
@@ -206,8 +204,7 @@ depends-member:
 - !private ["Ps30RangeReplaceableCollectionType", "SubSequence"]
 - !private ["Ps30RangeReplaceableCollectionType", "_Element"]
 - !private ["Ps30RangeReplaceableCollectionType", "first"]
-- ["C8GoChange14RetrieveChange", "AnyObject"]
-- !private ["C8GoChange14RetrieveChange", "Change"]
+- ["C8GoChange14RetrieveChange", "Change"]
 - !private ["C8GoChange14RetrieveChange", "CoreDataStackManager"]
 - !private ["C8GoChange14RetrieveChange", "NSFetchRequest"]
 - ["C8GoChange14RetrieveChange", "NSManagedObjectContext"]
@@ -358,4 +355,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "58f47fe84bca0ebae96007d6a49f413d"
+interface-hash: "f62ac89a8a6b73d8d7ffba095f6bc774"

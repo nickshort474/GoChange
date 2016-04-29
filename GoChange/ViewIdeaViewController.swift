@@ -80,7 +80,7 @@ class ViewIdeaViewController:UIViewController{
             
         }
         
-        var currentVoteCount = TempChange.sharedInstance().solutionVoteArray[self.index] as! Int
+        var currentVoteCount = TempChange.sharedInstance().solutionVoteArray[self.index]
         currentVoteCount += 1
         TempChange.sharedInstance().solutionVoteArray[self.index] = currentVoteCount
         

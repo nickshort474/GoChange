@@ -25,7 +25,7 @@ class CreateChange:NSObject{
             
             // get returned auto ID and save that along with other data to core data
             
-            var change = createCoreDataChange(currentDetailData,currentNameData: currentNameData,owner:owner)
+            _ = createCoreDataChange(currentDetailData,currentNameData: currentNameData,owner:owner)
            
         }else{
             createCoreDataChange(currentDetailData,currentNameData: currentNameData,owner:owner)

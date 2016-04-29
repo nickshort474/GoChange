@@ -27,7 +27,7 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
     var solutionID:String!
     
     var localSolutionCount:Int!
-    var changeIDArray:NSMutableArray = []
+    var changeIDArray:[String] = []
     
     var sendingController:String!
     
@@ -65,7 +65,7 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
         changeID = changeClicked.changeID
         
         //add changeID to changeID array ready for passing to RetrieveSolutions
-        changeIDArray.addObject(changeID)
+        changeIDArray.append(changeID)
         
         
         //check to see whether solution count in database matches that in core data
@@ -74,13 +74,13 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
             (result) in
             
             //process returned snapshot
-            let firebaseSolutionCount = result[0] as! Int
+            let firebaseSolutionCount = Int(result[0])
                        
             // if new solutions exist
             if (firebaseSolutionCount != self.localSolutionCount){
                 
                 //retrieve from firebase
-                _ = RetrieveSolutionsFromFirebase(changeID: self.changeID, completionHandler: {
+                _ = RetrieveSolutionsFromFirebase(changeID: self.changeID,change:self.changeClicked,caller:"following", completionHandler: {
                     (result) in
                     
                     // empty TempArrays ready to be populate with new data
@@ -95,11 +95,11 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
                     //loop through retrieved firebase solutions and save into TempArrays
                     for solution in result.children.allObjects as! [FDataSnapshot]{
                         
-                        TempChange.sharedInstance().solutionIDArray.addObject(solution.key)
-                        TempChange.sharedInstance().solutionNameArray.addObject(solution.value["SolutionName"]!!)
-                        TempChange.sharedInstance().solutionDetailArray.addObject(solution.value["SolutionDescription"]!!)
-                        TempChange.sharedInstance().solutionVoteArray.addObject(solution.value["SolutionVoteCount"]!! as! Int)
-                        TempChange.sharedInstance().solutionOwnerArray.addObject(solution.value["SolutionOwner"]!! as!String)
+                        TempChange.sharedInstance().solutionIDArray.append(solution.key)
+                        TempChange.sharedInstance().solutionNameArray.append(solution.value["SolutionName"] as! String)
+                        TempChange.sharedInstance().solutionDetailArray.append(solution.value["SolutionDescription"] as! String)
+                        TempChange.sharedInstance().solutionVoteArray.append(solution.value["SolutionVoteCount"] as! Int)
+                        TempChange.sharedInstance().solutionOwnerArray.append(solution.value["SolutionOwner"] as! String)
                     }
                     
                     let localSolutionIDArray:NSMutableArray = []
@@ -115,19 +115,21 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
                         }
                         
                         //Test whether any of the solutions from firebase already exist in retrieved coredata array
-                        for var i in 0 ..< TempChange.sharedInstance().solutionIDArray.count{
+                        for i in 0 ..< TempChange.sharedInstance().solutionIDArray.count{
                         
-                            for var j in 0 ..< localSolutionIDArray.count{
+                            for j in 0 ..< localSolutionIDArray.count{
                                     
                                     
-                                if(TempChange.sharedInstance().solutionIDArray[i] as? String == localSolutionIDArray[j] as? String){
+                                if(TempChange.sharedInstance().solutionIDArray[i] == localSolutionIDArray[j] as? String){
                                 
                                     // IF there is a match between a firebase solution and coreData remove it from arrays
+                                    /*
                                     TempChange.sharedInstance().solutionIDArray.removeObjectAtIndex(i)
                                     TempChange.sharedInstance().solutionNameArray.removeObjectAtIndex(i)
                                     TempChange.sharedInstance().solutionDetailArray.removeObjectAtIndex(i)
                                     TempChange.sharedInstance().solutionVoteArray.removeObjectAtIndex(i)
                                     TempChange.sharedInstance().solutionOwnerArray.removeObjectAtIndex(i)
+                                    */
                                 }
                             }
                          }
@@ -155,11 +157,11 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
                     //assign results from coreData return to temp array then use TempArray for table
                     for solution in result as! [Solution]{
                         
-                        TempChange.sharedInstance().solutionNameArray.addObject(solution.solutionName)
-                        TempChange.sharedInstance().solutionDetailArray.addObject(solution.solutionDescription)
-                        TempChange.sharedInstance().solutionVoteArray.addObject(solution.voteCount)
-                        TempChange.sharedInstance().solutionIDArray.addObject(solution.solutionID)
-                        TempChange.sharedInstance().solutionOwnerArray.addObject(solution.solutionOwner)
+                        TempChange.sharedInstance().solutionNameArray.append(solution.solutionName)
+                        TempChange.sharedInstance().solutionDetailArray.append(solution.solutionDescription)
+                        TempChange.sharedInstance().solutionVoteArray.append(solution.voteCount as Int)
+                        TempChange.sharedInstance().solutionIDArray.append(solution.solutionID)
+                        TempChange.sharedInstance().solutionOwnerArray.append(solution.solutionOwner)
                     }
                     self.solutionTable.reloadData()
                     
@@ -224,7 +226,7 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
         let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath)
         
         var solutionName:String = ""
-        solutionName = TempChange.sharedInstance().solutionNameArray[indexPath.row] as! String
+        solutionName = TempChange.sharedInstance().solutionNameArray[indexPath.row]
         
          //TODO: Gather vote numbers from firebase populated into Temp.sharedInstance().solutionVoteArray
         let voteCount:String = String(TempChange.sharedInstance().solutionVoteArray[indexPath.row])
@@ -243,12 +245,12 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewIdeaViewController") as! ViewIdeaViewController
         
         
-        controller.loadedNameData = TempChange.sharedInstance().solutionNameArray[indexPath.row] as? String
-        controller.loadedDetailData = TempChange.sharedInstance().solutionDetailArray[indexPath.row] as? String
+        controller.loadedNameData = TempChange.sharedInstance().solutionNameArray[indexPath.row]
+        controller.loadedDetailData = TempChange.sharedInstance().solutionDetailArray[indexPath.row]
         
         
         //controller.solutionCount = TempChange.sharedInstance().solutionVoteArray[indexPath.row] as? Int
-        controller.solutionID = TempChange.sharedInstance().solutionIDArray[indexPath.row] as? String
+        controller.solutionID = TempChange.sharedInstance().solutionIDArray[indexPath.row]
         
         //controller.viewControllerStatus = "viewing"
         controller.changeID = changeID

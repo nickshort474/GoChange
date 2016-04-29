@@ -45,10 +45,13 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
     override func viewWillAppear(animated: Bool) {
         
         //clear out temp arrays ready for new result to be viewed:
+        /*
         TempChange.sharedInstance().solutionNameArray = []
         TempChange.sharedInstance().solutionDetailArray = []
         TempChange.sharedInstance().solutionVoteArray = []
         TempChange.sharedInstance().solutionIDArray = []
+        */
+        
         
         //load passed data into Temp variables to hold for use
         TempChange.sharedInstance().changeName = changeName
@@ -61,19 +64,21 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
         self.detailsField.textColor = UIColor.blackColor()
         self.detailsField.text = changeDetail
         
-        _ = RetrieveSolutionsFromFirebase(changeID:changeID){
-            (snapshot) in
+        _ = RetrieveSolutionsFromFirebase(changeID:changeID,/*change:currentChange,*/caller:"results"){
+            (result) in
             
-            for name in snapshot.children.allObjects as! [FDataSnapshot]{
+            /*
+            for solution in snapshot.children.allObjects as! [FDataSnapshot]{
                 
-                //put results from firebase into TempChange solutionArray
-                TempChange.sharedInstance().solutionNameArray.addObject(name.value["SolutionName"]!!)
-                TempChange.sharedInstance().solutionDetailArray.addObject(name.value["SolutionDescription"]!!)
-                TempChange.sharedInstance().solutionVoteArray.addObject(name.value["SolutionVoteCount"]!! as! Int)
-                TempChange.sharedInstance().solutionIDArray.addObject(name.key)
-                TempChange.sharedInstance().solutionOwnerArray.addObject(name.value["SolutionOwner"]!! as! String)
+                //put results from firebase into TempChange solutionArray 
+                TempChange.sharedInstance().solutionIDArray.addObject(solution.key)
+                TempChange.sharedInstance().solutionNameArray.addObject(solution.value["SolutionName"]!!)
+                TempChange.sharedInstance().solutionDetailArray.addObject(solution.value["SolutionDescription"]!!)
+                TempChange.sharedInstance().solutionVoteArray.addObject(solution.value["SolutionVoteCount"]!! as! Int)
+                TempChange.sharedInstance().solutionOwnerArray.addObject(solution.value["SolutionOwner"]!! as! String)
                 
             }
+             */
             self.solutionTable.reloadData()
             
         }
@@ -90,9 +95,9 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
             self.currentChange = result as! Change
             
             //segue to Viewfollowed change VC
-            var controller:ViewFollowedChangeViewController
+            var controller:ViewFollowingChangeViewController
             
-            controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewFollowedChangeViewController") as! ViewFollowedChangeViewController
+            controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewFollowingChangeViewController") as! ViewFollowingChangeViewController
             
             controller.changeClicked = self.currentChange
             controller.sendingController = "ViewResult"
@@ -124,7 +129,7 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
         let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath)
         
         var solutionName:String = ""
-        solutionName = TempChange.sharedInstance().solutionNameArray[indexPath.row] as! String
+        solutionName = TempChange.sharedInstance().solutionNameArray[indexPath.row] 
         cell.textLabel!.text = solutionName
         
         return cell
@@ -139,8 +144,8 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
         
         //controller.viewControllerStatus = "viewing"
         
-        controller.loadedNameData = TempChange.sharedInstance().solutionNameArray[indexPath.row] as? String
-        controller.loadedDetailData = TempChange.sharedInstance().solutionDetailArray[indexPath.row] as? String
+        controller.loadedNameData = TempChange.sharedInstance().solutionNameArray[indexPath.row]
+        controller.loadedDetailData = TempChange.sharedInstance().solutionDetailArray[indexPath.row]
         
         self.navigationController?.pushViewController(controller, animated: true)
         

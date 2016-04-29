@@ -6,28 +6,28 @@ provides-nominal:
 provides-member:
 - ["C8GoChange15VoteForSolution", ""]
 provides-dynamic-lookup:
-- "solutionID"
-- "addVoteToCoreData"
 - "currentVoteCount"
 - "changeID"
-- "sharedContext"
+- "addVoteToCoreData"
 - "addVoteToFirebase"
+- "sharedContext"
+- "solutionID"
 depends-top-level:
-- !private "Solution"
-- "NSObject"
-- !private "+="
-- "Dictionary"
-- "VoteForSolution"
-- !private "NSFetchRequest"
+- "String"
 - !private "CoreDataStackManager"
+- !private "StringLiteralType"
+- "VoteForSolution"
 - !private "NSPredicate"
-- "Void"
+- "NSObject"
 - "Int"
+- !private "NSFetchRequest"
+- !private "Solution"
 - "AnyObject"
+- "Dictionary"
+- !private "+="
+- "Void"
 - "NSManagedObjectContext"
 - !private "Firebase"
-- "String"
-- !private "StringLiteralType"
 depends-member:
 - !private ["Ps9AnyObject", "CoreDataStackManager"]
 - !private ["Ps9AnyObject", "Firebase"]

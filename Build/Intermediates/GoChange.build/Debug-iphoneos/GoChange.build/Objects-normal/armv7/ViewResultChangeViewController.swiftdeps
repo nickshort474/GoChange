@@ -6,63 +6,56 @@ provides-nominal:
 provides-member:
 - ["C8GoChange30ViewResultChangeViewController", ""]
 provides-dynamic-lookup:
-- "viewWillAppear"
-- "viewDidLoad"
-- "currentChange"
-- "nameField"
-- "detailsField"
-- "changeDetail"
-- "owner"
-- "followChangeClick"
-- "changeName"
-- "tableView"
-- "tableView"
-- "tableView"
-- "followChangeButton"
 - "solutionTable"
+- "nameField"
 - "changeID"
+- "viewWillAppear"
+- "followChangeButton"
+- "detailsField"
+- "tableView"
+- "tableView"
+- "tableView"
+- "viewDidLoad"
+- "followChangeClick"
+- "changeDetail"
+- "changeName"
+- "owner"
+- "currentChange"
 depends-top-level:
-- "UITextField"
-- "ViewResultChangeViewController"
+- !private "TempChange"
 - "Bool"
 - "UIButton"
-- !private "UIColor"
-- !private "SaveResultToCoreData"
+- "ViewResultChangeViewController"
 - "Change"
-- "Int"
-- !private "StringLiteralType"
-- !private "ViewIdeaViewController"
-- !private "Array"
-- "UITextFieldDelegate"
-- "UITextViewDelegate"
-- !private "ViewFollowedChangeViewController"
-- !private "FDataSnapshot"
-- "UIViewController"
-- "UITableViewCell"
-- "String"
-- !private "TempChange"
-- !private "BooleanLiteralType"
-- !private "RetrieveSolutionsFromFirebase"
-- "UITextView"
+- "UITextField"
 - "NSIndexPath"
-- "UITableViewDelegate"
 - "UITableView"
+- !private "ViewFollowingChangeViewController"
+- !private "StringLiteralType"
+- "String"
+- "UITableViewCell"
+- "UITextViewDelegate"
+- "UITextFieldDelegate"
+- "UIViewController"
+- "UITextView"
+- !private "RetrieveSolutionsFromFirebase"
+- "Int"
+- !private "BooleanLiteralType"
+- !private "ViewIdeaViewController"
+- !private "SaveResultToCoreData"
+- "UITableViewDelegate"
+- !private "UIColor"
 depends-member:
-- !private ["Ps9AnyObject", "Element"]
 - !private ["Ps9AnyObject", "RetrieveSolutionsFromFirebase"]
 - !private ["Ps9AnyObject", "SaveResultToCoreData"]
 - !private ["Ps9AnyObject", "TempChange"]
 - !private ["Ps9AnyObject", "UIColor"]
-- !private ["Ps9AnyObject", "addObject"]
-- !private ["Ps9AnyObject", "allObjects"]
 - !private ["Ps9AnyObject", "blackColor"]
 - !private ["Ps9AnyObject", "changeClicked"]
 - ["Ps9AnyObject", "changeDetail"]
 - ["Ps9AnyObject", "changeID"]
 - ["Ps9AnyObject", "changeName"]
 - !private ["Ps9AnyObject", "changeOwner"]
-- !private ["Ps9AnyObject", "children"]
-- !private ["Ps9AnyObject", "count"]
 - ["Ps9AnyObject", "currentChange"]
 - !private ["Ps9AnyObject", "delegate"]
 - !private ["Ps9AnyObject", "dequeueReusableCellWithIdentifier"]
@@ -73,7 +66,6 @@ depends-member:
 - ["Ps9AnyObject", "indexPathForPreferredFocusedViewInTableView"]
 - ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "instantiateViewControllerWithIdentifier"]
-- !private ["Ps9AnyObject", "key"]
 - !private ["Ps9AnyObject", "loadedDetailData"]
 - !private ["Ps9AnyObject", "loadedNameData"]
 - ["Ps9AnyObject", "nameField"]
@@ -98,13 +90,9 @@ depends-member:
 - !private ["Ps9AnyObject", "sendingController"]
 - !private ["Ps9AnyObject", "sharedInstance"]
 - !private ["Ps9AnyObject", "solutionDetailArray"]
-- !private ["Ps9AnyObject", "solutionIDArray"]
 - !private ["Ps9AnyObject", "solutionNameArray"]
-- !private ["Ps9AnyObject", "solutionOwnerArray"]
 - ["Ps9AnyObject", "solutionTable"]
-- !private ["Ps9AnyObject", "solutionVoteArray"]
 - !private ["Ps9AnyObject", "storyboard"]
-- !private ["Ps9AnyObject", "subscript"]
 - ["Ps9AnyObject", "tableView"]
 - !private ["Ps9AnyObject", "text"]
 - !private ["Ps9AnyObject", "textColor"]
@@ -124,7 +112,6 @@ depends-member:
 - ["Ps9AnyObject", "textViewShouldBeginEditing"]
 - ["Ps9AnyObject", "textViewShouldEndEditing"]
 - !private ["Ps9AnyObject", "title"]
-- !private ["Ps9AnyObject", "value"]
 - ["Ps9AnyObject", "viewDidLoad"]
 - ["Ps9AnyObject", "viewForZoomingInScrollView"]
 - ["Ps9AnyObject", "viewWillAppear"]
@@ -132,14 +119,12 @@ depends-member:
 - !private ["Sa", "Generator"]
 - !private ["Sa", "Index"]
 - !private ["Sa", "SubSequence"]
-- !private ["Sa", "_Element"]
+- !private ["Sa", "count"]
 - !private ["Sa", "deinit"]
-- !private ["Ps23ArrayLiteralConvertible", "Element"]
+- !private ["Sa", "subscript"]
 - !private ["Ps23ArrayLiteralConvertible", "Generator"]
 - !private ["Ps23ArrayLiteralConvertible", "Index"]
 - !private ["Ps23ArrayLiteralConvertible", "SubSequence"]
-- !private ["Ps23ArrayLiteralConvertible", "_Element"]
-- !private ["Ps23ArrayLiteralConvertible", "addObject"]
 - !private ["Ps23ArrayLiteralConvertible", "count"]
 - !private ["Ps23ArrayLiteralConvertible", "subscript"]
 - !private ["Vs10ArraySlice", "Generator"]
@@ -149,22 +134,17 @@ depends-member:
 - !private ["Ps21BitwiseOperationsType", "Distance"]
 - !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
 - !private ["Ps11CVarArgType", "Distance"]
-- !private ["Ps11CVarArgType", "Element"]
 - !private ["Ps11CVarArgType", "IntegerLiteralType"]
 - !private ["Ps11CVarArgType", "RetrieveSolutionsFromFirebase"]
 - !private ["Ps11CVarArgType", "SaveResultToCoreData"]
 - !private ["Ps11CVarArgType", "TempChange"]
 - !private ["Ps11CVarArgType", "UIColor"]
-- !private ["Ps11CVarArgType", "addObject"]
-- !private ["Ps11CVarArgType", "allObjects"]
 - !private ["Ps11CVarArgType", "blackColor"]
 - !private ["Ps11CVarArgType", "changeClicked"]
 - ["Ps11CVarArgType", "changeDetail"]
 - ["Ps11CVarArgType", "changeID"]
 - ["Ps11CVarArgType", "changeName"]
 - !private ["Ps11CVarArgType", "changeOwner"]
-- !private ["Ps11CVarArgType", "children"]
-- !private ["Ps11CVarArgType", "count"]
 - ["Ps11CVarArgType", "currentChange"]
 - !private ["Ps11CVarArgType", "delegate"]
 - !private ["Ps11CVarArgType", "dequeueReusableCellWithIdentifier"]
@@ -175,7 +155,6 @@ depends-member:
 - ["Ps11CVarArgType", "indexPathForPreferredFocusedViewInTableView"]
 - ["Ps11CVarArgType", "init"]
 - !private ["Ps11CVarArgType", "instantiateViewControllerWithIdentifier"]
-- !private ["Ps11CVarArgType", "key"]
 - !private ["Ps11CVarArgType", "loadedDetailData"]
 - !private ["Ps11CVarArgType", "loadedNameData"]
 - ["Ps11CVarArgType", "nameField"]
@@ -200,13 +179,9 @@ depends-member:
 - !private ["Ps11CVarArgType", "sendingController"]
 - !private ["Ps11CVarArgType", "sharedInstance"]
 - !private ["Ps11CVarArgType", "solutionDetailArray"]
-- !private ["Ps11CVarArgType", "solutionIDArray"]
 - !private ["Ps11CVarArgType", "solutionNameArray"]
-- !private ["Ps11CVarArgType", "solutionOwnerArray"]
 - ["Ps11CVarArgType", "solutionTable"]
-- !private ["Ps11CVarArgType", "solutionVoteArray"]
 - !private ["Ps11CVarArgType", "storyboard"]
-- !private ["Ps11CVarArgType", "subscript"]
 - ["Ps11CVarArgType", "tableView"]
 - !private ["Ps11CVarArgType", "text"]
 - !private ["Ps11CVarArgType", "textColor"]
@@ -226,7 +201,6 @@ depends-member:
 - ["Ps11CVarArgType", "textViewShouldBeginEditing"]
 - ["Ps11CVarArgType", "textViewShouldEndEditing"]
 - !private ["Ps11CVarArgType", "title"]
-- !private ["Ps11CVarArgType", "value"]
 - ["Ps11CVarArgType", "viewDidLoad"]
 - ["Ps11CVarArgType", "viewForZoomingInScrollView"]
 - ["Ps11CVarArgType", "viewWillAppear"]
@@ -235,9 +209,10 @@ depends-member:
 - !private ["Ps14CollectionType", "Index"]
 - !private ["Ps14CollectionType", "SubSequence"]
 - !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "count"]
+- !private ["Ps14CollectionType", "subscript"]
 - !private ["Ps10Comparable", "Distance"]
 - !private ["Ps10Comparable", "IntegerLiteralType"]
-- !private ["Ps28CustomDebugStringConvertible", "Element"]
 - !private ["Ps28CustomDebugStringConvertible", "Generator"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "RetrieveSolutionsFromFirebase"]
@@ -245,16 +220,12 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
 - !private ["Ps28CustomDebugStringConvertible", "TempChange"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
-- !private ["Ps28CustomDebugStringConvertible", "_Element"]
-- !private ["Ps28CustomDebugStringConvertible", "addObject"]
-- !private ["Ps28CustomDebugStringConvertible", "allObjects"]
 - !private ["Ps28CustomDebugStringConvertible", "blackColor"]
 - !private ["Ps28CustomDebugStringConvertible", "changeClicked"]
 - ["Ps28CustomDebugStringConvertible", "changeDetail"]
 - ["Ps28CustomDebugStringConvertible", "changeID"]
 - ["Ps28CustomDebugStringConvertible", "changeName"]
 - !private ["Ps28CustomDebugStringConvertible", "changeOwner"]
-- !private ["Ps28CustomDebugStringConvertible", "children"]
 - !private ["Ps28CustomDebugStringConvertible", "count"]
 - ["Ps28CustomDebugStringConvertible", "currentChange"]
 - !private ["Ps28CustomDebugStringConvertible", "delegate"]
@@ -266,7 +237,6 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "indexPathForPreferredFocusedViewInTableView"]
 - ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "instantiateViewControllerWithIdentifier"]
-- !private ["Ps28CustomDebugStringConvertible", "key"]
 - !private ["Ps28CustomDebugStringConvertible", "loadedDetailData"]
 - !private ["Ps28CustomDebugStringConvertible", "loadedNameData"]
 - ["Ps28CustomDebugStringConvertible", "nameField"]
@@ -291,11 +261,8 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "sendingController"]
 - !private ["Ps28CustomDebugStringConvertible", "sharedInstance"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionDetailArray"]
-- !private ["Ps28CustomDebugStringConvertible", "solutionIDArray"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionNameArray"]
-- !private ["Ps28CustomDebugStringConvertible", "solutionOwnerArray"]
 - ["Ps28CustomDebugStringConvertible", "solutionTable"]
-- !private ["Ps28CustomDebugStringConvertible", "solutionVoteArray"]
 - !private ["Ps28CustomDebugStringConvertible", "storyboard"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
 - ["Ps28CustomDebugStringConvertible", "tableView"]
@@ -317,13 +284,11 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "textViewShouldBeginEditing"]
 - ["Ps28CustomDebugStringConvertible", "textViewShouldEndEditing"]
 - !private ["Ps28CustomDebugStringConvertible", "title"]
-- !private ["Ps28CustomDebugStringConvertible", "value"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
 - ["Ps28CustomDebugStringConvertible", "viewForZoomingInScrollView"]
 - ["Ps28CustomDebugStringConvertible", "viewWillAppear"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps23CustomStringConvertible", "Distance"]
-- !private ["Ps23CustomStringConvertible", "Element"]
 - !private ["Ps23CustomStringConvertible", "Generator"]
 - !private ["Ps23CustomStringConvertible", "Index"]
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
@@ -332,16 +297,12 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
 - !private ["Ps23CustomStringConvertible", "TempChange"]
 - !private ["Ps23CustomStringConvertible", "UIColor"]
-- !private ["Ps23CustomStringConvertible", "_Element"]
-- !private ["Ps23CustomStringConvertible", "addObject"]
-- !private ["Ps23CustomStringConvertible", "allObjects"]
 - !private ["Ps23CustomStringConvertible", "blackColor"]
 - !private ["Ps23CustomStringConvertible", "changeClicked"]
 - ["Ps23CustomStringConvertible", "changeDetail"]
 - ["Ps23CustomStringConvertible", "changeID"]
 - ["Ps23CustomStringConvertible", "changeName"]
 - !private ["Ps23CustomStringConvertible", "changeOwner"]
-- !private ["Ps23CustomStringConvertible", "children"]
 - !private ["Ps23CustomStringConvertible", "count"]
 - ["Ps23CustomStringConvertible", "currentChange"]
 - !private ["Ps23CustomStringConvertible", "delegate"]
@@ -353,7 +314,6 @@ depends-member:
 - ["Ps23CustomStringConvertible", "indexPathForPreferredFocusedViewInTableView"]
 - ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "instantiateViewControllerWithIdentifier"]
-- !private ["Ps23CustomStringConvertible", "key"]
 - !private ["Ps23CustomStringConvertible", "loadedDetailData"]
 - !private ["Ps23CustomStringConvertible", "loadedNameData"]
 - ["Ps23CustomStringConvertible", "nameField"]
@@ -378,11 +338,8 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "sendingController"]
 - !private ["Ps23CustomStringConvertible", "sharedInstance"]
 - !private ["Ps23CustomStringConvertible", "solutionDetailArray"]
-- !private ["Ps23CustomStringConvertible", "solutionIDArray"]
 - !private ["Ps23CustomStringConvertible", "solutionNameArray"]
-- !private ["Ps23CustomStringConvertible", "solutionOwnerArray"]
 - ["Ps23CustomStringConvertible", "solutionTable"]
-- !private ["Ps23CustomStringConvertible", "solutionVoteArray"]
 - !private ["Ps23CustomStringConvertible", "storyboard"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
 - ["Ps23CustomStringConvertible", "tableView"]
@@ -404,28 +361,22 @@ depends-member:
 - ["Ps23CustomStringConvertible", "textViewShouldBeginEditing"]
 - ["Ps23CustomStringConvertible", "textViewShouldEndEditing"]
 - !private ["Ps23CustomStringConvertible", "title"]
-- !private ["Ps23CustomStringConvertible", "value"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
 - ["Ps23CustomStringConvertible", "viewForZoomingInScrollView"]
 - ["Ps23CustomStringConvertible", "viewWillAppear"]
 - ["Ps23CustomStringConvertible", ""]
 - !private ["Ps9Equatable", "Distance"]
-- !private ["Ps9Equatable", "Element"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "RetrieveSolutionsFromFirebase"]
 - !private ["Ps9Equatable", "SaveResultToCoreData"]
 - !private ["Ps9Equatable", "TempChange"]
 - !private ["Ps9Equatable", "UIColor"]
-- !private ["Ps9Equatable", "addObject"]
-- !private ["Ps9Equatable", "allObjects"]
 - !private ["Ps9Equatable", "blackColor"]
 - !private ["Ps9Equatable", "changeClicked"]
 - ["Ps9Equatable", "changeDetail"]
 - ["Ps9Equatable", "changeID"]
 - ["Ps9Equatable", "changeName"]
 - !private ["Ps9Equatable", "changeOwner"]
-- !private ["Ps9Equatable", "children"]
-- !private ["Ps9Equatable", "count"]
 - ["Ps9Equatable", "currentChange"]
 - !private ["Ps9Equatable", "delegate"]
 - !private ["Ps9Equatable", "dequeueReusableCellWithIdentifier"]
@@ -436,7 +387,6 @@ depends-member:
 - ["Ps9Equatable", "indexPathForPreferredFocusedViewInTableView"]
 - ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "instantiateViewControllerWithIdentifier"]
-- !private ["Ps9Equatable", "key"]
 - !private ["Ps9Equatable", "loadedDetailData"]
 - !private ["Ps9Equatable", "loadedNameData"]
 - ["Ps9Equatable", "nameField"]
@@ -461,13 +411,9 @@ depends-member:
 - !private ["Ps9Equatable", "sendingController"]
 - !private ["Ps9Equatable", "sharedInstance"]
 - !private ["Ps9Equatable", "solutionDetailArray"]
-- !private ["Ps9Equatable", "solutionIDArray"]
 - !private ["Ps9Equatable", "solutionNameArray"]
-- !private ["Ps9Equatable", "solutionOwnerArray"]
 - ["Ps9Equatable", "solutionTable"]
-- !private ["Ps9Equatable", "solutionVoteArray"]
 - !private ["Ps9Equatable", "storyboard"]
-- !private ["Ps9Equatable", "subscript"]
 - ["Ps9Equatable", "tableView"]
 - !private ["Ps9Equatable", "text"]
 - !private ["Ps9Equatable", "textColor"]
@@ -487,34 +433,25 @@ depends-member:
 - ["Ps9Equatable", "textViewShouldBeginEditing"]
 - ["Ps9Equatable", "textViewShouldEndEditing"]
 - !private ["Ps9Equatable", "title"]
-- !private ["Ps9Equatable", "value"]
 - ["Ps9Equatable", "viewDidLoad"]
 - ["Ps9Equatable", "viewForZoomingInScrollView"]
 - ["Ps9Equatable", "viewWillAppear"]
 - ["Ps9Equatable", ""]
-- !private ["CSo13FDataSnapshot", "children"]
-- !private ["CSo13FDataSnapshot", "key"]
-- !private ["CSo13FDataSnapshot", "value"]
 - !private ["Ps16ForwardIndexType", "Distance"]
 - !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
 - !private ["Ps13GeneratorType", "Element"]
 - !private ["Ps8Hashable", "Distance"]
-- !private ["Ps8Hashable", "Element"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "RetrieveSolutionsFromFirebase"]
 - !private ["Ps8Hashable", "SaveResultToCoreData"]
 - !private ["Ps8Hashable", "TempChange"]
 - !private ["Ps8Hashable", "UIColor"]
-- !private ["Ps8Hashable", "addObject"]
-- !private ["Ps8Hashable", "allObjects"]
 - !private ["Ps8Hashable", "blackColor"]
 - !private ["Ps8Hashable", "changeClicked"]
 - ["Ps8Hashable", "changeDetail"]
 - ["Ps8Hashable", "changeID"]
 - ["Ps8Hashable", "changeName"]
 - !private ["Ps8Hashable", "changeOwner"]
-- !private ["Ps8Hashable", "children"]
-- !private ["Ps8Hashable", "count"]
 - ["Ps8Hashable", "currentChange"]
 - !private ["Ps8Hashable", "delegate"]
 - !private ["Ps8Hashable", "dequeueReusableCellWithIdentifier"]
@@ -525,7 +462,6 @@ depends-member:
 - ["Ps8Hashable", "indexPathForPreferredFocusedViewInTableView"]
 - ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "instantiateViewControllerWithIdentifier"]
-- !private ["Ps8Hashable", "key"]
 - !private ["Ps8Hashable", "loadedDetailData"]
 - !private ["Ps8Hashable", "loadedNameData"]
 - ["Ps8Hashable", "nameField"]
@@ -550,13 +486,9 @@ depends-member:
 - !private ["Ps8Hashable", "sendingController"]
 - !private ["Ps8Hashable", "sharedInstance"]
 - !private ["Ps8Hashable", "solutionDetailArray"]
-- !private ["Ps8Hashable", "solutionIDArray"]
 - !private ["Ps8Hashable", "solutionNameArray"]
-- !private ["Ps8Hashable", "solutionOwnerArray"]
 - ["Ps8Hashable", "solutionTable"]
-- !private ["Ps8Hashable", "solutionVoteArray"]
 - !private ["Ps8Hashable", "storyboard"]
-- !private ["Ps8Hashable", "subscript"]
 - ["Ps8Hashable", "tableView"]
 - !private ["Ps8Hashable", "text"]
 - !private ["Ps8Hashable", "textColor"]
@@ -576,7 +508,6 @@ depends-member:
 - ["Ps8Hashable", "textViewShouldBeginEditing"]
 - ["Ps8Hashable", "textViewShouldEndEditing"]
 - !private ["Ps8Hashable", "title"]
-- !private ["Ps8Hashable", "value"]
 - ["Ps8Hashable", "viewDidLoad"]
 - ["Ps8Hashable", "viewForZoomingInScrollView"]
 - ["Ps8Hashable", "viewWillAppear"]
@@ -586,10 +517,11 @@ depends-member:
 - !private ["Ps9Indexable", "Index"]
 - !private ["Ps9Indexable", "SubSequence"]
 - !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "count"]
+- !private ["Ps9Indexable", "subscript"]
 - !private ["Vs17IndexingGenerator", "Element"]
 - !private ["Si", "Distance"]
 - !private ["Si", "IntegerLiteralType"]
-- !private ["Si", "deinit"]
 - !private ["Ps21IntegerArithmeticType", "Distance"]
 - !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
 - !private ["Ps25IntegerLiteralConvertible", "Distance"]
@@ -601,31 +533,27 @@ depends-member:
 - !private ["Ps21MutableCollectionType", "Generator"]
 - !private ["Ps21MutableCollectionType", "Index"]
 - !private ["Ps21MutableCollectionType", "SubSequence"]
-- !private ["Ps21MutableCollectionType", "_Element"]
+- !private ["Ps21MutableCollectionType", "count"]
+- !private ["Ps21MutableCollectionType", "subscript"]
 - !private ["Ps16MutableIndexable", "Generator"]
 - !private ["Ps16MutableIndexable", "Index"]
 - !private ["Ps16MutableIndexable", "SubSequence"]
-- !private ["Ps16MutableIndexable", "_Element"]
+- !private ["Ps16MutableIndexable", "count"]
+- !private ["Ps16MutableIndexable", "subscript"]
 - !private ["Ps16MutableSliceable", "Generator"]
 - !private ["Ps16MutableSliceable", "Index"]
 - !private ["Ps16MutableSliceable", "SubSequence"]
-- !private ["Ps16MutableSliceable", "_Element"]
-- !private ["CSo7NSArray", "Element"]
-- !private ["CSo7NSArray", "addObject"]
-- !private ["CSo7NSArray", "count"]
-- !private ["CSo7NSArray", "subscript"]
-- !private ["PSo8NSCoding", "Element"]
+- !private ["Ps16MutableSliceable", "count"]
+- !private ["Ps16MutableSliceable", "subscript"]
 - !private ["PSo8NSCoding", "RetrieveSolutionsFromFirebase"]
 - !private ["PSo8NSCoding", "SaveResultToCoreData"]
 - !private ["PSo8NSCoding", "TempChange"]
 - !private ["PSo8NSCoding", "UIColor"]
-- !private ["PSo8NSCoding", "addObject"]
 - !private ["PSo8NSCoding", "blackColor"]
 - !private ["PSo8NSCoding", "changeClicked"]
 - ["PSo8NSCoding", "changeDetail"]
 - ["PSo8NSCoding", "changeID"]
 - ["PSo8NSCoding", "changeName"]
-- !private ["PSo8NSCoding", "count"]
 - ["PSo8NSCoding", "currentChange"]
 - !private ["PSo8NSCoding", "delegate"]
 - !private ["PSo8NSCoding", "dequeueReusableCellWithIdentifier"]
@@ -659,7 +587,6 @@ depends-member:
 - !private ["PSo8NSCoding", "sendingController"]
 - ["PSo8NSCoding", "solutionTable"]
 - !private ["PSo8NSCoding", "storyboard"]
-- !private ["PSo8NSCoding", "subscript"]
 - ["PSo8NSCoding", "tableView"]
 - !private ["PSo8NSCoding", "text"]
 - !private ["PSo8NSCoding", "textColor"]
@@ -683,14 +610,8 @@ depends-member:
 - ["PSo8NSCoding", "viewForZoomingInScrollView"]
 - ["PSo8NSCoding", "viewWillAppear"]
 - ["PSo8NSCoding", ""]
-- !private ["PSo9NSCopying", "Element"]
-- !private ["PSo9NSCopying", "addObject"]
 - !private ["PSo9NSCopying", "blackColor"]
-- !private ["PSo9NSCopying", "count"]
-- !private ["PSo9NSCopying", "deinit"]
 - !private ["PSo9NSCopying", "row"]
-- !private ["PSo9NSCopying", "subscript"]
-- !private ["CSo12NSEnumerator", "allObjects"]
 - !private ["PSo26NSExtensionRequestHandling", "RetrieveSolutionsFromFirebase"]
 - !private ["PSo26NSExtensionRequestHandling", "SaveResultToCoreData"]
 - !private ["PSo26NSExtensionRequestHandling", "TempChange"]
@@ -746,24 +667,9 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "viewForZoomingInScrollView"]
 - ["PSo26NSExtensionRequestHandling", "viewWillAppear"]
 - ["PSo26NSExtensionRequestHandling", ""]
-- !private ["PSo17NSFastEnumeration", "Element"]
-- !private ["PSo17NSFastEnumeration", "addObject"]
-- !private ["PSo17NSFastEnumeration", "allObjects"]
-- !private ["PSo17NSFastEnumeration", "count"]
-- !private ["PSo17NSFastEnumeration", "subscript"]
 - !private ["CSo11NSIndexPath", "row"]
-- !private ["CSo14NSMutableArray", "Element"]
-- !private ["CSo14NSMutableArray", "addObject"]
-- !private ["CSo14NSMutableArray", "count"]
-- !private ["CSo14NSMutableArray", "subscript"]
-- !private ["PSo16NSMutableCopying", "Element"]
-- !private ["PSo16NSMutableCopying", "addObject"]
-- !private ["PSo16NSMutableCopying", "count"]
-- !private ["PSo16NSMutableCopying", "subscript"]
 - ["CSo8NSObject", "Bool"]
 - ["CSo8NSObject", "Change"]
-- !private ["CSo8NSObject", "Element"]
-- !private ["CSo8NSObject", "FDataSnapshot"]
 - ["CSo8NSObject", "Int"]
 - ["CSo8NSObject", "NSIndexPath"]
 - !private ["CSo8NSObject", "RetrieveSolutionsFromFirebase"]
@@ -776,18 +682,14 @@ depends-member:
 - ["CSo8NSObject", "UITableViewCell"]
 - ["CSo8NSObject", "UITextField"]
 - ["CSo8NSObject", "UITextView"]
-- !private ["CSo8NSObject", "ViewFollowedChangeViewController"]
+- !private ["CSo8NSObject", "ViewFollowingChangeViewController"]
 - !private ["CSo8NSObject", "ViewIdeaViewController"]
-- !private ["CSo8NSObject", "addObject"]
-- !private ["CSo8NSObject", "allObjects"]
 - !private ["CSo8NSObject", "blackColor"]
 - !private ["CSo8NSObject", "changeClicked"]
 - ["CSo8NSObject", "changeDetail"]
 - ["CSo8NSObject", "changeID"]
 - ["CSo8NSObject", "changeName"]
 - !private ["CSo8NSObject", "changeOwner"]
-- !private ["CSo8NSObject", "children"]
-- !private ["CSo8NSObject", "count"]
 - ["CSo8NSObject", "currentChange"]
 - !private ["CSo8NSObject", "delegate"]
 - !private ["CSo8NSObject", "dequeueReusableCellWithIdentifier"]
@@ -798,7 +700,6 @@ depends-member:
 - ["CSo8NSObject", "indexPathForPreferredFocusedViewInTableView"]
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "instantiateViewControllerWithIdentifier"]
-- !private ["CSo8NSObject", "key"]
 - !private ["CSo8NSObject", "loadedDetailData"]
 - !private ["CSo8NSObject", "loadedNameData"]
 - ["CSo8NSObject", "nameField"]
@@ -823,13 +724,9 @@ depends-member:
 - !private ["CSo8NSObject", "sendingController"]
 - !private ["CSo8NSObject", "sharedInstance"]
 - !private ["CSo8NSObject", "solutionDetailArray"]
-- !private ["CSo8NSObject", "solutionIDArray"]
 - !private ["CSo8NSObject", "solutionNameArray"]
-- !private ["CSo8NSObject", "solutionOwnerArray"]
 - ["CSo8NSObject", "solutionTable"]
-- !private ["CSo8NSObject", "solutionVoteArray"]
 - !private ["CSo8NSObject", "storyboard"]
-- !private ["CSo8NSObject", "subscript"]
 - ["CSo8NSObject", "tableView"]
 - !private ["CSo8NSObject", "text"]
 - !private ["CSo8NSObject", "textColor"]
@@ -849,25 +746,19 @@ depends-member:
 - ["CSo8NSObject", "textViewShouldBeginEditing"]
 - ["CSo8NSObject", "textViewShouldEndEditing"]
 - !private ["CSo8NSObject", "title"]
-- !private ["CSo8NSObject", "value"]
 - ["CSo8NSObject", "viewDidLoad"]
 - ["CSo8NSObject", "viewForZoomingInScrollView"]
 - ["CSo8NSObject", "viewWillAppear"]
-- !private ["PSo16NSObjectProtocol", "Element"]
 - !private ["PSo16NSObjectProtocol", "RetrieveSolutionsFromFirebase"]
 - !private ["PSo16NSObjectProtocol", "SaveResultToCoreData"]
 - !private ["PSo16NSObjectProtocol", "TempChange"]
 - !private ["PSo16NSObjectProtocol", "UIColor"]
-- !private ["PSo16NSObjectProtocol", "addObject"]
-- !private ["PSo16NSObjectProtocol", "allObjects"]
 - !private ["PSo16NSObjectProtocol", "blackColor"]
 - !private ["PSo16NSObjectProtocol", "changeClicked"]
 - ["PSo16NSObjectProtocol", "changeDetail"]
 - ["PSo16NSObjectProtocol", "changeID"]
 - ["PSo16NSObjectProtocol", "changeName"]
 - !private ["PSo16NSObjectProtocol", "changeOwner"]
-- !private ["PSo16NSObjectProtocol", "children"]
-- !private ["PSo16NSObjectProtocol", "count"]
 - ["PSo16NSObjectProtocol", "currentChange"]
 - !private ["PSo16NSObjectProtocol", "delegate"]
 - !private ["PSo16NSObjectProtocol", "dequeueReusableCellWithIdentifier"]
@@ -878,7 +769,6 @@ depends-member:
 - ["PSo16NSObjectProtocol", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "instantiateViewControllerWithIdentifier"]
-- !private ["PSo16NSObjectProtocol", "key"]
 - !private ["PSo16NSObjectProtocol", "loadedDetailData"]
 - !private ["PSo16NSObjectProtocol", "loadedNameData"]
 - ["PSo16NSObjectProtocol", "nameField"]
@@ -903,13 +793,9 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "sendingController"]
 - !private ["PSo16NSObjectProtocol", "sharedInstance"]
 - !private ["PSo16NSObjectProtocol", "solutionDetailArray"]
-- !private ["PSo16NSObjectProtocol", "solutionIDArray"]
 - !private ["PSo16NSObjectProtocol", "solutionNameArray"]
-- !private ["PSo16NSObjectProtocol", "solutionOwnerArray"]
 - ["PSo16NSObjectProtocol", "solutionTable"]
-- !private ["PSo16NSObjectProtocol", "solutionVoteArray"]
 - !private ["PSo16NSObjectProtocol", "storyboard"]
-- !private ["PSo16NSObjectProtocol", "subscript"]
 - ["PSo16NSObjectProtocol", "tableView"]
 - !private ["PSo16NSObjectProtocol", "text"]
 - !private ["PSo16NSObjectProtocol", "textColor"]
@@ -929,24 +815,20 @@ depends-member:
 - ["PSo16NSObjectProtocol", "textViewShouldBeginEditing"]
 - ["PSo16NSObjectProtocol", "textViewShouldEndEditing"]
 - !private ["PSo16NSObjectProtocol", "title"]
-- !private ["PSo16NSObjectProtocol", "value"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", "viewForZoomingInScrollView"]
 - ["PSo16NSObjectProtocol", "viewWillAppear"]
 - ["PSo16NSObjectProtocol", ""]
-- !private ["PSo14NSSecureCoding", "Element"]
-- !private ["PSo14NSSecureCoding", "addObject"]
 - !private ["PSo14NSSecureCoding", "blackColor"]
-- !private ["PSo14NSSecureCoding", "count"]
 - !private ["PSo14NSSecureCoding", "row"]
-- !private ["PSo14NSSecureCoding", "subscript"]
 - !private ["Sq", "deinit"]
 - !private ["Ps21RandomAccessIndexType", "Distance"]
 - !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
 - !private ["Ps30RangeReplaceableCollectionType", "Generator"]
 - !private ["Ps30RangeReplaceableCollectionType", "Index"]
 - !private ["Ps30RangeReplaceableCollectionType", "SubSequence"]
-- !private ["Ps30RangeReplaceableCollectionType", "_Element"]
+- !private ["Ps30RangeReplaceableCollectionType", "count"]
+- !private ["Ps30RangeReplaceableCollectionType", "subscript"]
 - !private ["C8GoChange29RetrieveSolutionsFromFirebase", "init"]
 - !private ["C8GoChange20SaveResultToCoreData", "init"]
 - !private ["Ps12SequenceType", "Element"]
@@ -954,26 +836,24 @@ depends-member:
 - !private ["Ps12SequenceType", "Index"]
 - !private ["Ps12SequenceType", "SubSequence"]
 - !private ["Ps12SequenceType", "_Element"]
-- !private ["Ps12SequenceType", "addObject"]
-- !private ["Ps12SequenceType", "allObjects"]
 - !private ["Ps12SequenceType", "count"]
 - !private ["Ps12SequenceType", "subscript"]
 - !private ["Ps17SignedIntegerType", "Distance"]
 - !private ["Ps17SignedIntegerType", "IntegerLiteralType"]
 - !private ["Ps16SignedNumberType", "Distance"]
 - !private ["Ps16SignedNumberType", "IntegerLiteralType"]
+- !private ["Vs5Slice", "Generator"]
+- !private ["Vs5Slice", "Index"]
+- !private ["Vs5Slice", "SubSequence"]
+- !private ["Vs5Slice", "_Element"]
 - !private ["Ps10Strideable", "Distance"]
 - !private ["Ps10Strideable", "IntegerLiteralType"]
-- !private ["SS", "deinit"]
 - !private ["C8GoChange10TempChange", "changeDetail"]
 - !private ["C8GoChange10TempChange", "changeName"]
 - !private ["C8GoChange10TempChange", "changeOwner"]
 - !private ["C8GoChange10TempChange", "sharedInstance"]
 - !private ["C8GoChange10TempChange", "solutionDetailArray"]
-- !private ["C8GoChange10TempChange", "solutionIDArray"]
 - !private ["C8GoChange10TempChange", "solutionNameArray"]
-- !private ["C8GoChange10TempChange", "solutionOwnerArray"]
-- !private ["C8GoChange10TempChange", "solutionVoteArray"]
 - !private ["PSo29UIAccessibilityIdentification", "delegate"]
 - !private ["PSo29UIAccessibilityIdentification", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo29UIAccessibilityIdentification", "enabled"]
@@ -1201,7 +1081,6 @@ depends-member:
 - !private ["CSo22UINavigationController", "pushViewController"]
 - ["CSo11UIResponder", "Bool"]
 - ["CSo11UIResponder", "Change"]
-- !private ["CSo11UIResponder", "FDataSnapshot"]
 - ["CSo11UIResponder", "Int"]
 - ["CSo11UIResponder", "NSIndexPath"]
 - !private ["CSo11UIResponder", "RetrieveSolutionsFromFirebase"]
@@ -1214,7 +1093,7 @@ depends-member:
 - ["CSo11UIResponder", "UITableViewCell"]
 - ["CSo11UIResponder", "UITextField"]
 - ["CSo11UIResponder", "UITextView"]
-- !private ["CSo11UIResponder", "ViewFollowedChangeViewController"]
+- !private ["CSo11UIResponder", "ViewFollowingChangeViewController"]
 - !private ["CSo11UIResponder", "ViewIdeaViewController"]
 - !private ["CSo11UIResponder", "changeClicked"]
 - ["CSo11UIResponder", "changeDetail"]
@@ -1618,7 +1497,6 @@ depends-member:
 - !private ["CSo6UIView", "textLabel"]
 - ["CSo16UIViewController", "Bool"]
 - ["CSo16UIViewController", "Change"]
-- !private ["CSo16UIViewController", "FDataSnapshot"]
 - ["CSo16UIViewController", "Int"]
 - ["CSo16UIViewController", "NSIndexPath"]
 - !private ["CSo16UIViewController", "RetrieveSolutionsFromFirebase"]
@@ -1631,7 +1509,7 @@ depends-member:
 - ["CSo16UIViewController", "UITableViewCell"]
 - ["CSo16UIViewController", "UITextField"]
 - ["CSo16UIViewController", "UITextView"]
-- !private ["CSo16UIViewController", "ViewFollowedChangeViewController"]
+- !private ["CSo16UIViewController", "ViewFollowingChangeViewController"]
 - !private ["CSo16UIViewController", "ViewIdeaViewController"]
 - !private ["CSo16UIViewController", "changeClicked"]
 - ["CSo16UIViewController", "changeDetail"]
@@ -1684,13 +1562,12 @@ depends-member:
 - ["CSo16UIViewController", "viewForZoomingInScrollView"]
 - ["CSo16UIViewController", "viewWillAppear"]
 - ["CSo16UIViewController", ""]
-- !private ["C8GoChange32ViewFollowedChangeViewController", "changeClicked"]
-- !private ["C8GoChange32ViewFollowedChangeViewController", "sendingController"]
+- !private ["C8GoChange33ViewFollowingChangeViewController", "changeClicked"]
+- !private ["C8GoChange33ViewFollowingChangeViewController", "sendingController"]
 - !private ["C8GoChange22ViewIdeaViewController", "loadedDetailData"]
 - !private ["C8GoChange22ViewIdeaViewController", "loadedNameData"]
 - ["C8GoChange30ViewResultChangeViewController", "Bool"]
 - ["C8GoChange30ViewResultChangeViewController", "Change"]
-- !private ["C8GoChange30ViewResultChangeViewController", "FDataSnapshot"]
 - ["C8GoChange30ViewResultChangeViewController", "Int"]
 - ["C8GoChange30ViewResultChangeViewController", "NSIndexPath"]
 - !private ["C8GoChange30ViewResultChangeViewController", "RetrieveSolutionsFromFirebase"]
@@ -1703,7 +1580,7 @@ depends-member:
 - ["C8GoChange30ViewResultChangeViewController", "UITableViewCell"]
 - ["C8GoChange30ViewResultChangeViewController", "UITextField"]
 - ["C8GoChange30ViewResultChangeViewController", "UITextView"]
-- !private ["C8GoChange30ViewResultChangeViewController", "ViewFollowedChangeViewController"]
+- !private ["C8GoChange30ViewResultChangeViewController", "ViewFollowingChangeViewController"]
 - !private ["C8GoChange30ViewResultChangeViewController", "ViewIdeaViewController"]
 - ["C8GoChange30ViewResultChangeViewController", "changeDetail"]
 - ["C8GoChange30ViewResultChangeViewController", "changeID"]
@@ -1754,14 +1631,16 @@ depends-member:
 - !private ["Ps10_ArrayType", "Generator"]
 - !private ["Ps10_ArrayType", "Index"]
 - !private ["Ps10_ArrayType", "SubSequence"]
-- !private ["Ps10_ArrayType", "_Element"]
+- !private ["Ps10_ArrayType", "count"]
+- !private ["Ps10_ArrayType", "subscript"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
 - !private ["Ps24_ColorLiteralConvertible", "blackColor"]
 - !private ["Ps24_DestructorSafeContainer", "Generator"]
 - !private ["Ps24_DestructorSafeContainer", "Index"]
 - !private ["Ps24_DestructorSafeContainer", "SubSequence"]
-- !private ["Ps24_DestructorSafeContainer", "_Element"]
+- !private ["Ps24_DestructorSafeContainer", "count"]
+- !private ["Ps24_DestructorSafeContainer", "subscript"]
 - !private ["Ps14_Incrementable", "Distance"]
 - !private ["Ps14_Incrementable", "IntegerLiteralType"]
 - !private ["Ps22_IntegerArithmeticType", "Distance"]
@@ -1773,17 +1652,15 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "Index"]
 - !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
 - !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
-- !private ["Ps21_ObjectiveCBridgeable", "_Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "count"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
 - !private ["Ps22_RandomAccessAmbiguity", "Distance"]
 - !private ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
 - !private ["Ps12_Reflectable", "Distance"]
-- !private ["Ps12_Reflectable", "Element"]
 - !private ["Ps12_Reflectable", "Generator"]
 - !private ["Ps12_Reflectable", "Index"]
 - !private ["Ps12_Reflectable", "IntegerLiteralType"]
 - !private ["Ps12_Reflectable", "SubSequence"]
-- !private ["Ps12_Reflectable", "_Element"]
-- !private ["Ps12_Reflectable", "addObject"]
 - !private ["Ps12_Reflectable", "count"]
 - !private ["Ps12_Reflectable", "delegate"]
 - !private ["Ps12_Reflectable", "dequeueReusableCellWithIdentifier"]
@@ -1809,7 +1686,6 @@ depends-nominal:
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
 - "Ps9Equatable"
-- !private "CSo13FDataSnapshot"
 - !private "Ps16ForwardIndexType"
 - !private "Ps13GeneratorType"
 - "Ps8Hashable"
@@ -1824,15 +1700,10 @@ depends-nominal:
 - !private "Ps21MutableCollectionType"
 - !private "Ps16MutableIndexable"
 - !private "Ps16MutableSliceable"
-- !private "CSo7NSArray"
 - "PSo8NSCoding"
 - !private "PSo9NSCopying"
-- !private "CSo12NSEnumerator"
 - "PSo26NSExtensionRequestHandling"
-- !private "PSo17NSFastEnumeration"
 - !private "CSo11NSIndexPath"
-- !private "CSo14NSMutableArray"
-- !private "PSo16NSMutableCopying"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
@@ -1844,8 +1715,8 @@ depends-nominal:
 - !private "Ps12SequenceType"
 - !private "Ps17SignedIntegerType"
 - !private "Ps16SignedNumberType"
+- !private "Vs5Slice"
 - !private "Ps10Strideable"
-- !private "SS"
 - !private "C8GoChange10TempChange"
 - !private "PSo29UIAccessibilityIdentification"
 - !private "PSo12UIAppearance"
@@ -1877,7 +1748,7 @@ depends-nominal:
 - "PSo18UITraitEnvironment"
 - !private "CSo6UIView"
 - "CSo16UIViewController"
-- !private "C8GoChange32ViewFollowedChangeViewController"
+- !private "C8GoChange33ViewFollowingChangeViewController"
 - !private "C8GoChange22ViewIdeaViewController"
 - "C8GoChange30ViewResultChangeViewController"
 - !private "Ps10_ArrayType"
@@ -1892,7 +1763,6 @@ depends-nominal:
 - !private "Ps12_Reflectable"
 - !private "Ps18_SignedIntegerType"
 depends-dynamic-lookup:
-- !private "subscript"
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"

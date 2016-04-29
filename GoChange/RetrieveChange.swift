@@ -12,7 +12,7 @@ import CoreData
 class RetrieveChange:NSObject{
     
     
-    init(changeID:String,completionHandler:(result:AnyObject)-> Void){
+    init(changeID:String,completionHandler:(result:Change)-> Void){
        super.init()
         
         //let retrievedEntity:Change?

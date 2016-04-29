@@ -954,10 +954,10 @@
             </objects>
             <point key="canvasLocation" x="1791" y="-1008"/>
         </scene>
-        <!--View Followed Change View Controller-->
+        <!--View Following Change View Controller-->
         <scene sceneID="48u-ex-h6l">
             <objects>
-                <viewController storyboardIdentifier="ViewFollowedChangeViewController" id="kVl-ad-yi0" customClass="ViewFollowedChangeViewController" customModule="GoChange" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewFollowingChangeViewController" id="kVl-ad-yi0" customClass="ViewFollowingChangeViewController" customModule="GoChange" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rey-cc-cnF"/>
                         <viewControllerLayoutGuide type="bottom" id="4iu-iG-c9f"/>

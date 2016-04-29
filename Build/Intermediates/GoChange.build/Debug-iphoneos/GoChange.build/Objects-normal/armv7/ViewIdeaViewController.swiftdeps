@@ -6,35 +6,35 @@ provides-nominal:
 provides-member:
 - ["C8GoChange22ViewIdeaViewController", ""]
 provides-dynamic-lookup:
-- "voteSolutionButton"
-- "loadedDetailData"
-- "loadedNameData"
-- "solutionNameField"
-- "changeID"
-- "viewWillAppear"
-- "petitionButton"
-- "viewWillLoad"
-- "viewPetitionButton"
 - "solutionID"
+- "voteSolutionButton"
+- "viewWillAppear"
+- "loadedNameData"
+- "viewWillLoad"
+- "changeID"
 - "voteSolutionClick"
+- "solutionNameField"
+- "viewPetitionButton"
+- "loadedDetailData"
 - "solutionDetailField"
+- "petitionButton"
 depends-top-level:
-- "UIViewController"
-- "UITextView"
-- !private "GoChangeClient"
-- !private "TempChange"
-- "Bool"
-- "String"
-- !private "UIColor"
-- "ViewIdeaViewController"
-- "Int"
-- !private "StringLiteralType"
-- "UITextField"
-- !private "WebViewController"
-- "UIButton"
-- !private "BooleanLiteralType"
-- !private "+="
 - !private "VoteForSolution"
+- "ViewIdeaViewController"
+- !private "TempChange"
+- "UIButton"
+- "UITextField"
+- "Bool"
+- !private "StringLiteralType"
+- "Int"
+- !private "WebViewController"
+- !private "UIColor"
+- !private "GoChangeClient"
+- "String"
+- !private "BooleanLiteralType"
+- "UIViewController"
+- !private "+="
+- "UITextView"
 depends-member:
 - !private ["Ps9AnyObject", "Constants"]
 - !private ["Ps9AnyObject", "GoChangeClient"]
@@ -60,7 +60,6 @@ depends-member:
 - ["Ps9AnyObject", "solutionNameField"]
 - !private ["Ps9AnyObject", "solutionVoteArray"]
 - !private ["Ps9AnyObject", "storyboard"]
-- !private ["Ps9AnyObject", "subscript"]
 - !private ["Ps9AnyObject", "text"]
 - !private ["Ps9AnyObject", "textColor"]
 - !private ["Ps9AnyObject", "urlString"]
@@ -70,6 +69,14 @@ depends-member:
 - ["Ps9AnyObject", "voteSolutionButton"]
 - ["Ps9AnyObject", "voteSolutionClick"]
 - ["Ps9AnyObject", ""]
+- !private ["Sa", "Generator"]
+- !private ["Sa", "Index"]
+- !private ["Sa", "SubSequence"]
+- !private ["Sa", "deinit"]
+- !private ["Sa", "subscript"]
+- !private ["Ps23ArrayLiteralConvertible", "Generator"]
+- !private ["Ps23ArrayLiteralConvertible", "Index"]
+- !private ["Ps23ArrayLiteralConvertible", "SubSequence"]
 - !private ["Ps23ArrayLiteralConvertible", "subscript"]
 - !private ["V12CoreGraphics7CGFloat", "deinit"]
 - !private ["Ps11CVarArgType", "Constants"]
@@ -96,7 +103,6 @@ depends-member:
 - ["Ps11CVarArgType", "solutionNameField"]
 - !private ["Ps11CVarArgType", "solutionVoteArray"]
 - !private ["Ps11CVarArgType", "storyboard"]
-- !private ["Ps11CVarArgType", "subscript"]
 - !private ["Ps11CVarArgType", "text"]
 - !private ["Ps11CVarArgType", "textColor"]
 - !private ["Ps11CVarArgType", "urlString"]
@@ -106,9 +112,17 @@ depends-member:
 - ["Ps11CVarArgType", "voteSolutionButton"]
 - ["Ps11CVarArgType", "voteSolutionClick"]
 - ["Ps11CVarArgType", ""]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "subscript"]
 - !private ["VC8GoChange14GoChangeClient9Constants", "dynamicPetitionURL"]
 - !private ["Ps28CustomDebugStringConvertible", "Constants"]
+- !private ["Ps28CustomDebugStringConvertible", "Generator"]
 - !private ["Ps28CustomDebugStringConvertible", "GoChangeClient"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
+- !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
 - !private ["Ps28CustomDebugStringConvertible", "TempChange"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
 - !private ["Ps28CustomDebugStringConvertible", "VoteForSolution"]
@@ -142,7 +156,10 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "voteSolutionClick"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps23CustomStringConvertible", "Constants"]
+- !private ["Ps23CustomStringConvertible", "Generator"]
 - !private ["Ps23CustomStringConvertible", "GoChangeClient"]
+- !private ["Ps23CustomStringConvertible", "Index"]
+- !private ["Ps23CustomStringConvertible", "SubSequence"]
 - !private ["Ps23CustomStringConvertible", "TempChange"]
 - !private ["Ps23CustomStringConvertible", "UIColor"]
 - !private ["Ps23CustomStringConvertible", "VoteForSolution"]
@@ -199,7 +216,6 @@ depends-member:
 - ["Ps9Equatable", "solutionNameField"]
 - !private ["Ps9Equatable", "solutionVoteArray"]
 - !private ["Ps9Equatable", "storyboard"]
-- !private ["Ps9Equatable", "subscript"]
 - !private ["Ps9Equatable", "text"]
 - !private ["Ps9Equatable", "textColor"]
 - !private ["Ps9Equatable", "urlString"]
@@ -209,6 +225,7 @@ depends-member:
 - ["Ps9Equatable", "voteSolutionButton"]
 - ["Ps9Equatable", "voteSolutionClick"]
 - ["Ps9Equatable", ""]
+- !private ["Ps13GeneratorType", "Element"]
 - !private ["C8GoChange14GoChangeClient", "Constants"]
 - !private ["Ps8Hashable", "Constants"]
 - !private ["Ps8Hashable", "GoChangeClient"]
@@ -234,7 +251,6 @@ depends-member:
 - ["Ps8Hashable", "solutionNameField"]
 - !private ["Ps8Hashable", "solutionVoteArray"]
 - !private ["Ps8Hashable", "storyboard"]
-- !private ["Ps8Hashable", "subscript"]
 - !private ["Ps8Hashable", "text"]
 - !private ["Ps8Hashable", "textColor"]
 - !private ["Ps8Hashable", "urlString"]
@@ -244,8 +260,24 @@ depends-member:
 - ["Ps8Hashable", "voteSolutionButton"]
 - ["Ps8Hashable", "voteSolutionClick"]
 - ["Ps8Hashable", ""]
-- !private ["Si", "deinit"]
-- !private ["CSo7NSArray", "subscript"]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "subscript"]
+- !private ["Vs17IndexingGenerator", "Element"]
+- !private ["Ps21MutableCollectionType", "Generator"]
+- !private ["Ps21MutableCollectionType", "Index"]
+- !private ["Ps21MutableCollectionType", "SubSequence"]
+- !private ["Ps21MutableCollectionType", "subscript"]
+- !private ["Ps16MutableIndexable", "Generator"]
+- !private ["Ps16MutableIndexable", "Index"]
+- !private ["Ps16MutableIndexable", "SubSequence"]
+- !private ["Ps16MutableIndexable", "subscript"]
+- !private ["Ps16MutableSliceable", "Generator"]
+- !private ["Ps16MutableSliceable", "Index"]
+- !private ["Ps16MutableSliceable", "SubSequence"]
+- !private ["Ps16MutableSliceable", "subscript"]
 - !private ["PSo8NSCoding", "GoChangeClient"]
 - !private ["PSo8NSCoding", "TempChange"]
 - !private ["PSo8NSCoding", "UIColor"]
@@ -266,7 +298,6 @@ depends-member:
 - ["PSo8NSCoding", "solutionID"]
 - ["PSo8NSCoding", "solutionNameField"]
 - !private ["PSo8NSCoding", "storyboard"]
-- !private ["PSo8NSCoding", "subscript"]
 - !private ["PSo8NSCoding", "text"]
 - !private ["PSo8NSCoding", "textColor"]
 - !private ["PSo8NSCoding", "urlString"]
@@ -277,7 +308,6 @@ depends-member:
 - ["PSo8NSCoding", "voteSolutionClick"]
 - ["PSo8NSCoding", ""]
 - !private ["PSo9NSCopying", "blackColor"]
-- !private ["PSo9NSCopying", "subscript"]
 - !private ["PSo26NSExtensionRequestHandling", "GoChangeClient"]
 - !private ["PSo26NSExtensionRequestHandling", "TempChange"]
 - !private ["PSo26NSExtensionRequestHandling", "UIColor"]
@@ -301,9 +331,6 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "voteSolutionButton"]
 - ["PSo26NSExtensionRequestHandling", "voteSolutionClick"]
 - ["PSo26NSExtensionRequestHandling", ""]
-- !private ["PSo17NSFastEnumeration", "subscript"]
-- !private ["CSo14NSMutableArray", "subscript"]
-- !private ["PSo16NSMutableCopying", "subscript"]
 - ["CSo8NSObject", "Bool"]
 - !private ["CSo8NSObject", "Constants"]
 - !private ["CSo8NSObject", "GoChangeClient"]
@@ -335,7 +362,6 @@ depends-member:
 - ["CSo8NSObject", "solutionNameField"]
 - !private ["CSo8NSObject", "solutionVoteArray"]
 - !private ["CSo8NSObject", "storyboard"]
-- !private ["CSo8NSObject", "subscript"]
 - !private ["CSo8NSObject", "text"]
 - !private ["CSo8NSObject", "textColor"]
 - !private ["CSo8NSObject", "urlString"]
@@ -368,7 +394,6 @@ depends-member:
 - ["PSo16NSObjectProtocol", "solutionNameField"]
 - !private ["PSo16NSObjectProtocol", "solutionVoteArray"]
 - !private ["PSo16NSObjectProtocol", "storyboard"]
-- !private ["PSo16NSObjectProtocol", "subscript"]
 - !private ["PSo16NSObjectProtocol", "text"]
 - !private ["PSo16NSObjectProtocol", "textColor"]
 - !private ["PSo16NSObjectProtocol", "urlString"]
@@ -379,9 +404,21 @@ depends-member:
 - ["PSo16NSObjectProtocol", "voteSolutionClick"]
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "blackColor"]
-- !private ["PSo14NSSecureCoding", "subscript"]
 - !private ["Sq", "deinit"]
+- !private ["Ps30RangeReplaceableCollectionType", "Generator"]
+- !private ["Ps30RangeReplaceableCollectionType", "Index"]
+- !private ["Ps30RangeReplaceableCollectionType", "SubSequence"]
+- !private ["Ps30RangeReplaceableCollectionType", "subscript"]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- !private ["Ps12SequenceType", "_Element"]
 - !private ["Ps12SequenceType", "subscript"]
+- !private ["Vs5Slice", "Generator"]
+- !private ["Vs5Slice", "Index"]
+- !private ["Vs5Slice", "SubSequence"]
+- !private ["Vs5Slice", "_Element"]
 - !private ["C8GoChange10TempChange", "sharedInstance"]
 - !private ["C8GoChange10TempChange", "solutionVoteArray"]
 - !private ["PSo29UIAccessibilityIdentification", "alpha"]
@@ -662,7 +699,22 @@ depends-member:
 - ["C8GoChange22ViewIdeaViewController", "voteSolutionClick"]
 - !private ["C8GoChange15VoteForSolution", "init"]
 - !private ["C8GoChange17WebViewController", "urlString"]
+- !private ["Ps10_ArrayType", "Generator"]
+- !private ["Ps10_ArrayType", "Index"]
+- !private ["Ps10_ArrayType", "SubSequence"]
+- !private ["Ps10_ArrayType", "subscript"]
 - !private ["Ps24_ColorLiteralConvertible", "blackColor"]
+- !private ["Ps24_DestructorSafeContainer", "Generator"]
+- !private ["Ps24_DestructorSafeContainer", "Index"]
+- !private ["Ps24_DestructorSafeContainer", "SubSequence"]
+- !private ["Ps24_DestructorSafeContainer", "subscript"]
+- !private ["Ps21_ObjectiveCBridgeable", "Generator"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- !private ["Ps12_Reflectable", "Generator"]
+- !private ["Ps12_Reflectable", "Index"]
+- !private ["Ps12_Reflectable", "SubSequence"]
 - !private ["Ps12_Reflectable", "alpha"]
 - !private ["Ps12_Reflectable", "enabled"]
 - !private ["Ps12_Reflectable", "selectable"]
@@ -671,28 +723,33 @@ depends-member:
 - !private ["Ps12_Reflectable", "textColor"]
 depends-nominal:
 - "Ps9AnyObject"
+- !private "Sa"
 - !private "Ps23ArrayLiteralConvertible"
 - !private "V12CoreGraphics7CGFloat"
 - "Ps11CVarArgType"
+- !private "Ps14CollectionType"
 - !private "VC8GoChange14GoChangeClient9Constants"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
 - "Ps9Equatable"
+- !private "Ps13GeneratorType"
 - !private "C8GoChange14GoChangeClient"
 - "Ps8Hashable"
-- !private "Si"
-- !private "CSo7NSArray"
+- !private "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
+- !private "Ps21MutableCollectionType"
+- !private "Ps16MutableIndexable"
+- !private "Ps16MutableSliceable"
 - "PSo8NSCoding"
 - !private "PSo9NSCopying"
 - "PSo26NSExtensionRequestHandling"
-- !private "PSo17NSFastEnumeration"
-- !private "CSo14NSMutableArray"
-- !private "PSo16NSMutableCopying"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
 - !private "Sq"
+- !private "Ps30RangeReplaceableCollectionType"
 - !private "Ps12SequenceType"
+- !private "Vs5Slice"
 - !private "C8GoChange10TempChange"
 - !private "PSo29UIAccessibilityIdentification"
 - !private "PSo12UIAppearance"
@@ -721,7 +778,10 @@ depends-nominal:
 - "C8GoChange22ViewIdeaViewController"
 - !private "C8GoChange15VoteForSolution"
 - !private "C8GoChange17WebViewController"
+- !private "Ps10_ArrayType"
 - !private "Ps24_ColorLiteralConvertible"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps21_ObjectiveCBridgeable"
 - !private "Ps12_Reflectable"
 depends-dynamic-lookup:
 depends-external:

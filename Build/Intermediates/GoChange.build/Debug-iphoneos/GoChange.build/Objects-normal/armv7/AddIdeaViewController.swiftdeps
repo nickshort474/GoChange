@@ -6,50 +6,50 @@ provides-nominal:
 provides-member:
 - ["C8GoChange21AddIdeaViewController", ""]
 provides-dynamic-lookup:
-- "petitionButton"
-- "viewWillAppear"
-- "nameTextField"
-- "addPetition"
-- "textViewDidBeginEditing"
-- "addDetailButton"
-- "change"
-- "textFieldDidBeginEditing"
-- "petitionTextField"
+- "addDetailClick"
+- "addNameButton"
+- "viewDidLoad"
+- "addSolution"
+- "detailTextView"
 - "viewControllerStatus"
 - "doneAddingIdea"
-- "addDetailClick"
-- "addNameClick"
-- "detailTextView"
-- "addSolution"
 - "currentNameData"
-- "currentDetailData"
+- "textFieldDidBeginEditing"
 - "didReceiveMemoryWarning"
-- "viewDidLoad"
-- "addNameButton"
+- "addDetailButton"
+- "petitionTextField"
+- "change"
+- "textViewDidBeginEditing"
+- "addNameClick"
+- "addPetition"
+- "petitionButton"
+- "currentDetailData"
+- "nameTextField"
+- "viewWillAppear"
 depends-top-level:
-- !private "=="
-- !private "WebViewController"
-- "UITextField"
-- !private "GoChangeClient"
-- "AnyObject"
-- "Bool"
-- !private "StringLiteralType"
-- "UIButton"
-- !private "TempChange"
-- "String"
-- !private "UIColor"
-- !private "Array"
-- !private "SaveNewSolution"
-- "Change"
-- "UITableViewDelegate"
-- "AddIdeaViewController"
-- !private "BooleanLiteralType"
-- "UIViewController"
-- "UITextView"
-- "UITextViewDelegate"
-- "UITextFieldDelegate"
 - !private "&&"
+- "UIButton"
+- "UITableViewDelegate"
+- !private "=="
 - !private "!="
+- "UITextFieldDelegate"
+- "UITextViewDelegate"
+- "AddIdeaViewController"
+- !private "UIColor"
+- "UIViewController"
+- "AnyObject"
+- !private "SaveNewSolution"
+- !private "StringLiteralType"
+- !private "Array"
+- "Change"
+- !private "WebViewController"
+- !private "GoChangeClient"
+- "UITextView"
+- "Bool"
+- "String"
+- !private "BooleanLiteralType"
+- "UITextField"
+- !private "TempChange"
 depends-member:
 - ["C8GoChange21AddIdeaViewController", "AnyObject"]
 - ["C8GoChange21AddIdeaViewController", "Bool"]
@@ -115,7 +115,6 @@ depends-member:
 - ["C8GoChange21AddIdeaViewController", "viewForZoomingInScrollView"]
 - ["C8GoChange21AddIdeaViewController", "viewWillAppear"]
 - !private ["Ps9AnyObject", "Constants"]
-- !private ["Ps9AnyObject", "Element"]
 - !private ["Ps9AnyObject", "GoChangeClient"]
 - !private ["Ps9AnyObject", "SaveNewSolution"]
 - !private ["Ps9AnyObject", "TempChange"]
@@ -124,7 +123,6 @@ depends-member:
 - ["Ps9AnyObject", "addDetailClick"]
 - ["Ps9AnyObject", "addNameButton"]
 - ["Ps9AnyObject", "addNameClick"]
-- !private ["Ps9AnyObject", "addObject"]
 - ["Ps9AnyObject", "addPetition"]
 - ["Ps9AnyObject", "addSolution"]
 - !private ["Ps9AnyObject", "alpha"]
@@ -132,7 +130,6 @@ depends-member:
 - ["Ps9AnyObject", "change"]
 - ["Ps9AnyObject", "currentDetailData"]
 - ["Ps9AnyObject", "currentNameData"]
-- !private ["Ps9AnyObject", "deinit"]
 - !private ["Ps9AnyObject", "delegate"]
 - ["Ps9AnyObject", "detailTextView"]
 - ["Ps9AnyObject", "didReceiveMemoryWarning"]
@@ -193,15 +190,32 @@ depends-member:
 - ["Ps9AnyObject", "viewForZoomingInScrollView"]
 - ["Ps9AnyObject", "viewWillAppear"]
 - ["Ps9AnyObject", ""]
+- !private ["Sa", "Element"]
+- !private ["Sa", "Generator"]
+- !private ["Sa", "Index"]
+- !private ["Sa", "SubSequence"]
+- !private ["Sa", "_Element"]
+- !private ["Sa", "append"]
 - !private ["Ps23ArrayLiteralConvertible", "Element"]
-- !private ["Ps23ArrayLiteralConvertible", "addObject"]
+- !private ["Ps23ArrayLiteralConvertible", "Generator"]
+- !private ["Ps23ArrayLiteralConvertible", "Index"]
+- !private ["Ps23ArrayLiteralConvertible", "SubSequence"]
+- !private ["Ps23ArrayLiteralConvertible", "_Element"]
+- !private ["Ps23ArrayLiteralConvertible", "append"]
+- !private ["Vs10ArraySlice", "Generator"]
+- !private ["Vs10ArraySlice", "Index"]
+- !private ["Ps22BidirectionalIndexType", "Distance"]
+- !private ["Ps22BidirectionalIndexType", "IntegerLiteralType"]
+- !private ["Ps21BitwiseOperationsType", "Distance"]
+- !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
 - !private ["V12CoreGraphics7CGFloat", "deinit"]
 - !private ["Ps11CVarArgType", "Constants"]
-- !private ["Ps11CVarArgType", "Element"]
+- !private ["Ps11CVarArgType", "Distance"]
 - !private ["Ps11CVarArgType", "GoChangeClient"]
+- !private ["Ps11CVarArgType", "IntegerLiteralType"]
 - !private ["Ps11CVarArgType", "SaveNewSolution"]
 - !private ["Ps11CVarArgType", "TempChange"]
 - !private ["Ps11CVarArgType", "UIColor"]
@@ -209,7 +223,6 @@ depends-member:
 - ["Ps11CVarArgType", "addDetailClick"]
 - ["Ps11CVarArgType", "addNameButton"]
 - ["Ps11CVarArgType", "addNameClick"]
-- !private ["Ps11CVarArgType", "addObject"]
 - ["Ps11CVarArgType", "addPetition"]
 - ["Ps11CVarArgType", "addSolution"]
 - !private ["Ps11CVarArgType", "alpha"]
@@ -277,21 +290,33 @@ depends-member:
 - ["Ps11CVarArgType", "viewForZoomingInScrollView"]
 - ["Ps11CVarArgType", "viewWillAppear"]
 - ["Ps11CVarArgType", ""]
+- !private ["Ps14CollectionType", "Element"]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "append"]
+- !private ["Ps10Comparable", "Distance"]
+- !private ["Ps10Comparable", "IntegerLiteralType"]
 - !private ["VC8GoChange14GoChangeClient9Constants", "basePetitionURL"]
 - !private ["Ps28CustomDebugStringConvertible", "Constants"]
 - !private ["Ps28CustomDebugStringConvertible", "Element"]
+- !private ["Ps28CustomDebugStringConvertible", "Generator"]
 - !private ["Ps28CustomDebugStringConvertible", "GoChangeClient"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "SaveNewSolution"]
+- !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
 - !private ["Ps28CustomDebugStringConvertible", "TempChange"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
+- !private ["Ps28CustomDebugStringConvertible", "_Element"]
 - ["Ps28CustomDebugStringConvertible", "addDetailButton"]
 - ["Ps28CustomDebugStringConvertible", "addDetailClick"]
 - ["Ps28CustomDebugStringConvertible", "addNameButton"]
 - ["Ps28CustomDebugStringConvertible", "addNameClick"]
-- !private ["Ps28CustomDebugStringConvertible", "addObject"]
 - ["Ps28CustomDebugStringConvertible", "addPetition"]
 - ["Ps28CustomDebugStringConvertible", "addSolution"]
 - !private ["Ps28CustomDebugStringConvertible", "alpha"]
+- !private ["Ps28CustomDebugStringConvertible", "append"]
 - !private ["Ps28CustomDebugStringConvertible", "blackColor"]
 - ["Ps28CustomDebugStringConvertible", "change"]
 - ["Ps28CustomDebugStringConvertible", "currentDetailData"]
@@ -357,20 +382,26 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "viewWillAppear"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps23CustomStringConvertible", "Constants"]
+- !private ["Ps23CustomStringConvertible", "Distance"]
 - !private ["Ps23CustomStringConvertible", "Element"]
+- !private ["Ps23CustomStringConvertible", "Generator"]
 - !private ["Ps23CustomStringConvertible", "GoChangeClient"]
+- !private ["Ps23CustomStringConvertible", "Index"]
+- !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["Ps23CustomStringConvertible", "SaveNewSolution"]
+- !private ["Ps23CustomStringConvertible", "SubSequence"]
 - !private ["Ps23CustomStringConvertible", "TempChange"]
 - !private ["Ps23CustomStringConvertible", "UIColor"]
+- !private ["Ps23CustomStringConvertible", "_Element"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - ["Ps23CustomStringConvertible", "addDetailButton"]
 - ["Ps23CustomStringConvertible", "addDetailClick"]
 - ["Ps23CustomStringConvertible", "addNameButton"]
 - ["Ps23CustomStringConvertible", "addNameClick"]
-- !private ["Ps23CustomStringConvertible", "addObject"]
 - ["Ps23CustomStringConvertible", "addPetition"]
 - ["Ps23CustomStringConvertible", "addSolution"]
 - !private ["Ps23CustomStringConvertible", "alpha"]
+- !private ["Ps23CustomStringConvertible", "append"]
 - !private ["Ps23CustomStringConvertible", "blackColor"]
 - ["Ps23CustomStringConvertible", "change"]
 - ["Ps23CustomStringConvertible", "currentDetailData"]
@@ -436,8 +467,9 @@ depends-member:
 - ["Ps23CustomStringConvertible", "viewWillAppear"]
 - ["Ps23CustomStringConvertible", ""]
 - !private ["Ps9Equatable", "Constants"]
-- !private ["Ps9Equatable", "Element"]
+- !private ["Ps9Equatable", "Distance"]
 - !private ["Ps9Equatable", "GoChangeClient"]
+- !private ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "SaveNewSolution"]
 - !private ["Ps9Equatable", "TempChange"]
 - !private ["Ps9Equatable", "UIColor"]
@@ -446,7 +478,6 @@ depends-member:
 - ["Ps9Equatable", "addDetailClick"]
 - ["Ps9Equatable", "addNameButton"]
 - ["Ps9Equatable", "addNameClick"]
-- !private ["Ps9Equatable", "addObject"]
 - ["Ps9Equatable", "addPetition"]
 - ["Ps9Equatable", "addSolution"]
 - !private ["Ps9Equatable", "alpha"]
@@ -514,10 +545,14 @@ depends-member:
 - ["Ps9Equatable", "viewForZoomingInScrollView"]
 - ["Ps9Equatable", "viewWillAppear"]
 - ["Ps9Equatable", ""]
+- !private ["Ps16ForwardIndexType", "Distance"]
+- !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
+- !private ["Ps13GeneratorType", "Element"]
 - !private ["C8GoChange14GoChangeClient", "Constants"]
 - !private ["Ps8Hashable", "Constants"]
-- !private ["Ps8Hashable", "Element"]
+- !private ["Ps8Hashable", "Distance"]
 - !private ["Ps8Hashable", "GoChangeClient"]
+- !private ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "SaveNewSolution"]
 - !private ["Ps8Hashable", "TempChange"]
 - !private ["Ps8Hashable", "UIColor"]
@@ -526,7 +561,6 @@ depends-member:
 - ["Ps8Hashable", "addDetailClick"]
 - ["Ps8Hashable", "addNameButton"]
 - ["Ps8Hashable", "addNameClick"]
-- !private ["Ps8Hashable", "addObject"]
 - ["Ps8Hashable", "addPetition"]
 - ["Ps8Hashable", "addSolution"]
 - !private ["Ps8Hashable", "alpha"]
@@ -595,10 +629,41 @@ depends-member:
 - ["Ps8Hashable", "viewWillAppear"]
 - ["Ps8Hashable", ""]
 - !private ["SQ", "deinit"]
-- !private ["Si", "deinit"]
-- !private ["CSo7NSArray", "Element"]
-- !private ["CSo7NSArray", "addObject"]
-- !private ["PSo8NSCoding", "Element"]
+- !private ["Ps9Indexable", "Element"]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "append"]
+- !private ["Vs17IndexingGenerator", "Element"]
+- !private ["Si", "Distance"]
+- !private ["Si", "IntegerLiteralType"]
+- !private ["Ps21IntegerArithmeticType", "Distance"]
+- !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps25IntegerLiteralConvertible", "Distance"]
+- !private ["Ps25IntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps11IntegerType", "Distance"]
+- !private ["Ps11IntegerType", "IntegerLiteralType"]
+- !private ["Ps14MirrorPathType", "Distance"]
+- !private ["Ps14MirrorPathType", "IntegerLiteralType"]
+- !private ["Ps21MutableCollectionType", "Element"]
+- !private ["Ps21MutableCollectionType", "Generator"]
+- !private ["Ps21MutableCollectionType", "Index"]
+- !private ["Ps21MutableCollectionType", "SubSequence"]
+- !private ["Ps21MutableCollectionType", "_Element"]
+- !private ["Ps21MutableCollectionType", "append"]
+- !private ["Ps16MutableIndexable", "Element"]
+- !private ["Ps16MutableIndexable", "Generator"]
+- !private ["Ps16MutableIndexable", "Index"]
+- !private ["Ps16MutableIndexable", "SubSequence"]
+- !private ["Ps16MutableIndexable", "_Element"]
+- !private ["Ps16MutableIndexable", "append"]
+- !private ["Ps16MutableSliceable", "Element"]
+- !private ["Ps16MutableSliceable", "Generator"]
+- !private ["Ps16MutableSliceable", "Index"]
+- !private ["Ps16MutableSliceable", "SubSequence"]
+- !private ["Ps16MutableSliceable", "_Element"]
+- !private ["Ps16MutableSliceable", "append"]
 - !private ["PSo8NSCoding", "GoChangeClient"]
 - !private ["PSo8NSCoding", "SaveNewSolution"]
 - !private ["PSo8NSCoding", "TempChange"]
@@ -607,7 +672,6 @@ depends-member:
 - ["PSo8NSCoding", "addDetailClick"]
 - ["PSo8NSCoding", "addNameButton"]
 - ["PSo8NSCoding", "addNameClick"]
-- !private ["PSo8NSCoding", "addObject"]
 - ["PSo8NSCoding", "addPetition"]
 - ["PSo8NSCoding", "addSolution"]
 - !private ["PSo8NSCoding", "alpha"]
@@ -667,8 +731,6 @@ depends-member:
 - ["PSo8NSCoding", "viewForZoomingInScrollView"]
 - ["PSo8NSCoding", "viewWillAppear"]
 - ["PSo8NSCoding", ""]
-- !private ["PSo9NSCopying", "Element"]
-- !private ["PSo9NSCopying", "addObject"]
 - !private ["PSo9NSCopying", "blackColor"]
 - !private ["PSo26NSExtensionRequestHandling", "GoChangeClient"]
 - !private ["PSo26NSExtensionRequestHandling", "SaveNewSolution"]
@@ -729,17 +791,10 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "viewForZoomingInScrollView"]
 - ["PSo26NSExtensionRequestHandling", "viewWillAppear"]
 - ["PSo26NSExtensionRequestHandling", ""]
-- !private ["PSo17NSFastEnumeration", "Element"]
-- !private ["PSo17NSFastEnumeration", "addObject"]
-- !private ["CSo14NSMutableArray", "Element"]
-- !private ["CSo14NSMutableArray", "addObject"]
-- !private ["PSo16NSMutableCopying", "Element"]
-- !private ["PSo16NSMutableCopying", "addObject"]
 - ["CSo8NSObject", "AnyObject"]
 - ["CSo8NSObject", "Bool"]
 - ["CSo8NSObject", "Change"]
 - !private ["CSo8NSObject", "Constants"]
-- !private ["CSo8NSObject", "Element"]
 - !private ["CSo8NSObject", "GoChangeClient"]
 - !private ["CSo8NSObject", "SaveNewSolution"]
 - ["CSo8NSObject", "String"]
@@ -753,7 +808,6 @@ depends-member:
 - ["CSo8NSObject", "addDetailClick"]
 - ["CSo8NSObject", "addNameButton"]
 - ["CSo8NSObject", "addNameClick"]
-- !private ["CSo8NSObject", "addObject"]
 - ["CSo8NSObject", "addPetition"]
 - ["CSo8NSObject", "addSolution"]
 - !private ["CSo8NSObject", "alpha"]
@@ -821,7 +875,6 @@ depends-member:
 - ["CSo8NSObject", "viewForZoomingInScrollView"]
 - ["CSo8NSObject", "viewWillAppear"]
 - !private ["PSo16NSObjectProtocol", "Constants"]
-- !private ["PSo16NSObjectProtocol", "Element"]
 - !private ["PSo16NSObjectProtocol", "GoChangeClient"]
 - !private ["PSo16NSObjectProtocol", "SaveNewSolution"]
 - !private ["PSo16NSObjectProtocol", "TempChange"]
@@ -830,7 +883,6 @@ depends-member:
 - ["PSo16NSObjectProtocol", "addDetailClick"]
 - ["PSo16NSObjectProtocol", "addNameButton"]
 - ["PSo16NSObjectProtocol", "addNameClick"]
-- !private ["PSo16NSObjectProtocol", "addObject"]
 - ["PSo16NSObjectProtocol", "addPetition"]
 - ["PSo16NSObjectProtocol", "addSolution"]
 - !private ["PSo16NSObjectProtocol", "alpha"]
@@ -898,13 +950,29 @@ depends-member:
 - ["PSo16NSObjectProtocol", "viewForZoomingInScrollView"]
 - ["PSo16NSObjectProtocol", "viewWillAppear"]
 - ["PSo16NSObjectProtocol", ""]
-- !private ["PSo14NSSecureCoding", "Element"]
-- !private ["PSo14NSSecureCoding", "addObject"]
 - !private ["PSo14NSSecureCoding", "blackColor"]
 - !private ["Sq", "deinit"]
+- !private ["Ps21RandomAccessIndexType", "Distance"]
+- !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
+- !private ["Ps30RangeReplaceableCollectionType", "Element"]
+- !private ["Ps30RangeReplaceableCollectionType", "Generator"]
+- !private ["Ps30RangeReplaceableCollectionType", "Index"]
+- !private ["Ps30RangeReplaceableCollectionType", "SubSequence"]
+- !private ["Ps30RangeReplaceableCollectionType", "_Element"]
+- !private ["Ps30RangeReplaceableCollectionType", "append"]
 - !private ["C8GoChange15SaveNewSolution", "init"]
 - !private ["Ps12SequenceType", "Element"]
-- !private ["Ps12SequenceType", "addObject"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- !private ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "append"]
+- !private ["Ps17SignedIntegerType", "Distance"]
+- !private ["Ps17SignedIntegerType", "IntegerLiteralType"]
+- !private ["Ps16SignedNumberType", "Distance"]
+- !private ["Ps16SignedNumberType", "IntegerLiteralType"]
+- !private ["Ps10Strideable", "Distance"]
+- !private ["Ps10Strideable", "IntegerLiteralType"]
 - !private ["SS", "deinit"]
 - !private ["C8GoChange10TempChange", "newSolutionDetailArray"]
 - !private ["C8GoChange10TempChange", "newSolutionNameArray"]
@@ -1631,50 +1699,106 @@ depends-member:
 - ["CSo16UIViewController", ""]
 - !private ["PSo17UIWebViewDelegate", "urlString"]
 - !private ["C8GoChange17WebViewController", "urlString"]
+- !private ["Ps10_ArrayType", "Element"]
+- !private ["Ps10_ArrayType", "Generator"]
+- !private ["Ps10_ArrayType", "Index"]
+- !private ["Ps10_ArrayType", "SubSequence"]
+- !private ["Ps10_ArrayType", "_Element"]
+- !private ["Ps10_ArrayType", "append"]
 - !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
 - !private ["Ps24_ColorLiteralConvertible", "blackColor"]
+- !private ["Ps24_DestructorSafeContainer", "Element"]
+- !private ["Ps24_DestructorSafeContainer", "Generator"]
+- !private ["Ps24_DestructorSafeContainer", "Index"]
+- !private ["Ps24_DestructorSafeContainer", "SubSequence"]
+- !private ["Ps24_DestructorSafeContainer", "_Element"]
+- !private ["Ps24_DestructorSafeContainer", "append"]
+- !private ["Ps14_Incrementable", "Distance"]
+- !private ["Ps14_Incrementable", "IntegerLiteralType"]
+- !private ["Ps22_IntegerArithmeticType", "Distance"]
+- !private ["Ps22_IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps12_IntegerType", "Distance"]
+- !private ["Ps12_IntegerType", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "Distance"]
+- !private ["Ps21_ObjectiveCBridgeable", "Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "Generator"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
+- !private ["Ps21_ObjectiveCBridgeable", "_Element"]
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "append"]
 - !private ["Vs26_OptionalNilComparisonType", "deinit"]
+- !private ["Ps22_RandomAccessAmbiguity", "Distance"]
+- !private ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
+- !private ["Ps12_Reflectable", "Distance"]
 - !private ["Ps12_Reflectable", "Element"]
+- !private ["Ps12_Reflectable", "Generator"]
+- !private ["Ps12_Reflectable", "Index"]
+- !private ["Ps12_Reflectable", "IntegerLiteralType"]
+- !private ["Ps12_Reflectable", "SubSequence"]
+- !private ["Ps12_Reflectable", "_Element"]
 - !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
-- !private ["Ps12_Reflectable", "addObject"]
 - !private ["Ps12_Reflectable", "alpha"]
+- !private ["Ps12_Reflectable", "append"]
 - !private ["Ps12_Reflectable", "delegate"]
 - !private ["Ps12_Reflectable", "enabled"]
 - !private ["Ps12_Reflectable", "hidden"]
 - !private ["Ps12_Reflectable", "resignFirstResponder"]
 - !private ["Ps12_Reflectable", "text"]
 - !private ["Ps12_Reflectable", "textColor"]
+- !private ["Ps18_SignedIntegerType", "Distance"]
+- !private ["Ps18_SignedIntegerType", "IntegerLiteralType"]
 depends-nominal:
 - "C8GoChange21AddIdeaViewController"
 - "Ps9AnyObject"
+- !private "Sa"
 - !private "Ps23ArrayLiteralConvertible"
+- !private "Vs10ArraySlice"
+- !private "Ps22BidirectionalIndexType"
+- !private "Ps21BitwiseOperationsType"
 - !private "Sb"
 - !private "Ps25BooleanLiteralConvertible"
 - !private "Ps11BooleanType"
 - !private "V12CoreGraphics7CGFloat"
 - "Ps11CVarArgType"
+- !private "Ps14CollectionType"
+- !private "Ps10Comparable"
 - !private "VC8GoChange14GoChangeClient9Constants"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
 - "Ps9Equatable"
+- !private "Ps16ForwardIndexType"
+- !private "Ps13GeneratorType"
 - !private "C8GoChange14GoChangeClient"
 - "Ps8Hashable"
 - !private "SQ"
+- !private "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
 - !private "Si"
-- !private "CSo7NSArray"
+- !private "Ps21IntegerArithmeticType"
+- !private "Ps25IntegerLiteralConvertible"
+- !private "Ps11IntegerType"
+- !private "Ps14MirrorPathType"
+- !private "Ps21MutableCollectionType"
+- !private "Ps16MutableIndexable"
+- !private "Ps16MutableSliceable"
 - "PSo8NSCoding"
 - !private "PSo9NSCopying"
 - "PSo26NSExtensionRequestHandling"
-- !private "PSo17NSFastEnumeration"
-- !private "CSo14NSMutableArray"
-- !private "PSo16NSMutableCopying"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
 - !private "Sq"
+- !private "Ps21RandomAccessIndexType"
+- !private "Ps30RangeReplaceableCollectionType"
 - !private "C8GoChange15SaveNewSolution"
 - !private "Ps12SequenceType"
+- !private "Ps17SignedIntegerType"
+- !private "Ps16SignedNumberType"
+- !private "Ps10Strideable"
 - !private "SS"
 - !private "C8GoChange10TempChange"
 - !private "PSo29UIAccessibilityIdentification"
@@ -1706,11 +1830,19 @@ depends-nominal:
 - "CSo16UIViewController"
 - !private "PSo17UIWebViewDelegate"
 - !private "C8GoChange17WebViewController"
+- !private "Ps10_ArrayType"
 - !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps33_BuiltinIntegerLiteralConvertible"
 - !private "Ps24_ColorLiteralConvertible"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps14_Incrementable"
+- !private "Ps22_IntegerArithmeticType"
+- !private "Ps12_IntegerType"
 - !private "Ps21_ObjectiveCBridgeable"
 - !private "Vs26_OptionalNilComparisonType"
+- !private "Ps22_RandomAccessAmbiguity"
 - !private "Ps12_Reflectable"
+- !private "Ps18_SignedIntegerType"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"

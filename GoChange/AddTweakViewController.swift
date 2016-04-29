@@ -84,9 +84,11 @@ class AddTweakViewController: UIViewController,UITextViewDelegate,UITextFieldDel
     
     @IBAction func addTweakClick(sender: UIButton) {
         //TODO: add tweak details to TempChange
+        /*
         TempChange.sharedInstance().tweakNameArray.addObject(nameText.text!)
         TempChange.sharedInstance().tweakDetailArray.addObject(detailText.text)
         self.navigationController?.popViewControllerAnimated(true)
+         */
     }
     
    

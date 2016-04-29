@@ -14,19 +14,19 @@ class RetrieveDetailsFromFirebase:NSObject{
     
     var ref = Firebase(url: "https://gochange.firebaseio.com/change/details")
         
-    var results:NSMutableArray = []
+    var results:[String] = []
     
-    init(userRefArray:NSMutableArray,completionHandler:(results:NSMutableArray)->Void){
+    init(userRefArray:[String],completionHandler:(results:[String])->Void){
         
         super.init()
         
-        for var i in 0 ..< userRefArray.count{
+        for i in 0 ..< userRefArray.count{
             
-            let changeRef = ref.childByAppendingPath(userRefArray[i] as! String)
+            let changeRef = ref.childByAppendingPath(userRefArray[i])
             
             changeRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
                 
-            self.results.addObject(snapshot.value["ChangeDetail"] as! String)
+            self.results.append(snapshot.value["ChangeDetail"] as! String)
                 
             if(self.results.count == userRefArray.count){
                     

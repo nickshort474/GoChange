@@ -13,17 +13,25 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
     
     @IBOutlet weak var searchTextField: UITextField!
     
-    var returnedNameArray:NSMutableArray = []
-    var returnedOwnerArray:NSMutableArray = []
-    var useOwnerArray:NSMutableArray = []
+    var returnedNameArray:[String] = []
+    var returnedRefArray:[String] = []
     
-    var returnedRefArray:NSMutableArray = []
-    var countArray:NSMutableArray = []
-    var matchedNameArray:NSMutableArray = []
-    var useRefArray:NSMutableArray = []
-    var useDetailArray:NSMutableArray = []
-    var useSolutionCountArray:NSMutableArray = []
+    var matchedNameArray:[String] = []
+    var countArray:[Int] = []
+    var matchedRefArray:[String] = []
+    
+    
+    var useNameArray:[String] = []
+    var useOwnerArray:[String] = []
+    
+    var useDetailArray:[String] = []
+    var useSolutionCountArray:[Int] = []
+    
    
+    
+    var refsNotInCoreData:[String] = []
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,23 +67,21 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
     
     @IBAction func searchForResults(sender: UIButton) {
         
-        print("new search")
         //clear arrays after previous search
         returnedRefArray = []
         returnedNameArray = []
-        returnedOwnerArray = []
         
-        _ = RetrieveFromFirebase(){
+        
+        _ = RetrieveAllNamesFromFirebase(){
             (snapshot) in
             
             for name in snapshot.children.allObjects as! [FDataSnapshot]{
                 
                 //add value of returned item to array
-                self.returnedNameArray.addObject(name.value["ChangeName"]!! as! String)
-                self.returnedOwnerArray.addObject(name.value["ChangeOwner"]!! as! String)
+                self.returnedNameArray.append(name.value["ChangeName"]!! as! String)
                 
                 //add ref to item to another array
-                self.returnedRefArray.addObject(String(name.key))
+                self.returnedRefArray.append(String(name.key))
             }
             
             self.checkResults()
@@ -105,22 +111,21 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
             //test for search term
             if (valueString.rangeOfString("\(searchTerm)") != nil){
                 
-                //if found add to foundArray
-                matchedNameArray.addObject(valueString)
+                //if found add to matchedNameArray
+                matchedNameArray.append(valueString)
                 
                 // add location of matched item within returned array to count array
-                countArray.addObject(count)
+                countArray.append(count)
                 
             }
                 
             // test for capitalized version of search term
             else if(valueString.rangeOfString("\(capitalisedTerm)") != nil){
                 
-                matchedNameArray.addObject(valueString)
-                countArray.addObject(count)
+                matchedNameArray.append(valueString)
+                countArray.append(count)
             }
             
-            // increment count
             count += 1
             
         }
@@ -132,92 +137,93 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
     func createRefArray(){
         
         //clear array after coming back from previous search
-        useDetailArray = []
-        useRefArray = []
+        useNameArray = []
         useOwnerArray = []
+        useDetailArray = []
+        matchedRefArray = []
+        useSolutionCountArray = []
         
         // for all results that match search term add their unique reference to useRefArray using countArray
         for num in countArray{
-           
-            let intOfNum = num as! Int
-            useRefArray.addObject(returnedRefArray[intOfNum])
-            useOwnerArray.addObject(returnedOwnerArray[intOfNum])
+           matchedRefArray.append(returnedRefArray[num])
         }
         
-        // use refArray to collect details from firebase
-        _ = RetrieveDetailsFromFirebase(userRefArray: useRefArray){
+        //use useRefArray to Check if in core data based on reference
+        self.checkIfInCoreData()
+        
+        // use refsNotInCoreData to collect all data from firebase
+        _ = RetrieveDetailsFromFirebase(userRefArray: refsNotInCoreData){
+            (result) in
+            
+            self.useDetailArray = result
+            
+            _ = RetrieveSolutionCountFirebase(changeArray:self.refsNotInCoreData){
                 (result) in
-            
-                self.useDetailArray = result
-            
-                _ = RetrieveSolutionCountFirebase(changeArray:self.useRefArray){
-                    (result) in
                
-                    self.useSolutionCountArray = result
-                    self.checkIfInCoreData()
+                self.useSolutionCountArray = result
+            
+                _  = RetrieveNamesFromFirebase(changeArray:self.refsNotInCoreData){
+                    (nameResults,ownerResults) in
+            
+                    self.useNameArray = nameResults
+                    self.useOwnerArray = ownerResults
                     
-                    
+                    self.sendToResults()
                 }
+            }
         }
+       
+        
     }
     
     func checkIfInCoreData(){
         
-        //TODO: check created arrays against coreData to see if already followed
+        //create array to hold references of coreData changes
+        var followedRefArray:[String] = []
         
-        
-        let followedChangeArray:NSMutableArray = []
-       
-        
-        
-        for var i in 0 ..< useRefArray.count{
+        // loop through search string matched useRefArray
+        for i in 0 ..< matchedRefArray.count{
             
-            _ = RetrieveChange(changeID: useRefArray[i] as! String){
+            _ = RetrieveChange(changeID: matchedRefArray[i] ){
                 (result) in
                 
-                //If exists in coreData result will return Change Object, add to followed Array
-                followedChangeArray.addObject(result)
-                
+                 followedRefArray.append(result.changeID)
             }
             
         }
+       
+        //gets useRef Array
+        let setA = Set(followedRefArray)
+        let setB = Set(matchedRefArray)
         
-        //test follwoed array against retruened result and remove any changes already followed
-        for var i in 0 ..< matchedNameArray.count{
-            
-            for element in followedChangeArray{
-            
-                var changeObject = element as! Change
-           
-                if matchedNameArray[i] as! String == changeObject.changeName {
-                    self.matchedNameArray.removeObjectAtIndex(i)
-                    self.useDetailArray.removeObjectAtIndex(i)
-                    self.useSolutionCountArray.removeObjectAtIndex(i)
-                    self.useRefArray.removeObjectAtIndex(i)
-                    self.useOwnerArray.removeObjectAtIndex(i)
-                }
-            
-            
-            }
-            
-        }
+        let diff = setB.subtract(setA)
+        refsNotInCoreData = Array(diff)
         
-        self.sendToResults()
+ 
+     
     }
     
     func sendToResults(){
         
+        print(useNameArray)
+        print(useOwnerArray)
+        print(useDetailArray)
+        print(useSolutionCountArray)
+        
+        print("changes not in core data \(refsNotInCoreData)")
         
         
         var controller:ResultsViewController
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("ResultsViewController") as! ResultsViewController
         let navigationController = self.navigationController
         
-        controller.resultNameArray = matchedNameArray
+        
+        controller.resultNameArray = useNameArray
+        controller.changeOwnerArray = useOwnerArray
         controller.resultDetailArray = useDetailArray
         controller.resultSolutionCountArray = useSolutionCountArray
-        controller.refArray = useRefArray
-        controller.solutionOwnerArray = useOwnerArray
+        controller.refArray = refsNotInCoreData
+        
         
         
         navigationController?.pushViewController(controller,animated: true)

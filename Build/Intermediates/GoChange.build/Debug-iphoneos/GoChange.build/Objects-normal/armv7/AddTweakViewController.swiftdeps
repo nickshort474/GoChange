@@ -6,39 +6,37 @@ provides-nominal:
 provides-member:
 - ["C8GoChange22AddTweakViewController", ""]
 provides-dynamic-lookup:
-- "textFieldDidBeginEditing"
-- "addTweakClick"
-- "nameButtonClick"
-- "nameData"
+- "viewWillAppear"
 - "nameText"
-- "textViewDidBeginEditing"
-- "detailText"
-- "detailButton"
-- "viewDidLoad"
+- "nameButtonClick"
+- "nameButton"
+- "cancelClick"
+- "nameData"
 - "didReceiveMemoryWarning"
+- "addTweakClick"
 - "detailData"
 - "detailButtonClick"
-- "cancelClick"
-- "viewWillAppear"
-- "nameButton"
+- "detailButton"
+- "viewDidLoad"
+- "textFieldDidBeginEditing"
+- "detailText"
+- "textViewDidBeginEditing"
 depends-top-level:
-- "UIButton"
+- "String"
 - !private "UIColor"
 - "UITextField"
-- !private "StringLiteralType"
-- !private "TempChange"
 - "Bool"
-- "UITextView"
-- "UIViewController"
+- "UIButton"
+- !private "StringLiteralType"
 - "AddTweakViewController"
+- "UIViewController"
 - "UITextFieldDelegate"
-- "UITextViewDelegate"
-- "String"
+- "UITextView"
 - !private "BooleanLiteralType"
+- "UITextViewDelegate"
 depends-member:
 - ["C8GoChange22AddTweakViewController", "Bool"]
 - ["C8GoChange22AddTweakViewController", "String"]
-- !private ["C8GoChange22AddTweakViewController", "TempChange"]
 - ["C8GoChange22AddTweakViewController", "UIButton"]
 - !private ["C8GoChange22AddTweakViewController", "UIColor"]
 - ["C8GoChange22AddTweakViewController", "UITextField"]
@@ -57,7 +55,6 @@ depends-member:
 - ["C8GoChange22AddTweakViewController", "nameButtonClick"]
 - ["C8GoChange22AddTweakViewController", "nameData"]
 - ["C8GoChange22AddTweakViewController", "nameText"]
-- !private ["C8GoChange22AddTweakViewController", "navigationController"]
 - ["C8GoChange22AddTweakViewController", "scrollViewDidEndDecelerating"]
 - ["C8GoChange22AddTweakViewController", "scrollViewDidEndDragging"]
 - ["C8GoChange22AddTweakViewController", "scrollViewDidEndScrollingAnimation"]
@@ -87,9 +84,7 @@ depends-member:
 - ["C8GoChange22AddTweakViewController", "viewDidLoad"]
 - ["C8GoChange22AddTweakViewController", "viewForZoomingInScrollView"]
 - ["C8GoChange22AddTweakViewController", "viewWillAppear"]
-- !private ["Ps9AnyObject", "TempChange"]
 - !private ["Ps9AnyObject", "UIColor"]
-- !private ["Ps9AnyObject", "addObject"]
 - ["Ps9AnyObject", "addTweakClick"]
 - !private ["Ps9AnyObject", "blackColor"]
 - ["Ps9AnyObject", "cancelClick"]
@@ -106,8 +101,6 @@ depends-member:
 - ["Ps9AnyObject", "nameButtonClick"]
 - ["Ps9AnyObject", "nameData"]
 - ["Ps9AnyObject", "nameText"]
-- !private ["Ps9AnyObject", "navigationController"]
-- !private ["Ps9AnyObject", "popViewControllerAnimated"]
 - !private ["Ps9AnyObject", "resignFirstResponder"]
 - ["Ps9AnyObject", "scrollViewDidEndDecelerating"]
 - ["Ps9AnyObject", "scrollViewDidEndDragging"]
@@ -121,7 +114,6 @@ depends-member:
 - ["Ps9AnyObject", "scrollViewWillBeginDragging"]
 - ["Ps9AnyObject", "scrollViewWillBeginZooming"]
 - ["Ps9AnyObject", "scrollViewWillEndDragging"]
-- !private ["Ps9AnyObject", "sharedInstance"]
 - !private ["Ps9AnyObject", "text"]
 - !private ["Ps9AnyObject", "textColor"]
 - ["Ps9AnyObject", "textField"]
@@ -138,16 +130,11 @@ depends-member:
 - ["Ps9AnyObject", "textViewDidEndEditing"]
 - ["Ps9AnyObject", "textViewShouldBeginEditing"]
 - ["Ps9AnyObject", "textViewShouldEndEditing"]
-- !private ["Ps9AnyObject", "tweakDetailArray"]
-- !private ["Ps9AnyObject", "tweakNameArray"]
 - ["Ps9AnyObject", "viewDidLoad"]
 - ["Ps9AnyObject", "viewForZoomingInScrollView"]
 - ["Ps9AnyObject", "viewWillAppear"]
 - ["Ps9AnyObject", ""]
-- !private ["Ps23ArrayLiteralConvertible", "addObject"]
-- !private ["Ps11CVarArgType", "TempChange"]
 - !private ["Ps11CVarArgType", "UIColor"]
-- !private ["Ps11CVarArgType", "addObject"]
 - ["Ps11CVarArgType", "addTweakClick"]
 - !private ["Ps11CVarArgType", "blackColor"]
 - ["Ps11CVarArgType", "cancelClick"]
@@ -164,8 +151,6 @@ depends-member:
 - ["Ps11CVarArgType", "nameButtonClick"]
 - ["Ps11CVarArgType", "nameData"]
 - ["Ps11CVarArgType", "nameText"]
-- !private ["Ps11CVarArgType", "navigationController"]
-- !private ["Ps11CVarArgType", "popViewControllerAnimated"]
 - !private ["Ps11CVarArgType", "resignFirstResponder"]
 - ["Ps11CVarArgType", "scrollViewDidEndDecelerating"]
 - ["Ps11CVarArgType", "scrollViewDidEndDragging"]
@@ -179,7 +164,6 @@ depends-member:
 - ["Ps11CVarArgType", "scrollViewWillBeginDragging"]
 - ["Ps11CVarArgType", "scrollViewWillBeginZooming"]
 - ["Ps11CVarArgType", "scrollViewWillEndDragging"]
-- !private ["Ps11CVarArgType", "sharedInstance"]
 - !private ["Ps11CVarArgType", "text"]
 - !private ["Ps11CVarArgType", "textColor"]
 - ["Ps11CVarArgType", "textField"]
@@ -196,15 +180,11 @@ depends-member:
 - ["Ps11CVarArgType", "textViewDidEndEditing"]
 - ["Ps11CVarArgType", "textViewShouldBeginEditing"]
 - ["Ps11CVarArgType", "textViewShouldEndEditing"]
-- !private ["Ps11CVarArgType", "tweakDetailArray"]
-- !private ["Ps11CVarArgType", "tweakNameArray"]
 - ["Ps11CVarArgType", "viewDidLoad"]
 - ["Ps11CVarArgType", "viewForZoomingInScrollView"]
 - ["Ps11CVarArgType", "viewWillAppear"]
 - ["Ps11CVarArgType", ""]
-- !private ["Ps28CustomDebugStringConvertible", "TempChange"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
-- !private ["Ps28CustomDebugStringConvertible", "addObject"]
 - ["Ps28CustomDebugStringConvertible", "addTweakClick"]
 - !private ["Ps28CustomDebugStringConvertible", "blackColor"]
 - ["Ps28CustomDebugStringConvertible", "cancelClick"]
@@ -221,8 +201,6 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "nameButtonClick"]
 - ["Ps28CustomDebugStringConvertible", "nameData"]
 - ["Ps28CustomDebugStringConvertible", "nameText"]
-- !private ["Ps28CustomDebugStringConvertible", "navigationController"]
-- !private ["Ps28CustomDebugStringConvertible", "popViewControllerAnimated"]
 - !private ["Ps28CustomDebugStringConvertible", "resignFirstResponder"]
 - ["Ps28CustomDebugStringConvertible", "scrollViewDidEndDecelerating"]
 - ["Ps28CustomDebugStringConvertible", "scrollViewDidEndDragging"]
@@ -236,7 +214,6 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "scrollViewWillBeginDragging"]
 - ["Ps28CustomDebugStringConvertible", "scrollViewWillBeginZooming"]
 - ["Ps28CustomDebugStringConvertible", "scrollViewWillEndDragging"]
-- !private ["Ps28CustomDebugStringConvertible", "sharedInstance"]
 - !private ["Ps28CustomDebugStringConvertible", "text"]
 - !private ["Ps28CustomDebugStringConvertible", "textColor"]
 - ["Ps28CustomDebugStringConvertible", "textField"]
@@ -253,15 +230,11 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "textViewDidEndEditing"]
 - ["Ps28CustomDebugStringConvertible", "textViewShouldBeginEditing"]
 - ["Ps28CustomDebugStringConvertible", "textViewShouldEndEditing"]
-- !private ["Ps28CustomDebugStringConvertible", "tweakDetailArray"]
-- !private ["Ps28CustomDebugStringConvertible", "tweakNameArray"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
 - ["Ps28CustomDebugStringConvertible", "viewForZoomingInScrollView"]
 - ["Ps28CustomDebugStringConvertible", "viewWillAppear"]
 - ["Ps28CustomDebugStringConvertible", ""]
-- !private ["Ps23CustomStringConvertible", "TempChange"]
 - !private ["Ps23CustomStringConvertible", "UIColor"]
-- !private ["Ps23CustomStringConvertible", "addObject"]
 - ["Ps23CustomStringConvertible", "addTweakClick"]
 - !private ["Ps23CustomStringConvertible", "blackColor"]
 - ["Ps23CustomStringConvertible", "cancelClick"]
@@ -278,8 +251,6 @@ depends-member:
 - ["Ps23CustomStringConvertible", "nameButtonClick"]
 - ["Ps23CustomStringConvertible", "nameData"]
 - ["Ps23CustomStringConvertible", "nameText"]
-- !private ["Ps23CustomStringConvertible", "navigationController"]
-- !private ["Ps23CustomStringConvertible", "popViewControllerAnimated"]
 - !private ["Ps23CustomStringConvertible", "resignFirstResponder"]
 - ["Ps23CustomStringConvertible", "scrollViewDidEndDecelerating"]
 - ["Ps23CustomStringConvertible", "scrollViewDidEndDragging"]
@@ -293,7 +264,6 @@ depends-member:
 - ["Ps23CustomStringConvertible", "scrollViewWillBeginDragging"]
 - ["Ps23CustomStringConvertible", "scrollViewWillBeginZooming"]
 - ["Ps23CustomStringConvertible", "scrollViewWillEndDragging"]
-- !private ["Ps23CustomStringConvertible", "sharedInstance"]
 - !private ["Ps23CustomStringConvertible", "text"]
 - !private ["Ps23CustomStringConvertible", "textColor"]
 - ["Ps23CustomStringConvertible", "textField"]
@@ -310,15 +280,11 @@ depends-member:
 - ["Ps23CustomStringConvertible", "textViewDidEndEditing"]
 - ["Ps23CustomStringConvertible", "textViewShouldBeginEditing"]
 - ["Ps23CustomStringConvertible", "textViewShouldEndEditing"]
-- !private ["Ps23CustomStringConvertible", "tweakDetailArray"]
-- !private ["Ps23CustomStringConvertible", "tweakNameArray"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
 - ["Ps23CustomStringConvertible", "viewForZoomingInScrollView"]
 - ["Ps23CustomStringConvertible", "viewWillAppear"]
 - ["Ps23CustomStringConvertible", ""]
-- !private ["Ps9Equatable", "TempChange"]
 - !private ["Ps9Equatable", "UIColor"]
-- !private ["Ps9Equatable", "addObject"]
 - ["Ps9Equatable", "addTweakClick"]
 - !private ["Ps9Equatable", "blackColor"]
 - ["Ps9Equatable", "cancelClick"]
@@ -335,8 +301,6 @@ depends-member:
 - ["Ps9Equatable", "nameButtonClick"]
 - ["Ps9Equatable", "nameData"]
 - ["Ps9Equatable", "nameText"]
-- !private ["Ps9Equatable", "navigationController"]
-- !private ["Ps9Equatable", "popViewControllerAnimated"]
 - !private ["Ps9Equatable", "resignFirstResponder"]
 - ["Ps9Equatable", "scrollViewDidEndDecelerating"]
 - ["Ps9Equatable", "scrollViewDidEndDragging"]
@@ -350,7 +314,6 @@ depends-member:
 - ["Ps9Equatable", "scrollViewWillBeginDragging"]
 - ["Ps9Equatable", "scrollViewWillBeginZooming"]
 - ["Ps9Equatable", "scrollViewWillEndDragging"]
-- !private ["Ps9Equatable", "sharedInstance"]
 - !private ["Ps9Equatable", "text"]
 - !private ["Ps9Equatable", "textColor"]
 - ["Ps9Equatable", "textField"]
@@ -367,15 +330,11 @@ depends-member:
 - ["Ps9Equatable", "textViewDidEndEditing"]
 - ["Ps9Equatable", "textViewShouldBeginEditing"]
 - ["Ps9Equatable", "textViewShouldEndEditing"]
-- !private ["Ps9Equatable", "tweakDetailArray"]
-- !private ["Ps9Equatable", "tweakNameArray"]
 - ["Ps9Equatable", "viewDidLoad"]
 - ["Ps9Equatable", "viewForZoomingInScrollView"]
 - ["Ps9Equatable", "viewWillAppear"]
 - ["Ps9Equatable", ""]
-- !private ["Ps8Hashable", "TempChange"]
 - !private ["Ps8Hashable", "UIColor"]
-- !private ["Ps8Hashable", "addObject"]
 - ["Ps8Hashable", "addTweakClick"]
 - !private ["Ps8Hashable", "blackColor"]
 - ["Ps8Hashable", "cancelClick"]
@@ -392,8 +351,6 @@ depends-member:
 - ["Ps8Hashable", "nameButtonClick"]
 - ["Ps8Hashable", "nameData"]
 - ["Ps8Hashable", "nameText"]
-- !private ["Ps8Hashable", "navigationController"]
-- !private ["Ps8Hashable", "popViewControllerAnimated"]
 - !private ["Ps8Hashable", "resignFirstResponder"]
 - ["Ps8Hashable", "scrollViewDidEndDecelerating"]
 - ["Ps8Hashable", "scrollViewDidEndDragging"]
@@ -407,7 +364,6 @@ depends-member:
 - ["Ps8Hashable", "scrollViewWillBeginDragging"]
 - ["Ps8Hashable", "scrollViewWillBeginZooming"]
 - ["Ps8Hashable", "scrollViewWillEndDragging"]
-- !private ["Ps8Hashable", "sharedInstance"]
 - !private ["Ps8Hashable", "text"]
 - !private ["Ps8Hashable", "textColor"]
 - ["Ps8Hashable", "textField"]
@@ -424,17 +380,12 @@ depends-member:
 - ["Ps8Hashable", "textViewDidEndEditing"]
 - ["Ps8Hashable", "textViewShouldBeginEditing"]
 - ["Ps8Hashable", "textViewShouldEndEditing"]
-- !private ["Ps8Hashable", "tweakDetailArray"]
-- !private ["Ps8Hashable", "tweakNameArray"]
 - ["Ps8Hashable", "viewDidLoad"]
 - ["Ps8Hashable", "viewForZoomingInScrollView"]
 - ["Ps8Hashable", "viewWillAppear"]
 - ["Ps8Hashable", ""]
 - !private ["SQ", "deinit"]
-- !private ["CSo7NSArray", "addObject"]
-- !private ["PSo8NSCoding", "TempChange"]
 - !private ["PSo8NSCoding", "UIColor"]
-- !private ["PSo8NSCoding", "addObject"]
 - ["PSo8NSCoding", "addTweakClick"]
 - !private ["PSo8NSCoding", "blackColor"]
 - ["PSo8NSCoding", "cancelClick"]
@@ -451,8 +402,6 @@ depends-member:
 - ["PSo8NSCoding", "nameButtonClick"]
 - ["PSo8NSCoding", "nameData"]
 - ["PSo8NSCoding", "nameText"]
-- !private ["PSo8NSCoding", "navigationController"]
-- !private ["PSo8NSCoding", "popViewControllerAnimated"]
 - !private ["PSo8NSCoding", "resignFirstResponder"]
 - ["PSo8NSCoding", "scrollViewDidEndDecelerating"]
 - ["PSo8NSCoding", "scrollViewDidEndDragging"]
@@ -486,9 +435,7 @@ depends-member:
 - ["PSo8NSCoding", "viewForZoomingInScrollView"]
 - ["PSo8NSCoding", "viewWillAppear"]
 - ["PSo8NSCoding", ""]
-- !private ["PSo9NSCopying", "addObject"]
 - !private ["PSo9NSCopying", "blackColor"]
-- !private ["PSo26NSExtensionRequestHandling", "TempChange"]
 - !private ["PSo26NSExtensionRequestHandling", "UIColor"]
 - ["PSo26NSExtensionRequestHandling", "addTweakClick"]
 - ["PSo26NSExtensionRequestHandling", "cancelClick"]
@@ -503,8 +450,6 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "nameButtonClick"]
 - ["PSo26NSExtensionRequestHandling", "nameData"]
 - ["PSo26NSExtensionRequestHandling", "nameText"]
-- !private ["PSo26NSExtensionRequestHandling", "navigationController"]
-- !private ["PSo26NSExtensionRequestHandling", "popViewControllerAnimated"]
 - ["PSo26NSExtensionRequestHandling", "scrollViewDidEndDecelerating"]
 - ["PSo26NSExtensionRequestHandling", "scrollViewDidEndDragging"]
 - ["PSo26NSExtensionRequestHandling", "scrollViewDidEndScrollingAnimation"]
@@ -535,17 +480,12 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "viewForZoomingInScrollView"]
 - ["PSo26NSExtensionRequestHandling", "viewWillAppear"]
 - ["PSo26NSExtensionRequestHandling", ""]
-- !private ["PSo17NSFastEnumeration", "addObject"]
-- !private ["CSo14NSMutableArray", "addObject"]
-- !private ["PSo16NSMutableCopying", "addObject"]
 - ["CSo8NSObject", "Bool"]
 - ["CSo8NSObject", "String"]
-- !private ["CSo8NSObject", "TempChange"]
 - ["CSo8NSObject", "UIButton"]
 - !private ["CSo8NSObject", "UIColor"]
 - ["CSo8NSObject", "UITextField"]
 - ["CSo8NSObject", "UITextView"]
-- !private ["CSo8NSObject", "addObject"]
 - ["CSo8NSObject", "addTweakClick"]
 - !private ["CSo8NSObject", "blackColor"]
 - ["CSo8NSObject", "cancelClick"]
@@ -562,8 +502,6 @@ depends-member:
 - ["CSo8NSObject", "nameButtonClick"]
 - ["CSo8NSObject", "nameData"]
 - ["CSo8NSObject", "nameText"]
-- !private ["CSo8NSObject", "navigationController"]
-- !private ["CSo8NSObject", "popViewControllerAnimated"]
 - !private ["CSo8NSObject", "resignFirstResponder"]
 - ["CSo8NSObject", "scrollViewDidEndDecelerating"]
 - ["CSo8NSObject", "scrollViewDidEndDragging"]
@@ -577,7 +515,6 @@ depends-member:
 - ["CSo8NSObject", "scrollViewWillBeginDragging"]
 - ["CSo8NSObject", "scrollViewWillBeginZooming"]
 - ["CSo8NSObject", "scrollViewWillEndDragging"]
-- !private ["CSo8NSObject", "sharedInstance"]
 - !private ["CSo8NSObject", "text"]
 - !private ["CSo8NSObject", "textColor"]
 - ["CSo8NSObject", "textField"]
@@ -594,14 +531,10 @@ depends-member:
 - ["CSo8NSObject", "textViewDidEndEditing"]
 - ["CSo8NSObject", "textViewShouldBeginEditing"]
 - ["CSo8NSObject", "textViewShouldEndEditing"]
-- !private ["CSo8NSObject", "tweakDetailArray"]
-- !private ["CSo8NSObject", "tweakNameArray"]
 - ["CSo8NSObject", "viewDidLoad"]
 - ["CSo8NSObject", "viewForZoomingInScrollView"]
 - ["CSo8NSObject", "viewWillAppear"]
-- !private ["PSo16NSObjectProtocol", "TempChange"]
 - !private ["PSo16NSObjectProtocol", "UIColor"]
-- !private ["PSo16NSObjectProtocol", "addObject"]
 - ["PSo16NSObjectProtocol", "addTweakClick"]
 - !private ["PSo16NSObjectProtocol", "blackColor"]
 - ["PSo16NSObjectProtocol", "cancelClick"]
@@ -618,8 +551,6 @@ depends-member:
 - ["PSo16NSObjectProtocol", "nameButtonClick"]
 - ["PSo16NSObjectProtocol", "nameData"]
 - ["PSo16NSObjectProtocol", "nameText"]
-- !private ["PSo16NSObjectProtocol", "navigationController"]
-- !private ["PSo16NSObjectProtocol", "popViewControllerAnimated"]
 - !private ["PSo16NSObjectProtocol", "resignFirstResponder"]
 - ["PSo16NSObjectProtocol", "scrollViewDidEndDecelerating"]
 - ["PSo16NSObjectProtocol", "scrollViewDidEndDragging"]
@@ -633,7 +564,6 @@ depends-member:
 - ["PSo16NSObjectProtocol", "scrollViewWillBeginDragging"]
 - ["PSo16NSObjectProtocol", "scrollViewWillBeginZooming"]
 - ["PSo16NSObjectProtocol", "scrollViewWillEndDragging"]
-- !private ["PSo16NSObjectProtocol", "sharedInstance"]
 - !private ["PSo16NSObjectProtocol", "text"]
 - !private ["PSo16NSObjectProtocol", "textColor"]
 - ["PSo16NSObjectProtocol", "textField"]
@@ -650,19 +580,11 @@ depends-member:
 - ["PSo16NSObjectProtocol", "textViewDidEndEditing"]
 - ["PSo16NSObjectProtocol", "textViewShouldBeginEditing"]
 - ["PSo16NSObjectProtocol", "textViewShouldEndEditing"]
-- !private ["PSo16NSObjectProtocol", "tweakDetailArray"]
-- !private ["PSo16NSObjectProtocol", "tweakNameArray"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", "viewForZoomingInScrollView"]
 - ["PSo16NSObjectProtocol", "viewWillAppear"]
 - ["PSo16NSObjectProtocol", ""]
-- !private ["PSo14NSSecureCoding", "addObject"]
 - !private ["PSo14NSSecureCoding", "blackColor"]
-- !private ["Ps12SequenceType", "addObject"]
-- !private ["SS", "deinit"]
-- !private ["C8GoChange10TempChange", "sharedInstance"]
-- !private ["C8GoChange10TempChange", "tweakDetailArray"]
-- !private ["C8GoChange10TempChange", "tweakNameArray"]
 - !private ["PSo29UIAccessibilityIdentification", "delegate"]
 - !private ["PSo29UIAccessibilityIdentification", "hidden"]
 - !private ["PSo29UIAccessibilityIdentification", "resignFirstResponder"]
@@ -673,7 +595,6 @@ depends-member:
 - !private ["PSo12UIAppearance", "resignFirstResponder"]
 - !private ["PSo12UIAppearance", "text"]
 - !private ["PSo12UIAppearance", "textColor"]
-- !private ["PSo21UIAppearanceContainer", "TempChange"]
 - !private ["PSo21UIAppearanceContainer", "UIColor"]
 - ["PSo21UIAppearanceContainer", "addTweakClick"]
 - ["PSo21UIAppearanceContainer", "cancelClick"]
@@ -690,8 +611,6 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "nameButtonClick"]
 - ["PSo21UIAppearanceContainer", "nameData"]
 - ["PSo21UIAppearanceContainer", "nameText"]
-- !private ["PSo21UIAppearanceContainer", "navigationController"]
-- !private ["PSo21UIAppearanceContainer", "popViewControllerAnimated"]
 - !private ["PSo21UIAppearanceContainer", "resignFirstResponder"]
 - ["PSo21UIAppearanceContainer", "scrollViewDidEndDecelerating"]
 - ["PSo21UIAppearanceContainer", "scrollViewDidEndDragging"]
@@ -727,7 +646,6 @@ depends-member:
 - ["PSo21UIAppearanceContainer", ""]
 - !private ["CSo8UIButton", "hidden"]
 - !private ["CSo7UIColor", "blackColor"]
-- !private ["PSo18UIContentContainer", "TempChange"]
 - !private ["PSo18UIContentContainer", "UIColor"]
 - ["PSo18UIContentContainer", "addTweakClick"]
 - ["PSo18UIContentContainer", "cancelClick"]
@@ -742,8 +660,6 @@ depends-member:
 - ["PSo18UIContentContainer", "nameButtonClick"]
 - ["PSo18UIContentContainer", "nameData"]
 - ["PSo18UIContentContainer", "nameText"]
-- !private ["PSo18UIContentContainer", "navigationController"]
-- !private ["PSo18UIContentContainer", "popViewControllerAnimated"]
 - ["PSo18UIContentContainer", "scrollViewDidEndDecelerating"]
 - ["PSo18UIContentContainer", "scrollViewDidEndDragging"]
 - ["PSo18UIContentContainer", "scrollViewDidEndScrollingAnimation"]
@@ -788,7 +704,6 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "resignFirstResponder"]
 - !private ["PSo13UIDynamicItem", "text"]
 - !private ["PSo13UIDynamicItem", "textColor"]
-- !private ["PSo18UIFocusEnvironment", "TempChange"]
 - !private ["PSo18UIFocusEnvironment", "UIColor"]
 - ["PSo18UIFocusEnvironment", "addTweakClick"]
 - ["PSo18UIFocusEnvironment", "cancelClick"]
@@ -805,8 +720,6 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "nameButtonClick"]
 - ["PSo18UIFocusEnvironment", "nameData"]
 - ["PSo18UIFocusEnvironment", "nameText"]
-- !private ["PSo18UIFocusEnvironment", "navigationController"]
-- !private ["PSo18UIFocusEnvironment", "popViewControllerAnimated"]
 - !private ["PSo18UIFocusEnvironment", "resignFirstResponder"]
 - ["PSo18UIFocusEnvironment", "scrollViewDidEndDecelerating"]
 - ["PSo18UIFocusEnvironment", "scrollViewDidEndDragging"]
@@ -844,10 +757,8 @@ depends-member:
 - !private ["PSo10UIKeyInput", "resignFirstResponder"]
 - !private ["PSo10UIKeyInput", "text"]
 - !private ["PSo10UIKeyInput", "textColor"]
-- !private ["CSo22UINavigationController", "popViewControllerAnimated"]
 - ["CSo11UIResponder", "Bool"]
 - ["CSo11UIResponder", "String"]
-- !private ["CSo11UIResponder", "TempChange"]
 - ["CSo11UIResponder", "UIButton"]
 - !private ["CSo11UIResponder", "UIColor"]
 - ["CSo11UIResponder", "UITextField"]
@@ -867,8 +778,6 @@ depends-member:
 - ["CSo11UIResponder", "nameButtonClick"]
 - ["CSo11UIResponder", "nameData"]
 - ["CSo11UIResponder", "nameText"]
-- !private ["CSo11UIResponder", "navigationController"]
-- !private ["CSo11UIResponder", "popViewControllerAnimated"]
 - !private ["CSo11UIResponder", "resignFirstResponder"]
 - ["CSo11UIResponder", "scrollViewDidEndDecelerating"]
 - ["CSo11UIResponder", "scrollViewDidEndDragging"]
@@ -905,7 +814,6 @@ depends-member:
 - !private ["CSo12UIScrollView", "resignFirstResponder"]
 - !private ["CSo12UIScrollView", "text"]
 - !private ["CSo12UIScrollView", "textColor"]
-- !private ["PSo20UIScrollViewDelegate", "TempChange"]
 - !private ["PSo20UIScrollViewDelegate", "UIColor"]
 - !private ["PSo20UIScrollViewDelegate", "detailButton"]
 - !private ["PSo20UIScrollViewDelegate", "detailData"]
@@ -914,7 +822,6 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "nameButton"]
 - !private ["PSo20UIScrollViewDelegate", "nameData"]
 - !private ["PSo20UIScrollViewDelegate", "nameText"]
-- !private ["PSo20UIScrollViewDelegate", "navigationController"]
 - ["PSo20UIScrollViewDelegate", "scrollViewDidEndDecelerating"]
 - ["PSo20UIScrollViewDelegate", "scrollViewDidEndDragging"]
 - ["PSo20UIScrollViewDelegate", "scrollViewDidEndScrollingAnimation"]
@@ -943,7 +850,6 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "textViewShouldEndEditing"]
 - ["PSo20UIScrollViewDelegate", "viewForZoomingInScrollView"]
 - ["PSo20UIScrollViewDelegate", ""]
-- !private ["PSo16UIStateRestoring", "TempChange"]
 - !private ["PSo16UIStateRestoring", "UIColor"]
 - ["PSo16UIStateRestoring", "addTweakClick"]
 - ["PSo16UIStateRestoring", "cancelClick"]
@@ -958,8 +864,6 @@ depends-member:
 - ["PSo16UIStateRestoring", "nameButtonClick"]
 - ["PSo16UIStateRestoring", "nameData"]
 - ["PSo16UIStateRestoring", "nameText"]
-- !private ["PSo16UIStateRestoring", "navigationController"]
-- !private ["PSo16UIStateRestoring", "popViewControllerAnimated"]
 - ["PSo16UIStateRestoring", "scrollViewDidEndDecelerating"]
 - ["PSo16UIStateRestoring", "scrollViewDidEndDragging"]
 - ["PSo16UIStateRestoring", "scrollViewDidEndScrollingAnimation"]
@@ -993,7 +897,6 @@ depends-member:
 - !private ["CSo11UITextField", "delegate"]
 - !private ["CSo11UITextField", "resignFirstResponder"]
 - !private ["CSo11UITextField", "text"]
-- !private ["PSo19UITextFieldDelegate", "TempChange"]
 - !private ["PSo19UITextFieldDelegate", "UIColor"]
 - !private ["PSo19UITextFieldDelegate", "detailButton"]
 - !private ["PSo19UITextFieldDelegate", "detailData"]
@@ -1002,7 +905,6 @@ depends-member:
 - !private ["PSo19UITextFieldDelegate", "nameButton"]
 - !private ["PSo19UITextFieldDelegate", "nameData"]
 - !private ["PSo19UITextFieldDelegate", "nameText"]
-- !private ["PSo19UITextFieldDelegate", "navigationController"]
 - ["PSo19UITextFieldDelegate", "scrollViewDidEndDecelerating"]
 - ["PSo19UITextFieldDelegate", "scrollViewDidEndDragging"]
 - ["PSo19UITextFieldDelegate", "scrollViewDidEndScrollingAnimation"]
@@ -1043,7 +945,6 @@ depends-member:
 - !private ["CSo10UITextView", "resignFirstResponder"]
 - !private ["CSo10UITextView", "text"]
 - !private ["CSo10UITextView", "textColor"]
-- !private ["PSo18UITextViewDelegate", "TempChange"]
 - !private ["PSo18UITextViewDelegate", "UIColor"]
 - !private ["PSo18UITextViewDelegate", "detailButton"]
 - !private ["PSo18UITextViewDelegate", "detailData"]
@@ -1052,7 +953,6 @@ depends-member:
 - !private ["PSo18UITextViewDelegate", "nameButton"]
 - !private ["PSo18UITextViewDelegate", "nameData"]
 - !private ["PSo18UITextViewDelegate", "nameText"]
-- !private ["PSo18UITextViewDelegate", "navigationController"]
 - ["PSo18UITextViewDelegate", "scrollViewDidEndDecelerating"]
 - ["PSo18UITextViewDelegate", "scrollViewDidEndDragging"]
 - ["PSo18UITextViewDelegate", "scrollViewDidEndScrollingAnimation"]
@@ -1081,7 +981,6 @@ depends-member:
 - ["PSo18UITextViewDelegate", "textViewShouldEndEditing"]
 - ["PSo18UITextViewDelegate", "viewForZoomingInScrollView"]
 - ["PSo18UITextViewDelegate", ""]
-- !private ["PSo18UITraitEnvironment", "TempChange"]
 - !private ["PSo18UITraitEnvironment", "UIColor"]
 - ["PSo18UITraitEnvironment", "addTweakClick"]
 - ["PSo18UITraitEnvironment", "cancelClick"]
@@ -1098,8 +997,6 @@ depends-member:
 - ["PSo18UITraitEnvironment", "nameButtonClick"]
 - ["PSo18UITraitEnvironment", "nameData"]
 - ["PSo18UITraitEnvironment", "nameText"]
-- !private ["PSo18UITraitEnvironment", "navigationController"]
-- !private ["PSo18UITraitEnvironment", "popViewControllerAnimated"]
 - !private ["PSo18UITraitEnvironment", "resignFirstResponder"]
 - ["PSo18UITraitEnvironment", "scrollViewDidEndDecelerating"]
 - ["PSo18UITraitEnvironment", "scrollViewDidEndDragging"]
@@ -1140,7 +1037,6 @@ depends-member:
 - !private ["CSo6UIView", "textColor"]
 - ["CSo16UIViewController", "Bool"]
 - ["CSo16UIViewController", "String"]
-- !private ["CSo16UIViewController", "TempChange"]
 - ["CSo16UIViewController", "UIButton"]
 - !private ["CSo16UIViewController", "UIColor"]
 - ["CSo16UIViewController", "UITextField"]
@@ -1158,8 +1054,6 @@ depends-member:
 - ["CSo16UIViewController", "nameButtonClick"]
 - ["CSo16UIViewController", "nameData"]
 - ["CSo16UIViewController", "nameText"]
-- !private ["CSo16UIViewController", "navigationController"]
-- !private ["CSo16UIViewController", "popViewControllerAnimated"]
 - ["CSo16UIViewController", "scrollViewDidEndDecelerating"]
 - ["CSo16UIViewController", "scrollViewDidEndDragging"]
 - ["CSo16UIViewController", "scrollViewDidEndScrollingAnimation"]
@@ -1191,7 +1085,6 @@ depends-member:
 - ["CSo16UIViewController", "viewWillAppear"]
 - ["CSo16UIViewController", ""]
 - !private ["Ps24_ColorLiteralConvertible", "blackColor"]
-- !private ["Ps12_Reflectable", "addObject"]
 - !private ["Ps12_Reflectable", "delegate"]
 - !private ["Ps12_Reflectable", "hidden"]
 - !private ["Ps12_Reflectable", "resignFirstResponder"]
@@ -1200,26 +1093,18 @@ depends-member:
 depends-nominal:
 - "C8GoChange22AddTweakViewController"
 - "Ps9AnyObject"
-- !private "Ps23ArrayLiteralConvertible"
 - "Ps11CVarArgType"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
 - "Ps9Equatable"
 - "Ps8Hashable"
 - !private "SQ"
-- !private "CSo7NSArray"
 - "PSo8NSCoding"
 - !private "PSo9NSCopying"
 - "PSo26NSExtensionRequestHandling"
-- !private "PSo17NSFastEnumeration"
-- !private "CSo14NSMutableArray"
-- !private "PSo16NSMutableCopying"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
-- !private "Ps12SequenceType"
-- !private "SS"
-- !private "C8GoChange10TempChange"
 - !private "PSo29UIAccessibilityIdentification"
 - !private "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"
@@ -1231,7 +1116,6 @@ depends-nominal:
 - !private "PSo13UIDynamicItem"
 - "PSo18UIFocusEnvironment"
 - !private "PSo10UIKeyInput"
-- !private "CSo22UINavigationController"
 - "CSo11UIResponder"
 - !private "CSo12UIScrollView"
 - "PSo20UIScrollViewDelegate"

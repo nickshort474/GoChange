@@ -140,7 +140,7 @@ class SaveData:NSObject{
             let uniqueSolutionLocation = changeSolutionsLocation.childByAppendingPath(changeID)
             
             //loop through solutions array
-            for var i in 0 ..< (TempChange.sharedInstance().newSolutionNameArray.count){
+            for i in 0 ..< (TempChange.sharedInstance().newSolutionNameArray.count){
                 
                 //create unqiue location with ID within solutions section
                 let uniqueSolutionReference = uniqueSolutionLocation!.childByAutoId()
@@ -177,7 +177,7 @@ class SaveData:NSObject{
             let uniqueSolutionLocation = changeSolutionsLocation.childByAppendingPath(changeID!)
             
             //loop through solutions array
-            for var i in 0 ..< (TempChange.sharedInstance().solutionNameArray.count){
+            for i in 0 ..< (TempChange.sharedInstance().solutionNameArray.count){
                 
                 //create unqiue location with ID within solutions section
                 let uniqueSolutionReference = uniqueSolutionLocation!.childByAutoId()
@@ -265,7 +265,7 @@ class SaveData:NSObject{
             
         }
         
-        for var i in 0 ..< TempChange.sharedInstance().solutionNameArray.count{
+        for i in 0 ..< TempChange.sharedInstance().solutionNameArray.count{
             
            //TODO: sort new solution array problem...
             //When coming from coreDataFirebaseSolutionPost need to use newSolutionNameArray and newSolutionDetailArray

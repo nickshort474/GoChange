@@ -1,5 +1,5 @@
 //
-//  RetrieveFromFirebase.swift
+//  RetrieveAllNamesFromFirebase.swift
 //  GoChange
 //
 //  Created by Nick Short on 04/04/2016.
@@ -10,7 +10,7 @@ import Foundation
 import Firebase
 
 
-class RetrieveFromFirebase:NSObject{
+class RetrieveAllNamesFromFirebase:NSObject{
     
     var nameRef = Firebase(url: "https://gochange.firebaseio.com/change/names")
     

@@ -8,8 +8,8 @@ provides-member:
 provides-dynamic-lookup:
 - "sharedInstance"
 depends-top-level:
-- "NSObject"
 - "GoChangeClient"
+- "NSObject"
 depends-member:
 - !private ["Ps9AnyObject", "GoChangeClient"]
 - ["Ps9AnyObject", "init"]

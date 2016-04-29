@@ -71,7 +71,7 @@ class SaveResultToCoreData:NSObject{
     func createCoreDataSolutions(){
         
         
-        for var i in 0 ..< TempChange.sharedInstance().solutionNameArray.count{
+        for i in 0 ..< TempChange.sharedInstance().solutionNameArray.count{
             
             //TODO: sort new solution array problem...
             //When coming from coreDataFirebaseSolutionPost need to use newSolutionNameArray and newSolutionDetailArray

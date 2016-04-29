@@ -84,15 +84,15 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
             
                 
                 //Add data to existing arrays ready for going back to ViewFollowing to display in table and for firebase solutionCount / SaveNewChange
-                TempChange.sharedInstance().solutionNameArray.addObject(nameTextField.text!)
-                TempChange.sharedInstance().solutionDetailArray.addObject(detailTextView.text!)
-                TempChange.sharedInstance().solutionVoteArray.addObject(0)
-                TempChange.sharedInstance().solutionIDArray.addObject("newSolution")
+                TempChange.sharedInstance().solutionNameArray.append(nameTextField.text!)
+                TempChange.sharedInstance().solutionDetailArray.append(detailTextView.text!)
+                TempChange.sharedInstance().solutionVoteArray.append(0)
+                TempChange.sharedInstance().solutionIDArray.append("newSolution")
                 
                 
                 //Save data to newSolutionArrays ready for posting of SaveNewSoltion
-                TempChange.sharedInstance().newSolutionNameArray.addObject(nameTextField.text!)
-                TempChange.sharedInstance().newSolutionDetailArray.addObject(detailTextView.text!)
+                TempChange.sharedInstance().newSolutionNameArray.append(nameTextField.text!)
+                TempChange.sharedInstance().newSolutionDetailArray.append(detailTextView.text!)
                 
                 _ = SaveNewSolution(change: self.change){
                     (result) in
@@ -106,10 +106,10 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
             
             if(nameTextField.text != "" && detailTextView.text != ""){
                 
-                TempChange.sharedInstance().solutionNameArray.addObject(nameTextField.text!)
-                TempChange.sharedInstance().solutionDetailArray.addObject(detailTextView.text!)
-                TempChange.sharedInstance().solutionVoteArray.addObject(0)
-                TempChange.sharedInstance().solutionIDArray.addObject("newSolution")
+                TempChange.sharedInstance().solutionNameArray.append(nameTextField.text!)
+                TempChange.sharedInstance().solutionDetailArray.append(detailTextView.text!)
+                TempChange.sharedInstance().solutionVoteArray.append(0)
+                TempChange.sharedInstance().solutionIDArray.append("newSolution")
                 
                 self.navigationController?.popViewControllerAnimated(true)
             }

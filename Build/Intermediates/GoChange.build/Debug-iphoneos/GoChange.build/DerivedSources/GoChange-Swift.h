@@ -225,11 +225,6 @@ SWIFT_CLASS("_TtC8GoChange26CreateChangeViewController")
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified solutionTable;
 @property (nonatomic, copy) NSString * _Nonnull currentNameData;
 @property (nonatomic, copy) NSString * _Nonnull currentDetailData;
-@property (nonatomic, copy) NSString * _Nonnull sendingController;
-@property (nonatomic, copy) NSString * _Nonnull changeName;
-@property (nonatomic, copy) NSString * _Nonnull changeDetail;
-@property (nonatomic, copy) NSString * _Nonnull changeID;
-@property (nonatomic, strong) Change * _Nullable change;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 @property (nonatomic, strong) NSManagedObjectContext * _Nonnull sharedContext;
@@ -318,16 +313,15 @@ SWIFT_CLASS("_TtC8GoChange18HomeViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSMutableArray;
 
 SWIFT_CLASS("_TtC8GoChange21ResultsViewController")
 @interface ResultsViewController : UIViewController <UIScrollViewDelegate, UITableViewDelegate>
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified resultsTable;
-@property (nonatomic, strong) NSMutableArray * _Nonnull refArray;
-@property (nonatomic, strong) NSMutableArray * _Nonnull resultNameArray;
-@property (nonatomic, strong) NSMutableArray * _Nonnull resultDetailArray;
-@property (nonatomic, strong) NSMutableArray * _Nonnull resultSolutionCountArray;
-@property (nonatomic, strong) NSMutableArray * _Nonnull solutionOwnerArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull refArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull resultNameArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull resultDetailArray;
+@property (nonatomic, copy) NSArray<NSNumber *> * _Nonnull resultSolutionCountArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull changeOwnerArray;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (void)viewWillAppear:(BOOL)animated;
@@ -338,10 +332,18 @@ SWIFT_CLASS("_TtC8GoChange21ResultsViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class FDataSnapshot;
+
+SWIFT_CLASS("_TtC8GoChange28RetrieveAllNamesFromFirebase")
+@interface RetrieveAllNamesFromFirebase : NSObject
+@property (nonatomic, strong) Firebase * _Null_unspecified nameRef;
+- (nonnull instancetype)initWithCompletionHandler:(void (^ _Nonnull)(FDataSnapshot * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC8GoChange14RetrieveChange")
 @interface RetrieveChange : NSObject
-- (nonnull instancetype)initWithChangeID:(NSString * _Nonnull)changeID completionHandler:(void (^ _Nonnull)(id _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithChangeID:(NSString * _Nonnull)changeID completionHandler:(void (^ _Nonnull)(Change * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
 @property (nonatomic, strong) NSManagedObjectContext * _Nonnull sharedContext;
 @end
 
@@ -349,24 +351,25 @@ SWIFT_CLASS("_TtC8GoChange14RetrieveChange")
 SWIFT_CLASS("_TtC8GoChange27RetrieveDetailsFromFirebase")
 @interface RetrieveDetailsFromFirebase : NSObject
 @property (nonatomic, strong) Firebase * _Null_unspecified ref;
-@property (nonatomic, strong) NSMutableArray * _Nonnull results;
-- (nonnull instancetype)initWithUserRefArray:(NSMutableArray * _Nonnull)userRefArray completionHandler:(void (^ _Nonnull)(NSMutableArray * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull results;
+- (nonnull instancetype)initWithUserRefArray:(NSArray<NSString *> * _Nonnull)userRefArray completionHandler:(void (^ _Nonnull)(NSArray<NSString *> * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class FDataSnapshot;
 
-SWIFT_CLASS("_TtC8GoChange20RetrieveFromFirebase")
-@interface RetrieveFromFirebase : NSObject
+SWIFT_CLASS("_TtC8GoChange25RetrieveNamesFromFirebase")
+@interface RetrieveNamesFromFirebase : NSObject
 @property (nonatomic, strong) Firebase * _Null_unspecified nameRef;
-- (nonnull instancetype)initWithCompletionHandler:(void (^ _Nonnull)(FDataSnapshot * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull nameResults;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull ownerResults;
+- (nonnull instancetype)initWithChangeArray:(NSArray<NSString *> * _Nonnull)changeArray completionHandler:(void (^ _Nonnull)(NSArray<NSString *> * _Nonnull, NSArray<NSString *> * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 SWIFT_CLASS("_TtC8GoChange29RetrieveSolutionCountFirebase")
 @interface RetrieveSolutionCountFirebase : NSObject
 @property (nonatomic, strong) Firebase * _Null_unspecified nameRef;
-@property (nonatomic, strong) NSMutableArray * _Nonnull resultsArray;
-- (nonnull instancetype)initWithChangeArray:(NSMutableArray * _Nonnull)changeArray completionHandler:(void (^ _Nonnull)(NSMutableArray * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, copy) NSArray<NSNumber *> * _Nonnull resultsArray;
+- (nonnull instancetype)initWithChangeArray:(NSArray<NSString *> * _Nonnull)changeArray completionHandler:(void (^ _Nonnull)(NSArray<NSNumber *> * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -380,9 +383,20 @@ SWIFT_CLASS("_TtC8GoChange17RetrieveSolutions")
 SWIFT_CLASS("_TtC8GoChange29RetrieveSolutionsFromFirebase")
 @interface RetrieveSolutionsFromFirebase : NSObject
 @property (nonatomic, strong) Firebase * _Null_unspecified ref;
-- (nonnull instancetype)initWithChangeID:(NSString * _Nonnull)changeID completionHandler:(void (^ _Nonnull)(FDataSnapshot * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, strong) Firebase * _Null_unspecified changeRef;
+@property (nonatomic, strong) Change * _Null_unspecified change;
+@property (nonatomic, copy) NSString * _Null_unspecified changeID;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull localSolutionIDArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull nonMatches;
+- (nonnull instancetype)initWithChangeID:(NSString * _Nonnull)changeID change:(Change * _Nullable)change caller:(NSString * _Nonnull)caller completionHandler:(void (^ _Nonnull)(FDataSnapshot * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
+- (void)createLocalArray;
+- (void)compareArraysForMatches;
+- (void)retrieveMatchedSolutionsFromFirebase;
+- (void)updateCoreDataSolutions;
+@property (nonatomic, strong) NSManagedObjectContext * _Nonnull sharedContext;
 @end
 
+@class NSMutableArray;
 
 SWIFT_CLASS("_TtC8GoChange8SaveData")
 @interface SaveData : NSObject
@@ -444,15 +458,16 @@ SWIFT_CLASS("_TtC8GoChange20SaveResultToCoreData")
 SWIFT_CLASS("_TtC8GoChange20SearchViewController")
 @interface SearchViewController : UIViewController <UITextFieldDelegate>
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified searchTextField;
-@property (nonatomic, strong) NSMutableArray * _Nonnull returnedNameArray;
-@property (nonatomic, strong) NSMutableArray * _Nonnull returnedOwnerArray;
-@property (nonatomic, strong) NSMutableArray * _Nonnull useOwnerArray;
-@property (nonatomic, strong) NSMutableArray * _Nonnull returnedRefArray;
-@property (nonatomic, strong) NSMutableArray * _Nonnull countArray;
-@property (nonatomic, strong) NSMutableArray * _Nonnull matchedNameArray;
-@property (nonatomic, strong) NSMutableArray * _Nonnull useRefArray;
-@property (nonatomic, strong) NSMutableArray * _Nonnull useDetailArray;
-@property (nonatomic, strong) NSMutableArray * _Nonnull useSolutionCountArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull returnedNameArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull returnedRefArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull matchedNameArray;
+@property (nonatomic, copy) NSArray<NSNumber *> * _Nonnull countArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull matchedRefArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull useNameArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull useOwnerArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull useDetailArray;
+@property (nonatomic, copy) NSArray<NSNumber *> * _Nonnull useSolutionCountArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull refsNotInCoreData;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
@@ -511,17 +526,17 @@ SWIFT_CLASS("_TtC8GoChange10TempChange")
 @property (nonatomic, copy) NSString * _Nonnull changeName;
 @property (nonatomic, copy) NSString * _Nonnull changeOwner;
 @property (nonatomic, copy) NSString * _Nonnull changeDetail;
-@property (nonatomic, strong) NSMutableArray * _Nonnull solutionNameArray;
-@property (nonatomic, strong) NSMutableArray * _Nonnull solutionDetailArray;
-@property (nonatomic, strong) NSMutableArray * _Nonnull solutionVoteArray;
-@property (nonatomic, strong) NSMutableArray * _Nonnull solutionIDArray;
-@property (nonatomic, strong) NSMutableArray * _Nonnull solutionOwnerArray;
-@property (nonatomic, strong) NSMutableArray * _Nonnull newSolutionIDArray;
-@property (nonatomic, strong) NSMutableArray * _Nonnull newSolutionNameArray;
-@property (nonatomic, strong) NSMutableArray * _Nonnull newSolutionDetailArray;
-@property (nonatomic, strong) NSMutableArray * _Nonnull newSolutionVoteArray;
-@property (nonatomic, strong) NSMutableArray * _Nonnull tweakNameArray;
-@property (nonatomic, strong) NSMutableArray * _Nonnull tweakDetailArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull solutionNameArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull solutionDetailArray;
+@property (nonatomic, copy) NSArray<NSNumber *> * _Nonnull solutionVoteArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull solutionIDArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull solutionOwnerArray;
+@property (nonatomic, copy) NSArray<NSArray<NSString *> *> * _Nonnull newSolutionIDArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull newSolutionNameArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull newSolutionDetailArray;
+@property (nonatomic, copy) NSArray<NSNumber *> * _Nonnull newSolutionVoteArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull tweakNameArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull tweakDetailArray;
 + (TempChange * _Nonnull)sharedInstance;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -572,7 +587,34 @@ SWIFT_CLASS("_TtC8GoChange32ViewFollowedChangeViewController")
 @property (nonatomic, strong) Change * _Null_unspecified changeClicked;
 @property (nonatomic, copy) NSString * _Null_unspecified changeID;
 @property (nonatomic, copy) NSString * _Null_unspecified solutionID;
-@property (nonatomic, strong) NSMutableArray * _Nonnull changeIDArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull changeIDArray;
+@property (nonatomic, copy) NSString * _Null_unspecified sendingController;
+- (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
+- (IBAction)addNameClick:(UIButton * _Nonnull)sender;
+- (IBAction)addDetailClick:(UIButton * _Nonnull)sender;
+- (IBAction)addSolutionClick:(UIButton * _Nonnull)sender;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)goBackHome;
+- (IBAction)unfollowChange:(UIButton * _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8GoChange33ViewFollowingChangeViewController")
+@interface ViewFollowingChangeViewController : UIViewController <UIScrollViewDelegate, UITextFieldDelegate, UITableViewDelegate, UITextViewDelegate>
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified nameField;
+@property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified detailsField;
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified solutionTable;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified addASolutionButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified followChangeButton;
+@property (nonatomic, strong) Change * _Null_unspecified changeClicked;
+@property (nonatomic, copy) NSString * _Null_unspecified changeID;
+@property (nonatomic, copy) NSString * _Null_unspecified solutionID;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull changeIDArray;
 @property (nonatomic, copy) NSString * _Null_unspecified sendingController;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;

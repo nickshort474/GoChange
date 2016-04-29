@@ -9,8 +9,8 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - "String"
-- "GoChangeClient"
 - "StringLiteralType"
+- "GoChangeClient"
 depends-member:
 - ["VC8GoChange14GoChangeClient9Constants", "String"]
 - ["VC8GoChange14GoChangeClient9Constants", "apiKey"]

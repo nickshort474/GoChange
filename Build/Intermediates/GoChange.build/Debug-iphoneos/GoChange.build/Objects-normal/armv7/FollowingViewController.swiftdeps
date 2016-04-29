@@ -6,40 +6,40 @@ provides-nominal:
 provides-member:
 - ["C8GoChange23FollowingViewController", ""]
 provides-dynamic-lookup:
-- "followingTableView"
-- "didReceiveMemoryWarning"
-- "viewDidLoad"
-- "tableView"
-- "tableView"
-- "tableView"
 - "homeButton"
-- "homeButtonClick"
-- "numberOfSectionsInTableView"
-- "sharedContext"
 - "fetchedResultsController"
+- "numberOfSectionsInTableView"
+- "followingTableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "homeButtonClick"
+- "viewDidLoad"
 - "viewWillAppear"
+- "didReceiveMemoryWarning"
+- "sharedContext"
 depends-top-level:
-- "Int"
+- !private "NSFetchRequest"
 - "UIButton"
 - "NSFetchedResultsController"
-- "Array"
-- !private "Change"
-- "UITableViewController"
-- !private "UIBarButtonItemStyle"
-- !private "BooleanLiteralType"
-- "NSFetchedResultsControllerDelegate"
-- !private "CoreDataStackManager"
-- "UITableView"
 - !private "UIBarButtonItem"
-- "Bool"
-- "NSManagedObjectContext"
+- !private "Change"
 - "NSIndexPath"
+- "UITableViewController"
 - "UITableViewCell"
-- !private "String"
+- !private "CoreDataStackManager"
 - "StringLiteralType"
+- "Bool"
+- "Int"
+- "NSManagedObjectContext"
+- "Array"
+- "NSFetchedResultsControllerDelegate"
+- "UITableView"
 - "FollowingViewController"
-- !private "NSFetchRequest"
-- !private "ViewFollowedChangeViewController"
+- !private "BooleanLiteralType"
+- !private "UIBarButtonItemStyle"
+- !private "ViewFollowingChangeViewController"
+- !private "String"
 depends-member:
 - !private ["Ps9AnyObject", "CoreDataStackManager"]
 - !private ["Ps9AnyObject", "NSFetchRequest"]
@@ -339,7 +339,7 @@ depends-member:
 - ["C8GoChange23FollowingViewController", "UIButton"]
 - ["C8GoChange23FollowingViewController", "UITableView"]
 - ["C8GoChange23FollowingViewController", "UITableViewCell"]
-- !private ["C8GoChange23FollowingViewController", "ViewFollowedChangeViewController"]
+- !private ["C8GoChange23FollowingViewController", "ViewFollowingChangeViewController"]
 - ["C8GoChange23FollowingViewController", "controller"]
 - ["C8GoChange23FollowingViewController", "controllerDidChangeContent"]
 - ["C8GoChange23FollowingViewController", "controllerWillChangeContent"]
@@ -565,7 +565,7 @@ depends-member:
 - ["CSo8NSObject", "UIButton"]
 - ["CSo8NSObject", "UITableView"]
 - ["CSo8NSObject", "UITableViewCell"]
-- !private ["CSo8NSObject", "ViewFollowedChangeViewController"]
+- !private ["CSo8NSObject", "ViewFollowingChangeViewController"]
 - !private ["CSo8NSObject", "backBarButtonItem"]
 - !private ["CSo8NSObject", "changeClicked"]
 - !private ["CSo8NSObject", "changeName"]
@@ -830,7 +830,7 @@ depends-member:
 - ["CSo11UIResponder", "UIButton"]
 - ["CSo11UIResponder", "UITableView"]
 - ["CSo11UIResponder", "UITableViewCell"]
-- !private ["CSo11UIResponder", "ViewFollowedChangeViewController"]
+- !private ["CSo11UIResponder", "ViewFollowingChangeViewController"]
 - !private ["CSo11UIResponder", "changeClicked"]
 - ["CSo11UIResponder", "controller"]
 - ["CSo11UIResponder", "controllerDidChangeContent"]
@@ -938,7 +938,7 @@ depends-member:
 - ["CSo21UITableViewController", "UIButton"]
 - ["CSo21UITableViewController", "UITableView"]
 - ["CSo21UITableViewController", "UITableViewCell"]
-- !private ["CSo21UITableViewController", "ViewFollowedChangeViewController"]
+- !private ["CSo21UITableViewController", "ViewFollowingChangeViewController"]
 - ["CSo21UITableViewController", "controller"]
 - ["CSo21UITableViewController", "controllerDidChangeContent"]
 - ["CSo21UITableViewController", "controllerWillChangeContent"]
@@ -1071,7 +1071,7 @@ depends-member:
 - ["CSo16UIViewController", "UIButton"]
 - ["CSo16UIViewController", "UITableView"]
 - ["CSo16UIViewController", "UITableViewCell"]
-- !private ["CSo16UIViewController", "ViewFollowedChangeViewController"]
+- !private ["CSo16UIViewController", "ViewFollowingChangeViewController"]
 - !private ["CSo16UIViewController", "changeClicked"]
 - ["CSo16UIViewController", "controller"]
 - ["CSo16UIViewController", "controllerDidChangeContent"]
@@ -1102,8 +1102,8 @@ depends-member:
 - !private ["Vs5UInt8", "deinit"]
 - !private ["Sc", "deinit"]
 - !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
-- !private ["C8GoChange32ViewFollowedChangeViewController", "changeClicked"]
-- !private ["C8GoChange32ViewFollowedChangeViewController", "sendingController"]
+- !private ["C8GoChange33ViewFollowingChangeViewController", "changeClicked"]
+- !private ["C8GoChange33ViewFollowingChangeViewController", "sendingController"]
 - !private ["Ps10_ArrayType", "Element"]
 - !private ["Ps10_ArrayType", "Generator"]
 - !private ["Ps10_ArrayType", "Index"]
@@ -1265,7 +1265,7 @@ depends-nominal:
 - !private "Vs5UInt8"
 - !private "Sc"
 - !private "Ps31UnicodeScalarLiteralConvertible"
-- !private "C8GoChange32ViewFollowedChangeViewController"
+- !private "C8GoChange33ViewFollowingChangeViewController"
 - !private "Ps10_ArrayType"
 - !private "Ps33_BuiltinBooleanLiteralConvertible"
 - !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"

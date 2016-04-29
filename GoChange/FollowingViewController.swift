@@ -98,9 +98,9 @@ class FollowingViewController: UITableViewController,
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        var controller:ViewFollowedChangeViewController
+        var controller:ViewFollowingChangeViewController
         
-        controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewFollowedChangeViewController") as! ViewFollowedChangeViewController
+        controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewFollowingChangeViewController") as! ViewFollowingChangeViewController
         
         let navigationController = self.navigationController
         

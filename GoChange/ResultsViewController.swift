@@ -12,14 +12,14 @@ class ResultsViewController: UIViewController,UITableViewDelegate {
     
     @IBOutlet weak var resultsTable: UITableView!
     
-    var refArray:NSMutableArray = []
-    var resultNameArray:NSMutableArray = []
-    var resultDetailArray:NSMutableArray = []
-    var resultSolutionCountArray:NSMutableArray = []
+    var refArray:[String] = []
+    var resultNameArray:[String] = []
+    var resultDetailArray:[String] = []
+    var resultSolutionCountArray:[Int] = []
     
     
     //TODO: Display owner of change somewhere
-    var solutionOwnerArray:NSMutableArray = []
+    var changeOwnerArray:[String] = []
     
     
     override func viewDidLoad() {
@@ -48,7 +48,7 @@ class ResultsViewController: UIViewController,UITableViewDelegate {
         let cellID = "resultCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath)
         
-        let changeName:String = self.resultNameArray[indexPath.row] as! String
+        let changeName:String = self.resultNameArray[indexPath.row] 
         let solutionCount:String = String(self.resultSolutionCountArray[indexPath.row])
         
         cell.textLabel!.text = changeName
@@ -64,10 +64,10 @@ class ResultsViewController: UIViewController,UITableViewDelegate {
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewResultChangeViewController") as! ViewResultChangeViewController
         let navigationController = self.navigationController
         
-        controller.changeName = self.resultNameArray[indexPath.row] as! String
-        controller.changeDetail = self.resultDetailArray[indexPath.row] as! String
-        controller.changeID = self.refArray[indexPath.row] as! String
-        controller.owner = self.solutionOwnerArray[indexPath.row] as! String
+        controller.changeName = self.resultNameArray[indexPath.row]
+        controller.changeDetail = self.resultDetailArray[indexPath.row]
+        controller.changeID = self.refArray[indexPath.row]
+        controller.owner = self.changeOwnerArray[indexPath.row]
     
     
         navigationController?.pushViewController(controller,animated: true)
