@@ -6,69 +6,68 @@ provides-nominal:
 provides-member:
 - ["C8GoChange26CreateChangeViewController", ""]
 provides-dynamic-lookup:
-- "namePlusButton"
-- "changeName"
-- "currentNameData"
-- "textViewDidBeginEditing"
-- "nameActionButton"
-- "viewDidLoad"
 - "detailsActionButton"
 - "postButton"
-- "tableView"
-- "tableView"
-- "tableView"
-- "sendingController"
-- "homeButtonClick"
-- "solutionTable"
-- "textFieldDidBeginEditing"
-- "sharedContext"
-- "changeID"
-- "addSolution"
-- "viewWillAppear"
 - "PostInfo"
-- "detailsField"
-- "detailsPlusButton"
-- "changeDetail"
-- "currentDetailData"
-- "nameField"
 - "change"
+- "changeName"
+- "tableView"
+- "tableView"
+- "tableView"
+- "solutionTable"
+- "namePlusButton"
+- "sendingController"
+- "changeID"
+- "viewWillAppear"
+- "currentNameData"
+- "currentDetailData"
+- "viewDidLoad"
+- "nameField"
+- "textFieldDidBeginEditing"
 - "addASolutionButton"
+- "sharedContext"
+- "homeButtonClick"
+- "detailsField"
+- "addSolution"
+- "textViewDidBeginEditing"
+- "nameActionButton"
+- "changeDetail"
+- "detailsPlusButton"
 depends-top-level:
-- !private "Array"
-- "String"
-- "Change"
-- "UITableViewDelegate"
-- "NSIndexPath"
-- !private "CoreDataStackManager"
-- !private "=="
-- "UITextView"
-- !private "UIBarButtonItem"
-- !private "SaveNewChange"
-- "UITableView"
-- !private "GoChangeClient"
-- "UITextFieldDelegate"
-- "UITextViewDelegate"
-- "UITableViewCell"
-- "StringLiteralType"
-- !private "print"
 - "UIViewController"
-- "CreateChangeViewController"
-- !private "UIColor"
-- !private "||"
-- "Int"
-- !private "UIBarButtonItemStyle"
-- !private "AddIdeaViewController"
-- !private "!="
-- !private "BooleanLiteralType"
-- !private "&&"
-- !private "TempChange"
+- "UITextView"
+- !private "CoreDataStackManager"
+- "UITextViewDelegate"
+- !private "ViewIdeaViewController"
+- !private "=="
+- "UITextFieldDelegate"
+- "UITableView"
+- "UITableViewCell"
 - "Bool"
-- "UIButton"
-- "NSManagedObjectContext"
+- !private "TempChange"
+- !private "!="
+- "String"
+- !private "&&"
+- "NSIndexPath"
+- !private "print"
+- "StringLiteralType"
+- "UITableViewDelegate"
+- !private "UIBarButtonItem"
 - "UITextField"
+- !private "GoChangeClient"
+- !private "||"
+- "UIButton"
+- !private "UIColor"
+- !private "SaveNewChange"
+- "Change"
+- !private "BooleanLiteralType"
+- !private "UIBarButtonItemStyle"
+- "CreateChangeViewController"
+- "NSManagedObjectContext"
+- !private "Array"
+- "Int"
+- !private "AddIdeaViewController"
 depends-member:
-- !private ["C8GoChange21AddIdeaViewController", "loadedDetailData"]
-- !private ["C8GoChange21AddIdeaViewController", "loadedNameData"]
 - !private ["C8GoChange21AddIdeaViewController", "viewControllerStatus"]
 - !private ["Ps9AnyObject", "Constants"]
 - !private ["Ps9AnyObject", "CoreDataStackManager"]
@@ -287,6 +286,7 @@ depends-member:
 - ["C8GoChange26CreateChangeViewController", "UITableViewCell"]
 - ["C8GoChange26CreateChangeViewController", "UITextField"]
 - ["C8GoChange26CreateChangeViewController", "UITextView"]
+- !private ["C8GoChange26CreateChangeViewController", "ViewIdeaViewController"]
 - ["C8GoChange26CreateChangeViewController", "addASolutionButton"]
 - ["C8GoChange26CreateChangeViewController", "addSolution"]
 - ["C8GoChange26CreateChangeViewController", "change"]
@@ -920,6 +920,7 @@ depends-member:
 - ["CSo8NSObject", "UITableViewCell"]
 - ["CSo8NSObject", "UITextField"]
 - ["CSo8NSObject", "UITextView"]
+- !private ["CSo8NSObject", "ViewIdeaViewController"]
 - ["CSo8NSObject", "addASolutionButton"]
 - ["CSo8NSObject", "addSolution"]
 - !private ["CSo8NSObject", "alpha"]
@@ -1427,6 +1428,7 @@ depends-member:
 - ["CSo11UIResponder", "UITableViewCell"]
 - ["CSo11UIResponder", "UITextField"]
 - ["CSo11UIResponder", "UITextView"]
+- !private ["CSo11UIResponder", "ViewIdeaViewController"]
 - ["CSo11UIResponder", "addASolutionButton"]
 - ["CSo11UIResponder", "addSolution"]
 - !private ["CSo11UIResponder", "alpha"]
@@ -1517,8 +1519,6 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "detailsPlusButton"]
 - !private ["PSo20UIScrollViewDelegate", "dismissViewControllerAnimated"]
 - ["PSo20UIScrollViewDelegate", "indexPathForPreferredFocusedViewInTableView"]
-- !private ["PSo20UIScrollViewDelegate", "loadedDetailData"]
-- !private ["PSo20UIScrollViewDelegate", "loadedNameData"]
 - !private ["PSo20UIScrollViewDelegate", "nameField"]
 - !private ["PSo20UIScrollViewDelegate", "namePlusButton"]
 - !private ["PSo20UIScrollViewDelegate", "navigationController"]
@@ -1645,8 +1645,6 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "detailsPlusButton"]
 - !private ["PSo19UITableViewDelegate", "dismissViewControllerAnimated"]
 - ["PSo19UITableViewDelegate", "indexPathForPreferredFocusedViewInTableView"]
-- !private ["PSo19UITableViewDelegate", "loadedDetailData"]
-- !private ["PSo19UITableViewDelegate", "loadedNameData"]
 - !private ["PSo19UITableViewDelegate", "nameField"]
 - !private ["PSo19UITableViewDelegate", "namePlusButton"]
 - !private ["PSo19UITableViewDelegate", "navigationController"]
@@ -1701,8 +1699,6 @@ depends-member:
 - !private ["PSo19UITextFieldDelegate", "detailsPlusButton"]
 - !private ["PSo19UITextFieldDelegate", "dismissViewControllerAnimated"]
 - ["PSo19UITextFieldDelegate", "indexPathForPreferredFocusedViewInTableView"]
-- !private ["PSo19UITextFieldDelegate", "loadedDetailData"]
-- !private ["PSo19UITextFieldDelegate", "loadedNameData"]
 - !private ["PSo19UITextFieldDelegate", "nameField"]
 - !private ["PSo19UITextFieldDelegate", "namePlusButton"]
 - !private ["PSo19UITextFieldDelegate", "navigationController"]
@@ -1766,8 +1762,6 @@ depends-member:
 - !private ["PSo18UITextViewDelegate", "detailsPlusButton"]
 - !private ["PSo18UITextViewDelegate", "dismissViewControllerAnimated"]
 - ["PSo18UITextViewDelegate", "indexPathForPreferredFocusedViewInTableView"]
-- !private ["PSo18UITextViewDelegate", "loadedDetailData"]
-- !private ["PSo18UITextViewDelegate", "loadedNameData"]
 - !private ["PSo18UITextViewDelegate", "nameField"]
 - !private ["PSo18UITextViewDelegate", "namePlusButton"]
 - !private ["PSo18UITextViewDelegate", "navigationController"]
@@ -1916,6 +1910,7 @@ depends-member:
 - ["CSo16UIViewController", "UITableViewCell"]
 - ["CSo16UIViewController", "UITextField"]
 - ["CSo16UIViewController", "UITextView"]
+- !private ["CSo16UIViewController", "ViewIdeaViewController"]
 - ["CSo16UIViewController", "addASolutionButton"]
 - ["CSo16UIViewController", "addSolution"]
 - ["CSo16UIViewController", "change"]
@@ -1978,6 +1973,8 @@ depends-member:
 - ["CSo16UIViewController", "viewForZoomingInScrollView"]
 - ["CSo16UIViewController", "viewWillAppear"]
 - ["CSo16UIViewController", ""]
+- !private ["C8GoChange22ViewIdeaViewController", "loadedDetailData"]
+- !private ["C8GoChange22ViewIdeaViewController", "loadedNameData"]
 - !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps24_ColorLiteralConvertible", "blackColor"]
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
@@ -2066,6 +2063,7 @@ depends-nominal:
 - "PSo18UITraitEnvironment"
 - !private "CSo6UIView"
 - "CSo16UIViewController"
+- !private "C8GoChange22ViewIdeaViewController"
 - !private "Ps33_BuiltinBooleanLiteralConvertible"
 - !private "Ps24_ColorLiteralConvertible"
 - !private "Ps21_ObjectiveCBridgeable"

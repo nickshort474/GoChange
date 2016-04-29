@@ -29,7 +29,15 @@ class FollowingViewController: UITableViewController,
         let barButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
         self.navigationItem.backBarButtonItem = barButtonItem
         
+        //self.navigationController?.view.backgroundColor = UIColor.orangeColor()
+        
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.followingTableView.reloadData()
+    }
+    
+    
     @IBAction func homeButtonClick(sender: UIButton) {
        
         navigationController?.dismissViewControllerAnimated(true, completion: nil)

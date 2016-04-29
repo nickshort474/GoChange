@@ -18,12 +18,9 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
     @IBOutlet weak var detailsField: UITextView!
     @IBOutlet weak var solutionTable: UITableView!
     
-    @IBOutlet weak var nameButton: UIButton!
-    @IBOutlet weak var detailButton: UIButton!
-    
     @IBOutlet weak var addASolutionButton: UIButton!
     @IBOutlet weak var followChangeButton: UIButton!
-    @IBOutlet weak var postChangeButton: UIButton!
+    
     
     var changeClicked:Change!
     var changeID:String!
@@ -40,18 +37,14 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        print("viewDidLoad")
+        
         //set delegates
         nameField.delegate = self
         detailsField.delegate = self
         solutionTable.delegate = self
         
-        postChangeButton.enabled = false
-        postChangeButton.alpha = 0.5
         
-        
-        //TODO: Decide whether to allow owner of change to edit question once posted
-        nameButton.hidden = true
-        detailButton.hidden = true
         nameField.enabled = false
         detailsField.selectable = false
         
@@ -82,7 +75,7 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
             
             //process returned snapshot
             let firebaseSolutionCount = result[0] as! Int
-            
+                       
             // if new solutions exist
             if (firebaseSolutionCount != self.localSolutionCount){
                 
@@ -114,6 +107,8 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
                     //retrieve existing solutions save into an array
                      _ = RetrieveSolutions(change: self.changeClicked, completionHandler:{
                         (result) in
+                        
+                        
                         
                         for solution in result as! [Solution]{
                             localSolutionIDArray.addObject(solution.solutionID)
@@ -204,8 +199,10 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
         var controller:AddIdeaViewController
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("AddIdeaViewController") as! AddIdeaViewController
         
-        controller.viewControllerStatus = "adding"
-        controller.changeID = changeID
+        controller.viewControllerStatus = "addingSolutionToExistingChange"
+        //controller.changeID = changeID
+        controller.change = changeClicked
+        
         
         self.navigationController?.pushViewController(controller, animated: true)
         
@@ -242,18 +239,18 @@ class ViewFollowedChangeViewController: UIViewController,UITextViewDelegate,UITe
     func tableView(tableView:UITableView,didSelectRowAtIndexPath indexPath: NSIndexPath){
         
         
-        var controller:AddIdeaViewController
-        controller = self.storyboard?.instantiateViewControllerWithIdentifier("AddIdeaViewController") as! AddIdeaViewController
+        var controller:ViewIdeaViewController
+        controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewIdeaViewController") as! ViewIdeaViewController
         
         
         controller.loadedNameData = TempChange.sharedInstance().solutionNameArray[indexPath.row] as? String
         controller.loadedDetailData = TempChange.sharedInstance().solutionDetailArray[indexPath.row] as? String
         
         
-        controller.solutionCount = TempChange.sharedInstance().solutionVoteArray[indexPath.row] as? Int
+        //controller.solutionCount = TempChange.sharedInstance().solutionVoteArray[indexPath.row] as? Int
         controller.solutionID = TempChange.sharedInstance().solutionIDArray[indexPath.row] as? String
         
-        controller.viewControllerStatus = "viewing"
+        //controller.viewControllerStatus = "viewing"
         controller.changeID = changeID
         controller.index = indexPath.row
         

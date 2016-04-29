@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		361A06401CB2CD450066C07C /* RetrieveFromFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361A063F1CB2CD450066C07C /* RetrieveFromFirebase.swift */; };
+		369A433F1CD2695C00D84A6B /* ViewIdeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A433E1CD2695C00D84A6B /* ViewIdeaViewController.swift */; };
 		369EF17D1C80C24600D8D46A /* Change.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369EF17C1C80C24600D8D46A /* Change.swift */; };
 		369EF17F1C80C5D900D8D46A /* CoreDataStackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369EF17E1C80C5D900D8D46A /* CoreDataStackManager.swift */; };
 		36AE6F361C8C37A50041B5CD /* UpdateUserInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AE6F351C8C37A50041B5CD /* UpdateUserInfoController.swift */; };
@@ -38,6 +39,7 @@
 		36D7CA071CA597F200A73176 /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D7CA061CA597F200A73176 /* Solution.swift */; };
 		36D7CA091CA5987E00A73176 /* Tweak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D7CA081CA5987E00A73176 /* Tweak.swift */; };
 		36D7CA0B1CA5AB5E00A73176 /* CreateSolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D7CA0A1CA5AB5E00A73176 /* CreateSolution.swift */; };
+		36D82C1F1CD3506400FDA274 /* ViewFollowingChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D82C1E1CD3506400FDA274 /* ViewFollowingChangeViewController.swift */; };
 		36D963F71CB556A1006F9D36 /* RetrieveSolutionsFromFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D963F61CB556A1006F9D36 /* RetrieveSolutionsFromFirebase.swift */; };
 		36DE37521CB12640005DEEEA /* RetrieveSolutions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DE37511CB12640005DEEEA /* RetrieveSolutions.swift */; };
 		36DEEA471CC158B1000FF3A4 /* ViewFollowedChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DEEA461CC158B1000FF3A4 /* ViewFollowedChangeViewController.swift */; };
@@ -73,6 +75,7 @@
 /* Begin PBXFileReference section */
 		0961F4BBEE6401B9B1D0DE43 /* Pods_GoChange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoChange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		361A063F1CB2CD450066C07C /* RetrieveFromFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveFromFirebase.swift; sourceTree = "<group>"; };
+		369A433E1CD2695C00D84A6B /* ViewIdeaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewIdeaViewController.swift; sourceTree = "<group>"; };
 		369EF17C1C80C24600D8D46A /* Change.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Change.swift; sourceTree = "<group>"; };
 		369EF17E1C80C5D900D8D46A /* CoreDataStackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStackManager.swift; sourceTree = "<group>"; };
 		36AE6F351C8C37A50041B5CD /* UpdateUserInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateUserInfoController.swift; sourceTree = "<group>"; };
@@ -109,6 +112,7 @@
 		36D7CA061CA597F200A73176 /* Solution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solution.swift; sourceTree = "<group>"; };
 		36D7CA081CA5987E00A73176 /* Tweak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweak.swift; sourceTree = "<group>"; };
 		36D7CA0A1CA5AB5E00A73176 /* CreateSolution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateSolution.swift; sourceTree = "<group>"; };
+		36D82C1E1CD3506400FDA274 /* ViewFollowingChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewFollowingChangeViewController.swift; sourceTree = "<group>"; };
 		36D963F61CB556A1006F9D36 /* RetrieveSolutionsFromFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveSolutionsFromFirebase.swift; sourceTree = "<group>"; };
 		36DE37511CB12640005DEEEA /* RetrieveSolutions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveSolutions.swift; sourceTree = "<group>"; };
 		36DEEA461CC158B1000FF3A4 /* ViewFollowedChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewFollowedChangeViewController.swift; sourceTree = "<group>"; };
@@ -242,9 +246,11 @@
 				36AE6F351C8C37A50041B5CD /* UpdateUserInfoController.swift */,
 				36C37CA71C7A01AC002B4FB1 /* HomeViewController.swift */,
 				36C37CA51C7A01AC002B4FB1 /* CreateChangeViewController.swift */,
-				36DEEA461CC158B1000FF3A4 /* ViewFollowedChangeViewController.swift */,
-				36DEEA481CC1612E000FF3A4 /* ViewResultChangeViewController.swift */,
 				36C37CA11C7A01AC002B4FB1 /* AddIdeaViewController.swift */,
+				36DEEA461CC158B1000FF3A4 /* ViewFollowedChangeViewController.swift */,
+				36D82C1E1CD3506400FDA274 /* ViewFollowingChangeViewController.swift */,
+				369A433E1CD2695C00D84A6B /* ViewIdeaViewController.swift */,
+				36DEEA481CC1612E000FF3A4 /* ViewResultChangeViewController.swift */,
 				36C37CA61C7A01AC002B4FB1 /* FollowingViewController.swift */,
 				36C37CAB1C7A01AC002B4FB1 /* SearchViewController.swift */,
 				36C37CAA1C7A01AC002B4FB1 /* ResultsViewController.swift */,
@@ -498,9 +504,11 @@
 				36C37CB21C7A01AC002B4FB1 /* CreateChangeViewController.swift in Sources */,
 				36D7CA0B1CA5AB5E00A73176 /* CreateSolution.swift in Sources */,
 				36B03CC71C8DFBFF00E9427D /* CreateChange.swift in Sources */,
+				36D82C1F1CD3506400FDA274 /* ViewFollowingChangeViewController.swift in Sources */,
 				36C37CAF1C7A01AC002B4FB1 /* AddTweakViewController.swift in Sources */,
 				36C37CAE1C7A01AC002B4FB1 /* AddIdeaViewController.swift in Sources */,
 				36CB44141CCF504A000AD3C5 /* ChangeOrgCode.swift in Sources */,
+				369A433F1CD2695C00D84A6B /* ViewIdeaViewController.swift in Sources */,
 				36D7CA091CA5987E00A73176 /* Tweak.swift in Sources */,
 				36C37CB41C7A01AC002B4FB1 /* HomeViewController.swift in Sources */,
 				361A06401CB2CD450066C07C /* RetrieveFromFirebase.swift in Sources */,

@@ -134,10 +134,11 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
     func tableView(tableView:UITableView,didSelectRowAtIndexPath indexPath: NSIndexPath){
         
                 
-        var controller:AddIdeaViewController
-        controller = self.storyboard?.instantiateViewControllerWithIdentifier("AddIdeaViewController") as! AddIdeaViewController
+        var controller:ViewIdeaViewController
+        controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewIdeaViewController") as! ViewIdeaViewController
         
-        controller.viewControllerStatus = "viewing"
+        //controller.viewControllerStatus = "viewing"
+        
         controller.loadedNameData = TempChange.sharedInstance().solutionNameArray[indexPath.row] as? String
         controller.loadedDetailData = TempChange.sharedInstance().solutionDetailArray[indexPath.row] as? String
         

@@ -6,39 +6,41 @@ provides-nominal:
 provides-member:
 - ["C8GoChange18HomeViewController", ""]
 provides-dynamic-lookup:
-- "followButton"
-- "logout"
-- "sharedContext"
-- "addUserData"
-- "viewDidLoad"
-- "didReceiveMemoryWarning"
-- "ref"
 - "welcomeLabel"
+- "ref"
+- "addUserData"
+- "logout"
 - "createChange"
 - "followingLabel"
+- "viewWillAppear"
 - "checkCoreData"
+- "viewDidLoad"
+- "sharedContext"
+- "followButton"
+- "didReceiveMemoryWarning"
 depends-top-level:
-- "HomeViewController"
-- !private "UINavigationController"
-- !private "NSFetchRequest"
+- !private "CoreDataStackManager"
 - "UIViewController"
-- !private "UpdateUserInfoController"
-- !private "UnicodeScalarType"
-- !private "UIBarButtonItemStyle"
-- "NSManagedObjectContext"
+- !private "UINavigationController"
 - !private "String"
 - !private "print"
-- !private "StringLiteralType"
-- !private "CoreDataStackManager"
-- "Firebase"
-- "UIButton"
-- !private "AnyObject"
-- "UILabel"
-- !private "UIBarButtonItem"
-- !private "!="
 - !private "BooleanLiteralType"
-- !private "Change"
+- !private "UnicodeScalarType"
+- !private "UIBarButtonItem"
+- "UILabel"
+- !private "UpdateUserInfoController"
+- !private "NSFetchRequest"
+- "Firebase"
+- !private "UIBarButtonItemStyle"
+- "Bool"
 - !private "NSUserDefaults"
+- "UIButton"
+- "NSManagedObjectContext"
+- !private "StringLiteralType"
+- !private "Change"
+- !private "AnyObject"
+- !private "!="
+- "HomeViewController"
 depends-member:
 - !private ["Ps9AnyObject", "CoreDataStackManager"]
 - !private ["Ps9AnyObject", "Firebase"]
@@ -75,6 +77,7 @@ depends-member:
 - !private ["Ps9AnyObject", "unauth"]
 - !private ["Ps9AnyObject", "valueForKey"]
 - ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", "viewWillAppear"]
 - ["Ps9AnyObject", "welcomeLabel"]
 - ["Ps9AnyObject", ""]
 - !private ["Sa", "Generator"]
@@ -131,6 +134,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "unauth"]
 - !private ["Ps11CVarArgType", "valueForKey"]
 - ["Ps11CVarArgType", "viewDidLoad"]
+- ["Ps11CVarArgType", "viewWillAppear"]
 - ["Ps11CVarArgType", "welcomeLabel"]
 - ["Ps11CVarArgType", ""]
 - !private ["Vs9Character", "deinit"]
@@ -180,6 +184,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "unauth"]
 - !private ["Ps28CustomDebugStringConvertible", "valueForKey"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", "viewWillAppear"]
 - ["Ps28CustomDebugStringConvertible", "welcomeLabel"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps23CustomStringConvertible", "CoreDataStackManager"]
@@ -222,6 +227,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "unauth"]
 - !private ["Ps23CustomStringConvertible", "valueForKey"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", "viewWillAppear"]
 - ["Ps23CustomStringConvertible", "welcomeLabel"]
 - ["Ps23CustomStringConvertible", ""]
 - !private ["Sd", "deinit"]
@@ -262,6 +268,7 @@ depends-member:
 - !private ["Ps9Equatable", "unauth"]
 - !private ["Ps9Equatable", "valueForKey"]
 - ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", "viewWillAppear"]
 - ["Ps9Equatable", "welcomeLabel"]
 - ["Ps9Equatable", ""]
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
@@ -309,9 +316,11 @@ depends-member:
 - !private ["Ps8Hashable", "unauth"]
 - !private ["Ps8Hashable", "valueForKey"]
 - ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", "viewWillAppear"]
 - ["Ps8Hashable", "welcomeLabel"]
 - ["Ps8Hashable", ""]
 - !private ["C8GoChange18HomeViewController", "AnyObject"]
+- ["C8GoChange18HomeViewController", "Bool"]
 - !private ["C8GoChange18HomeViewController", "Change"]
 - !private ["C8GoChange18HomeViewController", "CoreDataStackManager"]
 - ["C8GoChange18HomeViewController", "Firebase"]
@@ -343,6 +352,7 @@ depends-member:
 - !private ["C8GoChange18HomeViewController", "sharedContext.storage"]
 - !private ["C8GoChange18HomeViewController", "storyboard"]
 - ["C8GoChange18HomeViewController", "viewDidLoad"]
+- ["C8GoChange18HomeViewController", "viewWillAppear"]
 - ["C8GoChange18HomeViewController", "welcomeLabel"]
 - !private ["SQ", "deinit"]
 - !private ["Ps9Indexable", "Generator"]
@@ -405,6 +415,7 @@ depends-member:
 - !private ["PSo8NSCoding", "storyboard"]
 - !private ["PSo8NSCoding", "text"]
 - ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", "viewWillAppear"]
 - ["PSo8NSCoding", "welcomeLabel"]
 - ["PSo8NSCoding", ""]
 - !private ["PSo9NSCopying", "init"]
@@ -432,6 +443,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "sharedContext.storage"]
 - !private ["PSo26NSExtensionRequestHandling", "storyboard"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", "viewWillAppear"]
 - ["PSo26NSExtensionRequestHandling", "welcomeLabel"]
 - ["PSo26NSExtensionRequestHandling", ""]
 - !private ["CSo14NSFetchRequest", "init"]
@@ -439,6 +451,7 @@ depends-member:
 - !private ["CSo22NSManagedObjectContext", "executeFetchRequest"]
 - !private ["PSo16NSMutableCopying", "init"]
 - !private ["CSo8NSObject", "AnyObject"]
+- ["CSo8NSObject", "Bool"]
 - !private ["CSo8NSObject", "Change"]
 - !private ["CSo8NSObject", "CoreDataStackManager"]
 - ["CSo8NSObject", "Firebase"]
@@ -478,6 +491,7 @@ depends-member:
 - !private ["CSo8NSObject", "unauth"]
 - !private ["CSo8NSObject", "valueForKey"]
 - ["CSo8NSObject", "viewDidLoad"]
+- ["CSo8NSObject", "viewWillAppear"]
 - ["CSo8NSObject", "welcomeLabel"]
 - !private ["PSo16NSObjectProtocol", "CoreDataStackManager"]
 - !private ["PSo16NSObjectProtocol", "Firebase"]
@@ -512,6 +526,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "unauth"]
 - !private ["PSo16NSObjectProtocol", "valueForKey"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", "viewWillAppear"]
 - ["PSo16NSObjectProtocol", "welcomeLabel"]
 - ["PSo16NSObjectProtocol", ""]
 - !private ["CSo24NSPersistentStoreRequest", "init"]
@@ -576,6 +591,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "storyboard"]
 - !private ["PSo21UIAppearanceContainer", "text"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", "viewWillAppear"]
 - ["PSo21UIAppearanceContainer", "welcomeLabel"]
 - ["PSo21UIAppearanceContainer", ""]
 - !private ["CSo15UIBarButtonItem", "init"]
@@ -605,6 +621,7 @@ depends-member:
 - ["PSo18UIContentContainer", "sharedContext.storage"]
 - !private ["PSo18UIContentContainer", "storyboard"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", "viewWillAppear"]
 - ["PSo18UIContentContainer", "welcomeLabel"]
 - ["PSo18UIContentContainer", ""]
 - !private ["PSo17UICoordinateSpace", "hidden"]
@@ -637,12 +654,14 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "storyboard"]
 - !private ["PSo18UIFocusEnvironment", "text"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", "viewWillAppear"]
 - ["PSo18UIFocusEnvironment", "welcomeLabel"]
 - ["PSo18UIFocusEnvironment", ""]
 - !private ["CSo7UILabel", "hidden"]
 - !private ["CSo7UILabel", "text"]
 - !private ["CSo16UINavigationItem", "backBarButtonItem"]
 - !private ["CSo11UIResponder", "AnyObject"]
+- ["CSo11UIResponder", "Bool"]
 - !private ["CSo11UIResponder", "Change"]
 - !private ["CSo11UIResponder", "CoreDataStackManager"]
 - ["CSo11UIResponder", "Firebase"]
@@ -675,6 +694,7 @@ depends-member:
 - !private ["CSo11UIResponder", "storyboard"]
 - !private ["CSo11UIResponder", "text"]
 - ["CSo11UIResponder", "viewDidLoad"]
+- ["CSo11UIResponder", "viewWillAppear"]
 - ["CSo11UIResponder", "welcomeLabel"]
 - !private ["PSo16UIStateRestoring", "CoreDataStackManager"]
 - !private ["PSo16UIStateRestoring", "Firebase"]
@@ -700,6 +720,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "sharedContext.storage"]
 - !private ["PSo16UIStateRestoring", "storyboard"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", "viewWillAppear"]
 - ["PSo16UIStateRestoring", "welcomeLabel"]
 - ["PSo16UIStateRestoring", ""]
 - !private ["CSo12UIStoryboard", "instantiateViewControllerWithIdentifier"]
@@ -729,11 +750,13 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "storyboard"]
 - !private ["PSo18UITraitEnvironment", "text"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", "viewWillAppear"]
 - ["PSo18UITraitEnvironment", "welcomeLabel"]
 - ["PSo18UITraitEnvironment", ""]
 - !private ["CSo6UIView", "hidden"]
 - !private ["CSo6UIView", "text"]
 - !private ["CSo16UIViewController", "AnyObject"]
+- ["CSo16UIViewController", "Bool"]
 - !private ["CSo16UIViewController", "Change"]
 - !private ["CSo16UIViewController", "CoreDataStackManager"]
 - ["CSo16UIViewController", "Firebase"]
@@ -764,6 +787,7 @@ depends-member:
 - ["CSo16UIViewController", "sharedContext.storage"]
 - !private ["CSo16UIViewController", "storyboard"]
 - ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", "viewWillAppear"]
 - ["CSo16UIViewController", "welcomeLabel"]
 - ["CSo16UIViewController", ""]
 - !private ["Su", "deinit"]
@@ -948,4 +972,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "a7e7a057863f39a965952f5ae93f7355"
+interface-hash: "7b96acf2b91268cce56412d3f1c2566c"

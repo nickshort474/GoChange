@@ -138,7 +138,7 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         var controller:AddIdeaViewController
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("AddIdeaViewController") as! AddIdeaViewController
         
-        controller.viewControllerStatus = "adding"
+        controller.viewControllerStatus = "addingSolutionToNewChange"
         self.navigationController?.pushViewController(controller, animated: true)
         
     }
@@ -204,12 +204,17 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         self.navigationItem.backBarButtonItem = barButtonItem
         
         
-        var controller:AddIdeaViewController
-        controller = self.storyboard?.instantiateViewControllerWithIdentifier("AddIdeaViewController") as! AddIdeaViewController
+        var controller:ViewIdeaViewController
+        controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewIdeaViewController") as! ViewIdeaViewController
         
-        controller.viewControllerStatus = "viewing"
+        //controller.viewControllerStatus = "viewing"
         controller.loadedNameData = TempChange.sharedInstance().solutionNameArray[indexPath.row] as? String
         controller.loadedDetailData = TempChange.sharedInstance().solutionDetailArray[indexPath.row] as? String
+        
+        
+        //TODO: Fix empty change do we need to view solutions after adding them
+        //controller.change = self.change
+        
         
         self.navigationController?.pushViewController(controller, animated: false)
         

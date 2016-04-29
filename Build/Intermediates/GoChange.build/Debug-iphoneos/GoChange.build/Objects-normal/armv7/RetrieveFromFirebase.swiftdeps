@@ -8,13 +8,13 @@ provides-member:
 provides-dynamic-lookup:
 - "nameRef"
 depends-top-level:
-- "Firebase"
-- "NSObject"
-- "StringLiteralType"
 - "Void"
-- "FDataSnapshot"
-- !private "print"
+- "Firebase"
 - "RetrieveFromFirebase"
+- "StringLiteralType"
+- !private "print"
+- "NSObject"
+- "FDataSnapshot"
 depends-member:
 - ["Ps9AnyObject", "Firebase"]
 - !private ["Ps9AnyObject", "description"]

@@ -15,7 +15,7 @@ class ChangeOrgCode:NSObject{
     
     let parameterDictionary = [
         "api_key":GoChangeClient.Constants.apiKey,
-        "petition_url":GoChangeClient.Constants.petitionURL
+        "petition_url":GoChangeClient.Constants.basePetitionURL
     ]
     
     override init(){

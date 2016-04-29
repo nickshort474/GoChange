@@ -24,6 +24,7 @@ class SaveNewSolution:NSObject{
         existingChange = change
         saveSolutionsToFirebase()
         createCoreDataSolutions()
+        adjustCoreDataChange()
         
     }
     
@@ -93,7 +94,30 @@ class SaveNewSolution:NSObject{
             let newSolution = Solution(dictionary: solutionDictionary,context: sharedContext)
             newSolution.solutionToChange = existingChange!
             
-           
+        }
+        
+       
+        
+    }
+    
+    func adjustCoreDataChange(){
+        
+        let request = NSFetchRequest(entityName: "Change")
+        let predicate = NSPredicate(format: "changeID == %@", existingChange.changeID)
+        request.predicate = predicate
+        
+        do{
+            let results =  try sharedContext.executeFetchRequest(request) as! [Change]
+            if let entity = results.first{
+                
+                var holdingSolutionCount = entity.solutionCount as Int
+                holdingSolutionCount += 1
+                entity.solutionCount = holdingSolutionCount
+                
+            }
+            
+        }catch{
+            //TODO: catch errors
         }
         
         do{
@@ -103,8 +127,6 @@ class SaveNewSolution:NSObject{
         }catch{
             //TODO: Catch errors!
         }
-        
-        
     }
     
     

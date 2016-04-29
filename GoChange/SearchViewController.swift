@@ -154,12 +154,56 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
                     (result) in
                
                     self.useSolutionCountArray = result
-                    self.sendToResults()
+                    self.checkIfInCoreData()
+                    
+                    
                 }
         }
     }
     
-    
+    func checkIfInCoreData(){
+        
+        //TODO: check created arrays against coreData to see if already followed
+        
+        
+        let followedChangeArray:NSMutableArray = []
+       
+        
+        
+        for var i in 0 ..< useRefArray.count{
+            
+            _ = RetrieveChange(changeID: useRefArray[i] as! String){
+                (result) in
+                
+                //If exists in coreData result will return Change Object, add to followed Array
+                followedChangeArray.addObject(result)
+                
+            }
+            
+        }
+        
+        //test follwoed array against retruened result and remove any changes already followed
+        for var i in 0 ..< matchedNameArray.count{
+            
+            for element in followedChangeArray{
+            
+                var changeObject = element as! Change
+           
+                if matchedNameArray[i] as! String == changeObject.changeName {
+                    self.matchedNameArray.removeObjectAtIndex(i)
+                    self.useDetailArray.removeObjectAtIndex(i)
+                    self.useSolutionCountArray.removeObjectAtIndex(i)
+                    self.useRefArray.removeObjectAtIndex(i)
+                    self.useOwnerArray.removeObjectAtIndex(i)
+                }
+            
+            
+            }
+            
+        }
+        
+        self.sendToResults()
+    }
     
     func sendToResults(){
         
@@ -170,11 +214,8 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         let navigationController = self.navigationController
         
         controller.resultNameArray = matchedNameArray
-        
         controller.resultDetailArray = useDetailArray
-        
         controller.resultSolutionCountArray = useSolutionCountArray
-        
         controller.refArray = useRefArray
         controller.solutionOwnerArray = useOwnerArray
         

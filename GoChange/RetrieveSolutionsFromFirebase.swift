@@ -19,7 +19,7 @@ class RetrieveSolutionsFromFirebase:NSObject{
         
         let changeRef = ref.childByAppendingPath(changeID)
         
-        changeRef.observeSingleEventOfType(.Value, withBlock: {snapshot in
+        changeRef.queryOrderedByChild("SolutionVoteCount").observeSingleEventOfType(.Value, withBlock: {snapshot in
             
             completionHandler(result: snapshot)
             

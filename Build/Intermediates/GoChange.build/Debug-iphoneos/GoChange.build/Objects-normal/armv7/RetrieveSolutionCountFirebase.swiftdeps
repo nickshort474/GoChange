@@ -6,19 +6,19 @@ provides-nominal:
 provides-member:
 - ["C8GoChange29RetrieveSolutionCountFirebase", ""]
 provides-dynamic-lookup:
-- "resultsArray"
 - "nameRef"
+- "resultsArray"
 depends-top-level:
-- !private "=="
-- !private "..<"
-- "Array"
-- "Firebase"
-- "RetrieveSolutionCountFirebase"
-- !private "print"
-- !private "String"
 - "NSMutableArray"
-- "StringLiteralType"
+- "Firebase"
+- "Array"
 - "NSObject"
+- !private "..<"
+- !private "String"
+- !private "print"
+- !private "=="
+- "StringLiteralType"
+- "RetrieveSolutionCountFirebase"
 - "Void"
 depends-member:
 - ["Ps9AnyObject", "Element"]

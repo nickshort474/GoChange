@@ -33,11 +33,16 @@ class HomeViewController: UIViewController {
         //TODO: Check core data for amount of following
         followingLabel.hidden = true
         
-        checkCoreData()
+        
         
         let barButtonItem = UIBarButtonItem(title: "Home", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
         self.navigationItem.backBarButtonItem = barButtonItem
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        checkCoreData()
+    }
+    
     
     lazy var sharedContext:NSManagedObjectContext = {
         
