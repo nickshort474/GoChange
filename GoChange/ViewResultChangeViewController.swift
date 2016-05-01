@@ -142,8 +142,8 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
         var controller:ViewIdeaViewController
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewIdeaViewController") as! ViewIdeaViewController
         
-        //controller.viewControllerStatus = "viewing"
-        
+        controller.viewControllerStatus = "results"
+        controller.petitionURL = TempChange.sharedInstance().petitionURLArray[indexPath.row]
         controller.loadedNameData = TempChange.sharedInstance().solutionNameArray[indexPath.row]
         controller.loadedDetailData = TempChange.sharedInstance().solutionDetailArray[indexPath.row]
         

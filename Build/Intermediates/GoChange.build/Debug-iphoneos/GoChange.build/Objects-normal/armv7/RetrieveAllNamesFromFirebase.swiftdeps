@@ -13,8 +13,8 @@ depends-top-level:
 - "StringLiteralType"
 - "Firebase"
 - !private "print"
-- "Void"
 - "FDataSnapshot"
+- "Void"
 depends-member:
 - ["Ps9AnyObject", "Firebase"]
 - !private ["Ps9AnyObject", "description"]

@@ -33,7 +33,7 @@ class SearchController:NSObject{
     var refsNotInCoreData:[String] = []
     
     
-    init(searchText:String,completionHandler:(nameResult:[String],detailResult:[String],ownerResult:[String],solutionCountResult:[Int],refResult:[String])->Void){
+    init(searchText:String,completionHandler:(nameResult:[String] ,detailResult:[String],ownerResult:[String],solutionCountResult:[Int],refResult:[String],matchType:String)->Void){
         super.init()
         
         self.searchText = searchText
@@ -56,13 +56,22 @@ class SearchController:NSObject{
             
             self.checkResults()
             
-            self.createRefArray(){
-                (nameResult,detailResult,ownerResult,solutionCountResult,refResult) in
+            if(self.matchedNameArray.count == 0){
                 
-                completionHandler(nameResult: nameResult,detailResult: detailResult,ownerResult: ownerResult,solutionCountResult: solutionCountResult,refResult: refResult)
+                completionHandler(nameResult:[],detailResult:[],ownerResult:[],solutionCountResult: [],refResult:[],matchType:"noFirebaseMatches")
                 
+            }else{
+                
+                self.createRefArray(){
+                (nameResult,detailResult,ownerResult,solutionCountResult,refResult,matchType) in
+                
+                    completionHandler(nameResult: nameResult,detailResult: detailResult,ownerResult: ownerResult,solutionCountResult: solutionCountResult,refResult: refResult,matchType:matchType)
+                
+                }
+
             }
             
+                        
         }
 
         
@@ -86,7 +95,7 @@ class SearchController:NSObject{
         
         
         // create count variable to hold location of found search terms
-        var count = 0
+       
         /*
         for value in returnedNameArray{
             
@@ -114,6 +123,7 @@ class SearchController:NSObject{
         }
         */
         
+        var count = 0
         
         for value in returnedNameArray{
             
@@ -160,7 +170,7 @@ class SearchController:NSObject{
         
     }
     
-    func createRefArray(completionHandler:(nameResult:[String],detailResult:[String],ownerResult:[String],solutionCountResult:[Int],refResult:[String])->Void){
+    func createRefArray(completionHandler:(nameResult:[String],detailResult:[String],ownerResult:[String],solutionCountResult:[Int],refResult:[String],matchType:String)->Void){
         
         //clear array after coming back from previous search
         useNameArray = []
@@ -177,28 +187,33 @@ class SearchController:NSObject{
         //use useRefArray to Check if in core data based on reference
         self.checkIfInCoreData()
         
-        // use refsNotInCoreData to collect all data from firebase
-        _ = RetrieveDetailsFromFirebase(userRefArray: refsNotInCoreData){
-            (detailResults) in
+        if(refsNotInCoreData.count == 0){
             
-            self.useDetailArray = detailResults
+            completionHandler(nameResult:[],detailResult:[],ownerResult:[],solutionCountResult:[],refResult:[],matchType: "coreDataMatch")
+        }else{
+        
+            // use refsNotInCoreData to collect all data from firebase
+            _ = RetrieveDetailsFromFirebase(userRefArray: refsNotInCoreData){
+                (detailResults) in
             
-            _ = RetrieveSolutionCountFirebase(changeArray:self.refsNotInCoreData){
-                (solutionCountResults) in
+                self.useDetailArray = detailResults
+            
+                _ = RetrieveSolutionCountFirebase(changeArray:self.refsNotInCoreData){
+                    (solutionCountResults) in
                 
-                self.useSolutionCountArray = solutionCountResults
+                    self.useSolutionCountArray = solutionCountResults
                 
-                _  = RetrieveNamesFromFirebase(changeArray:self.refsNotInCoreData){
-                    (nameResults,ownerResults) in
+                    _  = RetrieveNamesFromFirebase(changeArray:self.refsNotInCoreData){
+                        (nameResults,ownerResults) in
                     
-                    self.useNameArray = nameResults
-                    self.useOwnerArray = ownerResults
+                        self.useNameArray = nameResults
+                        self.useOwnerArray = ownerResults
                     
-                    completionHandler(nameResult:nameResults,detailResult:detailResults,ownerResult:ownerResults,solutionCountResult:solutionCountResults,refResult:self.refsNotInCoreData)
+                        completionHandler(nameResult:nameResults,detailResult:detailResults,ownerResult:ownerResults,solutionCountResult:solutionCountResults,refResult:self.refsNotInCoreData,matchType:"matched")
+                    }
                 }
             }
         }
-        
         
     }
     

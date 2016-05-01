@@ -66,6 +66,9 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         TempChange.sharedInstance().newSolutionNameArray = []
         TempChange.sharedInstance().newSolutionDetailArray = []
         
+        petitionTextField.text = TempChange.sharedInstance().currentPetitionValue
+        
+        
     }
     
     
@@ -89,10 +92,26 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
                 TempChange.sharedInstance().solutionVoteArray.append(0)
                 TempChange.sharedInstance().solutionIDArray.append("newSolution")
                 
-                
                 //Save data to newSolutionArrays ready for posting of SaveNewSoltion
                 TempChange.sharedInstance().newSolutionNameArray.append(nameTextField.text!)
                 TempChange.sharedInstance().newSolutionDetailArray.append(detailTextView.text!)
+                
+                
+                
+                if(petitionTextField.text != GoChangeClient.Constants.basePetitionURL){
+                    
+                    // if user has navigated to a petition rather than just the homepage
+                    TempChange.sharedInstance().petitionURLArray.append(petitionTextField.text!)
+                    TempChange.sharedInstance().newPetitionURLArray.append(petitionTextField.text!)
+                    
+                }else{
+                    
+                    //If haven't gone past homepage or not added petition
+                    TempChange.sharedInstance().petitionURLArray.append("")
+                    TempChange.sharedInstance().newPetitionURLArray.append("")
+                    
+                }
+                
                 
                 _ = SaveNewSolution(change: self.change){
                     (result) in
@@ -110,6 +129,19 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
                 TempChange.sharedInstance().solutionDetailArray.append(detailTextView.text!)
                 TempChange.sharedInstance().solutionVoteArray.append(0)
                 TempChange.sharedInstance().solutionIDArray.append("newSolution")
+                                
+                if(petitionTextField.text != GoChangeClient.Constants.basePetitionURL){
+                    
+                    // if user has navigated to a petition rather than just the homepage
+                    TempChange.sharedInstance().petitionURLArray.append(petitionTextField.text!)
+                    
+                }else{
+                    
+                    //If haven't gone past homepage or not added petition
+                    TempChange.sharedInstance().petitionURLArray.append("")
+                    
+                }
+                
                 
                 self.navigationController?.popViewControllerAnimated(true)
             }
@@ -182,8 +214,16 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         
         var controller:WebViewController
         controller = storyboard?.instantiateViewControllerWithIdentifier("WebViewController") as! WebViewController
+       
+        
         
         controller.urlString = GoChangeClient.Constants.basePetitionURL
+        controller.status = "adding"
+        
+        
+        //print(GoChangeClient.Constants.basePetitionURL)
+        
+        
         
         self.navigationController?.pushViewController(controller, animated: true)
         

@@ -6,33 +6,33 @@ provides-nominal:
 provides-member:
 - ["C8GoChange13SaveNewChange", ""]
 provides-dynamic-lookup:
-- "changeID"
 - "newChange"
+- "saveDetailsToFirebase"
+- "saveSolutionsToFirebase"
+- "changeID"
+- "createCoreDataChange"
 - "saveChangeToFirebase"
+- "solutionIDArray"
 - "sharedContext"
 - "createCoreDataSolutions"
-- "saveSolutionsToFirebase"
-- "solutionIDArray"
-- "createCoreDataChange"
-- "saveDetailsToFirebase"
 depends-top-level:
 - "Void"
-- "NSMutableArray"
-- "Change"
-- "AnyObject"
-- !private "StringLiteralType"
-- !private "TempChange"
-- "NSManagedObjectContext"
 - !private "Dictionary"
-- !private "Firebase"
-- !private "NSUserDefaults"
-- !private "CoreDataStackManager"
-- !private "Solution"
-- !private "..<"
-- "String"
-- "NSObject"
-- "Array"
 - "SaveNewChange"
+- !private "TempChange"
+- !private "..<"
+- !private "Firebase"
+- !private "StringLiteralType"
+- "Change"
+- "NSMutableArray"
+- "String"
+- !private "CoreDataStackManager"
+- "NSObject"
+- !private "NSUserDefaults"
+- "AnyObject"
+- !private "Solution"
+- "Array"
+- "NSManagedObjectContext"
 depends-member:
 - !private ["Ps9AnyObject", "AnyObject"]
 - !private ["Ps9AnyObject", "Change"]
@@ -59,6 +59,7 @@ depends-member:
 - !private ["Ps9AnyObject", "key"]
 - !private ["Ps9AnyObject", "managedObjectContext"]
 - ["Ps9AnyObject", "newChange"]
+- !private ["Ps9AnyObject", "petitionURLArray"]
 - !private ["Ps9AnyObject", "save"]
 - ["Ps9AnyObject", "saveChangeToFirebase"]
 - ["Ps9AnyObject", "saveDetailsToFirebase"]
@@ -125,6 +126,7 @@ depends-member:
 - ["Ps11CVarArgType", "init"]
 - !private ["Ps11CVarArgType", "key"]
 - ["Ps11CVarArgType", "newChange"]
+- !private ["Ps11CVarArgType", "petitionURLArray"]
 - !private ["Ps11CVarArgType", "save"]
 - ["Ps11CVarArgType", "saveChangeToFirebase"]
 - ["Ps11CVarArgType", "saveDetailsToFirebase"]
@@ -184,6 +186,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "key"]
 - ["Ps28CustomDebugStringConvertible", "newChange"]
+- !private ["Ps28CustomDebugStringConvertible", "petitionURLArray"]
 - !private ["Ps28CustomDebugStringConvertible", "save"]
 - ["Ps28CustomDebugStringConvertible", "saveChangeToFirebase"]
 - ["Ps28CustomDebugStringConvertible", "saveDetailsToFirebase"]
@@ -231,6 +234,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "key"]
 - ["Ps23CustomStringConvertible", "newChange"]
+- !private ["Ps23CustomStringConvertible", "petitionURLArray"]
 - !private ["Ps23CustomStringConvertible", "save"]
 - ["Ps23CustomStringConvertible", "saveChangeToFirebase"]
 - ["Ps23CustomStringConvertible", "saveDetailsToFirebase"]
@@ -284,6 +288,7 @@ depends-member:
 - ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "key"]
 - ["Ps9Equatable", "newChange"]
+- !private ["Ps9Equatable", "petitionURLArray"]
 - !private ["Ps9Equatable", "save"]
 - ["Ps9Equatable", "saveChangeToFirebase"]
 - ["Ps9Equatable", "saveDetailsToFirebase"]
@@ -343,6 +348,7 @@ depends-member:
 - ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "key"]
 - ["Ps8Hashable", "newChange"]
+- !private ["Ps8Hashable", "petitionURLArray"]
 - !private ["Ps8Hashable", "save"]
 - ["Ps8Hashable", "saveChangeToFirebase"]
 - ["Ps8Hashable", "saveDetailsToFirebase"]
@@ -390,6 +396,7 @@ depends-member:
 - !private ["VC8GoChange6Change4Keys", "changeOwner"]
 - !private ["VC8GoChange6Change4Keys", "solutionCount"]
 - !private ["VC8GoChange8Solution4Keys", "haveVotedFor"]
+- !private ["VC8GoChange8Solution4Keys", "petitionURL"]
 - !private ["VC8GoChange8Solution4Keys", "solutionDescription"]
 - !private ["VC8GoChange8Solution4Keys", "solutionID"]
 - !private ["VC8GoChange8Solution4Keys", "solutionName"]
@@ -474,6 +481,7 @@ depends-member:
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "key"]
 - ["CSo8NSObject", "newChange"]
+- !private ["CSo8NSObject", "petitionURLArray"]
 - !private ["CSo8NSObject", "save"]
 - ["CSo8NSObject", "saveChangeToFirebase"]
 - ["CSo8NSObject", "saveDetailsToFirebase"]
@@ -513,6 +521,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "key"]
 - ["PSo16NSObjectProtocol", "newChange"]
+- !private ["PSo16NSObjectProtocol", "petitionURLArray"]
 - !private ["PSo16NSObjectProtocol", "save"]
 - ["PSo16NSObjectProtocol", "saveChangeToFirebase"]
 - ["PSo16NSObjectProtocol", "saveDetailsToFirebase"]
@@ -601,6 +610,7 @@ depends-member:
 - !private ["SS", "deinit"]
 - !private ["C8GoChange10TempChange", "changeDetail"]
 - !private ["C8GoChange10TempChange", "changeName"]
+- !private ["C8GoChange10TempChange", "petitionURLArray"]
 - !private ["C8GoChange10TempChange", "sharedInstance"]
 - !private ["C8GoChange10TempChange", "solutionDetailArray"]
 - !private ["C8GoChange10TempChange", "solutionNameArray"]

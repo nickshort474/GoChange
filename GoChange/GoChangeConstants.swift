@@ -18,9 +18,10 @@ extension GoChangeClient{
         static var userName:String = ""
         static var apiKey = "1a4f569e8857b5ce19ed32d20b799f1e8d922b8b3bd5413cbaa8fb9c2664ad41"
         
-        static var requestURL = "https://api.change.org/v1/petitions/get_id"
+        static var requestIDURL = "https://api.change.org/v1/petitions/get_id"
+        static var requestPetitionInfoURL = "https://api.change.org/v1/petitions/"        
         
-        static var basePetitionURL = "http://www.change.org/"
+        static var basePetitionURL = "https://www.change.org/"
         
         static var dynamicPetitionURL = ""
         

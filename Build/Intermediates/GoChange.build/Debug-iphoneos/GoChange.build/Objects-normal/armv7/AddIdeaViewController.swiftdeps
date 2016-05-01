@@ -6,50 +6,50 @@ provides-nominal:
 provides-member:
 - ["C8GoChange21AddIdeaViewController", ""]
 provides-dynamic-lookup:
-- "addDetailClick"
-- "addNameButton"
-- "viewDidLoad"
-- "addSolution"
-- "detailTextView"
-- "viewControllerStatus"
-- "doneAddingIdea"
-- "currentNameData"
-- "textFieldDidBeginEditing"
-- "didReceiveMemoryWarning"
-- "addDetailButton"
-- "petitionTextField"
-- "change"
-- "textViewDidBeginEditing"
-- "addNameClick"
-- "addPetition"
-- "petitionButton"
-- "currentDetailData"
-- "nameTextField"
 - "viewWillAppear"
+- "addPetition"
+- "didReceiveMemoryWarning"
+- "change"
+- "detailTextView"
+- "addNameClick"
+- "petitionTextField"
+- "viewControllerStatus"
+- "currentDetailData"
+- "addDetailButton"
+- "addDetailClick"
+- "textFieldDidBeginEditing"
+- "currentNameData"
+- "textViewDidBeginEditing"
+- "nameTextField"
+- "addSolution"
+- "petitionButton"
+- "addNameButton"
+- "doneAddingIdea"
+- "viewDidLoad"
 depends-top-level:
-- !private "&&"
-- "UIButton"
-- "UITableViewDelegate"
-- !private "=="
-- !private "!="
-- "UITextFieldDelegate"
-- "UITextViewDelegate"
-- "AddIdeaViewController"
-- !private "UIColor"
-- "UIViewController"
-- "AnyObject"
 - !private "SaveNewSolution"
-- !private "StringLiteralType"
-- !private "Array"
-- "Change"
-- !private "WebViewController"
-- !private "GoChangeClient"
-- "UITextView"
-- "Bool"
-- "String"
-- !private "BooleanLiteralType"
 - "UITextField"
+- "UIButton"
+- !private "WebViewController"
+- !private "=="
+- !private "GoChangeClient"
 - !private "TempChange"
+- !private "Array"
+- !private "UIColor"
+- "AddIdeaViewController"
+- !private "StringLiteralType"
+- !private "&&"
+- "UIViewController"
+- "UITextFieldDelegate"
+- "UITextView"
+- "UITextViewDelegate"
+- !private "!="
+- "AnyObject"
+- "String"
+- "Bool"
+- "Change"
+- !private "BooleanLiteralType"
+- "UITableViewDelegate"
 depends-member:
 - ["C8GoChange21AddIdeaViewController", "AnyObject"]
 - ["C8GoChange21AddIdeaViewController", "Bool"]
@@ -130,6 +130,7 @@ depends-member:
 - ["Ps9AnyObject", "change"]
 - ["Ps9AnyObject", "currentDetailData"]
 - ["Ps9AnyObject", "currentNameData"]
+- !private ["Ps9AnyObject", "currentPetitionValue"]
 - !private ["Ps9AnyObject", "delegate"]
 - ["Ps9AnyObject", "detailTextView"]
 - ["Ps9AnyObject", "didReceiveMemoryWarning"]
@@ -141,10 +142,12 @@ depends-member:
 - !private ["Ps9AnyObject", "instantiateViewControllerWithIdentifier"]
 - ["Ps9AnyObject", "nameTextField"]
 - !private ["Ps9AnyObject", "navigationController"]
+- !private ["Ps9AnyObject", "newPetitionURLArray"]
 - !private ["Ps9AnyObject", "newSolutionDetailArray"]
 - !private ["Ps9AnyObject", "newSolutionNameArray"]
 - ["Ps9AnyObject", "petitionButton"]
 - ["Ps9AnyObject", "petitionTextField"]
+- !private ["Ps9AnyObject", "petitionURLArray"]
 - !private ["Ps9AnyObject", "popViewControllerAnimated"]
 - !private ["Ps9AnyObject", "pushViewController"]
 - !private ["Ps9AnyObject", "resignFirstResponder"]
@@ -165,6 +168,7 @@ depends-member:
 - !private ["Ps9AnyObject", "solutionIDArray"]
 - !private ["Ps9AnyObject", "solutionNameArray"]
 - !private ["Ps9AnyObject", "solutionVoteArray"]
+- !private ["Ps9AnyObject", "status"]
 - !private ["Ps9AnyObject", "storyboard"]
 - ["Ps9AnyObject", "tableView"]
 - !private ["Ps9AnyObject", "text"]
@@ -230,6 +234,7 @@ depends-member:
 - ["Ps11CVarArgType", "change"]
 - ["Ps11CVarArgType", "currentDetailData"]
 - ["Ps11CVarArgType", "currentNameData"]
+- !private ["Ps11CVarArgType", "currentPetitionValue"]
 - !private ["Ps11CVarArgType", "delegate"]
 - ["Ps11CVarArgType", "detailTextView"]
 - ["Ps11CVarArgType", "didReceiveMemoryWarning"]
@@ -241,10 +246,12 @@ depends-member:
 - !private ["Ps11CVarArgType", "instantiateViewControllerWithIdentifier"]
 - ["Ps11CVarArgType", "nameTextField"]
 - !private ["Ps11CVarArgType", "navigationController"]
+- !private ["Ps11CVarArgType", "newPetitionURLArray"]
 - !private ["Ps11CVarArgType", "newSolutionDetailArray"]
 - !private ["Ps11CVarArgType", "newSolutionNameArray"]
 - ["Ps11CVarArgType", "petitionButton"]
 - ["Ps11CVarArgType", "petitionTextField"]
+- !private ["Ps11CVarArgType", "petitionURLArray"]
 - !private ["Ps11CVarArgType", "popViewControllerAnimated"]
 - !private ["Ps11CVarArgType", "pushViewController"]
 - !private ["Ps11CVarArgType", "resignFirstResponder"]
@@ -265,6 +272,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "solutionIDArray"]
 - !private ["Ps11CVarArgType", "solutionNameArray"]
 - !private ["Ps11CVarArgType", "solutionVoteArray"]
+- !private ["Ps11CVarArgType", "status"]
 - !private ["Ps11CVarArgType", "storyboard"]
 - ["Ps11CVarArgType", "tableView"]
 - !private ["Ps11CVarArgType", "text"]
@@ -321,6 +329,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "change"]
 - ["Ps28CustomDebugStringConvertible", "currentDetailData"]
 - ["Ps28CustomDebugStringConvertible", "currentNameData"]
+- !private ["Ps28CustomDebugStringConvertible", "currentPetitionValue"]
 - !private ["Ps28CustomDebugStringConvertible", "delegate"]
 - ["Ps28CustomDebugStringConvertible", "detailTextView"]
 - ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
@@ -332,10 +341,12 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "instantiateViewControllerWithIdentifier"]
 - ["Ps28CustomDebugStringConvertible", "nameTextField"]
 - !private ["Ps28CustomDebugStringConvertible", "navigationController"]
+- !private ["Ps28CustomDebugStringConvertible", "newPetitionURLArray"]
 - !private ["Ps28CustomDebugStringConvertible", "newSolutionDetailArray"]
 - !private ["Ps28CustomDebugStringConvertible", "newSolutionNameArray"]
 - ["Ps28CustomDebugStringConvertible", "petitionButton"]
 - ["Ps28CustomDebugStringConvertible", "petitionTextField"]
+- !private ["Ps28CustomDebugStringConvertible", "petitionURLArray"]
 - !private ["Ps28CustomDebugStringConvertible", "popViewControllerAnimated"]
 - !private ["Ps28CustomDebugStringConvertible", "pushViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "resignFirstResponder"]
@@ -356,6 +367,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "solutionIDArray"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionNameArray"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionVoteArray"]
+- !private ["Ps28CustomDebugStringConvertible", "status"]
 - !private ["Ps28CustomDebugStringConvertible", "storyboard"]
 - ["Ps28CustomDebugStringConvertible", "tableView"]
 - !private ["Ps28CustomDebugStringConvertible", "text"]
@@ -406,6 +418,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "change"]
 - ["Ps23CustomStringConvertible", "currentDetailData"]
 - ["Ps23CustomStringConvertible", "currentNameData"]
+- !private ["Ps23CustomStringConvertible", "currentPetitionValue"]
 - !private ["Ps23CustomStringConvertible", "delegate"]
 - ["Ps23CustomStringConvertible", "detailTextView"]
 - ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
@@ -417,10 +430,12 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "instantiateViewControllerWithIdentifier"]
 - ["Ps23CustomStringConvertible", "nameTextField"]
 - !private ["Ps23CustomStringConvertible", "navigationController"]
+- !private ["Ps23CustomStringConvertible", "newPetitionURLArray"]
 - !private ["Ps23CustomStringConvertible", "newSolutionDetailArray"]
 - !private ["Ps23CustomStringConvertible", "newSolutionNameArray"]
 - ["Ps23CustomStringConvertible", "petitionButton"]
 - ["Ps23CustomStringConvertible", "petitionTextField"]
+- !private ["Ps23CustomStringConvertible", "petitionURLArray"]
 - !private ["Ps23CustomStringConvertible", "popViewControllerAnimated"]
 - !private ["Ps23CustomStringConvertible", "pushViewController"]
 - !private ["Ps23CustomStringConvertible", "resignFirstResponder"]
@@ -441,6 +456,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "solutionIDArray"]
 - !private ["Ps23CustomStringConvertible", "solutionNameArray"]
 - !private ["Ps23CustomStringConvertible", "solutionVoteArray"]
+- !private ["Ps23CustomStringConvertible", "status"]
 - !private ["Ps23CustomStringConvertible", "storyboard"]
 - ["Ps23CustomStringConvertible", "tableView"]
 - !private ["Ps23CustomStringConvertible", "text"]
@@ -485,6 +501,7 @@ depends-member:
 - ["Ps9Equatable", "change"]
 - ["Ps9Equatable", "currentDetailData"]
 - ["Ps9Equatable", "currentNameData"]
+- !private ["Ps9Equatable", "currentPetitionValue"]
 - !private ["Ps9Equatable", "delegate"]
 - ["Ps9Equatable", "detailTextView"]
 - ["Ps9Equatable", "didReceiveMemoryWarning"]
@@ -496,10 +513,12 @@ depends-member:
 - !private ["Ps9Equatable", "instantiateViewControllerWithIdentifier"]
 - ["Ps9Equatable", "nameTextField"]
 - !private ["Ps9Equatable", "navigationController"]
+- !private ["Ps9Equatable", "newPetitionURLArray"]
 - !private ["Ps9Equatable", "newSolutionDetailArray"]
 - !private ["Ps9Equatable", "newSolutionNameArray"]
 - ["Ps9Equatable", "petitionButton"]
 - ["Ps9Equatable", "petitionTextField"]
+- !private ["Ps9Equatable", "petitionURLArray"]
 - !private ["Ps9Equatable", "popViewControllerAnimated"]
 - !private ["Ps9Equatable", "pushViewController"]
 - !private ["Ps9Equatable", "resignFirstResponder"]
@@ -520,6 +539,7 @@ depends-member:
 - !private ["Ps9Equatable", "solutionIDArray"]
 - !private ["Ps9Equatable", "solutionNameArray"]
 - !private ["Ps9Equatable", "solutionVoteArray"]
+- !private ["Ps9Equatable", "status"]
 - !private ["Ps9Equatable", "storyboard"]
 - ["Ps9Equatable", "tableView"]
 - !private ["Ps9Equatable", "text"]
@@ -568,6 +588,7 @@ depends-member:
 - ["Ps8Hashable", "change"]
 - ["Ps8Hashable", "currentDetailData"]
 - ["Ps8Hashable", "currentNameData"]
+- !private ["Ps8Hashable", "currentPetitionValue"]
 - !private ["Ps8Hashable", "delegate"]
 - ["Ps8Hashable", "detailTextView"]
 - ["Ps8Hashable", "didReceiveMemoryWarning"]
@@ -579,10 +600,12 @@ depends-member:
 - !private ["Ps8Hashable", "instantiateViewControllerWithIdentifier"]
 - ["Ps8Hashable", "nameTextField"]
 - !private ["Ps8Hashable", "navigationController"]
+- !private ["Ps8Hashable", "newPetitionURLArray"]
 - !private ["Ps8Hashable", "newSolutionDetailArray"]
 - !private ["Ps8Hashable", "newSolutionNameArray"]
 - ["Ps8Hashable", "petitionButton"]
 - ["Ps8Hashable", "petitionTextField"]
+- !private ["Ps8Hashable", "petitionURLArray"]
 - !private ["Ps8Hashable", "popViewControllerAnimated"]
 - !private ["Ps8Hashable", "pushViewController"]
 - !private ["Ps8Hashable", "resignFirstResponder"]
@@ -603,6 +626,7 @@ depends-member:
 - !private ["Ps8Hashable", "solutionIDArray"]
 - !private ["Ps8Hashable", "solutionNameArray"]
 - !private ["Ps8Hashable", "solutionVoteArray"]
+- !private ["Ps8Hashable", "status"]
 - !private ["Ps8Hashable", "storyboard"]
 - ["Ps8Hashable", "tableView"]
 - !private ["Ps8Hashable", "text"]
@@ -706,6 +730,7 @@ depends-member:
 - ["PSo8NSCoding", "scrollViewWillBeginDragging"]
 - ["PSo8NSCoding", "scrollViewWillBeginZooming"]
 - ["PSo8NSCoding", "scrollViewWillEndDragging"]
+- !private ["PSo8NSCoding", "status"]
 - !private ["PSo8NSCoding", "storyboard"]
 - ["PSo8NSCoding", "tableView"]
 - !private ["PSo8NSCoding", "text"]
@@ -768,6 +793,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "scrollViewWillBeginDragging"]
 - ["PSo26NSExtensionRequestHandling", "scrollViewWillBeginZooming"]
 - ["PSo26NSExtensionRequestHandling", "scrollViewWillEndDragging"]
+- !private ["PSo26NSExtensionRequestHandling", "status"]
 - !private ["PSo26NSExtensionRequestHandling", "storyboard"]
 - ["PSo26NSExtensionRequestHandling", "tableView"]
 - ["PSo26NSExtensionRequestHandling", "textField"]
@@ -815,6 +841,7 @@ depends-member:
 - ["CSo8NSObject", "change"]
 - ["CSo8NSObject", "currentDetailData"]
 - ["CSo8NSObject", "currentNameData"]
+- !private ["CSo8NSObject", "currentPetitionValue"]
 - !private ["CSo8NSObject", "delegate"]
 - ["CSo8NSObject", "detailTextView"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
@@ -826,10 +853,12 @@ depends-member:
 - !private ["CSo8NSObject", "instantiateViewControllerWithIdentifier"]
 - ["CSo8NSObject", "nameTextField"]
 - !private ["CSo8NSObject", "navigationController"]
+- !private ["CSo8NSObject", "newPetitionURLArray"]
 - !private ["CSo8NSObject", "newSolutionDetailArray"]
 - !private ["CSo8NSObject", "newSolutionNameArray"]
 - ["CSo8NSObject", "petitionButton"]
 - ["CSo8NSObject", "petitionTextField"]
+- !private ["CSo8NSObject", "petitionURLArray"]
 - !private ["CSo8NSObject", "popViewControllerAnimated"]
 - !private ["CSo8NSObject", "pushViewController"]
 - !private ["CSo8NSObject", "resignFirstResponder"]
@@ -850,6 +879,7 @@ depends-member:
 - !private ["CSo8NSObject", "solutionIDArray"]
 - !private ["CSo8NSObject", "solutionNameArray"]
 - !private ["CSo8NSObject", "solutionVoteArray"]
+- !private ["CSo8NSObject", "status"]
 - !private ["CSo8NSObject", "storyboard"]
 - ["CSo8NSObject", "tableView"]
 - !private ["CSo8NSObject", "text"]
@@ -890,6 +920,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "change"]
 - ["PSo16NSObjectProtocol", "currentDetailData"]
 - ["PSo16NSObjectProtocol", "currentNameData"]
+- !private ["PSo16NSObjectProtocol", "currentPetitionValue"]
 - !private ["PSo16NSObjectProtocol", "delegate"]
 - ["PSo16NSObjectProtocol", "detailTextView"]
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
@@ -901,10 +932,12 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "instantiateViewControllerWithIdentifier"]
 - ["PSo16NSObjectProtocol", "nameTextField"]
 - !private ["PSo16NSObjectProtocol", "navigationController"]
+- !private ["PSo16NSObjectProtocol", "newPetitionURLArray"]
 - !private ["PSo16NSObjectProtocol", "newSolutionDetailArray"]
 - !private ["PSo16NSObjectProtocol", "newSolutionNameArray"]
 - ["PSo16NSObjectProtocol", "petitionButton"]
 - ["PSo16NSObjectProtocol", "petitionTextField"]
+- !private ["PSo16NSObjectProtocol", "petitionURLArray"]
 - !private ["PSo16NSObjectProtocol", "popViewControllerAnimated"]
 - !private ["PSo16NSObjectProtocol", "pushViewController"]
 - !private ["PSo16NSObjectProtocol", "resignFirstResponder"]
@@ -925,6 +958,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "solutionIDArray"]
 - !private ["PSo16NSObjectProtocol", "solutionNameArray"]
 - !private ["PSo16NSObjectProtocol", "solutionVoteArray"]
+- !private ["PSo16NSObjectProtocol", "status"]
 - !private ["PSo16NSObjectProtocol", "storyboard"]
 - ["PSo16NSObjectProtocol", "tableView"]
 - !private ["PSo16NSObjectProtocol", "text"]
@@ -974,8 +1008,11 @@ depends-member:
 - !private ["Ps10Strideable", "Distance"]
 - !private ["Ps10Strideable", "IntegerLiteralType"]
 - !private ["SS", "deinit"]
+- !private ["C8GoChange10TempChange", "currentPetitionValue"]
+- !private ["C8GoChange10TempChange", "newPetitionURLArray"]
 - !private ["C8GoChange10TempChange", "newSolutionDetailArray"]
 - !private ["C8GoChange10TempChange", "newSolutionNameArray"]
+- !private ["C8GoChange10TempChange", "petitionURLArray"]
 - !private ["C8GoChange10TempChange", "sharedInstance"]
 - !private ["C8GoChange10TempChange", "solutionDetailArray"]
 - !private ["C8GoChange10TempChange", "solutionIDArray"]
@@ -1036,6 +1073,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "scrollViewWillBeginDragging"]
 - ["PSo21UIAppearanceContainer", "scrollViewWillBeginZooming"]
 - ["PSo21UIAppearanceContainer", "scrollViewWillEndDragging"]
+- !private ["PSo21UIAppearanceContainer", "status"]
 - !private ["PSo21UIAppearanceContainer", "storyboard"]
 - ["PSo21UIAppearanceContainer", "tableView"]
 - !private ["PSo21UIAppearanceContainer", "text"]
@@ -1101,6 +1139,7 @@ depends-member:
 - ["PSo18UIContentContainer", "scrollViewWillBeginDragging"]
 - ["PSo18UIContentContainer", "scrollViewWillBeginZooming"]
 - ["PSo18UIContentContainer", "scrollViewWillEndDragging"]
+- !private ["PSo18UIContentContainer", "status"]
 - !private ["PSo18UIContentContainer", "storyboard"]
 - ["PSo18UIContentContainer", "tableView"]
 - ["PSo18UIContentContainer", "textField"]
@@ -1185,6 +1224,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "scrollViewWillBeginDragging"]
 - ["PSo18UIFocusEnvironment", "scrollViewWillBeginZooming"]
 - ["PSo18UIFocusEnvironment", "scrollViewWillEndDragging"]
+- !private ["PSo18UIFocusEnvironment", "status"]
 - !private ["PSo18UIFocusEnvironment", "storyboard"]
 - ["PSo18UIFocusEnvironment", "tableView"]
 - !private ["PSo18UIFocusEnvironment", "text"]
@@ -1267,6 +1307,7 @@ depends-member:
 - ["CSo11UIResponder", "scrollViewWillBeginDragging"]
 - ["CSo11UIResponder", "scrollViewWillBeginZooming"]
 - ["CSo11UIResponder", "scrollViewWillEndDragging"]
+- !private ["CSo11UIResponder", "status"]
 - !private ["CSo11UIResponder", "storyboard"]
 - ["CSo11UIResponder", "tableView"]
 - !private ["CSo11UIResponder", "text"]
@@ -1377,6 +1418,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "scrollViewWillBeginDragging"]
 - ["PSo16UIStateRestoring", "scrollViewWillBeginZooming"]
 - ["PSo16UIStateRestoring", "scrollViewWillEndDragging"]
+- !private ["PSo16UIStateRestoring", "status"]
 - !private ["PSo16UIStateRestoring", "storyboard"]
 - ["PSo16UIStateRestoring", "tableView"]
 - ["PSo16UIStateRestoring", "textField"]
@@ -1598,6 +1640,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "scrollViewWillBeginDragging"]
 - ["PSo18UITraitEnvironment", "scrollViewWillBeginZooming"]
 - ["PSo18UITraitEnvironment", "scrollViewWillEndDragging"]
+- !private ["PSo18UITraitEnvironment", "status"]
 - !private ["PSo18UITraitEnvironment", "storyboard"]
 - ["PSo18UITraitEnvironment", "tableView"]
 - !private ["PSo18UITraitEnvironment", "text"]
@@ -1674,6 +1717,7 @@ depends-member:
 - ["CSo16UIViewController", "scrollViewWillBeginDragging"]
 - ["CSo16UIViewController", "scrollViewWillBeginZooming"]
 - ["CSo16UIViewController", "scrollViewWillEndDragging"]
+- !private ["CSo16UIViewController", "status"]
 - !private ["CSo16UIViewController", "storyboard"]
 - ["CSo16UIViewController", "tableView"]
 - ["CSo16UIViewController", "textField"]
@@ -1697,7 +1741,9 @@ depends-member:
 - ["CSo16UIViewController", "viewForZoomingInScrollView"]
 - ["CSo16UIViewController", "viewWillAppear"]
 - ["CSo16UIViewController", ""]
+- !private ["PSo17UIWebViewDelegate", "status"]
 - !private ["PSo17UIWebViewDelegate", "urlString"]
+- !private ["C8GoChange17WebViewController", "status"]
 - !private ["C8GoChange17WebViewController", "urlString"]
 - !private ["Ps10_ArrayType", "Element"]
 - !private ["Ps10_ArrayType", "Generator"]

@@ -132,28 +132,6 @@ SWIFT_CLASS("_TtC8GoChange21AddIdeaViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-
-SWIFT_CLASS("_TtC8GoChange22AddTweakViewController")
-@interface AddTweakViewController : UIViewController <UIScrollViewDelegate, UITextFieldDelegate, UITextViewDelegate>
-@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified nameText;
-@property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified detailText;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified nameButton;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified detailButton;
-@property (nonatomic, copy) NSString * _Nullable nameData;
-@property (nonatomic, copy) NSString * _Nullable detailData;
-- (void)viewDidLoad;
-- (void)viewWillAppear:(BOOL)animated;
-- (void)didReceiveMemoryWarning;
-- (void)textFieldDidBeginEditing:(UITextField * _Nonnull)textField;
-- (void)textViewDidBeginEditing:(UITextView * _Nonnull)textView;
-- (IBAction)nameButtonClick:(UIButton * _Nonnull)sender;
-- (IBAction)detailButtonClick:(UIButton * _Nonnull)sender;
-- (IBAction)addTweakClick:(UIButton * _Nonnull)sender;
-- (IBAction)cancelClick:(UIButton * _Nonnull)sender;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
 @class UIWindow;
 @class UIApplication;
 @class NSObject;
@@ -193,21 +171,17 @@ SWIFT_CLASS("_TtC8GoChange13ChangeOrgCode")
 @interface ChangeOrgCode : NSObject
 @property (nonatomic) NSInteger petitionId;
 @property (nonatomic, strong) NSURLSession * _Nonnull session;
-@property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nonnull parameterDictionary;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (void)performCall;
+@property (nonatomic, copy) NSDictionary<NSString *, id> * _Nonnull parameterDictionary;
+- (nonnull instancetype)initWithPetitionURL:(NSString * _Nonnull)petitionURL completionHandler:(void (^ _Nonnull)(id _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
+- (void)performCall:(void (^ _Nonnull)(NSInteger))completionHandler;
+- (void)gatherPetitionData:(NSInteger)result completionHandler:(void (^ _Nonnull)(id _Nonnull))completionHandler;
 @end
 
-@class Firebase;
 
-SWIFT_CLASS("_TtC8GoChange12CreateChange")
-@interface CreateChange : NSObject
-@property (nonatomic, strong) Firebase * _Null_unspecified ref;
-@property (nonatomic, copy) NSString * _Nonnull savedAutoID;
-- (nonnull instancetype)initWithCurrentDetailData:(NSString * _Nonnull)currentDetailData currentNameData:(NSString * _Nonnull)currentNameData owner:(BOOL)owner OBJC_DESIGNATED_INITIALIZER;
+SWIFT_CLASS("_TtC8GoChange9CheckVote")
+@interface CheckVote : NSObject
+- (nonnull instancetype)initWithSolutionID:(NSString * _Nonnull)solutionID completionHandler:(void (^ _Nonnull)(Solution * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
 @property (nonatomic, strong) NSManagedObjectContext * _Nonnull sharedContext;
-- (void)saveChangeToFirebase:(NSString * _Nonnull)currentDetailData currentNameData:(NSString * _Nonnull)currentNameData;
-- (Change * _Nonnull)createCoreDataChange:(NSString * _Nonnull)currentDetailData currentNameData:(NSString * _Nonnull)currentNameData owner:(BOOL)owner;
 @end
 
 @class UITableView;
@@ -240,17 +214,6 @@ SWIFT_CLASS("_TtC8GoChange26CreateChangeViewController")
 - (IBAction)PostInfo:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC8GoChange14CreateSolution")
-@interface CreateSolution : NSObject
-@property (nonatomic, strong) Firebase * _Nullable ref;
-@property (nonatomic, strong) Change * _Nullable linkedChange;
-- (nonnull instancetype)initWithChange:(Change * _Nonnull)change firebaseLocation:(NSString * _Nonnull)firebaseLocation solutionName:(NSString * _Nonnull)solutionName solutionDescription:(NSString * _Nonnull)solutionDescription OBJC_DESIGNATED_INITIALIZER;
-@property (nonatomic, strong) NSManagedObjectContext * _Nonnull sharedContext;
-- (void)createCoreDataChange:(NSString * _Nonnull)solutionName solutionDescription:(NSString * _Nonnull)solutionDescription;
-- (void)saveChangeToFirebase:(NSString * _Nonnull)solutionName solutionDescription:(NSString * _Nonnull)solutionDescription;
 @end
 
 @class NSFetchedResultsController;
@@ -293,6 +256,7 @@ SWIFT_CLASS("_TtC8GoChange14GoChangeClient")
 - (void)parseJSON:(NSData * _Nonnull)data completionHandler:(void (^ _Nonnull)(id _Null_unspecified, NSError * _Nullable))completionHandler;
 @end
 
+@class Firebase;
 @class UILabel;
 
 SWIFT_CLASS("_TtC8GoChange18HomeViewController")
@@ -398,25 +362,6 @@ SWIFT_CLASS("_TtC8GoChange29RetrieveSolutionsFromFirebase")
 
 @class NSMutableArray;
 
-SWIFT_CLASS("_TtC8GoChange8SaveData")
-@interface SaveData : NSObject
-@property (nonatomic, copy) NSString * _Nullable savedAutoID;
-@property (nonatomic, copy) NSString * _Nullable changeID;
-@property (nonatomic, strong) NSMutableArray * _Nonnull solutionIDArray;
-@property (nonatomic, strong) Change * _Null_unspecified newChange;
-@property (nonatomic, strong) Change * _Null_unspecified existingChange;
-@property (nonatomic, copy) NSString * _Nonnull postType;
-@property (nonatomic, copy) NSString * _Nonnull haveVoted;
-- (nonnull instancetype)initWithPostType:(NSString * _Nonnull)postType owner:(NSString * _Nullable)owner change:(Change * _Nullable)change changeID:(NSString * _Nullable)changeID completionHandler:(void (^ _Nonnull)(id _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
-@property (nonatomic, strong) NSManagedObjectContext * _Nonnull sharedContext;
-- (void)saveChangeToFirebase;
-- (void)saveDetailsToFirebase;
-- (void)saveSolutionsToFirebase;
-- (void)createCoreDataChange:(void (^ _Nonnull)(id _Nonnull))completionHandler;
-- (void)createCoreDataSolutions;
-@end
-
-
 SWIFT_CLASS("_TtC8GoChange13SaveNewChange")
 @interface SaveNewChange : NSObject
 @property (nonatomic, copy) NSString * _Nullable changeID;
@@ -468,9 +413,9 @@ SWIFT_CLASS("_TtC8GoChange16SearchController")
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull useDetailArray;
 @property (nonatomic, copy) NSArray<NSNumber *> * _Nonnull useSolutionCountArray;
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull refsNotInCoreData;
-- (nonnull instancetype)initWithSearchText:(NSString * _Nonnull)searchText completionHandler:(void (^ _Nonnull)(NSArray<NSString *> * _Nonnull, NSArray<NSString *> * _Nonnull, NSArray<NSString *> * _Nonnull, NSArray<NSNumber *> * _Nonnull, NSArray<NSString *> * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithSearchText:(NSString * _Nonnull)searchText completionHandler:(void (^ _Nonnull)(NSArray<NSString *> * _Nonnull, NSArray<NSString *> * _Nonnull, NSArray<NSString *> * _Nonnull, NSArray<NSNumber *> * _Nonnull, NSArray<NSString *> * _Nonnull, NSString * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
 - (void)checkResults;
-- (void)createRefArray:(void (^ _Nonnull)(NSArray<NSString *> * _Nonnull, NSArray<NSString *> * _Nonnull, NSArray<NSString *> * _Nonnull, NSArray<NSNumber *> * _Nonnull, NSArray<NSString *> * _Nonnull))completionHandler;
+- (void)createRefArray:(void (^ _Nonnull)(NSArray<NSString *> * _Nonnull, NSArray<NSString *> * _Nonnull, NSArray<NSString *> * _Nonnull, NSArray<NSNumber *> * _Nonnull, NSArray<NSString *> * _Nonnull, NSString * _Nonnull))completionHandler;
 - (void)checkIfInCoreData;
 @end
 
@@ -484,6 +429,7 @@ SWIFT_CLASS("_TtC8GoChange20SearchViewController")
 - (IBAction)homeButtonClick:(UIButton * _Nonnull)sender;
 - (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField;
 - (IBAction)searchForResults:(UIButton * _Nonnull)sender;
+- (void)presentAlert:(NSString * _Nonnull)alertType;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -510,7 +456,6 @@ SWIFT_CLASS("_TtC8GoChange20SignupViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class Tweak;
 
 SWIFT_CLASS("_TtC8GoChange8Solution")
 @interface Solution : NSManagedObject
@@ -520,8 +465,8 @@ SWIFT_CLASS("_TtC8GoChange8Solution")
 @property (nonatomic, copy) NSString * _Nonnull solutionID;
 @property (nonatomic, copy) NSString * _Nonnull haveVotedFor;
 @property (nonatomic, copy) NSString * _Nonnull solutionOwner;
+@property (nonatomic, copy) NSString * _Nonnull petitionURL;
 @property (nonatomic, strong) Change * _Nonnull solutionToChange;
-@property (nonatomic, copy) NSArray<Tweak *> * _Nonnull solutionNeedingTweaking;
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithDictionary:(NSDictionary<NSString *, id> * _Nonnull)dictionary context:(NSManagedObjectContext * _Nonnull)context OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -537,24 +482,15 @@ SWIFT_CLASS("_TtC8GoChange10TempChange")
 @property (nonatomic, copy) NSArray<NSNumber *> * _Nonnull solutionVoteArray;
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull solutionIDArray;
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull solutionOwnerArray;
-@property (nonatomic, copy) NSArray<NSArray<NSString *> *> * _Nonnull newSolutionIDArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull petitionURLArray;
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull newSolutionNameArray;
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull newSolutionDetailArray;
 @property (nonatomic, copy) NSArray<NSNumber *> * _Nonnull newSolutionVoteArray;
-@property (nonatomic, copy) NSArray<NSString *> * _Nonnull tweakNameArray;
-@property (nonatomic, copy) NSArray<NSString *> * _Nonnull tweakDetailArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull newSolutionIDArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull newPetitionURLArray;
+@property (nonatomic, copy) NSString * _Nonnull currentPetitionValue;
 + (TempChange * _Nonnull)sharedInstance;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC8GoChange5Tweak")
-@interface Tweak : NSManagedObject
-@property (nonatomic, copy) NSString * _Nonnull tweakName;
-@property (nonatomic, copy) NSString * _Nonnull tweakDescription;
-@property (nonatomic, strong) Solution * _Nonnull tweakForSolution;
-- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithDictionary:(NSDictionary<NSString *, id> * _Nonnull)dictionary context:(NSManagedObjectContext * _Nonnull)context OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -578,33 +514,6 @@ SWIFT_CLASS("_TtC8GoChange24UpdateUserInfoController")
 - (IBAction)updateEmail:(UIButton * _Nonnull)sender;
 - (void)segueToInput;
 - (IBAction)cancelUpdate:(UIButton * _Nonnull)sender;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC8GoChange32ViewFollowedChangeViewController")
-@interface ViewFollowedChangeViewController : UIViewController <UIScrollViewDelegate, UITextFieldDelegate, UITableViewDelegate, UITextViewDelegate>
-@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified nameField;
-@property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified detailsField;
-@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified solutionTable;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified addASolutionButton;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified followChangeButton;
-@property (nonatomic, strong) Change * _Null_unspecified changeClicked;
-@property (nonatomic, copy) NSString * _Null_unspecified changeID;
-@property (nonatomic, copy) NSString * _Null_unspecified solutionID;
-@property (nonatomic, copy) NSArray<NSString *> * _Nonnull changeIDArray;
-@property (nonatomic, copy) NSString * _Null_unspecified sendingController;
-- (void)viewDidLoad;
-- (void)viewWillAppear:(BOOL)animated;
-- (IBAction)addNameClick:(UIButton * _Nonnull)sender;
-- (IBAction)addDetailClick:(UIButton * _Nonnull)sender;
-- (IBAction)addSolutionClick:(UIButton * _Nonnull)sender;
-- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
-- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-- (void)goBackHome;
-- (IBAction)unfollowChange:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -643,11 +552,14 @@ SWIFT_CLASS("_TtC8GoChange22ViewIdeaViewController")
 @property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified solutionDetailField;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified viewPetitionButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified voteSolutionButton;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified petitionTextField;
 @property (nonatomic, copy) NSString * _Null_unspecified changeID;
 @property (nonatomic, copy) NSString * _Null_unspecified solutionID;
+@property (nonatomic, copy) NSString * _Null_unspecified viewControllerStatus;
 @property (nonatomic, copy) NSString * _Null_unspecified loadedNameData;
 @property (nonatomic, copy) NSString * _Null_unspecified loadedDetailData;
-- (void)viewWillLoad;
+@property (nonatomic, copy) NSString * _Null_unspecified petitionURL;
+- (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (IBAction)petitionButton:(UIButton * _Nonnull)sender;
 - (IBAction)voteSolutionClick:(UIButton * _Nonnull)sender;
@@ -689,16 +601,19 @@ SWIFT_CLASS("_TtC8GoChange15VoteForSolution")
 - (void)addVoteToFirebase;
 @end
 
+@class UIBarButtonItem;
 @class UIWebView;
 
 SWIFT_CLASS("_TtC8GoChange17WebViewController")
 @interface WebViewController : UIViewController <UIWebViewDelegate>
 @property (nonatomic, weak) IBOutlet UIWebView * _Null_unspecified webView;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified linkPetition;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified petitionText;
-@property (nonatomic, copy) NSString * _Null_unspecified petitionString;
+@property (nonatomic, copy) NSString * _Null_unspecified currentURL;
 @property (nonatomic, copy) NSString * _Nonnull urlString;
+@property (nonatomic, copy) NSString * _Null_unspecified status;
+@property (nonatomic, strong) UIBarButtonItem * _Null_unspecified rightBarButton;
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
 - (void)webViewDidFinishLoad:(UIWebView * _Nonnull)webView;
 - (IBAction)linkPetitionClick:(UIButton * _Nonnull)sender;
 - (void)didReceiveMemoryWarning;

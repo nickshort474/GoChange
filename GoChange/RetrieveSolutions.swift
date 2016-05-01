@@ -22,7 +22,7 @@ class RetrieveSolutions:NSObject{
         TempChange.sharedInstance().solutionVoteArray = []
         TempChange.sharedInstance().solutionIDArray = []
         TempChange.sharedInstance().solutionOwnerArray = []
-        
+        TempChange.sharedInstance().petitionURLArray = []
         
         let request = NSFetchRequest(entityName: "Solution")
         let predicate = NSPredicate(format: "solutionToChange == %@", change)
@@ -40,6 +40,7 @@ class RetrieveSolutions:NSObject{
                 TempChange.sharedInstance().solutionVoteArray.append(solution.voteCount as Int)
                 TempChange.sharedInstance().solutionIDArray.append(solution.solutionID)
                 TempChange.sharedInstance().solutionOwnerArray.append(solution.solutionOwner)
+                TempChange.sharedInstance().petitionURLArray.append(solution.petitionURL)
             }
             
             completionHandler(result:results)

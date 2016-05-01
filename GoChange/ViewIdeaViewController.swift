@@ -15,55 +15,96 @@ class ViewIdeaViewController:UIViewController{
     @IBOutlet weak var solutionNameField: UITextField!
     @IBOutlet weak var solutionDetailField: UITextView!
     @IBOutlet weak var viewPetitionButton: UIButton!
-     @IBOutlet weak var voteSolutionButton: UIButton!
+    @IBOutlet weak var voteSolutionButton: UIButton!
+    @IBOutlet weak var petitionTextField: UITextField!
     
     
     var changeID:String!
     var solutionID:String!
     
     //var change:Change!
-    //var viewControllerStatus:String!
+    var viewControllerStatus:String!
     
     var loadedNameData:String!
     var loadedDetailData:String!
-    
+    var petitionURL:String!
     //var solutionCount:Int!
    
     var index:Int!
     
     
-    func viewWillLoad(){
+    override func viewDidLoad(){
+        super.viewDidLoad()
+        
         solutionNameField.enabled = false
         solutionDetailField.selectable = false
         
-        voteSolutionButton.enabled = false
-        voteSolutionButton.alpha = 0.5
+        petitionTextField.enabled = false
+        
+        
+        if(petitionURL != ""){
+        
+            print(petitionURL)
+            
+            _ = ChangeOrgCode(petitionURL:petitionURL){
+                result in
+            
+                print(result)
+            }
+        }else{
+            viewPetitionButton.enabled = false
+            viewPetitionButton.alpha = 0
+            
+        }
+    
     }
     
     
     override func viewWillAppear(animated: Bool) {
+        
         solutionNameField.text = loadedNameData
         solutionDetailField.textColor = UIColor.blackColor()
         solutionDetailField.text = loadedDetailData
     
-        //TODO: If haveVoted == "no"
-        //voteSolutionButton.enabled = true
-        //voteSolutionButton.alpha = 1
+        petitionTextField.text = petitionURL
         
-        //TODO: Create new controller class which checks haveVoted of coreData using changeID
+        if(viewControllerStatus == "newChange" || viewControllerStatus == "results"){
+            
+            voteSolutionButton.enabled = false
+            voteSolutionButton.alpha = 0
+            
+        }else if(viewControllerStatus == "following"){
+            
+            //check whether haveVoted for and set buttons
+            _ = CheckVote(solutionID:solutionID){
+                result in
+            
+                let haveVoted = result.haveVotedFor
+                
+                if(haveVoted == "yes"){
+                    self.voteSolutionButton.enabled = false
+                    self.voteSolutionButton.alpha = 0
+                }else{
+                    self.voteSolutionButton.enabled = true
+                    self.voteSolutionButton.alpha = 1
+                }
+            
+            }
+            
+        }
+       
         
     }
     
     
     
     @IBAction func petitionButton(sender: UIButton) {
+        
         var controller:WebViewController
         controller = storyboard?.instantiateViewControllerWithIdentifier("WebViewController") as! WebViewController
         
-        
-        //TODO: set petition URL saved somewhere?
-        controller.urlString = GoChangeClient.Constants.dynamicPetitionURL
-        
+        controller.urlString = petitionURL
+        controller.status = "viewing"
         self.navigationController?.pushViewController(controller, animated: true)
         
     }
@@ -84,7 +125,7 @@ class ViewIdeaViewController:UIViewController{
         
         //decide whether to change button to Have Voted instead of alpha change
         self.voteSolutionButton.enabled = false
-        self.voteSolutionButton.alpha = 0.5
+        self.voteSolutionButton.alpha = 0
         
     }
     

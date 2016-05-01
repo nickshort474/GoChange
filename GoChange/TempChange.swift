@@ -20,25 +20,24 @@ class TempChange:NSObject{
     var solutionNameArray:[String] = []
     var solutionDetailArray:[String] = []
     var solutionVoteArray:[Int] = []
-    
-    
-    //var solutionNewOldArray:NSMutableArray = []
-    
     var solutionIDArray:[String] = []
-    
     var solutionOwnerArray:[String] = []
+    var petitionURLArray:[String] = []
     
-    var newSolutionIDArray:[[String]] = []
+    
+    
+    //TODO: check whether these are all needed
+    
     var newSolutionNameArray:[String] = []
     var newSolutionDetailArray:[String] = []
     var newSolutionVoteArray:[Int] = []
+    var newSolutionIDArray:[String] = []
     
-    var tweakNameArray:[String] = []
-    var tweakDetailArray:[String] = []
+    //TODO: check whether newSoltuionOwnerArray is needed
     
-    //var addingSolutions:String = ""
+    var newPetitionURLArray:[String] = []
     
-    
+    var currentPetitionValue:String = ""
     
     
     

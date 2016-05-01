@@ -39,8 +39,6 @@ class ViewFollowingChangeViewController: UIViewController,UITextViewDelegate,UIT
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        print("viewDidLoad")
-        
         //set delegates
         nameField.delegate = self
         detailsField.delegate = self
@@ -258,7 +256,10 @@ class ViewFollowingChangeViewController: UIViewController,UITextViewDelegate,UIT
         //controller.solutionCount = TempChange.sharedInstance().solutionVoteArray[indexPath.row] as? Int
         controller.solutionID = TempChange.sharedInstance().solutionIDArray[indexPath.row] 
         
-        //controller.viewControllerStatus = "viewing"
+        controller.petitionURL = TempChange.sharedInstance().petitionURLArray[indexPath.row]
+        
+        //controller.change = changeClicked
+        controller.viewControllerStatus = "following"
         controller.changeID = changeID
         controller.index = indexPath.row
         

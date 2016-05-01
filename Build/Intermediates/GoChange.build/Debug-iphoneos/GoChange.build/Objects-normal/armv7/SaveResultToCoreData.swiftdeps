@@ -6,22 +6,22 @@ provides-nominal:
 provides-member:
 - ["C8GoChange20SaveResultToCoreData", ""]
 provides-dynamic-lookup:
-- "newChange"
-- "createCoreDataSolutions"
-- "createCoreDataChange"
 - "sharedContext"
+- "createCoreDataSolutions"
+- "newChange"
+- "createCoreDataChange"
 - "changeID"
 depends-top-level:
-- "SaveResultToCoreData"
 - "NSObject"
-- "Change"
-- !private "CoreDataStackManager"
-- "Void"
-- "AnyObject"
-- !private "Solution"
 - "NSManagedObjectContext"
-- "String"
+- !private "Solution"
+- "AnyObject"
 - !private "TempChange"
+- !private "CoreDataStackManager"
+- "String"
+- "Void"
+- "SaveResultToCoreData"
+- "Change"
 - !private "..<"
 depends-member:
 - !private ["Ps9AnyObject", "AnyObject"]
@@ -41,6 +41,7 @@ depends-member:
 - ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "managedObjectContext"]
 - ["Ps9AnyObject", "newChange"]
+- !private ["Ps9AnyObject", "petitionURLArray"]
 - !private ["Ps9AnyObject", "save"]
 - ["Ps9AnyObject", "sharedContext"]
 - ["Ps9AnyObject", "sharedContext.storage"]
@@ -92,6 +93,7 @@ depends-member:
 - ["Ps11CVarArgType", "createCoreDataSolutions"]
 - ["Ps11CVarArgType", "init"]
 - ["Ps11CVarArgType", "newChange"]
+- !private ["Ps11CVarArgType", "petitionURLArray"]
 - !private ["Ps11CVarArgType", "save"]
 - ["Ps11CVarArgType", "sharedContext"]
 - ["Ps11CVarArgType", "sharedContext.storage"]
@@ -136,6 +138,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "createCoreDataSolutions"]
 - ["Ps28CustomDebugStringConvertible", "init"]
 - ["Ps28CustomDebugStringConvertible", "newChange"]
+- !private ["Ps28CustomDebugStringConvertible", "petitionURLArray"]
 - !private ["Ps28CustomDebugStringConvertible", "save"]
 - ["Ps28CustomDebugStringConvertible", "sharedContext"]
 - ["Ps28CustomDebugStringConvertible", "sharedContext.storage"]
@@ -171,6 +174,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "createCoreDataSolutions"]
 - ["Ps23CustomStringConvertible", "init"]
 - ["Ps23CustomStringConvertible", "newChange"]
+- !private ["Ps23CustomStringConvertible", "petitionURLArray"]
 - !private ["Ps23CustomStringConvertible", "save"]
 - ["Ps23CustomStringConvertible", "sharedContext"]
 - ["Ps23CustomStringConvertible", "sharedContext.storage"]
@@ -207,6 +211,7 @@ depends-member:
 - ["Ps9Equatable", "createCoreDataSolutions"]
 - ["Ps9Equatable", "init"]
 - ["Ps9Equatable", "newChange"]
+- !private ["Ps9Equatable", "petitionURLArray"]
 - !private ["Ps9Equatable", "save"]
 - ["Ps9Equatable", "sharedContext"]
 - ["Ps9Equatable", "sharedContext.storage"]
@@ -243,6 +248,7 @@ depends-member:
 - ["Ps8Hashable", "createCoreDataSolutions"]
 - ["Ps8Hashable", "init"]
 - ["Ps8Hashable", "newChange"]
+- !private ["Ps8Hashable", "petitionURLArray"]
 - !private ["Ps8Hashable", "save"]
 - ["Ps8Hashable", "sharedContext"]
 - ["Ps8Hashable", "sharedContext.storage"]
@@ -283,6 +289,7 @@ depends-member:
 - !private ["VC8GoChange6Change4Keys", "changeOwner"]
 - !private ["VC8GoChange6Change4Keys", "solutionCount"]
 - !private ["VC8GoChange8Solution4Keys", "haveVotedFor"]
+- !private ["VC8GoChange8Solution4Keys", "petitionURL"]
 - !private ["VC8GoChange8Solution4Keys", "solutionDescription"]
 - !private ["VC8GoChange8Solution4Keys", "solutionID"]
 - !private ["VC8GoChange8Solution4Keys", "solutionName"]
@@ -329,6 +336,7 @@ depends-member:
 - ["CSo8NSObject", "createCoreDataSolutions"]
 - ["CSo8NSObject", "init"]
 - ["CSo8NSObject", "newChange"]
+- !private ["CSo8NSObject", "petitionURLArray"]
 - !private ["CSo8NSObject", "save"]
 - ["CSo8NSObject", "sharedContext"]
 - ["CSo8NSObject", "sharedContext.storage"]
@@ -355,6 +363,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "createCoreDataSolutions"]
 - ["PSo16NSObjectProtocol", "init"]
 - ["PSo16NSObjectProtocol", "newChange"]
+- !private ["PSo16NSObjectProtocol", "petitionURLArray"]
 - !private ["PSo16NSObjectProtocol", "save"]
 - ["PSo16NSObjectProtocol", "sharedContext"]
 - ["PSo16NSObjectProtocol", "sharedContext.storage"]
@@ -422,6 +431,7 @@ depends-member:
 - !private ["C8GoChange10TempChange", "changeDetail"]
 - !private ["C8GoChange10TempChange", "changeName"]
 - !private ["C8GoChange10TempChange", "changeOwner"]
+- !private ["C8GoChange10TempChange", "petitionURLArray"]
 - !private ["C8GoChange10TempChange", "sharedInstance"]
 - !private ["C8GoChange10TempChange", "solutionDetailArray"]
 - !private ["C8GoChange10TempChange", "solutionIDArray"]

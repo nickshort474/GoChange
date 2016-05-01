@@ -49,7 +49,7 @@ class SaveNewSolution:NSObject{
         let changeSolutionsLocation = Firebase(url:"https://gochange.firebaseio.com/change/solutions")
         let uniqueSolutionLocation = changeSolutionsLocation.childByAppendingPath(changeID)
         
-        let solutionOwner = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
+        let solutionOwner = NSUserDefaults.standardUserDefaults().valueForKey("username") as! String
         
         
         //loop through solutions array
@@ -63,7 +63,7 @@ class SaveNewSolution:NSObject{
             self.solutionIDArray.addObject(uniqueSolutionReference.key)
             
             //set solution values
-            let changeSolutionValues = ["SolutionName":TempChange.sharedInstance().newSolutionNameArray[i],"SolutionDescription":TempChange.sharedInstance().newSolutionDetailArray[i],"SolutionVoteCount":0,"SolutionOwner":solutionOwner]
+            let changeSolutionValues = ["SolutionName":TempChange.sharedInstance().newSolutionNameArray[i],"SolutionDescription":TempChange.sharedInstance().newSolutionDetailArray[i],"SolutionVoteCount":0,"SolutionOwner":solutionOwner,"PetitionURL":TempChange.sharedInstance().newPetitionURLArray[i]]
             
             //save values to firebase
             uniqueSolutionReference.setValue(changeSolutionValues)
@@ -77,7 +77,7 @@ class SaveNewSolution:NSObject{
     
     func createCoreDataSolutions(){
         
-        let solutionOwner = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
+        let solutionOwner = NSUserDefaults.standardUserDefaults().valueForKey("username") as! String
         
         for i in 0 ..< TempChange.sharedInstance().newSolutionNameArray.count{
             
@@ -89,6 +89,7 @@ class SaveNewSolution:NSObject{
             solutionDictionary[Solution.Keys.solutionID] = self.solutionIDArray[i]
             solutionDictionary[Solution.Keys.haveVotedFor] = "no"
             solutionDictionary[Solution.Keys.solutionOwner] = solutionOwner
+            solutionDictionary[Solution.Keys.petitionURL] = TempChange.sharedInstance().newPetitionURLArray[i]
             
             //create core data solution object
             let newSolution = Solution(dictionary: solutionDictionary,context: sharedContext)

@@ -64,7 +64,7 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         TempChange.sharedInstance().solutionNameArray = []
         TempChange.sharedInstance().solutionVoteArray = []
         TempChange.sharedInstance().solutionIDArray = []
-        
+        TempChange.sharedInstance().currentPetitionValue = ""
     }
     
     
@@ -207,7 +207,8 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         var controller:ViewIdeaViewController
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewIdeaViewController") as! ViewIdeaViewController
         
-        //controller.viewControllerStatus = "viewing"
+        controller.viewControllerStatus = "newChange"
+        controller.petitionURL = TempChange.sharedInstance().petitionURLArray[indexPath.row]
         controller.loadedNameData = TempChange.sharedInstance().solutionNameArray[indexPath.row]
         controller.loadedDetailData = TempChange.sharedInstance().solutionDetailArray[indexPath.row]
         
@@ -216,7 +217,7 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         //controller.change = self.change
         
         
-        self.navigationController?.pushViewController(controller, animated: false)
+        self.navigationController?.pushViewController(controller, animated: true)
         
     }
 

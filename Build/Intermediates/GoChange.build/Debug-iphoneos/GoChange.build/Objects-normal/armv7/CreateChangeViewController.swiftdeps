@@ -6,61 +6,61 @@ provides-nominal:
 provides-member:
 - ["C8GoChange26CreateChangeViewController", ""]
 provides-dynamic-lookup:
-- "detailsPlusButton"
-- "PostInfo"
-- "textViewDidBeginEditing"
-- "detailsField"
-- "detailsActionButton"
-- "nameField"
-- "currentDetailData"
 - "addASolutionButton"
-- "sharedContext"
+- "namePlusButton"
+- "currentDetailData"
+- "detailsActionButton"
+- "viewWillAppear"
+- "textViewDidBeginEditing"
+- "detailsPlusButton"
+- "solutionTable"
+- "detailsField"
+- "nameActionButton"
+- "postButton"
+- "textFieldDidBeginEditing"
+- "viewDidLoad"
 - "homeButtonClick"
 - "addSolution"
-- "viewWillAppear"
-- "tableView"
-- "tableView"
-- "tableView"
-- "textFieldDidBeginEditing"
-- "namePlusButton"
+- "PostInfo"
 - "currentNameData"
-- "postButton"
-- "viewDidLoad"
-- "solutionTable"
-- "nameActionButton"
+- "sharedContext"
+- "tableView"
+- "tableView"
+- "tableView"
+- "nameField"
 depends-top-level:
-- "CreateChangeViewController"
-- "NSIndexPath"
-- !private "=="
-- "Int"
-- "UIButton"
-- !private "ViewIdeaViewController"
-- !private "UIColor"
-- "UITextField"
-- "StringLiteralType"
-- !private "GoChangeClient"
-- "UITableViewCell"
-- !private "Array"
 - !private "UIBarButtonItem"
+- "UIButton"
+- !private "TempChange"
+- !private "UIColor"
+- !private "||"
 - !private "UIBarButtonItemStyle"
-- "String"
 - !private "SaveNewChange"
 - "UITableViewDelegate"
-- !private "TempChange"
-- !private "||"
 - !private "AddIdeaViewController"
-- "UITableView"
-- !private "BooleanLiteralType"
-- !private "print"
-- !private "!="
-- "Bool"
 - "UITextViewDelegate"
-- "NSManagedObjectContext"
-- !private "CoreDataStackManager"
 - "UITextFieldDelegate"
-- "UIViewController"
-- "UITextView"
 - !private "&&"
+- "UIViewController"
+- "Int"
+- "UITextView"
+- !private "Array"
+- "StringLiteralType"
+- !private "!="
+- !private "=="
+- !private "print"
+- !private "ViewIdeaViewController"
+- "CreateChangeViewController"
+- !private "CoreDataStackManager"
+- "UITableView"
+- "NSIndexPath"
+- !private "BooleanLiteralType"
+- "UITableViewCell"
+- "UITextField"
+- !private "GoChangeClient"
+- "String"
+- "Bool"
+- "NSManagedObjectContext"
 depends-member:
 - !private ["C8GoChange21AddIdeaViewController", "viewControllerStatus"]
 - !private ["Ps9AnyObject", "Constants"]
@@ -81,6 +81,7 @@ depends-member:
 - !private ["Ps9AnyObject", "changeName"]
 - ["Ps9AnyObject", "currentDetailData"]
 - ["Ps9AnyObject", "currentNameData"]
+- !private ["Ps9AnyObject", "currentPetitionValue"]
 - !private ["Ps9AnyObject", "delegate"]
 - !private ["Ps9AnyObject", "dequeueReusableCellWithIdentifier"]
 - ["Ps9AnyObject", "detailsActionButton"]
@@ -101,6 +102,8 @@ depends-member:
 - ["Ps9AnyObject", "namePlusButton"]
 - !private ["Ps9AnyObject", "navigationController"]
 - !private ["Ps9AnyObject", "navigationItem"]
+- !private ["Ps9AnyObject", "petitionURL"]
+- !private ["Ps9AnyObject", "petitionURLArray"]
 - ["Ps9AnyObject", "postButton"]
 - !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "pushViewController"]
@@ -194,6 +197,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "changeName"]
 - ["Ps11CVarArgType", "currentDetailData"]
 - ["Ps11CVarArgType", "currentNameData"]
+- !private ["Ps11CVarArgType", "currentPetitionValue"]
 - !private ["Ps11CVarArgType", "delegate"]
 - !private ["Ps11CVarArgType", "dequeueReusableCellWithIdentifier"]
 - ["Ps11CVarArgType", "detailsActionButton"]
@@ -213,6 +217,8 @@ depends-member:
 - ["Ps11CVarArgType", "namePlusButton"]
 - !private ["Ps11CVarArgType", "navigationController"]
 - !private ["Ps11CVarArgType", "navigationItem"]
+- !private ["Ps11CVarArgType", "petitionURL"]
+- !private ["Ps11CVarArgType", "petitionURLArray"]
 - ["Ps11CVarArgType", "postButton"]
 - !private ["Ps11CVarArgType", "print"]
 - !private ["Ps11CVarArgType", "pushViewController"]
@@ -371,6 +377,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "count"]
 - ["Ps28CustomDebugStringConvertible", "currentDetailData"]
 - ["Ps28CustomDebugStringConvertible", "currentNameData"]
+- !private ["Ps28CustomDebugStringConvertible", "currentPetitionValue"]
 - !private ["Ps28CustomDebugStringConvertible", "delegate"]
 - !private ["Ps28CustomDebugStringConvertible", "dequeueReusableCellWithIdentifier"]
 - ["Ps28CustomDebugStringConvertible", "detailsActionButton"]
@@ -390,6 +397,8 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "namePlusButton"]
 - !private ["Ps28CustomDebugStringConvertible", "navigationController"]
 - !private ["Ps28CustomDebugStringConvertible", "navigationItem"]
+- !private ["Ps28CustomDebugStringConvertible", "petitionURL"]
+- !private ["Ps28CustomDebugStringConvertible", "petitionURLArray"]
 - ["Ps28CustomDebugStringConvertible", "postButton"]
 - !private ["Ps28CustomDebugStringConvertible", "print"]
 - !private ["Ps28CustomDebugStringConvertible", "pushViewController"]
@@ -467,6 +476,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "count"]
 - ["Ps23CustomStringConvertible", "currentDetailData"]
 - ["Ps23CustomStringConvertible", "currentNameData"]
+- !private ["Ps23CustomStringConvertible", "currentPetitionValue"]
 - !private ["Ps23CustomStringConvertible", "delegate"]
 - !private ["Ps23CustomStringConvertible", "dequeueReusableCellWithIdentifier"]
 - ["Ps23CustomStringConvertible", "detailsActionButton"]
@@ -486,6 +496,8 @@ depends-member:
 - ["Ps23CustomStringConvertible", "namePlusButton"]
 - !private ["Ps23CustomStringConvertible", "navigationController"]
 - !private ["Ps23CustomStringConvertible", "navigationItem"]
+- !private ["Ps23CustomStringConvertible", "petitionURL"]
+- !private ["Ps23CustomStringConvertible", "petitionURLArray"]
 - ["Ps23CustomStringConvertible", "postButton"]
 - !private ["Ps23CustomStringConvertible", "print"]
 - !private ["Ps23CustomStringConvertible", "pushViewController"]
@@ -559,6 +571,7 @@ depends-member:
 - !private ["Ps9Equatable", "changeName"]
 - ["Ps9Equatable", "currentDetailData"]
 - ["Ps9Equatable", "currentNameData"]
+- !private ["Ps9Equatable", "currentPetitionValue"]
 - !private ["Ps9Equatable", "delegate"]
 - !private ["Ps9Equatable", "dequeueReusableCellWithIdentifier"]
 - ["Ps9Equatable", "detailsActionButton"]
@@ -578,6 +591,8 @@ depends-member:
 - ["Ps9Equatable", "namePlusButton"]
 - !private ["Ps9Equatable", "navigationController"]
 - !private ["Ps9Equatable", "navigationItem"]
+- !private ["Ps9Equatable", "petitionURL"]
+- !private ["Ps9Equatable", "petitionURLArray"]
 - ["Ps9Equatable", "postButton"]
 - !private ["Ps9Equatable", "print"]
 - !private ["Ps9Equatable", "pushViewController"]
@@ -654,6 +669,7 @@ depends-member:
 - !private ["Ps8Hashable", "changeName"]
 - ["Ps8Hashable", "currentDetailData"]
 - ["Ps8Hashable", "currentNameData"]
+- !private ["Ps8Hashable", "currentPetitionValue"]
 - !private ["Ps8Hashable", "delegate"]
 - !private ["Ps8Hashable", "dequeueReusableCellWithIdentifier"]
 - ["Ps8Hashable", "detailsActionButton"]
@@ -673,6 +689,8 @@ depends-member:
 - ["Ps8Hashable", "namePlusButton"]
 - !private ["Ps8Hashable", "navigationController"]
 - !private ["Ps8Hashable", "navigationItem"]
+- !private ["Ps8Hashable", "petitionURL"]
+- !private ["Ps8Hashable", "petitionURLArray"]
 - ["Ps8Hashable", "postButton"]
 - !private ["Ps8Hashable", "print"]
 - !private ["Ps8Hashable", "pushViewController"]
@@ -793,6 +811,7 @@ depends-member:
 - ["PSo8NSCoding", "namePlusButton"]
 - !private ["PSo8NSCoding", "navigationController"]
 - !private ["PSo8NSCoding", "navigationItem"]
+- !private ["PSo8NSCoding", "petitionURL"]
 - ["PSo8NSCoding", "postButton"]
 - !private ["PSo8NSCoding", "print"]
 - !private ["PSo8NSCoding", "pushViewController"]
@@ -866,6 +885,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "namePlusButton"]
 - !private ["PSo26NSExtensionRequestHandling", "navigationController"]
 - !private ["PSo26NSExtensionRequestHandling", "navigationItem"]
+- !private ["PSo26NSExtensionRequestHandling", "petitionURL"]
 - ["PSo26NSExtensionRequestHandling", "postButton"]
 - !private ["PSo26NSExtensionRequestHandling", "print"]
 - !private ["PSo26NSExtensionRequestHandling", "pushViewController"]
@@ -936,6 +956,7 @@ depends-member:
 - !private ["CSo8NSObject", "changeName"]
 - ["CSo8NSObject", "currentDetailData"]
 - ["CSo8NSObject", "currentNameData"]
+- !private ["CSo8NSObject", "currentPetitionValue"]
 - !private ["CSo8NSObject", "delegate"]
 - !private ["CSo8NSObject", "dequeueReusableCellWithIdentifier"]
 - ["CSo8NSObject", "detailsActionButton"]
@@ -955,6 +976,8 @@ depends-member:
 - ["CSo8NSObject", "namePlusButton"]
 - !private ["CSo8NSObject", "navigationController"]
 - !private ["CSo8NSObject", "navigationItem"]
+- !private ["CSo8NSObject", "petitionURL"]
+- !private ["CSo8NSObject", "petitionURLArray"]
 - ["CSo8NSObject", "postButton"]
 - !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "pushViewController"]
@@ -1022,6 +1045,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "changeName"]
 - ["PSo16NSObjectProtocol", "currentDetailData"]
 - ["PSo16NSObjectProtocol", "currentNameData"]
+- !private ["PSo16NSObjectProtocol", "currentPetitionValue"]
 - !private ["PSo16NSObjectProtocol", "delegate"]
 - !private ["PSo16NSObjectProtocol", "dequeueReusableCellWithIdentifier"]
 - ["PSo16NSObjectProtocol", "detailsActionButton"]
@@ -1041,6 +1065,8 @@ depends-member:
 - ["PSo16NSObjectProtocol", "namePlusButton"]
 - !private ["PSo16NSObjectProtocol", "navigationController"]
 - !private ["PSo16NSObjectProtocol", "navigationItem"]
+- !private ["PSo16NSObjectProtocol", "petitionURL"]
+- !private ["PSo16NSObjectProtocol", "petitionURLArray"]
 - ["PSo16NSObjectProtocol", "postButton"]
 - !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "pushViewController"]
@@ -1124,6 +1150,8 @@ depends-member:
 - !private ["SS", "deinit"]
 - !private ["C8GoChange10TempChange", "changeDetail"]
 - !private ["C8GoChange10TempChange", "changeName"]
+- !private ["C8GoChange10TempChange", "currentPetitionValue"]
+- !private ["C8GoChange10TempChange", "petitionURLArray"]
 - !private ["C8GoChange10TempChange", "sharedInstance"]
 - !private ["C8GoChange10TempChange", "solutionDetailArray"]
 - !private ["C8GoChange10TempChange", "solutionIDArray"]
@@ -1182,6 +1210,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "namePlusButton"]
 - !private ["PSo21UIAppearanceContainer", "navigationController"]
 - !private ["PSo21UIAppearanceContainer", "navigationItem"]
+- !private ["PSo21UIAppearanceContainer", "petitionURL"]
 - ["PSo21UIAppearanceContainer", "postButton"]
 - !private ["PSo21UIAppearanceContainer", "print"]
 - !private ["PSo21UIAppearanceContainer", "pushViewController"]
@@ -1259,6 +1288,7 @@ depends-member:
 - ["PSo18UIContentContainer", "namePlusButton"]
 - !private ["PSo18UIContentContainer", "navigationController"]
 - !private ["PSo18UIContentContainer", "navigationItem"]
+- !private ["PSo18UIContentContainer", "petitionURL"]
 - ["PSo18UIContentContainer", "postButton"]
 - !private ["PSo18UIContentContainer", "print"]
 - !private ["PSo18UIContentContainer", "pushViewController"]
@@ -1355,6 +1385,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "namePlusButton"]
 - !private ["PSo18UIFocusEnvironment", "navigationController"]
 - !private ["PSo18UIFocusEnvironment", "navigationItem"]
+- !private ["PSo18UIFocusEnvironment", "petitionURL"]
 - ["PSo18UIFocusEnvironment", "postButton"]
 - !private ["PSo18UIFocusEnvironment", "print"]
 - !private ["PSo18UIFocusEnvironment", "pushViewController"]
@@ -1450,6 +1481,7 @@ depends-member:
 - ["CSo11UIResponder", "namePlusButton"]
 - !private ["CSo11UIResponder", "navigationController"]
 - !private ["CSo11UIResponder", "navigationItem"]
+- !private ["CSo11UIResponder", "petitionURL"]
 - ["CSo11UIResponder", "postButton"]
 - !private ["CSo11UIResponder", "print"]
 - !private ["CSo11UIResponder", "pushViewController"]
@@ -1576,6 +1608,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "namePlusButton"]
 - !private ["PSo16UIStateRestoring", "navigationController"]
 - !private ["PSo16UIStateRestoring", "navigationItem"]
+- !private ["PSo16UIStateRestoring", "petitionURL"]
 - ["PSo16UIStateRestoring", "postButton"]
 - !private ["PSo16UIStateRestoring", "print"]
 - !private ["PSo16UIStateRestoring", "pushViewController"]
@@ -1819,6 +1852,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "namePlusButton"]
 - !private ["PSo18UITraitEnvironment", "navigationController"]
 - !private ["PSo18UITraitEnvironment", "navigationItem"]
+- !private ["PSo18UITraitEnvironment", "petitionURL"]
 - ["PSo18UITraitEnvironment", "postButton"]
 - !private ["PSo18UITraitEnvironment", "print"]
 - !private ["PSo18UITraitEnvironment", "pushViewController"]
@@ -1911,6 +1945,7 @@ depends-member:
 - ["CSo16UIViewController", "namePlusButton"]
 - !private ["CSo16UIViewController", "navigationController"]
 - !private ["CSo16UIViewController", "navigationItem"]
+- !private ["CSo16UIViewController", "petitionURL"]
 - ["CSo16UIViewController", "postButton"]
 - !private ["CSo16UIViewController", "print"]
 - !private ["CSo16UIViewController", "pushViewController"]
@@ -1952,6 +1987,8 @@ depends-member:
 - ["CSo16UIViewController", ""]
 - !private ["C8GoChange22ViewIdeaViewController", "loadedDetailData"]
 - !private ["C8GoChange22ViewIdeaViewController", "loadedNameData"]
+- !private ["C8GoChange22ViewIdeaViewController", "petitionURL"]
+- !private ["C8GoChange22ViewIdeaViewController", "viewControllerStatus"]
 - !private ["Ps10_ArrayType", "Element"]
 - !private ["Ps10_ArrayType", "Generator"]
 - !private ["Ps10_ArrayType", "Index"]

@@ -52,10 +52,14 @@ class VoteForSolution:NSObject{
             let fetchEntities = try self.sharedContext.executeFetchRequest(fetchRequest) as! [Solution]
             
             let entity = fetchEntities.first
+            
+            //increase vote count
             var currentVoteCount = entity?.voteCount as! Int
             currentVoteCount += 1
-            entity?.voteCount = currentVoteCount //as NSNumber
+            entity?.voteCount = currentVoteCount
             
+            //change haveVotedFor to yes
+            entity?.haveVotedFor = "yes"
             
         }catch{
             //TODO: deal with errors

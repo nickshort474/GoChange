@@ -7,29 +7,36 @@ provides-member:
 - ["C8GoChange13ChangeOrgCode", ""]
 provides-dynamic-lookup:
 - "session"
-- "performCall"
+- "gatherPetitionData"
 - "parameterDictionary"
 - "petitionId"
+- "performCall"
 depends-top-level:
-- !private "print"
-- !private "NSURL"
-- "NSURLSession"
-- !private "!="
 - !private "NSURLRequest"
-- "NSObject"
-- "ChangeOrgCode"
+- "NSURLSession"
 - !private "+"
+- "AnyObject"
 - "Int"
-- "Dictionary"
-- "GoChangeClient"
+- "ChangeOrgCode"
+- !private "!="
+- !private "NSURL"
+- !private "print"
+- "Void"
+- "NSObject"
+- "String"
+- !private "GoChangeClient"
+- !private "Dictionary"
 depends-member:
-- ["Ps9AnyObject", "Constants"]
-- ["Ps9AnyObject", "GoChangeClient"]
+- ["Ps9AnyObject", "AnyObject"]
+- !private ["Ps9AnyObject", "Constants"]
+- !private ["Ps9AnyObject", "GoChangeClient"]
 - !private ["Ps9AnyObject", "NSURL"]
 - !private ["Ps9AnyObject", "NSURLRequest"]
 - ["Ps9AnyObject", "NSURLSession"]
+- ["Ps9AnyObject", "String"]
 - !private ["Ps9AnyObject", "dataTaskWithRequest"]
 - !private ["Ps9AnyObject", "escapedParameters"]
+- ["Ps9AnyObject", "gatherPetitionData"]
 - ["Ps9AnyObject", "init"]
 - ["Ps9AnyObject", "parameterDictionary"]
 - !private ["Ps9AnyObject", "parseJSON"]
@@ -46,13 +53,16 @@ depends-member:
 - !private ["Sb", "deinit"]
 - !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
-- ["Ps11CVarArgType", "Constants"]
-- ["Ps11CVarArgType", "GoChangeClient"]
+- ["Ps11CVarArgType", "AnyObject"]
+- !private ["Ps11CVarArgType", "Constants"]
+- !private ["Ps11CVarArgType", "GoChangeClient"]
 - !private ["Ps11CVarArgType", "NSURL"]
 - !private ["Ps11CVarArgType", "NSURLRequest"]
 - ["Ps11CVarArgType", "NSURLSession"]
+- ["Ps11CVarArgType", "String"]
 - !private ["Ps11CVarArgType", "dataTaskWithRequest"]
 - !private ["Ps11CVarArgType", "escapedParameters"]
+- ["Ps11CVarArgType", "gatherPetitionData"]
 - ["Ps11CVarArgType", "init"]
 - ["Ps11CVarArgType", "parameterDictionary"]
 - !private ["Ps11CVarArgType", "parseJSON"]
@@ -64,12 +74,16 @@ depends-member:
 - !private ["Ps11CVarArgType", "sharedInstance"]
 - ["Ps11CVarArgType", "sharedSession"]
 - ["Ps11CVarArgType", ""]
-- ["C8GoChange13ChangeOrgCode", "GoChangeClient"]
+- ["C8GoChange13ChangeOrgCode", "AnyObject"]
+- !private ["C8GoChange13ChangeOrgCode", "GoChangeClient"]
 - ["C8GoChange13ChangeOrgCode", "Int"]
 - !private ["C8GoChange13ChangeOrgCode", "NSURL"]
 - !private ["C8GoChange13ChangeOrgCode", "NSURLRequest"]
 - ["C8GoChange13ChangeOrgCode", "NSURLSession"]
+- ["C8GoChange13ChangeOrgCode", "String"]
+- ["C8GoChange13ChangeOrgCode", "Void"]
 - ["C8GoChange13ChangeOrgCode", "deinit"]
+- ["C8GoChange13ChangeOrgCode", "gatherPetitionData"]
 - ["C8GoChange13ChangeOrgCode", "init"]
 - ["C8GoChange13ChangeOrgCode", "parameterDictionary"]
 - ["C8GoChange13ChangeOrgCode", "performCall"]
@@ -77,21 +91,25 @@ depends-member:
 - !private ["C8GoChange13ChangeOrgCode", "print"]
 - ["C8GoChange13ChangeOrgCode", "session"]
 - !private ["Vs9Character", "deinit"]
-- ["Ps14CollectionType", "Key"]
-- ["Ps14CollectionType", "Value"]
+- !private ["Ps14CollectionType", "Key"]
+- !private ["Ps14CollectionType", "Value"]
+- ["Ps14CollectionType", "init"]
 - !private ["Ps10Comparable", "init"]
-- ["VC8GoChange14GoChangeClient9Constants", "apiKey"]
-- ["VC8GoChange14GoChangeClient9Constants", "basePetitionURL"]
-- !private ["VC8GoChange14GoChangeClient9Constants", "requestURL"]
-- ["Ps28CustomDebugStringConvertible", "Constants"]
-- ["Ps28CustomDebugStringConvertible", "GoChangeClient"]
-- ["Ps28CustomDebugStringConvertible", "Key"]
+- !private ["VC8GoChange14GoChangeClient9Constants", "apiKey"]
+- !private ["VC8GoChange14GoChangeClient9Constants", "requestIDURL"]
+- !private ["VC8GoChange14GoChangeClient9Constants", "requestPetitionInfoURL"]
+- ["Ps28CustomDebugStringConvertible", "AnyObject"]
+- !private ["Ps28CustomDebugStringConvertible", "Constants"]
+- !private ["Ps28CustomDebugStringConvertible", "GoChangeClient"]
+- !private ["Ps28CustomDebugStringConvertible", "Key"]
 - !private ["Ps28CustomDebugStringConvertible", "NSURL"]
 - !private ["Ps28CustomDebugStringConvertible", "NSURLRequest"]
 - ["Ps28CustomDebugStringConvertible", "NSURLSession"]
-- ["Ps28CustomDebugStringConvertible", "Value"]
+- ["Ps28CustomDebugStringConvertible", "String"]
+- !private ["Ps28CustomDebugStringConvertible", "Value"]
 - !private ["Ps28CustomDebugStringConvertible", "dataTaskWithRequest"]
 - !private ["Ps28CustomDebugStringConvertible", "escapedParameters"]
+- ["Ps28CustomDebugStringConvertible", "gatherPetitionData"]
 - ["Ps28CustomDebugStringConvertible", "init"]
 - ["Ps28CustomDebugStringConvertible", "parameterDictionary"]
 - !private ["Ps28CustomDebugStringConvertible", "parseJSON"]
@@ -103,16 +121,19 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "sharedInstance"]
 - ["Ps28CustomDebugStringConvertible", "sharedSession"]
 - ["Ps28CustomDebugStringConvertible", ""]
-- ["Ps23CustomStringConvertible", "Constants"]
-- ["Ps23CustomStringConvertible", "GoChangeClient"]
-- ["Ps23CustomStringConvertible", "Key"]
+- ["Ps23CustomStringConvertible", "AnyObject"]
+- !private ["Ps23CustomStringConvertible", "Constants"]
+- !private ["Ps23CustomStringConvertible", "GoChangeClient"]
+- !private ["Ps23CustomStringConvertible", "Key"]
 - !private ["Ps23CustomStringConvertible", "NSURL"]
 - !private ["Ps23CustomStringConvertible", "NSURLRequest"]
 - ["Ps23CustomStringConvertible", "NSURLSession"]
-- ["Ps23CustomStringConvertible", "Value"]
+- ["Ps23CustomStringConvertible", "String"]
+- !private ["Ps23CustomStringConvertible", "Value"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps23CustomStringConvertible", "dataTaskWithRequest"]
 - !private ["Ps23CustomStringConvertible", "escapedParameters"]
+- ["Ps23CustomStringConvertible", "gatherPetitionData"]
 - ["Ps23CustomStringConvertible", "init"]
 - ["Ps23CustomStringConvertible", "parameterDictionary"]
 - !private ["Ps23CustomStringConvertible", "parseJSON"]
@@ -124,19 +145,24 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "sharedInstance"]
 - ["Ps23CustomStringConvertible", "sharedSession"]
 - ["Ps23CustomStringConvertible", ""]
-- ["Vs10Dictionary", "Key"]
-- ["Vs10Dictionary", "Value"]
-- ["Ps28DictionaryLiteralConvertible", "Key"]
-- ["Ps28DictionaryLiteralConvertible", "Value"]
+- !private ["Vs10Dictionary", "Key"]
+- !private ["Vs10Dictionary", "Value"]
+- ["Vs10Dictionary", "init"]
+- !private ["Ps28DictionaryLiteralConvertible", "Key"]
+- !private ["Ps28DictionaryLiteralConvertible", "Value"]
+- ["Ps28DictionaryLiteralConvertible", "init"]
 - !private ["Sd", "deinit"]
-- ["Ps9Equatable", "Constants"]
-- ["Ps9Equatable", "GoChangeClient"]
+- ["Ps9Equatable", "AnyObject"]
+- !private ["Ps9Equatable", "Constants"]
+- !private ["Ps9Equatable", "GoChangeClient"]
 - !private ["Ps9Equatable", "NSURL"]
 - !private ["Ps9Equatable", "NSURLRequest"]
 - ["Ps9Equatable", "NSURLSession"]
+- ["Ps9Equatable", "String"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "dataTaskWithRequest"]
 - !private ["Ps9Equatable", "escapedParameters"]
+- ["Ps9Equatable", "gatherPetitionData"]
 - ["Ps9Equatable", "init"]
 - ["Ps9Equatable", "parameterDictionary"]
 - !private ["Ps9Equatable", "parseJSON"]
@@ -150,18 +176,21 @@ depends-member:
 - ["Ps9Equatable", ""]
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["Sf", "deinit"]
-- ["C8GoChange14GoChangeClient", "Constants"]
+- !private ["C8GoChange14GoChangeClient", "Constants"]
 - !private ["C8GoChange14GoChangeClient", "escapedParameters"]
 - !private ["C8GoChange14GoChangeClient", "parseJSON"]
 - !private ["C8GoChange14GoChangeClient", "sharedInstance"]
-- ["Ps8Hashable", "Constants"]
-- ["Ps8Hashable", "GoChangeClient"]
+- ["Ps8Hashable", "AnyObject"]
+- !private ["Ps8Hashable", "Constants"]
+- !private ["Ps8Hashable", "GoChangeClient"]
 - !private ["Ps8Hashable", "NSURL"]
 - !private ["Ps8Hashable", "NSURLRequest"]
 - ["Ps8Hashable", "NSURLSession"]
+- ["Ps8Hashable", "String"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "dataTaskWithRequest"]
 - !private ["Ps8Hashable", "escapedParameters"]
+- ["Ps8Hashable", "gatherPetitionData"]
 - ["Ps8Hashable", "init"]
 - ["Ps8Hashable", "parameterDictionary"]
 - !private ["Ps8Hashable", "parseJSON"]
@@ -174,8 +203,9 @@ depends-member:
 - ["Ps8Hashable", "sharedSession"]
 - ["Ps8Hashable", ""]
 - !private ["SQ", "deinit"]
-- ["Ps9Indexable", "Key"]
-- ["Ps9Indexable", "Value"]
+- !private ["Ps9Indexable", "Key"]
+- !private ["Ps9Indexable", "Value"]
+- ["Ps9Indexable", "init"]
 - !private ["Si", "deinit"]
 - !private ["Vs5Int16", "deinit"]
 - !private ["Vs5Int32", "deinit"]
@@ -187,14 +217,18 @@ depends-member:
 - !private ["PSo9NSCopying", "init"]
 - !private ["PSo9NSCopying", "resume"]
 - !private ["PSo16NSMutableCopying", "init"]
-- ["CSo8NSObject", "Constants"]
-- ["CSo8NSObject", "GoChangeClient"]
+- ["CSo8NSObject", "AnyObject"]
+- !private ["CSo8NSObject", "Constants"]
+- !private ["CSo8NSObject", "GoChangeClient"]
 - ["CSo8NSObject", "Int"]
 - !private ["CSo8NSObject", "NSURL"]
 - !private ["CSo8NSObject", "NSURLRequest"]
 - ["CSo8NSObject", "NSURLSession"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "Void"]
 - !private ["CSo8NSObject", "dataTaskWithRequest"]
 - !private ["CSo8NSObject", "escapedParameters"]
+- ["CSo8NSObject", "gatherPetitionData"]
 - ["CSo8NSObject", "init"]
 - ["CSo8NSObject", "parameterDictionary"]
 - !private ["CSo8NSObject", "parseJSON"]
@@ -206,13 +240,16 @@ depends-member:
 - !private ["CSo8NSObject", "sharedInstance"]
 - ["CSo8NSObject", "sharedSession"]
 - ["CSo8NSObject", ""]
-- ["PSo16NSObjectProtocol", "Constants"]
-- ["PSo16NSObjectProtocol", "GoChangeClient"]
+- ["PSo16NSObjectProtocol", "AnyObject"]
+- !private ["PSo16NSObjectProtocol", "Constants"]
+- !private ["PSo16NSObjectProtocol", "GoChangeClient"]
 - !private ["PSo16NSObjectProtocol", "NSURL"]
 - !private ["PSo16NSObjectProtocol", "NSURLRequest"]
 - ["PSo16NSObjectProtocol", "NSURLSession"]
+- ["PSo16NSObjectProtocol", "String"]
 - !private ["PSo16NSObjectProtocol", "dataTaskWithRequest"]
 - !private ["PSo16NSObjectProtocol", "escapedParameters"]
+- ["PSo16NSObjectProtocol", "gatherPetitionData"]
 - ["PSo16NSObjectProtocol", "init"]
 - ["PSo16NSObjectProtocol", "parameterDictionary"]
 - !private ["PSo16NSObjectProtocol", "parseJSON"]
@@ -235,8 +272,10 @@ depends-member:
 - !private ["CSo16NSURLSessionTask", "resume"]
 - !private ["Sq", "deinit"]
 - !private ["Ps16OutputStreamType", "init"]
-- ["Ps12SequenceType", "Key"]
-- ["Ps12SequenceType", "Value"]
+- !private ["Ps12SequenceType", "Key"]
+- !private ["Ps12SequenceType", "Value"]
+- ["Ps12SequenceType", "init"]
+- !private ["Vs12StaticString", "deinit"]
 - !private ["Ps10Streamable", "init"]
 - !private ["SS", "deinit"]
 - !private ["SS", "init"]
@@ -255,15 +294,15 @@ depends-member:
 - !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
 - !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
 - !private ["Ps32_FileReferenceLiteralConvertible", "init"]
-- ["Ps21_ObjectiveCBridgeable", "Key"]
-- ["Ps21_ObjectiveCBridgeable", "Value"]
+- !private ["Ps21_ObjectiveCBridgeable", "Key"]
+- !private ["Ps21_ObjectiveCBridgeable", "Value"]
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
-- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- ["Ps21_ObjectiveCBridgeable", "init"]
 - !private ["Vs26_OptionalNilComparisonType", "deinit"]
-- ["Ps12_Reflectable", "Key"]
-- ["Ps12_Reflectable", "Value"]
+- !private ["Ps12_Reflectable", "Key"]
+- !private ["Ps12_Reflectable", "Value"]
 - !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
-- !private ["Ps12_Reflectable", "init"]
+- ["Ps12_Reflectable", "init"]
 depends-nominal:
 - "Ps9AnyObject"
 - !private "Sb"
@@ -274,7 +313,7 @@ depends-nominal:
 - !private "Vs9Character"
 - "Ps14CollectionType"
 - !private "Ps10Comparable"
-- "VC8GoChange14GoChangeClient9Constants"
+- !private "VC8GoChange14GoChangeClient9Constants"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
 - "Vs10Dictionary"
@@ -283,7 +322,7 @@ depends-nominal:
 - "Ps9Equatable"
 - !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
 - !private "Sf"
-- "C8GoChange14GoChangeClient"
+- !private "C8GoChange14GoChangeClient"
 - "Ps8Hashable"
 - !private "SQ"
 - "Ps9Indexable"
@@ -308,6 +347,7 @@ depends-nominal:
 - !private "Sq"
 - !private "Ps16OutputStreamType"
 - "Ps12SequenceType"
+- !private "Vs12StaticString"
 - !private "Ps10Streamable"
 - !private "SS"
 - !private "Ps30StringInterpolationConvertible"
@@ -353,4 +393,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "b4821a7e4c2aeb9f8e37bcb7c47304fc"
+interface-hash: "a4035c7cb7f196afa67c3789469f1dea"

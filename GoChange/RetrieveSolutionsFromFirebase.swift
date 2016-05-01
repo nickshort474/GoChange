@@ -38,6 +38,7 @@ class RetrieveSolutionsFromFirebase:NSObject{
         TempChange.sharedInstance().solutionVoteArray = []
         TempChange.sharedInstance().solutionIDArray = []
         TempChange.sharedInstance().solutionOwnerArray = []
+        TempChange.sharedInstance().petitionURLArray = []
         
 
         
@@ -54,6 +55,7 @@ class RetrieveSolutionsFromFirebase:NSObject{
                 TempChange.sharedInstance().solutionDetailArray.append(solution.value["SolutionDescription"] as! String)
                 TempChange.sharedInstance().solutionVoteArray.append(solution.value["SolutionVoteCount"] as! Int)
                 TempChange.sharedInstance().solutionOwnerArray.append(solution.value["SolutionOwner"] as! String)
+                TempChange.sharedInstance().petitionURLArray.append(solution.value["PetitionURL"] as! String)
             }
             
             if(caller == "following"){
@@ -138,6 +140,7 @@ class RetrieveSolutionsFromFirebase:NSObject{
         TempChange.sharedInstance().solutionVoteArray = []
         TempChange.sharedInstance().solutionIDArray = []
         TempChange.sharedInstance().solutionOwnerArray = []
+        TempChange.sharedInstance().petitionURLArray = []
         
         
         // use diff to retrieve all data
@@ -152,6 +155,7 @@ class RetrieveSolutionsFromFirebase:NSObject{
                 TempChange.sharedInstance().solutionDetailArray.append(snapshot.value["SolutionDescription"] as! String)
                 TempChange.sharedInstance().solutionVoteArray.append(snapshot.value["SolutionVoteCount"] as! Int)
                 TempChange.sharedInstance().solutionOwnerArray.append(snapshot.value["SolutionOwner"] as! String)
+                TempChange.sharedInstance().petitionURLArray.append(snapshot.value["PetitionURL"] as! String)
                 
                 if(TempChange.sharedInstance().solutionIDArray.count == self.nonMatches.count){
                     
@@ -185,7 +189,7 @@ class RetrieveSolutionsFromFirebase:NSObject{
             solutionDictionary[Solution.Keys.solutionID] = TempChange.sharedInstance().solutionIDArray[i]
             solutionDictionary[Solution.Keys.haveVotedFor] = "no"
             solutionDictionary[Solution.Keys.solutionOwner] = TempChange.sharedInstance().solutionOwnerArray[i]
-            
+            solutionDictionary[Solution.Keys.petitionURL] = TempChange.sharedInstance().petitionURLArray[i]
             
             let newSolution = Solution(dictionary: solutionDictionary,context: sharedContext)
             newSolution.solutionToChange = change!

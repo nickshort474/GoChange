@@ -6,55 +6,55 @@ provides-nominal:
 provides-member:
 - ["C8GoChange33ViewFollowingChangeViewController", ""]
 provides-dynamic-lookup:
-- "addNameClick"
-- "viewDidLoad"
-- "changeClicked"
-- "solutionTable"
-- "detailsField"
 - "goBackHome"
-- "nameField"
-- "addSolutionClick"
-- "changeID"
 - "viewWillAppear"
-- "tableView"
-- "tableView"
-- "tableView"
-- "changeIDArray"
-- "addDetailClick"
 - "addASolutionButton"
-- "sendingController"
+- "nameField"
+- "tableView"
+- "tableView"
+- "tableView"
+- "changeClicked"
 - "unfollowChange"
+- "detailsField"
+- "addNameClick"
 - "followChangeButton"
 - "solutionID"
+- "sendingController"
+- "addDetailClick"
+- "solutionTable"
+- "changeIDArray"
+- "addSolutionClick"
+- "changeID"
+- "viewDidLoad"
 depends-top-level:
-- !private "UIBarButtonItem"
-- "UITableView"
-- !private "AddIdeaViewController"
-- "UITextView"
-- !private "RetrieveSolutionsFromFirebase"
-- !private "ViewIdeaViewController"
-- !private "TempChange"
-- !private "!="
-- "String"
-- "Change"
-- "Int"
-- !private "BooleanLiteralType"
-- "UITableViewCell"
 - "UITextField"
-- !private "RetrieveSolutionCountFirebase"
+- "UITableViewCell"
+- !private "UIBarButtonItem"
 - !private "=="
 - "UIButton"
-- "UITableViewDelegate"
+- !private "!="
+- !private "RetrieveSolutions"
+- "ViewFollowingChangeViewController"
+- !private "RetrieveSolutionCountFirebase"
+- !private "StringLiteralType"
+- "NSIndexPath"
+- !private "TempChange"
+- "UIViewController"
+- "UITextView"
+- "UITextFieldDelegate"
+- "UITextViewDelegate"
+- "Int"
+- "String"
 - "Bool"
 - !private "print"
-- !private "RetrieveSolutions"
-- "NSIndexPath"
-- "ViewFollowingChangeViewController"
-- "UITextViewDelegate"
-- "UITextFieldDelegate"
-- !private "StringLiteralType"
+- !private "BooleanLiteralType"
+- "Change"
+- !private "ViewIdeaViewController"
+- !private "RetrieveSolutionsFromFirebase"
+- "UITableViewDelegate"
+- "UITableView"
 - !private "UIBarButtonItemStyle"
-- "UIViewController"
+- !private "AddIdeaViewController"
 depends-member:
 - !private ["C8GoChange21AddIdeaViewController", "change"]
 - !private ["C8GoChange21AddIdeaViewController", "viewControllerStatus"]
@@ -96,6 +96,8 @@ depends-member:
 - ["Ps9AnyObject", "nameField"]
 - !private ["Ps9AnyObject", "navigationController"]
 - !private ["Ps9AnyObject", "navigationItem"]
+- !private ["Ps9AnyObject", "petitionURL"]
+- !private ["Ps9AnyObject", "petitionURLArray"]
 - !private ["Ps9AnyObject", "popToRootViewControllerAnimated"]
 - !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "pushViewController"]
@@ -215,6 +217,8 @@ depends-member:
 - ["Ps11CVarArgType", "nameField"]
 - !private ["Ps11CVarArgType", "navigationController"]
 - !private ["Ps11CVarArgType", "navigationItem"]
+- !private ["Ps11CVarArgType", "petitionURL"]
+- !private ["Ps11CVarArgType", "petitionURLArray"]
 - !private ["Ps11CVarArgType", "popToRootViewControllerAnimated"]
 - !private ["Ps11CVarArgType", "print"]
 - !private ["Ps11CVarArgType", "pushViewController"]
@@ -325,6 +329,8 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "nameField"]
 - !private ["Ps28CustomDebugStringConvertible", "navigationController"]
 - !private ["Ps28CustomDebugStringConvertible", "navigationItem"]
+- !private ["Ps28CustomDebugStringConvertible", "petitionURL"]
+- !private ["Ps28CustomDebugStringConvertible", "petitionURLArray"]
 - !private ["Ps28CustomDebugStringConvertible", "popToRootViewControllerAnimated"]
 - !private ["Ps28CustomDebugStringConvertible", "print"]
 - !private ["Ps28CustomDebugStringConvertible", "pushViewController"]
@@ -425,6 +431,8 @@ depends-member:
 - ["Ps23CustomStringConvertible", "nameField"]
 - !private ["Ps23CustomStringConvertible", "navigationController"]
 - !private ["Ps23CustomStringConvertible", "navigationItem"]
+- !private ["Ps23CustomStringConvertible", "petitionURL"]
+- !private ["Ps23CustomStringConvertible", "petitionURLArray"]
 - !private ["Ps23CustomStringConvertible", "popToRootViewControllerAnimated"]
 - !private ["Ps23CustomStringConvertible", "print"]
 - !private ["Ps23CustomStringConvertible", "pushViewController"]
@@ -520,6 +528,8 @@ depends-member:
 - ["Ps9Equatable", "nameField"]
 - !private ["Ps9Equatable", "navigationController"]
 - !private ["Ps9Equatable", "navigationItem"]
+- !private ["Ps9Equatable", "petitionURL"]
+- !private ["Ps9Equatable", "petitionURLArray"]
 - !private ["Ps9Equatable", "popToRootViewControllerAnimated"]
 - !private ["Ps9Equatable", "print"]
 - !private ["Ps9Equatable", "pushViewController"]
@@ -619,6 +629,8 @@ depends-member:
 - ["Ps8Hashable", "nameField"]
 - !private ["Ps8Hashable", "navigationController"]
 - !private ["Ps8Hashable", "navigationItem"]
+- !private ["Ps8Hashable", "petitionURL"]
+- !private ["Ps8Hashable", "petitionURLArray"]
 - !private ["Ps8Hashable", "popToRootViewControllerAnimated"]
 - !private ["Ps8Hashable", "print"]
 - !private ["Ps8Hashable", "pushViewController"]
@@ -752,6 +764,7 @@ depends-member:
 - ["PSo8NSCoding", "nameField"]
 - !private ["PSo8NSCoding", "navigationController"]
 - !private ["PSo8NSCoding", "navigationItem"]
+- !private ["PSo8NSCoding", "petitionURL"]
 - !private ["PSo8NSCoding", "popToRootViewControllerAnimated"]
 - !private ["PSo8NSCoding", "print"]
 - !private ["PSo8NSCoding", "pushViewController"]
@@ -828,6 +841,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "nameField"]
 - !private ["PSo26NSExtensionRequestHandling", "navigationController"]
 - !private ["PSo26NSExtensionRequestHandling", "navigationItem"]
+- !private ["PSo26NSExtensionRequestHandling", "petitionURL"]
 - !private ["PSo26NSExtensionRequestHandling", "popToRootViewControllerAnimated"]
 - !private ["PSo26NSExtensionRequestHandling", "print"]
 - !private ["PSo26NSExtensionRequestHandling", "pushViewController"]
@@ -923,6 +937,8 @@ depends-member:
 - ["CSo8NSObject", "nameField"]
 - !private ["CSo8NSObject", "navigationController"]
 - !private ["CSo8NSObject", "navigationItem"]
+- !private ["CSo8NSObject", "petitionURL"]
+- !private ["CSo8NSObject", "petitionURLArray"]
 - !private ["CSo8NSObject", "popToRootViewControllerAnimated"]
 - !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "pushViewController"]
@@ -1012,6 +1028,8 @@ depends-member:
 - ["PSo16NSObjectProtocol", "nameField"]
 - !private ["PSo16NSObjectProtocol", "navigationController"]
 - !private ["PSo16NSObjectProtocol", "navigationItem"]
+- !private ["PSo16NSObjectProtocol", "petitionURL"]
+- !private ["PSo16NSObjectProtocol", "petitionURLArray"]
 - !private ["PSo16NSObjectProtocol", "popToRootViewControllerAnimated"]
 - !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "pushViewController"]
@@ -1107,6 +1125,7 @@ depends-member:
 - !private ["SS", "init"]
 - !private ["Ps30StringInterpolationConvertible", "init"]
 - !private ["Ps24StringLiteralConvertible", "init"]
+- !private ["C8GoChange10TempChange", "petitionURLArray"]
 - !private ["C8GoChange10TempChange", "sharedInstance"]
 - !private ["C8GoChange10TempChange", "solutionDetailArray"]
 - !private ["C8GoChange10TempChange", "solutionIDArray"]
@@ -1163,6 +1182,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "nameField"]
 - !private ["PSo21UIAppearanceContainer", "navigationController"]
 - !private ["PSo21UIAppearanceContainer", "navigationItem"]
+- !private ["PSo21UIAppearanceContainer", "petitionURL"]
 - !private ["PSo21UIAppearanceContainer", "popToRootViewControllerAnimated"]
 - !private ["PSo21UIAppearanceContainer", "print"]
 - !private ["PSo21UIAppearanceContainer", "pushViewController"]
@@ -1240,6 +1260,7 @@ depends-member:
 - ["PSo18UIContentContainer", "nameField"]
 - !private ["PSo18UIContentContainer", "navigationController"]
 - !private ["PSo18UIContentContainer", "navigationItem"]
+- !private ["PSo18UIContentContainer", "petitionURL"]
 - !private ["PSo18UIContentContainer", "popToRootViewControllerAnimated"]
 - !private ["PSo18UIContentContainer", "print"]
 - !private ["PSo18UIContentContainer", "pushViewController"]
@@ -1333,6 +1354,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "nameField"]
 - !private ["PSo18UIFocusEnvironment", "navigationController"]
 - !private ["PSo18UIFocusEnvironment", "navigationItem"]
+- !private ["PSo18UIFocusEnvironment", "petitionURL"]
 - !private ["PSo18UIFocusEnvironment", "popToRootViewControllerAnimated"]
 - !private ["PSo18UIFocusEnvironment", "print"]
 - !private ["PSo18UIFocusEnvironment", "pushViewController"]
@@ -1432,6 +1454,7 @@ depends-member:
 - ["CSo11UIResponder", "nameField"]
 - !private ["CSo11UIResponder", "navigationController"]
 - !private ["CSo11UIResponder", "navigationItem"]
+- !private ["CSo11UIResponder", "petitionURL"]
 - !private ["CSo11UIResponder", "popToRootViewControllerAnimated"]
 - !private ["CSo11UIResponder", "print"]
 - !private ["CSo11UIResponder", "pushViewController"]
@@ -1565,6 +1588,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "nameField"]
 - !private ["PSo16UIStateRestoring", "navigationController"]
 - !private ["PSo16UIStateRestoring", "navigationItem"]
+- !private ["PSo16UIStateRestoring", "petitionURL"]
 - !private ["PSo16UIStateRestoring", "popToRootViewControllerAnimated"]
 - !private ["PSo16UIStateRestoring", "print"]
 - !private ["PSo16UIStateRestoring", "pushViewController"]
@@ -1824,6 +1848,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "nameField"]
 - !private ["PSo18UITraitEnvironment", "navigationController"]
 - !private ["PSo18UITraitEnvironment", "navigationItem"]
+- !private ["PSo18UITraitEnvironment", "petitionURL"]
 - !private ["PSo18UITraitEnvironment", "popToRootViewControllerAnimated"]
 - !private ["PSo18UITraitEnvironment", "print"]
 - !private ["PSo18UITraitEnvironment", "pushViewController"]
@@ -1916,6 +1941,7 @@ depends-member:
 - ["CSo16UIViewController", "nameField"]
 - !private ["CSo16UIViewController", "navigationController"]
 - !private ["CSo16UIViewController", "navigationItem"]
+- !private ["CSo16UIViewController", "petitionURL"]
 - !private ["CSo16UIViewController", "popToRootViewControllerAnimated"]
 - !private ["CSo16UIViewController", "print"]
 - !private ["CSo16UIViewController", "pushViewController"]
@@ -2035,7 +2061,9 @@ depends-member:
 - !private ["C8GoChange22ViewIdeaViewController", "index"]
 - !private ["C8GoChange22ViewIdeaViewController", "loadedDetailData"]
 - !private ["C8GoChange22ViewIdeaViewController", "loadedNameData"]
+- !private ["C8GoChange22ViewIdeaViewController", "petitionURL"]
 - !private ["C8GoChange22ViewIdeaViewController", "solutionID"]
+- !private ["C8GoChange22ViewIdeaViewController", "viewControllerStatus"]
 - !private ["Ps10_ArrayType", "Generator"]
 - !private ["Ps10_ArrayType", "Index"]
 - !private ["Ps10_ArrayType", "SubSequence"]

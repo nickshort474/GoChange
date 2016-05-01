@@ -18,6 +18,7 @@ class Solution:NSManagedObject{
         static let solutionID = "solutionID"
         static let haveVotedFor = "haveVotedFor"
         static let solutionOwner = "solutionOwner"
+        static let petitionURL = "petitionURL"
     }
     
     
@@ -27,10 +28,9 @@ class Solution:NSManagedObject{
     @NSManaged var solutionID:String
     @NSManaged var haveVotedFor:String
     @NSManaged var solutionOwner:String
-    
-    
+    @NSManaged var petitionURL:String
     @NSManaged var solutionToChange:Change
-    @NSManaged var solutionNeedingTweaking:[Tweak]
+    
     
     
     override init(entity: NSEntityDescription, insertIntoManagedObjectContext context: NSManagedObjectContext?) {
@@ -49,6 +49,8 @@ class Solution:NSManagedObject{
         solutionID = dictionary[Solution.Keys.solutionID] as! String
         haveVotedFor = dictionary[Solution.Keys.haveVotedFor] as! String
         solutionOwner = dictionary[Solution.Keys.solutionOwner] as! String
+        petitionURL = dictionary[Solution.Keys.petitionURL] as! String
+        
     }
    
 }

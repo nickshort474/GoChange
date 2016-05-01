@@ -6,28 +6,28 @@ provides-nominal:
 provides-member:
 - ["C8GoChange15VoteForSolution", ""]
 provides-dynamic-lookup:
-- "currentVoteCount"
-- "changeID"
 - "addVoteToCoreData"
+- "changeID"
+- "currentVoteCount"
 - "addVoteToFirebase"
 - "sharedContext"
 - "solutionID"
 depends-top-level:
-- "String"
-- !private "CoreDataStackManager"
-- !private "StringLiteralType"
-- "VoteForSolution"
-- !private "NSPredicate"
-- "NSObject"
-- "Int"
 - !private "NSFetchRequest"
-- !private "Solution"
-- "AnyObject"
-- "Dictionary"
-- !private "+="
-- "Void"
-- "NSManagedObjectContext"
 - !private "Firebase"
+- "Void"
+- "NSObject"
+- !private "+="
+- "VoteForSolution"
+- "Dictionary"
+- "Int"
+- !private "NSPredicate"
+- "AnyObject"
+- !private "CoreDataStackManager"
+- "NSManagedObjectContext"
+- "String"
+- !private "StringLiteralType"
+- !private "Solution"
 depends-member:
 - !private ["Ps9AnyObject", "CoreDataStackManager"]
 - !private ["Ps9AnyObject", "Firebase"]
@@ -39,6 +39,7 @@ depends-member:
 - !private ["Ps9AnyObject", "childByAppendingPath"]
 - ["Ps9AnyObject", "currentVoteCount"]
 - !private ["Ps9AnyObject", "executeFetchRequest"]
+- !private ["Ps9AnyObject", "haveVotedFor"]
 - ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "managedObjectContext"]
 - !private ["Ps9AnyObject", "observeSingleEventOfType"]
@@ -85,6 +86,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "childByAppendingPath"]
 - ["Ps11CVarArgType", "currentVoteCount"]
 - !private ["Ps11CVarArgType", "executeFetchRequest"]
+- !private ["Ps11CVarArgType", "haveVotedFor"]
 - ["Ps11CVarArgType", "init"]
 - !private ["Ps11CVarArgType", "observeSingleEventOfType"]
 - !private ["Ps11CVarArgType", "predicate"]
@@ -124,6 +126,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "currentVoteCount"]
 - !private ["Ps28CustomDebugStringConvertible", "executeFetchRequest"]
 - !private ["Ps28CustomDebugStringConvertible", "first"]
+- !private ["Ps28CustomDebugStringConvertible", "haveVotedFor"]
 - ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "observeSingleEventOfType"]
 - !private ["Ps28CustomDebugStringConvertible", "predicate"]
@@ -155,6 +158,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "currentVoteCount"]
 - !private ["Ps23CustomStringConvertible", "executeFetchRequest"]
 - !private ["Ps23CustomStringConvertible", "first"]
+- !private ["Ps23CustomStringConvertible", "haveVotedFor"]
 - ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "observeSingleEventOfType"]
 - !private ["Ps23CustomStringConvertible", "predicate"]
@@ -184,6 +188,7 @@ depends-member:
 - !private ["Ps9Equatable", "childByAppendingPath"]
 - ["Ps9Equatable", "currentVoteCount"]
 - !private ["Ps9Equatable", "executeFetchRequest"]
+- !private ["Ps9Equatable", "haveVotedFor"]
 - ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "observeSingleEventOfType"]
 - !private ["Ps9Equatable", "predicate"]
@@ -222,6 +227,7 @@ depends-member:
 - !private ["Ps8Hashable", "childByAppendingPath"]
 - ["Ps8Hashable", "currentVoteCount"]
 - !private ["Ps8Hashable", "executeFetchRequest"]
+- !private ["Ps8Hashable", "haveVotedFor"]
 - ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "observeSingleEventOfType"]
 - !private ["Ps8Hashable", "predicate"]
@@ -279,6 +285,7 @@ depends-member:
 - !private ["CSo14NSFetchRequest", "predicate"]
 - !private ["PSo9NSLocking", "executeFetchRequest"]
 - !private ["PSo9NSLocking", "save"]
+- !private ["CSo15NSManagedObject", "haveVotedFor"]
 - !private ["CSo15NSManagedObject", "voteCount"]
 - !private ["CSo22NSManagedObjectContext", "executeFetchRequest"]
 - !private ["CSo22NSManagedObjectContext", "save"]
@@ -299,6 +306,7 @@ depends-member:
 - ["CSo8NSObject", "currentVoteCount"]
 - !private ["CSo8NSObject", "deinit"]
 - !private ["CSo8NSObject", "executeFetchRequest"]
+- !private ["CSo8NSObject", "haveVotedFor"]
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "observeSingleEventOfType"]
 - !private ["CSo8NSObject", "predicate"]
@@ -320,6 +328,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "childByAppendingPath"]
 - ["PSo16NSObjectProtocol", "currentVoteCount"]
 - !private ["PSo16NSObjectProtocol", "executeFetchRequest"]
+- !private ["PSo16NSObjectProtocol", "haveVotedFor"]
 - ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "observeSingleEventOfType"]
 - !private ["PSo16NSObjectProtocol", "predicate"]
@@ -356,6 +365,7 @@ depends-member:
 - !private ["Ps17SignedIntegerType", "IntegerLiteralType"]
 - !private ["Ps16SignedNumberType", "Distance"]
 - !private ["Ps16SignedNumberType", "IntegerLiteralType"]
+- !private ["C8GoChange8Solution", "haveVotedFor"]
 - !private ["C8GoChange8Solution", "voteCount"]
 - !private ["Vs12StaticString", "deinit"]
 - !private ["Ps10Strideable", "Distance"]

@@ -66,6 +66,7 @@ class UpdateCoreDataSolutions:NSObject{
             solutionDictionary[Solution.Keys.solutionID] = TempChange.sharedInstance().solutionIDArray[i]
             solutionDictionary[Solution.Keys.haveVotedFor] = "no"
             solutionDictionary[Solution.Keys.solutionOwner] = TempChange.sharedInstance().solutionOwnerArray[i]
+            solutionDictionary[Solution.Keys.petitionURL] = TempChange.sharedInstance().petitionURLArray[i]
             
             
             let newSolution = Solution(dictionary: solutionDictionary,context: sharedContext)

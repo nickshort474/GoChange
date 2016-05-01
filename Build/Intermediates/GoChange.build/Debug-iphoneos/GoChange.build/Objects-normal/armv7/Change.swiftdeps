@@ -9,21 +9,21 @@ provides-member:
 - ["VC8GoChange6Change4Keys", ""]
 provides-dynamic-lookup:
 - "changeID"
-- "solutionCount"
-- "changeName"
-- "changeOwner"
 - "changeDescription"
+- "changeOwner"
 - "changeNeedingSolution"
+- "changeName"
+- "solutionCount"
 depends-top-level:
-- "NSManagedObjectContext"
-- "AnyObject"
-- "NSNumber"
-- "StringLiteralType"
+- "Change"
 - "String"
 - "Solution"
-- "NSEntityDescription"
-- "Change"
+- "StringLiteralType"
+- "NSManagedObjectContext"
+- "AnyObject"
 - "NSManagedObject"
+- "NSNumber"
+- "NSEntityDescription"
 depends-member:
 - !private ["Ps9AnyObject", "Change"]
 - !private ["Ps9AnyObject", "Keys"]

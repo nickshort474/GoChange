@@ -8,23 +8,23 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - !private "NSUnderlyingErrorKey"
-- !private "NSLog"
-- "NSManagedObjectModel"
 - !private "NSSQLiteStoreType"
-- !private "NSBundle"
+- !private "NSLog"
 - "CoreDataStackManager"
+- !private "NSFileManager"
+- !private "AnyObject"
+- "NSManagedObjectModel"
+- !private "NSError"
+- "NSPersistentStoreCoordinator"
 - "StringLiteralType"
 - !private "-"
 - "NSManagedObjectContext"
-- !private "NSLocalizedDescriptionKey"
-- !private "NSLocalizedFailureReasonErrorKey"
-- !private "AnyObject"
-- !private "NSFileManager"
-- !private "NSError"
-- "NSURL"
 - !private "SQLITE_FILE_NAME"
-- "NSPersistentStoreCoordinator"
 - !private "String"
+- "NSURL"
+- !private "NSLocalizedFailureReasonErrorKey"
+- !private "NSBundle"
+- !private "NSLocalizedDescriptionKey"
 depends-member:
 - !private ["Ps9AnyObject", "AnyObject"]
 - !private ["Ps9AnyObject", "CoreDataStackManager"]

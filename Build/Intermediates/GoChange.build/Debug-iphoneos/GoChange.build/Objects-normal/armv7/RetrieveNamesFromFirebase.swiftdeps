@@ -6,19 +6,19 @@ provides-nominal:
 provides-member:
 - ["C8GoChange25RetrieveNamesFromFirebase", ""]
 provides-dynamic-lookup:
+- "nameResults"
 - "ownerResults"
 - "nameRef"
-- "nameResults"
 depends-top-level:
+- "Void"
+- "String"
 - !private "=="
-- "Firebase"
+- !private "..<"
+- "RetrieveNamesFromFirebase"
 - "NSObject"
 - "StringLiteralType"
-- !private "..<"
-- "Void"
-- "RetrieveNamesFromFirebase"
 - !private "print"
-- "String"
+- "Firebase"
 depends-member:
 - ["Ps9AnyObject", "Firebase"]
 - !private ["Ps9AnyObject", "childByAppendingPath"]

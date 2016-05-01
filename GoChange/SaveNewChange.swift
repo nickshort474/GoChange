@@ -47,7 +47,7 @@ class SaveNewChange:NSObject{
         
         changeID = changeNameLocation.key
         
-        let changeOwner = NSUserDefaults.standardUserDefaults().valueForKey("uid") as? String
+        let changeOwner = NSUserDefaults.standardUserDefaults().valueForKey("username") as? String
         
         // set up values to be saved
         let changeNameValues = ["ChangeName":TempChange.sharedInstance().changeName,"ChangeOwner": changeOwner!]
@@ -89,7 +89,7 @@ class SaveNewChange:NSObject{
         let changeSolutionsLocation = Firebase(url:"https://gochange.firebaseio.com/change/solutions")
         let uniqueSolutionLocation = changeSolutionsLocation.childByAppendingPath(changeID!)
         
-        let solutionOwner = NSUserDefaults.standardUserDefaults().valueForKey("uid") as? String
+        let solutionOwner = NSUserDefaults.standardUserDefaults().valueForKey("username") as? String
         
         //loop through solutions array
         for i in 0 ..< (TempChange.sharedInstance().solutionNameArray.count){
@@ -102,7 +102,7 @@ class SaveNewChange:NSObject{
             
             
             //set solution values
-            let changeSolutionValues = ["SolutionName":TempChange.sharedInstance().solutionNameArray[i],"SolutionDescription":TempChange.sharedInstance().solutionDetailArray[i],"SolutionVoteCount":0,"SolutionOwner":solutionOwner!]
+            let changeSolutionValues = ["SolutionName":TempChange.sharedInstance().solutionNameArray[i],"SolutionDescription":TempChange.sharedInstance().solutionDetailArray[i],"SolutionVoteCount":0,"SolutionOwner":solutionOwner!,"PetitionURL":TempChange.sharedInstance().petitionURLArray[i]]
             
             //save values to firebase
             uniqueSolutionReference.setValue(changeSolutionValues)
@@ -123,7 +123,7 @@ class SaveNewChange:NSObject{
         changeDictionary[Change.Keys.changeID] = self.changeID
         changeDictionary[Change.Keys.solutionCount] = TempChange.sharedInstance().solutionNameArray.count
         
-        let changeOwner = NSUserDefaults.standardUserDefaults().valueForKey("uid") as? String
+        let changeOwner = NSUserDefaults.standardUserDefaults().valueForKey("username") as? String
         changeDictionary[Change.Keys.changeOwner] = changeOwner!
         
         
@@ -150,7 +150,7 @@ class SaveNewChange:NSObject{
     
     func createCoreDataSolutions(){
         
-        let solutionOwner = NSUserDefaults.standardUserDefaults().valueForKey("uid") as? String
+        let solutionOwner = NSUserDefaults.standardUserDefaults().valueForKey("username") as? String
         
         for i in 0 ..< TempChange.sharedInstance().solutionNameArray.count{
             
@@ -162,6 +162,8 @@ class SaveNewChange:NSObject{
             solutionDictionary[Solution.Keys.solutionID] = self.solutionIDArray[i]
             solutionDictionary[Solution.Keys.haveVotedFor] = "yes" //user created solution, can not be voted for themselves
             solutionDictionary[Solution.Keys.solutionOwner] = solutionOwner!
+            solutionDictionary[Solution.Keys.petitionURL] = TempChange.sharedInstance().petitionURLArray[i]
+            
             
             //create core data solution object
             let newSolution = Solution(dictionary: solutionDictionary,context: sharedContext)

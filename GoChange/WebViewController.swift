@@ -11,23 +11,30 @@ import UIKit
 class WebViewController: UIViewController,UIWebViewDelegate {
     
     @IBOutlet weak var webView: UIWebView!
-    @IBOutlet weak var linkPetition: UIButton!
+    
     @IBOutlet weak var petitionText: UITextField!
     
-    //var baseURL:String = "https://www.change.org/"
-    var petitionString:String!
+    var currentURL:String!
     var urlString:String = ""
+    var status:String!
     
+    var rightBarButton:UIBarButtonItem!
+    
+    //var petitionDisplayText:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         webView.delegate = self
-        linkPetition.enabled = false
-        linkPetition.alpha = 0.5
+        //linkPetition.enabled = false
+        //linkPetition.alpha = 0.5
         
         //petitionText.text = webView.request!.URL?.absoluteString
+        
+        rightBarButton = UIBarButtonItem(title: "Link Petition", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(WebViewController.linkPetitionClick))
+        
+        self.navigationItem.rightBarButtonItem = rightBarButton
         
         let url:NSURL = NSURL(string: urlString)!
         let request = NSURLRequest(URL: url)
@@ -37,30 +44,45 @@ class WebViewController: UIViewController,UIWebViewDelegate {
         
     }
     
+    override func viewWillAppear(animated: Bool) {
+        
+        rightBarButton.enabled = false
+        rightBarButton.tintColor = UIColor.clearColor()
+        
+    }
+    
     func webViewDidFinishLoad(webView: UIWebView) {
         
-        if(webView.request!.URL?.absoluteString != GoChangeClient.Constants.dynamicPetitionURL){
+        currentURL = webView.request!.URL?.absoluteString
+        
+        //print(currentURL)
+        
+        petitionText.text = currentURL
+        
+        //print(currentURL)
+        //print(GoChangeClient.Constants.basePetitionURL)
+        
+        if(currentURL != GoChangeClient.Constants.basePetitionURL){
             
-            linkPetition.enabled = true
-            linkPetition.alpha = 1
+            rightBarButton.enabled = true
+            rightBarButton.tintColor = UIColor.clearColor()
             
             var petitionViewText = webView.request!.URL?.absoluteString
             
-            let range = petitionViewText?.rangeOfString("\(GoChangeClient.Constants.dynamicPetitionURL)p/")
+            let range = petitionViewText?.rangeOfString("\(GoChangeClient.Constants.basePetitionURL)p/")
             petitionViewText?.removeRange(range!)
-            
-            print(petitionViewText)
             
             petitionText.text = petitionViewText
         }
+        
     }
     
     
     @IBAction func linkPetitionClick(sender: UIButton) {
         
         
-        petitionString = webView.request!.URL?.absoluteString
-        GoChangeClient.Constants.dynamicPetitionURL = petitionString
+        //petitionString = webView.request!.URL?.absoluteString
+        TempChange.sharedInstance().currentPetitionValue = currentURL
         
         self.navigationController!.popViewControllerAnimated(true)
     }

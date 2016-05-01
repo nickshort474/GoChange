@@ -62,21 +62,31 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
     @IBAction func searchForResults(sender: UIButton) {
         
         _ = SearchController(searchText: searchTextField.text!){
-            (nameResult,detailResult,ownerResult,solutionCountResult,refResult) in
+            (nameResult,detailResult,ownerResult,solutionCountResult,refResult,matchType) in
             
-            var controller:ResultsViewController
-            controller = self.storyboard?.instantiateViewControllerWithIdentifier("ResultsViewController") as! ResultsViewController
-            let navigationController = self.navigationController
+            if(matchType == "noFirebaseMatches"){
+                
+                self.presentAlert("No matches for your search term")
+                
+            }else if(matchType == "coreDataMatch"){
+               
+                self.presentAlert("Matches found but already followed")
+                
+            }else{
+                
+                var controller:ResultsViewController
+                controller = self.storyboard?.instantiateViewControllerWithIdentifier("ResultsViewController") as! ResultsViewController
+                let navigationController = self.navigationController
             
+                controller.resultNameArray = nameResult
+                controller.resultDetailArray = detailResult
+                controller.changeOwnerArray = ownerResult
+                controller.resultSolutionCountArray = solutionCountResult
+                controller.refArray = refResult
             
-            controller.resultNameArray = nameResult
-            controller.resultDetailArray = detailResult
-            controller.changeOwnerArray = ownerResult
-            controller.resultSolutionCountArray = solutionCountResult
-            controller.refArray = refResult
-            
-            
-            navigationController?.pushViewController(controller,animated: true)
+                navigationController?.pushViewController(controller,animated: true)
+                
+            }
         }
         
         /*
@@ -104,9 +114,30 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
          */
     }
     
+    
+    func presentAlert(alertType:String){
+        
+        let controller = UIAlertController()
+        //controller.title = "No Matches"
+        controller.message = alertType
+        
+        let alertAction = UIAlertAction(title: "Please try again", style: UIAlertActionStyle.Cancel){
+            action in
+            
+            self.searchTextField.text = ""
+            self.searchTextField.becomeFirstResponder()
+            
+        }
+        
+        controller.addAction(alertAction)
+        self.presentViewController(controller, animated: true, completion: nil)
+        
+    }
+    
+    
     /*
     func checkResults(){
-        
+     
         //clear matched array after previous search
         matchedNameArray = []
         countArray = []
