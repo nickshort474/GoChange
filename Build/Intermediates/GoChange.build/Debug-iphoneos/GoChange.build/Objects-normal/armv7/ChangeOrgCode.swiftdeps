@@ -7,25 +7,25 @@ provides-member:
 - ["C8GoChange13ChangeOrgCode", ""]
 provides-dynamic-lookup:
 - "session"
-- "gatherPetitionData"
-- "parameterDictionary"
-- "petitionId"
 - "performCall"
+- "petitionId"
+- "parameterDictionary"
+- "gatherPetitionData"
 depends-top-level:
-- !private "NSURLRequest"
-- "NSURLSession"
-- !private "+"
-- "AnyObject"
-- "Int"
-- "ChangeOrgCode"
 - !private "!="
+- !private "+"
+- "NSObject"
+- "NSURLSession"
 - !private "NSURL"
 - !private "print"
-- "Void"
-- "NSObject"
-- "String"
-- !private "GoChangeClient"
+- "AnyObject"
+- "Int"
 - !private "Dictionary"
+- "String"
+- "ChangeOrgCode"
+- !private "GoChangeClient"
+- "Void"
+- !private "NSURLRequest"
 depends-member:
 - ["Ps9AnyObject", "AnyObject"]
 - !private ["Ps9AnyObject", "Constants"]

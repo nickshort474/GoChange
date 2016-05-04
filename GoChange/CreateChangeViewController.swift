@@ -18,30 +18,48 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
     @IBOutlet weak var detailsField: UITextView!
     @IBOutlet weak var namePlusButton: UIButton!
     @IBOutlet weak var detailsPlusButton: UIButton!
-    
     @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var addASolutionButton: UIButton!
-    
     @IBOutlet weak var solutionTable: UITableView!
     
     
     var currentNameData:String = ""
     var currentDetailData:String = ""
     
-    //var sendingController:String = ""
-    
-    
-    //var changeName:String = ""
-    //var changeDetail:String = ""
-    //var changeID:String = ""
-    
-    //var change:Change?
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.navigationController?.navigationBar.barTintColor = GoChangeClient.Constants.customOrangeColor
+        
+        addASolutionButton.setTitleColor(GoChangeClient.Constants.customOrangeColor, forState: UIControlState.Normal)
+        
+        /*
+        //set drop shadow for namefield
+        nameField.layer.masksToBounds = false
+        nameField.borderStyle = UITextBorderStyle.None
+        nameField.layer.shadowRadius = 0.5
+        nameField.layer.shadowColor = GoChangeClient.Constants.customOrangeColor.CGColor
+        nameField.layer.shadowOffset = CGSizeMake(-3.0,-3.0)
+        nameField.layer.shadowOpacity = 0.5
+        */
+        
+        //Set up drop shadow for detailsField
+        detailsField.layer.masksToBounds = false
+        detailsField.layer.borderColor = UIColor.clearColor().CGColor
+        detailsField.layer.shadowRadius = 0.5
+        detailsField.layer.shadowColor = GoChangeClient.Constants.customOrangeColor.CGColor
+        detailsField.layer.shadowOffset = CGSizeMake(0,-1.0)
+        detailsField.layer.shadowOpacity = 0.5
+        
+        //Set up drop shadow for detailsField
+        solutionTable.layer.masksToBounds = false
+        solutionTable.layer.borderColor = UIColor.clearColor().CGColor
+        solutionTable.layer.shadowRadius = 0.5
+        solutionTable.layer.shadowColor = GoChangeClient.Constants.customOrangeColor.CGColor
+        solutionTable.layer.shadowOffset = CGSizeMake(0,-1.0)
+        solutionTable.layer.shadowOpacity = 0.5
         
         
         //set delegates
@@ -66,8 +84,6 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
         TempChange.sharedInstance().solutionIDArray = []
         TempChange.sharedInstance().currentPetitionValue = ""
     }
-    
-    
     
     
     override func viewWillAppear(animated: Bool) {
@@ -187,11 +203,26 @@ class CreateChangeViewController: UIViewController,UITextViewDelegate,UITextFiel
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cellID = "solutionCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath) as! CustomTableViewCell
         
         var solutionName:String = ""
         solutionName = TempChange.sharedInstance().solutionNameArray[indexPath.row]
-        cell.textLabel!.text = solutionName
+        
+        //cell.textLabel!.text = solutionName
+        cell.problemName.text = solutionName
+        
+        let username = NSUserDefaults.standardUserDefaults().valueForKey("username") as? String
+        if let username = username{
+            cell.ownerName.text = "Submitted by: \(username)"
+        }
+        
+        cell.voteCount.text = "0"
+        
+        cell.layer.masksToBounds = false
+        cell.layer.shadowRadius = 1.0
+        cell.layer.shadowColor = GoChangeClient.Constants.customOrangeColor.CGColor
+        cell.layer.shadowOffset = CGSizeMake(3.0,3.0)
+        cell.layer.shadowOpacity = 0.5
         
         return cell
         

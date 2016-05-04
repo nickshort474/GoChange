@@ -27,19 +27,8 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     
     var currentNameData:String!
     var currentDetailData:String!
-    
-    
     var viewControllerStatus:String!
-    
-    
     var change:Change!
-    //var changeID:String!
-    //var solutionID:String!
-    //var solutionCount:Int!
-    //var index:Int!
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,12 +41,20 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         addSolution.enabled = false
         addSolution.alpha = 0.5
         
+        petitionTextField.text = ""
+        petitionTextField.enabled = false
+        
         nameTextField.delegate = self
         detailTextView.delegate = self
         
-        petitionTextField.enabled = false
         
-                
+        detailTextView.layer.masksToBounds = false
+        detailTextView.layer.borderColor = UIColor.clearColor().CGColor
+        detailTextView.layer.shadowRadius = 0.5
+        detailTextView.layer.shadowColor = GoChangeClient.Constants.customOrangeColor.CGColor
+        detailTextView.layer.shadowOffset = CGSizeMake(0,-1.0)
+        detailTextView.layer.shadowOpacity = 0.5
+        
     }
     
     override func viewWillAppear(animated: Bool) {

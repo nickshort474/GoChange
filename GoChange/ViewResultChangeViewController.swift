@@ -40,6 +40,21 @@ class ViewResultChangeViewController: UIViewController,UITextViewDelegate,UIText
         nameField.enabled = false
         detailsField.selectable = false
         
+        nameField.layer.masksToBounds = false
+        nameField.layer.borderColor = UIColor.clearColor().CGColor
+        nameField.layer.shadowRadius = 0.5
+        nameField.layer.shadowColor = GoChangeClient.Constants.customOrangeColor.CGColor
+        nameField.layer.shadowOffset = CGSizeMake(0,-1.0)
+        nameField.layer.shadowOpacity = 0.5
+        
+        detailsField.layer.masksToBounds = false
+        detailsField.layer.borderColor = UIColor.clearColor().CGColor
+        detailsField.layer.shadowRadius = 0.5
+        detailsField.layer.shadowColor = GoChangeClient.Constants.customOrangeColor.CGColor
+        detailsField.layer.shadowOffset = CGSizeMake(0,-1.0)
+        detailsField.layer.shadowOpacity = 0.5
+        
+        
     }
     
     override func viewWillAppear(animated: Bool) {

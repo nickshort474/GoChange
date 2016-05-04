@@ -19,21 +19,15 @@ class ViewFollowingChangeViewController: UIViewController,UITextViewDelegate,UIT
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var detailsField: UITextView!
     @IBOutlet weak var solutionTable: UITableView!
-    
     @IBOutlet weak var addASolutionButton: UIButton!
     @IBOutlet weak var followChangeButton: UIButton!
-    
     
     var changeClicked:Change!
     var changeID:String!
     var solutionID:String!
-    
     var localSolutionCount:Int!
     var changeIDArray:[String] = []
-    
     var sendingController:String!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,11 +38,22 @@ class ViewFollowingChangeViewController: UIViewController,UITextViewDelegate,UIT
         detailsField.delegate = self
         solutionTable.delegate = self
         
-        
         nameField.enabled = false
         detailsField.selectable = false
         
         self.title = "Following"
+        
+        detailsField.layer.masksToBounds = false
+        detailsField.layer.shadowRadius = 0.5
+        detailsField.layer.shadowColor = GoChangeClient.Constants.customOrangeColor.CGColor
+        detailsField.layer.shadowOffset = CGSizeMake(0,-1.0)
+        detailsField.layer.shadowOpacity = 0.5
+        
+        solutionTable.layer.masksToBounds = false
+        solutionTable.layer.shadowRadius = 0.5
+        solutionTable.layer.shadowColor = GoChangeClient.Constants.customOrangeColor.CGColor
+        solutionTable.layer.shadowOffset = CGSizeMake(0,-1.0)
+        solutionTable.layer.shadowOpacity = 0.5
         
         
         //if coming from ViewResultChangeViewController need back button to go home
@@ -58,7 +63,7 @@ class ViewFollowingChangeViewController: UIViewController,UITextViewDelegate,UIT
             self.navigationItem.leftBarButtonItem = barButtonItem
             
         }
-        
+       
         nameField.text = changeClicked.changeName
         detailsField.text = changeClicked.changeDescription
         localSolutionCount = changeClicked.solutionCount as Int
@@ -83,99 +88,19 @@ class ViewFollowingChangeViewController: UIViewController,UITextViewDelegate,UIT
                 _ = RetrieveSolutionsFromFirebase(changeID: self.changeID,change:self.changeClicked,caller:"following", completionHandler: {
                     (result) in
                     
-                    /*
-                    //empty TempArrays ready to be populate with new data
-                    TempChange.sharedInstance().solutionNameArray = []
-                    TempChange.sharedInstance().solutionDetailArray = []
-                    TempChange.sharedInstance().solutionVoteArray = []
-                    TempChange.sharedInstance().solutionIDArray = []
-                    TempChange.sharedInstance().solutionOwnerArray = []
-                    
-                    
-                    
-                    
-                    //loop through retrieved firebase solutions and save into TempArrays
-                    for solution in result.children.allObjects as! [FDataSnapshot]{
-                            
-                            TempChange.sharedInstance().solutionIDArray.addObject(solution.key)
-                            TempChange.sharedInstance().solutionNameArray.addObject(solution.value["SolutionName"]!!)
-                            TempChange.sharedInstance().solutionDetailArray.addObject(solution.value["SolutionDescription"]!!)
-                            TempChange.sharedInstance().solutionVoteArray.addObject(solution.value["SolutionVoteCount"]!! as! Int)
-                            TempChange.sharedInstance().solutionOwnerArray.addObject(solution.value["SolutionOwner"]!! as!String)
-                    }
-                   
- 
-                    //create localSolutionArray ready to populate with results
-                    let localSolutionIDArray:NSMutableArray = []
-                    
-                    //retrieve existing solutions save into an array
-                    _ = RetrieveSolutions(change: self.changeClicked, completionHandler:{
-                        (result) in
-                        
-                                                
-                        for solution in result as! [Solution]{
-                            localSolutionIDArray.addObject(solution.solutionID)
-                        }
-                        
-                        
-                        
-                        //Test whether any of the solutions from firebase already exist in retrieved coredata array
-                        for var i in 0 ..< TempChange.sharedInstance().solutionIDArray.count{
-                            
-                            for var j in 0 ..< localSolutionIDArray.count{
-                                
-                                
-                                if(TempChange.sharedInstance().solutionIDArray[i] as? String == localSolutionIDArray[j] as? String){
-                                    
-                                    // IF there is a match between a firebase solution and coreData remove it from arrays
-                                    TempChange.sharedInstance().solutionIDArray.removeObjectAtIndex(i)
-                                    TempChange.sharedInstance().solutionNameArray.removeObjectAtIndex(i)
-                                    TempChange.sharedInstance().solutionDetailArray.removeObjectAtIndex(i)
-                                    TempChange.sharedInstance().solutionVoteArray.removeObjectAtIndex(i)
-                                    TempChange.sharedInstance().solutionOwnerArray.removeObjectAtIndex(i)
-                                }
-                            }
-                        }
-                    })
-                    
-                    //save any newly downloaded solutions to firebase
-                    _ = UpdateCoreDataSolutions(change: self.changeClicked!)
-                     */
-                    self.solutionTable.reloadData()
+                   self.solutionTable.reloadData()
                     
                 })
             }else{
-                //No new solutions to download so gather existing ones from core data
                 
+                //No new solutions to download so gather existing ones from core data
                 _ = RetrieveSolutions(change:self.changeClicked!){
                     (result) in
-                    
-                    /*
-                    // empty TempArrays ready to be populate with new data
-                    TempChange.sharedInstance().solutionNameArray = []
-                    TempChange.sharedInstance().solutionDetailArray = []
-                    TempChange.sharedInstance().solutionVoteArray = []
-                    TempChange.sharedInstance().solutionIDArray = []
-                    TempChange.sharedInstance().solutionOwnerArray = []
-                    
-                    
-                    //assign results from coreData return to temp array then use TempArray for table
-                    for solution in result as! [Solution]{
-                        
-                        TempChange.sharedInstance().solutionNameArray.addObject(solution.solutionName)
-                        TempChange.sharedInstance().solutionDetailArray.addObject(solution.solutionDescription)
-                        TempChange.sharedInstance().solutionVoteArray.addObject(solution.voteCount)
-                        TempChange.sharedInstance().solutionIDArray.addObject(solution.solutionID)
-                        TempChange.sharedInstance().solutionOwnerArray.addObject(solution.solutionOwner)
-                    }
-                    */
+                  
                     self.solutionTable.reloadData()
                     
                 }
-                
             }
-            
-            
         })
     }
     
@@ -183,17 +108,6 @@ class ViewFollowingChangeViewController: UIViewController,UITextViewDelegate,UIT
         
         self.solutionTable.reloadData()
         
-    }
-    
-    @IBAction func addNameClick(sender: UIButton) {
-        
-        //enable button if owner
-    }
-    
-    
-    @IBAction func addDetailClick(sender: UIButton) {
-        
-        //enable button if owner
     }
     
     
@@ -248,21 +162,13 @@ class ViewFollowingChangeViewController: UIViewController,UITextViewDelegate,UIT
         var controller:ViewIdeaViewController
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewIdeaViewController") as! ViewIdeaViewController
         
-        
         controller.loadedNameData = TempChange.sharedInstance().solutionNameArray[indexPath.row]
         controller.loadedDetailData = TempChange.sharedInstance().solutionDetailArray[indexPath.row]
-        
-        
-        //controller.solutionCount = TempChange.sharedInstance().solutionVoteArray[indexPath.row] as? Int
-        controller.solutionID = TempChange.sharedInstance().solutionIDArray[indexPath.row] 
-        
+        controller.solutionID = TempChange.sharedInstance().solutionIDArray[indexPath.row]
         controller.petitionURL = TempChange.sharedInstance().petitionURLArray[indexPath.row]
-        
-        //controller.change = changeClicked
         controller.viewControllerStatus = "following"
         controller.changeID = changeID
         controller.index = indexPath.row
-        
         
         self.navigationController?.pushViewController(controller, animated: true)
         

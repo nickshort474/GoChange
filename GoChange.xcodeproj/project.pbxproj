@@ -32,6 +32,7 @@
 		36C37CBF1C7A01C5002B4FB1 /* GoChangeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CBC1C7A01C5002B4FB1 /* GoChangeConstants.swift */; };
 		36C37CC01C7A01C5002B4FB1 /* GoChangeConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CBD1C7A01C5002B4FB1 /* GoChangeConvenience.swift */; };
 		36CB44141CCF504A000AD3C5 /* ChangeOrgCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CB44131CCF504A000AD3C5 /* ChangeOrgCode.swift */; };
+		36D214591CDA568C00C3142B /* DeleteProblemFromCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D214581CDA568C00C3142B /* DeleteProblemFromCoreData.swift */; };
 		36D7CA051CA542C100A73176 /* TempChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D7CA041CA542C100A73176 /* TempChange.swift */; };
 		36D7CA071CA597F200A73176 /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D7CA061CA597F200A73176 /* Solution.swift */; };
 		36D82C1F1CD3506400FDA274 /* ViewFollowingChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D82C1E1CD3506400FDA274 /* ViewFollowingChangeViewController.swift */; };
@@ -48,6 +49,7 @@
 		36E705B41CC79802003F5C6A /* VoteForSolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E705B31CC79802003F5C6A /* VoteForSolution.swift */; };
 		36EB1EBA1CB42E9000EA0CC4 /* RetrieveDetailsFromFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EB1EB91CB42E9000EA0CC4 /* RetrieveDetailsFromFirebase.swift */; };
 		36F4EDD91CD4C39600F26996 /* CheckVote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F4EDD81CD4C39600F26996 /* CheckVote.swift */; };
+		36F84D371CD75A78008DC722 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F84D361CD75A78008DC722 /* CustomTableViewCell.swift */; };
 		36F871B71CB81503006706BD /* RetrieveSolutionCountFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F871B61CB81503006706BD /* RetrieveSolutionCountFirebase.swift */; };
 		9E2E103AEFF6A95CA26B7D7A /* Pods_GoChange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0961F4BBEE6401B9B1D0DE43 /* Pods_GoChange.framework */; };
 /* End PBXBuildFile section */
@@ -102,6 +104,7 @@
 		36C37CBC1C7A01C5002B4FB1 /* GoChangeConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoChangeConstants.swift; sourceTree = "<group>"; };
 		36C37CBD1C7A01C5002B4FB1 /* GoChangeConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoChangeConvenience.swift; sourceTree = "<group>"; };
 		36CB44131CCF504A000AD3C5 /* ChangeOrgCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeOrgCode.swift; sourceTree = "<group>"; };
+		36D214581CDA568C00C3142B /* DeleteProblemFromCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteProblemFromCoreData.swift; sourceTree = "<group>"; };
 		36D7CA041CA542C100A73176 /* TempChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempChange.swift; sourceTree = "<group>"; };
 		36D7CA061CA597F200A73176 /* Solution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solution.swift; sourceTree = "<group>"; };
 		36D82C1E1CD3506400FDA274 /* ViewFollowingChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewFollowingChangeViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +121,7 @@
 		36E705B31CC79802003F5C6A /* VoteForSolution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteForSolution.swift; sourceTree = "<group>"; };
 		36EB1EB91CB42E9000EA0CC4 /* RetrieveDetailsFromFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveDetailsFromFirebase.swift; sourceTree = "<group>"; };
 		36F4EDD81CD4C39600F26996 /* CheckVote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckVote.swift; sourceTree = "<group>"; };
+		36F84D361CD75A78008DC722 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		36F871B61CB81503006706BD /* RetrieveSolutionCountFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveSolutionCountFirebase.swift; sourceTree = "<group>"; };
 		76C1E409458E88730EC69107 /* Pods-GoChange.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoChange.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoChange/Pods-GoChange.release.xcconfig"; sourceTree = "<group>"; };
 		A36C800A78EB4DBB6E2699CF /* Pods-GoChange.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoChange.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoChange/Pods-GoChange.debug.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 				36E5649E1CCCA72E008656EC /* SaveResultToCoreData.swift */,
 				36E564A01CCCA79E008656EC /* SaveNewChange.swift */,
 				36F4EDD81CD4C39600F26996 /* CheckVote.swift */,
+				36D214581CDA568C00C3142B /* DeleteProblemFromCoreData.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -238,6 +243,7 @@
 		36C37C9D1C7A0101002B4FB1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				36F84D361CD75A78008DC722 /* CustomTableViewCell.swift */,
 				36C37CA91C7A01AC002B4FB1 /* loginViewController.swift */,
 				36C37CAC1C7A01AC002B4FB1 /* SignupViewController.swift */,
 				36AE6F351C8C37A50041B5CD /* UpdateUserInfoController.swift */,
@@ -516,9 +522,11 @@
 				36C37CB71C7A01AC002B4FB1 /* ResultsViewController.swift in Sources */,
 				36EB1EBA1CB42E9000EA0CC4 /* RetrieveDetailsFromFirebase.swift in Sources */,
 				36DE37521CB12640005DEEEA /* RetrieveSolutions.swift in Sources */,
+				36F84D371CD75A78008DC722 /* CustomTableViewCell.swift in Sources */,
 				36C37CB91C7A01AC002B4FB1 /* SignupViewController.swift in Sources */,
 				36AE6F361C8C37A50041B5CD /* UpdateUserInfoController.swift in Sources */,
 				36D82C231CD3A56E00FDA274 /* SearchController.swift in Sources */,
+				36D214591CDA568C00C3142B /* DeleteProblemFromCoreData.swift in Sources */,
 				36C37CB31C7A01AC002B4FB1 /* FollowingViewController.swift in Sources */,
 				36E705B41CC79802003F5C6A /* VoteForSolution.swift in Sources */,
 				36F4EDD91CD4C39600F26996 /* CheckVote.swift in Sources */,

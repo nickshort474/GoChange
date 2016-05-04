@@ -65,7 +65,7 @@ class WebViewController: UIViewController,UIWebViewDelegate {
         if(currentURL != GoChangeClient.Constants.basePetitionURL){
             
             rightBarButton.enabled = true
-            rightBarButton.tintColor = UIColor.clearColor()
+            rightBarButton.tintColor = UIColor.blueColor()
             
             var petitionViewText = webView.request!.URL?.absoluteString
             

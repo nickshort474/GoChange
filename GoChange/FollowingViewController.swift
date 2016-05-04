@@ -20,16 +20,16 @@ class FollowingViewController: UITableViewController,
         // Do any additional setup after loading the view, typically from a nib.
         
         // load all core data saved changes
-        
         do{
             try fetchedResultsController.performFetch()
         }catch{
             //TODO: deal with errors
         }
+        
         let barButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
         self.navigationItem.backBarButtonItem = barButtonItem
         
-        //self.navigationController?.view.backgroundColor = UIColor.orangeColor()
+       self.navigationController?.navigationBar.barTintColor = GoChangeClient.Constants.customOrangeColor
         
     }
     

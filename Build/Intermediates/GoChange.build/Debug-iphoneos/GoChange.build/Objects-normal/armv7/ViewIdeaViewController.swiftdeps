@@ -6,43 +6,45 @@ provides-nominal:
 provides-member:
 - ["C8GoChange22ViewIdeaViewController", ""]
 provides-dynamic-lookup:
-- "voteSolutionButton"
-- "voteSolutionClick"
-- "solutionNameField"
-- "viewWillAppear"
-- "solutionID"
-- "viewDidLoad"
-- "petitionTextField"
-- "loadedNameData"
-- "viewPetitionButton"
-- "loadedDetailData"
-- "viewControllerStatus"
-- "solutionDetailField"
 - "petitionURL"
-- "petitionButton"
+- "voteSolutionButton"
+- "thirdPetitionTextField"
 - "changeID"
+- "petitionButton"
+- "secondPetitionTextField"
+- "viewDidLoad"
+- "solutionNameField"
+- "solutionID"
+- "loadedNameData"
+- "voteSolutionClick"
+- "loadedDetailData"
+- "viewPetitionButton"
+- "solutionDetailField"
+- "petitionTextField"
+- "viewWillAppear"
+- "viewControllerStatus"
 depends-top-level:
-- "String"
-- !private "print"
-- "ViewIdeaViewController"
-- !private "WebViewController"
-- !private "TempChange"
-- !private "=="
-- "UITextView"
-- !private "VoteForSolution"
-- !private "StringLiteralType"
-- !private "CheckVote"
-- !private "ChangeOrgCode"
 - "UIViewController"
-- !private "||"
-- !private "UIColor"
-- "Bool"
-- "UITextField"
+- "UITextView"
+- !private "TempChange"
+- "ViewIdeaViewController"
+- !private "CheckVote"
+- "String"
 - "Int"
-- !private "BooleanLiteralType"
-- "UIButton"
+- !private "=="
 - !private "!="
+- !private "StringLiteralType"
+- "UITextField"
+- "Bool"
+- !private "VoteForSolution"
+- !private "||"
+- "UIButton"
+- !private "BooleanLiteralType"
+- !private "ChangeOrgCode"
+- !private "print"
+- !private "WebViewController"
 - !private "+="
+- !private "UIColor"
 depends-member:
 - !private ["Ps9AnyObject", "ChangeOrgCode"]
 - !private ["Ps9AnyObject", "CheckVote"]
@@ -65,6 +67,7 @@ depends-member:
 - ["Ps9AnyObject", "petitionURL"]
 - !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "pushViewController"]
+- ["Ps9AnyObject", "secondPetitionTextField"]
 - !private ["Ps9AnyObject", "selectable"]
 - !private ["Ps9AnyObject", "sharedInstance"]
 - ["Ps9AnyObject", "solutionDetailField"]
@@ -75,6 +78,7 @@ depends-member:
 - !private ["Ps9AnyObject", "storyboard"]
 - !private ["Ps9AnyObject", "text"]
 - !private ["Ps9AnyObject", "textColor"]
+- ["Ps9AnyObject", "thirdPetitionTextField"]
 - !private ["Ps9AnyObject", "urlString"]
 - ["Ps9AnyObject", "viewControllerStatus"]
 - ["Ps9AnyObject", "viewDidLoad"]
@@ -117,6 +121,7 @@ depends-member:
 - ["Ps11CVarArgType", "petitionURL"]
 - !private ["Ps11CVarArgType", "print"]
 - !private ["Ps11CVarArgType", "pushViewController"]
+- ["Ps11CVarArgType", "secondPetitionTextField"]
 - !private ["Ps11CVarArgType", "selectable"]
 - !private ["Ps11CVarArgType", "sharedInstance"]
 - ["Ps11CVarArgType", "solutionDetailField"]
@@ -127,6 +132,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "storyboard"]
 - !private ["Ps11CVarArgType", "text"]
 - !private ["Ps11CVarArgType", "textColor"]
+- ["Ps11CVarArgType", "thirdPetitionTextField"]
 - !private ["Ps11CVarArgType", "urlString"]
 - ["Ps11CVarArgType", "viewControllerStatus"]
 - ["Ps11CVarArgType", "viewDidLoad"]
@@ -166,6 +172,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "petitionURL"]
 - !private ["Ps28CustomDebugStringConvertible", "print"]
 - !private ["Ps28CustomDebugStringConvertible", "pushViewController"]
+- ["Ps28CustomDebugStringConvertible", "secondPetitionTextField"]
 - !private ["Ps28CustomDebugStringConvertible", "selectable"]
 - !private ["Ps28CustomDebugStringConvertible", "sharedInstance"]
 - ["Ps28CustomDebugStringConvertible", "solutionDetailField"]
@@ -177,6 +184,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
 - !private ["Ps28CustomDebugStringConvertible", "text"]
 - !private ["Ps28CustomDebugStringConvertible", "textColor"]
+- ["Ps28CustomDebugStringConvertible", "thirdPetitionTextField"]
 - !private ["Ps28CustomDebugStringConvertible", "urlString"]
 - ["Ps28CustomDebugStringConvertible", "viewControllerStatus"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
@@ -210,6 +218,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "petitionURL"]
 - !private ["Ps23CustomStringConvertible", "print"]
 - !private ["Ps23CustomStringConvertible", "pushViewController"]
+- ["Ps23CustomStringConvertible", "secondPetitionTextField"]
 - !private ["Ps23CustomStringConvertible", "selectable"]
 - !private ["Ps23CustomStringConvertible", "sharedInstance"]
 - ["Ps23CustomStringConvertible", "solutionDetailField"]
@@ -221,6 +230,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "subscript"]
 - !private ["Ps23CustomStringConvertible", "text"]
 - !private ["Ps23CustomStringConvertible", "textColor"]
+- ["Ps23CustomStringConvertible", "thirdPetitionTextField"]
 - !private ["Ps23CustomStringConvertible", "urlString"]
 - ["Ps23CustomStringConvertible", "viewControllerStatus"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
@@ -251,6 +261,7 @@ depends-member:
 - ["Ps9Equatable", "petitionURL"]
 - !private ["Ps9Equatable", "print"]
 - !private ["Ps9Equatable", "pushViewController"]
+- ["Ps9Equatable", "secondPetitionTextField"]
 - !private ["Ps9Equatable", "selectable"]
 - !private ["Ps9Equatable", "sharedInstance"]
 - ["Ps9Equatable", "solutionDetailField"]
@@ -261,6 +272,7 @@ depends-member:
 - !private ["Ps9Equatable", "storyboard"]
 - !private ["Ps9Equatable", "text"]
 - !private ["Ps9Equatable", "textColor"]
+- ["Ps9Equatable", "thirdPetitionTextField"]
 - !private ["Ps9Equatable", "urlString"]
 - ["Ps9Equatable", "viewControllerStatus"]
 - ["Ps9Equatable", "viewDidLoad"]
@@ -292,6 +304,7 @@ depends-member:
 - ["Ps8Hashable", "petitionURL"]
 - !private ["Ps8Hashable", "print"]
 - !private ["Ps8Hashable", "pushViewController"]
+- ["Ps8Hashable", "secondPetitionTextField"]
 - !private ["Ps8Hashable", "selectable"]
 - !private ["Ps8Hashable", "sharedInstance"]
 - ["Ps8Hashable", "solutionDetailField"]
@@ -302,6 +315,7 @@ depends-member:
 - !private ["Ps8Hashable", "storyboard"]
 - !private ["Ps8Hashable", "text"]
 - !private ["Ps8Hashable", "textColor"]
+- ["Ps8Hashable", "thirdPetitionTextField"]
 - !private ["Ps8Hashable", "urlString"]
 - ["Ps8Hashable", "viewControllerStatus"]
 - ["Ps8Hashable", "viewDidLoad"]
@@ -348,6 +362,7 @@ depends-member:
 - ["PSo8NSCoding", "petitionURL"]
 - !private ["PSo8NSCoding", "print"]
 - !private ["PSo8NSCoding", "pushViewController"]
+- ["PSo8NSCoding", "secondPetitionTextField"]
 - !private ["PSo8NSCoding", "selectable"]
 - ["PSo8NSCoding", "solutionDetailField"]
 - ["PSo8NSCoding", "solutionID"]
@@ -356,6 +371,7 @@ depends-member:
 - !private ["PSo8NSCoding", "storyboard"]
 - !private ["PSo8NSCoding", "text"]
 - !private ["PSo8NSCoding", "textColor"]
+- ["PSo8NSCoding", "thirdPetitionTextField"]
 - !private ["PSo8NSCoding", "urlString"]
 - ["PSo8NSCoding", "viewControllerStatus"]
 - ["PSo8NSCoding", "viewDidLoad"]
@@ -381,11 +397,13 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "petitionURL"]
 - !private ["PSo26NSExtensionRequestHandling", "print"]
 - !private ["PSo26NSExtensionRequestHandling", "pushViewController"]
+- ["PSo26NSExtensionRequestHandling", "secondPetitionTextField"]
 - ["PSo26NSExtensionRequestHandling", "solutionDetailField"]
 - ["PSo26NSExtensionRequestHandling", "solutionID"]
 - ["PSo26NSExtensionRequestHandling", "solutionNameField"]
 - !private ["PSo26NSExtensionRequestHandling", "status"]
 - !private ["PSo26NSExtensionRequestHandling", "storyboard"]
+- ["PSo26NSExtensionRequestHandling", "thirdPetitionTextField"]
 - !private ["PSo26NSExtensionRequestHandling", "urlString"]
 - ["PSo26NSExtensionRequestHandling", "viewControllerStatus"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
@@ -423,6 +441,7 @@ depends-member:
 - ["CSo8NSObject", "petitionURL"]
 - !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "pushViewController"]
+- ["CSo8NSObject", "secondPetitionTextField"]
 - !private ["CSo8NSObject", "selectable"]
 - !private ["CSo8NSObject", "sharedInstance"]
 - ["CSo8NSObject", "solutionDetailField"]
@@ -433,6 +452,7 @@ depends-member:
 - !private ["CSo8NSObject", "storyboard"]
 - !private ["CSo8NSObject", "text"]
 - !private ["CSo8NSObject", "textColor"]
+- ["CSo8NSObject", "thirdPetitionTextField"]
 - !private ["CSo8NSObject", "urlString"]
 - ["CSo8NSObject", "viewControllerStatus"]
 - ["CSo8NSObject", "viewDidLoad"]
@@ -461,6 +481,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "petitionURL"]
 - !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "pushViewController"]
+- ["PSo16NSObjectProtocol", "secondPetitionTextField"]
 - !private ["PSo16NSObjectProtocol", "selectable"]
 - !private ["PSo16NSObjectProtocol", "sharedInstance"]
 - ["PSo16NSObjectProtocol", "solutionDetailField"]
@@ -471,6 +492,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "storyboard"]
 - !private ["PSo16NSObjectProtocol", "text"]
 - !private ["PSo16NSObjectProtocol", "textColor"]
+- ["PSo16NSObjectProtocol", "thirdPetitionTextField"]
 - !private ["PSo16NSObjectProtocol", "urlString"]
 - ["PSo16NSObjectProtocol", "viewControllerStatus"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
@@ -527,6 +549,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "petitionURL"]
 - !private ["PSo21UIAppearanceContainer", "print"]
 - !private ["PSo21UIAppearanceContainer", "pushViewController"]
+- ["PSo21UIAppearanceContainer", "secondPetitionTextField"]
 - !private ["PSo21UIAppearanceContainer", "selectable"]
 - ["PSo21UIAppearanceContainer", "solutionDetailField"]
 - ["PSo21UIAppearanceContainer", "solutionID"]
@@ -535,6 +558,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "storyboard"]
 - !private ["PSo21UIAppearanceContainer", "text"]
 - !private ["PSo21UIAppearanceContainer", "textColor"]
+- ["PSo21UIAppearanceContainer", "thirdPetitionTextField"]
 - !private ["PSo21UIAppearanceContainer", "urlString"]
 - ["PSo21UIAppearanceContainer", "viewControllerStatus"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
@@ -562,11 +586,13 @@ depends-member:
 - ["PSo18UIContentContainer", "petitionURL"]
 - !private ["PSo18UIContentContainer", "print"]
 - !private ["PSo18UIContentContainer", "pushViewController"]
+- ["PSo18UIContentContainer", "secondPetitionTextField"]
 - ["PSo18UIContentContainer", "solutionDetailField"]
 - ["PSo18UIContentContainer", "solutionID"]
 - ["PSo18UIContentContainer", "solutionNameField"]
 - !private ["PSo18UIContentContainer", "status"]
 - !private ["PSo18UIContentContainer", "storyboard"]
+- ["PSo18UIContentContainer", "thirdPetitionTextField"]
 - !private ["PSo18UIContentContainer", "urlString"]
 - ["PSo18UIContentContainer", "viewControllerStatus"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
@@ -606,6 +632,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "petitionURL"]
 - !private ["PSo18UIFocusEnvironment", "print"]
 - !private ["PSo18UIFocusEnvironment", "pushViewController"]
+- ["PSo18UIFocusEnvironment", "secondPetitionTextField"]
 - !private ["PSo18UIFocusEnvironment", "selectable"]
 - ["PSo18UIFocusEnvironment", "solutionDetailField"]
 - ["PSo18UIFocusEnvironment", "solutionID"]
@@ -614,6 +641,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "storyboard"]
 - !private ["PSo18UIFocusEnvironment", "text"]
 - !private ["PSo18UIFocusEnvironment", "textColor"]
+- ["PSo18UIFocusEnvironment", "thirdPetitionTextField"]
 - !private ["PSo18UIFocusEnvironment", "urlString"]
 - ["PSo18UIFocusEnvironment", "viewControllerStatus"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
@@ -652,6 +680,7 @@ depends-member:
 - ["CSo11UIResponder", "petitionURL"]
 - !private ["CSo11UIResponder", "print"]
 - !private ["CSo11UIResponder", "pushViewController"]
+- ["CSo11UIResponder", "secondPetitionTextField"]
 - !private ["CSo11UIResponder", "selectable"]
 - ["CSo11UIResponder", "solutionDetailField"]
 - ["CSo11UIResponder", "solutionID"]
@@ -660,6 +689,7 @@ depends-member:
 - !private ["CSo11UIResponder", "storyboard"]
 - !private ["CSo11UIResponder", "text"]
 - !private ["CSo11UIResponder", "textColor"]
+- ["CSo11UIResponder", "thirdPetitionTextField"]
 - !private ["CSo11UIResponder", "urlString"]
 - ["CSo11UIResponder", "viewControllerStatus"]
 - ["CSo11UIResponder", "viewDidLoad"]
@@ -686,11 +716,13 @@ depends-member:
 - ["PSo16UIStateRestoring", "petitionURL"]
 - !private ["PSo16UIStateRestoring", "print"]
 - !private ["PSo16UIStateRestoring", "pushViewController"]
+- ["PSo16UIStateRestoring", "secondPetitionTextField"]
 - ["PSo16UIStateRestoring", "solutionDetailField"]
 - ["PSo16UIStateRestoring", "solutionID"]
 - ["PSo16UIStateRestoring", "solutionNameField"]
 - !private ["PSo16UIStateRestoring", "status"]
 - !private ["PSo16UIStateRestoring", "storyboard"]
+- ["PSo16UIStateRestoring", "thirdPetitionTextField"]
 - !private ["PSo16UIStateRestoring", "urlString"]
 - ["PSo16UIStateRestoring", "viewControllerStatus"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
@@ -731,6 +763,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "petitionURL"]
 - !private ["PSo18UITraitEnvironment", "print"]
 - !private ["PSo18UITraitEnvironment", "pushViewController"]
+- ["PSo18UITraitEnvironment", "secondPetitionTextField"]
 - !private ["PSo18UITraitEnvironment", "selectable"]
 - ["PSo18UITraitEnvironment", "solutionDetailField"]
 - ["PSo18UITraitEnvironment", "solutionID"]
@@ -739,6 +772,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "storyboard"]
 - !private ["PSo18UITraitEnvironment", "text"]
 - !private ["PSo18UITraitEnvironment", "textColor"]
+- ["PSo18UITraitEnvironment", "thirdPetitionTextField"]
 - !private ["PSo18UITraitEnvironment", "urlString"]
 - ["PSo18UITraitEnvironment", "viewControllerStatus"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
@@ -775,11 +809,13 @@ depends-member:
 - ["CSo16UIViewController", "petitionURL"]
 - !private ["CSo16UIViewController", "print"]
 - !private ["CSo16UIViewController", "pushViewController"]
+- ["CSo16UIViewController", "secondPetitionTextField"]
 - ["CSo16UIViewController", "solutionDetailField"]
 - ["CSo16UIViewController", "solutionID"]
 - ["CSo16UIViewController", "solutionNameField"]
 - !private ["CSo16UIViewController", "status"]
 - !private ["CSo16UIViewController", "storyboard"]
+- ["CSo16UIViewController", "thirdPetitionTextField"]
 - !private ["CSo16UIViewController", "urlString"]
 - ["CSo16UIViewController", "viewControllerStatus"]
 - ["CSo16UIViewController", "viewDidLoad"]
@@ -813,10 +849,12 @@ depends-member:
 - ["C8GoChange22ViewIdeaViewController", "petitionTextField"]
 - ["C8GoChange22ViewIdeaViewController", "petitionURL"]
 - !private ["C8GoChange22ViewIdeaViewController", "print"]
+- ["C8GoChange22ViewIdeaViewController", "secondPetitionTextField"]
 - ["C8GoChange22ViewIdeaViewController", "solutionDetailField"]
 - ["C8GoChange22ViewIdeaViewController", "solutionID"]
 - ["C8GoChange22ViewIdeaViewController", "solutionNameField"]
 - !private ["C8GoChange22ViewIdeaViewController", "storyboard"]
+- ["C8GoChange22ViewIdeaViewController", "thirdPetitionTextField"]
 - ["C8GoChange22ViewIdeaViewController", "viewControllerStatus"]
 - ["C8GoChange22ViewIdeaViewController", "viewDidLoad"]
 - ["C8GoChange22ViewIdeaViewController", "viewPetitionButton"]
@@ -947,4 +985,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "eb3da95ff030fa4b5a24a1c9dc5811df"
+interface-hash: "23f6f6677bdf94e659afbdb55f0408df"

@@ -26,6 +26,14 @@ extension GoChangeClient{
         static var dynamicPetitionURL = ""
         
         static var detailText:String = "Please enter details of the change you would like to see..."
+        
+        static let blueFloat:CGFloat = 1/255 * 25
+        static let redFloat:CGFloat = 1/255 * 253
+        static let greenFloat:CGFloat = 1/255 * 153
+        
+        static let customOrangeColor:UIColor = UIColor(red: redFloat, green: greenFloat, blue: blueFloat, alpha: 1.0)
+        
+        
     }
     
     

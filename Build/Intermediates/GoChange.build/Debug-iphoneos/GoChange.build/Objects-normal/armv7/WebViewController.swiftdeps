@@ -6,36 +6,36 @@ provides-nominal:
 provides-member:
 - ["C8GoChange17WebViewController", ""]
 provides-dynamic-lookup:
-- "currentURL"
-- "viewDidLoad"
-- "webViewDidFinishLoad"
-- "rightBarButton"
-- "urlString"
-- "viewWillAppear"
 - "linkPetitionClick"
-- "webView"
+- "viewDidLoad"
 - "petitionText"
 - "status"
 - "didReceiveMemoryWarning"
+- "rightBarButton"
+- "currentURL"
+- "urlString"
+- "viewWillAppear"
+- "webView"
+- "webViewDidFinishLoad"
 depends-top-level:
-- "WebViewController"
-- !private "NSURL"
-- "String"
-- !private "NSURLRequest"
-- "UIWebView"
-- !private "GoChangeClient"
+- !private "!="
 - "UIBarButtonItem"
-- "UIViewController"
+- !private "GoChangeClient"
+- "UITextField"
+- "StringLiteralType"
+- "UIWebView"
+- "UIButton"
+- !private "TempChange"
+- "String"
+- "Bool"
 - "UIWebViewDelegate"
 - !private "UIColor"
-- "StringLiteralType"
-- !private "UIBarButtonItemStyle"
-- "Bool"
-- "UIButton"
+- "UIViewController"
+- !private "NSURL"
 - !private "BooleanLiteralType"
-- !private "!="
-- !private "TempChange"
-- "UITextField"
+- !private "NSURLRequest"
+- !private "UIBarButtonItemStyle"
+- "WebViewController"
 depends-member:
 - !private ["Ps9AnyObject", "Constants"]
 - !private ["Ps9AnyObject", "GoChangeClient"]
@@ -48,6 +48,7 @@ depends-member:
 - !private ["Ps9AnyObject", "URL"]
 - !private ["Ps9AnyObject", "WebViewController"]
 - !private ["Ps9AnyObject", "absoluteString"]
+- !private ["Ps9AnyObject", "blueColor"]
 - !private ["Ps9AnyObject", "clearColor"]
 - !private ["Ps9AnyObject", "currentPetitionValue"]
 - ["Ps9AnyObject", "currentURL"]
@@ -92,6 +93,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "URL"]
 - !private ["Ps11CVarArgType", "WebViewController"]
 - !private ["Ps11CVarArgType", "absoluteString"]
+- !private ["Ps11CVarArgType", "blueColor"]
 - !private ["Ps11CVarArgType", "clearColor"]
 - !private ["Ps11CVarArgType", "currentPetitionValue"]
 - ["Ps11CVarArgType", "currentURL"]
@@ -137,6 +139,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "URL"]
 - !private ["Ps28CustomDebugStringConvertible", "WebViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "absoluteString"]
+- !private ["Ps28CustomDebugStringConvertible", "blueColor"]
 - !private ["Ps28CustomDebugStringConvertible", "clearColor"]
 - !private ["Ps28CustomDebugStringConvertible", "currentPetitionValue"]
 - ["Ps28CustomDebugStringConvertible", "currentURL"]
@@ -178,6 +181,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "WebViewController"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps23CustomStringConvertible", "absoluteString"]
+- !private ["Ps23CustomStringConvertible", "blueColor"]
 - !private ["Ps23CustomStringConvertible", "clearColor"]
 - !private ["Ps23CustomStringConvertible", "currentPetitionValue"]
 - ["Ps23CustomStringConvertible", "currentURL"]
@@ -221,6 +225,7 @@ depends-member:
 - !private ["Ps9Equatable", "WebViewController"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "absoluteString"]
+- !private ["Ps9Equatable", "blueColor"]
 - !private ["Ps9Equatable", "clearColor"]
 - !private ["Ps9Equatable", "currentPetitionValue"]
 - ["Ps9Equatable", "currentURL"]
@@ -268,6 +273,7 @@ depends-member:
 - !private ["Ps8Hashable", "WebViewController"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "absoluteString"]
+- !private ["Ps8Hashable", "blueColor"]
 - !private ["Ps8Hashable", "clearColor"]
 - !private ["Ps8Hashable", "currentPetitionValue"]
 - ["Ps8Hashable", "currentURL"]
@@ -316,6 +322,7 @@ depends-member:
 - !private ["PSo8NSCoding", "URL"]
 - !private ["PSo8NSCoding", "WebViewController"]
 - !private ["PSo8NSCoding", "absoluteString"]
+- !private ["PSo8NSCoding", "blueColor"]
 - !private ["PSo8NSCoding", "clearColor"]
 - ["PSo8NSCoding", "currentURL"]
 - !private ["PSo8NSCoding", "delegate"]
@@ -345,6 +352,7 @@ depends-member:
 - ["PSo8NSCoding", ""]
 - !private ["PSo9NSCopying", "URL"]
 - !private ["PSo9NSCopying", "absoluteString"]
+- !private ["PSo9NSCopying", "blueColor"]
 - !private ["PSo9NSCopying", "clearColor"]
 - !private ["PSo9NSCopying", "init"]
 - !private ["PSo9NSCopying", "rangeOfString"]
@@ -394,6 +402,7 @@ depends-member:
 - !private ["CSo8NSObject", "URL"]
 - !private ["CSo8NSObject", "WebViewController"]
 - !private ["CSo8NSObject", "absoluteString"]
+- !private ["CSo8NSObject", "blueColor"]
 - !private ["CSo8NSObject", "clearColor"]
 - !private ["CSo8NSObject", "currentPetitionValue"]
 - ["CSo8NSObject", "currentURL"]
@@ -433,6 +442,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "URL"]
 - !private ["PSo16NSObjectProtocol", "WebViewController"]
 - !private ["PSo16NSObjectProtocol", "absoluteString"]
+- !private ["PSo16NSObjectProtocol", "blueColor"]
 - !private ["PSo16NSObjectProtocol", "clearColor"]
 - !private ["PSo16NSObjectProtocol", "currentPetitionValue"]
 - ["PSo16NSObjectProtocol", "currentURL"]
@@ -464,6 +474,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "URL"]
 - !private ["PSo14NSSecureCoding", "absoluteString"]
+- !private ["PSo14NSSecureCoding", "blueColor"]
 - !private ["PSo14NSSecureCoding", "clearColor"]
 - !private ["PSo14NSSecureCoding", "init"]
 - !private ["PSo14NSSecureCoding", "rangeOfString"]
@@ -545,6 +556,7 @@ depends-member:
 - !private ["CSo9UIBarItem", "enabled"]
 - !private ["CSo9UIBarItem", "init"]
 - !private ["CSo9UIBarItem", "tintColor"]
+- !private ["CSo7UIColor", "blueColor"]
 - !private ["CSo7UIColor", "clearColor"]
 - !private ["PSo18UIContentContainer", "GoChangeClient"]
 - !private ["PSo18UIContentContainer", "NSURL"]
@@ -812,6 +824,7 @@ depends-member:
 - !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
 - !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "rangeOfString"]
 - !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "removeRange"]
+- !private ["Ps24_ColorLiteralConvertible", "blueColor"]
 - !private ["Ps24_ColorLiteralConvertible", "clearColor"]
 - !private ["Ps32_FileReferenceLiteralConvertible", "absoluteString"]
 - !private ["Ps32_FileReferenceLiteralConvertible", "init"]

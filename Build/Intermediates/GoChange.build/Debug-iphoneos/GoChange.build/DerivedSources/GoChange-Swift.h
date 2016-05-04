@@ -216,6 +216,17 @@ SWIFT_CLASS("_TtC8GoChange26CreateChangeViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UILabel;
+
+SWIFT_CLASS("_TtC8GoChange19CustomTableViewCell")
+@interface CustomTableViewCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified problemName;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified ownerName;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified voteCount;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class NSFetchedResultsController;
 
 SWIFT_CLASS("_TtC8GoChange23FollowingViewController")
@@ -257,7 +268,6 @@ SWIFT_CLASS("_TtC8GoChange14GoChangeClient")
 @end
 
 @class Firebase;
-@class UILabel;
 
 SWIFT_CLASS("_TtC8GoChange18HomeViewController")
 @interface HomeViewController : UIViewController
@@ -424,7 +434,6 @@ SWIFT_CLASS("_TtC8GoChange20SearchViewController")
 @interface SearchViewController : UIViewController <UITextFieldDelegate>
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified searchTextField;
 - (void)viewDidLoad;
-- (void)viewWillAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
 - (IBAction)homeButtonClick:(UIButton * _Nonnull)sender;
 - (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField;
@@ -533,8 +542,6 @@ SWIFT_CLASS("_TtC8GoChange33ViewFollowingChangeViewController")
 @property (nonatomic, copy) NSString * _Null_unspecified sendingController;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
-- (IBAction)addNameClick:(UIButton * _Nonnull)sender;
-- (IBAction)addDetailClick:(UIButton * _Nonnull)sender;
 - (IBAction)addSolutionClick:(UIButton * _Nonnull)sender;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
@@ -553,6 +560,8 @@ SWIFT_CLASS("_TtC8GoChange22ViewIdeaViewController")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified viewPetitionButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified voteSolutionButton;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified petitionTextField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified secondPetitionTextField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified thirdPetitionTextField;
 @property (nonatomic, copy) NSString * _Null_unspecified changeID;
 @property (nonatomic, copy) NSString * _Null_unspecified solutionID;
 @property (nonatomic, copy) NSString * _Null_unspecified viewControllerStatus;

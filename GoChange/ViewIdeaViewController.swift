@@ -16,7 +16,11 @@ class ViewIdeaViewController:UIViewController{
     @IBOutlet weak var solutionDetailField: UITextView!
     @IBOutlet weak var viewPetitionButton: UIButton!
     @IBOutlet weak var voteSolutionButton: UIButton!
+    
+    
     @IBOutlet weak var petitionTextField: UITextField!
+    @IBOutlet weak var secondPetitionTextField: UITextField!
+    @IBOutlet weak var thirdPetitionTextField: UITextField!
     
     
     var changeID:String!
@@ -35,6 +39,7 @@ class ViewIdeaViewController:UIViewController{
     
     override func viewDidLoad(){
         super.viewDidLoad()
+        
         
         solutionNameField.enabled = false
         solutionDetailField.selectable = false
@@ -56,12 +61,12 @@ class ViewIdeaViewController:UIViewController{
             viewPetitionButton.alpha = 0
             
         }
-    
     }
     
     
     override func viewWillAppear(animated: Bool) {
         
+       
         solutionNameField.text = loadedNameData
         solutionDetailField.textColor = UIColor.blackColor()
         solutionDetailField.text = loadedDetailData
