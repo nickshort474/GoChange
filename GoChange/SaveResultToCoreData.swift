@@ -11,16 +11,16 @@ import CoreData
 
 class SaveResultToCoreData:NSObject{
     
-    var changeID:String!
-    var newChange:Change!
+    var problemID:String!
+    var newProblem:Problem!
     
     
-    init(changeID:String,completionHandler:(result:AnyObject)->Void){
+    init(problemID:String,completionHandler:(result:AnyObject)->Void){
         super.init()
         
-        self.changeID = changeID
+        self.problemID = problemID
         
-        createCoreDataChange(){
+        createCoreDataProblem(){
             (result) in
             
             completionHandler(result:result)
@@ -35,20 +35,20 @@ class SaveResultToCoreData:NSObject{
     
     
     
-    func createCoreDataChange(completionHandler:(result:AnyObject)->Void){
+    func createCoreDataProblem(completionHandler:(result:AnyObject)->Void){
         
-        var changeDictionary:[String:AnyObject] = [String:AnyObject]()
+        var problemDictionary:[String:AnyObject] = [String:AnyObject]()
         
-        // create core data change dictionary
-        changeDictionary[Change.Keys.changeName] = TempChange.sharedInstance().changeName
-        changeDictionary[Change.Keys.changeDescription] = TempChange.sharedInstance().changeDetail
-        changeDictionary[Change.Keys.changeID] = self.changeID
-        changeDictionary[Change.Keys.solutionCount] = TempChange.sharedInstance().solutionNameArray.count
-        changeDictionary[Change.Keys.changeOwner] = TempChange.sharedInstance().changeOwner
+        // create core data problem dictionary
+        problemDictionary[Problem.Keys.problemName] = TempSave.sharedInstance().problemName
+        problemDictionary[Problem.Keys.problemDescription] = TempSave.sharedInstance().problemDetail
+        problemDictionary[Problem.Keys.problemID] = self.problemID
+        problemDictionary[Problem.Keys.solutionCount] = TempSave.sharedInstance().solutionNameArray.count
+        problemDictionary[Problem.Keys.problemOwner] = TempSave.sharedInstance().problemOwner
         
         
-        //create change object in core data
-        newChange = Change(dictionary: changeDictionary,context: sharedContext)
+        //create problem object in core data
+        newProblem = Problem(dictionary: problemDictionary,context: sharedContext)
         
         //create core data solution dictionary
         createCoreDataSolutions()
@@ -62,8 +62,8 @@ class SaveResultToCoreData:NSObject{
             //TODO: Catch errors!
         }
         
-        //completion handler to pass back newly created change
-        completionHandler(result: newChange)
+        //completion handler to pass back newly created problem
+        completionHandler(result: newProblem)
     }
     
     
@@ -71,26 +71,26 @@ class SaveResultToCoreData:NSObject{
     func createCoreDataSolutions(){
         
         
-        for i in 0 ..< TempChange.sharedInstance().solutionNameArray.count{
+        for i in 0 ..< TempSave.sharedInstance().solutionNameArray.count{
             
             //TODO: sort new solution array problem...
             //When coming from coreDataFirebaseSolutionPost need to use newSolutionNameArray and newSolutionDetailArray
             
             var solutionDictionary:[String:AnyObject] = [String:AnyObject]()
             
-            solutionDictionary[Solution.Keys.solutionName] = TempChange.sharedInstance().solutionNameArray[i]
-            solutionDictionary[Solution.Keys.solutionDescription] = TempChange.sharedInstance().solutionDetailArray[i]
-            solutionDictionary[Solution.Keys.voteCount] = TempChange.sharedInstance().solutionVoteArray[i]
-            solutionDictionary[Solution.Keys.solutionID] = TempChange.sharedInstance().solutionIDArray[i]
+            solutionDictionary[Solution.Keys.solutionName] = TempSave.sharedInstance().solutionNameArray[i]
+            solutionDictionary[Solution.Keys.solutionDescription] = TempSave.sharedInstance().solutionDetailArray[i]
+            solutionDictionary[Solution.Keys.voteCount] = TempSave.sharedInstance().solutionVoteArray[i]
+            solutionDictionary[Solution.Keys.solutionID] = TempSave.sharedInstance().solutionIDArray[i]
             solutionDictionary[Solution.Keys.haveVotedFor] = "no"
-            solutionDictionary[Solution.Keys.solutionOwner] = TempChange.sharedInstance().solutionOwnerArray[i]
-            solutionDictionary[Solution.Keys.petitionURL] = TempChange.sharedInstance().petitionURLArray[i]
+            solutionDictionary[Solution.Keys.solutionOwner] = TempSave.sharedInstance().solutionOwnerArray[i]
+            solutionDictionary[Solution.Keys.petitionURL] = TempSave.sharedInstance().petitionURLArray[i]
             
             
             //create core data solution object
             let newSolution = Solution(dictionary: solutionDictionary,context: sharedContext)
             
-            newSolution.solutionToChange = newChange!
+            newSolution.solutionToProblem = newProblem!
             
             
         }

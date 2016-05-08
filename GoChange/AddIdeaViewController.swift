@@ -28,7 +28,7 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     var currentNameData:String!
     var currentDetailData:String!
     var viewControllerStatus:String!
-    var change:Change!
+    var problem:Problem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,29 +41,43 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         addSolution.enabled = false
         addSolution.alpha = 0.5
         
-        petitionTextField.text = ""
+        TempSave.sharedInstance().currentPetitionValue = ""
+        
         petitionTextField.enabled = false
         
         nameTextField.delegate = self
         detailTextView.delegate = self
         
         
+        nameTextField.layer.masksToBounds = false
+        
+        nameTextField.layer.shadowRadius = 0.5
+        nameTextField.layer.shadowColor = GoChangeClient.Constants.customOrangeColor.CGColor
+        nameTextField.layer.shadowOffset = CGSizeMake(1.0,1.0)
+        nameTextField.layer.shadowOpacity = 0.5
+        nameTextField.borderStyle = UITextBorderStyle.None
+        
+        
+        
         detailTextView.layer.masksToBounds = false
         detailTextView.layer.borderColor = UIColor.clearColor().CGColor
         detailTextView.layer.shadowRadius = 0.5
         detailTextView.layer.shadowColor = GoChangeClient.Constants.customOrangeColor.CGColor
-        detailTextView.layer.shadowOffset = CGSizeMake(0,-1.0)
+        detailTextView.layer.shadowOffset = CGSizeMake(1.0,1.0)
         detailTextView.layer.shadowOpacity = 0.5
+        
+        
+        
         
     }
     
     override func viewWillAppear(animated: Bool) {
         
        //clear newSolutionArrays ready for new input
-        TempChange.sharedInstance().newSolutionNameArray = []
-        TempChange.sharedInstance().newSolutionDetailArray = []
+        TempSave.sharedInstance().newSolutionNameArray = []
+        TempSave.sharedInstance().newSolutionDetailArray = []
         
-        petitionTextField.text = TempChange.sharedInstance().currentPetitionValue
+        petitionTextField.text = TempSave.sharedInstance().currentPetitionValue
         
         
     }
@@ -78,69 +92,74 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     
     @IBAction func doneAddingIdea(sender: UIButton) {
         
-        if(viewControllerStatus == "addingSolutionToExistingChange"){
+        if(viewControllerStatus == "addingSolutionToExistingProblem"){
             
             if(nameTextField.text != "" && detailTextView.text != ""){
             
                 
-                //Add data to existing arrays ready for going back to ViewFollowing to display in table and for firebase solutionCount / SaveNewChange
-                TempChange.sharedInstance().solutionNameArray.append(nameTextField.text!)
-                TempChange.sharedInstance().solutionDetailArray.append(detailTextView.text!)
-                TempChange.sharedInstance().solutionVoteArray.append(0)
-                TempChange.sharedInstance().solutionIDArray.append("newSolution")
+                //Add data to existing arrays ready for going back to ViewFollowing
+                
+                TempSave.sharedInstance().solutionNameArray.append(nameTextField.text!)
+                TempSave.sharedInstance().solutionDetailArray.append(detailTextView.text!)
+                TempSave.sharedInstance().solutionVoteArray.append(0)
+                TempSave.sharedInstance().solutionIDArray.append("newSolution")
                 
                 //Save data to newSolutionArrays ready for posting of SaveNewSoltion
-                TempChange.sharedInstance().newSolutionNameArray.append(nameTextField.text!)
-                TempChange.sharedInstance().newSolutionDetailArray.append(detailTextView.text!)
+                TempSave.sharedInstance().newSolutionNameArray.append(nameTextField.text!)
+                TempSave.sharedInstance().newSolutionDetailArray.append(detailTextView.text!)
                 
                 
                 
                 if(petitionTextField.text != GoChangeClient.Constants.basePetitionURL){
                     
                     // if user has navigated to a petition rather than just the homepage
-                    TempChange.sharedInstance().petitionURLArray.append(petitionTextField.text!)
-                    TempChange.sharedInstance().newPetitionURLArray.append(petitionTextField.text!)
+                    TempSave.sharedInstance().petitionURLArray.append(petitionTextField.text!)
+                    TempSave.sharedInstance().newPetitionURLArray.append(petitionTextField.text!)
                     
                 }else{
                     
                     //If haven't gone past homepage or not added petition
-                    TempChange.sharedInstance().petitionURLArray.append("")
-                    TempChange.sharedInstance().newPetitionURLArray.append("")
+                    TempSave.sharedInstance().petitionURLArray.append("")
+                    TempSave.sharedInstance().newPetitionURLArray.append("")
                     
                 }
                 
                 
-                _ = SaveNewSolution(change: self.change){
+                _ = SaveNewSolution(problem: self.problem){
                     (result) in
                     
                 }
                 
                 // dismiss view controller from navigation stack
+                //self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
                 self.navigationController?.popViewControllerAnimated(true)
+                
+                
             }
-        }else if(viewControllerStatus == "addingSolutionToNewChange"){
+        }else if(viewControllerStatus == "addingSolutionToNewProblem"){
             
             if(nameTextField.text != "" && detailTextView.text != ""){
                 
-                TempChange.sharedInstance().solutionNameArray.append(nameTextField.text!)
-                TempChange.sharedInstance().solutionDetailArray.append(detailTextView.text!)
-                TempChange.sharedInstance().solutionVoteArray.append(0)
-                TempChange.sharedInstance().solutionIDArray.append("newSolution")
+                TempSave.sharedInstance().solutionNameArray.append(nameTextField.text!)
+                TempSave.sharedInstance().solutionDetailArray.append(detailTextView.text!)
+                TempSave.sharedInstance().solutionVoteArray.append(0)
+                TempSave.sharedInstance().solutionIDArray.append("newSolution")
                                 
                 if(petitionTextField.text != GoChangeClient.Constants.basePetitionURL){
                     
                     // if user has navigated to a petition rather than just the homepage
-                    TempChange.sharedInstance().petitionURLArray.append(petitionTextField.text!)
+                    TempSave.sharedInstance().petitionURLArray.append(petitionTextField.text!)
                     
                 }else{
                     
                     //If haven't gone past homepage or not added petition
-                    TempChange.sharedInstance().petitionURLArray.append("")
+                    TempSave.sharedInstance().petitionURLArray.append("")
                     
                 }
                 
                 
                 self.navigationController?.popViewControllerAnimated(true)
+                
             }
         }
         
@@ -160,6 +179,8 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
             addSolution.alpha = 1
         }
         
+        detailTextView.selectable = true
+        detailTextView.editable = true
     }
     
     @IBAction func addDetailClick(sender: UIButton) {
@@ -173,6 +194,8 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
             addSolution.enabled = true
             addSolution.alpha = 1
         }
+        
+        nameTextField.enabled = true
     }
     
     
@@ -182,6 +205,8 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     
     func textFieldDidBeginEditing(textField: UITextField) {
         addNameButton.hidden = false
+        detailTextView.selectable = false
+        detailTextView.editable = false
     }
     
     
@@ -196,6 +221,7 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         addDetailButton.hidden = false
         addNameButton.hidden = true
         
+        nameTextField.enabled = false
     }
     
     

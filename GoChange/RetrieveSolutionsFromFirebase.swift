@@ -12,50 +12,50 @@ import CoreData
 
 class RetrieveSolutionsFromFirebase:NSObject{
     
-    var ref = Firebase(url:"https://gochange.firebaseio.com/change/solutions")
-    var changeRef:Firebase!
+    var ref = Firebase(url:"https://gochange.firebaseio.com/problem/solutions")
+    var problemRef:Firebase!
     
     
-    var change:Change!
-    var changeID:String!
+    var problem:Problem!
+    var problemID:String!
     
     var localSolutionIDArray:[String] = []
     var nonMatches:[String] = []
     
    
     
-    init(changeID:String,change:Change? = nil,caller:String,completionHandler:(result:FDataSnapshot)->Void){
+    init(problemID:String,problem:Problem? = nil,caller:String,completionHandler:(result:FDataSnapshot)->Void){
         super.init()
         
-        if((change) != nil){
-            self.change = change
+        if((problem) != nil){
+            self.problem = problem
         }
-        self.changeID = changeID
+        self.problemID = problemID
         
         //empty TempArrays ready to be populate with new data
-        TempChange.sharedInstance().solutionNameArray = []
-        TempChange.sharedInstance().solutionDetailArray = []
-        TempChange.sharedInstance().solutionVoteArray = []
-        TempChange.sharedInstance().solutionIDArray = []
-        TempChange.sharedInstance().solutionOwnerArray = []
-        TempChange.sharedInstance().petitionURLArray = []
+        TempSave.sharedInstance().solutionNameArray = []
+        TempSave.sharedInstance().solutionDetailArray = []
+        TempSave.sharedInstance().solutionVoteArray = []
+        TempSave.sharedInstance().solutionIDArray = []
+        TempSave.sharedInstance().solutionOwnerArray = []
+        TempSave.sharedInstance().petitionURLArray = []
         
 
         
-        //setup reference to firebase using changeID
-        changeRef = ref.childByAppendingPath(changeID)
+        //setup reference to firebase using problemID
+        problemRef = ref.childByAppendingPath(problemID)
         
-        changeRef.observeSingleEventOfType(.Value, withBlock: {snapshot in
+        problemRef.observeSingleEventOfType(.Value, withBlock: {snapshot in
             
             //loop through retrieved firebase solutions and save into TempArrays
             for solution in snapshot.children.allObjects as! [FDataSnapshot]{
                 
-                TempChange.sharedInstance().solutionIDArray.append(solution.key)
-                TempChange.sharedInstance().solutionNameArray.append(solution.value["SolutionName"] as! String)
-                TempChange.sharedInstance().solutionDetailArray.append(solution.value["SolutionDescription"] as! String)
-                TempChange.sharedInstance().solutionVoteArray.append(solution.value["SolutionVoteCount"] as! Int)
-                TempChange.sharedInstance().solutionOwnerArray.append(solution.value["SolutionOwner"] as! String)
-                TempChange.sharedInstance().petitionURLArray.append(solution.value["PetitionURL"] as! String)
+                TempSave.sharedInstance().solutionIDArray.append(solution.key)
+                TempSave.sharedInstance().solutionNameArray.append(solution.value["SolutionName"] as! String)
+                TempSave.sharedInstance().solutionDetailArray.append(solution.value["SolutionDescription"] as! String)
+                TempSave.sharedInstance().solutionVoteArray.append(solution.value["SolutionVoteCount"] as! Int)
+                TempSave.sharedInstance().solutionOwnerArray.append(solution.value["SolutionOwner"] as! String)
+                TempSave.sharedInstance().petitionURLArray.append(solution.value["PetitionURL"] as! String)
             }
             
             if(caller == "following"){
@@ -78,7 +78,7 @@ class RetrieveSolutionsFromFirebase:NSObject{
         
         
         let request = NSFetchRequest(entityName: "Solution")
-        let predicate = NSPredicate(format: "solutionToChange == %@", change)
+        let predicate = NSPredicate(format: "solutionToProblem == %@", problem)
         request.predicate = predicate
         
         do{
@@ -99,22 +99,22 @@ class RetrieveSolutionsFromFirebase:NSObject{
     
     func compareArraysForMatches(){
         
-         //Test whether any of the solutions from firebase (held in TempChange) already exist in retrieved coredata array (localSolutionIDArray)
+         //Test whether any of the solutions from firebase (held in TempSave) already exist in retrieved coredata array (localSolutionIDArray)
         /*
-        for var i in 0 ..< TempChange.sharedInstance().solutionIDArray.count{
+        for var i in 0 ..< TempSave.sharedInstance().solutionIDArray.count{
             
             for var j in 0 ..< localSolutionIDArray.count{
                 
                 
-                if(TempChange.sharedInstance().solutionIDArray[i] as? String == localSolutionIDArray[j] as? String){
+                if(TempSave.sharedInstance().solutionIDArray[i] as? String == localSolutionIDArray[j] as? String){
                     
                     // IF there is a match between a firebase solution and coreData remove it from arrays
                     /*
-                    TempChange.sharedInstance().solutionIDArray.removeObjectAtIndex(i)
-                    TempChange.sharedInstance().solutionNameArray.removeObjectAtIndex(i)
-                    TempChange.sharedInstance().solutionDetailArray.removeObjectAtIndex(i)
-                    TempChange.sharedInstance().solutionVoteArray.removeObjectAtIndex(i)
-                    TempChange.sharedInstance().solutionOwnerArray.removeObjectAtIndex(i)
+                    TempSave.sharedInstance().solutionIDArray.removeObjectAtIndex(i)
+                    TempSave.sharedInstance().solutionNameArray.removeObjectAtIndex(i)
+                    TempSave.sharedInstance().solutionDetailArray.removeObjectAtIndex(i)
+                    TempSave.sharedInstance().solutionVoteArray.removeObjectAtIndex(i)
+                    TempSave.sharedInstance().solutionOwnerArray.removeObjectAtIndex(i)
                     */
                 }
             }
@@ -122,7 +122,7 @@ class RetrieveSolutionsFromFirebase:NSObject{
         */
         
         //gets useRef Array
-        let setA = Set(TempChange.sharedInstance().solutionIDArray)
+        let setA = Set(TempSave.sharedInstance().solutionIDArray)
         let setB = Set(localSolutionIDArray)
         
         let diff = setA.subtract(setB)
@@ -135,29 +135,29 @@ class RetrieveSolutionsFromFirebase:NSObject{
     func retrieveMatchedSolutionsFromFirebase(){
         
         // clear tempArrays ready to load new solutions into
-        TempChange.sharedInstance().solutionNameArray = []
-        TempChange.sharedInstance().solutionDetailArray = []
-        TempChange.sharedInstance().solutionVoteArray = []
-        TempChange.sharedInstance().solutionIDArray = []
-        TempChange.sharedInstance().solutionOwnerArray = []
-        TempChange.sharedInstance().petitionURLArray = []
+        TempSave.sharedInstance().solutionNameArray = []
+        TempSave.sharedInstance().solutionDetailArray = []
+        TempSave.sharedInstance().solutionVoteArray = []
+        TempSave.sharedInstance().solutionIDArray = []
+        TempSave.sharedInstance().solutionOwnerArray = []
+        TempSave.sharedInstance().petitionURLArray = []
         
         
         // use diff to retrieve all data
         for i in 0 ..< nonMatches.count{
             
-            let solutionRef = changeRef.childByAppendingPath(nonMatches[i])
+            let solutionRef = problemRef.childByAppendingPath(nonMatches[i])
             
             solutionRef.observeSingleEventOfType(.Value, withBlock: {snapshot in
                 
-                TempChange.sharedInstance().solutionIDArray.append(snapshot.key)
-                TempChange.sharedInstance().solutionNameArray.append(snapshot.value["SolutionName"] as! String)
-                TempChange.sharedInstance().solutionDetailArray.append(snapshot.value["SolutionDescription"] as! String)
-                TempChange.sharedInstance().solutionVoteArray.append(snapshot.value["SolutionVoteCount"] as! Int)
-                TempChange.sharedInstance().solutionOwnerArray.append(snapshot.value["SolutionOwner"] as! String)
-                TempChange.sharedInstance().petitionURLArray.append(snapshot.value["PetitionURL"] as! String)
+                TempSave.sharedInstance().solutionIDArray.append(snapshot.key)
+                TempSave.sharedInstance().solutionNameArray.append(snapshot.value["SolutionName"] as! String)
+                TempSave.sharedInstance().solutionDetailArray.append(snapshot.value["SolutionDescription"] as! String)
+                TempSave.sharedInstance().solutionVoteArray.append(snapshot.value["SolutionVoteCount"] as! Int)
+                TempSave.sharedInstance().solutionOwnerArray.append(snapshot.value["SolutionOwner"] as! String)
+                TempSave.sharedInstance().petitionURLArray.append(snapshot.value["PetitionURL"] as! String)
                 
-                if(TempChange.sharedInstance().solutionIDArray.count == self.nonMatches.count){
+                if(TempSave.sharedInstance().solutionIDArray.count == self.nonMatches.count){
                     
                     //TODO: call UpdateCoreDataSolutions class rather than function
                     
@@ -179,20 +179,20 @@ class RetrieveSolutionsFromFirebase:NSObject{
     
     func updateCoreDataSolutions(){
         
-        for i in 0 ..< TempChange.sharedInstance().solutionNameArray.count{
+        for i in 0 ..< TempSave.sharedInstance().solutionNameArray.count{
             
             var solutionDictionary:[String:AnyObject] = [String:AnyObject]()
             
-            solutionDictionary[Solution.Keys.solutionName] = TempChange.sharedInstance().solutionNameArray[i]
-            solutionDictionary[Solution.Keys.solutionDescription] = TempChange.sharedInstance().solutionDetailArray[i]
-            solutionDictionary[Solution.Keys.voteCount] = TempChange.sharedInstance().solutionVoteArray[i]
-            solutionDictionary[Solution.Keys.solutionID] = TempChange.sharedInstance().solutionIDArray[i]
+            solutionDictionary[Solution.Keys.solutionName] = TempSave.sharedInstance().solutionNameArray[i]
+            solutionDictionary[Solution.Keys.solutionDescription] = TempSave.sharedInstance().solutionDetailArray[i]
+            solutionDictionary[Solution.Keys.voteCount] = TempSave.sharedInstance().solutionVoteArray[i]
+            solutionDictionary[Solution.Keys.solutionID] = TempSave.sharedInstance().solutionIDArray[i]
             solutionDictionary[Solution.Keys.haveVotedFor] = "no"
-            solutionDictionary[Solution.Keys.solutionOwner] = TempChange.sharedInstance().solutionOwnerArray[i]
-            solutionDictionary[Solution.Keys.petitionURL] = TempChange.sharedInstance().petitionURLArray[i]
+            solutionDictionary[Solution.Keys.solutionOwner] = TempSave.sharedInstance().solutionOwnerArray[i]
+            solutionDictionary[Solution.Keys.petitionURL] = TempSave.sharedInstance().petitionURLArray[i]
             
             let newSolution = Solution(dictionary: solutionDictionary,context: sharedContext)
-            newSolution.solutionToChange = change!
+            newSolution.solutionToProblem = problem!
             
         }
         

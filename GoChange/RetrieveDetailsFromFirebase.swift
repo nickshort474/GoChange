@@ -12,7 +12,7 @@ import Firebase
 
 class RetrieveDetailsFromFirebase:NSObject{
     
-    var ref = Firebase(url: "https://gochange.firebaseio.com/change/details")
+    var ref = Firebase(url: "https://gochange.firebaseio.com/problem/details")
         
     var results:[String] = []
     
@@ -22,11 +22,11 @@ class RetrieveDetailsFromFirebase:NSObject{
         
         for i in 0 ..< userRefArray.count{
             
-            let changeRef = ref.childByAppendingPath(userRefArray[i])
+            let problemRef = ref.childByAppendingPath(userRefArray[i])
             
-            changeRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
+            problemRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
                 
-            self.results.append(snapshot.value["ChangeDetail"] as! String)
+            self.results.append(snapshot.value["ProblemDetail"] as! String)
                 
             if(self.results.count == userRefArray.count){
                     

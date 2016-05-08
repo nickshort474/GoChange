@@ -48,7 +48,7 @@ class SearchController:NSObject{
             for name in snapshot.children.allObjects as! [FDataSnapshot]{
                 
                 //add value of returned item to array
-                self.returnedNameArray.append(name.value["ChangeName"]!! as! String)
+                self.returnedNameArray.append(name.value["ProblemName"]!! as! String)
                 
                 //add ref to item to another array
                 self.returnedRefArray.append(String(name.key))
@@ -198,12 +198,12 @@ class SearchController:NSObject{
             
                 self.useDetailArray = detailResults
             
-                _ = RetrieveSolutionCountFirebase(changeArray:self.refsNotInCoreData){
+                _ = RetrieveSolutionCountFirebase(problemArray:self.refsNotInCoreData){
                     (solutionCountResults) in
                 
                     self.useSolutionCountArray = solutionCountResults
                 
-                    _  = RetrieveNamesFromFirebase(changeArray:self.refsNotInCoreData){
+                    _  = RetrieveNamesFromFirebase(problemArray:self.refsNotInCoreData){
                         (nameResults,ownerResults) in
                     
                         self.useNameArray = nameResults
@@ -219,16 +219,16 @@ class SearchController:NSObject{
     
     func checkIfInCoreData(){
         
-        //create array to hold references of coreData changes
+        //create array to hold references of coreData problems
         var followedRefArray:[String] = []
         
         // loop through search string matched useRefArray
         for i in 0 ..< matchedRefArray.count{
             
-            _ = RetrieveChange(changeID: matchedRefArray[i] ){
+            _ = RetrieveProblem(problemID: matchedRefArray[i] ){
                 (result) in
                 
-                followedRefArray.append(result.changeID)
+                followedRefArray.append(result.problemID)
             }
             
         }

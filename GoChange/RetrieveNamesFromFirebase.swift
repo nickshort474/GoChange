@@ -12,25 +12,25 @@ import Firebase
 
 class RetrieveNamesFromFirebase:NSObject{
     
-    var nameRef = Firebase(url: "https://gochange.firebaseio.com/change/names")
+    var nameRef = Firebase(url: "https://gochange.firebaseio.com/problem/names")
     var nameResults:[String] = []
     var ownerResults:[String] = []
     
     
-    init(changeArray:[String],completionHandler:(nameResults:[String],ownerResults:[String])->Void){
+    init(problemArray:[String],completionHandler:(nameResults:[String],ownerResults:[String])->Void){
         
         super.init()
         
-        for i in 0 ..< changeArray.count{
+        for i in 0 ..< problemArray.count{
             
-            let newRef = nameRef.childByAppendingPath(changeArray[i])
+            let newRef = nameRef.childByAppendingPath(problemArray[i])
             
             newRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
             
-                self.nameResults.append(snapshot.value["ChangeName"] as! String)
-                self.ownerResults.append(snapshot.value["ChangeOwner"] as! String)
+                self.nameResults.append(snapshot.value["ProblemName"] as! String)
+                self.ownerResults.append(snapshot.value["ProblemOwner"] as! String)
                 
-                if(self.nameResults.count == changeArray.count){
+                if(self.nameResults.count == problemArray.count){
                     
                     completionHandler(nameResults:self.nameResults, ownerResults: self.ownerResults)
                     

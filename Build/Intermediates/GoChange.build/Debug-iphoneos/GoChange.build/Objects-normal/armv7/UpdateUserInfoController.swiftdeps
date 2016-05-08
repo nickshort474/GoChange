@@ -8,21 +8,21 @@ provides-member:
 provides-dynamic-lookup:
 - "updateUsername"
 - "updatePassword"
-- "viewDidLoad"
-- "segueToInput"
 - "currentlyUpdating"
-- "cancelUpdate"
-- "ref"
+- "viewDidLoad"
 - "updateEmail"
+- "ref"
+- "segueToInput"
+- "cancelUpdate"
 depends-top-level:
 - "UpdateUserInfoController"
-- "Firebase"
-- "StringLiteralType"
-- "String"
-- "UIButton"
-- !private "SignupViewController"
-- !private "BooleanLiteralType"
 - "UIViewController"
+- "String"
+- !private "SignupViewController"
+- "StringLiteralType"
+- "Firebase"
+- "UIButton"
+- !private "BooleanLiteralType"
 depends-member:
 - ["Ps9AnyObject", "Firebase"]
 - ["Ps9AnyObject", "cancelUpdate"]

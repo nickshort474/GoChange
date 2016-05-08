@@ -13,18 +13,18 @@ import Firebase
 class SaveNewSolution:NSObject{
     
     
-    var existingChange:Change!
+    var existingProblem:Problem!
     var solutionIDArray:NSMutableArray = []
     
     
-    init(change:Change,completionHandler:(result:AnyObject)->Void){
+    init(problem:Problem,completionHandler:(result:AnyObject)->Void){
         super.init()
         
         
-        existingChange = change
+        existingProblem = problem
         saveSolutionsToFirebase()
         createCoreDataSolutions()
-        adjustCoreDataChange()
+        adjustCoreDataProblem()
         
     }
     
@@ -38,22 +38,22 @@ class SaveNewSolution:NSObject{
     
     func saveSolutionsToFirebase(){
         
-        let changeID = existingChange.changeID
+        let problemID = existingProblem.problemID
         
-        let solutionCountLocation = Firebase(url:"https://gochange.firebaseio.com/change/solutionCount")
-        let uniqueSolutionCountLocation = solutionCountLocation.childByAppendingPath(changeID)
-        uniqueSolutionCountLocation.setValue(["SolutionCount":TempChange.sharedInstance().solutionNameArray.count])
+        let solutionCountLocation = Firebase(url:"https://gochange.firebaseio.com/problem/solutionCount")
+        let uniqueSolutionCountLocation = solutionCountLocation.childByAppendingPath(problemID)
+        uniqueSolutionCountLocation.setValue(["SolutionCount":TempSave.sharedInstance().solutionNameArray.count])
         
         
         //create reference to solutions location in firebase
-        let changeSolutionsLocation = Firebase(url:"https://gochange.firebaseio.com/change/solutions")
-        let uniqueSolutionLocation = changeSolutionsLocation.childByAppendingPath(changeID)
+        let problemSolutionsLocation = Firebase(url:"https://gochange.firebaseio.com/problem/solutions")
+        let uniqueSolutionLocation = problemSolutionsLocation.childByAppendingPath(problemID)
         
         let solutionOwner = NSUserDefaults.standardUserDefaults().valueForKey("username") as! String
         
         
         //loop through solutions array
-        for i in 0 ..< (TempChange.sharedInstance().newSolutionNameArray.count){
+        for i in 0 ..< (TempSave.sharedInstance().newSolutionNameArray.count){
             
             //create unqiue location with ID within solutions section
             let uniqueSolutionReference = uniqueSolutionLocation!.childByAutoId()
@@ -63,10 +63,10 @@ class SaveNewSolution:NSObject{
             self.solutionIDArray.addObject(uniqueSolutionReference.key)
             
             //set solution values
-            let changeSolutionValues = ["SolutionName":TempChange.sharedInstance().newSolutionNameArray[i],"SolutionDescription":TempChange.sharedInstance().newSolutionDetailArray[i],"SolutionVoteCount":0,"SolutionOwner":solutionOwner,"PetitionURL":TempChange.sharedInstance().newPetitionURLArray[i]]
+            let problemSolutionValues = ["SolutionName":TempSave.sharedInstance().newSolutionNameArray[i],"SolutionDescription":TempSave.sharedInstance().newSolutionDetailArray[i],"SolutionVoteCount":0,"SolutionOwner":solutionOwner,"PetitionURL":TempSave.sharedInstance().newPetitionURLArray[i]]
             
             //save values to firebase
-            uniqueSolutionReference.setValue(changeSolutionValues)
+            uniqueSolutionReference.setValue(problemSolutionValues)
         }
         
         
@@ -79,21 +79,21 @@ class SaveNewSolution:NSObject{
         
         let solutionOwner = NSUserDefaults.standardUserDefaults().valueForKey("username") as! String
         
-        for i in 0 ..< TempChange.sharedInstance().newSolutionNameArray.count{
+        for i in 0 ..< TempSave.sharedInstance().newSolutionNameArray.count{
             
             var solutionDictionary:[String:AnyObject] = [String:AnyObject]()
             
-            solutionDictionary[Solution.Keys.solutionName] = TempChange.sharedInstance().newSolutionNameArray[i]
-            solutionDictionary[Solution.Keys.solutionDescription] = TempChange.sharedInstance().newSolutionDetailArray[i]
+            solutionDictionary[Solution.Keys.solutionName] = TempSave.sharedInstance().newSolutionNameArray[i]
+            solutionDictionary[Solution.Keys.solutionDescription] = TempSave.sharedInstance().newSolutionDetailArray[i]
             solutionDictionary[Solution.Keys.voteCount] = 0
             solutionDictionary[Solution.Keys.solutionID] = self.solutionIDArray[i]
             solutionDictionary[Solution.Keys.haveVotedFor] = "no"
             solutionDictionary[Solution.Keys.solutionOwner] = solutionOwner
-            solutionDictionary[Solution.Keys.petitionURL] = TempChange.sharedInstance().newPetitionURLArray[i]
+            solutionDictionary[Solution.Keys.petitionURL] = TempSave.sharedInstance().newPetitionURLArray[i]
             
             //create core data solution object
             let newSolution = Solution(dictionary: solutionDictionary,context: sharedContext)
-            newSolution.solutionToChange = existingChange!
+            newSolution.solutionToProblem = existingProblem!
             
         }
         
@@ -101,14 +101,14 @@ class SaveNewSolution:NSObject{
         
     }
     
-    func adjustCoreDataChange(){
+    func adjustCoreDataProblem(){
         
-        let request = NSFetchRequest(entityName: "Change")
-        let predicate = NSPredicate(format: "changeID == %@", existingChange.changeID)
+        let request = NSFetchRequest(entityName: "Problem")
+        let predicate = NSPredicate(format: "problemID == %@", existingProblem.problemID)
         request.predicate = predicate
         
         do{
-            let results =  try sharedContext.executeFetchRequest(request) as! [Change]
+            let results =  try sharedContext.executeFetchRequest(request) as! [Problem]
             if let entity = results.first{
                 
                 var holdingSolutionCount = entity.solutionCount as Int

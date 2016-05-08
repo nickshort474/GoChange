@@ -6,31 +6,31 @@ provides-nominal:
 provides-member:
 - ["C8GoChange20SearchViewController", ""]
 provides-dynamic-lookup:
-- "viewDidLoad"
 - "didReceiveMemoryWarning"
-- "homeButtonClick"
 - "searchTextField"
+- "viewDidLoad"
 - "searchForResults"
 - "textFieldShouldReturn"
+- "homeButtonClick"
 - "presentAlert"
 depends-top-level:
-- !private "UIAlertController"
+- "UIViewController"
 - !private "BooleanLiteralType"
-- !private "UIAlertAction"
-- !private "UIAlertActionStyle"
+- "UITextFieldDelegate"
+- !private "SearchController"
 - "String"
-- "UIButton"
+- !private "UIAlertActionStyle"
+- "Bool"
 - !private "GoChangeClient"
+- !private "UIAlertAction"
+- "UITextField"
+- !private "UIAlertController"
+- !private "ResultsViewController"
+- "UIButton"
+- "SearchViewController"
 - !private "CGSizeMake"
 - !private "=="
-- "UITextField"
-- "UITextFieldDelegate"
-- "SearchViewController"
-- "UIViewController"
-- "Bool"
 - "StringLiteralType"
-- !private "ResultsViewController"
-- !private "SearchController"
 depends-member:
 - !private ["Ps9AnyObject", "CGColor"]
 - !private ["Ps9AnyObject", "CGSizeMake"]
@@ -43,7 +43,6 @@ depends-member:
 - !private ["Ps9AnyObject", "addAction"]
 - !private ["Ps9AnyObject", "barTintColor"]
 - !private ["Ps9AnyObject", "becomeFirstResponder"]
-- !private ["Ps9AnyObject", "changeOwnerArray"]
 - !private ["Ps9AnyObject", "delegate"]
 - ["Ps9AnyObject", "didReceiveMemoryWarning"]
 - !private ["Ps9AnyObject", "dismissViewControllerAnimated"]
@@ -57,6 +56,7 @@ depends-member:
 - !private ["Ps9AnyObject", "navigationController"]
 - ["Ps9AnyObject", "presentAlert"]
 - !private ["Ps9AnyObject", "presentViewController"]
+- !private ["Ps9AnyObject", "problemOwnerArray"]
 - !private ["Ps9AnyObject", "pushViewController"]
 - !private ["Ps9AnyObject", "refArray"]
 - !private ["Ps9AnyObject", "resignFirstResponder"]
@@ -105,7 +105,6 @@ depends-member:
 - !private ["Ps11CVarArgType", "addAction"]
 - !private ["Ps11CVarArgType", "barTintColor"]
 - !private ["Ps11CVarArgType", "becomeFirstResponder"]
-- !private ["Ps11CVarArgType", "changeOwnerArray"]
 - !private ["Ps11CVarArgType", "delegate"]
 - ["Ps11CVarArgType", "didReceiveMemoryWarning"]
 - !private ["Ps11CVarArgType", "dismissViewControllerAnimated"]
@@ -119,6 +118,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "navigationController"]
 - ["Ps11CVarArgType", "presentAlert"]
 - !private ["Ps11CVarArgType", "presentViewController"]
+- !private ["Ps11CVarArgType", "problemOwnerArray"]
 - !private ["Ps11CVarArgType", "pushViewController"]
 - !private ["Ps11CVarArgType", "refArray"]
 - !private ["Ps11CVarArgType", "resignFirstResponder"]
@@ -154,7 +154,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "addAction"]
 - !private ["Ps28CustomDebugStringConvertible", "barTintColor"]
 - !private ["Ps28CustomDebugStringConvertible", "becomeFirstResponder"]
-- !private ["Ps28CustomDebugStringConvertible", "changeOwnerArray"]
 - !private ["Ps28CustomDebugStringConvertible", "delegate"]
 - ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
 - !private ["Ps28CustomDebugStringConvertible", "dismissViewControllerAnimated"]
@@ -168,6 +167,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "navigationController"]
 - ["Ps28CustomDebugStringConvertible", "presentAlert"]
 - !private ["Ps28CustomDebugStringConvertible", "presentViewController"]
+- !private ["Ps28CustomDebugStringConvertible", "problemOwnerArray"]
 - !private ["Ps28CustomDebugStringConvertible", "pushViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "refArray"]
 - !private ["Ps28CustomDebugStringConvertible", "resignFirstResponder"]
@@ -203,7 +203,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "addAction"]
 - !private ["Ps23CustomStringConvertible", "barTintColor"]
 - !private ["Ps23CustomStringConvertible", "becomeFirstResponder"]
-- !private ["Ps23CustomStringConvertible", "changeOwnerArray"]
 - !private ["Ps23CustomStringConvertible", "delegate"]
 - ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
 - !private ["Ps23CustomStringConvertible", "dismissViewControllerAnimated"]
@@ -217,6 +216,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "navigationController"]
 - ["Ps23CustomStringConvertible", "presentAlert"]
 - !private ["Ps23CustomStringConvertible", "presentViewController"]
+- !private ["Ps23CustomStringConvertible", "problemOwnerArray"]
 - !private ["Ps23CustomStringConvertible", "pushViewController"]
 - !private ["Ps23CustomStringConvertible", "refArray"]
 - !private ["Ps23CustomStringConvertible", "resignFirstResponder"]
@@ -253,7 +253,6 @@ depends-member:
 - !private ["Ps9Equatable", "addAction"]
 - !private ["Ps9Equatable", "barTintColor"]
 - !private ["Ps9Equatable", "becomeFirstResponder"]
-- !private ["Ps9Equatable", "changeOwnerArray"]
 - !private ["Ps9Equatable", "delegate"]
 - ["Ps9Equatable", "didReceiveMemoryWarning"]
 - !private ["Ps9Equatable", "dismissViewControllerAnimated"]
@@ -267,6 +266,7 @@ depends-member:
 - !private ["Ps9Equatable", "navigationController"]
 - ["Ps9Equatable", "presentAlert"]
 - !private ["Ps9Equatable", "presentViewController"]
+- !private ["Ps9Equatable", "problemOwnerArray"]
 - !private ["Ps9Equatable", "pushViewController"]
 - !private ["Ps9Equatable", "refArray"]
 - !private ["Ps9Equatable", "resignFirstResponder"]
@@ -304,7 +304,6 @@ depends-member:
 - !private ["Ps8Hashable", "addAction"]
 - !private ["Ps8Hashable", "barTintColor"]
 - !private ["Ps8Hashable", "becomeFirstResponder"]
-- !private ["Ps8Hashable", "changeOwnerArray"]
 - !private ["Ps8Hashable", "delegate"]
 - ["Ps8Hashable", "didReceiveMemoryWarning"]
 - !private ["Ps8Hashable", "dismissViewControllerAnimated"]
@@ -318,6 +317,7 @@ depends-member:
 - !private ["Ps8Hashable", "navigationController"]
 - ["Ps8Hashable", "presentAlert"]
 - !private ["Ps8Hashable", "presentViewController"]
+- !private ["Ps8Hashable", "problemOwnerArray"]
 - !private ["Ps8Hashable", "pushViewController"]
 - !private ["Ps8Hashable", "refArray"]
 - !private ["Ps8Hashable", "resignFirstResponder"]
@@ -351,7 +351,6 @@ depends-member:
 - !private ["PSo8NSCoding", "addAction"]
 - !private ["PSo8NSCoding", "barTintColor"]
 - !private ["PSo8NSCoding", "becomeFirstResponder"]
-- !private ["PSo8NSCoding", "changeOwnerArray"]
 - !private ["PSo8NSCoding", "delegate"]
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
 - !private ["PSo8NSCoding", "dismissViewControllerAnimated"]
@@ -364,6 +363,7 @@ depends-member:
 - !private ["PSo8NSCoding", "navigationController"]
 - ["PSo8NSCoding", "presentAlert"]
 - !private ["PSo8NSCoding", "presentViewController"]
+- !private ["PSo8NSCoding", "problemOwnerArray"]
 - !private ["PSo8NSCoding", "pushViewController"]
 - !private ["PSo8NSCoding", "refArray"]
 - !private ["PSo8NSCoding", "resignFirstResponder"]
@@ -396,7 +396,6 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertActionStyle"]
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertController"]
 - !private ["PSo26NSExtensionRequestHandling", "addAction"]
-- !private ["PSo26NSExtensionRequestHandling", "changeOwnerArray"]
 - ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
 - !private ["PSo26NSExtensionRequestHandling", "dismissViewControllerAnimated"]
 - ["PSo26NSExtensionRequestHandling", "homeButtonClick"]
@@ -406,6 +405,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "navigationController"]
 - ["PSo26NSExtensionRequestHandling", "presentAlert"]
 - !private ["PSo26NSExtensionRequestHandling", "presentViewController"]
+- !private ["PSo26NSExtensionRequestHandling", "problemOwnerArray"]
 - !private ["PSo26NSExtensionRequestHandling", "pushViewController"]
 - !private ["PSo26NSExtensionRequestHandling", "refArray"]
 - !private ["PSo26NSExtensionRequestHandling", "resultDetailArray"]
@@ -439,7 +439,6 @@ depends-member:
 - !private ["CSo8NSObject", "addAction"]
 - !private ["CSo8NSObject", "barTintColor"]
 - !private ["CSo8NSObject", "becomeFirstResponder"]
-- !private ["CSo8NSObject", "changeOwnerArray"]
 - !private ["CSo8NSObject", "delegate"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
 - !private ["CSo8NSObject", "dismissViewControllerAnimated"]
@@ -453,6 +452,7 @@ depends-member:
 - !private ["CSo8NSObject", "navigationController"]
 - ["CSo8NSObject", "presentAlert"]
 - !private ["CSo8NSObject", "presentViewController"]
+- !private ["CSo8NSObject", "problemOwnerArray"]
 - !private ["CSo8NSObject", "pushViewController"]
 - !private ["CSo8NSObject", "refArray"]
 - !private ["CSo8NSObject", "resignFirstResponder"]
@@ -486,7 +486,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "addAction"]
 - !private ["PSo16NSObjectProtocol", "barTintColor"]
 - !private ["PSo16NSObjectProtocol", "becomeFirstResponder"]
-- !private ["PSo16NSObjectProtocol", "changeOwnerArray"]
 - !private ["PSo16NSObjectProtocol", "delegate"]
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
 - !private ["PSo16NSObjectProtocol", "dismissViewControllerAnimated"]
@@ -500,6 +499,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "navigationController"]
 - ["PSo16NSObjectProtocol", "presentAlert"]
 - !private ["PSo16NSObjectProtocol", "presentViewController"]
+- !private ["PSo16NSObjectProtocol", "problemOwnerArray"]
 - !private ["PSo16NSObjectProtocol", "pushViewController"]
 - !private ["PSo16NSObjectProtocol", "refArray"]
 - !private ["PSo16NSObjectProtocol", "resignFirstResponder"]
@@ -526,7 +526,7 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "CGColor"]
 - !private ["Sq", "deinit"]
 - !private ["Ps16RawRepresentable", "Cancel"]
-- !private ["C8GoChange21ResultsViewController", "changeOwnerArray"]
+- !private ["C8GoChange21ResultsViewController", "problemOwnerArray"]
 - !private ["C8GoChange21ResultsViewController", "refArray"]
 - !private ["C8GoChange21ResultsViewController", "resultDetailArray"]
 - !private ["C8GoChange21ResultsViewController", "resultNameArray"]
@@ -587,7 +587,6 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "addAction"]
 - !private ["PSo21UIAppearanceContainer", "barTintColor"]
 - !private ["PSo21UIAppearanceContainer", "becomeFirstResponder"]
-- !private ["PSo21UIAppearanceContainer", "changeOwnerArray"]
 - !private ["PSo21UIAppearanceContainer", "delegate"]
 - ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
 - !private ["PSo21UIAppearanceContainer", "dismissViewControllerAnimated"]
@@ -599,6 +598,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "navigationController"]
 - ["PSo21UIAppearanceContainer", "presentAlert"]
 - !private ["PSo21UIAppearanceContainer", "presentViewController"]
+- !private ["PSo21UIAppearanceContainer", "problemOwnerArray"]
 - !private ["PSo21UIAppearanceContainer", "pushViewController"]
 - !private ["PSo21UIAppearanceContainer", "refArray"]
 - !private ["PSo21UIAppearanceContainer", "resignFirstResponder"]
@@ -627,7 +627,6 @@ depends-member:
 - !private ["PSo18UIContentContainer", "UIAlertActionStyle"]
 - !private ["PSo18UIContentContainer", "UIAlertController"]
 - !private ["PSo18UIContentContainer", "addAction"]
-- !private ["PSo18UIContentContainer", "changeOwnerArray"]
 - ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
 - !private ["PSo18UIContentContainer", "dismissViewControllerAnimated"]
 - ["PSo18UIContentContainer", "homeButtonClick"]
@@ -637,6 +636,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "navigationController"]
 - ["PSo18UIContentContainer", "presentAlert"]
 - !private ["PSo18UIContentContainer", "presentViewController"]
+- !private ["PSo18UIContentContainer", "problemOwnerArray"]
 - !private ["PSo18UIContentContainer", "pushViewController"]
 - !private ["PSo18UIContentContainer", "refArray"]
 - !private ["PSo18UIContentContainer", "resultDetailArray"]
@@ -680,7 +680,6 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "addAction"]
 - !private ["PSo18UIFocusEnvironment", "barTintColor"]
 - !private ["PSo18UIFocusEnvironment", "becomeFirstResponder"]
-- !private ["PSo18UIFocusEnvironment", "changeOwnerArray"]
 - !private ["PSo18UIFocusEnvironment", "delegate"]
 - ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
 - !private ["PSo18UIFocusEnvironment", "dismissViewControllerAnimated"]
@@ -692,6 +691,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "navigationController"]
 - ["PSo18UIFocusEnvironment", "presentAlert"]
 - !private ["PSo18UIFocusEnvironment", "presentViewController"]
+- !private ["PSo18UIFocusEnvironment", "problemOwnerArray"]
 - !private ["PSo18UIFocusEnvironment", "pushViewController"]
 - !private ["PSo18UIFocusEnvironment", "refArray"]
 - !private ["PSo18UIFocusEnvironment", "resignFirstResponder"]
@@ -734,7 +734,6 @@ depends-member:
 - !private ["CSo11UIResponder", "addAction"]
 - !private ["CSo11UIResponder", "barTintColor"]
 - !private ["CSo11UIResponder", "becomeFirstResponder"]
-- !private ["CSo11UIResponder", "changeOwnerArray"]
 - !private ["CSo11UIResponder", "delegate"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
 - !private ["CSo11UIResponder", "dismissViewControllerAnimated"]
@@ -746,6 +745,7 @@ depends-member:
 - !private ["CSo11UIResponder", "navigationController"]
 - ["CSo11UIResponder", "presentAlert"]
 - !private ["CSo11UIResponder", "presentViewController"]
+- !private ["CSo11UIResponder", "problemOwnerArray"]
 - !private ["CSo11UIResponder", "pushViewController"]
 - !private ["CSo11UIResponder", "refArray"]
 - !private ["CSo11UIResponder", "resignFirstResponder"]
@@ -764,7 +764,7 @@ depends-member:
 - ["CSo11UIResponder", "textFieldShouldEndEditing"]
 - ["CSo11UIResponder", "textFieldShouldReturn"]
 - ["CSo11UIResponder", "viewDidLoad"]
-- !private ["PSo20UIScrollViewDelegate", "changeOwnerArray"]
+- !private ["PSo20UIScrollViewDelegate", "problemOwnerArray"]
 - !private ["PSo20UIScrollViewDelegate", "refArray"]
 - !private ["PSo20UIScrollViewDelegate", "resultDetailArray"]
 - !private ["PSo20UIScrollViewDelegate", "resultNameArray"]
@@ -776,7 +776,6 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "UIAlertActionStyle"]
 - !private ["PSo16UIStateRestoring", "UIAlertController"]
 - !private ["PSo16UIStateRestoring", "addAction"]
-- !private ["PSo16UIStateRestoring", "changeOwnerArray"]
 - ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
 - !private ["PSo16UIStateRestoring", "dismissViewControllerAnimated"]
 - ["PSo16UIStateRestoring", "homeButtonClick"]
@@ -786,6 +785,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "navigationController"]
 - ["PSo16UIStateRestoring", "presentAlert"]
 - !private ["PSo16UIStateRestoring", "presentViewController"]
+- !private ["PSo16UIStateRestoring", "problemOwnerArray"]
 - !private ["PSo16UIStateRestoring", "pushViewController"]
 - !private ["PSo16UIStateRestoring", "refArray"]
 - !private ["PSo16UIStateRestoring", "resultDetailArray"]
@@ -804,7 +804,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", ""]
 - !private ["CSo12UIStoryboard", "instantiateViewControllerWithIdentifier"]
-- !private ["PSo19UITableViewDelegate", "changeOwnerArray"]
+- !private ["PSo19UITableViewDelegate", "problemOwnerArray"]
 - !private ["PSo19UITableViewDelegate", "refArray"]
 - !private ["PSo19UITableViewDelegate", "resultDetailArray"]
 - !private ["PSo19UITableViewDelegate", "resultNameArray"]
@@ -852,7 +852,6 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "addAction"]
 - !private ["PSo18UITraitEnvironment", "barTintColor"]
 - !private ["PSo18UITraitEnvironment", "becomeFirstResponder"]
-- !private ["PSo18UITraitEnvironment", "changeOwnerArray"]
 - !private ["PSo18UITraitEnvironment", "delegate"]
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
 - !private ["PSo18UITraitEnvironment", "dismissViewControllerAnimated"]
@@ -864,6 +863,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "navigationController"]
 - ["PSo18UITraitEnvironment", "presentAlert"]
 - !private ["PSo18UITraitEnvironment", "presentViewController"]
+- !private ["PSo18UITraitEnvironment", "problemOwnerArray"]
 - !private ["PSo18UITraitEnvironment", "pushViewController"]
 - !private ["PSo18UITraitEnvironment", "refArray"]
 - !private ["PSo18UITraitEnvironment", "resignFirstResponder"]
@@ -901,7 +901,6 @@ depends-member:
 - ["CSo16UIViewController", "UIButton"]
 - ["CSo16UIViewController", "UITextField"]
 - !private ["CSo16UIViewController", "addAction"]
-- !private ["CSo16UIViewController", "changeOwnerArray"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
 - !private ["CSo16UIViewController", "dismissViewControllerAnimated"]
 - ["CSo16UIViewController", "homeButtonClick"]
@@ -911,6 +910,7 @@ depends-member:
 - !private ["CSo16UIViewController", "navigationController"]
 - ["CSo16UIViewController", "presentAlert"]
 - !private ["CSo16UIViewController", "presentViewController"]
+- !private ["CSo16UIViewController", "problemOwnerArray"]
 - !private ["CSo16UIViewController", "pushViewController"]
 - !private ["CSo16UIViewController", "refArray"]
 - !private ["CSo16UIViewController", "resultDetailArray"]

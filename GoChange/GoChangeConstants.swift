@@ -25,7 +25,7 @@ extension GoChangeClient{
         
         static var dynamicPetitionURL = ""
         
-        static var detailText:String = "Please enter details of the change you would like to see..."
+        static var detailText:String = "Please enter details of the problem you want solving..."
         
         static let blueFloat:CGFloat = 1/255 * 25
         static let redFloat:CGFloat = 1/255 * 253

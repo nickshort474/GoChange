@@ -29,7 +29,7 @@ class Solution:NSManagedObject{
     @NSManaged var haveVotedFor:String
     @NSManaged var solutionOwner:String
     @NSManaged var petitionURL:String
-    @NSManaged var solutionToChange:Change
+    @NSManaged var solutionToProblem:Problem
     
     
     

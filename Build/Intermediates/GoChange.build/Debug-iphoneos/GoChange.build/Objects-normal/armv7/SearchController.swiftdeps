@@ -6,52 +6,51 @@ provides-nominal:
 provides-member:
 - ["C8GoChange16SearchController", ""]
 provides-dynamic-lookup:
-- "useNameArray"
-- "createRefArray"
-- "returnedNameArray"
 - "useSolutionCountArray"
-- "checkIfInCoreData"
+- "returnedNameArray"
 - "countArray"
-- "useOwnerArray"
-- "returnedRefArray"
-- "searchText"
+- "useNameArray"
 - "matchedRefArray"
-- "refsNotInCoreData"
 - "checkResults"
 - "useDetailArray"
+- "searchText"
 - "matchedNameArray"
+- "returnedRefArray"
+- "useOwnerArray"
+- "refsNotInCoreData"
+- "checkIfInCoreData"
+- "createRefArray"
 depends-top-level:
-- !private "+="
-- !private "Array"
+- !private "RetrieveSolutionCountFirebase"
+- !private "RetrieveProblem"
 - "NSObject"
-- "Int"
-- !private "RetrieveDetailsFromFirebase"
-- "Void"
 - "String"
+- !private "..<"
+- !private "FDataSnapshot"
+- !private "RetrieveAllNamesFromFirebase"
+- !private "Array"
+- !private "+="
 - !private "=="
 - !private "UnicodeScalarType"
-- "StringLiteralType"
-- !private "..<"
+- !private "RetrieveDetailsFromFirebase"
+- "Void"
 - "SearchController"
-- !private "RetrieveAllNamesFromFirebase"
-- !private "FDataSnapshot"
-- !private "RetrieveNamesFromFirebase"
-- !private "!="
 - !private "Set"
-- !private "RetrieveChange"
-- !private "RetrieveSolutionCountFirebase"
+- !private "RetrieveNamesFromFirebase"
+- "StringLiteralType"
+- "Int"
+- !private "!="
 depends-member:
 - !private ["Ps9AnyObject", "Array"]
 - !private ["Ps9AnyObject", "RetrieveAllNamesFromFirebase"]
-- !private ["Ps9AnyObject", "RetrieveChange"]
 - !private ["Ps9AnyObject", "RetrieveDetailsFromFirebase"]
 - !private ["Ps9AnyObject", "RetrieveNamesFromFirebase"]
+- !private ["Ps9AnyObject", "RetrieveProblem"]
 - !private ["Ps9AnyObject", "RetrieveSolutionCountFirebase"]
 - !private ["Ps9AnyObject", "Set"]
 - !private ["Ps9AnyObject", "String"]
 - !private ["Ps9AnyObject", "allObjects"]
 - !private ["Ps9AnyObject", "capitalizedString"]
-- !private ["Ps9AnyObject", "changeID"]
 - ["Ps9AnyObject", "checkIfInCoreData"]
 - ["Ps9AnyObject", "checkResults"]
 - !private ["Ps9AnyObject", "children"]
@@ -62,6 +61,7 @@ depends-member:
 - !private ["Ps9AnyObject", "key"]
 - ["Ps9AnyObject", "matchedNameArray"]
 - ["Ps9AnyObject", "matchedRefArray"]
+- !private ["Ps9AnyObject", "problemID"]
 - !private ["Ps9AnyObject", "rangeOfString"]
 - ["Ps9AnyObject", "refsNotInCoreData"]
 - ["Ps9AnyObject", "returnedNameArray"]
@@ -110,16 +110,15 @@ depends-member:
 - !private ["Ps11CVarArgType", "Distance"]
 - !private ["Ps11CVarArgType", "IntegerLiteralType"]
 - !private ["Ps11CVarArgType", "RetrieveAllNamesFromFirebase"]
-- !private ["Ps11CVarArgType", "RetrieveChange"]
 - !private ["Ps11CVarArgType", "RetrieveDetailsFromFirebase"]
 - !private ["Ps11CVarArgType", "RetrieveNamesFromFirebase"]
+- !private ["Ps11CVarArgType", "RetrieveProblem"]
 - !private ["Ps11CVarArgType", "RetrieveSolutionCountFirebase"]
 - !private ["Ps11CVarArgType", "Set"]
 - !private ["Ps11CVarArgType", "String"]
 - !private ["Ps11CVarArgType", "_DisabledRangeIndex"]
 - !private ["Ps11CVarArgType", "allObjects"]
 - !private ["Ps11CVarArgType", "capitalizedString"]
-- !private ["Ps11CVarArgType", "changeID"]
 - ["Ps11CVarArgType", "checkIfInCoreData"]
 - ["Ps11CVarArgType", "checkResults"]
 - !private ["Ps11CVarArgType", "children"]
@@ -130,6 +129,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "key"]
 - ["Ps11CVarArgType", "matchedNameArray"]
 - ["Ps11CVarArgType", "matchedRefArray"]
+- !private ["Ps11CVarArgType", "problemID"]
 - !private ["Ps11CVarArgType", "rangeOfString"]
 - ["Ps11CVarArgType", "refsNotInCoreData"]
 - ["Ps11CVarArgType", "returnedNameArray"]
@@ -141,7 +141,6 @@ depends-member:
 - ["Ps11CVarArgType", "useSolutionCountArray"]
 - !private ["Ps11CVarArgType", "value"]
 - ["Ps11CVarArgType", ""]
-- !private ["C8GoChange6Change", "changeID"]
 - !private ["Vs9Character", "deinit"]
 - !private ["Ps14CollectionType", "Element"]
 - !private ["Ps14CollectionType", "Generator"]
@@ -165,9 +164,9 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "Generator"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "RetrieveAllNamesFromFirebase"]
-- !private ["Ps28CustomDebugStringConvertible", "RetrieveChange"]
 - !private ["Ps28CustomDebugStringConvertible", "RetrieveDetailsFromFirebase"]
 - !private ["Ps28CustomDebugStringConvertible", "RetrieveNamesFromFirebase"]
+- !private ["Ps28CustomDebugStringConvertible", "RetrieveProblem"]
 - !private ["Ps28CustomDebugStringConvertible", "RetrieveSolutionCountFirebase"]
 - !private ["Ps28CustomDebugStringConvertible", "Set"]
 - !private ["Ps28CustomDebugStringConvertible", "String"]
@@ -176,7 +175,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "allObjects"]
 - !private ["Ps28CustomDebugStringConvertible", "append"]
 - !private ["Ps28CustomDebugStringConvertible", "capitalizedString"]
-- !private ["Ps28CustomDebugStringConvertible", "changeID"]
 - ["Ps28CustomDebugStringConvertible", "checkIfInCoreData"]
 - ["Ps28CustomDebugStringConvertible", "checkResults"]
 - !private ["Ps28CustomDebugStringConvertible", "children"]
@@ -188,6 +186,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "key"]
 - ["Ps28CustomDebugStringConvertible", "matchedNameArray"]
 - ["Ps28CustomDebugStringConvertible", "matchedRefArray"]
+- !private ["Ps28CustomDebugStringConvertible", "problemID"]
 - !private ["Ps28CustomDebugStringConvertible", "rangeOfString"]
 - ["Ps28CustomDebugStringConvertible", "refsNotInCoreData"]
 - ["Ps28CustomDebugStringConvertible", "returnedNameArray"]
@@ -208,9 +207,9 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "Index"]
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["Ps23CustomStringConvertible", "RetrieveAllNamesFromFirebase"]
-- !private ["Ps23CustomStringConvertible", "RetrieveChange"]
 - !private ["Ps23CustomStringConvertible", "RetrieveDetailsFromFirebase"]
 - !private ["Ps23CustomStringConvertible", "RetrieveNamesFromFirebase"]
+- !private ["Ps23CustomStringConvertible", "RetrieveProblem"]
 - !private ["Ps23CustomStringConvertible", "RetrieveSolutionCountFirebase"]
 - !private ["Ps23CustomStringConvertible", "Set"]
 - !private ["Ps23CustomStringConvertible", "String"]
@@ -221,7 +220,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "allObjects"]
 - !private ["Ps23CustomStringConvertible", "append"]
 - !private ["Ps23CustomStringConvertible", "capitalizedString"]
-- !private ["Ps23CustomStringConvertible", "changeID"]
 - ["Ps23CustomStringConvertible", "checkIfInCoreData"]
 - ["Ps23CustomStringConvertible", "checkResults"]
 - !private ["Ps23CustomStringConvertible", "children"]
@@ -233,6 +231,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "key"]
 - ["Ps23CustomStringConvertible", "matchedNameArray"]
 - ["Ps23CustomStringConvertible", "matchedRefArray"]
+- !private ["Ps23CustomStringConvertible", "problemID"]
 - !private ["Ps23CustomStringConvertible", "rangeOfString"]
 - ["Ps23CustomStringConvertible", "refsNotInCoreData"]
 - ["Ps23CustomStringConvertible", "returnedNameArray"]
@@ -252,9 +251,9 @@ depends-member:
 - !private ["Ps9Equatable", "Generator"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "RetrieveAllNamesFromFirebase"]
-- !private ["Ps9Equatable", "RetrieveChange"]
 - !private ["Ps9Equatable", "RetrieveDetailsFromFirebase"]
 - !private ["Ps9Equatable", "RetrieveNamesFromFirebase"]
+- !private ["Ps9Equatable", "RetrieveProblem"]
 - !private ["Ps9Equatable", "RetrieveSolutionCountFirebase"]
 - !private ["Ps9Equatable", "Set"]
 - !private ["Ps9Equatable", "String"]
@@ -262,7 +261,6 @@ depends-member:
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "allObjects"]
 - !private ["Ps9Equatable", "capitalizedString"]
-- !private ["Ps9Equatable", "changeID"]
 - ["Ps9Equatable", "checkIfInCoreData"]
 - ["Ps9Equatable", "checkResults"]
 - !private ["Ps9Equatable", "children"]
@@ -273,6 +271,7 @@ depends-member:
 - !private ["Ps9Equatable", "key"]
 - ["Ps9Equatable", "matchedNameArray"]
 - ["Ps9Equatable", "matchedRefArray"]
+- !private ["Ps9Equatable", "problemID"]
 - !private ["Ps9Equatable", "rangeOfString"]
 - ["Ps9Equatable", "refsNotInCoreData"]
 - ["Ps9Equatable", "returnedNameArray"]
@@ -304,9 +303,9 @@ depends-member:
 - !private ["Ps8Hashable", "Generator"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "RetrieveAllNamesFromFirebase"]
-- !private ["Ps8Hashable", "RetrieveChange"]
 - !private ["Ps8Hashable", "RetrieveDetailsFromFirebase"]
 - !private ["Ps8Hashable", "RetrieveNamesFromFirebase"]
+- !private ["Ps8Hashable", "RetrieveProblem"]
 - !private ["Ps8Hashable", "RetrieveSolutionCountFirebase"]
 - !private ["Ps8Hashable", "Set"]
 - !private ["Ps8Hashable", "String"]
@@ -314,7 +313,6 @@ depends-member:
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "allObjects"]
 - !private ["Ps8Hashable", "capitalizedString"]
-- !private ["Ps8Hashable", "changeID"]
 - ["Ps8Hashable", "checkIfInCoreData"]
 - ["Ps8Hashable", "checkResults"]
 - !private ["Ps8Hashable", "children"]
@@ -325,6 +323,7 @@ depends-member:
 - !private ["Ps8Hashable", "key"]
 - ["Ps8Hashable", "matchedNameArray"]
 - ["Ps8Hashable", "matchedRefArray"]
+- !private ["Ps8Hashable", "problemID"]
 - !private ["Ps8Hashable", "rangeOfString"]
 - ["Ps8Hashable", "refsNotInCoreData"]
 - ["Ps8Hashable", "returnedNameArray"]
@@ -412,7 +411,7 @@ depends-member:
 - !private ["PSo9NSCopying", "rangeOfString"]
 - !private ["CSo12NSEnumerator", "allObjects"]
 - !private ["PSo17NSFastEnumeration", "allObjects"]
-- !private ["CSo15NSManagedObject", "changeID"]
+- !private ["CSo15NSManagedObject", "problemID"]
 - !private ["PSo16NSMutableCopying", "capitalizedString"]
 - !private ["PSo16NSMutableCopying", "componentsSeparatedByString"]
 - !private ["PSo16NSMutableCopying", "init"]
@@ -421,16 +420,15 @@ depends-member:
 - !private ["CSo8NSObject", "FDataSnapshot"]
 - ["CSo8NSObject", "Int"]
 - !private ["CSo8NSObject", "RetrieveAllNamesFromFirebase"]
-- !private ["CSo8NSObject", "RetrieveChange"]
 - !private ["CSo8NSObject", "RetrieveDetailsFromFirebase"]
 - !private ["CSo8NSObject", "RetrieveNamesFromFirebase"]
+- !private ["CSo8NSObject", "RetrieveProblem"]
 - !private ["CSo8NSObject", "RetrieveSolutionCountFirebase"]
 - !private ["CSo8NSObject", "Set"]
 - ["CSo8NSObject", "String"]
 - ["CSo8NSObject", "Void"]
 - !private ["CSo8NSObject", "allObjects"]
 - !private ["CSo8NSObject", "capitalizedString"]
-- !private ["CSo8NSObject", "changeID"]
 - ["CSo8NSObject", "checkIfInCoreData"]
 - ["CSo8NSObject", "checkResults"]
 - !private ["CSo8NSObject", "children"]
@@ -441,6 +439,7 @@ depends-member:
 - !private ["CSo8NSObject", "key"]
 - ["CSo8NSObject", "matchedNameArray"]
 - ["CSo8NSObject", "matchedRefArray"]
+- !private ["CSo8NSObject", "problemID"]
 - !private ["CSo8NSObject", "rangeOfString"]
 - ["CSo8NSObject", "refsNotInCoreData"]
 - ["CSo8NSObject", "returnedNameArray"]
@@ -454,15 +453,14 @@ depends-member:
 - ["CSo8NSObject", ""]
 - !private ["PSo16NSObjectProtocol", "Array"]
 - !private ["PSo16NSObjectProtocol", "RetrieveAllNamesFromFirebase"]
-- !private ["PSo16NSObjectProtocol", "RetrieveChange"]
 - !private ["PSo16NSObjectProtocol", "RetrieveDetailsFromFirebase"]
 - !private ["PSo16NSObjectProtocol", "RetrieveNamesFromFirebase"]
+- !private ["PSo16NSObjectProtocol", "RetrieveProblem"]
 - !private ["PSo16NSObjectProtocol", "RetrieveSolutionCountFirebase"]
 - !private ["PSo16NSObjectProtocol", "Set"]
 - !private ["PSo16NSObjectProtocol", "String"]
 - !private ["PSo16NSObjectProtocol", "allObjects"]
 - !private ["PSo16NSObjectProtocol", "capitalizedString"]
-- !private ["PSo16NSObjectProtocol", "changeID"]
 - ["PSo16NSObjectProtocol", "checkIfInCoreData"]
 - ["PSo16NSObjectProtocol", "checkResults"]
 - !private ["PSo16NSObjectProtocol", "children"]
@@ -473,6 +471,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "key"]
 - ["PSo16NSObjectProtocol", "matchedNameArray"]
 - ["PSo16NSObjectProtocol", "matchedRefArray"]
+- !private ["PSo16NSObjectProtocol", "problemID"]
 - !private ["PSo16NSObjectProtocol", "rangeOfString"]
 - ["PSo16NSObjectProtocol", "refsNotInCoreData"]
 - ["PSo16NSObjectProtocol", "returnedNameArray"]
@@ -497,6 +496,7 @@ depends-member:
 - !private ["Ps16OutputStreamType", "componentsSeparatedByString"]
 - !private ["Ps16OutputStreamType", "init"]
 - !private ["Ps16OutputStreamType", "rangeOfString"]
+- !private ["C8GoChange7Problem", "problemID"]
 - !private ["Ps21RandomAccessIndexType", "Distance"]
 - !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
 - !private ["Ps21RandomAccessIndexType", "_DisabledRangeIndex"]
@@ -512,17 +512,17 @@ depends-member:
 - !private ["Ps30RangeReplaceableCollectionType", "init"]
 - !private ["Ps30RangeReplaceableCollectionType", "subscript"]
 - !private ["C8GoChange28RetrieveAllNamesFromFirebase", "init"]
-- !private ["C8GoChange14RetrieveChange", "init"]
 - !private ["C8GoChange27RetrieveDetailsFromFirebase", "init"]
 - !private ["C8GoChange25RetrieveNamesFromFirebase", "init"]
+- !private ["C8GoChange15RetrieveProblem", "init"]
 - !private ["C8GoChange29RetrieveSolutionCountFirebase", "init"]
 - !private ["C8GoChange16SearchController", "Array"]
 - !private ["C8GoChange16SearchController", "FDataSnapshot"]
 - ["C8GoChange16SearchController", "Int"]
 - !private ["C8GoChange16SearchController", "RetrieveAllNamesFromFirebase"]
-- !private ["C8GoChange16SearchController", "RetrieveChange"]
 - !private ["C8GoChange16SearchController", "RetrieveDetailsFromFirebase"]
 - !private ["C8GoChange16SearchController", "RetrieveNamesFromFirebase"]
+- !private ["C8GoChange16SearchController", "RetrieveProblem"]
 - !private ["C8GoChange16SearchController", "RetrieveSolutionCountFirebase"]
 - !private ["C8GoChange16SearchController", "Set"]
 - ["C8GoChange16SearchController", "String"]
@@ -698,7 +698,6 @@ depends-nominal:
 - !private "Ps25BooleanLiteralConvertible"
 - !private "Ps11BooleanType"
 - "Ps11CVarArgType"
-- !private "C8GoChange6Change"
 - !private "Vs9Character"
 - !private "Ps14CollectionType"
 - !private "Ps10Comparable"
@@ -741,14 +740,15 @@ depends-nominal:
 - !private "CSo8NSString"
 - !private "Sq"
 - !private "Ps16OutputStreamType"
+- !private "C8GoChange7Problem"
 - !private "Ps21RandomAccessIndexType"
 - !private "Vs5Range"
 - !private "Vs14RangeGenerator"
 - !private "Ps30RangeReplaceableCollectionType"
 - !private "C8GoChange28RetrieveAllNamesFromFirebase"
-- !private "C8GoChange14RetrieveChange"
 - !private "C8GoChange27RetrieveDetailsFromFirebase"
 - !private "C8GoChange25RetrieveNamesFromFirebase"
+- !private "C8GoChange15RetrieveProblem"
 - !private "C8GoChange29RetrieveSolutionCountFirebase"
 - "C8GoChange16SearchController"
 - !private "Ps12SequenceType"

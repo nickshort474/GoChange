@@ -18,8 +18,8 @@ class ResultsViewController: UIViewController,UITableViewDelegate {
     var resultSolutionCountArray:[Int] = []
     
     
-    //TODO: Display owner of change somewhere
-    var changeOwnerArray:[String] = []
+    //TODO: Display owner of problem somewhere
+    var problemOwnerArray:[String] = []
     
     
     override func viewDidLoad() {
@@ -48,11 +48,11 @@ class ResultsViewController: UIViewController,UITableViewDelegate {
         let cellID = "resultCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath)
         
-        let changeName:String = self.resultNameArray[indexPath.row] 
+        let problemName:String = self.resultNameArray[indexPath.row]
         let solutionCount:String = String(self.resultSolutionCountArray[indexPath.row])
         
-        cell.textLabel!.text = changeName
-        cell.detailTextLabel!.text = solutionCount
+        cell.textLabel!.text = problemName
+        cell.detailTextLabel!.text = "\(solutionCount) solutions"
         
         return cell
         
@@ -60,14 +60,14 @@ class ResultsViewController: UIViewController,UITableViewDelegate {
     
    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
                 
-        var controller:ViewResultChangeViewController
-        controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewResultChangeViewController") as! ViewResultChangeViewController
+        var controller:ViewResultViewController
+        controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewResultViewController") as! ViewResultViewController
         let navigationController = self.navigationController
         
-        controller.changeName = self.resultNameArray[indexPath.row]
-        controller.changeDetail = self.resultDetailArray[indexPath.row]
-        controller.changeID = self.refArray[indexPath.row]
-        controller.owner = self.changeOwnerArray[indexPath.row]
+        controller.problemName = self.resultNameArray[indexPath.row]
+        controller.problemDetail = self.resultDetailArray[indexPath.row]
+        controller.problemID = self.refArray[indexPath.row]
+        controller.owner = self.problemOwnerArray[indexPath.row]
     
     
         navigationController?.pushViewController(controller,animated: true)

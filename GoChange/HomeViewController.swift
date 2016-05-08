@@ -23,7 +23,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-        ref = Firebase(url:"https://GoChange.firebaseio.com")
+        ref = Firebase(url:"https://gochange.firebaseio.com")
         
         let currentUserName = NSUserDefaults.standardUserDefaults().valueForKey("username") as! String
         
@@ -51,11 +51,11 @@ class HomeViewController: UIViewController {
     }()
     
     
-    @IBAction func createChange(sender: UIButton) {
+    @IBAction func createProblem(sender: UIButton) {
         
         var controller:UINavigationController
         
-        controller = self.storyboard?.instantiateViewControllerWithIdentifier("createChangeNavController") as! UINavigationController
+        controller = self.storyboard?.instantiateViewControllerWithIdentifier("createProblemNavController") as! UINavigationController
         
         
         self.presentViewController(controller, animated: true, completion: nil)
@@ -75,19 +75,19 @@ class HomeViewController: UIViewController {
     
     func checkCoreData(){
         
-        let request = NSFetchRequest(entityName: "Change")
+        let request = NSFetchRequest(entityName: "Problem")
         
         var results:[AnyObject]?
         
         do{
-            results = try sharedContext.executeFetchRequest(request) as! [Change]
+            results = try sharedContext.executeFetchRequest(request) as! [Problem]
         }catch{
             //TODO: catch error
             print("error fetching")
         }
         
-        let changeCount = results?.count
-        let countText = String(changeCount!)
+        let problemCount = results?.count
+        let countText = String(problemCount!)
         
         
         if countText != "0"{

@@ -19,7 +19,7 @@ class FollowingViewController: UITableViewController,
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // load all core data saved changes
+        // load all core data saved problems
         do{
             try fetchedResultsController.performFetch()
         }catch{
@@ -57,7 +57,7 @@ class FollowingViewController: UITableViewController,
     
     lazy var fetchedResultsController:NSFetchedResultsController = {
        
-        var fetchRequest = NSFetchRequest(entityName: "Change")
+        var fetchRequest = NSFetchRequest(entityName: "Problem")
         fetchRequest.sortDescriptors = []
         
         var fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.sharedContext, sectionNameKeyPath: nil, cacheName: nil)
@@ -87,9 +87,9 @@ class FollowingViewController: UITableViewController,
         
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         
-        let object = fetchedResultsController.objectAtIndexPath(indexPath) as! Change
+        let object = fetchedResultsController.objectAtIndexPath(indexPath) as! Problem
         
-        cell.textLabel?.text = object.changeName
+        cell.textLabel?.text = object.problemName
         cell.detailTextLabel!.text = "Solutions:\(String(object.solutionCount))"
         
         return cell
@@ -98,16 +98,16 @@ class FollowingViewController: UITableViewController,
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        var controller:ViewFollowingChangeViewController
+        var controller:ViewFollowingViewController
         
-        controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewFollowingChangeViewController") as! ViewFollowingChangeViewController
+        controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewFollowingViewController") as! ViewFollowingViewController
         
         let navigationController = self.navigationController
         
         //controller.sendingController = "following"
         
         
-        controller.changeClicked = fetchedResultsController.objectAtIndexPath(indexPath) as! Change
+        controller.problemClicked = fetchedResultsController.objectAtIndexPath(indexPath) as! Problem
         controller.sendingController = "Following"
         
         navigationController?.pushViewController(controller,animated: true)

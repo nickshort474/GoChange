@@ -8,25 +8,25 @@ provides-member:
 - ["C8GoChange8Solution", ""]
 - ["VC8GoChange8Solution4Keys", ""]
 provides-dynamic-lookup:
-- "solutionToChange"
-- "voteCount"
-- "petitionURL"
-- "solutionName"
-- "solutionDescription"
-- "haveVotedFor"
-- "solutionID"
 - "solutionOwner"
+- "petitionURL"
+- "haveVotedFor"
+- "solutionDescription"
+- "solutionName"
+- "solutionID"
+- "solutionToProblem"
+- "voteCount"
 depends-top-level:
-- "NSManagedObjectContext"
-- "NSNumber"
-- "Solution"
-- "Change"
-- "AnyObject"
-- "NSManagedObject"
-- "NSEntityDescription"
-- "String"
+- "Problem"
 - !private "Int"
+- "NSManagedObjectContext"
+- "String"
+- "Solution"
 - "StringLiteralType"
+- "NSManagedObject"
+- "NSNumber"
+- "AnyObject"
+- "NSEntityDescription"
 depends-member:
 - !private ["Ps9AnyObject", "Keys"]
 - !private ["Ps9AnyObject", "NSEntityDescription"]
@@ -39,7 +39,7 @@ depends-member:
 - ["Ps9AnyObject", "solutionID"]
 - ["Ps9AnyObject", "solutionName"]
 - ["Ps9AnyObject", "solutionOwner"]
-- ["Ps9AnyObject", "solutionToChange"]
+- ["Ps9AnyObject", "solutionToProblem"]
 - ["Ps9AnyObject", "voteCount"]
 - ["Ps9AnyObject", ""]
 - !private ["Ps11CVarArgType", "Keys"]
@@ -53,7 +53,7 @@ depends-member:
 - ["Ps11CVarArgType", "solutionID"]
 - ["Ps11CVarArgType", "solutionName"]
 - ["Ps11CVarArgType", "solutionOwner"]
-- ["Ps11CVarArgType", "solutionToChange"]
+- ["Ps11CVarArgType", "solutionToProblem"]
 - ["Ps11CVarArgType", "voteCount"]
 - ["Ps11CVarArgType", ""]
 - !private ["Ps14CollectionType", "Generator"]
@@ -73,7 +73,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "solutionID"]
 - ["Ps28CustomDebugStringConvertible", "solutionName"]
 - ["Ps28CustomDebugStringConvertible", "solutionOwner"]
-- ["Ps28CustomDebugStringConvertible", "solutionToChange"]
+- ["Ps28CustomDebugStringConvertible", "solutionToProblem"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
 - ["Ps28CustomDebugStringConvertible", "voteCount"]
 - ["Ps28CustomDebugStringConvertible", ""]
@@ -89,7 +89,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "solutionID"]
 - ["Ps23CustomStringConvertible", "solutionName"]
 - ["Ps23CustomStringConvertible", "solutionOwner"]
-- ["Ps23CustomStringConvertible", "solutionToChange"]
+- ["Ps23CustomStringConvertible", "solutionToProblem"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
 - ["Ps23CustomStringConvertible", "voteCount"]
 - ["Ps23CustomStringConvertible", ""]
@@ -109,7 +109,7 @@ depends-member:
 - ["Ps9Equatable", "solutionID"]
 - ["Ps9Equatable", "solutionName"]
 - ["Ps9Equatable", "solutionOwner"]
-- ["Ps9Equatable", "solutionToChange"]
+- ["Ps9Equatable", "solutionToProblem"]
 - ["Ps9Equatable", "voteCount"]
 - ["Ps9Equatable", ""]
 - !private ["Ps13GeneratorType", "Element"]
@@ -124,7 +124,7 @@ depends-member:
 - ["Ps8Hashable", "solutionID"]
 - ["Ps8Hashable", "solutionName"]
 - ["Ps8Hashable", "solutionOwner"]
-- ["Ps8Hashable", "solutionToChange"]
+- ["Ps8Hashable", "solutionToProblem"]
 - ["Ps8Hashable", "voteCount"]
 - ["Ps8Hashable", ""]
 - !private ["Ps9Indexable", "Generator"]
@@ -146,12 +146,12 @@ depends-member:
 - !private ["CSo19NSEntityDescription", "entityForName"]
 - !private ["PSo17NSFastEnumeration", "entityForName"]
 - ["CSo15NSManagedObject", "AnyObject"]
-- ["CSo15NSManagedObject", "Change"]
 - !private ["CSo15NSManagedObject", "Int"]
 - !private ["CSo15NSManagedObject", "Keys"]
 - ["CSo15NSManagedObject", "NSEntityDescription"]
 - ["CSo15NSManagedObject", "NSManagedObjectContext"]
 - ["CSo15NSManagedObject", "NSNumber"]
+- ["CSo15NSManagedObject", "Problem"]
 - !private ["CSo15NSManagedObject", "Solution"]
 - ["CSo15NSManagedObject", "String"]
 - ["CSo15NSManagedObject", "haveVotedFor"]
@@ -161,16 +161,16 @@ depends-member:
 - ["CSo15NSManagedObject", "solutionID"]
 - ["CSo15NSManagedObject", "solutionName"]
 - ["CSo15NSManagedObject", "solutionOwner"]
-- ["CSo15NSManagedObject", "solutionToChange"]
+- ["CSo15NSManagedObject", "solutionToProblem"]
 - ["CSo15NSManagedObject", "voteCount"]
 - ["CSo15NSManagedObject", ""]
 - ["CSo8NSObject", "AnyObject"]
-- ["CSo8NSObject", "Change"]
 - !private ["CSo8NSObject", "Int"]
 - !private ["CSo8NSObject", "Keys"]
 - ["CSo8NSObject", "NSEntityDescription"]
 - ["CSo8NSObject", "NSManagedObjectContext"]
 - ["CSo8NSObject", "NSNumber"]
+- ["CSo8NSObject", "Problem"]
 - !private ["CSo8NSObject", "Solution"]
 - ["CSo8NSObject", "String"]
 - !private ["CSo8NSObject", "entityForName"]
@@ -181,7 +181,7 @@ depends-member:
 - ["CSo8NSObject", "solutionID"]
 - ["CSo8NSObject", "solutionName"]
 - ["CSo8NSObject", "solutionOwner"]
-- ["CSo8NSObject", "solutionToChange"]
+- ["CSo8NSObject", "solutionToProblem"]
 - ["CSo8NSObject", "voteCount"]
 - !private ["PSo16NSObjectProtocol", "Keys"]
 - !private ["PSo16NSObjectProtocol", "NSEntityDescription"]
@@ -194,7 +194,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "solutionID"]
 - ["PSo16NSObjectProtocol", "solutionName"]
 - ["PSo16NSObjectProtocol", "solutionOwner"]
-- ["PSo16NSObjectProtocol", "solutionToChange"]
+- ["PSo16NSObjectProtocol", "solutionToProblem"]
 - ["PSo16NSObjectProtocol", "voteCount"]
 - ["PSo16NSObjectProtocol", ""]
 - !private ["Sq", "deinit"]
@@ -209,12 +209,12 @@ depends-member:
 - !private ["Vs5Slice", "SubSequence"]
 - !private ["Vs5Slice", "_Element"]
 - ["C8GoChange8Solution", "AnyObject"]
-- ["C8GoChange8Solution", "Change"]
 - !private ["C8GoChange8Solution", "Int"]
 - ["C8GoChange8Solution", "Keys"]
 - ["C8GoChange8Solution", "NSEntityDescription"]
 - ["C8GoChange8Solution", "NSManagedObjectContext"]
 - ["C8GoChange8Solution", "NSNumber"]
+- ["C8GoChange8Solution", "Problem"]
 - !private ["C8GoChange8Solution", "Solution"]
 - ["C8GoChange8Solution", "String"]
 - ["C8GoChange8Solution", "deinit"]
@@ -225,7 +225,7 @@ depends-member:
 - ["C8GoChange8Solution", "solutionID"]
 - ["C8GoChange8Solution", "solutionName"]
 - ["C8GoChange8Solution", "solutionOwner"]
-- ["C8GoChange8Solution", "solutionToChange"]
+- ["C8GoChange8Solution", "solutionToProblem"]
 - ["C8GoChange8Solution", "voteCount"]
 - !private ["Ps21_ObjectiveCBridgeable", "Index"]
 - !private ["Ps21_ObjectiveCBridgeable", "subscript"]
@@ -282,4 +282,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "c5650c66d0ba6150eb85b4c14a2901b7"
+interface-hash: "1c3443b5f1a5460b8cfad4c23c23b4a1"

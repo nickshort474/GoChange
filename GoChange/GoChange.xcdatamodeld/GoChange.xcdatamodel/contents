@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
-    <entity name="Change" representedClassName=".Change" syncable="YES">
-        <attribute name="changeDescription" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="changeID" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="changeName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="changeOwner" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="Problem" representedClassName=".Problem" syncable="YES">
+        <attribute name="problemDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="problemID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="problemName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="problemOwner" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="solutionCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <relationship name="changeNeedingSolution" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Solution" inverseName="solutionToChange" inverseEntity="Solution" syncable="YES"/>
+        <relationship name="problemNeedingSolution" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Solution" inverseName="solutionToProblem" inverseEntity="Solution" syncable="YES"/>
     </entity>
     <entity name="Solution" representedClassName=".Solution" syncable="YES">
         <attribute name="haveVotedFor" optional="YES" attributeType="String" syncable="YES"/>
@@ -16,10 +16,10 @@
         <attribute name="solutionName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="solutionOwner" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="voteCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <relationship name="solutionToChange" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Change" inverseName="changeNeedingSolution" inverseEntity="Change" syncable="YES"/>
+        <relationship name="solutionToProblem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Problem" inverseName="problemNeedingSolution" inverseEntity="Problem" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Change" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="Problem" positionX="-63" positionY="-18" width="128" height="135"/>
         <element name="Solution" positionX="-63" positionY="9" width="128" height="165"/>
     </elements>
 </model>

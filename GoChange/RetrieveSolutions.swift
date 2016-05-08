@@ -12,20 +12,20 @@ import CoreData
 class RetrieveSolutions:NSObject{
     
     
-    init(change:Change,completionHandler:(result:AnyObject)-> Void){
+    init(problem:Problem,completionHandler:(result:AnyObject)-> Void){
         super.init()
         
         
         // empty TempArrays ready to be populate with new data
-        TempChange.sharedInstance().solutionNameArray = []
-        TempChange.sharedInstance().solutionDetailArray = []
-        TempChange.sharedInstance().solutionVoteArray = []
-        TempChange.sharedInstance().solutionIDArray = []
-        TempChange.sharedInstance().solutionOwnerArray = []
-        TempChange.sharedInstance().petitionURLArray = []
+        TempSave.sharedInstance().solutionNameArray = []
+        TempSave.sharedInstance().solutionDetailArray = []
+        TempSave.sharedInstance().solutionVoteArray = []
+        TempSave.sharedInstance().solutionIDArray = []
+        TempSave.sharedInstance().solutionOwnerArray = []
+        TempSave.sharedInstance().petitionURLArray = []
         
         let request = NSFetchRequest(entityName: "Solution")
-        let predicate = NSPredicate(format: "solutionToChange == %@", change)
+        let predicate = NSPredicate(format: "solutionToProblem == %@", problem)
         request.predicate = predicate
         
         do{
@@ -35,12 +35,12 @@ class RetrieveSolutions:NSObject{
             //assign results from coreData return to temp array then use TempArray for table
             for solution in results{
                 
-                TempChange.sharedInstance().solutionNameArray.append(solution.solutionName)
-                TempChange.sharedInstance().solutionDetailArray.append(solution.solutionDescription)
-                TempChange.sharedInstance().solutionVoteArray.append(solution.voteCount as Int)
-                TempChange.sharedInstance().solutionIDArray.append(solution.solutionID)
-                TempChange.sharedInstance().solutionOwnerArray.append(solution.solutionOwner)
-                TempChange.sharedInstance().petitionURLArray.append(solution.petitionURL)
+                TempSave.sharedInstance().solutionNameArray.append(solution.solutionName)
+                TempSave.sharedInstance().solutionDetailArray.append(solution.solutionDescription)
+                TempSave.sharedInstance().solutionVoteArray.append(solution.voteCount as Int)
+                TempSave.sharedInstance().solutionIDArray.append(solution.solutionID)
+                TempSave.sharedInstance().solutionOwnerArray.append(solution.solutionOwner)
+                TempSave.sharedInstance().petitionURLArray.append(solution.petitionURL)
             }
             
             completionHandler(result:results)

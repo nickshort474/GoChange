@@ -13,14 +13,14 @@ import CoreData
 class UpdateCoreDataSolutions:NSObject{
     
     
-    var existingChange:Change!
+    var existingProblem:Problem!
     var haveVotedArray:NSMutableArray = []
     
     
-    init(change:Change){
+    init(problem:Problem){
         super.init()
         
-        existingChange = change
+        existingProblem = problem
         createCoreDataSolutions()
         
         
@@ -33,44 +33,22 @@ class UpdateCoreDataSolutions:NSObject{
     
     func createCoreDataSolutions(){
         
-        /*
-        //clear core data of all existing solution ready for new set to be added
-        let predicate = NSPredicate(format: "solutionToChange == %@", existingChange!)
-        let fetchRequest = NSFetchRequest(entityName: "Solution")
-        fetchRequest.predicate = predicate
         
-        do{
-            let fetchEntities = try self.sharedContext.executeFetchRequest(fetchRequest) as! [Solution]
-            
-            for entity in fetchEntities{
-                
-                //TODO: get current state of coreData haveVoted before delete, needs to be added to an array, link to names/details so can assign to correct entity / need to assign newly added solutions with haveVoted = no.
-                haveVotedArray.addObject(entity.haveVotedFor)
-                
-                self.sharedContext.deleteObject(entity)
-            }
-            
-        }catch{
-            //TODO: deal with errors
-        }
-        */
-        
-        
-        for i in 0 ..< TempChange.sharedInstance().solutionNameArray.count{
+        for i in 0 ..< TempSave.sharedInstance().solutionNameArray.count{
             
             var solutionDictionary:[String:AnyObject] = [String:AnyObject]()
         
-            solutionDictionary[Solution.Keys.solutionName] = TempChange.sharedInstance().solutionNameArray[i]
-            solutionDictionary[Solution.Keys.solutionDescription] = TempChange.sharedInstance().solutionDetailArray[i]
-            solutionDictionary[Solution.Keys.voteCount] = TempChange.sharedInstance().solutionVoteArray[i]
-            solutionDictionary[Solution.Keys.solutionID] = TempChange.sharedInstance().solutionIDArray[i]
+            solutionDictionary[Solution.Keys.solutionName] = TempSave.sharedInstance().solutionNameArray[i]
+            solutionDictionary[Solution.Keys.solutionDescription] = TempSave.sharedInstance().solutionDetailArray[i]
+            solutionDictionary[Solution.Keys.voteCount] = TempSave.sharedInstance().solutionVoteArray[i]
+            solutionDictionary[Solution.Keys.solutionID] = TempSave.sharedInstance().solutionIDArray[i]
             solutionDictionary[Solution.Keys.haveVotedFor] = "no"
-            solutionDictionary[Solution.Keys.solutionOwner] = TempChange.sharedInstance().solutionOwnerArray[i]
-            solutionDictionary[Solution.Keys.petitionURL] = TempChange.sharedInstance().petitionURLArray[i]
+            solutionDictionary[Solution.Keys.solutionOwner] = TempSave.sharedInstance().solutionOwnerArray[i]
+            solutionDictionary[Solution.Keys.petitionURL] = TempSave.sharedInstance().petitionURLArray[i]
             
             
             let newSolution = Solution(dictionary: solutionDictionary,context: sharedContext)
-            newSolution.solutionToChange = existingChange!
+            newSolution.solutionToProblem  = existingProblem!
        
         }
         

@@ -14,15 +14,15 @@ import Firebase
 class VoteForSolution:NSObject{
     
     
-    var changeID:String!
+    var problemID:String!
     var solutionID:String!
     var currentVoteCount:Int = 0
     
-    init(changeID:String,solutionID:String,completionHandler:(result:AnyObject)->Void){
+    init(problemID:String,solutionID:String,completionHandler:(result:AnyObject)->Void){
         super.init()
         
         
-        self.changeID = changeID
+        self.problemID = problemID
         self.solutionID = solutionID
         
         addVoteToCoreData()
@@ -46,7 +46,7 @@ class VoteForSolution:NSObject{
         let fetchRequest = NSFetchRequest(entityName: "Solution")
         fetchRequest.predicate = predicate
         
-        //let predicate = NSPredicate(format: "solutionToChange == %@", change)
+        
  
         do{
             let fetchEntities = try self.sharedContext.executeFetchRequest(fetchRequest) as! [Solution]
@@ -77,8 +77,8 @@ class VoteForSolution:NSObject{
     func addVoteToFirebase(){
         
         
-        let ref = Firebase(url: "https://gochange.firebaseio.com/change/solutions")
-        let childRef = ref.childByAppendingPath(changeID).childByAppendingPath(solutionID)
+        let ref = Firebase(url: "https://gochange.firebaseio.com/problem/solutions")
+        let childRef = ref.childByAppendingPath(problemID).childByAppendingPath(solutionID)
         
         
         childRef.observeSingleEventOfType(.Value, withBlock:{snapshot in

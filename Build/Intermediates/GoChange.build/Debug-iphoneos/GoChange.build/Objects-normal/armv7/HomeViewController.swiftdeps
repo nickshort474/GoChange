@@ -6,41 +6,41 @@ provides-nominal:
 provides-member:
 - ["C8GoChange18HomeViewController", ""]
 provides-dynamic-lookup:
-- "ref"
-- "logout"
-- "followingLabel"
+- "checkCoreData"
+- "didReceiveMemoryWarning"
+- "createProblem"
+- "followButton"
+- "welcomeLabel"
 - "viewDidLoad"
 - "viewWillAppear"
+- "ref"
 - "sharedContext"
+- "logout"
 - "addUserData"
-- "followButton"
-- "didReceiveMemoryWarning"
-- "welcomeLabel"
-- "createChange"
-- "checkCoreData"
+- "followingLabel"
 depends-top-level:
-- !private "UIBarButtonItem"
+- !private "print"
+- "HomeViewController"
+- !private "UpdateUserInfoController"
+- !private "NSUserDefaults"
+- !private "String"
+- !private "NSFetchRequest"
 - "UIViewController"
+- !private "CoreDataStackManager"
+- !private "BooleanLiteralType"
+- !private "UINavigationController"
+- !private "Problem"
+- !private "UIBarButtonItem"
+- "NSManagedObjectContext"
+- "Bool"
 - "UILabel"
 - !private "!="
-- !private "Change"
-- !private "String"
-- "Bool"
-- !private "NSFetchRequest"
 - !private "StringLiteralType"
-- !private "UnicodeScalarType"
-- !private "print"
-- "Firebase"
-- "HomeViewController"
-- !private "UINavigationController"
-- "NSManagedObjectContext"
-- !private "NSUserDefaults"
-- "UIButton"
-- !private "BooleanLiteralType"
-- !private "UpdateUserInfoController"
 - !private "UIBarButtonItemStyle"
-- !private "CoreDataStackManager"
 - !private "AnyObject"
+- "UIButton"
+- !private "UnicodeScalarType"
+- "Firebase"
 depends-member:
 - !private ["Ps9AnyObject", "CoreDataStackManager"]
 - !private ["Ps9AnyObject", "Firebase"]
@@ -52,7 +52,7 @@ depends-member:
 - ["Ps9AnyObject", "addUserData"]
 - !private ["Ps9AnyObject", "backBarButtonItem"]
 - ["Ps9AnyObject", "checkCoreData"]
-- ["Ps9AnyObject", "createChange"]
+- ["Ps9AnyObject", "createProblem"]
 - ["Ps9AnyObject", "didReceiveMemoryWarning"]
 - !private ["Ps9AnyObject", "dismissViewControllerAnimated"]
 - !private ["Ps9AnyObject", "executeFetchRequest"]
@@ -111,7 +111,7 @@ depends-member:
 - ["Ps11CVarArgType", "addUserData"]
 - !private ["Ps11CVarArgType", "backBarButtonItem"]
 - ["Ps11CVarArgType", "checkCoreData"]
-- ["Ps11CVarArgType", "createChange"]
+- ["Ps11CVarArgType", "createProblem"]
 - ["Ps11CVarArgType", "didReceiveMemoryWarning"]
 - !private ["Ps11CVarArgType", "dismissViewControllerAnimated"]
 - !private ["Ps11CVarArgType", "executeFetchRequest"]
@@ -161,7 +161,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "backBarButtonItem"]
 - ["Ps28CustomDebugStringConvertible", "checkCoreData"]
 - !private ["Ps28CustomDebugStringConvertible", "count"]
-- ["Ps28CustomDebugStringConvertible", "createChange"]
+- ["Ps28CustomDebugStringConvertible", "createProblem"]
 - ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
 - !private ["Ps28CustomDebugStringConvertible", "dismissViewControllerAnimated"]
 - !private ["Ps28CustomDebugStringConvertible", "executeFetchRequest"]
@@ -204,7 +204,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "backBarButtonItem"]
 - ["Ps23CustomStringConvertible", "checkCoreData"]
 - !private ["Ps23CustomStringConvertible", "count"]
-- ["Ps23CustomStringConvertible", "createChange"]
+- ["Ps23CustomStringConvertible", "createProblem"]
 - ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
 - !private ["Ps23CustomStringConvertible", "dismissViewControllerAnimated"]
 - !private ["Ps23CustomStringConvertible", "executeFetchRequest"]
@@ -245,7 +245,7 @@ depends-member:
 - ["Ps9Equatable", "addUserData"]
 - !private ["Ps9Equatable", "backBarButtonItem"]
 - ["Ps9Equatable", "checkCoreData"]
-- ["Ps9Equatable", "createChange"]
+- ["Ps9Equatable", "createProblem"]
 - ["Ps9Equatable", "didReceiveMemoryWarning"]
 - !private ["Ps9Equatable", "dismissViewControllerAnimated"]
 - !private ["Ps9Equatable", "executeFetchRequest"]
@@ -293,7 +293,7 @@ depends-member:
 - ["Ps8Hashable", "addUserData"]
 - !private ["Ps8Hashable", "backBarButtonItem"]
 - ["Ps8Hashable", "checkCoreData"]
-- ["Ps8Hashable", "createChange"]
+- ["Ps8Hashable", "createProblem"]
 - ["Ps8Hashable", "didReceiveMemoryWarning"]
 - !private ["Ps8Hashable", "dismissViewControllerAnimated"]
 - !private ["Ps8Hashable", "executeFetchRequest"]
@@ -321,12 +321,12 @@ depends-member:
 - ["Ps8Hashable", ""]
 - !private ["C8GoChange18HomeViewController", "AnyObject"]
 - ["C8GoChange18HomeViewController", "Bool"]
-- !private ["C8GoChange18HomeViewController", "Change"]
 - !private ["C8GoChange18HomeViewController", "CoreDataStackManager"]
 - ["C8GoChange18HomeViewController", "Firebase"]
 - !private ["C8GoChange18HomeViewController", "NSFetchRequest"]
 - ["C8GoChange18HomeViewController", "NSManagedObjectContext"]
 - !private ["C8GoChange18HomeViewController", "NSUserDefaults"]
+- !private ["C8GoChange18HomeViewController", "Problem"]
 - !private ["C8GoChange18HomeViewController", "String"]
 - !private ["C8GoChange18HomeViewController", "UIBarButtonItem"]
 - !private ["C8GoChange18HomeViewController", "UIBarButtonItemStyle"]
@@ -336,7 +336,7 @@ depends-member:
 - !private ["C8GoChange18HomeViewController", "UpdateUserInfoController"]
 - ["C8GoChange18HomeViewController", "addUserData"]
 - ["C8GoChange18HomeViewController", "checkCoreData"]
-- ["C8GoChange18HomeViewController", "createChange"]
+- ["C8GoChange18HomeViewController", "createProblem"]
 - ["C8GoChange18HomeViewController", "deinit"]
 - ["C8GoChange18HomeViewController", "didReceiveMemoryWarning"]
 - !private ["C8GoChange18HomeViewController", "dismissViewControllerAnimated"]
@@ -397,7 +397,7 @@ depends-member:
 - ["PSo8NSCoding", "addUserData"]
 - !private ["PSo8NSCoding", "backBarButtonItem"]
 - ["PSo8NSCoding", "checkCoreData"]
-- ["PSo8NSCoding", "createChange"]
+- ["PSo8NSCoding", "createProblem"]
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
 - !private ["PSo8NSCoding", "dismissViewControllerAnimated"]
 - !private ["PSo8NSCoding", "executeFetchRequest"]
@@ -428,7 +428,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "UIBarButtonItemStyle"]
 - ["PSo26NSExtensionRequestHandling", "addUserData"]
 - ["PSo26NSExtensionRequestHandling", "checkCoreData"]
-- ["PSo26NSExtensionRequestHandling", "createChange"]
+- ["PSo26NSExtensionRequestHandling", "createProblem"]
 - ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
 - !private ["PSo26NSExtensionRequestHandling", "dismissViewControllerAnimated"]
 - ["PSo26NSExtensionRequestHandling", "followButton"]
@@ -452,12 +452,12 @@ depends-member:
 - !private ["PSo16NSMutableCopying", "init"]
 - !private ["CSo8NSObject", "AnyObject"]
 - ["CSo8NSObject", "Bool"]
-- !private ["CSo8NSObject", "Change"]
 - !private ["CSo8NSObject", "CoreDataStackManager"]
 - ["CSo8NSObject", "Firebase"]
 - !private ["CSo8NSObject", "NSFetchRequest"]
 - ["CSo8NSObject", "NSManagedObjectContext"]
 - !private ["CSo8NSObject", "NSUserDefaults"]
+- !private ["CSo8NSObject", "Problem"]
 - !private ["CSo8NSObject", "String"]
 - !private ["CSo8NSObject", "UIBarButtonItem"]
 - !private ["CSo8NSObject", "UIBarButtonItemStyle"]
@@ -468,7 +468,7 @@ depends-member:
 - ["CSo8NSObject", "addUserData"]
 - !private ["CSo8NSObject", "backBarButtonItem"]
 - ["CSo8NSObject", "checkCoreData"]
-- ["CSo8NSObject", "createChange"]
+- ["CSo8NSObject", "createProblem"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
 - !private ["CSo8NSObject", "dismissViewControllerAnimated"]
 - !private ["CSo8NSObject", "executeFetchRequest"]
@@ -503,7 +503,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "addUserData"]
 - !private ["PSo16NSObjectProtocol", "backBarButtonItem"]
 - ["PSo16NSObjectProtocol", "checkCoreData"]
-- ["PSo16NSObjectProtocol", "createChange"]
+- ["PSo16NSObjectProtocol", "createProblem"]
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
 - !private ["PSo16NSObjectProtocol", "dismissViewControllerAnimated"]
 - !private ["PSo16NSObjectProtocol", "executeFetchRequest"]
@@ -574,7 +574,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "UIBarButtonItemStyle"]
 - ["PSo21UIAppearanceContainer", "addUserData"]
 - ["PSo21UIAppearanceContainer", "checkCoreData"]
-- ["PSo21UIAppearanceContainer", "createChange"]
+- ["PSo21UIAppearanceContainer", "createProblem"]
 - ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
 - !private ["PSo21UIAppearanceContainer", "dismissViewControllerAnimated"]
 - ["PSo21UIAppearanceContainer", "followButton"]
@@ -606,7 +606,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "UIBarButtonItemStyle"]
 - ["PSo18UIContentContainer", "addUserData"]
 - ["PSo18UIContentContainer", "checkCoreData"]
-- ["PSo18UIContentContainer", "createChange"]
+- ["PSo18UIContentContainer", "createProblem"]
 - ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
 - !private ["PSo18UIContentContainer", "dismissViewControllerAnimated"]
 - ["PSo18UIContentContainer", "followButton"]
@@ -637,7 +637,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "UIBarButtonItemStyle"]
 - ["PSo18UIFocusEnvironment", "addUserData"]
 - ["PSo18UIFocusEnvironment", "checkCoreData"]
-- ["PSo18UIFocusEnvironment", "createChange"]
+- ["PSo18UIFocusEnvironment", "createProblem"]
 - ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
 - !private ["PSo18UIFocusEnvironment", "dismissViewControllerAnimated"]
 - ["PSo18UIFocusEnvironment", "followButton"]
@@ -662,12 +662,12 @@ depends-member:
 - !private ["CSo16UINavigationItem", "backBarButtonItem"]
 - !private ["CSo11UIResponder", "AnyObject"]
 - ["CSo11UIResponder", "Bool"]
-- !private ["CSo11UIResponder", "Change"]
 - !private ["CSo11UIResponder", "CoreDataStackManager"]
 - ["CSo11UIResponder", "Firebase"]
 - !private ["CSo11UIResponder", "NSFetchRequest"]
 - ["CSo11UIResponder", "NSManagedObjectContext"]
 - !private ["CSo11UIResponder", "NSUserDefaults"]
+- !private ["CSo11UIResponder", "Problem"]
 - !private ["CSo11UIResponder", "String"]
 - !private ["CSo11UIResponder", "UIBarButtonItem"]
 - !private ["CSo11UIResponder", "UIBarButtonItemStyle"]
@@ -677,7 +677,7 @@ depends-member:
 - !private ["CSo11UIResponder", "UpdateUserInfoController"]
 - ["CSo11UIResponder", "addUserData"]
 - ["CSo11UIResponder", "checkCoreData"]
-- ["CSo11UIResponder", "createChange"]
+- ["CSo11UIResponder", "createProblem"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
 - !private ["CSo11UIResponder", "dismissViewControllerAnimated"]
 - ["CSo11UIResponder", "followButton"]
@@ -705,7 +705,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "UIBarButtonItemStyle"]
 - ["PSo16UIStateRestoring", "addUserData"]
 - ["PSo16UIStateRestoring", "checkCoreData"]
-- ["PSo16UIStateRestoring", "createChange"]
+- ["PSo16UIStateRestoring", "createProblem"]
 - ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
 - !private ["PSo16UIStateRestoring", "dismissViewControllerAnimated"]
 - ["PSo16UIStateRestoring", "followButton"]
@@ -733,7 +733,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "UIBarButtonItemStyle"]
 - ["PSo18UITraitEnvironment", "addUserData"]
 - ["PSo18UITraitEnvironment", "checkCoreData"]
-- ["PSo18UITraitEnvironment", "createChange"]
+- ["PSo18UITraitEnvironment", "createProblem"]
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
 - !private ["PSo18UITraitEnvironment", "dismissViewControllerAnimated"]
 - ["PSo18UITraitEnvironment", "followButton"]
@@ -757,12 +757,12 @@ depends-member:
 - !private ["CSo6UIView", "text"]
 - !private ["CSo16UIViewController", "AnyObject"]
 - ["CSo16UIViewController", "Bool"]
-- !private ["CSo16UIViewController", "Change"]
 - !private ["CSo16UIViewController", "CoreDataStackManager"]
 - ["CSo16UIViewController", "Firebase"]
 - !private ["CSo16UIViewController", "NSFetchRequest"]
 - ["CSo16UIViewController", "NSManagedObjectContext"]
 - !private ["CSo16UIViewController", "NSUserDefaults"]
+- !private ["CSo16UIViewController", "Problem"]
 - !private ["CSo16UIViewController", "String"]
 - !private ["CSo16UIViewController", "UIBarButtonItem"]
 - !private ["CSo16UIViewController", "UIBarButtonItemStyle"]
@@ -772,7 +772,7 @@ depends-member:
 - !private ["CSo16UIViewController", "UpdateUserInfoController"]
 - ["CSo16UIViewController", "addUserData"]
 - ["CSo16UIViewController", "checkCoreData"]
-- ["CSo16UIViewController", "createChange"]
+- ["CSo16UIViewController", "createProblem"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
 - !private ["CSo16UIViewController", "dismissViewControllerAnimated"]
 - ["CSo16UIViewController", "followButton"]
@@ -972,4 +972,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "7b96acf2b91268cce56412d3f1c2566c"
+interface-hash: "a028b55929b32ae316b7e9e1fac40425"

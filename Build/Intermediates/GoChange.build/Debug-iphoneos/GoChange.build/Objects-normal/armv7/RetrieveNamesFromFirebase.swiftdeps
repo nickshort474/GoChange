@@ -10,13 +10,13 @@ provides-dynamic-lookup:
 - "ownerResults"
 - "nameRef"
 depends-top-level:
-- "Void"
-- "String"
 - !private "=="
-- !private "..<"
-- "RetrieveNamesFromFirebase"
+- "String"
 - "NSObject"
 - "StringLiteralType"
+- "Void"
+- "RetrieveNamesFromFirebase"
+- !private "..<"
 - !private "print"
 - "Firebase"
 depends-member:
@@ -440,4 +440,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "0fcf6ea2370558bf48cb95f39d99bb1d"
+interface-hash: "7825362fb6e75e25aba5fcda8c0d7349"

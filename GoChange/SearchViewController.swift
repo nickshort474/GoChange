@@ -69,7 +69,7 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
             
                 controller.resultNameArray = nameResult
                 controller.resultDetailArray = detailResult
-                controller.changeOwnerArray = ownerResult
+                controller.problemOwnerArray = ownerResult
                 controller.resultSolutionCountArray = solutionCountResult
                 controller.refArray = refResult
             

@@ -12,7 +12,7 @@ import Firebase
 
 class RetrieveAllNamesFromFirebase:NSObject{
     
-    var nameRef = Firebase(url: "https://gochange.firebaseio.com/change/names")
+    var nameRef = Firebase(url: "https://gochange.firebaseio.com/problem/names")
     
     
     init(completionHandler:(results:FDataSnapshot)->Void){

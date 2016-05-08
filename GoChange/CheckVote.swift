@@ -11,12 +11,12 @@ import CoreData
 
 class CheckVote:NSObject{
     
-    //var changeID:String!
+    
     
     init(solutionID:String,completionHandler:(result:Solution)-> Void){
         super.init()
         
-        //let retrievedEntity:Change?
+        
         
         let request = NSFetchRequest(entityName: "Solution")
         let predicate = NSPredicate(format: "solutionID == %@", solutionID)

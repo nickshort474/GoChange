@@ -18,7 +18,7 @@ class WebViewController: UIViewController,UIWebViewDelegate {
     var urlString:String = ""
     var status:String!
     
-    var rightBarButton:UIBarButtonItem!
+    var linkPetitionButton:UIBarButtonItem!
     
     //var petitionDisplayText:String!
     
@@ -27,14 +27,9 @@ class WebViewController: UIViewController,UIWebViewDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         
         webView.delegate = self
-        //linkPetition.enabled = false
-        //linkPetition.alpha = 0.5
+        linkPetitionButton = UIBarButtonItem(title: "Link Petition", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(WebViewController.linkPetitionClick))
         
-        //petitionText.text = webView.request!.URL?.absoluteString
-        
-        rightBarButton = UIBarButtonItem(title: "Link Petition", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(WebViewController.linkPetitionClick))
-        
-        self.navigationItem.rightBarButtonItem = rightBarButton
+        self.navigationItem.rightBarButtonItem = linkPetitionButton
         
         let url:NSURL = NSURL(string: urlString)!
         let request = NSURLRequest(URL: url)
@@ -46,26 +41,21 @@ class WebViewController: UIViewController,UIWebViewDelegate {
     
     override func viewWillAppear(animated: Bool) {
         
-        rightBarButton.enabled = false
-        rightBarButton.tintColor = UIColor.clearColor()
+        linkPetitionButton.enabled = false
+        linkPetitionButton.tintColor = UIColor.clearColor()
         
     }
     
     func webViewDidFinishLoad(webView: UIWebView) {
         
         currentURL = webView.request!.URL?.absoluteString
-        
-        //print(currentURL)
-        
         petitionText.text = currentURL
         
-        //print(currentURL)
-        //print(GoChangeClient.Constants.basePetitionURL)
         
-        if(currentURL != GoChangeClient.Constants.basePetitionURL){
+        if(currentURL != GoChangeClient.Constants.basePetitionURL && self.status != "viewing"){
             
-            rightBarButton.enabled = true
-            rightBarButton.tintColor = UIColor.blueColor()
+            linkPetitionButton.enabled = true
+            linkPetitionButton.tintColor = UIColor.blueColor()
             
             var petitionViewText = webView.request!.URL?.absoluteString
             
@@ -73,6 +63,7 @@ class WebViewController: UIViewController,UIWebViewDelegate {
             petitionViewText?.removeRange(range!)
             
             petitionText.text = petitionViewText
+            
         }
         
     }
@@ -80,11 +71,9 @@ class WebViewController: UIViewController,UIWebViewDelegate {
     
     @IBAction func linkPetitionClick(sender: UIButton) {
         
-        
-        //petitionString = webView.request!.URL?.absoluteString
-        TempChange.sharedInstance().currentPetitionValue = currentURL
-        
+        TempSave.sharedInstance().currentPetitionValue = currentURL
         self.navigationController!.popViewControllerAnimated(true)
+        
     }
         
         

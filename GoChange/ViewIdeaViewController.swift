@@ -20,13 +20,13 @@ class ViewIdeaViewController:UIViewController{
     
     @IBOutlet weak var petitionTextField: UITextField!
     @IBOutlet weak var secondPetitionTextField: UITextField!
-    @IBOutlet weak var thirdPetitionTextField: UITextField!
     
     
-    var changeID:String!
+    
+    var problemID:String!
     var solutionID:String!
     
-    //var change:Change!
+    
     var viewControllerStatus:String!
     
     var loadedNameData:String!
@@ -40,26 +40,70 @@ class ViewIdeaViewController:UIViewController{
     override func viewDidLoad(){
         super.viewDidLoad()
         
+        //deal with scrollview issue
+        self.automaticallyAdjustsScrollViewInsets = false
         
         solutionNameField.enabled = false
         solutionDetailField.selectable = false
         
         petitionTextField.enabled = false
         
+        solutionNameField.layer.masksToBounds = false
+        solutionNameField.borderStyle = UITextBorderStyle.None
+        solutionNameField.layer.shadowRadius = 0.5
+        solutionNameField.layer.shadowColor = GoChangeClient.Constants.customOrangeColor.CGColor
+        solutionNameField.layer.shadowOffset = CGSizeMake(1.0,1.0)
+        solutionNameField.layer.shadowOpacity = 0.5
+        
+        
+        //Set up drop shadow for detailsField
+        solutionDetailField.layer.masksToBounds = false
+        solutionDetailField.layer.borderColor = UIColor.clearColor().CGColor
+        solutionDetailField.layer.shadowRadius = 0.5
+        solutionDetailField.layer.shadowColor = GoChangeClient.Constants.customOrangeColor.CGColor
+        solutionDetailField.layer.shadowOffset = CGSizeMake(1.0,1.0)
+        solutionDetailField.layer.shadowOpacity = 0.5
+        
+        
+        
         
         if(petitionURL != ""){
         
-            print(petitionURL)
+            //print(petitionURL)
             
             _ = ChangeOrgCode(petitionURL:petitionURL){
                 result in
             
-                print(result)
+                
+                if let resultSignCount = result["signature_count"]{
+                   
+                    if let resultSignCount = resultSignCount{
+                        
+                        let petitionText = "Current Signature count is: \(String(resultSignCount))"
+
+                        dispatch_async(dispatch_get_main_queue(),{
+                           self.secondPetitionTextField.text = petitionText
+                        })
+                        
+                    }
+                    
+                }
+                if let resultTitle = result["title"]{
+                    if let resultTitle = resultTitle{
+                        
+                         dispatch_async(dispatch_get_main_queue(),{
+                            self.petitionTextField.text = resultTitle as? String
+                        })
+                        
+                    }
+                    
+                }
+                
             }
         }else{
             viewPetitionButton.enabled = false
             viewPetitionButton.alpha = 0
-            
+            petitionTextField.text = "No linked petition"
         }
     }
     
@@ -71,9 +115,8 @@ class ViewIdeaViewController:UIViewController{
         solutionDetailField.textColor = UIColor.blackColor()
         solutionDetailField.text = loadedDetailData
     
-        petitionTextField.text = petitionURL
         
-        if(viewControllerStatus == "newChange" || viewControllerStatus == "results"){
+        if(viewControllerStatus == "newProblem" || viewControllerStatus == "results"){
             
             voteSolutionButton.enabled = false
             voteSolutionButton.alpha = 0
@@ -119,14 +162,14 @@ class ViewIdeaViewController:UIViewController{
     @IBAction func voteSolutionClick(sender: UIButton) {
         
         //Vote for solution
-        _ = VoteForSolution(changeID:changeID,solutionID:solutionID){
+        _ = VoteForSolution(problemID:problemID,solutionID:solutionID){
             (result) in
             
         }
         
-        var currentVoteCount = TempChange.sharedInstance().solutionVoteArray[self.index]
+        var currentVoteCount = TempSave.sharedInstance().solutionVoteArray[self.index]
         currentVoteCount += 1
-        TempChange.sharedInstance().solutionVoteArray[self.index] = currentVoteCount
+        TempSave.sharedInstance().solutionVoteArray[self.index] = currentVoteCount
         
         //decide whether to change button to Have Voted instead of alpha change
         self.voteSolutionButton.enabled = false

@@ -11,7 +11,7 @@ import CoreData
 
 
 
-private let SQLITE_FILE_NAME = "SavedChanges.sqlite"
+private let SQLITE_FILE_NAME = "SavedProblems.sqlite"
 
 class CoreDataStackManager {
     
