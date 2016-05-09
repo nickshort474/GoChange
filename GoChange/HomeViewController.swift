@@ -18,6 +18,10 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var followButton: UIButton!
     @IBOutlet weak var followingLabel: UILabel!
+    @IBOutlet weak var startActivityIndicator: UIActivityIndicatorView!
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +36,8 @@ class HomeViewController: UIViewController {
         
         //TODO: Check core data for amount of following
         followingLabel.hidden = true
-        
-        
+        startActivityIndicator.hidden = true
+        startActivityIndicator.stopAnimating()
         
         let barButtonItem = UIBarButtonItem(title: "Home", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
         self.navigationItem.backBarButtonItem = barButtonItem
@@ -53,15 +57,28 @@ class HomeViewController: UIViewController {
     
     @IBAction func createProblem(sender: UIButton) {
         
+        self.startActivityIndicator.hidden = false
+        self.startActivityIndicator.startAnimating()
+        self.view.alpha = 0.5
+        
+        
         var controller:UINavigationController
         
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("createProblemNavController") as! UINavigationController
         
         
-        self.presentViewController(controller, animated: true, completion: nil)
+        self.presentViewController(controller, animated: true, completion: {
+            self.startActivityIndicator.hidden = true
+            self.startActivityIndicator.stopAnimating()
+            self.view.alpha = 1
+        })
         
         
     }
+    
+    
+    
+    
     
     
     @IBAction func addUserData(sender: UIButton) {

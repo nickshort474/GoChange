@@ -10,15 +10,15 @@ provides-dynamic-lookup:
 - "ownerResults"
 - "nameRef"
 depends-top-level:
-- !private "=="
-- "String"
 - "NSObject"
-- "StringLiteralType"
 - "Void"
-- "RetrieveNamesFromFirebase"
-- !private "..<"
-- !private "print"
 - "Firebase"
+- "RetrieveNamesFromFirebase"
+- !private "=="
+- !private "..<"
+- "String"
+- !private "print"
+- "StringLiteralType"
 depends-member:
 - ["Ps9AnyObject", "Firebase"]
 - !private ["Ps9AnyObject", "childByAppendingPath"]

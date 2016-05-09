@@ -181,6 +181,20 @@ class CreateProblemViewController: UIViewController,UITextViewDelegate,UITextFie
     }
     
     
+    // set max length of name field to 35
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        
+        let currentCount = textField.text?.characters.count ?? 0
+        
+        if(range.length + range.location > currentCount){
+            return false
+        }
+        
+        let newLength = currentCount + string.characters.count - range.length
+        return newLength <= 35
+    }
+    
+    
     
     //---------------------textView methods------------
     func textViewDidBeginEditing(textView: UITextView) {

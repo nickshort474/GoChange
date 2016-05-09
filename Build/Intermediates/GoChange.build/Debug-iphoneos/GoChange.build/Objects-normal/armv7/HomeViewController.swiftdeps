@@ -6,41 +6,43 @@ provides-nominal:
 provides-member:
 - ["C8GoChange18HomeViewController", ""]
 provides-dynamic-lookup:
+- "viewWillAppear"
+- "followingLabel"
+- "sharedContext"
+- "ref"
+- "createProblem"
+- "addUserData"
+- "welcomeLabel"
+- "logout"
+- "viewDidLoad"
+- "followButton"
 - "checkCoreData"
 - "didReceiveMemoryWarning"
-- "createProblem"
-- "followButton"
-- "welcomeLabel"
-- "viewDidLoad"
-- "viewWillAppear"
-- "ref"
-- "sharedContext"
-- "logout"
-- "addUserData"
-- "followingLabel"
+- "startActivityIndicator"
 depends-top-level:
-- !private "print"
-- "HomeViewController"
-- !private "UpdateUserInfoController"
-- !private "NSUserDefaults"
-- !private "String"
-- !private "NSFetchRequest"
-- "UIViewController"
-- !private "CoreDataStackManager"
-- !private "BooleanLiteralType"
-- !private "UINavigationController"
-- !private "Problem"
-- !private "UIBarButtonItem"
-- "NSManagedObjectContext"
-- "Bool"
-- "UILabel"
-- !private "!="
-- !private "StringLiteralType"
-- !private "UIBarButtonItemStyle"
-- !private "AnyObject"
 - "UIButton"
+- "UILabel"
+- !private "BooleanLiteralType"
+- !private "NSFetchRequest"
+- !private "Problem"
+- !private "UINavigationController"
+- "UIViewController"
+- "NSManagedObjectContext"
+- !private "UpdateUserInfoController"
+- "Bool"
+- !private "NSUserDefaults"
 - !private "UnicodeScalarType"
+- !private "UIBarButtonItem"
+- "UIActivityIndicatorView"
+- !private "CoreDataStackManager"
+- !private "AnyObject"
 - "Firebase"
+- !private "print"
+- !private "StringLiteralType"
+- !private "!="
+- !private "String"
+- !private "UIBarButtonItemStyle"
+- "HomeViewController"
 depends-member:
 - !private ["Ps9AnyObject", "CoreDataStackManager"]
 - !private ["Ps9AnyObject", "Firebase"]
@@ -50,6 +52,7 @@ depends-member:
 - !private ["Ps9AnyObject", "UIBarButtonItem"]
 - !private ["Ps9AnyObject", "UIBarButtonItemStyle"]
 - ["Ps9AnyObject", "addUserData"]
+- !private ["Ps9AnyObject", "alpha"]
 - !private ["Ps9AnyObject", "backBarButtonItem"]
 - ["Ps9AnyObject", "checkCoreData"]
 - ["Ps9AnyObject", "createProblem"]
@@ -72,10 +75,14 @@ depends-member:
 - ["Ps9AnyObject", "sharedContext.storage"]
 - !private ["Ps9AnyObject", "sharedInstance"]
 - !private ["Ps9AnyObject", "standardUserDefaults"]
+- ["Ps9AnyObject", "startActivityIndicator"]
+- !private ["Ps9AnyObject", "startAnimating"]
+- !private ["Ps9AnyObject", "stopAnimating"]
 - !private ["Ps9AnyObject", "storyboard"]
 - !private ["Ps9AnyObject", "text"]
 - !private ["Ps9AnyObject", "unauth"]
 - !private ["Ps9AnyObject", "valueForKey"]
+- !private ["Ps9AnyObject", "view"]
 - ["Ps9AnyObject", "viewDidLoad"]
 - ["Ps9AnyObject", "viewWillAppear"]
 - ["Ps9AnyObject", "welcomeLabel"]
@@ -99,6 +106,7 @@ depends-member:
 - !private ["Sb", "deinit"]
 - !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["V12CoreGraphics7CGFloat", "deinit"]
 - !private ["Ps11CVarArgType", "CoreDataStackManager"]
 - !private ["Ps11CVarArgType", "Distance"]
 - !private ["Ps11CVarArgType", "Firebase"]
@@ -109,6 +117,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "UIBarButtonItem"]
 - !private ["Ps11CVarArgType", "UIBarButtonItemStyle"]
 - ["Ps11CVarArgType", "addUserData"]
+- !private ["Ps11CVarArgType", "alpha"]
 - !private ["Ps11CVarArgType", "backBarButtonItem"]
 - ["Ps11CVarArgType", "checkCoreData"]
 - ["Ps11CVarArgType", "createProblem"]
@@ -129,10 +138,14 @@ depends-member:
 - ["Ps11CVarArgType", "sharedContext"]
 - ["Ps11CVarArgType", "sharedContext.storage"]
 - !private ["Ps11CVarArgType", "standardUserDefaults"]
+- ["Ps11CVarArgType", "startActivityIndicator"]
+- !private ["Ps11CVarArgType", "startAnimating"]
+- !private ["Ps11CVarArgType", "stopAnimating"]
 - !private ["Ps11CVarArgType", "storyboard"]
 - !private ["Ps11CVarArgType", "text"]
 - !private ["Ps11CVarArgType", "unauth"]
 - !private ["Ps11CVarArgType", "valueForKey"]
+- !private ["Ps11CVarArgType", "view"]
 - ["Ps11CVarArgType", "viewDidLoad"]
 - ["Ps11CVarArgType", "viewWillAppear"]
 - ["Ps11CVarArgType", "welcomeLabel"]
@@ -158,6 +171,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "UIBarButtonItem"]
 - !private ["Ps28CustomDebugStringConvertible", "UIBarButtonItemStyle"]
 - ["Ps28CustomDebugStringConvertible", "addUserData"]
+- !private ["Ps28CustomDebugStringConvertible", "alpha"]
 - !private ["Ps28CustomDebugStringConvertible", "backBarButtonItem"]
 - ["Ps28CustomDebugStringConvertible", "checkCoreData"]
 - !private ["Ps28CustomDebugStringConvertible", "count"]
@@ -179,10 +193,14 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "sharedContext"]
 - ["Ps28CustomDebugStringConvertible", "sharedContext.storage"]
 - !private ["Ps28CustomDebugStringConvertible", "standardUserDefaults"]
+- ["Ps28CustomDebugStringConvertible", "startActivityIndicator"]
+- !private ["Ps28CustomDebugStringConvertible", "startAnimating"]
+- !private ["Ps28CustomDebugStringConvertible", "stopAnimating"]
 - !private ["Ps28CustomDebugStringConvertible", "storyboard"]
 - !private ["Ps28CustomDebugStringConvertible", "text"]
 - !private ["Ps28CustomDebugStringConvertible", "unauth"]
 - !private ["Ps28CustomDebugStringConvertible", "valueForKey"]
+- !private ["Ps28CustomDebugStringConvertible", "view"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
 - ["Ps28CustomDebugStringConvertible", "viewWillAppear"]
 - ["Ps28CustomDebugStringConvertible", "welcomeLabel"]
@@ -201,6 +219,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "UIBarButtonItemStyle"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - ["Ps23CustomStringConvertible", "addUserData"]
+- !private ["Ps23CustomStringConvertible", "alpha"]
 - !private ["Ps23CustomStringConvertible", "backBarButtonItem"]
 - ["Ps23CustomStringConvertible", "checkCoreData"]
 - !private ["Ps23CustomStringConvertible", "count"]
@@ -222,10 +241,14 @@ depends-member:
 - ["Ps23CustomStringConvertible", "sharedContext"]
 - ["Ps23CustomStringConvertible", "sharedContext.storage"]
 - !private ["Ps23CustomStringConvertible", "standardUserDefaults"]
+- ["Ps23CustomStringConvertible", "startActivityIndicator"]
+- !private ["Ps23CustomStringConvertible", "startAnimating"]
+- !private ["Ps23CustomStringConvertible", "stopAnimating"]
 - !private ["Ps23CustomStringConvertible", "storyboard"]
 - !private ["Ps23CustomStringConvertible", "text"]
 - !private ["Ps23CustomStringConvertible", "unauth"]
 - !private ["Ps23CustomStringConvertible", "valueForKey"]
+- !private ["Ps23CustomStringConvertible", "view"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
 - ["Ps23CustomStringConvertible", "viewWillAppear"]
 - ["Ps23CustomStringConvertible", "welcomeLabel"]
@@ -243,6 +266,7 @@ depends-member:
 - !private ["Ps9Equatable", "UIBarButtonItemStyle"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - ["Ps9Equatable", "addUserData"]
+- !private ["Ps9Equatable", "alpha"]
 - !private ["Ps9Equatable", "backBarButtonItem"]
 - ["Ps9Equatable", "checkCoreData"]
 - ["Ps9Equatable", "createProblem"]
@@ -263,10 +287,14 @@ depends-member:
 - ["Ps9Equatable", "sharedContext"]
 - ["Ps9Equatable", "sharedContext.storage"]
 - !private ["Ps9Equatable", "standardUserDefaults"]
+- ["Ps9Equatable", "startActivityIndicator"]
+- !private ["Ps9Equatable", "startAnimating"]
+- !private ["Ps9Equatable", "stopAnimating"]
 - !private ["Ps9Equatable", "storyboard"]
 - !private ["Ps9Equatable", "text"]
 - !private ["Ps9Equatable", "unauth"]
 - !private ["Ps9Equatable", "valueForKey"]
+- !private ["Ps9Equatable", "view"]
 - ["Ps9Equatable", "viewDidLoad"]
 - ["Ps9Equatable", "viewWillAppear"]
 - ["Ps9Equatable", "welcomeLabel"]
@@ -291,6 +319,7 @@ depends-member:
 - !private ["Ps8Hashable", "UIBarButtonItemStyle"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - ["Ps8Hashable", "addUserData"]
+- !private ["Ps8Hashable", "alpha"]
 - !private ["Ps8Hashable", "backBarButtonItem"]
 - ["Ps8Hashable", "checkCoreData"]
 - ["Ps8Hashable", "createProblem"]
@@ -311,10 +340,14 @@ depends-member:
 - ["Ps8Hashable", "sharedContext"]
 - ["Ps8Hashable", "sharedContext.storage"]
 - !private ["Ps8Hashable", "standardUserDefaults"]
+- ["Ps8Hashable", "startActivityIndicator"]
+- !private ["Ps8Hashable", "startAnimating"]
+- !private ["Ps8Hashable", "stopAnimating"]
 - !private ["Ps8Hashable", "storyboard"]
 - !private ["Ps8Hashable", "text"]
 - !private ["Ps8Hashable", "unauth"]
 - !private ["Ps8Hashable", "valueForKey"]
+- !private ["Ps8Hashable", "view"]
 - ["Ps8Hashable", "viewDidLoad"]
 - ["Ps8Hashable", "viewWillAppear"]
 - ["Ps8Hashable", "welcomeLabel"]
@@ -328,6 +361,7 @@ depends-member:
 - !private ["C8GoChange18HomeViewController", "NSUserDefaults"]
 - !private ["C8GoChange18HomeViewController", "Problem"]
 - !private ["C8GoChange18HomeViewController", "String"]
+- ["C8GoChange18HomeViewController", "UIActivityIndicatorView"]
 - !private ["C8GoChange18HomeViewController", "UIBarButtonItem"]
 - !private ["C8GoChange18HomeViewController", "UIBarButtonItemStyle"]
 - ["C8GoChange18HomeViewController", "UIButton"]
@@ -350,7 +384,9 @@ depends-member:
 - ["C8GoChange18HomeViewController", "ref"]
 - ["C8GoChange18HomeViewController", "sharedContext"]
 - !private ["C8GoChange18HomeViewController", "sharedContext.storage"]
+- ["C8GoChange18HomeViewController", "startActivityIndicator"]
 - !private ["C8GoChange18HomeViewController", "storyboard"]
+- !private ["C8GoChange18HomeViewController", "view"]
 - ["C8GoChange18HomeViewController", "viewDidLoad"]
 - ["C8GoChange18HomeViewController", "viewWillAppear"]
 - ["C8GoChange18HomeViewController", "welcomeLabel"]
@@ -395,6 +431,7 @@ depends-member:
 - !private ["PSo8NSCoding", "UIBarButtonItem"]
 - !private ["PSo8NSCoding", "UIBarButtonItemStyle"]
 - ["PSo8NSCoding", "addUserData"]
+- !private ["PSo8NSCoding", "alpha"]
 - !private ["PSo8NSCoding", "backBarButtonItem"]
 - ["PSo8NSCoding", "checkCoreData"]
 - ["PSo8NSCoding", "createProblem"]
@@ -412,8 +449,12 @@ depends-member:
 - ["PSo8NSCoding", "ref"]
 - ["PSo8NSCoding", "sharedContext"]
 - ["PSo8NSCoding", "sharedContext.storage"]
+- ["PSo8NSCoding", "startActivityIndicator"]
+- !private ["PSo8NSCoding", "startAnimating"]
+- !private ["PSo8NSCoding", "stopAnimating"]
 - !private ["PSo8NSCoding", "storyboard"]
 - !private ["PSo8NSCoding", "text"]
+- !private ["PSo8NSCoding", "view"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", "viewWillAppear"]
 - ["PSo8NSCoding", "welcomeLabel"]
@@ -441,7 +482,9 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "ref"]
 - ["PSo26NSExtensionRequestHandling", "sharedContext"]
 - ["PSo26NSExtensionRequestHandling", "sharedContext.storage"]
+- ["PSo26NSExtensionRequestHandling", "startActivityIndicator"]
 - !private ["PSo26NSExtensionRequestHandling", "storyboard"]
+- !private ["PSo26NSExtensionRequestHandling", "view"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", "viewWillAppear"]
 - ["PSo26NSExtensionRequestHandling", "welcomeLabel"]
@@ -459,6 +502,7 @@ depends-member:
 - !private ["CSo8NSObject", "NSUserDefaults"]
 - !private ["CSo8NSObject", "Problem"]
 - !private ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "UIActivityIndicatorView"]
 - !private ["CSo8NSObject", "UIBarButtonItem"]
 - !private ["CSo8NSObject", "UIBarButtonItemStyle"]
 - ["CSo8NSObject", "UIButton"]
@@ -466,6 +510,7 @@ depends-member:
 - !private ["CSo8NSObject", "UINavigationController"]
 - !private ["CSo8NSObject", "UpdateUserInfoController"]
 - ["CSo8NSObject", "addUserData"]
+- !private ["CSo8NSObject", "alpha"]
 - !private ["CSo8NSObject", "backBarButtonItem"]
 - ["CSo8NSObject", "checkCoreData"]
 - ["CSo8NSObject", "createProblem"]
@@ -486,10 +531,14 @@ depends-member:
 - ["CSo8NSObject", "sharedContext"]
 - ["CSo8NSObject", "sharedContext.storage"]
 - !private ["CSo8NSObject", "standardUserDefaults"]
+- ["CSo8NSObject", "startActivityIndicator"]
+- !private ["CSo8NSObject", "startAnimating"]
+- !private ["CSo8NSObject", "stopAnimating"]
 - !private ["CSo8NSObject", "storyboard"]
 - !private ["CSo8NSObject", "text"]
 - !private ["CSo8NSObject", "unauth"]
 - !private ["CSo8NSObject", "valueForKey"]
+- !private ["CSo8NSObject", "view"]
 - ["CSo8NSObject", "viewDidLoad"]
 - ["CSo8NSObject", "viewWillAppear"]
 - ["CSo8NSObject", "welcomeLabel"]
@@ -501,6 +550,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "UIBarButtonItem"]
 - !private ["PSo16NSObjectProtocol", "UIBarButtonItemStyle"]
 - ["PSo16NSObjectProtocol", "addUserData"]
+- !private ["PSo16NSObjectProtocol", "alpha"]
 - !private ["PSo16NSObjectProtocol", "backBarButtonItem"]
 - ["PSo16NSObjectProtocol", "checkCoreData"]
 - ["PSo16NSObjectProtocol", "createProblem"]
@@ -521,10 +571,14 @@ depends-member:
 - ["PSo16NSObjectProtocol", "sharedContext"]
 - ["PSo16NSObjectProtocol", "sharedContext.storage"]
 - !private ["PSo16NSObjectProtocol", "standardUserDefaults"]
+- ["PSo16NSObjectProtocol", "startActivityIndicator"]
+- !private ["PSo16NSObjectProtocol", "startAnimating"]
+- !private ["PSo16NSObjectProtocol", "stopAnimating"]
 - !private ["PSo16NSObjectProtocol", "storyboard"]
 - !private ["PSo16NSObjectProtocol", "text"]
 - !private ["PSo16NSObjectProtocol", "unauth"]
 - !private ["PSo16NSObjectProtocol", "valueForKey"]
+- !private ["PSo16NSObjectProtocol", "view"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", "viewWillAppear"]
 - ["PSo16NSObjectProtocol", "welcomeLabel"]
@@ -559,11 +613,20 @@ depends-member:
 - !private ["SS", "init"]
 - !private ["Ps30StringInterpolationConvertible", "init"]
 - !private ["Ps24StringLiteralConvertible", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "alpha"]
 - !private ["PSo29UIAccessibilityIdentification", "hidden"]
 - !private ["PSo29UIAccessibilityIdentification", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "startAnimating"]
+- !private ["PSo29UIAccessibilityIdentification", "stopAnimating"]
 - !private ["PSo29UIAccessibilityIdentification", "text"]
+- !private ["CSo23UIActivityIndicatorView", "hidden"]
+- !private ["CSo23UIActivityIndicatorView", "startAnimating"]
+- !private ["CSo23UIActivityIndicatorView", "stopAnimating"]
+- !private ["PSo12UIAppearance", "alpha"]
 - !private ["PSo12UIAppearance", "hidden"]
 - !private ["PSo12UIAppearance", "init"]
+- !private ["PSo12UIAppearance", "startAnimating"]
+- !private ["PSo12UIAppearance", "stopAnimating"]
 - !private ["PSo12UIAppearance", "text"]
 - !private ["PSo21UIAppearanceContainer", "CoreDataStackManager"]
 - !private ["PSo21UIAppearanceContainer", "Firebase"]
@@ -573,6 +636,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "UIBarButtonItem"]
 - !private ["PSo21UIAppearanceContainer", "UIBarButtonItemStyle"]
 - ["PSo21UIAppearanceContainer", "addUserData"]
+- !private ["PSo21UIAppearanceContainer", "alpha"]
 - ["PSo21UIAppearanceContainer", "checkCoreData"]
 - ["PSo21UIAppearanceContainer", "createProblem"]
 - ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
@@ -588,8 +652,12 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "ref"]
 - ["PSo21UIAppearanceContainer", "sharedContext"]
 - ["PSo21UIAppearanceContainer", "sharedContext.storage"]
+- ["PSo21UIAppearanceContainer", "startActivityIndicator"]
+- !private ["PSo21UIAppearanceContainer", "startAnimating"]
+- !private ["PSo21UIAppearanceContainer", "stopAnimating"]
 - !private ["PSo21UIAppearanceContainer", "storyboard"]
 - !private ["PSo21UIAppearanceContainer", "text"]
+- !private ["PSo21UIAppearanceContainer", "view"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", "viewWillAppear"]
 - ["PSo21UIAppearanceContainer", "welcomeLabel"]
@@ -619,14 +687,22 @@ depends-member:
 - ["PSo18UIContentContainer", "ref"]
 - ["PSo18UIContentContainer", "sharedContext"]
 - ["PSo18UIContentContainer", "sharedContext.storage"]
+- ["PSo18UIContentContainer", "startActivityIndicator"]
 - !private ["PSo18UIContentContainer", "storyboard"]
+- !private ["PSo18UIContentContainer", "view"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", "viewWillAppear"]
 - ["PSo18UIContentContainer", "welcomeLabel"]
 - ["PSo18UIContentContainer", ""]
+- !private ["PSo17UICoordinateSpace", "alpha"]
 - !private ["PSo17UICoordinateSpace", "hidden"]
+- !private ["PSo17UICoordinateSpace", "startAnimating"]
+- !private ["PSo17UICoordinateSpace", "stopAnimating"]
 - !private ["PSo17UICoordinateSpace", "text"]
+- !private ["PSo13UIDynamicItem", "alpha"]
 - !private ["PSo13UIDynamicItem", "hidden"]
+- !private ["PSo13UIDynamicItem", "startAnimating"]
+- !private ["PSo13UIDynamicItem", "stopAnimating"]
 - !private ["PSo13UIDynamicItem", "text"]
 - !private ["PSo18UIFocusEnvironment", "CoreDataStackManager"]
 - !private ["PSo18UIFocusEnvironment", "Firebase"]
@@ -636,6 +712,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "UIBarButtonItem"]
 - !private ["PSo18UIFocusEnvironment", "UIBarButtonItemStyle"]
 - ["PSo18UIFocusEnvironment", "addUserData"]
+- !private ["PSo18UIFocusEnvironment", "alpha"]
 - ["PSo18UIFocusEnvironment", "checkCoreData"]
 - ["PSo18UIFocusEnvironment", "createProblem"]
 - ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
@@ -651,8 +728,12 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "ref"]
 - ["PSo18UIFocusEnvironment", "sharedContext"]
 - ["PSo18UIFocusEnvironment", "sharedContext.storage"]
+- ["PSo18UIFocusEnvironment", "startActivityIndicator"]
+- !private ["PSo18UIFocusEnvironment", "startAnimating"]
+- !private ["PSo18UIFocusEnvironment", "stopAnimating"]
 - !private ["PSo18UIFocusEnvironment", "storyboard"]
 - !private ["PSo18UIFocusEnvironment", "text"]
+- !private ["PSo18UIFocusEnvironment", "view"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", "viewWillAppear"]
 - ["PSo18UIFocusEnvironment", "welcomeLabel"]
@@ -669,6 +750,7 @@ depends-member:
 - !private ["CSo11UIResponder", "NSUserDefaults"]
 - !private ["CSo11UIResponder", "Problem"]
 - !private ["CSo11UIResponder", "String"]
+- ["CSo11UIResponder", "UIActivityIndicatorView"]
 - !private ["CSo11UIResponder", "UIBarButtonItem"]
 - !private ["CSo11UIResponder", "UIBarButtonItemStyle"]
 - ["CSo11UIResponder", "UIButton"]
@@ -676,6 +758,7 @@ depends-member:
 - !private ["CSo11UIResponder", "UINavigationController"]
 - !private ["CSo11UIResponder", "UpdateUserInfoController"]
 - ["CSo11UIResponder", "addUserData"]
+- !private ["CSo11UIResponder", "alpha"]
 - ["CSo11UIResponder", "checkCoreData"]
 - ["CSo11UIResponder", "createProblem"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
@@ -691,8 +774,12 @@ depends-member:
 - ["CSo11UIResponder", "ref"]
 - ["CSo11UIResponder", "sharedContext"]
 - ["CSo11UIResponder", "sharedContext.storage"]
+- ["CSo11UIResponder", "startActivityIndicator"]
+- !private ["CSo11UIResponder", "startAnimating"]
+- !private ["CSo11UIResponder", "stopAnimating"]
 - !private ["CSo11UIResponder", "storyboard"]
 - !private ["CSo11UIResponder", "text"]
+- !private ["CSo11UIResponder", "view"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - ["CSo11UIResponder", "viewWillAppear"]
 - ["CSo11UIResponder", "welcomeLabel"]
@@ -718,7 +805,9 @@ depends-member:
 - ["PSo16UIStateRestoring", "ref"]
 - ["PSo16UIStateRestoring", "sharedContext"]
 - ["PSo16UIStateRestoring", "sharedContext.storage"]
+- ["PSo16UIStateRestoring", "startActivityIndicator"]
 - !private ["PSo16UIStateRestoring", "storyboard"]
+- !private ["PSo16UIStateRestoring", "view"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", "viewWillAppear"]
 - ["PSo16UIStateRestoring", "welcomeLabel"]
@@ -732,6 +821,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "UIBarButtonItem"]
 - !private ["PSo18UITraitEnvironment", "UIBarButtonItemStyle"]
 - ["PSo18UITraitEnvironment", "addUserData"]
+- !private ["PSo18UITraitEnvironment", "alpha"]
 - ["PSo18UITraitEnvironment", "checkCoreData"]
 - ["PSo18UITraitEnvironment", "createProblem"]
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
@@ -747,13 +837,20 @@ depends-member:
 - ["PSo18UITraitEnvironment", "ref"]
 - ["PSo18UITraitEnvironment", "sharedContext"]
 - ["PSo18UITraitEnvironment", "sharedContext.storage"]
+- ["PSo18UITraitEnvironment", "startActivityIndicator"]
+- !private ["PSo18UITraitEnvironment", "startAnimating"]
+- !private ["PSo18UITraitEnvironment", "stopAnimating"]
 - !private ["PSo18UITraitEnvironment", "storyboard"]
 - !private ["PSo18UITraitEnvironment", "text"]
+- !private ["PSo18UITraitEnvironment", "view"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", "viewWillAppear"]
 - ["PSo18UITraitEnvironment", "welcomeLabel"]
 - ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "alpha"]
 - !private ["CSo6UIView", "hidden"]
+- !private ["CSo6UIView", "startAnimating"]
+- !private ["CSo6UIView", "stopAnimating"]
 - !private ["CSo6UIView", "text"]
 - !private ["CSo16UIViewController", "AnyObject"]
 - ["CSo16UIViewController", "Bool"]
@@ -764,6 +861,7 @@ depends-member:
 - !private ["CSo16UIViewController", "NSUserDefaults"]
 - !private ["CSo16UIViewController", "Problem"]
 - !private ["CSo16UIViewController", "String"]
+- ["CSo16UIViewController", "UIActivityIndicatorView"]
 - !private ["CSo16UIViewController", "UIBarButtonItem"]
 - !private ["CSo16UIViewController", "UIBarButtonItemStyle"]
 - ["CSo16UIViewController", "UIButton"]
@@ -785,7 +883,9 @@ depends-member:
 - ["CSo16UIViewController", "ref"]
 - ["CSo16UIViewController", "sharedContext"]
 - ["CSo16UIViewController", "sharedContext.storage"]
+- ["CSo16UIViewController", "startActivityIndicator"]
 - !private ["CSo16UIViewController", "storyboard"]
+- !private ["CSo16UIViewController", "view"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", "viewWillAppear"]
 - ["CSo16UIViewController", "welcomeLabel"]
@@ -835,9 +935,12 @@ depends-member:
 - !private ["Ps12_Reflectable", "IntegerLiteralType"]
 - !private ["Ps12_Reflectable", "SubSequence"]
 - !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "alpha"]
 - !private ["Ps12_Reflectable", "count"]
 - !private ["Ps12_Reflectable", "hidden"]
 - !private ["Ps12_Reflectable", "init"]
+- !private ["Ps12_Reflectable", "startAnimating"]
+- !private ["Ps12_Reflectable", "stopAnimating"]
 - !private ["Ps12_Reflectable", "text"]
 - !private ["Ps18_SignedIntegerType", "Distance"]
 - !private ["Ps18_SignedIntegerType", "IntegerLiteralType"]
@@ -851,6 +954,7 @@ depends-nominal:
 - !private "Sb"
 - !private "Ps25BooleanLiteralConvertible"
 - !private "Ps11BooleanType"
+- !private "V12CoreGraphics7CGFloat"
 - "Ps11CVarArgType"
 - !private "Vs9Character"
 - !private "Ps14CollectionType"
@@ -908,6 +1012,7 @@ depends-nominal:
 - !private "Ps30StringInterpolationConvertible"
 - !private "Ps24StringLiteralConvertible"
 - !private "PSo29UIAccessibilityIdentification"
+- !private "CSo23UIActivityIndicatorView"
 - !private "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"
 - !private "CSo15UIBarButtonItem"
@@ -972,4 +1077,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "a028b55929b32ae316b7e9e1fac40425"
+interface-hash: "014138372d2bd0ad647a1b150bfa3e65"

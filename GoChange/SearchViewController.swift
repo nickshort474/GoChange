@@ -12,9 +12,8 @@ import Firebase
 class SearchViewController: UIViewController,UITextFieldDelegate {
     
     @IBOutlet weak var searchTextField: UITextField!
-    
-    
-    
+    @IBOutlet weak var searchActivity: UIActivityIndicatorView!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -28,6 +27,11 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         searchTextField.layer.shadowColor = GoChangeClient.Constants.customOrangeColor.CGColor
         searchTextField.layer.shadowOffset = CGSizeMake(3.0,3.0)
         searchTextField.layer.shadowOpacity = 0.5
+        
+        searchActivity.hidden = true
+        searchActivity.stopAnimating()
+        
+        
     }
     
     
@@ -49,6 +53,11 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
     
     
     @IBAction func searchForResults(sender: UIButton) {
+        
+        searchActivity.hidden = false
+        searchActivity.startAnimating()
+        self.view.alpha = 0.5
+        
         
         _ = SearchController(searchText: searchTextField.text!){
             (nameResult,detailResult,ownerResult,solutionCountResult,refResult,matchType) in
@@ -73,7 +82,12 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
                 controller.resultSolutionCountArray = solutionCountResult
                 controller.refArray = refResult
             
+                
+                self.searchActivity.hidden = true
+                self.searchActivity.stopAnimating()
+                self.view.alpha = 1
                 navigationController?.pushViewController(controller,animated: true)
+                
                 
             }
         }
@@ -101,6 +115,6 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
     }
     
     
-   }
+}
 
 

@@ -6,67 +6,74 @@ provides-nominal:
 provides-member:
 - ["C8GoChange27CreateProblemViewController", ""]
 provides-dynamic-lookup:
-- "viewDidLoad"
-- "solutionTable"
-- "homeButtonClick"
-- "sharedContext"
-- "viewWillAppear"
-- "postButton"
-- "tableView"
-- "tableView"
-- "tableView"
-- "currentNameData"
-- "nameActionButton"
-- "textViewDidBeginEditing"
-- "namePlusButton"
-- "PostInfo"
-- "nameField"
-- "addASolutionButton"
-- "currentDetailData"
-- "detailsActionButton"
-- "detailsPlusButton"
-- "addSolution"
 - "detailsField"
 - "textFieldDidBeginEditing"
+- "detailsPlusButton"
+- "viewDidLoad"
+- "tableView"
+- "tableView"
+- "tableView"
+- "textField"
+- "addSolution"
+- "addASolutionButton"
+- "nameField"
+- "namePlusButton"
+- "textViewDidBeginEditing"
+- "homeButtonClick"
+- "currentNameData"
+- "viewWillAppear"
+- "sharedContext"
+- "currentDetailData"
+- "postButton"
+- "nameActionButton"
+- "detailsActionButton"
+- "PostInfo"
+- "solutionTable"
 depends-top-level:
-- !private "AddIdeaViewController"
-- !private "=="
-- !private "CustomTableViewCell"
-- !private "GoChangeClient"
-- "UITableViewCell"
-- "UITextView"
-- "CreateProblemViewController"
-- "UITableView"
-- !private "||"
-- !private "print"
-- "NSManagedObjectContext"
-- "Bool"
-- !private "Array"
-- !private "UITextBorderStyle"
-- !private "TempSave"
-- "StringLiteralType"
-- !private "ViewIdeaViewController"
-- "String"
-- "UIButton"
-- !private "CoreDataStackManager"
 - !private "UIBarButtonItem"
-- "NSIndexPath"
+- !private "CoreDataStackManager"
+- !private "Array"
+- !private ">"
+- !private "=="
 - !private "!="
+- "CreateProblemViewController"
+- !private "GoChangeClient"
+- !private "+"
+- !private "ViewIdeaViewController"
 - "UITextField"
-- !private "UIColor"
-- "UITableViewDelegate"
-- !private "UnicodeScalarType"
-- "UITextFieldDelegate"
-- !private "BooleanLiteralType"
+- "UITableViewCell"
 - !private "NSUserDefaults"
-- "UITextViewDelegate"
-- !private "SaveNewProblem"
-- "UIViewController"
-- !private "UIControlState"
+- "StringLiteralType"
 - !private "UIBarButtonItemStyle"
-- "Int"
-- !private "CGSizeMake"
+- !private "-"
+- "NSRange"
+- !private "UITextBorderStyle"
+- "UIButton"
 - !private "&&"
+- "String"
+- "Int"
+- !private "CustomTableViewCell"
+- !private "AddIdeaViewController"
+- !private "CGSizeMake"
+- !private "print"
+- "UITableViewDelegate"
+- !private "SaveNewProblem"
+- !private "||"
+- !private "UnicodeScalarType"
+- !private "BooleanLiteralType"
+- "UIViewController"
+- "NSManagedObjectContext"
+- "UITextView"
+- "UITextViewDelegate"
+- "UITextFieldDelegate"
+- "UITableView"
+- "Bool"
+- !private "TempSave"
+- !private "UIControlState"
+- "NSIndexPath"
+- !private "UIColor"
+- !private "??"
+- !private "<="
 depends-member:
 - !private ["C8GoChange21AddIdeaViewController", "viewControllerStatus"]
 - !private ["Ps9AnyObject", "CGColor"]
@@ -91,6 +98,7 @@ depends-member:
 - !private ["Ps9AnyObject", "blackColor"]
 - !private ["Ps9AnyObject", "borderColor"]
 - !private ["Ps9AnyObject", "borderStyle"]
+- !private ["Ps9AnyObject", "characters"]
 - !private ["Ps9AnyObject", "clearColor"]
 - ["Ps9AnyObject", "currentDetailData"]
 - ["Ps9AnyObject", "currentNameData"]
@@ -243,6 +251,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "blackColor"]
 - !private ["Ps11CVarArgType", "borderColor"]
 - !private ["Ps11CVarArgType", "borderStyle"]
+- !private ["Ps11CVarArgType", "characters"]
 - !private ["Ps11CVarArgType", "clearColor"]
 - ["Ps11CVarArgType", "currentDetailData"]
 - ["Ps11CVarArgType", "currentNameData"]
@@ -334,6 +343,10 @@ depends-member:
 - !private ["Ps11CVarArgType", "voteCount"]
 - ["Ps11CVarArgType", ""]
 - !private ["Vs9Character", "deinit"]
+- !private ["VSS13CharacterView", "Generator"]
+- !private ["VSS13CharacterView", "Index"]
+- !private ["VSS13CharacterView", "SubSequence"]
+- !private ["VSS13CharacterView", "count"]
 - !private ["Ps14CollectionType", "Element"]
 - !private ["Ps14CollectionType", "Generator"]
 - !private ["Ps14CollectionType", "Index"]
@@ -343,6 +356,7 @@ depends-member:
 - !private ["Ps14CollectionType", "subscript"]
 - !private ["Ps10Comparable", "Distance"]
 - !private ["Ps10Comparable", "IntegerLiteralType"]
+- !private ["Ps10Comparable", "characters"]
 - !private ["Ps10Comparable", "init"]
 - !private ["VC8GoChange14GoChangeClient9Constants", "customOrangeColor"]
 - !private ["VC8GoChange14GoChangeClient9Constants", "detailText"]
@@ -357,6 +371,7 @@ depends-member:
 - ["C8GoChange27CreateProblemViewController", "Int"]
 - ["C8GoChange27CreateProblemViewController", "NSIndexPath"]
 - ["C8GoChange27CreateProblemViewController", "NSManagedObjectContext"]
+- ["C8GoChange27CreateProblemViewController", "NSRange"]
 - !private ["C8GoChange27CreateProblemViewController", "NSUserDefaults"]
 - ["C8GoChange27CreateProblemViewController", "PostInfo"]
 - !private ["C8GoChange27CreateProblemViewController", "SaveNewProblem"]
@@ -453,6 +468,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "blackColor"]
 - !private ["Ps28CustomDebugStringConvertible", "borderColor"]
 - !private ["Ps28CustomDebugStringConvertible", "borderStyle"]
+- !private ["Ps28CustomDebugStringConvertible", "characters"]
 - !private ["Ps28CustomDebugStringConvertible", "clearColor"]
 - !private ["Ps28CustomDebugStringConvertible", "count"]
 - ["Ps28CustomDebugStringConvertible", "currentDetailData"]
@@ -574,6 +590,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "blackColor"]
 - !private ["Ps23CustomStringConvertible", "borderColor"]
 - !private ["Ps23CustomStringConvertible", "borderStyle"]
+- !private ["Ps23CustomStringConvertible", "characters"]
 - !private ["Ps23CustomStringConvertible", "clearColor"]
 - !private ["Ps23CustomStringConvertible", "count"]
 - ["Ps23CustomStringConvertible", "currentDetailData"]
@@ -699,6 +716,7 @@ depends-member:
 - !private ["Ps9Equatable", "blackColor"]
 - !private ["Ps9Equatable", "borderColor"]
 - !private ["Ps9Equatable", "borderStyle"]
+- !private ["Ps9Equatable", "characters"]
 - !private ["Ps9Equatable", "clearColor"]
 - ["Ps9Equatable", "currentDetailData"]
 - ["Ps9Equatable", "currentNameData"]
@@ -789,6 +807,7 @@ depends-member:
 - ["Ps9Equatable", "viewWillAppear"]
 - !private ["Ps9Equatable", "voteCount"]
 - ["Ps9Equatable", ""]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "characters"]
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["Sf", "deinit"]
 - !private ["Ps16ForwardIndexType", "Distance"]
@@ -822,6 +841,7 @@ depends-member:
 - !private ["Ps8Hashable", "blackColor"]
 - !private ["Ps8Hashable", "borderColor"]
 - !private ["Ps8Hashable", "borderStyle"]
+- !private ["Ps8Hashable", "characters"]
 - !private ["Ps8Hashable", "clearColor"]
 - ["Ps8Hashable", "currentDetailData"]
 - ["Ps8Hashable", "currentNameData"]
@@ -913,6 +933,7 @@ depends-member:
 - !private ["Ps8Hashable", "voteCount"]
 - ["Ps8Hashable", ""]
 - !private ["SQ", "deinit"]
+- !private ["VVSS13CharacterView5Index", "Distance"]
 - !private ["Ps9Indexable", "Element"]
 - !private ["Ps9Indexable", "Generator"]
 - !private ["Ps9Indexable", "Index"]
@@ -936,6 +957,7 @@ depends-member:
 - !private ["Ps11IntegerType", "IntegerLiteralType"]
 - !private ["Ps14MirrorPathType", "Distance"]
 - !private ["Ps14MirrorPathType", "IntegerLiteralType"]
+- !private ["Ps14MirrorPathType", "characters"]
 - !private ["Ps14MirrorPathType", "init"]
 - !private ["Ps21MutableCollectionType", "Element"]
 - !private ["Ps21MutableCollectionType", "Generator"]
@@ -976,6 +998,7 @@ depends-member:
 - !private ["PSo8NSCoding", "blackColor"]
 - !private ["PSo8NSCoding", "borderColor"]
 - !private ["PSo8NSCoding", "borderStyle"]
+- !private ["PSo8NSCoding", "characters"]
 - !private ["PSo8NSCoding", "clearColor"]
 - ["PSo8NSCoding", "currentDetailData"]
 - ["PSo8NSCoding", "currentNameData"]
@@ -1057,6 +1080,7 @@ depends-member:
 - ["PSo8NSCoding", ""]
 - !private ["PSo9NSCopying", "CGColor"]
 - !private ["PSo9NSCopying", "blackColor"]
+- !private ["PSo9NSCopying", "characters"]
 - !private ["PSo9NSCopying", "clearColor"]
 - !private ["PSo9NSCopying", "init"]
 - !private ["PSo9NSCopying", "row"]
@@ -1132,6 +1156,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "viewWillAppear"]
 - ["PSo26NSExtensionRequestHandling", ""]
 - !private ["CSo11NSIndexPath", "row"]
+- !private ["PSo16NSMutableCopying", "characters"]
 - !private ["PSo16NSMutableCopying", "init"]
 - !private ["CSo8NSObject", "AddIdeaViewController"]
 - ["CSo8NSObject", "Bool"]
@@ -1144,6 +1169,7 @@ depends-member:
 - ["CSo8NSObject", "Int"]
 - ["CSo8NSObject", "NSIndexPath"]
 - ["CSo8NSObject", "NSManagedObjectContext"]
+- ["CSo8NSObject", "NSRange"]
 - !private ["CSo8NSObject", "NSUserDefaults"]
 - ["CSo8NSObject", "PostInfo"]
 - !private ["CSo8NSObject", "SaveNewProblem"]
@@ -1168,6 +1194,7 @@ depends-member:
 - !private ["CSo8NSObject", "blackColor"]
 - !private ["CSo8NSObject", "borderColor"]
 - !private ["CSo8NSObject", "borderStyle"]
+- !private ["CSo8NSObject", "characters"]
 - !private ["CSo8NSObject", "clearColor"]
 - ["CSo8NSObject", "currentDetailData"]
 - ["CSo8NSObject", "currentNameData"]
@@ -1279,6 +1306,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "blackColor"]
 - !private ["PSo16NSObjectProtocol", "borderColor"]
 - !private ["PSo16NSObjectProtocol", "borderStyle"]
+- !private ["PSo16NSObjectProtocol", "characters"]
 - !private ["PSo16NSObjectProtocol", "clearColor"]
 - ["PSo16NSObjectProtocol", "currentDetailData"]
 - ["PSo16NSObjectProtocol", "currentNameData"]
@@ -1371,9 +1399,11 @@ depends-member:
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "CGColor"]
 - !private ["PSo14NSSecureCoding", "blackColor"]
+- !private ["PSo14NSSecureCoding", "characters"]
 - !private ["PSo14NSSecureCoding", "clearColor"]
 - !private ["PSo14NSSecureCoding", "init"]
 - !private ["PSo14NSSecureCoding", "row"]
+- !private ["CSo8NSString", "characters"]
 - !private ["CSo8NSString", "init"]
 - !private ["CSo14NSUserDefaults", "standardUserDefaults"]
 - !private ["CSo14NSUserDefaults", "valueForKey"]
@@ -1381,6 +1411,7 @@ depends-member:
 - !private ["Ps13OptionSetType", "Normal"]
 - ["Sq", "Some"]
 - !private ["Sq", "deinit"]
+- !private ["Ps16OutputStreamType", "characters"]
 - !private ["Ps16OutputStreamType", "init"]
 - !private ["Ps21RandomAccessIndexType", "Distance"]
 - !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
@@ -1410,12 +1441,16 @@ depends-member:
 - !private ["Vs5Slice", "Index"]
 - !private ["Vs5Slice", "SubSequence"]
 - !private ["Vs5Slice", "_Element"]
+- !private ["Ps10Streamable", "characters"]
 - !private ["Ps10Streamable", "init"]
 - !private ["Ps10Strideable", "Distance"]
 - !private ["Ps10Strideable", "IntegerLiteralType"]
+- !private ["SS", "characters"]
 - !private ["SS", "deinit"]
 - !private ["SS", "init"]
+- !private ["Ps30StringInterpolationConvertible", "characters"]
 - !private ["Ps30StringInterpolationConvertible", "init"]
+- !private ["Ps24StringLiteralConvertible", "characters"]
 - !private ["Ps24StringLiteralConvertible", "init"]
 - !private ["C8GoChange8TempSave", "currentPetitionValue"]
 - !private ["C8GoChange8TempSave", "petitionURLArray"]
@@ -1797,6 +1832,7 @@ depends-member:
 - ["CSo11UIResponder", "Int"]
 - ["CSo11UIResponder", "NSIndexPath"]
 - ["CSo11UIResponder", "NSManagedObjectContext"]
+- ["CSo11UIResponder", "NSRange"]
 - !private ["CSo11UIResponder", "NSUserDefaults"]
 - ["CSo11UIResponder", "PostInfo"]
 - !private ["CSo11UIResponder", "SaveNewProblem"]
@@ -2351,6 +2387,7 @@ depends-member:
 - ["CSo16UIViewController", "Int"]
 - ["CSo16UIViewController", "NSIndexPath"]
 - ["CSo16UIViewController", "NSManagedObjectContext"]
+- ["CSo16UIViewController", "NSRange"]
 - !private ["CSo16UIViewController", "NSUserDefaults"]
 - ["CSo16UIViewController", "PostInfo"]
 - !private ["CSo16UIViewController", "SaveNewProblem"]
@@ -2432,6 +2469,7 @@ depends-member:
 - !private ["Vs6UInt64", "deinit"]
 - !private ["Vs5UInt8", "deinit"]
 - !private ["Sc", "deinit"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "characters"]
 - !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
 - !private ["C8GoChange22ViewIdeaViewController", "loadedDetailData"]
 - !private ["C8GoChange22ViewIdeaViewController", "loadedNameData"]
@@ -2444,11 +2482,15 @@ depends-member:
 - !private ["Ps10_ArrayType", "count"]
 - !private ["Ps10_ArrayType", "subscript"]
 - !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "characters"]
 - !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "characters"]
 - !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "characters"]
 - !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "characters"]
 - !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
 - !private ["Ps24_ColorLiteralConvertible", "CGColor"]
 - !private ["Ps24_ColorLiteralConvertible", "blackColor"]
@@ -2465,6 +2507,8 @@ depends-member:
 - !private ["Ps22_IntegerArithmeticType", "IntegerLiteralType"]
 - !private ["Ps12_IntegerType", "Distance"]
 - !private ["Ps12_IntegerType", "IntegerLiteralType"]
+- !private ["VSC8_NSRange", "length"]
+- !private ["VSC8_NSRange", "location"]
 - !private ["Ps21_ObjectiveCBridgeable", "Distance"]
 - !private ["Ps21_ObjectiveCBridgeable", "Element"]
 - !private ["Ps21_ObjectiveCBridgeable", "Generator"]
@@ -2472,8 +2516,11 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
 - !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "characters"]
 - !private ["Ps21_ObjectiveCBridgeable", "count"]
 - !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "length"]
+- !private ["Ps21_ObjectiveCBridgeable", "location"]
 - !private ["Ps21_ObjectiveCBridgeable", "subscript"]
 - !private ["Vs26_OptionalNilComparisonType", "deinit"]
 - !private ["Ps22_RandomAccessAmbiguity", "Distance"]
@@ -2489,6 +2536,7 @@ depends-member:
 - !private ["Ps12_Reflectable", "alpha"]
 - !private ["Ps12_Reflectable", "barTintColor"]
 - !private ["Ps12_Reflectable", "borderStyle"]
+- !private ["Ps12_Reflectable", "characters"]
 - !private ["Ps12_Reflectable", "count"]
 - !private ["Ps12_Reflectable", "delegate"]
 - !private ["Ps12_Reflectable", "dequeueReusableCellWithIdentifier"]
@@ -2497,6 +2545,8 @@ depends-member:
 - !private ["Ps12_Reflectable", "hidden"]
 - !private ["Ps12_Reflectable", "init"]
 - !private ["Ps12_Reflectable", "layer"]
+- !private ["Ps12_Reflectable", "length"]
+- !private ["Ps12_Reflectable", "location"]
 - !private ["Ps12_Reflectable", "ownerName"]
 - !private ["Ps12_Reflectable", "problemName"]
 - !private ["Ps12_Reflectable", "reloadData"]
@@ -2525,6 +2575,7 @@ depends-nominal:
 - !private "V12CoreGraphics7CGFloat"
 - "Ps11CVarArgType"
 - !private "Vs9Character"
+- !private "VSS13CharacterView"
 - !private "Ps14CollectionType"
 - !private "Ps10Comparable"
 - !private "VC8GoChange14GoChangeClient9Constants"
@@ -2542,6 +2593,7 @@ depends-nominal:
 - !private "C8GoChange14GoChangeClient"
 - "Ps8Hashable"
 - !private "SQ"
+- !private "VVSS13CharacterView5Index"
 - !private "Ps9Indexable"
 - !private "Vs17IndexingGenerator"
 - !private "Si"
@@ -2644,6 +2696,7 @@ depends-nominal:
 - !private "Ps14_Incrementable"
 - !private "Ps22_IntegerArithmeticType"
 - !private "Ps12_IntegerType"
+- !private "VSC8_NSRange"
 - !private "Ps21_ObjectiveCBridgeable"
 - !private "Vs26_OptionalNilComparisonType"
 - !private "Ps22_RandomAccessAmbiguity"
@@ -2673,4 +2726,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "86e24a25bb2b13f7ab865b6db7b1064d"
+interface-hash: "0da54f582bf7e543e6fd5f8cad3b8922"

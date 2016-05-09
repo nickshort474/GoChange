@@ -9,23 +9,23 @@ provides-member:
 - ["VC8GoChange8Solution4Keys", ""]
 provides-dynamic-lookup:
 - "solutionOwner"
+- "voteCount"
+- "solutionName"
+- "solutionToProblem"
 - "petitionURL"
+- "solutionID"
 - "haveVotedFor"
 - "solutionDescription"
-- "solutionName"
-- "solutionID"
-- "solutionToProblem"
-- "voteCount"
 depends-top-level:
+- "String"
+- "NSManagedObjectContext"
 - "Problem"
 - !private "Int"
-- "NSManagedObjectContext"
-- "String"
-- "Solution"
-- "StringLiteralType"
-- "NSManagedObject"
 - "NSNumber"
 - "AnyObject"
+- "NSManagedObject"
+- "StringLiteralType"
+- "Solution"
 - "NSEntityDescription"
 depends-member:
 - !private ["Ps9AnyObject", "Keys"]

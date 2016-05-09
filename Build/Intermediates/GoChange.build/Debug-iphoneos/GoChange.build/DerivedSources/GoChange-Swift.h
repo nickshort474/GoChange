@@ -94,6 +94,7 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
 @import ObjectiveC;
+@import Foundation;
 @import CoreData;
 #endif
 
@@ -192,6 +193,7 @@ SWIFT_CLASS("_TtC8GoChange27CreateProblemViewController")
 - (IBAction)detailsActionButton:(UIButton * _Nonnull)sender;
 - (IBAction)addSolution:(UIButton * _Nonnull)sender;
 - (void)textFieldDidBeginEditing:(UITextField * _Nonnull)textField;
+- (BOOL)textField:(UITextField * _Nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * _Nonnull)string;
 - (void)textViewDidBeginEditing:(UITextView * _Nonnull)textView;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
@@ -263,6 +265,7 @@ SWIFT_CLASS("_TtC8GoChange14GoChangeClient")
 @end
 
 @class Firebase;
+@class UIActivityIndicatorView;
 
 SWIFT_CLASS("_TtC8GoChange18HomeViewController")
 @interface HomeViewController : UIViewController
@@ -270,6 +273,7 @@ SWIFT_CLASS("_TtC8GoChange18HomeViewController")
 @property (nonatomic, strong) Firebase * _Null_unspecified ref;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified followButton;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified followingLabel;
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView * _Null_unspecified startActivityIndicator;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 @property (nonatomic, strong) NSManagedObjectContext * _Nonnull sharedContext;
@@ -443,6 +447,7 @@ SWIFT_CLASS("_TtC8GoChange16SearchController")
 SWIFT_CLASS("_TtC8GoChange20SearchViewController")
 @interface SearchViewController : UIViewController <UITextFieldDelegate>
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified searchTextField;
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView * _Null_unspecified searchActivity;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (IBAction)homeButtonClick:(UIButton * _Nonnull)sender;
