@@ -133,15 +133,18 @@ class ViewResultViewController: UIViewController,UITextViewDelegate,UITextFieldD
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cellID = "solutionCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath) as! CustomTableViewCell
         
         
          let solutionName = TempSave.sharedInstance().solutionNameArray[indexPath.row]
-        cell.textLabel!.text = solutionName
+        let owner = TempSave.sharedInstance().solutionOwnerArray[indexPath.row]
         
         let solutionVoteCount = String(TempSave.sharedInstance().solutionVoteArray[indexPath.row])
         
-        cell.detailTextLabel!.text = "\(solutionVoteCount) solutions"
+        
+        cell.problemName.text = solutionName
+        cell.ownerName.text = "By: \(owner)"
+        cell.voteCount.text = solutionVoteCount
         
         return cell
         

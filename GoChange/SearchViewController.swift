@@ -14,6 +14,9 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var searchActivity: UIActivityIndicatorView!
    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -93,6 +96,20 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         }
         
     }
+    
+    
+    @IBAction func randomProblem(sender: UIButton) {
+        
+        _ = GetRandomProblem(){
+            (result) in
+            
+            print(result)
+            
+        }
+        
+        
+    }
+    
     
     
     func presentAlert(alertType:String){

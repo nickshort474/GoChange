@@ -86,42 +86,11 @@ class SearchController:NSObject{
         countArray = []
         
         
-        //TODO: need to conduct more string operations for different scenarios (multi word searches...)
-        
         let searchTerm = self.searchText
         let capitalisedTerm = searchTerm.capitalizedString
         let searchArray = searchTerm.componentsSeparatedByString(" ")
         
         
-        
-        // create count variable to hold location of found search terms
-       
-        /*
-        for value in returnedNameArray{
-            
-            
-            //test for search term
-            if (value.rangeOfString("\(searchTerm)") != nil){
-                
-                //if found add to matchedNameArray
-                matchedNameArray.append(value)
-                
-                // add location of matched item within returned array to count array
-                countArray.append(count)
-                
-            }
-                
-                // test for capitalized version of search term
-            else if(value.rangeOfString("\(capitalisedTerm)") != nil){
-                
-                matchedNameArray.append(value)
-                countArray.append(count)
-            }
-            
-            count += 1
-            
-        }
-        */
         
         var count = 0
         

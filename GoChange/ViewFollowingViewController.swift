@@ -163,15 +163,19 @@ class ViewFollowingViewController: UIViewController,UITextViewDelegate,UITextFie
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cellID = "solutionCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath) as! CustomTableViewCell
         
-        var solutionName:String = ""
-        solutionName = TempSave.sharedInstance().solutionNameArray[indexPath.row]
+        
+        let solutionName = TempSave.sharedInstance().solutionNameArray[indexPath.row]
+        let owner = TempSave.sharedInstance().solutionOwnerArray[indexPath.row]
+        
+        
         let voteCount:String = String(TempSave.sharedInstance().solutionVoteArray[indexPath.row])
         
-        cell.detailTextLabel!.text = "\(voteCount) votes"
-        cell.textLabel!.text = solutionName
         
+        cell.problemName.text = solutionName
+        cell.ownerName.text = "By: \(owner)"
+        cell.voteCount.text = voteCount
         return cell
         
     }

@@ -17,8 +17,6 @@ class ResultsViewController: UIViewController,UITableViewDelegate {
     var resultDetailArray:[String] = []
     var resultSolutionCountArray:[Int] = []
     
-    
-    //TODO: Display owner of problem somewhere
     var problemOwnerArray:[String] = []
     
     
@@ -46,13 +44,14 @@ class ResultsViewController: UIViewController,UITableViewDelegate {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cellID = "resultCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath) as! CustomTableViewCell
         
-        let problemName:String = self.resultNameArray[indexPath.row]
+       
         let solutionCount:String = String(self.resultSolutionCountArray[indexPath.row])
         
-        cell.textLabel!.text = problemName
-        cell.detailTextLabel!.text = "\(solutionCount) solutions"
+        cell.problemName.text = resultNameArray[indexPath.row]
+        cell.ownerName.text = "By: \(problemOwnerArray[indexPath.row])"
+        cell.voteCount.text = solutionCount
         
         return cell
         

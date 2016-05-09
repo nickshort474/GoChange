@@ -85,12 +85,13 @@ class FollowingViewController: UITableViewController,
     
     override func tableView(tableView:UITableView,cellForRowAtIndexPath indexPath:NSIndexPath) -> UITableViewCell{
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! CustomTableViewCell
         
         let object = fetchedResultsController.objectAtIndexPath(indexPath) as! Problem
         
-        cell.textLabel?.text = object.problemName
-        cell.detailTextLabel!.text = "Solutions:\(String(object.solutionCount))"
+        cell.problemName.text = object.problemName
+        cell.ownerName.text = "By: \(object.problemOwner)"
+        cell.voteCount.text = String(object.solutionCount)
         
         return cell
     }
