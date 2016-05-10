@@ -10,8 +10,8 @@ provides-dynamic-lookup:
 - "ownerName"
 - "problemName"
 depends-top-level:
-- "UILabel"
 - "UITableViewCell"
+- "UILabel"
 - "CustomTableViewCell"
 depends-member:
 - ["Ps9AnyObject", "init"]

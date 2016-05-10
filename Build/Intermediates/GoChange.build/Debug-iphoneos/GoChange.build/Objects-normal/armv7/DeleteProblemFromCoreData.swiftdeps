@@ -12,14 +12,14 @@ provides-dynamic-lookup:
 - "sharedContext"
 depends-top-level:
 - "NSObject"
+- !private "NSPredicate"
 - !private "StringLiteralType"
 - !private "CoreDataStackManager"
+- "DeleteProblemFromCoreData"
+- !private "Solution"
+- "NSManagedObjectContext"
 - !private "NSFetchRequest"
 - "Problem"
-- "NSManagedObjectContext"
-- "DeleteProblemFromCoreData"
-- !private "NSPredicate"
-- !private "Solution"
 depends-member:
 - !private ["Ps9AnyObject", "CoreDataStackManager"]
 - !private ["Ps9AnyObject", "NSFetchRequest"]

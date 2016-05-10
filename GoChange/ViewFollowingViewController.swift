@@ -67,7 +67,7 @@ class ViewFollowingViewController: UIViewController,UITextViewDelegate,UITextFie
         
                 
         
-        //Set up drop shadow for detailsField
+        //Set up drop shadow for solutionTable
         solutionTable.layer.borderColor = UIColor.clearColor().CGColor
         solutionTable.layer.shadowRadius = 0.5
         solutionTable.layer.shadowColor = GoChangeClient.Constants.customOrangeColor.CGColor

@@ -6,59 +6,59 @@ provides-nominal:
 provides-member:
 - ["C8GoChange27ViewFollowingViewController", ""]
 provides-dynamic-lookup:
-- "viewDidLoad"
-- "solutionTable"
-- "detailsField"
-- "unfollowProblemButton"
-- "solutionID"
-- "viewWillAppear"
-- "problemClicked"
-- "goBackHome"
 - "sendingController"
+- "solutionID"
 - "addSolutionClick"
-- "nameField"
+- "unfollowProblemButton"
+- "tableView"
+- "tableView"
+- "tableView"
+- "unfollowProblem"
+- "solutionTable"
+- "problemClicked"
+- "viewDidLoad"
+- "detailsField"
 - "problemIDArray"
 - "addASolutionButton"
-- "unfollowProblem"
-- "tableView"
-- "tableView"
-- "tableView"
 - "problemID"
+- "nameField"
+- "viewWillAppear"
+- "goBackHome"
 depends-top-level:
-- "Int"
-- !private "CustomTableViewCell"
-- !private "GoChangeClient"
-- "UITextView"
 - !private "RetrieveSolutionsFromFirebase"
-- "UITableView"
-- "ViewFollowingViewController"
-- "Bool"
-- "UITextField"
-- !private "UITextBorderStyle"
-- "NSIndexPath"
-- !private "BooleanLiteralType"
-- "String"
-- !private "RetrieveSolutions"
-- !private "TempSave"
-- !private "ViewIdeaViewController"
-- !private "UIBarButtonItem"
-- "UIButton"
-- !private "CGSizeMake"
-- !private "DeleteProblemFromCoreData"
-- !private "!="
-- "Problem"
-- !private "UIColor"
-- !private "=="
 - "UITableViewDelegate"
-- !private "RetrieveSolutionCountFirebase"
-- "UITextFieldDelegate"
-- "UITextViewDelegate"
+- !private "UITextBorderStyle"
+- !private "ViewIdeaViewController"
+- "String"
 - !private "print"
-- !private "StringLiteralType"
+- !private "DeleteProblemFromCoreData"
 - "UITableViewCell"
+- !private "CGSizeMake"
+- !private "GoChangeClient"
+- !private "BooleanLiteralType"
 - "UIViewController"
+- !private "RetrieveSolutions"
+- "UITextView"
+- "UITextViewDelegate"
+- "UITextFieldDelegate"
+- "UITableView"
+- !private "UIColor"
+- !private "RetrieveSolutionCountFirebase"
+- !private "=="
+- "Problem"
+- !private "UIBarButtonItem"
+- "Bool"
+- "NSIndexPath"
+- !private "!="
 - !private "UIBarButtonItemStyle"
+- !private "TempSave"
+- "UIButton"
 - !private "AddIdeaViewController"
+- !private "StringLiteralType"
+- "Int"
+- "UITextField"
+- "ViewFollowingViewController"
+- !private "CustomTableViewCell"
 depends-member:
 - !private ["C8GoChange21AddIdeaViewController", "problem"]
 - !private ["C8GoChange21AddIdeaViewController", "viewControllerStatus"]
@@ -196,6 +196,7 @@ depends-member:
 - !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
 - !private ["Ps21BitwiseOperationsType", "init"]
 - !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Sb", "deinit"]
 - !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
 - !private ["CSo7CALayer", "borderColor"]
@@ -322,6 +323,7 @@ depends-member:
 - ["Ps11CVarArgType", "viewWillAppear"]
 - !private ["Ps11CVarArgType", "voteCount"]
 - ["Ps11CVarArgType", ""]
+- !private ["Vs9Character", "deinit"]
 - !private ["Ps14CollectionType", "Generator"]
 - !private ["Ps14CollectionType", "Index"]
 - !private ["Ps14CollectionType", "SubSequence"]
@@ -572,6 +574,7 @@ depends-member:
 - !private ["C8GoChange19CustomTableViewCell", "problemName"]
 - !private ["C8GoChange19CustomTableViewCell", "voteCount"]
 - !private ["C8GoChange25DeleteProblemFromCoreData", "init"]
+- !private ["Sd", "deinit"]
 - !private ["Ps9Equatable", "CGColor"]
 - !private ["Ps9Equatable", "CGSizeMake"]
 - !private ["Ps9Equatable", "Constants"]
@@ -687,6 +690,7 @@ depends-member:
 - !private ["Ps9Equatable", "voteCount"]
 - ["Ps9Equatable", ""]
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Sf", "deinit"]
 - !private ["Ps16ForwardIndexType", "Distance"]
 - !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
 - !private ["Ps16ForwardIndexType", "init"]
@@ -819,6 +823,10 @@ depends-member:
 - !private ["Si", "IntegerLiteralType"]
 - !private ["Si", "deinit"]
 - !private ["Si", "init"]
+- !private ["Vs5Int16", "deinit"]
+- !private ["Vs5Int32", "deinit"]
+- !private ["Vs5Int64", "deinit"]
+- !private ["Vs4Int8", "deinit"]
 - !private ["Ps21IntegerArithmeticType", "Distance"]
 - !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
 - !private ["Ps21IntegerArithmeticType", "init"]
@@ -952,6 +960,7 @@ depends-member:
 - ["PSo8NSCoding", ""]
 - !private ["PSo9NSCopying", "CGColor"]
 - !private ["PSo9NSCopying", "clearColor"]
+- !private ["PSo9NSCopying", "init"]
 - !private ["PSo9NSCopying", "row"]
 - !private ["PSo26NSExtensionRequestHandling", "CGSizeMake"]
 - !private ["PSo26NSExtensionRequestHandling", "DeleteProblemFromCoreData"]
@@ -1034,6 +1043,7 @@ depends-member:
 - !private ["CSo15NSManagedObject", "problemID"]
 - !private ["CSo15NSManagedObject", "problemName"]
 - !private ["CSo15NSManagedObject", "solutionCount"]
+- !private ["PSo16NSMutableCopying", "init"]
 - !private ["CSo8NSNumber", "deinit"]
 - !private ["CSo8NSObject", "AddIdeaViewController"]
 - ["CSo8NSObject", "Bool"]
@@ -1265,7 +1275,9 @@ depends-member:
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "CGColor"]
 - !private ["PSo14NSSecureCoding", "clearColor"]
+- !private ["PSo14NSSecureCoding", "init"]
 - !private ["PSo14NSSecureCoding", "row"]
+- !private ["CSo8NSString", "init"]
 - !private ["Sq", "deinit"]
 - !private ["Ps16OutputStreamType", "init"]
 - !private ["C8GoChange7Problem", "problemDescription"]
@@ -2280,6 +2292,12 @@ depends-member:
 - ["CSo16UIViewController", "viewForZoomingInScrollView"]
 - ["CSo16UIViewController", "viewWillAppear"]
 - ["CSo16UIViewController", ""]
+- !private ["Su", "deinit"]
+- !private ["Vs6UInt16", "deinit"]
+- !private ["Vs6UInt32", "deinit"]
+- !private ["Vs6UInt64", "deinit"]
+- !private ["Vs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
 - !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
 - !private ["C8GoChange27ViewFollowingViewController", "AddIdeaViewController"]
 - ["C8GoChange27ViewFollowingViewController", "Bool"]
@@ -2453,6 +2471,7 @@ depends-nominal:
 - !private "PSo13CAMediaTiming"
 - !private "V12CoreGraphics7CGFloat"
 - "Ps11CVarArgType"
+- !private "Vs9Character"
 - !private "Ps14CollectionType"
 - !private "Ps10Comparable"
 - !private "VC8GoChange14GoChangeClient9Constants"
@@ -2460,8 +2479,10 @@ depends-nominal:
 - "Ps23CustomStringConvertible"
 - !private "C8GoChange19CustomTableViewCell"
 - !private "C8GoChange25DeleteProblemFromCoreData"
+- !private "Sd"
 - "Ps9Equatable"
 - !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
+- !private "Sf"
 - !private "Ps16ForwardIndexType"
 - !private "Ps13GeneratorType"
 - !private "C8GoChange14GoChangeClient"
@@ -2470,6 +2491,10 @@ depends-nominal:
 - !private "Ps9Indexable"
 - !private "Vs17IndexingGenerator"
 - !private "Si"
+- !private "Vs5Int16"
+- !private "Vs5Int32"
+- !private "Vs5Int64"
+- !private "Vs4Int8"
 - !private "Ps21IntegerArithmeticType"
 - !private "Ps25IntegerLiteralConvertible"
 - !private "Ps11IntegerType"
@@ -2482,10 +2507,12 @@ depends-nominal:
 - "PSo26NSExtensionRequestHandling"
 - !private "CSo11NSIndexPath"
 - !private "CSo15NSManagedObject"
+- !private "PSo16NSMutableCopying"
 - !private "CSo8NSNumber"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
 - !private "Sq"
 - !private "Ps16OutputStreamType"
 - !private "C8GoChange7Problem"
@@ -2541,6 +2568,12 @@ depends-nominal:
 - "PSo18UITraitEnvironment"
 - !private "CSo6UIView"
 - "CSo16UIViewController"
+- !private "Su"
+- !private "Vs6UInt16"
+- !private "Vs6UInt32"
+- !private "Vs6UInt64"
+- !private "Vs5UInt8"
+- !private "Sc"
 - !private "Ps31UnicodeScalarLiteralConvertible"
 - "C8GoChange27ViewFollowingViewController"
 - !private "C8GoChange22ViewIdeaViewController"

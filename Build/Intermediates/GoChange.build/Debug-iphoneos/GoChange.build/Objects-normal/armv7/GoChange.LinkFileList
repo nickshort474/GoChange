@@ -9,9 +9,9 @@
 /Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/SearchViewController.o
 /Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/RetrieveProblem.o
 /Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/ViewResultViewController.o
-/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/GetRandomProblem.o
 /Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/GoChangeConstants.o
 /Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/GoChangeClient.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/GetRecentlyAdded.o
 /Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/GoChangeConvenience.o
 /Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/loginViewController.o
 /Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/AppDelegate.o
@@ -35,5 +35,6 @@
 /Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/RetrieveSolutionsFromFirebase.o
 /Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/Problem.o
 /Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/WebViewController.o
+/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/FindRecentProblem.o
 /Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/Solution.o
 /Users/nickshort/Git/GoChangeCopy/Build/Intermediates/GoChange.build/Debug-iphoneos/GoChange.build/Objects-normal/armv7/RetrieveSolutionCountFirebase.o

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3618C41B1CE23E3A003102C1 /* FindRecentProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618C41A1CE23E3A003102C1 /* FindRecentProblem.swift */; };
+		3618C41D1CE2573E003102C1 /* GetRecentlyAdded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618C41C1CE2573E003102C1 /* GetRecentlyAdded.swift */; };
 		361A06401CB2CD450066C07C /* RetrieveAllNamesFromFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361A063F1CB2CD450066C07C /* RetrieveAllNamesFromFirebase.swift */; };
 		369A433F1CD2695C00D84A6B /* ViewIdeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A433E1CD2695C00D84A6B /* ViewIdeaViewController.swift */; };
 		369EF17D1C80C24600D8D46A /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369EF17C1C80C24600D8D46A /* Problem.swift */; };
@@ -50,7 +52,6 @@
 		36EB1EBA1CB42E9000EA0CC4 /* RetrieveDetailsFromFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EB1EB91CB42E9000EA0CC4 /* RetrieveDetailsFromFirebase.swift */; };
 		36F4EDD91CD4C39600F26996 /* CheckVote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F4EDD81CD4C39600F26996 /* CheckVote.swift */; };
 		36F6FE621CE0EE6200AA8F3B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36F6FE611CE0EE6200AA8F3B /* CoreData.framework */; };
-		36F6FE641CE1013B00AA8F3B /* GetRandomProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F6FE631CE1013B00AA8F3B /* GetRandomProblem.swift */; };
 		36F84D371CD75A78008DC722 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F84D361CD75A78008DC722 /* CustomTableViewCell.swift */; };
 		36F871B71CB81503006706BD /* RetrieveSolutionCountFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F871B61CB81503006706BD /* RetrieveSolutionCountFirebase.swift */; };
 		9E2E103AEFF6A95CA26B7D7A /* Pods_GoChange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0961F4BBEE6401B9B1D0DE43 /* Pods_GoChange.framework */; };
@@ -75,6 +76,8 @@
 
 /* Begin PBXFileReference section */
 		0961F4BBEE6401B9B1D0DE43 /* Pods_GoChange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoChange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3618C41A1CE23E3A003102C1 /* FindRecentProblem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindRecentProblem.swift; sourceTree = "<group>"; };
+		3618C41C1CE2573E003102C1 /* GetRecentlyAdded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRecentlyAdded.swift; sourceTree = "<group>"; };
 		361A063F1CB2CD450066C07C /* RetrieveAllNamesFromFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveAllNamesFromFirebase.swift; sourceTree = "<group>"; };
 		369A433E1CD2695C00D84A6B /* ViewIdeaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewIdeaViewController.swift; sourceTree = "<group>"; };
 		369EF17C1C80C24600D8D46A /* Problem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem.swift; sourceTree = "<group>"; };
@@ -124,7 +127,6 @@
 		36EB1EB91CB42E9000EA0CC4 /* RetrieveDetailsFromFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveDetailsFromFirebase.swift; sourceTree = "<group>"; };
 		36F4EDD81CD4C39600F26996 /* CheckVote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckVote.swift; sourceTree = "<group>"; };
 		36F6FE611CE0EE6200AA8F3B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		36F6FE631CE1013B00AA8F3B /* GetRandomProblem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRandomProblem.swift; sourceTree = "<group>"; };
 		36F84D361CD75A78008DC722 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		36F871B61CB81503006706BD /* RetrieveSolutionCountFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveSolutionCountFirebase.swift; sourceTree = "<group>"; };
 		76C1E409458E88730EC69107 /* Pods-GoChange.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoChange.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoChange/Pods-GoChange.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,8 +163,8 @@
 		36B03CC51C8DFBC700E9427D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				36F6FE631CE1013B00AA8F3B /* GetRandomProblem.swift */,
 				36D82C221CD3A56E00FDA274 /* SearchController.swift */,
+				3618C41A1CE23E3A003102C1 /* FindRecentProblem.swift */,
 				36CB44131CCF504A000AD3C5 /* ChangeOrgCode.swift */,
 				36D963F61CB556A1006F9D36 /* RetrieveSolutionsFromFirebase.swift */,
 				36D82C201CD37EC300FDA274 /* RetrieveNamesFromFirebase.swift */,
@@ -178,6 +180,7 @@
 				36E564A01CCCA79E008656EC /* SaveNewProblem.swift */,
 				36F4EDD81CD4C39600F26996 /* CheckVote.swift */,
 				36D214581CDA568C00C3142B /* DeleteProblemFromCoreData.swift */,
+				3618C41C1CE2573E003102C1 /* GetRecentlyAdded.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -517,9 +520,9 @@
 				36C37CB81C7A01AC002B4FB1 /* SearchViewController.swift in Sources */,
 				36E703EF1CAEE30C007C880C /* RetrieveProblem.swift in Sources */,
 				36DEEA491CC1612E000FF3A4 /* ViewResultViewController.swift in Sources */,
-				36F6FE641CE1013B00AA8F3B /* GetRandomProblem.swift in Sources */,
 				36C37CBF1C7A01C5002B4FB1 /* GoChangeConstants.swift in Sources */,
 				36C37CBE1C7A01C5002B4FB1 /* GoChangeClient.swift in Sources */,
+				3618C41D1CE2573E003102C1 /* GetRecentlyAdded.swift in Sources */,
 				36C37CC01C7A01C5002B4FB1 /* GoChangeConvenience.swift in Sources */,
 				36C37CB61C7A01AC002B4FB1 /* loginViewController.swift in Sources */,
 				36C37C6C1C7A00E3002B4FB1 /* AppDelegate.swift in Sources */,
@@ -544,6 +547,7 @@
 				36D963F71CB556A1006F9D36 /* RetrieveSolutionsFromFirebase.swift in Sources */,
 				369EF17D1C80C24600D8D46A /* Problem.swift in Sources */,
 				36C37CBA1C7A01AC002B4FB1 /* WebViewController.swift in Sources */,
+				3618C41B1CE23E3A003102C1 /* FindRecentProblem.swift in Sources */,
 				36D7CA071CA597F200A73176 /* Solution.swift in Sources */,
 				36F871B71CB81503006706BD /* RetrieveSolutionCountFirebase.swift in Sources */,
 			);

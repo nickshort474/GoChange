@@ -1,0 +1,241 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "TempSave"
+provides-nominal:
+- "C8GoChange8TempSave"
+provides-member:
+- ["C8GoChange8TempSave", ""]
+provides-dynamic-lookup:
+- "solutionIDArray"
+- "newSolutionIDArray"
+- "solutionNameArray"
+- "problemDetail"
+- "newSolutionVoteArray"
+- "newSolutionDetailArray"
+- "currentPetitionValue"
+- "solutionDetailArray"
+- "solutionVoteArray"
+- "sharedInstance"
+- "solutionOwnerArray"
+- "petitionURLArray"
+- "problemName"
+- "newPetitionURLArray"
+- "newSolutionNameArray"
+- "problemOwner"
+depends-top-level:
+- "Int"
+- "String"
+- "NSObject"
+- "TempSave"
+- "StringLiteralType"
+depends-member:
+- !private ["Ps9AnyObject", "TempSave"]
+- ["Ps9AnyObject", "currentPetitionValue"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "newPetitionURLArray"]
+- ["Ps9AnyObject", "newSolutionDetailArray"]
+- ["Ps9AnyObject", "newSolutionIDArray"]
+- ["Ps9AnyObject", "newSolutionNameArray"]
+- ["Ps9AnyObject", "newSolutionVoteArray"]
+- ["Ps9AnyObject", "petitionURLArray"]
+- ["Ps9AnyObject", "problemDetail"]
+- ["Ps9AnyObject", "problemName"]
+- ["Ps9AnyObject", "problemOwner"]
+- ["Ps9AnyObject", "sharedInstance"]
+- ["Ps9AnyObject", "solutionDetailArray"]
+- ["Ps9AnyObject", "solutionIDArray"]
+- ["Ps9AnyObject", "solutionNameArray"]
+- ["Ps9AnyObject", "solutionOwnerArray"]
+- ["Ps9AnyObject", "solutionVoteArray"]
+- ["Ps9AnyObject", ""]
+- !private ["Ps11CVarArgType", "TempSave"]
+- ["Ps11CVarArgType", "currentPetitionValue"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "newPetitionURLArray"]
+- ["Ps11CVarArgType", "newSolutionDetailArray"]
+- ["Ps11CVarArgType", "newSolutionIDArray"]
+- ["Ps11CVarArgType", "newSolutionNameArray"]
+- ["Ps11CVarArgType", "newSolutionVoteArray"]
+- ["Ps11CVarArgType", "petitionURLArray"]
+- ["Ps11CVarArgType", "problemDetail"]
+- ["Ps11CVarArgType", "problemName"]
+- ["Ps11CVarArgType", "problemOwner"]
+- ["Ps11CVarArgType", "sharedInstance"]
+- ["Ps11CVarArgType", "solutionDetailArray"]
+- ["Ps11CVarArgType", "solutionIDArray"]
+- ["Ps11CVarArgType", "solutionNameArray"]
+- ["Ps11CVarArgType", "solutionOwnerArray"]
+- ["Ps11CVarArgType", "solutionVoteArray"]
+- ["Ps11CVarArgType", ""]
+- !private ["Ps28CustomDebugStringConvertible", "TempSave"]
+- ["Ps28CustomDebugStringConvertible", "currentPetitionValue"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "newPetitionURLArray"]
+- ["Ps28CustomDebugStringConvertible", "newSolutionDetailArray"]
+- ["Ps28CustomDebugStringConvertible", "newSolutionIDArray"]
+- ["Ps28CustomDebugStringConvertible", "newSolutionNameArray"]
+- ["Ps28CustomDebugStringConvertible", "newSolutionVoteArray"]
+- ["Ps28CustomDebugStringConvertible", "petitionURLArray"]
+- ["Ps28CustomDebugStringConvertible", "problemDetail"]
+- ["Ps28CustomDebugStringConvertible", "problemName"]
+- ["Ps28CustomDebugStringConvertible", "problemOwner"]
+- ["Ps28CustomDebugStringConvertible", "sharedInstance"]
+- ["Ps28CustomDebugStringConvertible", "solutionDetailArray"]
+- ["Ps28CustomDebugStringConvertible", "solutionIDArray"]
+- ["Ps28CustomDebugStringConvertible", "solutionNameArray"]
+- ["Ps28CustomDebugStringConvertible", "solutionOwnerArray"]
+- ["Ps28CustomDebugStringConvertible", "solutionVoteArray"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "TempSave"]
+- ["Ps23CustomStringConvertible", "currentPetitionValue"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "newPetitionURLArray"]
+- ["Ps23CustomStringConvertible", "newSolutionDetailArray"]
+- ["Ps23CustomStringConvertible", "newSolutionIDArray"]
+- ["Ps23CustomStringConvertible", "newSolutionNameArray"]
+- ["Ps23CustomStringConvertible", "newSolutionVoteArray"]
+- ["Ps23CustomStringConvertible", "petitionURLArray"]
+- ["Ps23CustomStringConvertible", "problemDetail"]
+- ["Ps23CustomStringConvertible", "problemName"]
+- ["Ps23CustomStringConvertible", "problemOwner"]
+- ["Ps23CustomStringConvertible", "sharedInstance"]
+- ["Ps23CustomStringConvertible", "solutionDetailArray"]
+- ["Ps23CustomStringConvertible", "solutionIDArray"]
+- ["Ps23CustomStringConvertible", "solutionNameArray"]
+- ["Ps23CustomStringConvertible", "solutionOwnerArray"]
+- ["Ps23CustomStringConvertible", "solutionVoteArray"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "TempSave"]
+- ["Ps9Equatable", "currentPetitionValue"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "newPetitionURLArray"]
+- ["Ps9Equatable", "newSolutionDetailArray"]
+- ["Ps9Equatable", "newSolutionIDArray"]
+- ["Ps9Equatable", "newSolutionNameArray"]
+- ["Ps9Equatable", "newSolutionVoteArray"]
+- ["Ps9Equatable", "petitionURLArray"]
+- ["Ps9Equatable", "problemDetail"]
+- ["Ps9Equatable", "problemName"]
+- ["Ps9Equatable", "problemOwner"]
+- ["Ps9Equatable", "sharedInstance"]
+- ["Ps9Equatable", "solutionDetailArray"]
+- ["Ps9Equatable", "solutionIDArray"]
+- ["Ps9Equatable", "solutionNameArray"]
+- ["Ps9Equatable", "solutionOwnerArray"]
+- ["Ps9Equatable", "solutionVoteArray"]
+- ["Ps9Equatable", ""]
+- !private ["Ps8Hashable", "TempSave"]
+- ["Ps8Hashable", "currentPetitionValue"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "newPetitionURLArray"]
+- ["Ps8Hashable", "newSolutionDetailArray"]
+- ["Ps8Hashable", "newSolutionIDArray"]
+- ["Ps8Hashable", "newSolutionNameArray"]
+- ["Ps8Hashable", "newSolutionVoteArray"]
+- ["Ps8Hashable", "petitionURLArray"]
+- ["Ps8Hashable", "problemDetail"]
+- ["Ps8Hashable", "problemName"]
+- ["Ps8Hashable", "problemOwner"]
+- ["Ps8Hashable", "sharedInstance"]
+- ["Ps8Hashable", "solutionDetailArray"]
+- ["Ps8Hashable", "solutionIDArray"]
+- ["Ps8Hashable", "solutionNameArray"]
+- ["Ps8Hashable", "solutionOwnerArray"]
+- ["Ps8Hashable", "solutionVoteArray"]
+- ["Ps8Hashable", ""]
+- ["CSo8NSObject", "Int"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "TempSave"]
+- ["CSo8NSObject", "currentPetitionValue"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "newPetitionURLArray"]
+- ["CSo8NSObject", "newSolutionDetailArray"]
+- ["CSo8NSObject", "newSolutionIDArray"]
+- ["CSo8NSObject", "newSolutionNameArray"]
+- ["CSo8NSObject", "newSolutionVoteArray"]
+- ["CSo8NSObject", "petitionURLArray"]
+- ["CSo8NSObject", "problemDetail"]
+- ["CSo8NSObject", "problemName"]
+- ["CSo8NSObject", "problemOwner"]
+- ["CSo8NSObject", "sharedInstance"]
+- ["CSo8NSObject", "solutionDetailArray"]
+- ["CSo8NSObject", "solutionIDArray"]
+- ["CSo8NSObject", "solutionNameArray"]
+- ["CSo8NSObject", "solutionOwnerArray"]
+- ["CSo8NSObject", "solutionVoteArray"]
+- ["CSo8NSObject", ""]
+- !private ["PSo16NSObjectProtocol", "TempSave"]
+- ["PSo16NSObjectProtocol", "currentPetitionValue"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "newPetitionURLArray"]
+- ["PSo16NSObjectProtocol", "newSolutionDetailArray"]
+- ["PSo16NSObjectProtocol", "newSolutionIDArray"]
+- ["PSo16NSObjectProtocol", "newSolutionNameArray"]
+- ["PSo16NSObjectProtocol", "newSolutionVoteArray"]
+- ["PSo16NSObjectProtocol", "petitionURLArray"]
+- ["PSo16NSObjectProtocol", "problemDetail"]
+- ["PSo16NSObjectProtocol", "problemName"]
+- ["PSo16NSObjectProtocol", "problemOwner"]
+- ["PSo16NSObjectProtocol", "sharedInstance"]
+- ["PSo16NSObjectProtocol", "solutionDetailArray"]
+- ["PSo16NSObjectProtocol", "solutionIDArray"]
+- ["PSo16NSObjectProtocol", "solutionNameArray"]
+- ["PSo16NSObjectProtocol", "solutionOwnerArray"]
+- ["PSo16NSObjectProtocol", "solutionVoteArray"]
+- ["PSo16NSObjectProtocol", ""]
+- ["C8GoChange8TempSave", "Int"]
+- ["C8GoChange8TempSave", "String"]
+- ["C8GoChange8TempSave", "TempSave"]
+- ["C8GoChange8TempSave", "currentPetitionValue"]
+- ["C8GoChange8TempSave", "deinit"]
+- ["C8GoChange8TempSave", "init"]
+- ["C8GoChange8TempSave", "newPetitionURLArray"]
+- ["C8GoChange8TempSave", "newSolutionDetailArray"]
+- ["C8GoChange8TempSave", "newSolutionIDArray"]
+- ["C8GoChange8TempSave", "newSolutionNameArray"]
+- ["C8GoChange8TempSave", "newSolutionVoteArray"]
+- ["C8GoChange8TempSave", "petitionURLArray"]
+- ["C8GoChange8TempSave", "problemDetail"]
+- ["C8GoChange8TempSave", "problemName"]
+- ["C8GoChange8TempSave", "problemOwner"]
+- ["C8GoChange8TempSave", "sharedInstance"]
+- ["C8GoChange8TempSave", "solutionDetailArray"]
+- ["C8GoChange8TempSave", "solutionIDArray"]
+- ["C8GoChange8TempSave", "solutionNameArray"]
+- ["C8GoChange8TempSave", "solutionOwnerArray"]
+- ["C8GoChange8TempSave", "solutionVoteArray"]
+depends-nominal:
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "C8GoChange8TempSave"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
+- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FirebaseServerValue.h"
+- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FTransactionResult.h"
+- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FMutableData.h"
+- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FirebaseApp.h"
+- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FQuery.h"
+- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase.h"
+- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FEventType.h"
+- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FDataSnapshot.h"
+- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FConfig.h"
+- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthType.h"
+- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
+- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
+- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
+interface-hash: "e83739b508cf2a162cf2236e3b94253d"

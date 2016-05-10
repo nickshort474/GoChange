@@ -89,6 +89,8 @@ class FollowingViewController: UITableViewController,
         
         let object = fetchedResultsController.objectAtIndexPath(indexPath) as! Problem
         
+        
+        
         cell.problemName.text = object.problemName
         cell.ownerName.text = "By: \(object.problemOwner)"
         cell.voteCount.text = String(object.solutionCount)
@@ -104,10 +106,6 @@ class FollowingViewController: UITableViewController,
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewFollowingViewController") as! ViewFollowingViewController
         
         let navigationController = self.navigationController
-        
-        //controller.sendingController = "following"
-        
-        
         controller.problemClicked = fetchedResultsController.objectAtIndexPath(indexPath) as! Problem
         controller.sendingController = "Following"
         

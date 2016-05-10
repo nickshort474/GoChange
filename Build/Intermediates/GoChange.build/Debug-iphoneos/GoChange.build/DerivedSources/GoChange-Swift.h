@@ -224,6 +224,16 @@ SWIFT_CLASS("_TtC8GoChange25DeleteProblemFromCoreData")
 @property (nonatomic, strong) NSManagedObjectContext * _Nonnull sharedContext;
 @end
 
+@class Firebase;
+
+SWIFT_CLASS("_TtC8GoChange17FindRecentProblem")
+@interface FindRecentProblem : NSObject
+@property (nonatomic, strong) Firebase * _Null_unspecified baseRef;
+@property (nonatomic, copy) NSString * _Null_unspecified problemKey;
+- (nonnull instancetype)initWithProblemName:(NSString * _Nonnull)problemName completionHandler:(void (^ _Nonnull)(id _Nonnull, id _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
+- (void)getProblemDetail:(void (^ _Nonnull)(id _Nonnull))completionHandler;
+@end
+
 @class NSFetchedResultsController;
 
 SWIFT_CLASS("_TtC8GoChange23FollowingViewController")
@@ -245,6 +255,14 @@ SWIFT_CLASS("_TtC8GoChange23FollowingViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class FDataSnapshot;
+
+SWIFT_CLASS("_TtC8GoChange16GetRecentlyAdded")
+@interface GetRecentlyAdded : NSObject
+@property (nonatomic, strong) Firebase * _Null_unspecified ref;
+- (nonnull instancetype)initWithCompletionHandler:(void (^ _Nonnull)(FDataSnapshot * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC8GoChange14GoChangeClient")
 @interface GoChangeClient : NSObject
@@ -264,7 +282,6 @@ SWIFT_CLASS("_TtC8GoChange14GoChangeClient")
 - (void)parseJSON:(NSData * _Nonnull)data completionHandler:(void (^ _Nonnull)(id _Null_unspecified, NSError * _Nullable))completionHandler;
 @end
 
-@class Firebase;
 @class UIActivityIndicatorView;
 
 SWIFT_CLASS("_TtC8GoChange18HomeViewController")
@@ -320,7 +337,6 @@ SWIFT_CLASS("_TtC8GoChange21ResultsViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class FDataSnapshot;
 
 SWIFT_CLASS("_TtC8GoChange28RetrieveAllNamesFromFirebase")
 @interface RetrieveAllNamesFromFirebase : NSObject
@@ -448,11 +464,28 @@ SWIFT_CLASS("_TtC8GoChange20SearchViewController")
 @interface SearchViewController : UIViewController <UITextFieldDelegate>
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified searchTextField;
 @property (nonatomic, weak) IBOutlet UIActivityIndicatorView * _Null_unspecified searchActivity;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified recentProblem1;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified recentProblem2;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified recentProblem3;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified recentProblem4;
+@property (nonatomic, copy) NSString * _Null_unspecified problemName;
+@property (nonatomic, copy) NSString * _Null_unspecified problemDetail;
+@property (nonatomic, copy) NSString * _Null_unspecified problemOwner;
+@property (nonatomic, copy) NSString * _Null_unspecified problemID;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull nameArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull refArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull matchedProblemArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull problemsNotInCoreData;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (IBAction)homeButtonClick:(UIButton * _Nonnull)sender;
 - (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField;
 - (IBAction)searchForResults:(UIButton * _Nonnull)sender;
+- (IBAction)problem1Click:(UIButton * _Nonnull)sender;
+- (IBAction)problem2Click:(UIButton * _Nonnull)sender;
+- (IBAction)problem3Click:(UIButton * _Nonnull)sender;
+- (IBAction)problem4Click:(UIButton * _Nonnull)sender;
+- (void)presentRecentProblem;
 - (void)presentAlert:(NSString * _Nonnull)alertType;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;

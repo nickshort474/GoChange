@@ -701,10 +701,20 @@
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alj-mr-9B7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="487" height="70"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="6S2-3i-eEz" firstAttribute="leading" secondItem="37c-mr-XJe" secondAttribute="leading" id="9rZ-4r-Iv0"/>
+                                                <constraint firstItem="alj-mr-9B7" firstAttribute="top" secondItem="37c-mr-XJe" secondAttribute="top" id="Vxp-pU-v2D"/>
+                                                <constraint firstAttribute="trailing" secondItem="alj-mr-9B7" secondAttribute="trailing" id="dWk-Px-daH"/>
+                                                <constraint firstItem="6S2-3i-eEz" firstAttribute="height" secondItem="alj-mr-9B7" secondAttribute="height" multiplier="0.2" id="dde-cQ-5d5"/>
+                                                <constraint firstItem="alj-mr-9B7" firstAttribute="leading" secondItem="37c-mr-XJe" secondAttribute="leading" id="fCP-SM-M7n"/>
                                                 <constraint firstAttribute="trailing" secondItem="6S2-3i-eEz" secondAttribute="trailing" id="h6G-Un-4hB"/>
                                                 <constraint firstAttribute="bottom" secondItem="6S2-3i-eEz" secondAttribute="bottom" id="wj7-6F-G6G"/>
                                             </constraints>
@@ -733,12 +743,6 @@
                                                 <constraint firstItem="5vS-L4-EKX" firstAttribute="centerX" secondItem="YJh-CN-DWi" secondAttribute="centerX" id="mBe-lI-NZt"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alj-mr-9B7">
-                                            <rect key="frame" x="8" y="8" width="487" height="57"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="YJh-CN-DWi" firstAttribute="top" secondItem="k0p-MA-9cr" secondAttribute="topMargin" id="3kZ-vY-Oyu"/>
@@ -856,16 +860,49 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="S0q-TM-cPm">
                                 <rect key="frame" x="290" y="290" width="20" height="20"/>
                             </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7N-Bm-2Te">
-                                <rect key="frame" x="202" y="355" width="197" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Give me somthing to solve!">
-                                    <color key="titleColor" red="0.99215686270000003" green="0.59999999999999998" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="randomProblem:" destination="gbE-7d-A1C" eventType="touchUpInside" id="kX4-Tm-qdl"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recently added problems:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0JP-nK-ngS">
+                                <rect key="frame" x="193" y="365" width="214" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.99215686270000003" green="0.59999999999999998" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UMd-UD-XG7">
+                                <rect key="frame" x="160" y="396" width="281" height="112"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7E-lV-QTy">
+                                        <rect key="frame" x="0.0" y="0.0" width="281" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="What can I do to help the environment?"/>
+                                        <connections>
+                                            <action selector="problem1Click:" destination="gbE-7d-A1C" eventType="touchUpInside" id="rbR-8K-XcJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7iq-7K-KwT">
+                                        <rect key="frame" x="0.0" y="28" width="281" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="How can we stop the killing of whales?"/>
+                                        <connections>
+                                            <action selector="problem2Click:" destination="gbE-7d-A1C" eventType="touchUpInside" id="q7j-Nz-UB0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wjc-pC-qhg">
+                                        <rect key="frame" x="0.0" y="56" width="281" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="I want to give up smoking, please help."/>
+                                        <connections>
+                                            <action selector="problem3Click:" destination="gbE-7d-A1C" eventType="touchUpInside" id="PNt-qW-yOJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5T6-kx-IQI">
+                                        <rect key="frame" x="0.0" y="84" width="281" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="Need motivation to exercise, any suggestions?"/>
+                                        <connections>
+                                            <action selector="problem4Click:" destination="gbE-7d-A1C" eventType="touchUpInside" id="ubD-0V-uJ1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -873,12 +910,14 @@
                             <constraint firstItem="Ytw-U7-eT7" firstAttribute="centerY" secondItem="mAf-Ns-S62" secondAttribute="centerY" id="888-cw-eHQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ytw-U7-eT7" secondAttribute="trailing" constant="25" id="9LL-YE-i4i"/>
                             <constraint firstItem="Ytw-U7-eT7" firstAttribute="leading" secondItem="mAf-Ns-S62" secondAttribute="leadingMargin" constant="25" id="Ei6-Fx-8MI"/>
-                            <constraint firstItem="g7N-Bm-2Te" firstAttribute="centerX" secondItem="mAf-Ns-S62" secondAttribute="centerX" id="GWg-mH-pm6"/>
                             <constraint firstItem="S0q-TM-cPm" firstAttribute="centerX" secondItem="mAf-Ns-S62" secondAttribute="centerX" id="P1J-Of-NrP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HZe-aD-yw4" secondAttribute="trailing" constant="-20" id="RoZ-0q-G7Z"/>
+                            <constraint firstItem="0JP-nK-ngS" firstAttribute="top" secondItem="Ytw-U7-eT7" secondAttribute="bottom" constant="50" id="d1Q-j3-Fl9"/>
+                            <constraint firstItem="0JP-nK-ngS" firstAttribute="centerX" secondItem="mAf-Ns-S62" secondAttribute="centerX" id="dwc-41-lJr"/>
+                            <constraint firstItem="UMd-UD-XG7" firstAttribute="centerX" secondItem="mAf-Ns-S62" secondAttribute="centerX" id="fEQ-ou-ROM"/>
+                            <constraint firstItem="UMd-UD-XG7" firstAttribute="top" secondItem="0JP-nK-ngS" secondAttribute="bottom" constant="10" id="giT-Zi-bVq"/>
                             <constraint firstItem="ZLV-OO-q2E" firstAttribute="top" secondItem="HZe-aD-yw4" secondAttribute="bottom" id="hV9-jC-JoL"/>
                             <constraint firstItem="Ytw-U7-eT7" firstAttribute="centerX" secondItem="mAf-Ns-S62" secondAttribute="centerX" id="iz7-fb-iEf"/>
-                            <constraint firstItem="g7N-Bm-2Te" firstAttribute="top" secondItem="Ytw-U7-eT7" secondAttribute="bottom" constant="40" id="uHz-D2-BBc"/>
                             <constraint firstItem="HZe-aD-yw4" firstAttribute="leading" secondItem="mAf-Ns-S62" secondAttribute="leadingMargin" constant="-20" id="vFD-Mu-e46"/>
                         </constraints>
                     </view>
@@ -896,6 +935,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="recentProblem1" destination="M7E-lV-QTy" id="UJv-p1-0BJ"/>
+                        <outlet property="recentProblem2" destination="7iq-7K-KwT" id="VZB-un-T9n"/>
+                        <outlet property="recentProblem3" destination="Wjc-pC-qhg" id="dno-Gk-6N5"/>
+                        <outlet property="recentProblem4" destination="5T6-kx-IQI" id="GgC-3z-Ai2"/>
                         <outlet property="searchActivity" destination="S0q-TM-cPm" id="NYc-22-vQV"/>
                         <outlet property="searchTextField" destination="Ytw-U7-eT7" id="qHk-b4-wkt"/>
                     </connections>
@@ -1267,7 +1310,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rnd-2x-Pzn">
                                                             <rect key="frame" x="8" y="8" width="473" height="73"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4s-jt-smc">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4s-jt-smc">
                                                                     <rect key="frame" x="0.0" y="0.0" width="473" height="61"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
