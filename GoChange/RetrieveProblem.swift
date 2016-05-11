@@ -12,7 +12,7 @@ import CoreData
 class RetrieveProblem:NSObject{
     
     
-    init(problemID:String,completionHandler:(result:Problem)-> Void){
+    init(problemID:String,completionHandler:(problemName:String,problemID:String)-> Void){
        super.init()
         
        
@@ -23,10 +23,17 @@ class RetrieveProblem:NSObject{
         
         do{
            let results =  try sharedContext.executeFetchRequest(request) as! [Problem]
+            
             if let entity = results.first{
                 
-               completionHandler(result:entity)
+               let problemName = entity.problemName
+               let problemID = entity.problemID
+               
+                completionHandler(problemName:problemName,problemID:problemID)
                 
+            }else{
+                print("no result")
+                completionHandler(problemName:"",problemID:"")
             }
             
         }catch{

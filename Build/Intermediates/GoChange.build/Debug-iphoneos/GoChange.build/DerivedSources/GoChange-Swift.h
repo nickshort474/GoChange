@@ -364,7 +364,7 @@ SWIFT_CLASS("_TtC8GoChange25RetrieveNamesFromFirebase")
 
 SWIFT_CLASS("_TtC8GoChange15RetrieveProblem")
 @interface RetrieveProblem : NSObject
-- (nonnull instancetype)initWithProblemID:(NSString * _Nonnull)problemID completionHandler:(void (^ _Nonnull)(Problem * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithProblemID:(NSString * _Nonnull)problemID completionHandler:(void (^ _Nonnull)(NSString * _Nonnull, NSString * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
 @property (nonatomic, strong) NSManagedObjectContext * _Nonnull sharedContext;
 @end
 
@@ -459,32 +459,29 @@ SWIFT_CLASS("_TtC8GoChange16SearchController")
 - (void)checkIfInCoreData;
 @end
 
+@class UIStackView;
 
 SWIFT_CLASS("_TtC8GoChange20SearchViewController")
 @interface SearchViewController : UIViewController <UITextFieldDelegate>
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified searchTextField;
 @property (nonatomic, weak) IBOutlet UIActivityIndicatorView * _Null_unspecified searchActivity;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified recentProblem1;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified recentProblem2;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified recentProblem3;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified recentProblem4;
+@property (nonatomic, weak) IBOutlet UIStackView * _Null_unspecified recentProblemStack;
 @property (nonatomic, copy) NSString * _Null_unspecified problemName;
 @property (nonatomic, copy) NSString * _Null_unspecified problemDetail;
 @property (nonatomic, copy) NSString * _Null_unspecified problemOwner;
 @property (nonatomic, copy) NSString * _Null_unspecified problemID;
-@property (nonatomic, copy) NSArray<NSString *> * _Nonnull nameArray;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull recentNameArray;
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull refArray;
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull matchedProblemArray;
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull problemsNotInCoreData;
 - (void)viewDidLoad;
-- (void)didReceiveMemoryWarning;
+- (void)viewWillAppear:(BOOL)animated;
+- (void)compareArrays;
+- (void)createButtons:(NSString * _Nonnull)name;
 - (IBAction)homeButtonClick:(UIButton * _Nonnull)sender;
 - (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField;
 - (IBAction)searchForResults:(UIButton * _Nonnull)sender;
-- (IBAction)problem1Click:(UIButton * _Nonnull)sender;
-- (IBAction)problem2Click:(UIButton * _Nonnull)sender;
-- (IBAction)problem3Click:(UIButton * _Nonnull)sender;
-- (IBAction)problem4Click:(UIButton * _Nonnull)sender;
+- (void)buttonClick:(UIButton * _Nonnull)sender;
 - (void)presentRecentProblem;
 - (void)presentAlert:(NSString * _Nonnull)alertType;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;

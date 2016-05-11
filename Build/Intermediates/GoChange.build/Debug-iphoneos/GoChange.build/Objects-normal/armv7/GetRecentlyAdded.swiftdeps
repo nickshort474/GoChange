@@ -8,39 +8,39 @@ provides-member:
 provides-dynamic-lookup:
 - "ref"
 depends-top-level:
+- !private "print"
+- "Void"
+- "StringLiteralType"
+- "Firebase"
 - "NSObject"
 - "FDataSnapshot"
-- "StringLiteralType"
-- "Void"
-- !private "print"
 - "GetRecentlyAdded"
-- "Firebase"
 depends-member:
 - ["Ps9AnyObject", "Firebase"]
 - !private ["Ps9AnyObject", "description"]
 - ["Ps9AnyObject", "init"]
-- !private ["Ps9AnyObject", "observeEventType"]
+- !private ["Ps9AnyObject", "observeSingleEventOfType"]
 - !private ["Ps9AnyObject", "print"]
 - ["Ps9AnyObject", "ref"]
 - ["Ps9AnyObject", ""]
 - ["Ps11CVarArgType", "Firebase"]
 - !private ["Ps11CVarArgType", "description"]
 - ["Ps11CVarArgType", "init"]
-- !private ["Ps11CVarArgType", "observeEventType"]
+- !private ["Ps11CVarArgType", "observeSingleEventOfType"]
 - !private ["Ps11CVarArgType", "print"]
 - ["Ps11CVarArgType", "ref"]
 - ["Ps11CVarArgType", ""]
 - ["Ps28CustomDebugStringConvertible", "Firebase"]
 - !private ["Ps28CustomDebugStringConvertible", "description"]
 - ["Ps28CustomDebugStringConvertible", "init"]
-- !private ["Ps28CustomDebugStringConvertible", "observeEventType"]
+- !private ["Ps28CustomDebugStringConvertible", "observeSingleEventOfType"]
 - !private ["Ps28CustomDebugStringConvertible", "print"]
 - ["Ps28CustomDebugStringConvertible", "ref"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - ["Ps23CustomStringConvertible", "Firebase"]
 - !private ["Ps23CustomStringConvertible", "description"]
 - ["Ps23CustomStringConvertible", "init"]
-- !private ["Ps23CustomStringConvertible", "observeEventType"]
+- !private ["Ps23CustomStringConvertible", "observeSingleEventOfType"]
 - !private ["Ps23CustomStringConvertible", "print"]
 - ["Ps23CustomStringConvertible", "ref"]
 - ["Ps23CustomStringConvertible", ""]
@@ -48,16 +48,16 @@ depends-member:
 - !private ["Ps9Equatable", "Value"]
 - !private ["Ps9Equatable", "description"]
 - ["Ps9Equatable", "init"]
-- !private ["Ps9Equatable", "observeEventType"]
+- !private ["Ps9Equatable", "observeSingleEventOfType"]
 - !private ["Ps9Equatable", "print"]
 - ["Ps9Equatable", "ref"]
 - ["Ps9Equatable", ""]
 - !private ["Ps9ErrorType", "description"]
 - !private ["OSC10FEventType", "Value"]
 - ["CSo6FQuery", "init"]
-- !private ["CSo6FQuery", "observeEventType"]
+- !private ["CSo6FQuery", "observeSingleEventOfType"]
 - ["CSo8Firebase", "init"]
-- !private ["CSo8Firebase", "observeEventType"]
+- !private ["CSo8Firebase", "observeSingleEventOfType"]
 - ["C8GoChange16GetRecentlyAdded", "FDataSnapshot"]
 - ["C8GoChange16GetRecentlyAdded", "Firebase"]
 - ["C8GoChange16GetRecentlyAdded", "Void"]
@@ -69,7 +69,7 @@ depends-member:
 - !private ["Ps8Hashable", "Value"]
 - !private ["Ps8Hashable", "description"]
 - ["Ps8Hashable", "init"]
-- !private ["Ps8Hashable", "observeEventType"]
+- !private ["Ps8Hashable", "observeSingleEventOfType"]
 - !private ["Ps8Hashable", "print"]
 - ["Ps8Hashable", "ref"]
 - ["Ps8Hashable", ""]
@@ -82,14 +82,14 @@ depends-member:
 - ["CSo8NSObject", "Void"]
 - !private ["CSo8NSObject", "description"]
 - ["CSo8NSObject", "init"]
-- !private ["CSo8NSObject", "observeEventType"]
+- !private ["CSo8NSObject", "observeSingleEventOfType"]
 - !private ["CSo8NSObject", "print"]
 - ["CSo8NSObject", "ref"]
 - ["CSo8NSObject", ""]
 - ["PSo16NSObjectProtocol", "Firebase"]
 - !private ["PSo16NSObjectProtocol", "description"]
 - ["PSo16NSObjectProtocol", "init"]
-- !private ["PSo16NSObjectProtocol", "observeEventType"]
+- !private ["PSo16NSObjectProtocol", "observeSingleEventOfType"]
 - !private ["PSo16NSObjectProtocol", "print"]
 - ["PSo16NSObjectProtocol", "ref"]
 - ["PSo16NSObjectProtocol", ""]

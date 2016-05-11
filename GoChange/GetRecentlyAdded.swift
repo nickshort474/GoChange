@@ -18,7 +18,7 @@ class GetRecentlyAdded:NSObject{
         super.init()
         
         
-        ref.observeEventType(.Value, withBlock: {snapshot in
+        ref.observeSingleEventOfType(.Value, withBlock: {snapshot in
             
             
             completionHandler(result: snapshot)

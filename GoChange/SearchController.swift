@@ -195,9 +195,10 @@ class SearchController:NSObject{
         for i in 0 ..< matchedRefArray.count{
             
             _ = RetrieveProblem(problemID: matchedRefArray[i] ){
-                (result) in
+                (resultName,resultID) in
                 
-                followedRefArray.append(result.problemID)
+                followedRefArray.append(resultID)
+                
             }
             
         }
