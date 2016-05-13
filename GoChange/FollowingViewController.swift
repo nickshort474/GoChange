@@ -44,17 +44,14 @@ class FollowingViewController: UITableViewController,
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
+    // get reference to managed object context
     lazy var sharedContext:NSManagedObjectContext = {
           return CoreDataStackManager.sharedInstance().managedObjectContext
     }()
     
     
-    
+    //setup fetched results controller
     lazy var fetchedResultsController:NSFetchedResultsController = {
        
         var fetchRequest = NSFetchRequest(entityName: "Problem")
@@ -86,10 +83,7 @@ class FollowingViewController: UITableViewController,
     override func tableView(tableView:UITableView,cellForRowAtIndexPath indexPath:NSIndexPath) -> UITableViewCell{
         
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! CustomTableViewCell
-        
         let object = fetchedResultsController.objectAtIndexPath(indexPath) as! Problem
-        
-        
         
         cell.problemName.text = object.problemName
         cell.ownerName.text = "By: \(object.problemOwner)"

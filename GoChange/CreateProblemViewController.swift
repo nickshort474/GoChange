@@ -94,7 +94,7 @@ class CreateProblemViewController: UIViewController,UITextViewDelegate,UITextFie
         
     }
     
-    
+    //get reference to managed object context
     lazy var sharedContext:NSManagedObjectContext = {
         return CoreDataStackManager.sharedInstance().managedObjectContext
     }()
@@ -171,8 +171,6 @@ class CreateProblemViewController: UIViewController,UITextViewDelegate,UITextFie
     func textFieldDidBeginEditing(textField: UITextField) {
         
         
-        //TODO: Disable editing of fields until other field plus button clicked?
-        
         detailsField.selectable = false
         detailsField.editable = false
         
@@ -232,7 +230,7 @@ class CreateProblemViewController: UIViewController,UITextViewDelegate,UITextFie
         var solutionName:String = ""
         solutionName = TempSave.sharedInstance().solutionNameArray[indexPath.row]
         
-        //cell.textLabel!.text = solutionName
+        
         cell.problemName.text = solutionName
         
         let username = NSUserDefaults.standardUserDefaults().valueForKey("username") as? String
@@ -251,6 +249,7 @@ class CreateProblemViewController: UIViewController,UITextViewDelegate,UITextFie
         return cell
         
     }
+    
     
     func tableView(tableView:UITableView,didSelectRowAtIndexPath indexPath: NSIndexPath){
         
@@ -278,29 +277,49 @@ class CreateProblemViewController: UIViewController,UITextViewDelegate,UITextFie
     //---------------------Posting/Saving data----------------
     @IBAction func PostInfo(sender: UIButton) {
         
-        //TODO: Check size of string? Stop people posting short questions?
-        //TODO: Check for unusable data? USe GoChangeConvenieince for string testing
+        // if text fields empty present alert
         if(currentDetailData == "" || currentNameData == ""){
             
-            //TODO: Alert message to user to get them to fill in form
-            print("please input name and detail data")
+            self.presentAlert("Please input both name and detail data")
             
         }else{
            
-            _ = SaveNewProblem(completionHandler:{
+            //test for network connection before proceeding
+            _ = CheckForNetwork(){
                 (result) in
+                if(result == "Connected"){
+                    
+                    //save problem
+                    _ = SaveNewProblem(completionHandler:{
+                        (result) in
                 
-            })
-            
-            
-            
-            self.dismissViewControllerAnimated(true, completion: nil)
-            
+                    })
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                }else{
+                    
+                    // if no network present alert
+                    self.presentAlert("Cannot post problem, please check your network and try again")
+                }
+            }
         }
-
-        
     }
     
+    
+    //present alerts
+    func presentAlert(alertType:String){
+        
+        let controller = UIAlertController()
+        controller.message = alertType
+        
+        let alertAction = UIAlertAction(title: "Please try again", style: UIAlertActionStyle.Cancel){
+            action in
+            
+        }
+        
+        controller.addAction(alertAction)
+        self.presentViewController(controller, animated: true, completion: nil)
+        
+    }
 }
 
 

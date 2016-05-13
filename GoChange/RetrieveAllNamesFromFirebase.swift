@@ -15,7 +15,7 @@ class RetrieveAllNamesFromFirebase:NSObject{
     var nameRef = Firebase(url: "https://gochange.firebaseio.com/problem/names")
     
     
-    init(completionHandler:(results:FDataSnapshot)->Void){
+    init(completionHandler:(results:AnyObject)->Void){
         
         super.init()
         
@@ -25,7 +25,7 @@ class RetrieveAllNamesFromFirebase:NSObject{
            
         }, withCancelBlock:{ error in
                 
-            print(error.description)
+           completionHandler(results:error.description)
             
         })
         

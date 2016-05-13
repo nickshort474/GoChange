@@ -4,7 +4,7 @@
   'roots': [
     {
       'type': 'directory',
-      'name': "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers",
+      'name': "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -49,7 +49,7 @@
         {
           'type': 'file',
           'name': "Firebase-Swift.h",
-          'external-contents': "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-Swift.h"
+          'external-contents': "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/Firebase-Swift.h"
         },
         {
           'type': 'file',
@@ -75,18 +75,18 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Modules",
+      'name': "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/Pods.build/Debug-iphoneos/Firebase.build/module.modulemap"
+          'external-contents': "/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/Pods.build/Debug-iphonesimulator/Firebase.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Pods_GoChange.framework/Headers",
+      'name': "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Pods_GoChange.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -96,18 +96,18 @@
         {
           'type': 'file',
           'name': "Pods_GoChange-Swift.h",
-          'external-contents': "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Pods_GoChange.framework/Headers/Pods_GoChange-Swift.h"
+          'external-contents': "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Pods_GoChange.framework/Headers/Pods_GoChange-Swift.h"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Pods_GoChange.framework/Modules",
+      'name': "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Pods_GoChange.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/Pods.build/Debug-iphoneos/Pods-GoChange.build/module.modulemap"
+          'external-contents': "/Users/nickshort/Git/GoChangeCopy/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-GoChange.build/module.modulemap"
         }
       ]
     }

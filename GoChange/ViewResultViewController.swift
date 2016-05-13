@@ -13,20 +13,16 @@ import Firebase
 
 class ViewResultViewController: UIViewController,UITextViewDelegate,UITextFieldDelegate,UITableViewDelegate {
     
-    
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var detailsField: UITextView!
     @IBOutlet weak var solutionTable: UITableView!
     @IBOutlet weak var followProblemButton: UIButton!
-    
-    
     
     var problemName:String!
     var problemDetail:String!
     var problemID:String!
     var owner:String!
     var currentProblem:Problem!
-    
     
     
     override func viewDidLoad() {
@@ -70,8 +66,6 @@ class ViewResultViewController: UIViewController,UITextViewDelegate,UITextFieldD
     
     override func viewWillAppear(animated: Bool) {
         
-        
-        
         //load passed data into Temp variables to hold for use
         TempSave.sharedInstance().problemName = problemName
         TempSave.sharedInstance().problemOwner = owner
@@ -83,7 +77,7 @@ class ViewResultViewController: UIViewController,UITextViewDelegate,UITextFieldD
         self.detailsField.textColor = UIColor.blackColor()
         self.detailsField.text = problemDetail
         
-        _ = RetrieveSolutionsFromFirebase(problemID:problemID,/*problem:currentProblem,*/caller:"results"){
+        _ = RetrieveSolutionsFromFirebase(problemID:problemID,caller:"results"){
             (result) in
             
             self.solutionTable.reloadData()
@@ -93,6 +87,7 @@ class ViewResultViewController: UIViewController,UITextViewDelegate,UITextFieldD
     }
     
     @IBAction func followProblemClick(sender: UIButton) {
+        
         
         
         _ = SaveResultToCoreData(problemID:self.problemID){
@@ -111,11 +106,6 @@ class ViewResultViewController: UIViewController,UITextViewDelegate,UITextFieldD
             
             self.navigationController?.pushViewController(controller, animated: false)
         }
-        
-        
-        
-        
-        //TODO: need to add activity indicator to storyboard
         
         
         

@@ -16,8 +16,6 @@ class ViewIdeaViewController:UIViewController{
     @IBOutlet weak var solutionDetailField: UITextView!
     @IBOutlet weak var viewPetitionButton: UIButton!
     @IBOutlet weak var voteSolutionButton: UIButton!
-    
-    
     @IBOutlet weak var petitionTextField: UITextField!
     @IBOutlet weak var secondPetitionTextField: UITextField!
     
@@ -25,15 +23,10 @@ class ViewIdeaViewController:UIViewController{
     
     var problemID:String!
     var solutionID:String!
-    
-    
     var viewControllerStatus:String!
-    
     var loadedNameData:String!
     var loadedDetailData:String!
     var petitionURL:String!
-    //var solutionCount:Int!
-   
     var index:Int!
     
     
@@ -43,11 +36,13 @@ class ViewIdeaViewController:UIViewController{
         //deal with scrollview issue
         self.automaticallyAdjustsScrollViewInsets = false
         
+        //disable text editing
         solutionNameField.enabled = false
         solutionDetailField.selectable = false
-        
         petitionTextField.enabled = false
         
+        
+        //setup drop shadow for namefield
         solutionNameField.layer.masksToBounds = false
         solutionNameField.borderStyle = UITextBorderStyle.None
         solutionNameField.layer.shadowRadius = 0.5
@@ -64,17 +59,14 @@ class ViewIdeaViewController:UIViewController{
         solutionDetailField.layer.shadowOffset = CGSizeMake(1.0,1.0)
         solutionDetailField.layer.shadowOpacity = 0.5
         
-        
-        
-        
+        //if we have a petition URL
         if(petitionURL != ""){
-        
-            //print(petitionURL)
             
+            //get petition data from change.org
             _ = ChangeOrgCode(petitionURL:petitionURL){
                 result in
             
-                
+                //get signature count
                 if let resultSignCount = result["signature_count"]{
                    
                     if let resultSignCount = resultSignCount{
@@ -88,6 +80,8 @@ class ViewIdeaViewController:UIViewController{
                     }
                     
                 }
+                
+                //get tilte
                 if let resultTitle = result["title"]{
                     if let resultTitle = resultTitle{
                         
@@ -110,12 +104,13 @@ class ViewIdeaViewController:UIViewController{
     
     override func viewWillAppear(animated: Bool) {
         
-       
+        //set text
         solutionNameField.text = loadedNameData
         solutionDetailField.textColor = UIColor.blackColor()
         solutionDetailField.text = loadedDetailData
     
         
+        //hide vote button if new user created button or coming from results
         if(viewControllerStatus == "newProblem" || viewControllerStatus == "results"){
             
             voteSolutionButton.enabled = false
@@ -133,6 +128,8 @@ class ViewIdeaViewController:UIViewController{
                     self.voteSolutionButton.enabled = false
                     self.voteSolutionButton.alpha = 0
                 }else{
+                    
+                    // if havent voted show button
                     self.voteSolutionButton.enabled = true
                     self.voteSolutionButton.alpha = 1
                 }
@@ -145,7 +142,7 @@ class ViewIdeaViewController:UIViewController{
     }
     
     
-    
+    //seque to web view controller to change.org homepage
     @IBAction func petitionButton(sender: UIButton) {
         
         var controller:WebViewController
@@ -158,10 +155,9 @@ class ViewIdeaViewController:UIViewController{
     }
     
     
-    
+    //Vote for solution
     @IBAction func voteSolutionClick(sender: UIButton) {
         
-        //Vote for solution
         _ = VoteForSolution(problemID:problemID,solutionID:solutionID){
             (result) in
             
@@ -171,7 +167,6 @@ class ViewIdeaViewController:UIViewController{
         currentVoteCount += 1
         TempSave.sharedInstance().solutionVoteArray[self.index] = currentVoteCount
         
-        //decide whether to change button to Have Voted instead of alpha change
         self.voteSolutionButton.enabled = false
         self.voteSolutionButton.alpha = 0
         

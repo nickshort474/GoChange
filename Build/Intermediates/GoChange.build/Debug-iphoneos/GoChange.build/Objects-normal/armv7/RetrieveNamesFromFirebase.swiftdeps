@@ -11,14 +11,14 @@ provides-dynamic-lookup:
 - "nameResults"
 depends-top-level:
 - !private "=="
-- "String"
-- !private "..<"
-- "NSObject"
-- "StringLiteralType"
+- "Firebase"
 - !private "print"
+- !private "..<"
+- "StringLiteralType"
+- "String"
 - "Void"
 - "RetrieveNamesFromFirebase"
-- "Firebase"
+- "NSObject"
 depends-member:
 - ["Ps9AnyObject", "Firebase"]
 - !private ["Ps9AnyObject", "childByAppendingPath"]

@@ -85,12 +85,17 @@
                                             <constraint firstAttribute="trailing" secondItem="SNY-cY-aNr" secondAttribute="trailing" id="jyz-3a-OrJ"/>
                                         </constraints>
                                     </stackView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="YJc-LF-Jro">
+                                        <rect key="frame" x="270" y="270" width="20" height="20"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="o8k-Ql-Csy" firstAttribute="centerX" secondItem="qEz-NR-W1v" secondAttribute="centerX" id="24E-wZ-2AM"/>
                                     <constraint firstItem="Jlx-tW-LOi" firstAttribute="centerY" secondItem="qEz-NR-W1v" secondAttribute="centerY" id="5R1-yJ-yBp"/>
+                                    <constraint firstItem="YJc-LF-Jro" firstAttribute="centerX" secondItem="qEz-NR-W1v" secondAttribute="centerX" id="FW3-hQ-rfM"/>
                                     <constraint firstAttribute="bottom" secondItem="o8k-Ql-Csy" secondAttribute="bottom" constant="8" id="Nzh-Pt-IgC"/>
+                                    <constraint firstItem="YJc-LF-Jro" firstAttribute="centerY" secondItem="qEz-NR-W1v" secondAttribute="centerY" id="jkt-CM-wlq"/>
                                     <constraint firstItem="Jlx-tW-LOi" firstAttribute="centerX" secondItem="qEz-NR-W1v" secondAttribute="centerX" id="k68-RB-9hR"/>
                                     <constraint firstItem="Jlx-tW-LOi" firstAttribute="leading" secondItem="qEz-NR-W1v" secondAttribute="leading" constant="10" id="plh-3d-ae6"/>
                                     <constraint firstAttribute="trailing" secondItem="Jlx-tW-LOi" secondAttribute="trailing" constant="10" id="r3H-GX-DV2"/>
@@ -107,6 +112,8 @@
                     </view>
                     <connections>
                         <outlet property="emailTextfield" destination="HLB-KK-6FC" id="QlY-Kz-STK"/>
+                        <outlet property="loginActivityIndicator" destination="YJc-LF-Jro" id="MEM-R0-TDk"/>
+                        <outlet property="loginButton" destination="cau-5s-Qx2" id="jyn-Tm-aeN"/>
                         <outlet property="passwordTextfield" destination="lhL-E1-LaI" id="lOD-kB-To2"/>
                     </connections>
                 </viewController>
@@ -867,7 +874,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UMd-UD-XG7">
-                                <rect key="frame" x="160" y="396" width="238" height="28"/>
+                                <rect key="frame" x="181" y="399" width="238" height="28"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -6,8 +6,8 @@ provides-nominal:
 provides-member:
 - ["C8GoChange19CustomTableViewCell", ""]
 provides-dynamic-lookup:
-- "voteCount"
 - "ownerName"
+- "voteCount"
 - "problemName"
 depends-top-level:
 - "UITableViewCell"

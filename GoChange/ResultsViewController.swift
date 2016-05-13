@@ -16,7 +16,6 @@ class ResultsViewController: UIViewController,UITableViewDelegate {
     var resultNameArray:[String] = []
     var resultDetailArray:[String] = []
     var resultSolutionCountArray:[Int] = []
-    
     var problemOwnerArray:[String] = []
     
     
@@ -27,14 +26,7 @@ class ResultsViewController: UIViewController,UITableViewDelegate {
         self.navigationItem.backBarButtonItem = barButtonItem
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-    override func viewWillAppear(animated: Bool) {
-        
-    }
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,8 +37,6 @@ class ResultsViewController: UIViewController,UITableViewDelegate {
         
         let cellID = "resultCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath) as! CustomTableViewCell
-        
-       
         let solutionCount:String = String(self.resultSolutionCountArray[indexPath.row])
         
         cell.problemName.text = resultNameArray[indexPath.row]
@@ -57,6 +47,8 @@ class ResultsViewController: UIViewController,UITableViewDelegate {
         
     }
     
+    
+   //segue to view result vc
    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
                 
         var controller:ViewResultViewController

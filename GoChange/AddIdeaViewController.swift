@@ -10,54 +10,49 @@ import UIKit
 
 class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate,UITableViewDelegate {
     
-    
-    
-    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var detailTextView: UITextView!
     @IBOutlet weak var addNameButton: UIButton!
     @IBOutlet weak var addDetailButton: UIButton!
-    
     @IBOutlet weak var addSolution: UIButton!
-    
     @IBOutlet weak var petitionButton: UIButton!
-    
     @IBOutlet weak var petitionTextField: UITextField!
-    
     
     var currentNameData:String!
     var currentDetailData:String!
     var viewControllerStatus:String!
     var problem:Problem!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        //set nav title
         self.navigationController?.title = "Add Solution"
+        
+        //set state of ui elements
         addNameButton.hidden = true
         addDetailButton.hidden = true
-        
         addSolution.enabled = false
         addSolution.alpha = 0.5
-        
-        TempSave.sharedInstance().currentPetitionValue = ""
-        
         petitionTextField.enabled = false
-        
+ 
+        //set delegates
         nameTextField.delegate = self
         detailTextView.delegate = self
+
+        //clear current petition value after previosu use
+        TempSave.sharedInstance().currentPetitionValue = ""
         
         
+        // style name and detail fields
         nameTextField.layer.masksToBounds = false
-        
         nameTextField.layer.shadowRadius = 0.5
         nameTextField.layer.shadowColor = GoChangeClient.Constants.customOrangeColor.CGColor
         nameTextField.layer.shadowOffset = CGSizeMake(1.0,1.0)
         nameTextField.layer.shadowOpacity = 0.5
         nameTextField.borderStyle = UITextBorderStyle.None
-        
-        
         
         detailTextView.layer.masksToBounds = false
         detailTextView.layer.borderColor = UIColor.clearColor().CGColor
@@ -77,20 +72,15 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         TempSave.sharedInstance().newSolutionNameArray = []
         TempSave.sharedInstance().newSolutionDetailArray = []
         
+        //set petition field text
         petitionTextField.text = TempSave.sharedInstance().currentPetitionValue
         
-        
     }
     
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+   
     
     @IBAction func doneAddingIdea(sender: UIButton) {
+        
         
         if(viewControllerStatus == "addingSolutionToExistingProblem"){
             
@@ -98,7 +88,6 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
             
                 
                 //Add data to existing arrays ready for going back to ViewFollowing
-                
                 TempSave.sharedInstance().solutionNameArray.append(nameTextField.text!)
                 TempSave.sharedInstance().solutionDetailArray.append(detailTextView.text!)
                 TempSave.sharedInstance().solutionVoteArray.append(0)
@@ -124,14 +113,13 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
                     
                 }
                 
-                
+                //save the solution
                 _ = SaveNewSolution(problem: self.problem){
                     (result) in
                     
                 }
                 
                 // dismiss view controller from navigation stack
-                //self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
                 self.navigationController?.popViewControllerAnimated(true)
                 
                 
@@ -167,7 +155,7 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     
     
     
-    
+    //save the data from name field into a var, alter UI accordingly
     @IBAction func addNameClick(sender: AnyObject) {
         
         nameTextField.resignFirstResponder()
@@ -183,13 +171,14 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         detailTextView.editable = true
     }
     
+    
+    //save the data from detail View into a var, alter UI accordingly
     @IBAction func addDetailClick(sender: UIButton) {
         
         detailTextView.resignFirstResponder()
         addDetailButton.hidden = true
         currentDetailData = detailTextView.text
         
-        //TODO: add check for "placeholder" text
         if(nameTextField.text != "" && detailTextView.text != ""){
             addSolution.enabled = true
             addSolution.alpha = 1
@@ -227,36 +216,19 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     
     
     
-    
-    
     //---------------petition methods--------------------
     
     @IBAction func addPetition(sender: UIButton) {
         
         //open web browser to go to change.org
-        
         var controller:WebViewController
         controller = storyboard?.instantiateViewControllerWithIdentifier("WebViewController") as! WebViewController
        
-        
-        
         controller.urlString = GoChangeClient.Constants.basePetitionURL
         controller.status = "adding"
         
-        
-        //print(GoChangeClient.Constants.basePetitionURL)
-        
-        
-        
         self.navigationController?.pushViewController(controller, animated: true)
-        
-        
     }
-    
-    
-    
-    
-        
 }
 
 

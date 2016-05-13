@@ -475,6 +475,7 @@ SWIFT_CLASS("_TtC8GoChange20SearchViewController")
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull matchedProblemArray;
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull problemsNotInCoreData;
 - (void)viewDidLoad;
+- (void)checkIfInCoreData;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)compareArrays;
 - (void)createButtons:(NSString * _Nonnull)name;
@@ -543,6 +544,7 @@ SWIFT_CLASS("_TtC8GoChange8TempSave")
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull newSolutionIDArray;
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull newPetitionURLArray;
 @property (nonatomic, copy) NSString * _Nonnull currentPetitionValue;
+@property (nonatomic, strong) UIButton * _Null_unspecified retrievedRecentProblem;
 + (TempSave * _Nonnull)sharedInstance;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end

@@ -10,6 +10,7 @@
 		3618C41B1CE23E3A003102C1 /* FindRecentProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618C41A1CE23E3A003102C1 /* FindRecentProblem.swift */; };
 		3618C41D1CE2573E003102C1 /* GetRecentlyAdded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618C41C1CE2573E003102C1 /* GetRecentlyAdded.swift */; };
 		361A06401CB2CD450066C07C /* RetrieveAllNamesFromFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361A063F1CB2CD450066C07C /* RetrieveAllNamesFromFirebase.swift */; };
+		361E7EFF1CE4F70A00998B7E /* CheckForNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361E7EFE1CE4F70A00998B7E /* CheckForNetwork.swift */; };
 		369A433F1CD2695C00D84A6B /* ViewIdeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A433E1CD2695C00D84A6B /* ViewIdeaViewController.swift */; };
 		369EF17D1C80C24600D8D46A /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369EF17C1C80C24600D8D46A /* Problem.swift */; };
 		369EF17F1C80C5D900D8D46A /* CoreDataStackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369EF17E1C80C5D900D8D46A /* CoreDataStackManager.swift */; };
@@ -79,6 +80,7 @@
 		3618C41A1CE23E3A003102C1 /* FindRecentProblem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindRecentProblem.swift; sourceTree = "<group>"; };
 		3618C41C1CE2573E003102C1 /* GetRecentlyAdded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRecentlyAdded.swift; sourceTree = "<group>"; };
 		361A063F1CB2CD450066C07C /* RetrieveAllNamesFromFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveAllNamesFromFirebase.swift; sourceTree = "<group>"; };
+		361E7EFE1CE4F70A00998B7E /* CheckForNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckForNetwork.swift; sourceTree = "<group>"; };
 		369A433E1CD2695C00D84A6B /* ViewIdeaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewIdeaViewController.swift; sourceTree = "<group>"; };
 		369EF17C1C80C24600D8D46A /* Problem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem.swift; sourceTree = "<group>"; };
 		369EF17E1C80C5D900D8D46A /* CoreDataStackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStackManager.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				36D963F61CB556A1006F9D36 /* RetrieveSolutionsFromFirebase.swift */,
 				36D82C201CD37EC300FDA274 /* RetrieveNamesFromFirebase.swift */,
 				361A063F1CB2CD450066C07C /* RetrieveAllNamesFromFirebase.swift */,
+				361E7EFE1CE4F70A00998B7E /* CheckForNetwork.swift */,
 				36F871B61CB81503006706BD /* RetrieveSolutionCountFirebase.swift */,
 				36EB1EB91CB42E9000EA0CC4 /* RetrieveDetailsFromFirebase.swift */,
 				36DE37511CB12640005DEEEA /* RetrieveSolutions.swift */,
@@ -512,6 +515,7 @@
 				36C37CB21C7A01AC002B4FB1 /* CreateProblemViewController.swift in Sources */,
 				36D82C211CD37EC300FDA274 /* RetrieveNamesFromFirebase.swift in Sources */,
 				36D82C1F1CD3506400FDA274 /* ViewFollowingViewController.swift in Sources */,
+				361E7EFF1CE4F70A00998B7E /* CheckForNetwork.swift in Sources */,
 				36C37CAE1C7A01AC002B4FB1 /* AddIdeaViewController.swift in Sources */,
 				36CB44141CCF504A000AD3C5 /* ChangeOrgCode.swift in Sources */,
 				369A433F1CD2695C00D84A6B /* ViewIdeaViewController.swift in Sources */,

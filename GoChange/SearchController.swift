@@ -11,25 +11,16 @@ import Firebase
 
 class SearchController:NSObject{
     
-    
     var searchText:String!
-    
     var returnedNameArray:[String] = []
     var returnedRefArray:[String] = []
-    
     var matchedNameArray:[String] = []
     var countArray:[Int] = []
     var matchedRefArray:[String] = []
-    
-    
     var useNameArray:[String] = []
     var useOwnerArray:[String] = []
-    
     var useDetailArray:[String] = []
     var useSolutionCountArray:[Int] = []
-    
-    
-    
     var refsNotInCoreData:[String] = []
     
     
@@ -45,7 +36,10 @@ class SearchController:NSObject{
          _ = RetrieveAllNamesFromFirebase(){
             (snapshot) in
             
-            for name in snapshot.children.allObjects as! [FDataSnapshot]{
+            
+            let snap = snapshot as! FDataSnapshot
+                
+            for name in snap.children.allObjects as! [FDataSnapshot]{
                 
                 //add value of returned item to array
                 self.returnedNameArray.append(name.value["ProblemName"]!! as! String)

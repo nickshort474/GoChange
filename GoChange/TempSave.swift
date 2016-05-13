@@ -39,7 +39,7 @@ class TempSave:NSObject{
     
     var currentPetitionValue:String = ""
     
-    
+    var retrievedRecentProblem:UIButton!
     
     class func sharedInstance() -> TempSave{
         

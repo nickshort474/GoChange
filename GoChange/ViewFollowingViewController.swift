@@ -33,7 +33,6 @@ class ViewFollowingViewController: UIViewController,UITextViewDelegate,UITextFie
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        
         //deal with scrollview issue
         self.automaticallyAdjustsScrollViewInsets = false
         
@@ -43,9 +42,11 @@ class ViewFollowingViewController: UIViewController,UITextViewDelegate,UITextFie
         detailsField.delegate = self
         solutionTable.delegate = self
         
+        //disable text editing
         nameField.enabled = false
         detailsField.selectable = false
         
+        //set title
         self.title = "Following"
         
         //drop shadow for nameField
@@ -65,8 +66,6 @@ class ViewFollowingViewController: UIViewController,UITextViewDelegate,UITextFie
         detailsField.layer.shadowOffset = CGSizeMake(1.0,1.0)
         detailsField.layer.shadowOpacity = 0.5
         
-                
-        
         //Set up drop shadow for solutionTable
         solutionTable.layer.borderColor = UIColor.clearColor().CGColor
         solutionTable.layer.shadowRadius = 0.5
@@ -83,6 +82,7 @@ class ViewFollowingViewController: UIViewController,UITextViewDelegate,UITextFie
             
         }
        
+        //collect passed data and putinto textfields
         nameField.text = problemClicked.problemName
         detailsField.text = problemClicked.problemDescription
         localSolutionCount = problemClicked.solutionCount as Int
@@ -123,6 +123,7 @@ class ViewFollowingViewController: UIViewController,UITextViewDelegate,UITextFie
         })
     }
     
+    
     override func viewWillAppear(animated: Bool) {
         
         self.solutionTable.reloadData()
@@ -141,10 +142,8 @@ class ViewFollowingViewController: UIViewController,UITextViewDelegate,UITextFie
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("AddIdeaViewController") as! AddIdeaViewController
         
         controller.viewControllerStatus = "addingSolutionToExistingProblem"
-        //controller.problemID = problemID
         controller.problem = problemClicked
-        
-        
+       
         self.navigationController?.pushViewController(controller, animated: true)
         
     }
@@ -168,8 +167,6 @@ class ViewFollowingViewController: UIViewController,UITextViewDelegate,UITextFie
         
         let solutionName = TempSave.sharedInstance().solutionNameArray[indexPath.row]
         let owner = TempSave.sharedInstance().solutionOwnerArray[indexPath.row]
-        
-        
         let voteCount:String = String(TempSave.sharedInstance().solutionVoteArray[indexPath.row])
         
         
@@ -180,8 +177,8 @@ class ViewFollowingViewController: UIViewController,UITextViewDelegate,UITextFie
         
     }
     
+    
     func tableView(tableView:UITableView,didSelectRowAtIndexPath indexPath: NSIndexPath){
-        
         
         var controller:ViewIdeaViewController
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewIdeaViewController") as! ViewIdeaViewController
@@ -207,10 +204,8 @@ class ViewFollowingViewController: UIViewController,UITextViewDelegate,UITextFie
     
     @IBAction func unfollowProblem(sender: UIButton) {
         
-        print("Problem unfollowed")
         _ = DeleteProblemFromCoreData(problem: problemClicked)
         
-        //self.navigationController?.popToRootViewControllerAnimated(true)
         self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
     }
     

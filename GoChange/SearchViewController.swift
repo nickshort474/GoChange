@@ -42,94 +42,69 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         searchActivity.hidden = true
         searchActivity.stopAnimating()
         
-        /*
-        //TODO: Check firebase (create new section) for 4 recently added problems - can control which "Problems" get pushed to end users
+        
+        //gather recently added items from firebase
         _ =  GetRecentlyAdded(completionHandler: {
             (result) in
-            // result = list of problem names
-            //add results to non match array
             
+            //get name of problems and their unique ID's
             for name in result.children.allObjects{
                 self.recentNameArray.append(name.value["ProblemName"] as! String)
                 self.refArray.append(name.key)
             }
+         
+            //check whterh thes eitems are already followed (in core data)
+            self.checkIfInCoreData()
             
-           
-            //Check core data to see if names exist in core data using; RetrieveProblem()
-            for id in self.refArray{
-                
-                
-                
-                _ = RetrieveProblem(problemID: id, completionHandler:{
-                    (resultName, resultID) in
-                    
-                    
-                    self.matchedProblemArray.append(resultName)
-                    
-                    print(self.matchedProblemArray.count)
-                    print(self.refArray.count)
-                    
-                    if(self.matchedProblemArray.count == self.refArray.count){
-                        self.compareArrays()
-                    }
-                    
-                })
-            }
-            
-            
-            
-        })
-        //Get the problem names that don't exist in core data (non match array) and add names to titles of buttons
-        */
-        
-        
+         })
     }
+    
+    
+    func checkIfInCoreData(){
+        
+        //loop through each item in refArray and check against core data
+        for id in self.refArray{
+            
+            _ = RetrieveProblem(problemID: id, completionHandler:{
+                (resultName, resultID) in
+                
+                //add any matched item to matchedProblemArray
+                self.matchedProblemArray.append(resultName)
+                
+                //once all items in refArray have been retrieved
+                if(self.matchedProblemArray.count == self.refArray.count){
+                    
+                    //compare matchedArray to retrieved ref array
+                    self.compareArrays()
+                }
+                
+            })
+        }
+    }
+    
     
     override func viewWillAppear(animated: Bool) {
         
-        _ =  GetRecentlyAdded(completionHandler: {
-            (result) in
-            // result = list of problem names
-            //add results to non match array
-            
-            for name in result.children.allObjects{
-                self.recentNameArray.append(name.value["ProblemName"] as! String)
-                self.refArray.append(name.key)
-            }
-            
-            
-            //Check core data to see if names exist in core data using; RetrieveProblem()
-            for id in self.refArray{
-                
-                _ = RetrieveProblem(problemID: id, completionHandler:{
-                    (resultName, resultID) in
-                    
-                    
-                    self.matchedProblemArray.append(resultName)
-                    
-                    print(self.matchedProblemArray.count)
-                    print(self.refArray.count)
-                    
-                    if(self.matchedProblemArray.count == self.refArray.count){
-                        self.compareArrays()
-                    }
-                    
-                })
-            }
-        })
+        // if have clicked recent problem and come back
+        if(TempSave.sharedInstance().retrievedRecentProblem != nil){
+            recentProblemStack.removeArrangedSubview(TempSave.sharedInstance().retrievedRecentProblem)
+        }
+        
     }
     
     
     
     func compareArrays(){
         
-        
+        //create sets from both arrays
         let setA = Set(self.recentNameArray)
         let setB = Set(self.matchedProblemArray)
-                    
+        
+        //use diff to see which elements from retrieved firebase array don't exist in core data set
         let diff = setA.subtract(setB)
         self.problemsNotInCoreData = Array(diff)
         
+        //for each not matched element create button
         for name in problemsNotInCoreData{
             createButtons(name)
         }
@@ -139,15 +114,14 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
     
     func createButtons(name:String){
         
-        //clear problemStack ready for new additions
-        
-        
+        //create buttons
         let button = UIButton()
         button.setTitle(name, forState: .Normal)
         button.setTitleColor(UIColor.blueColor(), forState: .Normal)
         button.titleLabel?.font = UIFont(name:"System Bold", size: 11)
         button.addTarget(self,action:#selector(SearchViewController.buttonClick(_:)),forControlEvents: .TouchUpInside)
         
+        //add buttons to existing stack view
         recentProblemStack.addArrangedSubview(button)
         
     }
@@ -169,24 +143,33 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
     
     @IBAction func searchForResults(sender: UIButton) {
         
+        //set activity indicator
         searchActivity.hidden = false
         searchActivity.startAnimating()
         self.view.alpha = 0.5
         
-        
+        //search for result
         _ = SearchController(searchText: searchTextField.text!){
             (nameResult,detailResult,ownerResult,solutionCountResult,refResult,matchType) in
             
+            // if no matches to search term present alert
             if(matchType == "noFirebaseMatches"){
                 
                 self.presentAlert("No matches for your search term")
+                self.searchActivity.hidden = true
+                self.searchActivity.stopAnimating()
+                self.view.alpha = 01
                 
             }else if(matchType == "coreDataMatch"){
                
                 self.presentAlert("Matches found but already followed")
-                
+                self.searchActivity.hidden = true
+                self.searchActivity.stopAnimating()
+                self.view.alpha = 1
+            
             }else{
                 
+                // if match found show result vc
                 var controller:ResultsViewController
                 controller = self.storyboard?.instantiateViewControllerWithIdentifier("ResultsViewController") as! ResultsViewController
                 let navigationController = self.navigationController
@@ -197,26 +180,26 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
                 controller.resultSolutionCountArray = solutionCountResult
                 controller.refArray = refResult
             
-                
+                //set activity indicator
                 self.searchActivity.hidden = true
                 self.searchActivity.stopAnimating()
                 self.view.alpha = 1
-                navigationController?.pushViewController(controller,animated: true)
                 
+                navigationController?.pushViewController(controller,animated: true)
                 
             }
         }
-        
     }
     
     
     
     func buttonClick(sender:UIButton){
         
-        
+        //gather details of recent problem
         _ = FindRecentProblem(problemName: (sender.titleLabel?.text)!,completionHandler: {
             (result,detailResult) in
             
+            //set values for problem
             for problem in result.children{
                 self.problemID = problem.key
                 self.problemName = problem.value["ProblemName"] as! String
@@ -224,16 +207,17 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
             }
             self.problemDetail = detailResult as! String
             
+            //set retrievedRecentProblem var to whichever problem button was clicked
+            TempSave.sharedInstance().retrievedRecentProblem = sender
             
+            // present problem
             self.presentRecentProblem()
         })
-        
-        
     }
     
     
+    //present View result controller
     func presentRecentProblem(){
-        
         
         var controller:ViewResultViewController
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("ViewResultViewController") as! ViewResultViewController
@@ -250,6 +234,7 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
     }
     
     
+    // present alerts
     func presentAlert(alertType:String){
         
         let controller = UIAlertController()

@@ -14,40 +14,40 @@ class HomeViewController: UIViewController {
     
     
     @IBOutlet weak var welcomeLabel: UILabel!
-    var ref:Firebase!
-    
     @IBOutlet weak var followButton: UIButton!
     @IBOutlet weak var followingLabel: UILabel!
     @IBOutlet weak var startActivityIndicator: UIActivityIndicatorView!
     
-    
+    var ref = Firebase(url:"https://gochange.firebaseio.com")
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view, typically from a nib.
-        ref = Firebase(url:"https://gochange.firebaseio.com")
-        
+                
+        //set title bar with user name
         let currentUserName = NSUserDefaults.standardUserDefaults().valueForKey("username") as! String
-        
         welcomeLabel.text = "Welcome to GoChange \(currentUserName)"
         
-        
-        //TODO: Check core data for amount of following
+        //hide activtiy indicator
         followingLabel.hidden = true
         startActivityIndicator.hidden = true
         startActivityIndicator.stopAnimating()
         
+        //set back buttons to home
         let barButtonItem = UIBarButtonItem(title: "Home", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
         self.navigationItem.backBarButtonItem = barButtonItem
     }
     
+    
     override func viewWillAppear(animated: Bool) {
+        
+        //check core data for number of followed problems to dsiplay
         checkCoreData()
     }
     
     
+    //create reference to managed object context
     lazy var sharedContext:NSManagedObjectContext = {
         
         return CoreDataStackManager.sharedInstance().managedObjectContext
@@ -55,6 +55,8 @@ class HomeViewController: UIViewController {
     }()
     
     
+    
+    //segue to create new problem screen
     @IBAction func createProblem(sender: UIButton) {
         
         self.startActivityIndicator.hidden = false
@@ -77,10 +79,7 @@ class HomeViewController: UIViewController {
     }
     
     
-    
-    
-    
-    
+    //segue to Update user detail screen
     @IBAction func addUserData(sender: UIButton) {
         
         var controller:UpdateUserInfoController
@@ -90,23 +89,25 @@ class HomeViewController: UIViewController {
         
     }
     
+    //check core data for problem numbers
     func checkCoreData(){
         
+        //setup request
         let request = NSFetchRequest(entityName: "Problem")
-        
         var results:[AnyObject]?
         
+        //execute request and store in results
         do{
             results = try sharedContext.executeFetchRequest(request) as! [Problem]
         }catch{
-            //TODO: catch error
-            print("error fetching")
+            
         }
         
+        //get count
         let problemCount = results?.count
         let countText = String(problemCount!)
         
-        
+        //set following label to number of problems
         if countText != "0"{
             followingLabel.hidden = false
             followingLabel.text = countText
@@ -117,24 +118,19 @@ class HomeViewController: UIViewController {
     }
     
     
-    
-    
-    
     @IBAction func logout(sender: UIButton) {
-        
+        //unauthorize user
         ref.unauth()
+        
+        //remove user details from user defaults
         NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "uid")
         NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "username")
+        
+        //dismiss view controller
         self.dismissViewControllerAnimated(true, completion: nil)
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
     
 }
 

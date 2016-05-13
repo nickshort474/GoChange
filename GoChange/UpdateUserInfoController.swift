@@ -9,17 +9,12 @@
 import Foundation
 import UIKit
 import Firebase
+
 class UpdateUserInfoController:UIViewController{
     
     var ref = Firebase(url:"https://gochange.firebaseio.com")
-    
-    
-    
     var currentlyUpdating:String = ""
     
-    override func viewDidLoad() {
-        
-    }
     
     @IBAction func updatePassword(sender: UIButton) {
         currentlyUpdating = "password"
@@ -38,6 +33,7 @@ class UpdateUserInfoController:UIViewController{
     }
     
     func segueToInput(){
+        
         var controller:SignupViewController
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("SignupViewController") as! SignupViewController
         controller.sendingController = "update"
@@ -48,6 +44,7 @@ class UpdateUserInfoController:UIViewController{
   
     
     @IBAction func cancelUpdate(sender: UIButton) {
+        
         self.dismissViewControllerAnimated(true, completion: nil)
         
     }
