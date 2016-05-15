@@ -6,43 +6,42 @@ provides-nominal:
 provides-member:
 - ["C8GoChange19loginViewController", ""]
 provides-dynamic-lookup:
-- "presentAlert"
-- "textFieldShouldReturn"
-- "loginActivityIndicator"
-- "passwordTextfield"
 - "segueToHomeScreen"
-- "didReceiveMemoryWarning"
+- "passwordTextfield"
 - "loginButton"
-- "userID"
-- "viewDidAppear"
 - "signupControl"
+- "viewDidAppear"
+- "presentAlert"
 - "login"
 - "ref"
 - "viewDidLoad"
+- "loginActivityIndicator"
+- "userID"
+- "textFieldShouldReturn"
 - "emailTextfield"
 depends-top-level:
-- !private "UIAlertController"
-- !private "HomeViewController"
-- "AnyObject"
-- !private "print"
-- "UIButton"
-- "Bool"
-- !private "BooleanLiteralType"
-- "UITextField"
-- "Firebase"
-- "UIActivityIndicatorView"
-- !private "!="
 - "String"
+- !private "BooleanLiteralType"
+- !private "UIAlertAction"
+- !private "HomeViewController"
+- "UIActivityIndicatorView"
+- "UITextFieldDelegate"
+- "UIViewController"
+- !private "UIAlertActionStyle"
 - "loginViewController"
+- !private "print"
+- !private "StringLiteralType"
+- !private "UIAlertController"
+- "Bool"
+- !private "!="
+- !private "&&"
+- "AnyObject"
+- !private "NSUserDefaults"
+- "UIButton"
 - !private "~="
 - !private "SignupViewController"
-- !private "StringLiteralType"
-- !private "UIAlertAction"
-- !private "&&"
-- "UIViewController"
-- "UITextFieldDelegate"
-- !private "UIAlertActionStyle"
-- !private "NSUserDefaults"
+- "UITextField"
+- "Firebase"
 depends-member:
 - !private ["Ps9AnyObject", "Firebase"]
 - !private ["Ps9AnyObject", "NSUserDefaults"]
@@ -56,7 +55,6 @@ depends-member:
 - !private ["Ps9AnyObject", "deinit"]
 - !private ["Ps9AnyObject", "delegate"]
 - !private ["Ps9AnyObject", "description"]
-- ["Ps9AnyObject", "didReceiveMemoryWarning"]
 - ["Ps9AnyObject", "emailTextfield"]
 - !private ["Ps9AnyObject", "enabled"]
 - !private ["Ps9AnyObject", "hidden"]
@@ -114,7 +112,6 @@ depends-member:
 - !private ["Ps11CVarArgType", "childByAppendingPath"]
 - !private ["Ps11CVarArgType", "delegate"]
 - !private ["Ps11CVarArgType", "description"]
-- ["Ps11CVarArgType", "didReceiveMemoryWarning"]
 - ["Ps11CVarArgType", "emailTextfield"]
 - !private ["Ps11CVarArgType", "enabled"]
 - !private ["Ps11CVarArgType", "hidden"]
@@ -168,7 +165,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "childByAppendingPath"]
 - !private ["Ps28CustomDebugStringConvertible", "delegate"]
 - !private ["Ps28CustomDebugStringConvertible", "description"]
-- ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
 - ["Ps28CustomDebugStringConvertible", "emailTextfield"]
 - !private ["Ps28CustomDebugStringConvertible", "enabled"]
 - !private ["Ps28CustomDebugStringConvertible", "hidden"]
@@ -221,7 +217,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "childByAppendingPath"]
 - !private ["Ps23CustomStringConvertible", "delegate"]
 - !private ["Ps23CustomStringConvertible", "description"]
-- ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
 - ["Ps23CustomStringConvertible", "emailTextfield"]
 - !private ["Ps23CustomStringConvertible", "enabled"]
 - !private ["Ps23CustomStringConvertible", "hidden"]
@@ -277,7 +272,6 @@ depends-member:
 - !private ["Ps9Equatable", "childByAppendingPath"]
 - !private ["Ps9Equatable", "delegate"]
 - !private ["Ps9Equatable", "description"]
-- ["Ps9Equatable", "didReceiveMemoryWarning"]
 - ["Ps9Equatable", "emailTextfield"]
 - !private ["Ps9Equatable", "enabled"]
 - !private ["Ps9Equatable", "hidden"]
@@ -347,7 +341,6 @@ depends-member:
 - !private ["Ps8Hashable", "childByAppendingPath"]
 - !private ["Ps8Hashable", "delegate"]
 - !private ["Ps8Hashable", "description"]
-- ["Ps8Hashable", "didReceiveMemoryWarning"]
 - ["Ps8Hashable", "emailTextfield"]
 - !private ["Ps8Hashable", "enabled"]
 - !private ["Ps8Hashable", "hidden"]
@@ -404,7 +397,6 @@ depends-member:
 - !private ["PSo8NSCoding", "alpha"]
 - !private ["PSo8NSCoding", "delegate"]
 - !private ["PSo8NSCoding", "description"]
-- ["PSo8NSCoding", "didReceiveMemoryWarning"]
 - ["PSo8NSCoding", "emailTextfield"]
 - !private ["PSo8NSCoding", "enabled"]
 - !private ["PSo8NSCoding", "hidden"]
@@ -450,7 +442,6 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertActionStyle"]
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertController"]
 - !private ["PSo26NSExtensionRequestHandling", "addAction"]
-- ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
 - ["PSo26NSExtensionRequestHandling", "emailTextfield"]
 - ["PSo26NSExtensionRequestHandling", "init"]
 - ["PSo26NSExtensionRequestHandling", "login"]
@@ -498,7 +489,6 @@ depends-member:
 - !private ["CSo8NSObject", "deinit"]
 - !private ["CSo8NSObject", "delegate"]
 - !private ["CSo8NSObject", "description"]
-- ["CSo8NSObject", "didReceiveMemoryWarning"]
 - ["CSo8NSObject", "emailTextfield"]
 - !private ["CSo8NSObject", "enabled"]
 - !private ["CSo8NSObject", "hidden"]
@@ -549,7 +539,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "childByAppendingPath"]
 - !private ["PSo16NSObjectProtocol", "delegate"]
 - !private ["PSo16NSObjectProtocol", "description"]
-- ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
 - ["PSo16NSObjectProtocol", "emailTextfield"]
 - !private ["PSo16NSObjectProtocol", "enabled"]
 - !private ["PSo16NSObjectProtocol", "hidden"]
@@ -640,7 +629,6 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "addAction"]
 - !private ["PSo21UIAppearanceContainer", "alpha"]
 - !private ["PSo21UIAppearanceContainer", "delegate"]
-- ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
 - ["PSo21UIAppearanceContainer", "emailTextfield"]
 - !private ["PSo21UIAppearanceContainer", "enabled"]
 - !private ["PSo21UIAppearanceContainer", "hidden"]
@@ -680,7 +668,6 @@ depends-member:
 - !private ["PSo18UIContentContainer", "UIAlertActionStyle"]
 - !private ["PSo18UIContentContainer", "UIAlertController"]
 - !private ["PSo18UIContentContainer", "addAction"]
-- ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
 - ["PSo18UIContentContainer", "emailTextfield"]
 - ["PSo18UIContentContainer", "init"]
 - ["PSo18UIContentContainer", "login"]
@@ -735,7 +722,6 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "addAction"]
 - !private ["PSo18UIFocusEnvironment", "alpha"]
 - !private ["PSo18UIFocusEnvironment", "delegate"]
-- ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
 - ["PSo18UIFocusEnvironment", "emailTextfield"]
 - !private ["PSo18UIFocusEnvironment", "enabled"]
 - !private ["PSo18UIFocusEnvironment", "hidden"]
@@ -787,7 +773,6 @@ depends-member:
 - !private ["CSo11UIResponder", "addAction"]
 - !private ["CSo11UIResponder", "alpha"]
 - !private ["CSo11UIResponder", "delegate"]
-- ["CSo11UIResponder", "didReceiveMemoryWarning"]
 - ["CSo11UIResponder", "emailTextfield"]
 - !private ["CSo11UIResponder", "enabled"]
 - !private ["CSo11UIResponder", "hidden"]
@@ -825,7 +810,6 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "UIAlertActionStyle"]
 - !private ["PSo16UIStateRestoring", "UIAlertController"]
 - !private ["PSo16UIStateRestoring", "addAction"]
-- ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
 - ["PSo16UIStateRestoring", "emailTextfield"]
 - ["PSo16UIStateRestoring", "init"]
 - ["PSo16UIStateRestoring", "login"]
@@ -895,7 +879,6 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "addAction"]
 - !private ["PSo18UITraitEnvironment", "alpha"]
 - !private ["PSo18UITraitEnvironment", "delegate"]
-- ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
 - ["PSo18UITraitEnvironment", "emailTextfield"]
 - !private ["PSo18UITraitEnvironment", "enabled"]
 - !private ["PSo18UITraitEnvironment", "hidden"]
@@ -950,7 +933,6 @@ depends-member:
 - ["CSo16UIViewController", "UIButton"]
 - ["CSo16UIViewController", "UITextField"]
 - !private ["CSo16UIViewController", "addAction"]
-- ["CSo16UIViewController", "didReceiveMemoryWarning"]
 - ["CSo16UIViewController", "emailTextfield"]
 - ["CSo16UIViewController", "init"]
 - ["CSo16UIViewController", "login"]
@@ -1016,7 +998,6 @@ depends-member:
 - ["C8GoChange19loginViewController", "UIButton"]
 - ["C8GoChange19loginViewController", "UITextField"]
 - ["C8GoChange19loginViewController", "deinit"]
-- ["C8GoChange19loginViewController", "didReceiveMemoryWarning"]
 - ["C8GoChange19loginViewController", "emailTextfield"]
 - ["C8GoChange19loginViewController", "init"]
 - ["C8GoChange19loginViewController", "login"]
@@ -1153,4 +1134,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Modules/module.modulemap"
-interface-hash: "0816bb95b76a0f3d747bdef2cc5f710c"
+interface-hash: "a9c53b8151117ff8381b7644d7e4f093"

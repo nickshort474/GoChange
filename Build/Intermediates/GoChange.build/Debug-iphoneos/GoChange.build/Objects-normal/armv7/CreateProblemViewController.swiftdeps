@@ -6,78 +6,83 @@ provides-nominal:
 provides-member:
 - ["C8GoChange27CreateProblemViewController", ""]
 provides-dynamic-lookup:
-- "homeButtonClick"
-- "sharedContext"
-- "namePlusButton"
-- "addASolutionButton"
-- "textViewDidBeginEditing"
-- "currentDetailData"
-- "viewWillAppear"
-- "nameActionButton"
+- "addSolution"
+- "textField"
 - "solutionTable"
+- "postButton"
+- "textFieldDidBeginEditing"
 - "viewDidLoad"
 - "PostInfo"
-- "detailsField"
-- "textField"
-- "detailsPlusButton"
-- "postButton"
-- "detailsActionButton"
 - "tableView"
 - "tableView"
 - "tableView"
+- "namePlusButton"
 - "currentNameData"
-- "addSolution"
+- "textViewDidBeginEditing"
+- "detailsActionButton"
+- "homeButtonClick"
 - "nameField"
-- "textFieldDidBeginEditing"
+- "currentDetailData"
+- "viewWillAppear"
+- "presentAlert"
+- "addASolutionButton"
+- "nameActionButton"
+- "detailsPlusButton"
+- "detailsField"
+- "sharedContext"
 depends-top-level:
-- !private "+"
-- !private "CGSizeMake"
-- !private "NSUserDefaults"
-- !private "-"
-- "Int"
-- !private "SaveNewProblem"
-- !private "=="
-- "UITableViewDelegate"
-- "UITextViewDelegate"
-- "Bool"
-- !private "CustomTableViewCell"
-- "UITextFieldDelegate"
-- "UIViewController"
-- !private "UIControlState"
-- "UITextView"
-- !private "UIColor"
-- !private "TempSave"
-- !private "||"
-- "NSIndexPath"
-- "StringLiteralType"
-- !private "??"
-- "NSManagedObjectContext"
-- !private "<="
-- !private "!="
-- !private "UIBarButtonItem"
-- !private "UnicodeScalarType"
-- !private "GoChangeClient"
 - "UITableView"
-- !private "ViewIdeaViewController"
-- !private "CoreDataStackManager"
-- !private ">"
-- "CreateProblemViewController"
-- !private "UITextBorderStyle"
-- !private "BooleanLiteralType"
-- "UITextField"
-- "UITableViewCell"
-- !private "Array"
-- !private "print"
-- "NSRange"
-- !private "AddIdeaViewController"
-- "String"
-- "UIButton"
-- !private "&&"
+- !private "<="
+- !private "GoChangeClient"
 - !private "UIBarButtonItemStyle"
+- !private "&&"
+- !private "NSUserDefaults"
+- "UIViewController"
+- "UITextFieldDelegate"
+- "UITextView"
+- !private "UITextBorderStyle"
+- "UITextViewDelegate"
+- "UITableViewDelegate"
+- !private "??"
+- "NSRange"
+- !private "=="
+- !private "ViewIdeaViewController"
+- !private "TempSave"
+- "String"
+- !private "CoreDataStackManager"
+- !private "!="
+- !private "AddIdeaViewController"
+- "StringLiteralType"
+- !private "UIBarButtonItem"
+- "UITableViewCell"
+- !private "UnicodeScalarType"
+- !private "-"
+- !private "CheckForNetwork"
+- !private "UIAlertController"
+- "UIButton"
+- !private "+"
+- !private "UIAlertAction"
+- "Int"
+- "UITextField"
+- !private "UIColor"
+- !private "UIAlertActionStyle"
+- !private "SaveNewProblem"
+- !private "BooleanLiteralType"
+- !private "||"
+- "NSManagedObjectContext"
+- "CreateProblemViewController"
+- !private "CustomTableViewCell"
+- !private "CGSizeMake"
+- !private "Array"
+- "Bool"
+- "NSIndexPath"
+- !private "UIControlState"
+- !private ">"
 depends-member:
 - !private ["C8GoChange21AddIdeaViewController", "viewControllerStatus"]
 - !private ["Ps9AnyObject", "CGColor"]
 - !private ["Ps9AnyObject", "CGSizeMake"]
+- !private ["Ps9AnyObject", "CheckForNetwork"]
 - !private ["Ps9AnyObject", "Constants"]
 - !private ["Ps9AnyObject", "CoreDataStackManager"]
 - !private ["Ps9AnyObject", "GoChangeClient"]
@@ -85,12 +90,16 @@ depends-member:
 - ["Ps9AnyObject", "PostInfo"]
 - !private ["Ps9AnyObject", "SaveNewProblem"]
 - !private ["Ps9AnyObject", "TempSave"]
+- !private ["Ps9AnyObject", "UIAlertAction"]
+- !private ["Ps9AnyObject", "UIAlertActionStyle"]
+- !private ["Ps9AnyObject", "UIAlertController"]
 - !private ["Ps9AnyObject", "UIBarButtonItem"]
 - !private ["Ps9AnyObject", "UIBarButtonItemStyle"]
 - !private ["Ps9AnyObject", "UIColor"]
 - !private ["Ps9AnyObject", "UIControlState"]
 - !private ["Ps9AnyObject", "UITextBorderStyle"]
 - ["Ps9AnyObject", "addASolutionButton"]
+- !private ["Ps9AnyObject", "addAction"]
 - ["Ps9AnyObject", "addSolution"]
 - !private ["Ps9AnyObject", "alpha"]
 - !private ["Ps9AnyObject", "backBarButtonItem"]
@@ -121,6 +130,7 @@ depends-member:
 - !private ["Ps9AnyObject", "loadedNameData"]
 - !private ["Ps9AnyObject", "managedObjectContext"]
 - !private ["Ps9AnyObject", "masksToBounds"]
+- !private ["Ps9AnyObject", "message"]
 - ["Ps9AnyObject", "nameActionButton"]
 - ["Ps9AnyObject", "nameField"]
 - ["Ps9AnyObject", "namePlusButton"]
@@ -131,7 +141,8 @@ depends-member:
 - !private ["Ps9AnyObject", "petitionURL"]
 - !private ["Ps9AnyObject", "petitionURLArray"]
 - ["Ps9AnyObject", "postButton"]
-- !private ["Ps9AnyObject", "print"]
+- ["Ps9AnyObject", "presentAlert"]
+- !private ["Ps9AnyObject", "presentViewController"]
 - !private ["Ps9AnyObject", "problemDetail"]
 - !private ["Ps9AnyObject", "problemName"]
 - !private ["Ps9AnyObject", "pushViewController"]
@@ -229,6 +240,7 @@ depends-member:
 - !private ["V12CoreGraphics7CGFloat", "deinit"]
 - !private ["Ps11CVarArgType", "CGColor"]
 - !private ["Ps11CVarArgType", "CGSizeMake"]
+- !private ["Ps11CVarArgType", "CheckForNetwork"]
 - !private ["Ps11CVarArgType", "Constants"]
 - !private ["Ps11CVarArgType", "CoreDataStackManager"]
 - !private ["Ps11CVarArgType", "Distance"]
@@ -238,12 +250,16 @@ depends-member:
 - ["Ps11CVarArgType", "PostInfo"]
 - !private ["Ps11CVarArgType", "SaveNewProblem"]
 - !private ["Ps11CVarArgType", "TempSave"]
+- !private ["Ps11CVarArgType", "UIAlertAction"]
+- !private ["Ps11CVarArgType", "UIAlertActionStyle"]
+- !private ["Ps11CVarArgType", "UIAlertController"]
 - !private ["Ps11CVarArgType", "UIBarButtonItem"]
 - !private ["Ps11CVarArgType", "UIBarButtonItemStyle"]
 - !private ["Ps11CVarArgType", "UIColor"]
 - !private ["Ps11CVarArgType", "UIControlState"]
 - !private ["Ps11CVarArgType", "UITextBorderStyle"]
 - ["Ps11CVarArgType", "addASolutionButton"]
+- !private ["Ps11CVarArgType", "addAction"]
 - ["Ps11CVarArgType", "addSolution"]
 - !private ["Ps11CVarArgType", "alpha"]
 - !private ["Ps11CVarArgType", "backBarButtonItem"]
@@ -273,6 +289,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "loadedDetailData"]
 - !private ["Ps11CVarArgType", "loadedNameData"]
 - !private ["Ps11CVarArgType", "masksToBounds"]
+- !private ["Ps11CVarArgType", "message"]
 - ["Ps11CVarArgType", "nameActionButton"]
 - ["Ps11CVarArgType", "nameField"]
 - ["Ps11CVarArgType", "namePlusButton"]
@@ -283,7 +300,8 @@ depends-member:
 - !private ["Ps11CVarArgType", "petitionURL"]
 - !private ["Ps11CVarArgType", "petitionURLArray"]
 - ["Ps11CVarArgType", "postButton"]
-- !private ["Ps11CVarArgType", "print"]
+- ["Ps11CVarArgType", "presentAlert"]
+- !private ["Ps11CVarArgType", "presentViewController"]
 - !private ["Ps11CVarArgType", "problemDetail"]
 - !private ["Ps11CVarArgType", "problemName"]
 - !private ["Ps11CVarArgType", "pushViewController"]
@@ -347,6 +365,7 @@ depends-member:
 - !private ["VSS13CharacterView", "Index"]
 - !private ["VSS13CharacterView", "SubSequence"]
 - !private ["VSS13CharacterView", "count"]
+- !private ["C8GoChange15CheckForNetwork", "init"]
 - !private ["Ps14CollectionType", "Element"]
 - !private ["Ps14CollectionType", "Generator"]
 - !private ["Ps14CollectionType", "Index"]
@@ -365,6 +384,7 @@ depends-member:
 - !private ["C8GoChange27CreateProblemViewController", "AddIdeaViewController"]
 - ["C8GoChange27CreateProblemViewController", "Bool"]
 - !private ["C8GoChange27CreateProblemViewController", "CGSizeMake"]
+- !private ["C8GoChange27CreateProblemViewController", "CheckForNetwork"]
 - !private ["C8GoChange27CreateProblemViewController", "CoreDataStackManager"]
 - !private ["C8GoChange27CreateProblemViewController", "CustomTableViewCell"]
 - !private ["C8GoChange27CreateProblemViewController", "GoChangeClient"]
@@ -377,6 +397,9 @@ depends-member:
 - !private ["C8GoChange27CreateProblemViewController", "SaveNewProblem"]
 - ["C8GoChange27CreateProblemViewController", "String"]
 - !private ["C8GoChange27CreateProblemViewController", "TempSave"]
+- !private ["C8GoChange27CreateProblemViewController", "UIAlertAction"]
+- !private ["C8GoChange27CreateProblemViewController", "UIAlertActionStyle"]
+- !private ["C8GoChange27CreateProblemViewController", "UIAlertController"]
 - !private ["C8GoChange27CreateProblemViewController", "UIBarButtonItem"]
 - !private ["C8GoChange27CreateProblemViewController", "UIBarButtonItemStyle"]
 - ["C8GoChange27CreateProblemViewController", "UIButton"]
@@ -406,7 +429,8 @@ depends-member:
 - !private ["C8GoChange27CreateProblemViewController", "navigationController"]
 - !private ["C8GoChange27CreateProblemViewController", "navigationItem"]
 - ["C8GoChange27CreateProblemViewController", "postButton"]
-- !private ["C8GoChange27CreateProblemViewController", "print"]
+- ["C8GoChange27CreateProblemViewController", "presentAlert"]
+- !private ["C8GoChange27CreateProblemViewController", "presentViewController"]
 - ["C8GoChange27CreateProblemViewController", "scrollViewDidEndDecelerating"]
 - ["C8GoChange27CreateProblemViewController", "scrollViewDidEndDragging"]
 - ["C8GoChange27CreateProblemViewController", "scrollViewDidEndScrollingAnimation"]
@@ -443,6 +467,7 @@ depends-member:
 - ["C8GoChange27CreateProblemViewController", "viewWillAppear"]
 - !private ["Ps28CustomDebugStringConvertible", "CGColor"]
 - !private ["Ps28CustomDebugStringConvertible", "CGSizeMake"]
+- !private ["Ps28CustomDebugStringConvertible", "CheckForNetwork"]
 - !private ["Ps28CustomDebugStringConvertible", "Constants"]
 - !private ["Ps28CustomDebugStringConvertible", "CoreDataStackManager"]
 - !private ["Ps28CustomDebugStringConvertible", "Element"]
@@ -455,12 +480,16 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "Some"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
 - !private ["Ps28CustomDebugStringConvertible", "TempSave"]
+- !private ["Ps28CustomDebugStringConvertible", "UIAlertAction"]
+- !private ["Ps28CustomDebugStringConvertible", "UIAlertActionStyle"]
+- !private ["Ps28CustomDebugStringConvertible", "UIAlertController"]
 - !private ["Ps28CustomDebugStringConvertible", "UIBarButtonItem"]
 - !private ["Ps28CustomDebugStringConvertible", "UIBarButtonItemStyle"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
 - !private ["Ps28CustomDebugStringConvertible", "UIControlState"]
 - !private ["Ps28CustomDebugStringConvertible", "UITextBorderStyle"]
 - ["Ps28CustomDebugStringConvertible", "addASolutionButton"]
+- !private ["Ps28CustomDebugStringConvertible", "addAction"]
 - ["Ps28CustomDebugStringConvertible", "addSolution"]
 - !private ["Ps28CustomDebugStringConvertible", "alpha"]
 - !private ["Ps28CustomDebugStringConvertible", "backBarButtonItem"]
@@ -491,6 +520,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "loadedDetailData"]
 - !private ["Ps28CustomDebugStringConvertible", "loadedNameData"]
 - !private ["Ps28CustomDebugStringConvertible", "masksToBounds"]
+- !private ["Ps28CustomDebugStringConvertible", "message"]
 - ["Ps28CustomDebugStringConvertible", "nameActionButton"]
 - ["Ps28CustomDebugStringConvertible", "nameField"]
 - ["Ps28CustomDebugStringConvertible", "namePlusButton"]
@@ -501,7 +531,8 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "petitionURL"]
 - !private ["Ps28CustomDebugStringConvertible", "petitionURLArray"]
 - ["Ps28CustomDebugStringConvertible", "postButton"]
-- !private ["Ps28CustomDebugStringConvertible", "print"]
+- ["Ps28CustomDebugStringConvertible", "presentAlert"]
+- !private ["Ps28CustomDebugStringConvertible", "presentViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "problemDetail"]
 - !private ["Ps28CustomDebugStringConvertible", "problemName"]
 - !private ["Ps28CustomDebugStringConvertible", "pushViewController"]
@@ -563,6 +594,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps23CustomStringConvertible", "CGColor"]
 - !private ["Ps23CustomStringConvertible", "CGSizeMake"]
+- !private ["Ps23CustomStringConvertible", "CheckForNetwork"]
 - !private ["Ps23CustomStringConvertible", "Constants"]
 - !private ["Ps23CustomStringConvertible", "CoreDataStackManager"]
 - !private ["Ps23CustomStringConvertible", "Distance"]
@@ -576,6 +608,9 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "SaveNewProblem"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
 - !private ["Ps23CustomStringConvertible", "TempSave"]
+- !private ["Ps23CustomStringConvertible", "UIAlertAction"]
+- !private ["Ps23CustomStringConvertible", "UIAlertActionStyle"]
+- !private ["Ps23CustomStringConvertible", "UIAlertController"]
 - !private ["Ps23CustomStringConvertible", "UIBarButtonItem"]
 - !private ["Ps23CustomStringConvertible", "UIBarButtonItemStyle"]
 - !private ["Ps23CustomStringConvertible", "UIColor"]
@@ -583,6 +618,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "UITextBorderStyle"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - ["Ps23CustomStringConvertible", "addASolutionButton"]
+- !private ["Ps23CustomStringConvertible", "addAction"]
 - ["Ps23CustomStringConvertible", "addSolution"]
 - !private ["Ps23CustomStringConvertible", "alpha"]
 - !private ["Ps23CustomStringConvertible", "backBarButtonItem"]
@@ -613,6 +649,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "loadedDetailData"]
 - !private ["Ps23CustomStringConvertible", "loadedNameData"]
 - !private ["Ps23CustomStringConvertible", "masksToBounds"]
+- !private ["Ps23CustomStringConvertible", "message"]
 - ["Ps23CustomStringConvertible", "nameActionButton"]
 - ["Ps23CustomStringConvertible", "nameField"]
 - ["Ps23CustomStringConvertible", "namePlusButton"]
@@ -623,7 +660,8 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "petitionURL"]
 - !private ["Ps23CustomStringConvertible", "petitionURLArray"]
 - ["Ps23CustomStringConvertible", "postButton"]
-- !private ["Ps23CustomStringConvertible", "print"]
+- ["Ps23CustomStringConvertible", "presentAlert"]
+- !private ["Ps23CustomStringConvertible", "presentViewController"]
 - !private ["Ps23CustomStringConvertible", "problemDetail"]
 - !private ["Ps23CustomStringConvertible", "problemName"]
 - !private ["Ps23CustomStringConvertible", "pushViewController"]
@@ -690,6 +728,8 @@ depends-member:
 - !private ["Sd", "deinit"]
 - !private ["Ps9Equatable", "CGColor"]
 - !private ["Ps9Equatable", "CGSizeMake"]
+- !private ["Ps9Equatable", "Cancel"]
+- !private ["Ps9Equatable", "CheckForNetwork"]
 - !private ["Ps9Equatable", "Constants"]
 - !private ["Ps9Equatable", "CoreDataStackManager"]
 - !private ["Ps9Equatable", "Distance"]
@@ -702,6 +742,9 @@ depends-member:
 - ["Ps9Equatable", "PostInfo"]
 - !private ["Ps9Equatable", "SaveNewProblem"]
 - !private ["Ps9Equatable", "TempSave"]
+- !private ["Ps9Equatable", "UIAlertAction"]
+- !private ["Ps9Equatable", "UIAlertActionStyle"]
+- !private ["Ps9Equatable", "UIAlertController"]
 - !private ["Ps9Equatable", "UIBarButtonItem"]
 - !private ["Ps9Equatable", "UIBarButtonItemStyle"]
 - !private ["Ps9Equatable", "UIColor"]
@@ -709,6 +752,7 @@ depends-member:
 - !private ["Ps9Equatable", "UITextBorderStyle"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - ["Ps9Equatable", "addASolutionButton"]
+- !private ["Ps9Equatable", "addAction"]
 - ["Ps9Equatable", "addSolution"]
 - !private ["Ps9Equatable", "alpha"]
 - !private ["Ps9Equatable", "backBarButtonItem"]
@@ -738,6 +782,7 @@ depends-member:
 - !private ["Ps9Equatable", "loadedDetailData"]
 - !private ["Ps9Equatable", "loadedNameData"]
 - !private ["Ps9Equatable", "masksToBounds"]
+- !private ["Ps9Equatable", "message"]
 - ["Ps9Equatable", "nameActionButton"]
 - ["Ps9Equatable", "nameField"]
 - ["Ps9Equatable", "namePlusButton"]
@@ -748,7 +793,8 @@ depends-member:
 - !private ["Ps9Equatable", "petitionURL"]
 - !private ["Ps9Equatable", "petitionURLArray"]
 - ["Ps9Equatable", "postButton"]
-- !private ["Ps9Equatable", "print"]
+- ["Ps9Equatable", "presentAlert"]
+- !private ["Ps9Equatable", "presentViewController"]
 - !private ["Ps9Equatable", "problemDetail"]
 - !private ["Ps9Equatable", "problemName"]
 - !private ["Ps9Equatable", "pushViewController"]
@@ -816,6 +862,8 @@ depends-member:
 - !private ["C8GoChange14GoChangeClient", "Constants"]
 - !private ["Ps8Hashable", "CGColor"]
 - !private ["Ps8Hashable", "CGSizeMake"]
+- !private ["Ps8Hashable", "Cancel"]
+- !private ["Ps8Hashable", "CheckForNetwork"]
 - !private ["Ps8Hashable", "Constants"]
 - !private ["Ps8Hashable", "CoreDataStackManager"]
 - !private ["Ps8Hashable", "Distance"]
@@ -827,6 +875,9 @@ depends-member:
 - ["Ps8Hashable", "PostInfo"]
 - !private ["Ps8Hashable", "SaveNewProblem"]
 - !private ["Ps8Hashable", "TempSave"]
+- !private ["Ps8Hashable", "UIAlertAction"]
+- !private ["Ps8Hashable", "UIAlertActionStyle"]
+- !private ["Ps8Hashable", "UIAlertController"]
 - !private ["Ps8Hashable", "UIBarButtonItem"]
 - !private ["Ps8Hashable", "UIBarButtonItemStyle"]
 - !private ["Ps8Hashable", "UIColor"]
@@ -834,6 +885,7 @@ depends-member:
 - !private ["Ps8Hashable", "UITextBorderStyle"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - ["Ps8Hashable", "addASolutionButton"]
+- !private ["Ps8Hashable", "addAction"]
 - ["Ps8Hashable", "addSolution"]
 - !private ["Ps8Hashable", "alpha"]
 - !private ["Ps8Hashable", "backBarButtonItem"]
@@ -863,6 +915,7 @@ depends-member:
 - !private ["Ps8Hashable", "loadedDetailData"]
 - !private ["Ps8Hashable", "loadedNameData"]
 - !private ["Ps8Hashable", "masksToBounds"]
+- !private ["Ps8Hashable", "message"]
 - ["Ps8Hashable", "nameActionButton"]
 - ["Ps8Hashable", "nameField"]
 - ["Ps8Hashable", "namePlusButton"]
@@ -873,7 +926,8 @@ depends-member:
 - !private ["Ps8Hashable", "petitionURL"]
 - !private ["Ps8Hashable", "petitionURLArray"]
 - ["Ps8Hashable", "postButton"]
-- !private ["Ps8Hashable", "print"]
+- ["Ps8Hashable", "presentAlert"]
+- !private ["Ps8Hashable", "presentViewController"]
 - !private ["Ps8Hashable", "problemDetail"]
 - !private ["Ps8Hashable", "problemName"]
 - !private ["Ps8Hashable", "pushViewController"]
@@ -979,18 +1033,23 @@ depends-member:
 - !private ["Ps16MutableSliceable", "subscript"]
 - !private ["PSo8NSCoding", "CGColor"]
 - !private ["PSo8NSCoding", "CGSizeMake"]
+- !private ["PSo8NSCoding", "CheckForNetwork"]
 - !private ["PSo8NSCoding", "CoreDataStackManager"]
 - !private ["PSo8NSCoding", "GoChangeClient"]
 - !private ["PSo8NSCoding", "NSUserDefaults"]
 - ["PSo8NSCoding", "PostInfo"]
 - !private ["PSo8NSCoding", "SaveNewProblem"]
 - !private ["PSo8NSCoding", "TempSave"]
+- !private ["PSo8NSCoding", "UIAlertAction"]
+- !private ["PSo8NSCoding", "UIAlertActionStyle"]
+- !private ["PSo8NSCoding", "UIAlertController"]
 - !private ["PSo8NSCoding", "UIBarButtonItem"]
 - !private ["PSo8NSCoding", "UIBarButtonItemStyle"]
 - !private ["PSo8NSCoding", "UIColor"]
 - !private ["PSo8NSCoding", "UIControlState"]
 - !private ["PSo8NSCoding", "UITextBorderStyle"]
 - ["PSo8NSCoding", "addASolutionButton"]
+- !private ["PSo8NSCoding", "addAction"]
 - ["PSo8NSCoding", "addSolution"]
 - !private ["PSo8NSCoding", "alpha"]
 - !private ["PSo8NSCoding", "backBarButtonItem"]
@@ -1018,6 +1077,7 @@ depends-member:
 - !private ["PSo8NSCoding", "loadedDetailData"]
 - !private ["PSo8NSCoding", "loadedNameData"]
 - !private ["PSo8NSCoding", "masksToBounds"]
+- !private ["PSo8NSCoding", "message"]
 - ["PSo8NSCoding", "nameActionButton"]
 - ["PSo8NSCoding", "nameField"]
 - ["PSo8NSCoding", "namePlusButton"]
@@ -1027,7 +1087,8 @@ depends-member:
 - !private ["PSo8NSCoding", "ownerName"]
 - !private ["PSo8NSCoding", "petitionURL"]
 - ["PSo8NSCoding", "postButton"]
-- !private ["PSo8NSCoding", "print"]
+- ["PSo8NSCoding", "presentAlert"]
+- !private ["PSo8NSCoding", "presentViewController"]
 - !private ["PSo8NSCoding", "problemName"]
 - !private ["PSo8NSCoding", "pushViewController"]
 - !private ["PSo8NSCoding", "reloadData"]
@@ -1085,18 +1146,23 @@ depends-member:
 - !private ["PSo9NSCopying", "init"]
 - !private ["PSo9NSCopying", "row"]
 - !private ["PSo26NSExtensionRequestHandling", "CGSizeMake"]
+- !private ["PSo26NSExtensionRequestHandling", "CheckForNetwork"]
 - !private ["PSo26NSExtensionRequestHandling", "CoreDataStackManager"]
 - !private ["PSo26NSExtensionRequestHandling", "GoChangeClient"]
 - !private ["PSo26NSExtensionRequestHandling", "NSUserDefaults"]
 - ["PSo26NSExtensionRequestHandling", "PostInfo"]
 - !private ["PSo26NSExtensionRequestHandling", "SaveNewProblem"]
 - !private ["PSo26NSExtensionRequestHandling", "TempSave"]
+- !private ["PSo26NSExtensionRequestHandling", "UIAlertAction"]
+- !private ["PSo26NSExtensionRequestHandling", "UIAlertActionStyle"]
+- !private ["PSo26NSExtensionRequestHandling", "UIAlertController"]
 - !private ["PSo26NSExtensionRequestHandling", "UIBarButtonItem"]
 - !private ["PSo26NSExtensionRequestHandling", "UIBarButtonItemStyle"]
 - !private ["PSo26NSExtensionRequestHandling", "UIColor"]
 - !private ["PSo26NSExtensionRequestHandling", "UIControlState"]
 - !private ["PSo26NSExtensionRequestHandling", "UITextBorderStyle"]
 - ["PSo26NSExtensionRequestHandling", "addASolutionButton"]
+- !private ["PSo26NSExtensionRequestHandling", "addAction"]
 - ["PSo26NSExtensionRequestHandling", "addSolution"]
 - ["PSo26NSExtensionRequestHandling", "currentDetailData"]
 - ["PSo26NSExtensionRequestHandling", "currentNameData"]
@@ -1109,6 +1175,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "init"]
 - !private ["PSo26NSExtensionRequestHandling", "loadedDetailData"]
 - !private ["PSo26NSExtensionRequestHandling", "loadedNameData"]
+- !private ["PSo26NSExtensionRequestHandling", "message"]
 - ["PSo26NSExtensionRequestHandling", "nameActionButton"]
 - ["PSo26NSExtensionRequestHandling", "nameField"]
 - ["PSo26NSExtensionRequestHandling", "namePlusButton"]
@@ -1117,7 +1184,8 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "navigationItem"]
 - !private ["PSo26NSExtensionRequestHandling", "petitionURL"]
 - ["PSo26NSExtensionRequestHandling", "postButton"]
-- !private ["PSo26NSExtensionRequestHandling", "print"]
+- ["PSo26NSExtensionRequestHandling", "presentAlert"]
+- !private ["PSo26NSExtensionRequestHandling", "presentViewController"]
 - !private ["PSo26NSExtensionRequestHandling", "pushViewController"]
 - ["PSo26NSExtensionRequestHandling", "scrollViewDidEndDecelerating"]
 - ["PSo26NSExtensionRequestHandling", "scrollViewDidEndDragging"]
@@ -1162,6 +1230,7 @@ depends-member:
 - ["CSo8NSObject", "Bool"]
 - !private ["CSo8NSObject", "CGColor"]
 - !private ["CSo8NSObject", "CGSizeMake"]
+- !private ["CSo8NSObject", "CheckForNetwork"]
 - !private ["CSo8NSObject", "Constants"]
 - !private ["CSo8NSObject", "CoreDataStackManager"]
 - !private ["CSo8NSObject", "CustomTableViewCell"]
@@ -1175,6 +1244,9 @@ depends-member:
 - !private ["CSo8NSObject", "SaveNewProblem"]
 - ["CSo8NSObject", "String"]
 - !private ["CSo8NSObject", "TempSave"]
+- !private ["CSo8NSObject", "UIAlertAction"]
+- !private ["CSo8NSObject", "UIAlertActionStyle"]
+- !private ["CSo8NSObject", "UIAlertController"]
 - !private ["CSo8NSObject", "UIBarButtonItem"]
 - !private ["CSo8NSObject", "UIBarButtonItemStyle"]
 - ["CSo8NSObject", "UIButton"]
@@ -1187,6 +1259,7 @@ depends-member:
 - ["CSo8NSObject", "UITextView"]
 - !private ["CSo8NSObject", "ViewIdeaViewController"]
 - ["CSo8NSObject", "addASolutionButton"]
+- !private ["CSo8NSObject", "addAction"]
 - ["CSo8NSObject", "addSolution"]
 - !private ["CSo8NSObject", "alpha"]
 - !private ["CSo8NSObject", "backBarButtonItem"]
@@ -1216,6 +1289,7 @@ depends-member:
 - !private ["CSo8NSObject", "loadedDetailData"]
 - !private ["CSo8NSObject", "loadedNameData"]
 - !private ["CSo8NSObject", "masksToBounds"]
+- !private ["CSo8NSObject", "message"]
 - ["CSo8NSObject", "nameActionButton"]
 - ["CSo8NSObject", "nameField"]
 - ["CSo8NSObject", "namePlusButton"]
@@ -1226,7 +1300,8 @@ depends-member:
 - !private ["CSo8NSObject", "petitionURL"]
 - !private ["CSo8NSObject", "petitionURLArray"]
 - ["CSo8NSObject", "postButton"]
-- !private ["CSo8NSObject", "print"]
+- ["CSo8NSObject", "presentAlert"]
+- !private ["CSo8NSObject", "presentViewController"]
 - !private ["CSo8NSObject", "problemDetail"]
 - !private ["CSo8NSObject", "problemName"]
 - !private ["CSo8NSObject", "pushViewController"]
@@ -1286,6 +1361,7 @@ depends-member:
 - !private ["CSo8NSObject", "voteCount"]
 - !private ["PSo16NSObjectProtocol", "CGColor"]
 - !private ["PSo16NSObjectProtocol", "CGSizeMake"]
+- !private ["PSo16NSObjectProtocol", "CheckForNetwork"]
 - !private ["PSo16NSObjectProtocol", "Constants"]
 - !private ["PSo16NSObjectProtocol", "CoreDataStackManager"]
 - !private ["PSo16NSObjectProtocol", "GoChangeClient"]
@@ -1293,12 +1369,16 @@ depends-member:
 - ["PSo16NSObjectProtocol", "PostInfo"]
 - !private ["PSo16NSObjectProtocol", "SaveNewProblem"]
 - !private ["PSo16NSObjectProtocol", "TempSave"]
+- !private ["PSo16NSObjectProtocol", "UIAlertAction"]
+- !private ["PSo16NSObjectProtocol", "UIAlertActionStyle"]
+- !private ["PSo16NSObjectProtocol", "UIAlertController"]
 - !private ["PSo16NSObjectProtocol", "UIBarButtonItem"]
 - !private ["PSo16NSObjectProtocol", "UIBarButtonItemStyle"]
 - !private ["PSo16NSObjectProtocol", "UIColor"]
 - !private ["PSo16NSObjectProtocol", "UIControlState"]
 - !private ["PSo16NSObjectProtocol", "UITextBorderStyle"]
 - ["PSo16NSObjectProtocol", "addASolutionButton"]
+- !private ["PSo16NSObjectProtocol", "addAction"]
 - ["PSo16NSObjectProtocol", "addSolution"]
 - !private ["PSo16NSObjectProtocol", "alpha"]
 - !private ["PSo16NSObjectProtocol", "backBarButtonItem"]
@@ -1328,6 +1408,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "loadedDetailData"]
 - !private ["PSo16NSObjectProtocol", "loadedNameData"]
 - !private ["PSo16NSObjectProtocol", "masksToBounds"]
+- !private ["PSo16NSObjectProtocol", "message"]
 - ["PSo16NSObjectProtocol", "nameActionButton"]
 - ["PSo16NSObjectProtocol", "nameField"]
 - ["PSo16NSObjectProtocol", "namePlusButton"]
@@ -1338,7 +1419,8 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "petitionURL"]
 - !private ["PSo16NSObjectProtocol", "petitionURLArray"]
 - ["PSo16NSObjectProtocol", "postButton"]
-- !private ["PSo16NSObjectProtocol", "print"]
+- ["PSo16NSObjectProtocol", "presentAlert"]
+- !private ["PSo16NSObjectProtocol", "presentViewController"]
 - !private ["PSo16NSObjectProtocol", "problemDetail"]
 - !private ["PSo16NSObjectProtocol", "problemName"]
 - !private ["PSo16NSObjectProtocol", "pushViewController"]
@@ -1421,6 +1503,7 @@ depends-member:
 - !private ["Ps30RangeReplaceableCollectionType", "SubSequence"]
 - !private ["Ps30RangeReplaceableCollectionType", "count"]
 - !private ["Ps30RangeReplaceableCollectionType", "subscript"]
+- !private ["Ps16RawRepresentable", "Cancel"]
 - !private ["Ps16RawRepresentable", "None"]
 - !private ["Ps16RawRepresentable", "Normal"]
 - !private ["Ps16RawRepresentable", "Plain"]
@@ -1480,6 +1563,11 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "text"]
 - !private ["PSo29UIAccessibilityIdentification", "textColor"]
 - !private ["PSo29UIAccessibilityIdentification", "voteCount"]
+- !private ["CSo13UIAlertAction", "init"]
+- !private ["OSC18UIAlertActionStyle", "Cancel"]
+- !private ["CSo17UIAlertController", "addAction"]
+- !private ["CSo17UIAlertController", "init"]
+- !private ["CSo17UIAlertController", "message"]
 - !private ["PSo12UIAppearance", "alpha"]
 - !private ["PSo12UIAppearance", "barTintColor"]
 - !private ["PSo12UIAppearance", "borderStyle"]
@@ -1500,18 +1588,23 @@ depends-member:
 - !private ["PSo12UIAppearance", "textColor"]
 - !private ["PSo12UIAppearance", "voteCount"]
 - !private ["PSo21UIAppearanceContainer", "CGSizeMake"]
+- !private ["PSo21UIAppearanceContainer", "CheckForNetwork"]
 - !private ["PSo21UIAppearanceContainer", "CoreDataStackManager"]
 - !private ["PSo21UIAppearanceContainer", "GoChangeClient"]
 - !private ["PSo21UIAppearanceContainer", "NSUserDefaults"]
 - ["PSo21UIAppearanceContainer", "PostInfo"]
 - !private ["PSo21UIAppearanceContainer", "SaveNewProblem"]
 - !private ["PSo21UIAppearanceContainer", "TempSave"]
+- !private ["PSo21UIAppearanceContainer", "UIAlertAction"]
+- !private ["PSo21UIAppearanceContainer", "UIAlertActionStyle"]
+- !private ["PSo21UIAppearanceContainer", "UIAlertController"]
 - !private ["PSo21UIAppearanceContainer", "UIBarButtonItem"]
 - !private ["PSo21UIAppearanceContainer", "UIBarButtonItemStyle"]
 - !private ["PSo21UIAppearanceContainer", "UIColor"]
 - !private ["PSo21UIAppearanceContainer", "UIControlState"]
 - !private ["PSo21UIAppearanceContainer", "UITextBorderStyle"]
 - ["PSo21UIAppearanceContainer", "addASolutionButton"]
+- !private ["PSo21UIAppearanceContainer", "addAction"]
 - ["PSo21UIAppearanceContainer", "addSolution"]
 - !private ["PSo21UIAppearanceContainer", "alpha"]
 - !private ["PSo21UIAppearanceContainer", "barTintColor"]
@@ -1533,6 +1626,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "layer"]
 - !private ["PSo21UIAppearanceContainer", "loadedDetailData"]
 - !private ["PSo21UIAppearanceContainer", "loadedNameData"]
+- !private ["PSo21UIAppearanceContainer", "message"]
 - ["PSo21UIAppearanceContainer", "nameActionButton"]
 - ["PSo21UIAppearanceContainer", "nameField"]
 - ["PSo21UIAppearanceContainer", "namePlusButton"]
@@ -1542,7 +1636,8 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "ownerName"]
 - !private ["PSo21UIAppearanceContainer", "petitionURL"]
 - ["PSo21UIAppearanceContainer", "postButton"]
-- !private ["PSo21UIAppearanceContainer", "print"]
+- ["PSo21UIAppearanceContainer", "presentAlert"]
+- !private ["PSo21UIAppearanceContainer", "presentViewController"]
 - !private ["PSo21UIAppearanceContainer", "problemName"]
 - !private ["PSo21UIAppearanceContainer", "pushViewController"]
 - !private ["PSo21UIAppearanceContainer", "reloadData"]
@@ -1600,18 +1695,23 @@ depends-member:
 - !private ["CSo7UIColor", "blackColor"]
 - !private ["CSo7UIColor", "clearColor"]
 - !private ["PSo18UIContentContainer", "CGSizeMake"]
+- !private ["PSo18UIContentContainer", "CheckForNetwork"]
 - !private ["PSo18UIContentContainer", "CoreDataStackManager"]
 - !private ["PSo18UIContentContainer", "GoChangeClient"]
 - !private ["PSo18UIContentContainer", "NSUserDefaults"]
 - ["PSo18UIContentContainer", "PostInfo"]
 - !private ["PSo18UIContentContainer", "SaveNewProblem"]
 - !private ["PSo18UIContentContainer", "TempSave"]
+- !private ["PSo18UIContentContainer", "UIAlertAction"]
+- !private ["PSo18UIContentContainer", "UIAlertActionStyle"]
+- !private ["PSo18UIContentContainer", "UIAlertController"]
 - !private ["PSo18UIContentContainer", "UIBarButtonItem"]
 - !private ["PSo18UIContentContainer", "UIBarButtonItemStyle"]
 - !private ["PSo18UIContentContainer", "UIColor"]
 - !private ["PSo18UIContentContainer", "UIControlState"]
 - !private ["PSo18UIContentContainer", "UITextBorderStyle"]
 - ["PSo18UIContentContainer", "addASolutionButton"]
+- !private ["PSo18UIContentContainer", "addAction"]
 - ["PSo18UIContentContainer", "addSolution"]
 - ["PSo18UIContentContainer", "currentDetailData"]
 - ["PSo18UIContentContainer", "currentNameData"]
@@ -1624,6 +1724,7 @@ depends-member:
 - ["PSo18UIContentContainer", "init"]
 - !private ["PSo18UIContentContainer", "loadedDetailData"]
 - !private ["PSo18UIContentContainer", "loadedNameData"]
+- !private ["PSo18UIContentContainer", "message"]
 - ["PSo18UIContentContainer", "nameActionButton"]
 - ["PSo18UIContentContainer", "nameField"]
 - ["PSo18UIContentContainer", "namePlusButton"]
@@ -1632,7 +1733,8 @@ depends-member:
 - !private ["PSo18UIContentContainer", "navigationItem"]
 - !private ["PSo18UIContentContainer", "petitionURL"]
 - ["PSo18UIContentContainer", "postButton"]
-- !private ["PSo18UIContentContainer", "print"]
+- ["PSo18UIContentContainer", "presentAlert"]
+- !private ["PSo18UIContentContainer", "presentViewController"]
 - !private ["PSo18UIContentContainer", "pushViewController"]
 - ["PSo18UIContentContainer", "scrollViewDidEndDecelerating"]
 - ["PSo18UIContentContainer", "scrollViewDidEndDragging"]
@@ -1717,18 +1819,23 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "textColor"]
 - !private ["PSo13UIDynamicItem", "voteCount"]
 - !private ["PSo18UIFocusEnvironment", "CGSizeMake"]
+- !private ["PSo18UIFocusEnvironment", "CheckForNetwork"]
 - !private ["PSo18UIFocusEnvironment", "CoreDataStackManager"]
 - !private ["PSo18UIFocusEnvironment", "GoChangeClient"]
 - !private ["PSo18UIFocusEnvironment", "NSUserDefaults"]
 - ["PSo18UIFocusEnvironment", "PostInfo"]
 - !private ["PSo18UIFocusEnvironment", "SaveNewProblem"]
 - !private ["PSo18UIFocusEnvironment", "TempSave"]
+- !private ["PSo18UIFocusEnvironment", "UIAlertAction"]
+- !private ["PSo18UIFocusEnvironment", "UIAlertActionStyle"]
+- !private ["PSo18UIFocusEnvironment", "UIAlertController"]
 - !private ["PSo18UIFocusEnvironment", "UIBarButtonItem"]
 - !private ["PSo18UIFocusEnvironment", "UIBarButtonItemStyle"]
 - !private ["PSo18UIFocusEnvironment", "UIColor"]
 - !private ["PSo18UIFocusEnvironment", "UIControlState"]
 - !private ["PSo18UIFocusEnvironment", "UITextBorderStyle"]
 - ["PSo18UIFocusEnvironment", "addASolutionButton"]
+- !private ["PSo18UIFocusEnvironment", "addAction"]
 - ["PSo18UIFocusEnvironment", "addSolution"]
 - !private ["PSo18UIFocusEnvironment", "alpha"]
 - !private ["PSo18UIFocusEnvironment", "barTintColor"]
@@ -1750,6 +1857,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "layer"]
 - !private ["PSo18UIFocusEnvironment", "loadedDetailData"]
 - !private ["PSo18UIFocusEnvironment", "loadedNameData"]
+- !private ["PSo18UIFocusEnvironment", "message"]
 - ["PSo18UIFocusEnvironment", "nameActionButton"]
 - ["PSo18UIFocusEnvironment", "nameField"]
 - ["PSo18UIFocusEnvironment", "namePlusButton"]
@@ -1759,7 +1867,8 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "ownerName"]
 - !private ["PSo18UIFocusEnvironment", "petitionURL"]
 - ["PSo18UIFocusEnvironment", "postButton"]
-- !private ["PSo18UIFocusEnvironment", "print"]
+- ["PSo18UIFocusEnvironment", "presentAlert"]
+- !private ["PSo18UIFocusEnvironment", "presentViewController"]
 - !private ["PSo18UIFocusEnvironment", "problemName"]
 - !private ["PSo18UIFocusEnvironment", "pushViewController"]
 - !private ["PSo18UIFocusEnvironment", "reloadData"]
@@ -1826,6 +1935,7 @@ depends-member:
 - !private ["CSo11UIResponder", "AddIdeaViewController"]
 - ["CSo11UIResponder", "Bool"]
 - !private ["CSo11UIResponder", "CGSizeMake"]
+- !private ["CSo11UIResponder", "CheckForNetwork"]
 - !private ["CSo11UIResponder", "CoreDataStackManager"]
 - !private ["CSo11UIResponder", "CustomTableViewCell"]
 - !private ["CSo11UIResponder", "GoChangeClient"]
@@ -1838,6 +1948,9 @@ depends-member:
 - !private ["CSo11UIResponder", "SaveNewProblem"]
 - ["CSo11UIResponder", "String"]
 - !private ["CSo11UIResponder", "TempSave"]
+- !private ["CSo11UIResponder", "UIAlertAction"]
+- !private ["CSo11UIResponder", "UIAlertActionStyle"]
+- !private ["CSo11UIResponder", "UIAlertController"]
 - !private ["CSo11UIResponder", "UIBarButtonItem"]
 - !private ["CSo11UIResponder", "UIBarButtonItemStyle"]
 - ["CSo11UIResponder", "UIButton"]
@@ -1850,6 +1963,7 @@ depends-member:
 - ["CSo11UIResponder", "UITextView"]
 - !private ["CSo11UIResponder", "ViewIdeaViewController"]
 - ["CSo11UIResponder", "addASolutionButton"]
+- !private ["CSo11UIResponder", "addAction"]
 - ["CSo11UIResponder", "addSolution"]
 - !private ["CSo11UIResponder", "alpha"]
 - !private ["CSo11UIResponder", "barTintColor"]
@@ -1871,6 +1985,7 @@ depends-member:
 - !private ["CSo11UIResponder", "layer"]
 - !private ["CSo11UIResponder", "loadedDetailData"]
 - !private ["CSo11UIResponder", "loadedNameData"]
+- !private ["CSo11UIResponder", "message"]
 - ["CSo11UIResponder", "nameActionButton"]
 - ["CSo11UIResponder", "nameField"]
 - ["CSo11UIResponder", "namePlusButton"]
@@ -1880,7 +1995,8 @@ depends-member:
 - !private ["CSo11UIResponder", "ownerName"]
 - !private ["CSo11UIResponder", "petitionURL"]
 - ["CSo11UIResponder", "postButton"]
-- !private ["CSo11UIResponder", "print"]
+- ["CSo11UIResponder", "presentAlert"]
+- !private ["CSo11UIResponder", "presentViewController"]
 - !private ["CSo11UIResponder", "problemName"]
 - !private ["CSo11UIResponder", "pushViewController"]
 - !private ["CSo11UIResponder", "reloadData"]
@@ -1935,11 +2051,15 @@ depends-member:
 - !private ["CSo12UIScrollView", "text"]
 - !private ["CSo12UIScrollView", "textColor"]
 - !private ["PSo20UIScrollViewDelegate", "CGSizeMake"]
+- !private ["PSo20UIScrollViewDelegate", "CheckForNetwork"]
 - !private ["PSo20UIScrollViewDelegate", "CoreDataStackManager"]
 - !private ["PSo20UIScrollViewDelegate", "GoChangeClient"]
 - !private ["PSo20UIScrollViewDelegate", "NSUserDefaults"]
 - !private ["PSo20UIScrollViewDelegate", "SaveNewProblem"]
 - !private ["PSo20UIScrollViewDelegate", "TempSave"]
+- !private ["PSo20UIScrollViewDelegate", "UIAlertAction"]
+- !private ["PSo20UIScrollViewDelegate", "UIAlertActionStyle"]
+- !private ["PSo20UIScrollViewDelegate", "UIAlertController"]
 - !private ["PSo20UIScrollViewDelegate", "UIBarButtonItem"]
 - !private ["PSo20UIScrollViewDelegate", "UIBarButtonItemStyle"]
 - !private ["PSo20UIScrollViewDelegate", "UIColor"]
@@ -1957,7 +2077,8 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "navigationController"]
 - !private ["PSo20UIScrollViewDelegate", "navigationItem"]
 - !private ["PSo20UIScrollViewDelegate", "postButton"]
-- !private ["PSo20UIScrollViewDelegate", "print"]
+- !private ["PSo20UIScrollViewDelegate", "presentAlert"]
+- !private ["PSo20UIScrollViewDelegate", "presentViewController"]
 - ["PSo20UIScrollViewDelegate", "scrollViewDidEndDecelerating"]
 - ["PSo20UIScrollViewDelegate", "scrollViewDidEndDragging"]
 - ["PSo20UIScrollViewDelegate", "scrollViewDidEndScrollingAnimation"]
@@ -1991,18 +2112,23 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "viewForZoomingInScrollView"]
 - ["PSo20UIScrollViewDelegate", ""]
 - !private ["PSo16UIStateRestoring", "CGSizeMake"]
+- !private ["PSo16UIStateRestoring", "CheckForNetwork"]
 - !private ["PSo16UIStateRestoring", "CoreDataStackManager"]
 - !private ["PSo16UIStateRestoring", "GoChangeClient"]
 - !private ["PSo16UIStateRestoring", "NSUserDefaults"]
 - ["PSo16UIStateRestoring", "PostInfo"]
 - !private ["PSo16UIStateRestoring", "SaveNewProblem"]
 - !private ["PSo16UIStateRestoring", "TempSave"]
+- !private ["PSo16UIStateRestoring", "UIAlertAction"]
+- !private ["PSo16UIStateRestoring", "UIAlertActionStyle"]
+- !private ["PSo16UIStateRestoring", "UIAlertController"]
 - !private ["PSo16UIStateRestoring", "UIBarButtonItem"]
 - !private ["PSo16UIStateRestoring", "UIBarButtonItemStyle"]
 - !private ["PSo16UIStateRestoring", "UIColor"]
 - !private ["PSo16UIStateRestoring", "UIControlState"]
 - !private ["PSo16UIStateRestoring", "UITextBorderStyle"]
 - ["PSo16UIStateRestoring", "addASolutionButton"]
+- !private ["PSo16UIStateRestoring", "addAction"]
 - ["PSo16UIStateRestoring", "addSolution"]
 - ["PSo16UIStateRestoring", "currentDetailData"]
 - ["PSo16UIStateRestoring", "currentNameData"]
@@ -2015,6 +2141,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "init"]
 - !private ["PSo16UIStateRestoring", "loadedDetailData"]
 - !private ["PSo16UIStateRestoring", "loadedNameData"]
+- !private ["PSo16UIStateRestoring", "message"]
 - ["PSo16UIStateRestoring", "nameActionButton"]
 - ["PSo16UIStateRestoring", "nameField"]
 - ["PSo16UIStateRestoring", "namePlusButton"]
@@ -2023,7 +2150,8 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "navigationItem"]
 - !private ["PSo16UIStateRestoring", "petitionURL"]
 - ["PSo16UIStateRestoring", "postButton"]
-- !private ["PSo16UIStateRestoring", "print"]
+- ["PSo16UIStateRestoring", "presentAlert"]
+- !private ["PSo16UIStateRestoring", "presentViewController"]
 - !private ["PSo16UIStateRestoring", "pushViewController"]
 - ["PSo16UIStateRestoring", "scrollViewDidEndDecelerating"]
 - ["PSo16UIStateRestoring", "scrollViewDidEndDragging"]
@@ -2072,11 +2200,15 @@ depends-member:
 - !private ["CSo15UITableViewCell", "problemName"]
 - !private ["CSo15UITableViewCell", "voteCount"]
 - !private ["PSo19UITableViewDelegate", "CGSizeMake"]
+- !private ["PSo19UITableViewDelegate", "CheckForNetwork"]
 - !private ["PSo19UITableViewDelegate", "CoreDataStackManager"]
 - !private ["PSo19UITableViewDelegate", "GoChangeClient"]
 - !private ["PSo19UITableViewDelegate", "NSUserDefaults"]
 - !private ["PSo19UITableViewDelegate", "SaveNewProblem"]
 - !private ["PSo19UITableViewDelegate", "TempSave"]
+- !private ["PSo19UITableViewDelegate", "UIAlertAction"]
+- !private ["PSo19UITableViewDelegate", "UIAlertActionStyle"]
+- !private ["PSo19UITableViewDelegate", "UIAlertController"]
 - !private ["PSo19UITableViewDelegate", "UIBarButtonItem"]
 - !private ["PSo19UITableViewDelegate", "UIBarButtonItemStyle"]
 - !private ["PSo19UITableViewDelegate", "UIColor"]
@@ -2094,7 +2226,8 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "navigationController"]
 - !private ["PSo19UITableViewDelegate", "navigationItem"]
 - !private ["PSo19UITableViewDelegate", "postButton"]
-- !private ["PSo19UITableViewDelegate", "print"]
+- !private ["PSo19UITableViewDelegate", "presentAlert"]
+- !private ["PSo19UITableViewDelegate", "presentViewController"]
 - ["PSo19UITableViewDelegate", "scrollViewDidEndDecelerating"]
 - ["PSo19UITableViewDelegate", "scrollViewDidEndDragging"]
 - ["PSo19UITableViewDelegate", "scrollViewDidEndScrollingAnimation"]
@@ -2135,11 +2268,15 @@ depends-member:
 - !private ["CSo11UITextField", "resignFirstResponder"]
 - !private ["CSo11UITextField", "text"]
 - !private ["PSo19UITextFieldDelegate", "CGSizeMake"]
+- !private ["PSo19UITextFieldDelegate", "CheckForNetwork"]
 - !private ["PSo19UITextFieldDelegate", "CoreDataStackManager"]
 - !private ["PSo19UITextFieldDelegate", "GoChangeClient"]
 - !private ["PSo19UITextFieldDelegate", "NSUserDefaults"]
 - !private ["PSo19UITextFieldDelegate", "SaveNewProblem"]
 - !private ["PSo19UITextFieldDelegate", "TempSave"]
+- !private ["PSo19UITextFieldDelegate", "UIAlertAction"]
+- !private ["PSo19UITextFieldDelegate", "UIAlertActionStyle"]
+- !private ["PSo19UITextFieldDelegate", "UIAlertController"]
 - !private ["PSo19UITextFieldDelegate", "UIBarButtonItem"]
 - !private ["PSo19UITextFieldDelegate", "UIBarButtonItemStyle"]
 - !private ["PSo19UITextFieldDelegate", "UIColor"]
@@ -2157,7 +2294,8 @@ depends-member:
 - !private ["PSo19UITextFieldDelegate", "navigationController"]
 - !private ["PSo19UITextFieldDelegate", "navigationItem"]
 - !private ["PSo19UITextFieldDelegate", "postButton"]
-- !private ["PSo19UITextFieldDelegate", "print"]
+- !private ["PSo19UITextFieldDelegate", "presentAlert"]
+- !private ["PSo19UITextFieldDelegate", "presentViewController"]
 - ["PSo19UITextFieldDelegate", "scrollViewDidEndDecelerating"]
 - ["PSo19UITextFieldDelegate", "scrollViewDidEndDragging"]
 - ["PSo19UITextFieldDelegate", "scrollViewDidEndScrollingAnimation"]
@@ -2216,11 +2354,15 @@ depends-member:
 - !private ["CSo10UITextView", "text"]
 - !private ["CSo10UITextView", "textColor"]
 - !private ["PSo18UITextViewDelegate", "CGSizeMake"]
+- !private ["PSo18UITextViewDelegate", "CheckForNetwork"]
 - !private ["PSo18UITextViewDelegate", "CoreDataStackManager"]
 - !private ["PSo18UITextViewDelegate", "GoChangeClient"]
 - !private ["PSo18UITextViewDelegate", "NSUserDefaults"]
 - !private ["PSo18UITextViewDelegate", "SaveNewProblem"]
 - !private ["PSo18UITextViewDelegate", "TempSave"]
+- !private ["PSo18UITextViewDelegate", "UIAlertAction"]
+- !private ["PSo18UITextViewDelegate", "UIAlertActionStyle"]
+- !private ["PSo18UITextViewDelegate", "UIAlertController"]
 - !private ["PSo18UITextViewDelegate", "UIBarButtonItem"]
 - !private ["PSo18UITextViewDelegate", "UIBarButtonItemStyle"]
 - !private ["PSo18UITextViewDelegate", "UIColor"]
@@ -2238,7 +2380,8 @@ depends-member:
 - !private ["PSo18UITextViewDelegate", "navigationController"]
 - !private ["PSo18UITextViewDelegate", "navigationItem"]
 - !private ["PSo18UITextViewDelegate", "postButton"]
-- !private ["PSo18UITextViewDelegate", "print"]
+- !private ["PSo18UITextViewDelegate", "presentAlert"]
+- !private ["PSo18UITextViewDelegate", "presentViewController"]
 - ["PSo18UITextViewDelegate", "scrollViewDidEndDecelerating"]
 - ["PSo18UITextViewDelegate", "scrollViewDidEndDragging"]
 - ["PSo18UITextViewDelegate", "scrollViewDidEndScrollingAnimation"]
@@ -2272,18 +2415,23 @@ depends-member:
 - ["PSo18UITextViewDelegate", "viewForZoomingInScrollView"]
 - ["PSo18UITextViewDelegate", ""]
 - !private ["PSo18UITraitEnvironment", "CGSizeMake"]
+- !private ["PSo18UITraitEnvironment", "CheckForNetwork"]
 - !private ["PSo18UITraitEnvironment", "CoreDataStackManager"]
 - !private ["PSo18UITraitEnvironment", "GoChangeClient"]
 - !private ["PSo18UITraitEnvironment", "NSUserDefaults"]
 - ["PSo18UITraitEnvironment", "PostInfo"]
 - !private ["PSo18UITraitEnvironment", "SaveNewProblem"]
 - !private ["PSo18UITraitEnvironment", "TempSave"]
+- !private ["PSo18UITraitEnvironment", "UIAlertAction"]
+- !private ["PSo18UITraitEnvironment", "UIAlertActionStyle"]
+- !private ["PSo18UITraitEnvironment", "UIAlertController"]
 - !private ["PSo18UITraitEnvironment", "UIBarButtonItem"]
 - !private ["PSo18UITraitEnvironment", "UIBarButtonItemStyle"]
 - !private ["PSo18UITraitEnvironment", "UIColor"]
 - !private ["PSo18UITraitEnvironment", "UIControlState"]
 - !private ["PSo18UITraitEnvironment", "UITextBorderStyle"]
 - ["PSo18UITraitEnvironment", "addASolutionButton"]
+- !private ["PSo18UITraitEnvironment", "addAction"]
 - ["PSo18UITraitEnvironment", "addSolution"]
 - !private ["PSo18UITraitEnvironment", "alpha"]
 - !private ["PSo18UITraitEnvironment", "barTintColor"]
@@ -2305,6 +2453,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "layer"]
 - !private ["PSo18UITraitEnvironment", "loadedDetailData"]
 - !private ["PSo18UITraitEnvironment", "loadedNameData"]
+- !private ["PSo18UITraitEnvironment", "message"]
 - ["PSo18UITraitEnvironment", "nameActionButton"]
 - ["PSo18UITraitEnvironment", "nameField"]
 - ["PSo18UITraitEnvironment", "namePlusButton"]
@@ -2314,7 +2463,8 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "ownerName"]
 - !private ["PSo18UITraitEnvironment", "petitionURL"]
 - ["PSo18UITraitEnvironment", "postButton"]
-- !private ["PSo18UITraitEnvironment", "print"]
+- ["PSo18UITraitEnvironment", "presentAlert"]
+- !private ["PSo18UITraitEnvironment", "presentViewController"]
 - !private ["PSo18UITraitEnvironment", "problemName"]
 - !private ["PSo18UITraitEnvironment", "pushViewController"]
 - !private ["PSo18UITraitEnvironment", "reloadData"]
@@ -2381,6 +2531,7 @@ depends-member:
 - !private ["CSo16UIViewController", "AddIdeaViewController"]
 - ["CSo16UIViewController", "Bool"]
 - !private ["CSo16UIViewController", "CGSizeMake"]
+- !private ["CSo16UIViewController", "CheckForNetwork"]
 - !private ["CSo16UIViewController", "CoreDataStackManager"]
 - !private ["CSo16UIViewController", "CustomTableViewCell"]
 - !private ["CSo16UIViewController", "GoChangeClient"]
@@ -2393,6 +2544,9 @@ depends-member:
 - !private ["CSo16UIViewController", "SaveNewProblem"]
 - ["CSo16UIViewController", "String"]
 - !private ["CSo16UIViewController", "TempSave"]
+- !private ["CSo16UIViewController", "UIAlertAction"]
+- !private ["CSo16UIViewController", "UIAlertActionStyle"]
+- !private ["CSo16UIViewController", "UIAlertController"]
 - !private ["CSo16UIViewController", "UIBarButtonItem"]
 - !private ["CSo16UIViewController", "UIBarButtonItemStyle"]
 - ["CSo16UIViewController", "UIButton"]
@@ -2405,6 +2559,7 @@ depends-member:
 - ["CSo16UIViewController", "UITextView"]
 - !private ["CSo16UIViewController", "ViewIdeaViewController"]
 - ["CSo16UIViewController", "addASolutionButton"]
+- !private ["CSo16UIViewController", "addAction"]
 - ["CSo16UIViewController", "addSolution"]
 - ["CSo16UIViewController", "currentDetailData"]
 - ["CSo16UIViewController", "currentNameData"]
@@ -2417,6 +2572,7 @@ depends-member:
 - ["CSo16UIViewController", "init"]
 - !private ["CSo16UIViewController", "loadedDetailData"]
 - !private ["CSo16UIViewController", "loadedNameData"]
+- !private ["CSo16UIViewController", "message"]
 - ["CSo16UIViewController", "nameActionButton"]
 - ["CSo16UIViewController", "nameField"]
 - ["CSo16UIViewController", "namePlusButton"]
@@ -2425,7 +2581,8 @@ depends-member:
 - !private ["CSo16UIViewController", "navigationItem"]
 - !private ["CSo16UIViewController", "petitionURL"]
 - ["CSo16UIViewController", "postButton"]
-- !private ["CSo16UIViewController", "print"]
+- ["CSo16UIViewController", "presentAlert"]
+- !private ["CSo16UIViewController", "presentViewController"]
 - !private ["CSo16UIViewController", "pushViewController"]
 - ["CSo16UIViewController", "scrollViewDidEndDecelerating"]
 - ["CSo16UIViewController", "scrollViewDidEndDragging"]
@@ -2576,6 +2733,7 @@ depends-nominal:
 - "Ps11CVarArgType"
 - !private "Vs9Character"
 - !private "VSS13CharacterView"
+- !private "C8GoChange15CheckForNetwork"
 - !private "Ps14CollectionType"
 - !private "Ps10Comparable"
 - !private "VC8GoChange14GoChangeClient9Constants"
@@ -2638,6 +2796,9 @@ depends-nominal:
 - !private "Ps24StringLiteralConvertible"
 - !private "C8GoChange8TempSave"
 - !private "PSo29UIAccessibilityIdentification"
+- !private "CSo13UIAlertAction"
+- !private "OSC18UIAlertActionStyle"
+- !private "CSo17UIAlertController"
 - !private "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"
 - !private "CSo15UIBarButtonItem"
@@ -2726,4 +2887,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "0da54f582bf7e543e6fd5f8cad3b8922"
+interface-hash: "82bdc513928fb6dd01996f3d27bdf7a8"

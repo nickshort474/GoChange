@@ -10,11 +10,11 @@ provides-dynamic-lookup:
 depends-top-level:
 - !private "print"
 - "Firebase"
+- "FDataSnapshot"
 - "StringLiteralType"
 - "Void"
 - "GetRecentlyAdded"
 - "NSObject"
-- "FDataSnapshot"
 depends-member:
 - ["Ps9AnyObject", "Firebase"]
 - !private ["Ps9AnyObject", "description"]

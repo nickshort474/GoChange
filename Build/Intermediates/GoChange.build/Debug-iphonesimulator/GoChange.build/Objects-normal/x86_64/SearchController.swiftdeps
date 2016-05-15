@@ -6,41 +6,40 @@ provides-nominal:
 provides-member:
 - ["C8GoChange16SearchController", ""]
 provides-dynamic-lookup:
-- "countArray"
-- "useSolutionCountArray"
-- "createRefArray"
+- "useDetailArray"
+- "matchedNameArray"
 - "returnedNameArray"
+- "useNameArray"
 - "searchText"
 - "useOwnerArray"
-- "matchedNameArray"
+- "createRefArray"
 - "checkIfInCoreData"
+- "countArray"
+- "useSolutionCountArray"
 - "matchedRefArray"
-- "refsNotInCoreData"
-- "useDetailArray"
-- "checkResults"
 - "returnedRefArray"
-- "useNameArray"
+- "refsNotInCoreData"
+- "checkResults"
 depends-top-level:
-- !private "print"
-- !private "RetrieveProblem"
-- !private "!="
-- !private "Array"
-- !private "UnicodeScalarType"
-- "SearchController"
-- !private "RetrieveDetailsFromFirebase"
-- !private "=="
-- "StringLiteralType"
 - !private "RetrieveSolutionCountFirebase"
-- "NSObject"
-- !private "RetrieveNamesFromFirebase"
-- !private "..<"
-- !private "FDataSnapshot"
-- "Int"
+- !private "UnicodeScalarType"
 - !private "+="
-- "Void"
-- !private "Set"
-- !private "RetrieveAllNamesFromFirebase"
+- !private "=="
+- !private "RetrieveDetailsFromFirebase"
+- "StringLiteralType"
+- !private "!="
 - "String"
+- !private "FDataSnapshot"
+- !private "RetrieveProblem"
+- "SearchController"
+- "Void"
+- !private "RetrieveAllNamesFromFirebase"
+- !private "Set"
+- !private "RetrieveNamesFromFirebase"
+- "Int"
+- !private "..<"
+- !private "Array"
+- "NSObject"
 depends-member:
 - !private ["Ps9AnyObject", "Array"]
 - !private ["Ps9AnyObject", "RetrieveAllNamesFromFirebase"]
@@ -62,7 +61,6 @@ depends-member:
 - !private ["Ps9AnyObject", "key"]
 - ["Ps9AnyObject", "matchedNameArray"]
 - ["Ps9AnyObject", "matchedRefArray"]
-- !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "rangeOfString"]
 - ["Ps9AnyObject", "refsNotInCoreData"]
 - ["Ps9AnyObject", "returnedNameArray"]
@@ -130,7 +128,6 @@ depends-member:
 - !private ["Ps11CVarArgType", "key"]
 - ["Ps11CVarArgType", "matchedNameArray"]
 - ["Ps11CVarArgType", "matchedRefArray"]
-- !private ["Ps11CVarArgType", "print"]
 - !private ["Ps11CVarArgType", "rangeOfString"]
 - ["Ps11CVarArgType", "refsNotInCoreData"]
 - ["Ps11CVarArgType", "returnedNameArray"]
@@ -187,7 +184,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "key"]
 - ["Ps28CustomDebugStringConvertible", "matchedNameArray"]
 - ["Ps28CustomDebugStringConvertible", "matchedRefArray"]
-- !private ["Ps28CustomDebugStringConvertible", "print"]
 - !private ["Ps28CustomDebugStringConvertible", "rangeOfString"]
 - ["Ps28CustomDebugStringConvertible", "refsNotInCoreData"]
 - ["Ps28CustomDebugStringConvertible", "returnedNameArray"]
@@ -232,7 +228,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "key"]
 - ["Ps23CustomStringConvertible", "matchedNameArray"]
 - ["Ps23CustomStringConvertible", "matchedRefArray"]
-- !private ["Ps23CustomStringConvertible", "print"]
 - !private ["Ps23CustomStringConvertible", "rangeOfString"]
 - ["Ps23CustomStringConvertible", "refsNotInCoreData"]
 - ["Ps23CustomStringConvertible", "returnedNameArray"]
@@ -272,7 +267,6 @@ depends-member:
 - !private ["Ps9Equatable", "key"]
 - ["Ps9Equatable", "matchedNameArray"]
 - ["Ps9Equatable", "matchedRefArray"]
-- !private ["Ps9Equatable", "print"]
 - !private ["Ps9Equatable", "rangeOfString"]
 - ["Ps9Equatable", "refsNotInCoreData"]
 - ["Ps9Equatable", "returnedNameArray"]
@@ -324,7 +318,6 @@ depends-member:
 - !private ["Ps8Hashable", "key"]
 - ["Ps8Hashable", "matchedNameArray"]
 - ["Ps8Hashable", "matchedRefArray"]
-- !private ["Ps8Hashable", "print"]
 - !private ["Ps8Hashable", "rangeOfString"]
 - ["Ps8Hashable", "refsNotInCoreData"]
 - ["Ps8Hashable", "returnedNameArray"]
@@ -439,7 +432,6 @@ depends-member:
 - !private ["CSo8NSObject", "key"]
 - ["CSo8NSObject", "matchedNameArray"]
 - ["CSo8NSObject", "matchedRefArray"]
-- !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "rangeOfString"]
 - ["CSo8NSObject", "refsNotInCoreData"]
 - ["CSo8NSObject", "returnedNameArray"]
@@ -471,7 +463,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "key"]
 - ["PSo16NSObjectProtocol", "matchedNameArray"]
 - ["PSo16NSObjectProtocol", "matchedRefArray"]
-- !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "rangeOfString"]
 - ["PSo16NSObjectProtocol", "refsNotInCoreData"]
 - ["PSo16NSObjectProtocol", "returnedNameArray"]
@@ -534,7 +525,6 @@ depends-member:
 - ["C8GoChange16SearchController", "init"]
 - ["C8GoChange16SearchController", "matchedNameArray"]
 - ["C8GoChange16SearchController", "matchedRefArray"]
-- !private ["C8GoChange16SearchController", "print"]
 - ["C8GoChange16SearchController", "refsNotInCoreData"]
 - ["C8GoChange16SearchController", "returnedNameArray"]
 - ["C8GoChange16SearchController", "returnedRefArray"]

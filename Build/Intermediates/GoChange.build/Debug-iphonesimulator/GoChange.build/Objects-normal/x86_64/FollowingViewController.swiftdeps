@@ -6,42 +6,41 @@ provides-nominal:
 provides-member:
 - ["C8GoChange23FollowingViewController", ""]
 provides-dynamic-lookup:
-- "homeButtonClick"
-- "viewWillAppear"
-- "sharedContext"
 - "viewDidLoad"
-- "didReceiveMemoryWarning"
+- "tableView"
+- "tableView"
+- "tableView"
 - "followingTableView"
 - "fetchedResultsController"
+- "viewWillAppear"
 - "homeButton"
-- "tableView"
-- "tableView"
-- "tableView"
+- "sharedContext"
 - "numberOfSectionsInTableView"
+- "homeButtonClick"
 depends-top-level:
-- "StringLiteralType"
+- !private "UIBarButtonItem"
+- !private "GoChangeClient"
+- "NSFetchedResultsControllerDelegate"
 - "UITableView"
+- !private "CoreDataStackManager"
+- !private "BooleanLiteralType"
+- "UITableViewCell"
+- !private "String"
+- !private "UIBarButtonItemStyle"
+- "Array"
+- "NSFetchedResultsController"
+- "UIButton"
 - "Int"
 - !private "CustomTableViewCell"
-- !private "Problem"
-- "FollowingViewController"
-- "NSFetchedResultsControllerDelegate"
-- !private "String"
-- "NSFetchedResultsController"
-- "UITableViewController"
-- "NSManagedObjectContext"
+- !private "ViewFollowingViewController"
 - "Bool"
 - "NSIndexPath"
-- !private "GoChangeClient"
-- !private "UIBarButtonItemStyle"
-- !private "BooleanLiteralType"
-- !private "CoreDataStackManager"
-- "UIButton"
-- !private "ViewFollowingViewController"
+- "FollowingViewController"
+- "UITableViewController"
+- !private "Problem"
 - !private "NSFetchRequest"
-- !private "UIBarButtonItem"
-- "Array"
-- "UITableViewCell"
+- "StringLiteralType"
+- "NSManagedObjectContext"
 depends-member:
 - !private ["Ps9AnyObject", "Constants"]
 - !private ["Ps9AnyObject", "CoreDataStackManager"]
@@ -58,7 +57,6 @@ depends-member:
 - ["Ps9AnyObject", "controllerWillChangeContent"]
 - !private ["Ps9AnyObject", "delegate"]
 - !private ["Ps9AnyObject", "dequeueReusableCellWithIdentifier"]
-- ["Ps9AnyObject", "didReceiveMemoryWarning"]
 - !private ["Ps9AnyObject", "dismissViewControllerAnimated"]
 - ["Ps9AnyObject", "fetchedResultsController"]
 - ["Ps9AnyObject", "fetchedResultsController.storage"]
@@ -134,7 +132,6 @@ depends-member:
 - ["Ps11CVarArgType", "controllerWillChangeContent"]
 - !private ["Ps11CVarArgType", "delegate"]
 - !private ["Ps11CVarArgType", "dequeueReusableCellWithIdentifier"]
-- ["Ps11CVarArgType", "didReceiveMemoryWarning"]
 - !private ["Ps11CVarArgType", "dismissViewControllerAnimated"]
 - ["Ps11CVarArgType", "fetchedResultsController"]
 - ["Ps11CVarArgType", "fetchedResultsController.storage"]
@@ -202,7 +199,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "count"]
 - !private ["Ps28CustomDebugStringConvertible", "delegate"]
 - !private ["Ps28CustomDebugStringConvertible", "dequeueReusableCellWithIdentifier"]
-- ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
 - !private ["Ps28CustomDebugStringConvertible", "dismissViewControllerAnimated"]
 - ["Ps28CustomDebugStringConvertible", "fetchedResultsController"]
 - ["Ps28CustomDebugStringConvertible", "fetchedResultsController.storage"]
@@ -260,7 +256,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "count"]
 - !private ["Ps23CustomStringConvertible", "delegate"]
 - !private ["Ps23CustomStringConvertible", "dequeueReusableCellWithIdentifier"]
-- ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
 - !private ["Ps23CustomStringConvertible", "dismissViewControllerAnimated"]
 - ["Ps23CustomStringConvertible", "fetchedResultsController"]
 - ["Ps23CustomStringConvertible", "fetchedResultsController.storage"]
@@ -318,7 +313,6 @@ depends-member:
 - ["Ps9Equatable", "controllerWillChangeContent"]
 - !private ["Ps9Equatable", "delegate"]
 - !private ["Ps9Equatable", "dequeueReusableCellWithIdentifier"]
-- ["Ps9Equatable", "didReceiveMemoryWarning"]
 - !private ["Ps9Equatable", "dismissViewControllerAnimated"]
 - ["Ps9Equatable", "fetchedResultsController"]
 - ["Ps9Equatable", "fetchedResultsController.storage"]
@@ -375,7 +369,6 @@ depends-member:
 - ["C8GoChange23FollowingViewController", "controllerDidChangeContent"]
 - ["C8GoChange23FollowingViewController", "controllerWillChangeContent"]
 - ["C8GoChange23FollowingViewController", "deinit"]
-- ["C8GoChange23FollowingViewController", "didReceiveMemoryWarning"]
 - ["C8GoChange23FollowingViewController", "fetchedResultsController"]
 - !private ["C8GoChange23FollowingViewController", "fetchedResultsController.storage"]
 - ["C8GoChange23FollowingViewController", "followingTableView"]
@@ -414,7 +407,6 @@ depends-member:
 - ["Ps8Hashable", "controllerWillChangeContent"]
 - !private ["Ps8Hashable", "delegate"]
 - !private ["Ps8Hashable", "dequeueReusableCellWithIdentifier"]
-- ["Ps8Hashable", "didReceiveMemoryWarning"]
 - !private ["Ps8Hashable", "dismissViewControllerAnimated"]
 - ["Ps8Hashable", "fetchedResultsController"]
 - ["Ps8Hashable", "fetchedResultsController.storage"]
@@ -504,7 +496,6 @@ depends-member:
 - ["PSo8NSCoding", "controllerDidChangeContent"]
 - ["PSo8NSCoding", "controllerWillChangeContent"]
 - !private ["PSo8NSCoding", "dequeueReusableCellWithIdentifier"]
-- ["PSo8NSCoding", "didReceiveMemoryWarning"]
 - !private ["PSo8NSCoding", "dismissViewControllerAnimated"]
 - ["PSo8NSCoding", "fetchedResultsController"]
 - ["PSo8NSCoding", "fetchedResultsController.storage"]
@@ -544,7 +535,6 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "controller"]
 - ["PSo26NSExtensionRequestHandling", "controllerDidChangeContent"]
 - ["PSo26NSExtensionRequestHandling", "controllerWillChangeContent"]
-- ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
 - !private ["PSo26NSExtensionRequestHandling", "dismissViewControllerAnimated"]
 - ["PSo26NSExtensionRequestHandling", "fetchedResultsController"]
 - ["PSo26NSExtensionRequestHandling", "fetchedResultsController.storage"]
@@ -622,7 +612,6 @@ depends-member:
 - !private ["CSo8NSObject", "deinit"]
 - !private ["CSo8NSObject", "delegate"]
 - !private ["CSo8NSObject", "dequeueReusableCellWithIdentifier"]
-- ["CSo8NSObject", "didReceiveMemoryWarning"]
 - !private ["CSo8NSObject", "dismissViewControllerAnimated"]
 - ["CSo8NSObject", "fetchedResultsController"]
 - ["CSo8NSObject", "fetchedResultsController.storage"]
@@ -670,7 +659,6 @@ depends-member:
 - ["PSo16NSObjectProtocol", "controllerWillChangeContent"]
 - !private ["PSo16NSObjectProtocol", "delegate"]
 - !private ["PSo16NSObjectProtocol", "dequeueReusableCellWithIdentifier"]
-- ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
 - !private ["PSo16NSObjectProtocol", "dismissViewControllerAnimated"]
 - ["PSo16NSObjectProtocol", "fetchedResultsController"]
 - ["PSo16NSObjectProtocol", "fetchedResultsController.storage"]
@@ -772,7 +760,6 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "controllerDidChangeContent"]
 - ["PSo21UIAppearanceContainer", "controllerWillChangeContent"]
 - !private ["PSo21UIAppearanceContainer", "dequeueReusableCellWithIdentifier"]
-- ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
 - !private ["PSo21UIAppearanceContainer", "dismissViewControllerAnimated"]
 - ["PSo21UIAppearanceContainer", "fetchedResultsController"]
 - ["PSo21UIAppearanceContainer", "fetchedResultsController.storage"]
@@ -813,7 +800,6 @@ depends-member:
 - ["PSo18UIContentContainer", "controller"]
 - ["PSo18UIContentContainer", "controllerDidChangeContent"]
 - ["PSo18UIContentContainer", "controllerWillChangeContent"]
-- ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
 - !private ["PSo18UIContentContainer", "dismissViewControllerAnimated"]
 - ["PSo18UIContentContainer", "fetchedResultsController"]
 - ["PSo18UIContentContainer", "fetchedResultsController.storage"]
@@ -861,7 +847,6 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "controllerDidChangeContent"]
 - ["PSo18UIFocusEnvironment", "controllerWillChangeContent"]
 - !private ["PSo18UIFocusEnvironment", "dequeueReusableCellWithIdentifier"]
-- ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
 - !private ["PSo18UIFocusEnvironment", "dismissViewControllerAnimated"]
 - ["PSo18UIFocusEnvironment", "fetchedResultsController"]
 - ["PSo18UIFocusEnvironment", "fetchedResultsController.storage"]
@@ -919,7 +904,6 @@ depends-member:
 - ["CSo11UIResponder", "controllerDidChangeContent"]
 - ["CSo11UIResponder", "controllerWillChangeContent"]
 - !private ["CSo11UIResponder", "dequeueReusableCellWithIdentifier"]
-- ["CSo11UIResponder", "didReceiveMemoryWarning"]
 - !private ["CSo11UIResponder", "dismissViewControllerAnimated"]
 - ["CSo11UIResponder", "fetchedResultsController"]
 - ["CSo11UIResponder", "fetchedResultsController.storage"]
@@ -957,7 +941,6 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "controller"]
 - ["PSo20UIScrollViewDelegate", "controllerDidChangeContent"]
 - ["PSo20UIScrollViewDelegate", "controllerWillChangeContent"]
-- ["PSo20UIScrollViewDelegate", "didReceiveMemoryWarning"]
 - ["PSo20UIScrollViewDelegate", "fetchedResultsController"]
 - ["PSo20UIScrollViewDelegate", "fetchedResultsController.storage"]
 - ["PSo20UIScrollViewDelegate", "followingTableView"]
@@ -986,7 +969,6 @@ depends-member:
 - ["PSo16UIStateRestoring", "controller"]
 - ["PSo16UIStateRestoring", "controllerDidChangeContent"]
 - ["PSo16UIStateRestoring", "controllerWillChangeContent"]
-- ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
 - !private ["PSo16UIStateRestoring", "dismissViewControllerAnimated"]
 - ["PSo16UIStateRestoring", "fetchedResultsController"]
 - ["PSo16UIStateRestoring", "fetchedResultsController.storage"]
@@ -1035,7 +1017,6 @@ depends-member:
 - ["CSo21UITableViewController", "controller"]
 - ["CSo21UITableViewController", "controllerDidChangeContent"]
 - ["CSo21UITableViewController", "controllerWillChangeContent"]
-- ["CSo21UITableViewController", "didReceiveMemoryWarning"]
 - ["CSo21UITableViewController", "fetchedResultsController"]
 - ["CSo21UITableViewController", "fetchedResultsController.storage"]
 - ["CSo21UITableViewController", "followingTableView"]
@@ -1062,7 +1043,6 @@ depends-member:
 - ["PSo21UITableViewDataSource", "controller"]
 - ["PSo21UITableViewDataSource", "controllerDidChangeContent"]
 - ["PSo21UITableViewDataSource", "controllerWillChangeContent"]
-- ["PSo21UITableViewDataSource", "didReceiveMemoryWarning"]
 - ["PSo21UITableViewDataSource", "fetchedResultsController"]
 - ["PSo21UITableViewDataSource", "fetchedResultsController.storage"]
 - ["PSo21UITableViewDataSource", "followingTableView"]
@@ -1089,7 +1069,6 @@ depends-member:
 - ["PSo19UITableViewDelegate", "controller"]
 - ["PSo19UITableViewDelegate", "controllerDidChangeContent"]
 - ["PSo19UITableViewDelegate", "controllerWillChangeContent"]
-- ["PSo19UITableViewDelegate", "didReceiveMemoryWarning"]
 - ["PSo19UITableViewDelegate", "fetchedResultsController"]
 - ["PSo19UITableViewDelegate", "fetchedResultsController.storage"]
 - ["PSo19UITableViewDelegate", "followingTableView"]
@@ -1124,7 +1103,6 @@ depends-member:
 - ["PSo18UITraitEnvironment", "controllerDidChangeContent"]
 - ["PSo18UITraitEnvironment", "controllerWillChangeContent"]
 - !private ["PSo18UITraitEnvironment", "dequeueReusableCellWithIdentifier"]
-- ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
 - !private ["PSo18UITraitEnvironment", "dismissViewControllerAnimated"]
 - ["PSo18UITraitEnvironment", "fetchedResultsController"]
 - ["PSo18UITraitEnvironment", "fetchedResultsController.storage"]
@@ -1178,7 +1156,6 @@ depends-member:
 - ["CSo16UIViewController", "controller"]
 - ["CSo16UIViewController", "controllerDidChangeContent"]
 - ["CSo16UIViewController", "controllerWillChangeContent"]
-- ["CSo16UIViewController", "didReceiveMemoryWarning"]
 - !private ["CSo16UIViewController", "dismissViewControllerAnimated"]
 - ["CSo16UIViewController", "fetchedResultsController"]
 - ["CSo16UIViewController", "fetchedResultsController.storage"]
@@ -1416,4 +1393,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Modules/module.modulemap"
-interface-hash: "329c9e4134fc2bef14c8829cd6aadd5e"
+interface-hash: "dd09e7d81f5cbf2d687682629732bbed"

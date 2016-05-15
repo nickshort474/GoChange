@@ -15,6 +15,9 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var searchActivity: UIActivityIndicatorView!
     @IBOutlet weak var recentProblemStack: UIStackView!
     
+    @IBOutlet weak var recentProblemsLabel: UILabel!
+    
+    
     var problemName:String!
     var problemDetail:String!
     var problemOwner:String!
@@ -42,6 +45,13 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         searchActivity.hidden = true
         searchActivity.stopAnimating()
         
+        //clear TempSave variables for
+        TempSave.sharedInstance().retrievedRecentProblem = nil
+        TempSave.sharedInstance().retrievedProblemFollowed = false
+        TempSave.sharedInstance().RetrievedProblemsEmpty = false
+        
+        recentProblemsLabel.alpha = 1
+        
         
         //gather recently added items from firebase
         _ =  GetRecentlyAdded(completionHandler: {
@@ -59,6 +69,22 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
          })
     }
     
+    override func viewWillAppear(animated: Bool) {
+        
+        // if have clicked recent problem and come back
+        if(TempSave.sharedInstance().retrievedRecentProblem != nil && TempSave.sharedInstance().retrievedProblemFollowed == true){
+            
+            recentProblemStack.removeArrangedSubview(TempSave.sharedInstance().retrievedRecentProblem)
+            
+        }
+        
+        if(TempSave.sharedInstance().RetrievedProblemsCount == 0 && TempSave.sharedInstance().RetrievedProblemsEmpty == true){
+            self.recentProblemsLabel.alpha = 0
+        }
+        
+    }
+    
+    
     
     func checkIfInCoreData(){
         
@@ -73,23 +99,13 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
                 
                 //once all items in refArray have been retrieved
                 if(self.matchedProblemArray.count == self.refArray.count){
-                    
+                   
                     //compare matchedArray to retrieved ref array
                     self.compareArrays()
                 }
                 
             })
         }
-    }
-    
-    
-    override func viewWillAppear(animated: Bool) {
-        
-        // if have clicked recent problem and come back
-        if(TempSave.sharedInstance().retrievedRecentProblem != nil){
-            recentProblemStack.removeArrangedSubview(TempSave.sharedInstance().retrievedRecentProblem)
-        }
-        
     }
     
     
@@ -104,6 +120,12 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         let diff = setA.subtract(setB)
         self.problemsNotInCoreData = Array(diff)
         
+        TempSave.sharedInstance().RetrievedProblemsCount = problemsNotInCoreData.count
+        
+        if(self.problemsNotInCoreData.count == 0){
+            self.recentProblemsLabel.alpha = 0
+        }
+                
         //for each not matched element create button
         for name in problemsNotInCoreData{
             createButtons(name)
@@ -210,6 +232,7 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
             //set retrievedRecentProblem var to whichever problem button was clicked
             TempSave.sharedInstance().retrievedRecentProblem = sender
             
+            
             // present problem
             self.presentRecentProblem()
         })
@@ -253,6 +276,8 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         
     }
     
+    
+   
     
 }
 

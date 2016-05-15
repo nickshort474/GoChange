@@ -6,52 +6,51 @@ provides-nominal:
 provides-member:
 - ["C8GoChange21AddIdeaViewController", ""]
 provides-dynamic-lookup:
-- "addPetition"
-- "addNameClick"
-- "problem"
-- "currentNameData"
 - "nameTextField"
 - "petitionButton"
-- "detailTextView"
-- "petitionTextField"
 - "viewWillAppear"
 - "viewDidLoad"
-- "addDetailButton"
-- "addDetailClick"
-- "addSolution"
-- "viewControllerStatus"
-- "doneAddingIdea"
-- "textFieldDidBeginEditing"
-- "didReceiveMemoryWarning"
+- "currentNameData"
 - "addNameButton"
-- "textViewDidBeginEditing"
+- "addPetition"
+- "detailTextView"
+- "problem"
+- "addSolution"
+- "addNameClick"
+- "textFieldDidBeginEditing"
+- "viewControllerStatus"
+- "addDetailClick"
+- "addDetailButton"
+- "petitionTextField"
+- "doneAddingIdea"
 - "currentDetailData"
+- "textViewDidBeginEditing"
 depends-top-level:
-- !private "WebViewController"
 - "UIViewController"
-- !private "UITextBorderStyle"
 - "UITextView"
-- "UITextFieldDelegate"
 - "UITextViewDelegate"
-- "Bool"
-- "String"
-- "UITableViewDelegate"
-- !private "GoChangeClient"
-- "Problem"
-- !private "BooleanLiteralType"
-- !private "TempSave"
-- "UITextField"
-- !private "UIColor"
-- !private "&&"
-- !private "=="
-- "AddIdeaViewController"
+- "UITextFieldDelegate"
 - !private "SaveNewSolution"
-- "UIButton"
+- "Problem"
+- !private "UITextBorderStyle"
+- !private "=="
+- "String"
+- "Bool"
+- "UITableViewDelegate"
+- !private "WebViewController"
 - !private "StringLiteralType"
-- !private "!="
-- !private "Array"
-- !private "CGSizeMake"
+- !private "GoChangeClient"
+- "UITextField"
+- !private "&&"
+- !private "UIColor"
 - "AnyObject"
+- !private "TempSave"
+- "UIButton"
+- "AddIdeaViewController"
+- !private "BooleanLiteralType"
+- !private "CGSizeMake"
+- !private "Array"
+- !private "!="
 depends-member:
 - ["C8GoChange21AddIdeaViewController", "AnyObject"]
 - ["C8GoChange21AddIdeaViewController", "Bool"]
@@ -77,7 +76,6 @@ depends-member:
 - ["C8GoChange21AddIdeaViewController", "currentNameData"]
 - ["C8GoChange21AddIdeaViewController", "deinit"]
 - ["C8GoChange21AddIdeaViewController", "detailTextView"]
-- ["C8GoChange21AddIdeaViewController", "didReceiveMemoryWarning"]
 - ["C8GoChange21AddIdeaViewController", "doneAddingIdea"]
 - ["C8GoChange21AddIdeaViewController", "indexPathForPreferredFocusedViewInTableView"]
 - ["C8GoChange21AddIdeaViewController", "init"]
@@ -142,7 +140,6 @@ depends-member:
 - !private ["Ps9AnyObject", "currentPetitionValue"]
 - !private ["Ps9AnyObject", "delegate"]
 - ["Ps9AnyObject", "detailTextView"]
-- ["Ps9AnyObject", "didReceiveMemoryWarning"]
 - ["Ps9AnyObject", "doneAddingIdea"]
 - !private ["Ps9AnyObject", "editable"]
 - !private ["Ps9AnyObject", "enabled"]
@@ -272,7 +269,6 @@ depends-member:
 - !private ["Ps11CVarArgType", "currentPetitionValue"]
 - !private ["Ps11CVarArgType", "delegate"]
 - ["Ps11CVarArgType", "detailTextView"]
-- ["Ps11CVarArgType", "didReceiveMemoryWarning"]
 - ["Ps11CVarArgType", "doneAddingIdea"]
 - !private ["Ps11CVarArgType", "editable"]
 - !private ["Ps11CVarArgType", "enabled"]
@@ -382,7 +378,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "currentPetitionValue"]
 - !private ["Ps28CustomDebugStringConvertible", "delegate"]
 - ["Ps28CustomDebugStringConvertible", "detailTextView"]
-- ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
 - ["Ps28CustomDebugStringConvertible", "doneAddingIdea"]
 - !private ["Ps28CustomDebugStringConvertible", "editable"]
 - !private ["Ps28CustomDebugStringConvertible", "enabled"]
@@ -485,7 +480,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "currentPetitionValue"]
 - !private ["Ps23CustomStringConvertible", "delegate"]
 - ["Ps23CustomStringConvertible", "detailTextView"]
-- ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
 - ["Ps23CustomStringConvertible", "doneAddingIdea"]
 - !private ["Ps23CustomStringConvertible", "editable"]
 - !private ["Ps23CustomStringConvertible", "enabled"]
@@ -583,7 +577,6 @@ depends-member:
 - !private ["Ps9Equatable", "currentPetitionValue"]
 - !private ["Ps9Equatable", "delegate"]
 - ["Ps9Equatable", "detailTextView"]
-- ["Ps9Equatable", "didReceiveMemoryWarning"]
 - ["Ps9Equatable", "doneAddingIdea"]
 - !private ["Ps9Equatable", "editable"]
 - !private ["Ps9Equatable", "enabled"]
@@ -685,7 +678,6 @@ depends-member:
 - !private ["Ps8Hashable", "currentPetitionValue"]
 - !private ["Ps8Hashable", "delegate"]
 - ["Ps8Hashable", "detailTextView"]
-- ["Ps8Hashable", "didReceiveMemoryWarning"]
 - ["Ps8Hashable", "doneAddingIdea"]
 - !private ["Ps8Hashable", "editable"]
 - !private ["Ps8Hashable", "enabled"]
@@ -813,7 +805,6 @@ depends-member:
 - ["PSo8NSCoding", "currentNameData"]
 - !private ["PSo8NSCoding", "delegate"]
 - ["PSo8NSCoding", "detailTextView"]
-- ["PSo8NSCoding", "didReceiveMemoryWarning"]
 - ["PSo8NSCoding", "doneAddingIdea"]
 - !private ["PSo8NSCoding", "editable"]
 - !private ["PSo8NSCoding", "enabled"]
@@ -891,7 +882,6 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "currentDetailData"]
 - ["PSo26NSExtensionRequestHandling", "currentNameData"]
 - ["PSo26NSExtensionRequestHandling", "detailTextView"]
-- ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
 - ["PSo26NSExtensionRequestHandling", "doneAddingIdea"]
 - ["PSo26NSExtensionRequestHandling", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSo26NSExtensionRequestHandling", "init"]
@@ -970,7 +960,6 @@ depends-member:
 - !private ["CSo8NSObject", "currentPetitionValue"]
 - !private ["CSo8NSObject", "delegate"]
 - ["CSo8NSObject", "detailTextView"]
-- ["CSo8NSObject", "didReceiveMemoryWarning"]
 - ["CSo8NSObject", "doneAddingIdea"]
 - !private ["CSo8NSObject", "editable"]
 - !private ["CSo8NSObject", "enabled"]
@@ -1063,7 +1052,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "currentPetitionValue"]
 - !private ["PSo16NSObjectProtocol", "delegate"]
 - ["PSo16NSObjectProtocol", "detailTextView"]
-- ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
 - ["PSo16NSObjectProtocol", "doneAddingIdea"]
 - !private ["PSo16NSObjectProtocol", "editable"]
 - !private ["PSo16NSObjectProtocol", "enabled"]
@@ -1210,7 +1198,6 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "currentNameData"]
 - !private ["PSo21UIAppearanceContainer", "delegate"]
 - ["PSo21UIAppearanceContainer", "detailTextView"]
-- ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
 - ["PSo21UIAppearanceContainer", "doneAddingIdea"]
 - !private ["PSo21UIAppearanceContainer", "editable"]
 - !private ["PSo21UIAppearanceContainer", "enabled"]
@@ -1286,7 +1273,6 @@ depends-member:
 - ["PSo18UIContentContainer", "currentDetailData"]
 - ["PSo18UIContentContainer", "currentNameData"]
 - ["PSo18UIContentContainer", "detailTextView"]
-- ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
 - ["PSo18UIContentContainer", "doneAddingIdea"]
 - ["PSo18UIContentContainer", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSo18UIContentContainer", "init"]
@@ -1381,7 +1367,6 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "currentNameData"]
 - !private ["PSo18UIFocusEnvironment", "delegate"]
 - ["PSo18UIFocusEnvironment", "detailTextView"]
-- ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
 - ["PSo18UIFocusEnvironment", "doneAddingIdea"]
 - !private ["PSo18UIFocusEnvironment", "editable"]
 - !private ["PSo18UIFocusEnvironment", "enabled"]
@@ -1474,7 +1459,6 @@ depends-member:
 - ["CSo11UIResponder", "currentNameData"]
 - !private ["CSo11UIResponder", "delegate"]
 - ["CSo11UIResponder", "detailTextView"]
-- ["CSo11UIResponder", "didReceiveMemoryWarning"]
 - ["CSo11UIResponder", "doneAddingIdea"]
 - !private ["CSo11UIResponder", "editable"]
 - !private ["CSo11UIResponder", "enabled"]
@@ -1598,7 +1582,6 @@ depends-member:
 - ["PSo16UIStateRestoring", "currentDetailData"]
 - ["PSo16UIStateRestoring", "currentNameData"]
 - ["PSo16UIStateRestoring", "detailTextView"]
-- ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
 - ["PSo16UIStateRestoring", "doneAddingIdea"]
 - ["PSo16UIStateRestoring", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSo16UIStateRestoring", "init"]
@@ -1840,7 +1823,6 @@ depends-member:
 - ["PSo18UITraitEnvironment", "currentNameData"]
 - !private ["PSo18UITraitEnvironment", "delegate"]
 - ["PSo18UITraitEnvironment", "detailTextView"]
-- ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
 - ["PSo18UITraitEnvironment", "doneAddingIdea"]
 - !private ["PSo18UITraitEnvironment", "editable"]
 - !private ["PSo18UITraitEnvironment", "enabled"]
@@ -1929,7 +1911,6 @@ depends-member:
 - ["CSo16UIViewController", "currentDetailData"]
 - ["CSo16UIViewController", "currentNameData"]
 - ["CSo16UIViewController", "detailTextView"]
-- ["CSo16UIViewController", "didReceiveMemoryWarning"]
 - ["CSo16UIViewController", "doneAddingIdea"]
 - ["CSo16UIViewController", "indexPathForPreferredFocusedViewInTableView"]
 - ["CSo16UIViewController", "init"]
@@ -2158,4 +2139,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Modules/module.modulemap"
-interface-hash: "51429be65fa229fc29d5f87d6d4f7bcf"
+interface-hash: "d0cbe9fc683b7f06f215a6ab3f7fdfb9"

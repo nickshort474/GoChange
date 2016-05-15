@@ -36,10 +36,14 @@ class TempSave:NSObject{
     //TODO: check whether newSolutionOwnerArray is needed
     
     var newPetitionURLArray:[String] = []
-    
     var currentPetitionValue:String = ""
     
+    
+    
     var retrievedRecentProblem:UIButton!
+    var retrievedProblemFollowed:Bool = false
+    var RetrievedProblemsCount:Int = 4
+    var RetrievedProblemsEmpty:Bool = false
     
     class func sharedInstance() -> TempSave{
         

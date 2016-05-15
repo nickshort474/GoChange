@@ -6,23 +6,22 @@ provides-nominal:
 provides-member:
 - ["C8GoChange24UpdateUserInfoController", ""]
 provides-dynamic-lookup:
-- "viewDidLoad"
-- "cancelUpdate"
 - "segueToInput"
-- "updateUsername"
 - "currentlyUpdating"
-- "updatePassword"
-- "ref"
 - "updateEmail"
+- "ref"
+- "cancelUpdate"
+- "updateUsername"
+- "updatePassword"
 depends-top-level:
+- "String"
+- "UIViewController"
+- "StringLiteralType"
+- "UpdateUserInfoController"
+- !private "BooleanLiteralType"
+- "UIButton"
 - !private "SignupViewController"
 - "Firebase"
-- "UpdateUserInfoController"
-- "StringLiteralType"
-- "String"
-- "UIButton"
-- !private "BooleanLiteralType"
-- "UIViewController"
 depends-member:
 - ["Ps9AnyObject", "Firebase"]
 - ["Ps9AnyObject", "cancelUpdate"]
@@ -39,7 +38,6 @@ depends-member:
 - !private ["Ps9AnyObject", "updateField"]
 - ["Ps9AnyObject", "updatePassword"]
 - ["Ps9AnyObject", "updateUsername"]
-- ["Ps9AnyObject", "viewDidLoad"]
 - ["Ps9AnyObject", ""]
 - ["Ps11CVarArgType", "Firebase"]
 - ["Ps11CVarArgType", "cancelUpdate"]
@@ -56,7 +54,6 @@ depends-member:
 - !private ["Ps11CVarArgType", "updateField"]
 - ["Ps11CVarArgType", "updatePassword"]
 - ["Ps11CVarArgType", "updateUsername"]
-- ["Ps11CVarArgType", "viewDidLoad"]
 - ["Ps11CVarArgType", ""]
 - ["Ps28CustomDebugStringConvertible", "Firebase"]
 - ["Ps28CustomDebugStringConvertible", "cancelUpdate"]
@@ -73,7 +70,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "updateField"]
 - ["Ps28CustomDebugStringConvertible", "updatePassword"]
 - ["Ps28CustomDebugStringConvertible", "updateUsername"]
-- ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - ["Ps23CustomStringConvertible", "Firebase"]
 - ["Ps23CustomStringConvertible", "cancelUpdate"]
@@ -90,7 +86,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "updateField"]
 - ["Ps23CustomStringConvertible", "updatePassword"]
 - ["Ps23CustomStringConvertible", "updateUsername"]
-- ["Ps23CustomStringConvertible", "viewDidLoad"]
 - ["Ps23CustomStringConvertible", ""]
 - ["Ps9Equatable", "Firebase"]
 - ["Ps9Equatable", "cancelUpdate"]
@@ -107,7 +102,6 @@ depends-member:
 - !private ["Ps9Equatable", "updateField"]
 - ["Ps9Equatable", "updatePassword"]
 - ["Ps9Equatable", "updateUsername"]
-- ["Ps9Equatable", "viewDidLoad"]
 - ["Ps9Equatable", ""]
 - ["CSo6FQuery", "init"]
 - ["CSo8Firebase", "init"]
@@ -126,7 +120,6 @@ depends-member:
 - !private ["Ps8Hashable", "updateField"]
 - ["Ps8Hashable", "updatePassword"]
 - ["Ps8Hashable", "updateUsername"]
-- ["Ps8Hashable", "viewDidLoad"]
 - ["Ps8Hashable", ""]
 - ["SQ", "deinit"]
 - ["PSo8NSCoding", "Firebase"]
@@ -143,7 +136,6 @@ depends-member:
 - !private ["PSo8NSCoding", "updateField"]
 - ["PSo8NSCoding", "updatePassword"]
 - ["PSo8NSCoding", "updateUsername"]
-- ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", ""]
 - ["PSo26NSExtensionRequestHandling", "Firebase"]
 - ["PSo26NSExtensionRequestHandling", "cancelUpdate"]
@@ -159,7 +151,6 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "updateField"]
 - ["PSo26NSExtensionRequestHandling", "updatePassword"]
 - ["PSo26NSExtensionRequestHandling", "updateUsername"]
-- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", ""]
 - ["CSo8NSObject", "Firebase"]
 - !private ["CSo8NSObject", "SignupViewController"]
@@ -179,7 +170,6 @@ depends-member:
 - !private ["CSo8NSObject", "updateField"]
 - ["CSo8NSObject", "updatePassword"]
 - ["CSo8NSObject", "updateUsername"]
-- ["CSo8NSObject", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", "Firebase"]
 - ["PSo16NSObjectProtocol", "cancelUpdate"]
 - ["PSo16NSObjectProtocol", "currentlyUpdating"]
@@ -195,7 +185,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "updateField"]
 - ["PSo16NSObjectProtocol", "updatePassword"]
 - ["PSo16NSObjectProtocol", "updateUsername"]
-- ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", ""]
 - !private ["Sq", "deinit"]
 - !private ["C8GoChange20SignupViewController", "sendingController"]
@@ -214,7 +203,6 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "updateField"]
 - ["PSo21UIAppearanceContainer", "updatePassword"]
 - ["PSo21UIAppearanceContainer", "updateUsername"]
-- ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", ""]
 - ["PSo18UIContentContainer", "Firebase"]
 - ["PSo18UIContentContainer", "cancelUpdate"]
@@ -230,7 +218,6 @@ depends-member:
 - !private ["PSo18UIContentContainer", "updateField"]
 - ["PSo18UIContentContainer", "updatePassword"]
 - ["PSo18UIContentContainer", "updateUsername"]
-- ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", ""]
 - ["PSo18UIFocusEnvironment", "Firebase"]
 - ["PSo18UIFocusEnvironment", "cancelUpdate"]
@@ -246,7 +233,6 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "updateField"]
 - ["PSo18UIFocusEnvironment", "updatePassword"]
 - ["PSo18UIFocusEnvironment", "updateUsername"]
-- ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", ""]
 - ["CSo11UIResponder", "Firebase"]
 - !private ["CSo11UIResponder", "SignupViewController"]
@@ -265,7 +251,6 @@ depends-member:
 - !private ["CSo11UIResponder", "updateField"]
 - ["CSo11UIResponder", "updatePassword"]
 - ["CSo11UIResponder", "updateUsername"]
-- ["CSo11UIResponder", "viewDidLoad"]
 - ["PSo16UIStateRestoring", "Firebase"]
 - ["PSo16UIStateRestoring", "cancelUpdate"]
 - ["PSo16UIStateRestoring", "currentlyUpdating"]
@@ -280,7 +265,6 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "updateField"]
 - ["PSo16UIStateRestoring", "updatePassword"]
 - ["PSo16UIStateRestoring", "updateUsername"]
-- ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", ""]
 - !private ["CSo12UIStoryboard", "instantiateViewControllerWithIdentifier"]
 - !private ["PSo19UITextFieldDelegate", "sendingController"]
@@ -299,7 +283,6 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "updateField"]
 - ["PSo18UITraitEnvironment", "updatePassword"]
 - ["PSo18UITraitEnvironment", "updateUsername"]
-- ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", ""]
 - ["CSo16UIViewController", "Firebase"]
 - !private ["CSo16UIViewController", "SignupViewController"]
@@ -318,7 +301,6 @@ depends-member:
 - !private ["CSo16UIViewController", "updateField"]
 - ["CSo16UIViewController", "updatePassword"]
 - ["CSo16UIViewController", "updateUsername"]
-- ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", ""]
 - ["C8GoChange24UpdateUserInfoController", "Firebase"]
 - !private ["C8GoChange24UpdateUserInfoController", "SignupViewController"]
@@ -336,7 +318,6 @@ depends-member:
 - ["C8GoChange24UpdateUserInfoController", "updateEmail"]
 - ["C8GoChange24UpdateUserInfoController", "updatePassword"]
 - ["C8GoChange24UpdateUserInfoController", "updateUsername"]
-- ["C8GoChange24UpdateUserInfoController", "viewDidLoad"]
 depends-nominal:
 - "Ps9AnyObject"
 - "Ps11CVarArgType"
@@ -387,4 +368,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "db219567ff602f637772e8ec3da265fa"
+interface-hash: "ba3e302b4780aa56dec83d8f98f4b320"

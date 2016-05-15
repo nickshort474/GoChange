@@ -88,7 +88,12 @@ class ViewResultViewController: UIViewController,UITextViewDelegate,UITextFieldD
     
     @IBAction func followProblemClick(sender: UIButton) {
         
+        TempSave.sharedInstance().retrievedProblemFollowed = true
+        TempSave.sharedInstance().RetrievedProblemsCount -= 1
         
+        if(TempSave.sharedInstance().RetrievedProblemsCount == 0){
+            TempSave.sharedInstance().RetrievedProblemsEmpty = true
+        }
         
         _ = SaveResultToCoreData(problemID:self.problemID){
             (result) in

@@ -7,80 +7,82 @@ provides-member:
 - ["C8GoChange27CreateProblemViewController", ""]
 provides-dynamic-lookup:
 - "textFieldDidBeginEditing"
-- "namePlusButton"
-- "addASolutionButton"
-- "currentDetailData"
+- "solutionTable"
+- "viewDidLoad"
+- "detailsField"
+- "PostInfo"
+- "detailsPlusButton"
 - "postButton"
 - "textField"
-- "addSolution"
-- "presentAlert"
-- "solutionTable"
-- "textViewDidBeginEditing"
-- "detailsField"
-- "viewDidLoad"
-- "homeButtonClick"
-- "detailsPlusButton"
-- "viewWillAppear"
+- "tableView"
+- "tableView"
+- "tableView"
 - "detailsActionButton"
-- "sharedContext"
-- "tableView"
-- "tableView"
-- "tableView"
-- "nameActionButton"
+- "presentAlert"
 - "currentNameData"
-- "PostInfo"
 - "nameField"
+- "addSolution"
+- "textViewDidBeginEditing"
+- "namePlusButton"
+- "addASolutionButton"
+- "viewWillAppear"
+- "currentDetailData"
+- "nameActionButton"
+- "sharedContext"
+- "homeButtonClick"
 depends-top-level:
-- !private "CGSizeMake"
 - !private "CoreDataStackManager"
-- !private "UIBarButtonItem"
 - !private "!="
-- !private ">"
-- !private "ViewIdeaViewController"
-- "UITableViewDelegate"
-- !private "Array"
-- !private "BooleanLiteralType"
-- !private "+"
-- "UITableViewCell"
-- "UIViewController"
-- "UITextFieldDelegate"
-- "UITextView"
-- !private "UIControlState"
-- "UITextViewDelegate"
-- !private "UIColor"
-- !private "&&"
-- !private "-"
-- !private "UIBarButtonItemStyle"
-- !private "NSUserDefaults"
 - "NSRange"
-- !private "UIAlertActionStyle"
-- !private "AddIdeaViewController"
-- "Int"
-- !private "=="
-- !private "CustomTableViewCell"
-- "UITableView"
+- !private "UIBarButtonItem"
+- !private "UIColor"
 - !private "UnicodeScalarType"
-- !private "UIAlertAction"
-- !private "GoChangeClient"
-- !private "SaveNewProblem"
+- "UITableView"
+- !private ">"
 - !private "UIAlertController"
+- !private "ViewIdeaViewController"
 - "CreateProblemViewController"
-- !private "||"
-- !private "TempSave"
-- "NSManagedObjectContext"
-- "Bool"
+- !private "=="
 - "UITextField"
-- !private "UITextBorderStyle"
-- "NSIndexPath"
-- "StringLiteralType"
-- !private "??"
-- "UIButton"
-- !private "<="
+- "UITableViewCell"
+- !private "Array"
+- !private "AddIdeaViewController"
+- !private "UIControlState"
+- !private "NSUserDefaults"
+- !private "-"
 - "String"
+- "UIButton"
+- "StringLiteralType"
+- !private "CGSizeMake"
+- !private "UIBarButtonItemStyle"
+- "Int"
+- !private "+"
+- !private "&&"
+- !private "SaveNewProblem"
+- !private "GoChangeClient"
+- !private "||"
+- !private "CustomTableViewCell"
+- !private "CheckForNetwork"
+- "UITableViewDelegate"
+- "UITextViewDelegate"
+- !private "UIAlertActionStyle"
+- "Bool"
+- "UITextFieldDelegate"
+- "UIViewController"
+- "NSIndexPath"
+- "UITextView"
+- !private "UITextBorderStyle"
+- !private "TempSave"
+- !private "??"
+- !private "UIAlertAction"
+- "NSManagedObjectContext"
+- !private "BooleanLiteralType"
+- !private "<="
 depends-member:
 - !private ["C8GoChange21AddIdeaViewController", "viewControllerStatus"]
 - !private ["Ps9AnyObject", "CGColor"]
 - !private ["Ps9AnyObject", "CGSizeMake"]
+- !private ["Ps9AnyObject", "CheckForNetwork"]
 - !private ["Ps9AnyObject", "Constants"]
 - !private ["Ps9AnyObject", "CoreDataStackManager"]
 - !private ["Ps9AnyObject", "GoChangeClient"]
@@ -238,6 +240,7 @@ depends-member:
 - !private ["V12CoreGraphics7CGFloat", "deinit"]
 - !private ["Ps11CVarArgType", "CGColor"]
 - !private ["Ps11CVarArgType", "CGSizeMake"]
+- !private ["Ps11CVarArgType", "CheckForNetwork"]
 - !private ["Ps11CVarArgType", "Constants"]
 - !private ["Ps11CVarArgType", "CoreDataStackManager"]
 - !private ["Ps11CVarArgType", "Distance"]
@@ -362,6 +365,7 @@ depends-member:
 - !private ["VSS13CharacterView", "Index"]
 - !private ["VSS13CharacterView", "SubSequence"]
 - !private ["VSS13CharacterView", "count"]
+- !private ["C8GoChange15CheckForNetwork", "init"]
 - !private ["Ps14CollectionType", "Element"]
 - !private ["Ps14CollectionType", "Generator"]
 - !private ["Ps14CollectionType", "Index"]
@@ -380,6 +384,7 @@ depends-member:
 - !private ["C8GoChange27CreateProblemViewController", "AddIdeaViewController"]
 - ["C8GoChange27CreateProblemViewController", "Bool"]
 - !private ["C8GoChange27CreateProblemViewController", "CGSizeMake"]
+- !private ["C8GoChange27CreateProblemViewController", "CheckForNetwork"]
 - !private ["C8GoChange27CreateProblemViewController", "CoreDataStackManager"]
 - !private ["C8GoChange27CreateProblemViewController", "CustomTableViewCell"]
 - !private ["C8GoChange27CreateProblemViewController", "GoChangeClient"]
@@ -462,6 +467,7 @@ depends-member:
 - ["C8GoChange27CreateProblemViewController", "viewWillAppear"]
 - !private ["Ps28CustomDebugStringConvertible", "CGColor"]
 - !private ["Ps28CustomDebugStringConvertible", "CGSizeMake"]
+- !private ["Ps28CustomDebugStringConvertible", "CheckForNetwork"]
 - !private ["Ps28CustomDebugStringConvertible", "Constants"]
 - !private ["Ps28CustomDebugStringConvertible", "CoreDataStackManager"]
 - !private ["Ps28CustomDebugStringConvertible", "Element"]
@@ -588,6 +594,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps23CustomStringConvertible", "CGColor"]
 - !private ["Ps23CustomStringConvertible", "CGSizeMake"]
+- !private ["Ps23CustomStringConvertible", "CheckForNetwork"]
 - !private ["Ps23CustomStringConvertible", "Constants"]
 - !private ["Ps23CustomStringConvertible", "CoreDataStackManager"]
 - !private ["Ps23CustomStringConvertible", "Distance"]
@@ -722,6 +729,7 @@ depends-member:
 - !private ["Ps9Equatable", "CGColor"]
 - !private ["Ps9Equatable", "CGSizeMake"]
 - !private ["Ps9Equatable", "Cancel"]
+- !private ["Ps9Equatable", "CheckForNetwork"]
 - !private ["Ps9Equatable", "Constants"]
 - !private ["Ps9Equatable", "CoreDataStackManager"]
 - !private ["Ps9Equatable", "Distance"]
@@ -855,6 +863,7 @@ depends-member:
 - !private ["Ps8Hashable", "CGColor"]
 - !private ["Ps8Hashable", "CGSizeMake"]
 - !private ["Ps8Hashable", "Cancel"]
+- !private ["Ps8Hashable", "CheckForNetwork"]
 - !private ["Ps8Hashable", "Constants"]
 - !private ["Ps8Hashable", "CoreDataStackManager"]
 - !private ["Ps8Hashable", "Distance"]
@@ -1024,6 +1033,7 @@ depends-member:
 - !private ["Ps16MutableSliceable", "subscript"]
 - !private ["PSo8NSCoding", "CGColor"]
 - !private ["PSo8NSCoding", "CGSizeMake"]
+- !private ["PSo8NSCoding", "CheckForNetwork"]
 - !private ["PSo8NSCoding", "CoreDataStackManager"]
 - !private ["PSo8NSCoding", "GoChangeClient"]
 - !private ["PSo8NSCoding", "NSUserDefaults"]
@@ -1136,6 +1146,7 @@ depends-member:
 - !private ["PSo9NSCopying", "init"]
 - !private ["PSo9NSCopying", "row"]
 - !private ["PSo26NSExtensionRequestHandling", "CGSizeMake"]
+- !private ["PSo26NSExtensionRequestHandling", "CheckForNetwork"]
 - !private ["PSo26NSExtensionRequestHandling", "CoreDataStackManager"]
 - !private ["PSo26NSExtensionRequestHandling", "GoChangeClient"]
 - !private ["PSo26NSExtensionRequestHandling", "NSUserDefaults"]
@@ -1219,6 +1230,7 @@ depends-member:
 - ["CSo8NSObject", "Bool"]
 - !private ["CSo8NSObject", "CGColor"]
 - !private ["CSo8NSObject", "CGSizeMake"]
+- !private ["CSo8NSObject", "CheckForNetwork"]
 - !private ["CSo8NSObject", "Constants"]
 - !private ["CSo8NSObject", "CoreDataStackManager"]
 - !private ["CSo8NSObject", "CustomTableViewCell"]
@@ -1349,6 +1361,7 @@ depends-member:
 - !private ["CSo8NSObject", "voteCount"]
 - !private ["PSo16NSObjectProtocol", "CGColor"]
 - !private ["PSo16NSObjectProtocol", "CGSizeMake"]
+- !private ["PSo16NSObjectProtocol", "CheckForNetwork"]
 - !private ["PSo16NSObjectProtocol", "Constants"]
 - !private ["PSo16NSObjectProtocol", "CoreDataStackManager"]
 - !private ["PSo16NSObjectProtocol", "GoChangeClient"]
@@ -1575,6 +1588,7 @@ depends-member:
 - !private ["PSo12UIAppearance", "textColor"]
 - !private ["PSo12UIAppearance", "voteCount"]
 - !private ["PSo21UIAppearanceContainer", "CGSizeMake"]
+- !private ["PSo21UIAppearanceContainer", "CheckForNetwork"]
 - !private ["PSo21UIAppearanceContainer", "CoreDataStackManager"]
 - !private ["PSo21UIAppearanceContainer", "GoChangeClient"]
 - !private ["PSo21UIAppearanceContainer", "NSUserDefaults"]
@@ -1681,6 +1695,7 @@ depends-member:
 - !private ["CSo7UIColor", "blackColor"]
 - !private ["CSo7UIColor", "clearColor"]
 - !private ["PSo18UIContentContainer", "CGSizeMake"]
+- !private ["PSo18UIContentContainer", "CheckForNetwork"]
 - !private ["PSo18UIContentContainer", "CoreDataStackManager"]
 - !private ["PSo18UIContentContainer", "GoChangeClient"]
 - !private ["PSo18UIContentContainer", "NSUserDefaults"]
@@ -1804,6 +1819,7 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "textColor"]
 - !private ["PSo13UIDynamicItem", "voteCount"]
 - !private ["PSo18UIFocusEnvironment", "CGSizeMake"]
+- !private ["PSo18UIFocusEnvironment", "CheckForNetwork"]
 - !private ["PSo18UIFocusEnvironment", "CoreDataStackManager"]
 - !private ["PSo18UIFocusEnvironment", "GoChangeClient"]
 - !private ["PSo18UIFocusEnvironment", "NSUserDefaults"]
@@ -1919,6 +1935,7 @@ depends-member:
 - !private ["CSo11UIResponder", "AddIdeaViewController"]
 - ["CSo11UIResponder", "Bool"]
 - !private ["CSo11UIResponder", "CGSizeMake"]
+- !private ["CSo11UIResponder", "CheckForNetwork"]
 - !private ["CSo11UIResponder", "CoreDataStackManager"]
 - !private ["CSo11UIResponder", "CustomTableViewCell"]
 - !private ["CSo11UIResponder", "GoChangeClient"]
@@ -2034,6 +2051,7 @@ depends-member:
 - !private ["CSo12UIScrollView", "text"]
 - !private ["CSo12UIScrollView", "textColor"]
 - !private ["PSo20UIScrollViewDelegate", "CGSizeMake"]
+- !private ["PSo20UIScrollViewDelegate", "CheckForNetwork"]
 - !private ["PSo20UIScrollViewDelegate", "CoreDataStackManager"]
 - !private ["PSo20UIScrollViewDelegate", "GoChangeClient"]
 - !private ["PSo20UIScrollViewDelegate", "NSUserDefaults"]
@@ -2094,6 +2112,7 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "viewForZoomingInScrollView"]
 - ["PSo20UIScrollViewDelegate", ""]
 - !private ["PSo16UIStateRestoring", "CGSizeMake"]
+- !private ["PSo16UIStateRestoring", "CheckForNetwork"]
 - !private ["PSo16UIStateRestoring", "CoreDataStackManager"]
 - !private ["PSo16UIStateRestoring", "GoChangeClient"]
 - !private ["PSo16UIStateRestoring", "NSUserDefaults"]
@@ -2181,6 +2200,7 @@ depends-member:
 - !private ["CSo15UITableViewCell", "problemName"]
 - !private ["CSo15UITableViewCell", "voteCount"]
 - !private ["PSo19UITableViewDelegate", "CGSizeMake"]
+- !private ["PSo19UITableViewDelegate", "CheckForNetwork"]
 - !private ["PSo19UITableViewDelegate", "CoreDataStackManager"]
 - !private ["PSo19UITableViewDelegate", "GoChangeClient"]
 - !private ["PSo19UITableViewDelegate", "NSUserDefaults"]
@@ -2248,6 +2268,7 @@ depends-member:
 - !private ["CSo11UITextField", "resignFirstResponder"]
 - !private ["CSo11UITextField", "text"]
 - !private ["PSo19UITextFieldDelegate", "CGSizeMake"]
+- !private ["PSo19UITextFieldDelegate", "CheckForNetwork"]
 - !private ["PSo19UITextFieldDelegate", "CoreDataStackManager"]
 - !private ["PSo19UITextFieldDelegate", "GoChangeClient"]
 - !private ["PSo19UITextFieldDelegate", "NSUserDefaults"]
@@ -2333,6 +2354,7 @@ depends-member:
 - !private ["CSo10UITextView", "text"]
 - !private ["CSo10UITextView", "textColor"]
 - !private ["PSo18UITextViewDelegate", "CGSizeMake"]
+- !private ["PSo18UITextViewDelegate", "CheckForNetwork"]
 - !private ["PSo18UITextViewDelegate", "CoreDataStackManager"]
 - !private ["PSo18UITextViewDelegate", "GoChangeClient"]
 - !private ["PSo18UITextViewDelegate", "NSUserDefaults"]
@@ -2393,6 +2415,7 @@ depends-member:
 - ["PSo18UITextViewDelegate", "viewForZoomingInScrollView"]
 - ["PSo18UITextViewDelegate", ""]
 - !private ["PSo18UITraitEnvironment", "CGSizeMake"]
+- !private ["PSo18UITraitEnvironment", "CheckForNetwork"]
 - !private ["PSo18UITraitEnvironment", "CoreDataStackManager"]
 - !private ["PSo18UITraitEnvironment", "GoChangeClient"]
 - !private ["PSo18UITraitEnvironment", "NSUserDefaults"]
@@ -2508,6 +2531,7 @@ depends-member:
 - !private ["CSo16UIViewController", "AddIdeaViewController"]
 - ["CSo16UIViewController", "Bool"]
 - !private ["CSo16UIViewController", "CGSizeMake"]
+- !private ["CSo16UIViewController", "CheckForNetwork"]
 - !private ["CSo16UIViewController", "CoreDataStackManager"]
 - !private ["CSo16UIViewController", "CustomTableViewCell"]
 - !private ["CSo16UIViewController", "GoChangeClient"]
@@ -2709,6 +2733,7 @@ depends-nominal:
 - "Ps11CVarArgType"
 - !private "Vs9Character"
 - !private "VSS13CharacterView"
+- !private "C8GoChange15CheckForNetwork"
 - !private "Ps14CollectionType"
 - !private "Ps10Comparable"
 - !private "VC8GoChange14GoChangeClient9Constants"

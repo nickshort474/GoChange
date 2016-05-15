@@ -32,7 +32,6 @@ class RetrieveProblem:NSObject{
                 completionHandler(problemName:problemName,problemID:problemID)
                 
             }else{
-                print("no result")
                 completionHandler(problemName:"",problemID:"")
             }
             

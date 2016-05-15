@@ -8,41 +8,36 @@ provides-member:
 provides-dynamic-lookup:
 - "nameRef"
 depends-top-level:
-- "Void"
-- "NSObject"
 - "RetrieveAllNamesFromFirebase"
-- "FDataSnapshot"
-- "Firebase"
+- "AnyObject"
 - "StringLiteralType"
-- !private "print"
+- "NSObject"
+- "Void"
+- "Firebase"
 depends-member:
 - ["Ps9AnyObject", "Firebase"]
 - !private ["Ps9AnyObject", "description"]
 - ["Ps9AnyObject", "init"]
 - ["Ps9AnyObject", "nameRef"]
 - !private ["Ps9AnyObject", "observeSingleEventOfType"]
-- !private ["Ps9AnyObject", "print"]
 - ["Ps9AnyObject", ""]
 - ["Ps11CVarArgType", "Firebase"]
 - !private ["Ps11CVarArgType", "description"]
 - ["Ps11CVarArgType", "init"]
 - ["Ps11CVarArgType", "nameRef"]
 - !private ["Ps11CVarArgType", "observeSingleEventOfType"]
-- !private ["Ps11CVarArgType", "print"]
 - ["Ps11CVarArgType", ""]
 - ["Ps28CustomDebugStringConvertible", "Firebase"]
 - !private ["Ps28CustomDebugStringConvertible", "description"]
 - ["Ps28CustomDebugStringConvertible", "init"]
 - ["Ps28CustomDebugStringConvertible", "nameRef"]
 - !private ["Ps28CustomDebugStringConvertible", "observeSingleEventOfType"]
-- !private ["Ps28CustomDebugStringConvertible", "print"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - ["Ps23CustomStringConvertible", "Firebase"]
 - !private ["Ps23CustomStringConvertible", "description"]
 - ["Ps23CustomStringConvertible", "init"]
 - ["Ps23CustomStringConvertible", "nameRef"]
 - !private ["Ps23CustomStringConvertible", "observeSingleEventOfType"]
-- !private ["Ps23CustomStringConvertible", "print"]
 - ["Ps23CustomStringConvertible", ""]
 - ["Ps9Equatable", "Firebase"]
 - !private ["Ps9Equatable", "Value"]
@@ -50,7 +45,6 @@ depends-member:
 - ["Ps9Equatable", "init"]
 - ["Ps9Equatable", "nameRef"]
 - !private ["Ps9Equatable", "observeSingleEventOfType"]
-- !private ["Ps9Equatable", "print"]
 - ["Ps9Equatable", ""]
 - !private ["Ps9ErrorType", "description"]
 - !private ["OSC10FEventType", "Value"]
@@ -64,38 +58,35 @@ depends-member:
 - ["Ps8Hashable", "init"]
 - ["Ps8Hashable", "nameRef"]
 - !private ["Ps8Hashable", "observeSingleEventOfType"]
-- !private ["Ps8Hashable", "print"]
 - ["Ps8Hashable", ""]
 - ["SQ", "deinit"]
 - !private ["PSo8NSCoding", "description"]
 - !private ["PSo9NSCopying", "description"]
 - !private ["CSo7NSError", "description"]
-- ["CSo8NSObject", "FDataSnapshot"]
+- ["CSo8NSObject", "AnyObject"]
 - ["CSo8NSObject", "Firebase"]
 - ["CSo8NSObject", "Void"]
 - !private ["CSo8NSObject", "description"]
 - ["CSo8NSObject", "init"]
 - ["CSo8NSObject", "nameRef"]
 - !private ["CSo8NSObject", "observeSingleEventOfType"]
-- !private ["CSo8NSObject", "print"]
 - ["CSo8NSObject", ""]
 - ["PSo16NSObjectProtocol", "Firebase"]
 - !private ["PSo16NSObjectProtocol", "description"]
 - ["PSo16NSObjectProtocol", "init"]
 - ["PSo16NSObjectProtocol", "nameRef"]
 - !private ["PSo16NSObjectProtocol", "observeSingleEventOfType"]
-- !private ["PSo16NSObjectProtocol", "print"]
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "description"]
 - !private ["Ps16RawRepresentable", "Value"]
-- ["C8GoChange28RetrieveAllNamesFromFirebase", "FDataSnapshot"]
+- ["C8GoChange28RetrieveAllNamesFromFirebase", "AnyObject"]
 - ["C8GoChange28RetrieveAllNamesFromFirebase", "Firebase"]
 - ["C8GoChange28RetrieveAllNamesFromFirebase", "Void"]
 - ["C8GoChange28RetrieveAllNamesFromFirebase", "deinit"]
 - ["C8GoChange28RetrieveAllNamesFromFirebase", "init"]
 - ["C8GoChange28RetrieveAllNamesFromFirebase", "nameRef"]
-- !private ["C8GoChange28RetrieveAllNamesFromFirebase", "print"]
 - !private ["Vs12StaticString", "deinit"]
+- !private ["SS", "deinit"]
 depends-nominal:
 - "Ps9AnyObject"
 - "Ps11CVarArgType"
@@ -117,6 +108,7 @@ depends-nominal:
 - !private "Ps16RawRepresentable"
 - "C8GoChange28RetrieveAllNamesFromFirebase"
 - !private "Vs12StaticString"
+- !private "SS"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"
@@ -141,4 +133,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "56622c35258c05ad02e4fd00f36b07ce"
+interface-hash: "9d6eb6d7e36ec85b057ce32fecf62f77"

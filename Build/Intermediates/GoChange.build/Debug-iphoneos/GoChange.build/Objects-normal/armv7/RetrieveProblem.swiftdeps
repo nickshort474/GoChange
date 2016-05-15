@@ -8,17 +8,16 @@ provides-member:
 provides-dynamic-lookup:
 - "sharedContext"
 depends-top-level:
-- !private "NSPredicate"
 - "Void"
-- !private "CoreDataStackManager"
-- !private "StringLiteralType"
-- "NSObject"
 - "String"
-- !private "NSFetchRequest"
-- "RetrieveProblem"
-- !private "print"
 - "NSManagedObjectContext"
+- !private "NSPredicate"
+- !private "StringLiteralType"
+- "RetrieveProblem"
+- !private "NSFetchRequest"
 - !private "Problem"
+- "NSObject"
+- !private "CoreDataStackManager"
 depends-member:
 - !private ["Ps9AnyObject", "CoreDataStackManager"]
 - !private ["Ps9AnyObject", "NSFetchRequest"]
@@ -27,7 +26,6 @@ depends-member:
 - ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "managedObjectContext"]
 - !private ["Ps9AnyObject", "predicate"]
-- !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "problemID"]
 - !private ["Ps9AnyObject", "problemName"]
 - ["Ps9AnyObject", "sharedContext"]
@@ -62,7 +60,6 @@ depends-member:
 - !private ["Ps11CVarArgType", "executeFetchRequest"]
 - ["Ps11CVarArgType", "init"]
 - !private ["Ps11CVarArgType", "predicate"]
-- !private ["Ps11CVarArgType", "print"]
 - !private ["Ps11CVarArgType", "problemID"]
 - !private ["Ps11CVarArgType", "problemName"]
 - ["Ps11CVarArgType", "sharedContext"]
@@ -89,7 +86,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "first"]
 - ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "predicate"]
-- !private ["Ps28CustomDebugStringConvertible", "print"]
 - !private ["Ps28CustomDebugStringConvertible", "problemID"]
 - !private ["Ps28CustomDebugStringConvertible", "problemName"]
 - ["Ps28CustomDebugStringConvertible", "sharedContext"]
@@ -109,7 +105,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "first"]
 - ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "predicate"]
-- !private ["Ps23CustomStringConvertible", "print"]
 - !private ["Ps23CustomStringConvertible", "problemID"]
 - !private ["Ps23CustomStringConvertible", "problemName"]
 - ["Ps23CustomStringConvertible", "sharedContext"]
@@ -124,7 +119,6 @@ depends-member:
 - !private ["Ps9Equatable", "executeFetchRequest"]
 - ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "predicate"]
-- !private ["Ps9Equatable", "print"]
 - !private ["Ps9Equatable", "problemID"]
 - !private ["Ps9Equatable", "problemName"]
 - ["Ps9Equatable", "sharedContext"]
@@ -142,7 +136,6 @@ depends-member:
 - !private ["Ps8Hashable", "executeFetchRequest"]
 - ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "predicate"]
-- !private ["Ps8Hashable", "print"]
 - !private ["Ps8Hashable", "problemID"]
 - !private ["Ps8Hashable", "problemName"]
 - ["Ps8Hashable", "sharedContext"]
@@ -200,7 +193,6 @@ depends-member:
 - !private ["CSo8NSObject", "executeFetchRequest"]
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "predicate"]
-- !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "problemID"]
 - !private ["CSo8NSObject", "problemName"]
 - ["CSo8NSObject", "sharedContext"]
@@ -212,7 +204,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "executeFetchRequest"]
 - ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "predicate"]
-- !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "problemID"]
 - !private ["PSo16NSObjectProtocol", "problemName"]
 - ["PSo16NSObjectProtocol", "sharedContext"]
@@ -242,7 +233,6 @@ depends-member:
 - ["C8GoChange15RetrieveProblem", "Void"]
 - ["C8GoChange15RetrieveProblem", "deinit"]
 - ["C8GoChange15RetrieveProblem", "init"]
-- !private ["C8GoChange15RetrieveProblem", "print"]
 - ["C8GoChange15RetrieveProblem", "sharedContext"]
 - !private ["C8GoChange15RetrieveProblem", "sharedContext.storage"]
 - !private ["Ps12SequenceType", "Element"]

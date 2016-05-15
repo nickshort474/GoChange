@@ -8,15 +8,15 @@ provides-member:
 provides-dynamic-lookup:
 - "sharedContext"
 depends-top-level:
+- !private "NSPredicate"
 - "Solution"
-- "Void"
-- "NSManagedObjectContext"
-- "String"
 - "CheckVote"
+- "NSManagedObjectContext"
 - !private "StringLiteralType"
 - "NSObject"
 - !private "NSFetchRequest"
-- !private "NSPredicate"
+- "Void"
+- "String"
 - !private "CoreDataStackManager"
 depends-member:
 - !private ["Ps9AnyObject", "CoreDataStackManager"]

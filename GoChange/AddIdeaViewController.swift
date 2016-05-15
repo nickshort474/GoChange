@@ -36,7 +36,8 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         addDetailButton.hidden = true
         addSolution.enabled = false
         addSolution.alpha = 0.5
-        petitionTextField.enabled = false
+        
+        //petitionTextField.enabled = false
  
         //set delegates
         nameTextField.delegate = self
@@ -74,6 +75,8 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         
         //set petition field text
         petitionTextField.text = TempSave.sharedInstance().currentPetitionValue
+        
+        print(UIPasteboard.generalPasteboard().string)
         
     }
     

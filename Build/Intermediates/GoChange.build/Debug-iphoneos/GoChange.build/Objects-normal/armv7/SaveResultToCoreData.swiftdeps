@@ -6,23 +6,23 @@ provides-nominal:
 provides-member:
 - ["C8GoChange20SaveResultToCoreData", ""]
 provides-dynamic-lookup:
-- "sharedContext"
 - "problemID"
 - "createCoreDataProblem"
-- "createCoreDataSolutions"
+- "sharedContext"
 - "newProblem"
+- "createCoreDataSolutions"
 depends-top-level:
-- "Void"
-- !private "..<"
-- !private "TempSave"
-- "NSManagedObjectContext"
 - "SaveResultToCoreData"
-- "NSObject"
-- "String"
-- !private "CoreDataStackManager"
-- "Problem"
+- !private "TempSave"
 - "AnyObject"
 - !private "Solution"
+- "Problem"
+- "String"
+- !private "CoreDataStackManager"
+- "Void"
+- "NSObject"
+- !private "..<"
+- "NSManagedObjectContext"
 depends-member:
 - !private ["Ps9AnyObject", "AnyObject"]
 - !private ["Ps9AnyObject", "CoreDataStackManager"]

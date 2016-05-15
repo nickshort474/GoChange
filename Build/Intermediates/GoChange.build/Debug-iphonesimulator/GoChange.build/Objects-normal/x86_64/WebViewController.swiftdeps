@@ -6,37 +6,36 @@ provides-nominal:
 provides-member:
 - ["C8GoChange17WebViewController", ""]
 provides-dynamic-lookup:
-- "viewWillAppear"
 - "currentURL"
-- "status"
-- "viewDidLoad"
-- "linkPetitionClick"
-- "linkPetitionButton"
-- "didReceiveMemoryWarning"
+- "viewWillAppear"
 - "webViewDidFinishLoad"
-- "petitionText"
 - "urlString"
+- "petitionText"
 - "webView"
+- "status"
+- "linkPetitionClick"
+- "viewDidLoad"
+- "linkPetitionButton"
 depends-top-level:
-- !private "NSURLRequest"
-- "UIWebViewDelegate"
-- !private "GoChangeClient"
-- "UIViewController"
-- "Bool"
-- !private "TempSave"
-- "String"
+- "UITextField"
 - !private "NSURL"
 - "StringLiteralType"
-- !private "!="
-- "UIBarButtonItem"
+- !private "UIColor"
 - "UIButton"
 - "UIWebView"
-- "UITextField"
-- "WebViewController"
-- !private "UIColor"
-- !private "BooleanLiteralType"
-- !private "&&"
+- "Bool"
+- "UIViewController"
 - !private "UIBarButtonItemStyle"
+- !private "&&"
+- "WebViewController"
+- !private "NSURLRequest"
+- !private "BooleanLiteralType"
+- "UIWebViewDelegate"
+- "String"
+- !private "TempSave"
+- "UIBarButtonItem"
+- !private "!="
+- !private "GoChangeClient"
 depends-member:
 - !private ["Ps9AnyObject", "Constants"]
 - !private ["Ps9AnyObject", "GoChangeClient"]
@@ -54,7 +53,6 @@ depends-member:
 - !private ["Ps9AnyObject", "currentPetitionValue"]
 - ["Ps9AnyObject", "currentURL"]
 - !private ["Ps9AnyObject", "delegate"]
-- ["Ps9AnyObject", "didReceiveMemoryWarning"]
 - !private ["Ps9AnyObject", "enabled"]
 - ["Ps9AnyObject", "init"]
 - ["Ps9AnyObject", "linkPetitionButton"]
@@ -99,7 +97,6 @@ depends-member:
 - !private ["Ps11CVarArgType", "currentPetitionValue"]
 - ["Ps11CVarArgType", "currentURL"]
 - !private ["Ps11CVarArgType", "delegate"]
-- ["Ps11CVarArgType", "didReceiveMemoryWarning"]
 - !private ["Ps11CVarArgType", "enabled"]
 - ["Ps11CVarArgType", "init"]
 - ["Ps11CVarArgType", "linkPetitionButton"]
@@ -145,7 +142,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "currentPetitionValue"]
 - ["Ps28CustomDebugStringConvertible", "currentURL"]
 - !private ["Ps28CustomDebugStringConvertible", "delegate"]
-- ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
 - !private ["Ps28CustomDebugStringConvertible", "enabled"]
 - ["Ps28CustomDebugStringConvertible", "init"]
 - ["Ps28CustomDebugStringConvertible", "linkPetitionButton"]
@@ -187,7 +183,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "currentPetitionValue"]
 - ["Ps23CustomStringConvertible", "currentURL"]
 - !private ["Ps23CustomStringConvertible", "delegate"]
-- ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
 - !private ["Ps23CustomStringConvertible", "enabled"]
 - ["Ps23CustomStringConvertible", "init"]
 - ["Ps23CustomStringConvertible", "linkPetitionButton"]
@@ -231,7 +226,6 @@ depends-member:
 - !private ["Ps9Equatable", "currentPetitionValue"]
 - ["Ps9Equatable", "currentURL"]
 - !private ["Ps9Equatable", "delegate"]
-- ["Ps9Equatable", "didReceiveMemoryWarning"]
 - !private ["Ps9Equatable", "enabled"]
 - ["Ps9Equatable", "init"]
 - ["Ps9Equatable", "linkPetitionButton"]
@@ -279,7 +273,6 @@ depends-member:
 - !private ["Ps8Hashable", "currentPetitionValue"]
 - ["Ps8Hashable", "currentURL"]
 - !private ["Ps8Hashable", "delegate"]
-- ["Ps8Hashable", "didReceiveMemoryWarning"]
 - !private ["Ps8Hashable", "enabled"]
 - ["Ps8Hashable", "init"]
 - ["Ps8Hashable", "linkPetitionButton"]
@@ -327,7 +320,6 @@ depends-member:
 - !private ["PSo8NSCoding", "clearColor"]
 - ["PSo8NSCoding", "currentURL"]
 - !private ["PSo8NSCoding", "delegate"]
-- ["PSo8NSCoding", "didReceiveMemoryWarning"]
 - !private ["PSo8NSCoding", "enabled"]
 - ["PSo8NSCoding", "init"]
 - ["PSo8NSCoding", "linkPetitionButton"]
@@ -367,7 +359,6 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "UIColor"]
 - !private ["PSo26NSExtensionRequestHandling", "WebViewController"]
 - ["PSo26NSExtensionRequestHandling", "currentURL"]
-- ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
 - ["PSo26NSExtensionRequestHandling", "init"]
 - ["PSo26NSExtensionRequestHandling", "linkPetitionButton"]
 - ["PSo26NSExtensionRequestHandling", "linkPetitionClick"]
@@ -408,7 +399,6 @@ depends-member:
 - !private ["CSo8NSObject", "currentPetitionValue"]
 - ["CSo8NSObject", "currentURL"]
 - !private ["CSo8NSObject", "delegate"]
-- ["CSo8NSObject", "didReceiveMemoryWarning"]
 - !private ["CSo8NSObject", "enabled"]
 - ["CSo8NSObject", "init"]
 - ["CSo8NSObject", "linkPetitionButton"]
@@ -448,7 +438,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "currentPetitionValue"]
 - ["PSo16NSObjectProtocol", "currentURL"]
 - !private ["PSo16NSObjectProtocol", "delegate"]
-- ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
 - !private ["PSo16NSObjectProtocol", "enabled"]
 - ["PSo16NSObjectProtocol", "init"]
 - ["PSo16NSObjectProtocol", "linkPetitionButton"]
@@ -531,7 +520,6 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "WebViewController"]
 - ["PSo21UIAppearanceContainer", "currentURL"]
 - !private ["PSo21UIAppearanceContainer", "delegate"]
-- ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
 - ["PSo21UIAppearanceContainer", "init"]
 - ["PSo21UIAppearanceContainer", "linkPetitionButton"]
 - ["PSo21UIAppearanceContainer", "linkPetitionClick"]
@@ -568,7 +556,6 @@ depends-member:
 - !private ["PSo18UIContentContainer", "UIColor"]
 - !private ["PSo18UIContentContainer", "WebViewController"]
 - ["PSo18UIContentContainer", "currentURL"]
-- ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
 - ["PSo18UIContentContainer", "init"]
 - ["PSo18UIContentContainer", "linkPetitionButton"]
 - ["PSo18UIContentContainer", "linkPetitionClick"]
@@ -603,7 +590,6 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "WebViewController"]
 - ["PSo18UIFocusEnvironment", "currentURL"]
 - !private ["PSo18UIFocusEnvironment", "delegate"]
-- ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
 - ["PSo18UIFocusEnvironment", "init"]
 - ["PSo18UIFocusEnvironment", "linkPetitionButton"]
 - ["PSo18UIFocusEnvironment", "linkPetitionClick"]
@@ -640,7 +626,6 @@ depends-member:
 - !private ["CSo11UIResponder", "WebViewController"]
 - ["CSo11UIResponder", "currentURL"]
 - !private ["CSo11UIResponder", "delegate"]
-- ["CSo11UIResponder", "didReceiveMemoryWarning"]
 - ["CSo11UIResponder", "init"]
 - ["CSo11UIResponder", "linkPetitionButton"]
 - ["CSo11UIResponder", "linkPetitionClick"]
@@ -670,7 +655,6 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "UIColor"]
 - !private ["PSo16UIStateRestoring", "WebViewController"]
 - ["PSo16UIStateRestoring", "currentURL"]
-- ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
 - ["PSo16UIStateRestoring", "init"]
 - ["PSo16UIStateRestoring", "linkPetitionButton"]
 - ["PSo16UIStateRestoring", "linkPetitionClick"]
@@ -699,7 +683,6 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "WebViewController"]
 - ["PSo18UITraitEnvironment", "currentURL"]
 - !private ["PSo18UITraitEnvironment", "delegate"]
-- ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
 - ["PSo18UITraitEnvironment", "init"]
 - ["PSo18UITraitEnvironment", "linkPetitionButton"]
 - ["PSo18UITraitEnvironment", "linkPetitionClick"]
@@ -736,7 +719,6 @@ depends-member:
 - ["CSo16UIViewController", "UIWebView"]
 - !private ["CSo16UIViewController", "WebViewController"]
 - ["CSo16UIViewController", "currentURL"]
-- ["CSo16UIViewController", "didReceiveMemoryWarning"]
 - ["CSo16UIViewController", "init"]
 - ["CSo16UIViewController", "linkPetitionButton"]
 - ["CSo16UIViewController", "linkPetitionClick"]
@@ -799,7 +781,6 @@ depends-member:
 - !private ["C8GoChange17WebViewController", "WebViewController"]
 - ["C8GoChange17WebViewController", "currentURL"]
 - ["C8GoChange17WebViewController", "deinit"]
-- ["C8GoChange17WebViewController", "didReceiveMemoryWarning"]
 - ["C8GoChange17WebViewController", "init"]
 - ["C8GoChange17WebViewController", "linkPetitionButton"]
 - ["C8GoChange17WebViewController", "linkPetitionClick"]
@@ -954,4 +935,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Modules/module.modulemap"
-interface-hash: "610d83fb538fd75680dcfc93b4222bd4"
+interface-hash: "fcac2449e4ed62b2a15a1e2a608deb7c"

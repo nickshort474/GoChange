@@ -9,14 +9,14 @@ provides-dynamic-lookup:
 - "connectedRef"
 depends-top-level:
 - !private "&&"
-- "String"
-- !private "!="
 - "Void"
-- "CheckForNetwork"
-- !private "Bool"
 - "NSObject"
 - "Firebase"
 - "StringLiteralType"
+- !private "!="
+- "CheckForNetwork"
+- "String"
+- !private "Bool"
 depends-member:
 - ["Ps9AnyObject", "Firebase"]
 - ["Ps9AnyObject", "connectedRef"]

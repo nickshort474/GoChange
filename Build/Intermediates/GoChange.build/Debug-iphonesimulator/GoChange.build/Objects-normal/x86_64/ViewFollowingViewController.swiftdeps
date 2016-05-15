@@ -6,59 +6,58 @@ provides-nominal:
 provides-member:
 - ["C8GoChange27ViewFollowingViewController", ""]
 provides-dynamic-lookup:
-- "nameField"
-- "unfollowProblem"
-- "goBackHome"
-- "addASolutionButton"
-- "problemClicked"
-- "tableView"
-- "tableView"
-- "tableView"
-- "problemIDArray"
-- "detailsField"
 - "problemID"
-- "viewWillAppear"
-- "viewDidLoad"
-- "solutionTable"
-- "solutionID"
-- "addSolutionClick"
-- "unfollowProblemButton"
+- "nameField"
+- "addASolutionButton"
 - "sendingController"
+- "solutionID"
+- "tableView"
+- "tableView"
+- "tableView"
+- "unfollowProblemButton"
+- "detailsField"
+- "viewWillAppear"
+- "unfollowProblem"
+- "solutionTable"
+- "viewDidLoad"
+- "problemClicked"
+- "addSolutionClick"
+- "goBackHome"
+- "problemIDArray"
 depends-top-level:
-- !private "UIColor"
-- !private "UIBarButtonItemStyle"
-- "ViewFollowingViewController"
-- !private "AddIdeaViewController"
-- !private "RetrieveSolutions"
-- "UIButton"
-- "UITextField"
-- !private "TempSave"
-- !private "DeleteProblemFromCoreData"
+- "NSIndexPath"
 - !private "UIBarButtonItem"
-- "Problem"
-- !private "BooleanLiteralType"
-- !private "CGSizeMake"
-- "UITableViewCell"
-- !private "!="
-- "UITextView"
-- !private "print"
-- "UITableView"
-- "UITextFieldDelegate"
-- "UITextViewDelegate"
-- "Int"
+- "UIButton"
+- !private "AddIdeaViewController"
+- !private "TempSave"
+- "UITextField"
+- !private "UIColor"
 - !private "=="
 - !private "RetrieveSolutionCountFirebase"
-- "UIViewController"
-- !private "UITextBorderStyle"
-- !private "CustomTableViewCell"
-- "String"
 - !private "RetrieveSolutionsFromFirebase"
-- "UITableViewDelegate"
-- !private "ViewIdeaViewController"
+- !private "UIBarButtonItemStyle"
+- !private "CGSizeMake"
+- !private "DeleteProblemFromCoreData"
+- "UITableViewCell"
 - !private "StringLiteralType"
-- "Bool"
-- "NSIndexPath"
+- !private "!="
 - !private "GoChangeClient"
+- "UITableView"
+- "Int"
+- "UITextViewDelegate"
+- !private "UITextBorderStyle"
+- "ViewFollowingViewController"
+- "UITextFieldDelegate"
+- "UIViewController"
+- "UITextView"
+- !private "RetrieveSolutions"
+- !private "CustomTableViewCell"
+- !private "BooleanLiteralType"
+- "String"
+- "UITableViewDelegate"
+- "Problem"
+- !private "ViewIdeaViewController"
+- "Bool"
 depends-member:
 - !private ["C8GoChange21AddIdeaViewController", "problem"]
 - !private ["C8GoChange21AddIdeaViewController", "viewControllerStatus"]
@@ -108,7 +107,6 @@ depends-member:
 - !private ["Ps9AnyObject", "petitionURL"]
 - !private ["Ps9AnyObject", "petitionURLArray"]
 - !private ["Ps9AnyObject", "popToRootViewControllerAnimated"]
-- !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "problem"]
 - ["Ps9AnyObject", "problemClicked"]
 - !private ["Ps9AnyObject", "problemDescription"]
@@ -260,7 +258,6 @@ depends-member:
 - !private ["Ps11CVarArgType", "petitionURL"]
 - !private ["Ps11CVarArgType", "petitionURLArray"]
 - !private ["Ps11CVarArgType", "popToRootViewControllerAnimated"]
-- !private ["Ps11CVarArgType", "print"]
 - !private ["Ps11CVarArgType", "problem"]
 - ["Ps11CVarArgType", "problemClicked"]
 - !private ["Ps11CVarArgType", "problemDescription"]
@@ -387,7 +384,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "petitionURL"]
 - !private ["Ps28CustomDebugStringConvertible", "petitionURLArray"]
 - !private ["Ps28CustomDebugStringConvertible", "popToRootViewControllerAnimated"]
-- !private ["Ps28CustomDebugStringConvertible", "print"]
 - !private ["Ps28CustomDebugStringConvertible", "problem"]
 - ["Ps28CustomDebugStringConvertible", "problemClicked"]
 - !private ["Ps28CustomDebugStringConvertible", "problemDescription"]
@@ -506,7 +502,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "petitionURL"]
 - !private ["Ps23CustomStringConvertible", "petitionURLArray"]
 - !private ["Ps23CustomStringConvertible", "popToRootViewControllerAnimated"]
-- !private ["Ps23CustomStringConvertible", "print"]
 - !private ["Ps23CustomStringConvertible", "problem"]
 - ["Ps23CustomStringConvertible", "problemClicked"]
 - !private ["Ps23CustomStringConvertible", "problemDescription"]
@@ -626,7 +621,6 @@ depends-member:
 - !private ["Ps9Equatable", "petitionURL"]
 - !private ["Ps9Equatable", "petitionURLArray"]
 - !private ["Ps9Equatable", "popToRootViewControllerAnimated"]
-- !private ["Ps9Equatable", "print"]
 - !private ["Ps9Equatable", "problem"]
 - ["Ps9Equatable", "problemClicked"]
 - !private ["Ps9Equatable", "problemDescription"]
@@ -747,7 +741,6 @@ depends-member:
 - !private ["Ps8Hashable", "petitionURL"]
 - !private ["Ps8Hashable", "petitionURLArray"]
 - !private ["Ps8Hashable", "popToRootViewControllerAnimated"]
-- !private ["Ps8Hashable", "print"]
 - !private ["Ps8Hashable", "problem"]
 - ["Ps8Hashable", "problemClicked"]
 - !private ["Ps8Hashable", "problemDescription"]
@@ -903,7 +896,6 @@ depends-member:
 - !private ["PSo8NSCoding", "ownerName"]
 - !private ["PSo8NSCoding", "petitionURL"]
 - !private ["PSo8NSCoding", "popToRootViewControllerAnimated"]
-- !private ["PSo8NSCoding", "print"]
 - !private ["PSo8NSCoding", "problem"]
 - ["PSo8NSCoding", "problemClicked"]
 - ["PSo8NSCoding", "problemID"]
@@ -993,7 +985,6 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "navigationItem"]
 - !private ["PSo26NSExtensionRequestHandling", "petitionURL"]
 - !private ["PSo26NSExtensionRequestHandling", "popToRootViewControllerAnimated"]
-- !private ["PSo26NSExtensionRequestHandling", "print"]
 - !private ["PSo26NSExtensionRequestHandling", "problem"]
 - ["PSo26NSExtensionRequestHandling", "problemClicked"]
 - ["PSo26NSExtensionRequestHandling", "problemID"]
@@ -1102,7 +1093,6 @@ depends-member:
 - !private ["CSo8NSObject", "petitionURL"]
 - !private ["CSo8NSObject", "petitionURLArray"]
 - !private ["CSo8NSObject", "popToRootViewControllerAnimated"]
-- !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "problem"]
 - ["CSo8NSObject", "problemClicked"]
 - !private ["CSo8NSObject", "problemDescription"]
@@ -1210,7 +1200,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "petitionURL"]
 - !private ["PSo16NSObjectProtocol", "petitionURLArray"]
 - !private ["PSo16NSObjectProtocol", "popToRootViewControllerAnimated"]
-- !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "problem"]
 - ["PSo16NSObjectProtocol", "problemClicked"]
 - !private ["PSo16NSObjectProtocol", "problemDescription"]
@@ -1393,7 +1382,6 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "ownerName"]
 - !private ["PSo21UIAppearanceContainer", "petitionURL"]
 - !private ["PSo21UIAppearanceContainer", "popToRootViewControllerAnimated"]
-- !private ["PSo21UIAppearanceContainer", "print"]
 - !private ["PSo21UIAppearanceContainer", "problem"]
 - ["PSo21UIAppearanceContainer", "problemClicked"]
 - ["PSo21UIAppearanceContainer", "problemID"]
@@ -1479,7 +1467,6 @@ depends-member:
 - !private ["PSo18UIContentContainer", "navigationItem"]
 - !private ["PSo18UIContentContainer", "petitionURL"]
 - !private ["PSo18UIContentContainer", "popToRootViewControllerAnimated"]
-- !private ["PSo18UIContentContainer", "print"]
 - !private ["PSo18UIContentContainer", "problem"]
 - ["PSo18UIContentContainer", "problemClicked"]
 - ["PSo18UIContentContainer", "problemID"]
@@ -1588,7 +1575,6 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "ownerName"]
 - !private ["PSo18UIFocusEnvironment", "petitionURL"]
 - !private ["PSo18UIFocusEnvironment", "popToRootViewControllerAnimated"]
-- !private ["PSo18UIFocusEnvironment", "print"]
 - !private ["PSo18UIFocusEnvironment", "problem"]
 - ["PSo18UIFocusEnvironment", "problemClicked"]
 - ["PSo18UIFocusEnvironment", "problemID"]
@@ -1701,7 +1687,6 @@ depends-member:
 - !private ["CSo11UIResponder", "ownerName"]
 - !private ["CSo11UIResponder", "petitionURL"]
 - !private ["CSo11UIResponder", "popToRootViewControllerAnimated"]
-- !private ["CSo11UIResponder", "print"]
 - !private ["CSo11UIResponder", "problem"]
 - ["CSo11UIResponder", "problemClicked"]
 - ["CSo11UIResponder", "problemID"]
@@ -1778,7 +1763,6 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "nameField"]
 - !private ["PSo20UIScrollViewDelegate", "navigationController"]
 - !private ["PSo20UIScrollViewDelegate", "navigationItem"]
-- !private ["PSo20UIScrollViewDelegate", "print"]
 - !private ["PSo20UIScrollViewDelegate", "problem"]
 - !private ["PSo20UIScrollViewDelegate", "problemClicked"]
 - !private ["PSo20UIScrollViewDelegate", "problemID"]
@@ -1848,7 +1832,6 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "navigationItem"]
 - !private ["PSo16UIStateRestoring", "petitionURL"]
 - !private ["PSo16UIStateRestoring", "popToRootViewControllerAnimated"]
-- !private ["PSo16UIStateRestoring", "print"]
 - !private ["PSo16UIStateRestoring", "problem"]
 - ["PSo16UIStateRestoring", "problemClicked"]
 - ["PSo16UIStateRestoring", "problemID"]
@@ -1924,7 +1907,6 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "nameField"]
 - !private ["PSo19UITableViewDelegate", "navigationController"]
 - !private ["PSo19UITableViewDelegate", "navigationItem"]
-- !private ["PSo19UITableViewDelegate", "print"]
 - !private ["PSo19UITableViewDelegate", "problem"]
 - !private ["PSo19UITableViewDelegate", "problemClicked"]
 - !private ["PSo19UITableViewDelegate", "problemID"]
@@ -1991,7 +1973,6 @@ depends-member:
 - !private ["PSo19UITextFieldDelegate", "nameField"]
 - !private ["PSo19UITextFieldDelegate", "navigationController"]
 - !private ["PSo19UITextFieldDelegate", "navigationItem"]
-- !private ["PSo19UITextFieldDelegate", "print"]
 - !private ["PSo19UITextFieldDelegate", "problem"]
 - !private ["PSo19UITextFieldDelegate", "problemClicked"]
 - !private ["PSo19UITextFieldDelegate", "problemID"]
@@ -2068,7 +2049,6 @@ depends-member:
 - !private ["PSo18UITextViewDelegate", "nameField"]
 - !private ["PSo18UITextViewDelegate", "navigationController"]
 - !private ["PSo18UITextViewDelegate", "navigationItem"]
-- !private ["PSo18UITextViewDelegate", "print"]
 - !private ["PSo18UITextViewDelegate", "problem"]
 - !private ["PSo18UITextViewDelegate", "problemClicked"]
 - !private ["PSo18UITextViewDelegate", "problemID"]
@@ -2144,7 +2124,6 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "ownerName"]
 - !private ["PSo18UITraitEnvironment", "petitionURL"]
 - !private ["PSo18UITraitEnvironment", "popToRootViewControllerAnimated"]
-- !private ["PSo18UITraitEnvironment", "print"]
 - !private ["PSo18UITraitEnvironment", "problem"]
 - ["PSo18UITraitEnvironment", "problemClicked"]
 - ["PSo18UITraitEnvironment", "problemID"]
@@ -2247,7 +2226,6 @@ depends-member:
 - !private ["CSo16UIViewController", "navigationItem"]
 - !private ["CSo16UIViewController", "petitionURL"]
 - !private ["CSo16UIViewController", "popToRootViewControllerAnimated"]
-- !private ["CSo16UIViewController", "print"]
 - !private ["CSo16UIViewController", "problem"]
 - ["CSo16UIViewController", "problemClicked"]
 - ["CSo16UIViewController", "problemID"]
@@ -2336,7 +2314,6 @@ depends-member:
 - ["C8GoChange27ViewFollowingViewController", "nameField"]
 - !private ["C8GoChange27ViewFollowingViewController", "navigationController"]
 - !private ["C8GoChange27ViewFollowingViewController", "navigationItem"]
-- !private ["C8GoChange27ViewFollowingViewController", "print"]
 - ["C8GoChange27ViewFollowingViewController", "problemClicked"]
 - ["C8GoChange27ViewFollowingViewController", "problemID"]
 - ["C8GoChange27ViewFollowingViewController", "problemIDArray"]

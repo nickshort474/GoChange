@@ -6,52 +6,53 @@ provides-nominal:
 provides-member:
 - ["C8GoChange21AddIdeaViewController", ""]
 provides-dynamic-lookup:
-- "currentNameData"
+- "petitionTextField"
 - "addDetailButton"
 - "addSolution"
-- "addPetition"
-- "viewDidLoad"
-- "textViewDidBeginEditing"
-- "doneAddingIdea"
+- "addNameClick"
 - "nameTextField"
+- "textViewDidBeginEditing"
+- "currentDetailData"
 - "petitionButton"
-- "addDetailClick"
-- "didReceiveMemoryWarning"
+- "addPetition"
+- "doneAddingIdea"
+- "problem"
+- "currentNameData"
 - "addNameButton"
 - "textFieldDidBeginEditing"
-- "problem"
-- "viewControllerStatus"
-- "petitionTextField"
 - "detailTextView"
-- "addNameClick"
-- "currentDetailData"
+- "viewControllerStatus"
+- "addDetailClick"
+- "viewDidLoad"
 - "viewWillAppear"
 depends-top-level:
-- "UITextViewDelegate"
-- "UITextFieldDelegate"
-- !private "UITextBorderStyle"
-- "UIViewController"
-- "UITextView"
-- !private "Array"
+- "AnyObject"
 - "AddIdeaViewController"
-- "String"
-- !private "=="
-- !private "GoChangeClient"
-- "Problem"
-- !private "TempSave"
-- !private "StringLiteralType"
-- "UITableViewDelegate"
-- "Bool"
-- !private "UIColor"
-- "UITextField"
 - !private "WebViewController"
-- !private "!="
-- !private "SaveNewSolution"
+- "Problem"
 - "UIButton"
 - !private "BooleanLiteralType"
+- "UITextField"
+- !private "TempSave"
+- !private "UITextBorderStyle"
+- "UITableViewDelegate"
+- "Bool"
+- "String"
+- !private "print"
+- !private "=="
+- !private "!="
+- !private "SaveNewSolution"
 - !private "CGSizeMake"
-- "AnyObject"
+- !private "StringLiteralType"
+- !private "GoChangeClient"
 - !private "&&"
+- !private "Array"
+- !private "UIPasteboard"
+- "UIViewController"
+- "UITextView"
+- "UITextFieldDelegate"
+- "UITextViewDelegate"
+- !private "UIColor"
 depends-member:
 - ["C8GoChange21AddIdeaViewController", "AnyObject"]
 - ["C8GoChange21AddIdeaViewController", "Bool"]
@@ -63,6 +64,7 @@ depends-member:
 - !private ["C8GoChange21AddIdeaViewController", "TempSave"]
 - ["C8GoChange21AddIdeaViewController", "UIButton"]
 - !private ["C8GoChange21AddIdeaViewController", "UIColor"]
+- !private ["C8GoChange21AddIdeaViewController", "UIPasteboard"]
 - !private ["C8GoChange21AddIdeaViewController", "UITextBorderStyle"]
 - ["C8GoChange21AddIdeaViewController", "UITextField"]
 - ["C8GoChange21AddIdeaViewController", "UITextView"]
@@ -77,7 +79,6 @@ depends-member:
 - ["C8GoChange21AddIdeaViewController", "currentNameData"]
 - ["C8GoChange21AddIdeaViewController", "deinit"]
 - ["C8GoChange21AddIdeaViewController", "detailTextView"]
-- ["C8GoChange21AddIdeaViewController", "didReceiveMemoryWarning"]
 - ["C8GoChange21AddIdeaViewController", "doneAddingIdea"]
 - ["C8GoChange21AddIdeaViewController", "indexPathForPreferredFocusedViewInTableView"]
 - ["C8GoChange21AddIdeaViewController", "init"]
@@ -85,6 +86,7 @@ depends-member:
 - !private ["C8GoChange21AddIdeaViewController", "navigationController"]
 - ["C8GoChange21AddIdeaViewController", "petitionButton"]
 - ["C8GoChange21AddIdeaViewController", "petitionTextField"]
+- !private ["C8GoChange21AddIdeaViewController", "print"]
 - ["C8GoChange21AddIdeaViewController", "problem"]
 - ["C8GoChange21AddIdeaViewController", "scrollViewDidEndDecelerating"]
 - ["C8GoChange21AddIdeaViewController", "scrollViewDidEndDragging"]
@@ -125,6 +127,7 @@ depends-member:
 - !private ["Ps9AnyObject", "SaveNewSolution"]
 - !private ["Ps9AnyObject", "TempSave"]
 - !private ["Ps9AnyObject", "UIColor"]
+- !private ["Ps9AnyObject", "UIPasteboard"]
 - !private ["Ps9AnyObject", "UITextBorderStyle"]
 - ["Ps9AnyObject", "addDetailButton"]
 - ["Ps9AnyObject", "addDetailClick"]
@@ -142,10 +145,10 @@ depends-member:
 - !private ["Ps9AnyObject", "currentPetitionValue"]
 - !private ["Ps9AnyObject", "delegate"]
 - ["Ps9AnyObject", "detailTextView"]
-- ["Ps9AnyObject", "didReceiveMemoryWarning"]
 - ["Ps9AnyObject", "doneAddingIdea"]
 - !private ["Ps9AnyObject", "editable"]
 - !private ["Ps9AnyObject", "enabled"]
+- !private ["Ps9AnyObject", "generalPasteboard"]
 - !private ["Ps9AnyObject", "hidden"]
 - ["Ps9AnyObject", "indexPathForPreferredFocusedViewInTableView"]
 - ["Ps9AnyObject", "init"]
@@ -161,6 +164,7 @@ depends-member:
 - ["Ps9AnyObject", "petitionTextField"]
 - !private ["Ps9AnyObject", "petitionURLArray"]
 - !private ["Ps9AnyObject", "popViewControllerAnimated"]
+- !private ["Ps9AnyObject", "print"]
 - ["Ps9AnyObject", "problem"]
 - !private ["Ps9AnyObject", "pushViewController"]
 - !private ["Ps9AnyObject", "resignFirstResponder"]
@@ -188,6 +192,7 @@ depends-member:
 - !private ["Ps9AnyObject", "solutionVoteArray"]
 - !private ["Ps9AnyObject", "status"]
 - !private ["Ps9AnyObject", "storyboard"]
+- !private ["Ps9AnyObject", "string"]
 - ["Ps9AnyObject", "tableView"]
 - !private ["Ps9AnyObject", "text"]
 - !private ["Ps9AnyObject", "textColor"]
@@ -255,6 +260,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "SaveNewSolution"]
 - !private ["Ps11CVarArgType", "TempSave"]
 - !private ["Ps11CVarArgType", "UIColor"]
+- !private ["Ps11CVarArgType", "UIPasteboard"]
 - !private ["Ps11CVarArgType", "UITextBorderStyle"]
 - ["Ps11CVarArgType", "addDetailButton"]
 - ["Ps11CVarArgType", "addDetailClick"]
@@ -272,10 +278,10 @@ depends-member:
 - !private ["Ps11CVarArgType", "currentPetitionValue"]
 - !private ["Ps11CVarArgType", "delegate"]
 - ["Ps11CVarArgType", "detailTextView"]
-- ["Ps11CVarArgType", "didReceiveMemoryWarning"]
 - ["Ps11CVarArgType", "doneAddingIdea"]
 - !private ["Ps11CVarArgType", "editable"]
 - !private ["Ps11CVarArgType", "enabled"]
+- !private ["Ps11CVarArgType", "generalPasteboard"]
 - !private ["Ps11CVarArgType", "hidden"]
 - ["Ps11CVarArgType", "indexPathForPreferredFocusedViewInTableView"]
 - ["Ps11CVarArgType", "init"]
@@ -291,6 +297,7 @@ depends-member:
 - ["Ps11CVarArgType", "petitionTextField"]
 - !private ["Ps11CVarArgType", "petitionURLArray"]
 - !private ["Ps11CVarArgType", "popViewControllerAnimated"]
+- !private ["Ps11CVarArgType", "print"]
 - ["Ps11CVarArgType", "problem"]
 - !private ["Ps11CVarArgType", "pushViewController"]
 - !private ["Ps11CVarArgType", "resignFirstResponder"]
@@ -318,6 +325,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "solutionVoteArray"]
 - !private ["Ps11CVarArgType", "status"]
 - !private ["Ps11CVarArgType", "storyboard"]
+- !private ["Ps11CVarArgType", "string"]
 - ["Ps11CVarArgType", "tableView"]
 - !private ["Ps11CVarArgType", "text"]
 - !private ["Ps11CVarArgType", "textColor"]
@@ -363,6 +371,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
 - !private ["Ps28CustomDebugStringConvertible", "TempSave"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
+- !private ["Ps28CustomDebugStringConvertible", "UIPasteboard"]
 - !private ["Ps28CustomDebugStringConvertible", "UITextBorderStyle"]
 - !private ["Ps28CustomDebugStringConvertible", "_Element"]
 - ["Ps28CustomDebugStringConvertible", "addDetailButton"]
@@ -382,10 +391,10 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "currentPetitionValue"]
 - !private ["Ps28CustomDebugStringConvertible", "delegate"]
 - ["Ps28CustomDebugStringConvertible", "detailTextView"]
-- ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
 - ["Ps28CustomDebugStringConvertible", "doneAddingIdea"]
 - !private ["Ps28CustomDebugStringConvertible", "editable"]
 - !private ["Ps28CustomDebugStringConvertible", "enabled"]
+- !private ["Ps28CustomDebugStringConvertible", "generalPasteboard"]
 - !private ["Ps28CustomDebugStringConvertible", "hidden"]
 - ["Ps28CustomDebugStringConvertible", "indexPathForPreferredFocusedViewInTableView"]
 - ["Ps28CustomDebugStringConvertible", "init"]
@@ -401,6 +410,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "petitionTextField"]
 - !private ["Ps28CustomDebugStringConvertible", "petitionURLArray"]
 - !private ["Ps28CustomDebugStringConvertible", "popViewControllerAnimated"]
+- !private ["Ps28CustomDebugStringConvertible", "print"]
 - ["Ps28CustomDebugStringConvertible", "problem"]
 - !private ["Ps28CustomDebugStringConvertible", "pushViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "resignFirstResponder"]
@@ -428,6 +438,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "solutionVoteArray"]
 - !private ["Ps28CustomDebugStringConvertible", "status"]
 - !private ["Ps28CustomDebugStringConvertible", "storyboard"]
+- !private ["Ps28CustomDebugStringConvertible", "string"]
 - ["Ps28CustomDebugStringConvertible", "tableView"]
 - !private ["Ps28CustomDebugStringConvertible", "text"]
 - !private ["Ps28CustomDebugStringConvertible", "textColor"]
@@ -465,6 +476,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
 - !private ["Ps23CustomStringConvertible", "TempSave"]
 - !private ["Ps23CustomStringConvertible", "UIColor"]
+- !private ["Ps23CustomStringConvertible", "UIPasteboard"]
 - !private ["Ps23CustomStringConvertible", "UITextBorderStyle"]
 - !private ["Ps23CustomStringConvertible", "_Element"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
@@ -485,10 +497,10 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "currentPetitionValue"]
 - !private ["Ps23CustomStringConvertible", "delegate"]
 - ["Ps23CustomStringConvertible", "detailTextView"]
-- ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
 - ["Ps23CustomStringConvertible", "doneAddingIdea"]
 - !private ["Ps23CustomStringConvertible", "editable"]
 - !private ["Ps23CustomStringConvertible", "enabled"]
+- !private ["Ps23CustomStringConvertible", "generalPasteboard"]
 - !private ["Ps23CustomStringConvertible", "hidden"]
 - ["Ps23CustomStringConvertible", "indexPathForPreferredFocusedViewInTableView"]
 - ["Ps23CustomStringConvertible", "init"]
@@ -504,6 +516,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "petitionTextField"]
 - !private ["Ps23CustomStringConvertible", "petitionURLArray"]
 - !private ["Ps23CustomStringConvertible", "popViewControllerAnimated"]
+- !private ["Ps23CustomStringConvertible", "print"]
 - ["Ps23CustomStringConvertible", "problem"]
 - !private ["Ps23CustomStringConvertible", "pushViewController"]
 - !private ["Ps23CustomStringConvertible", "resignFirstResponder"]
@@ -531,6 +544,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "solutionVoteArray"]
 - !private ["Ps23CustomStringConvertible", "status"]
 - !private ["Ps23CustomStringConvertible", "storyboard"]
+- !private ["Ps23CustomStringConvertible", "string"]
 - ["Ps23CustomStringConvertible", "tableView"]
 - !private ["Ps23CustomStringConvertible", "text"]
 - !private ["Ps23CustomStringConvertible", "textColor"]
@@ -565,6 +579,7 @@ depends-member:
 - !private ["Ps9Equatable", "SaveNewSolution"]
 - !private ["Ps9Equatable", "TempSave"]
 - !private ["Ps9Equatable", "UIColor"]
+- !private ["Ps9Equatable", "UIPasteboard"]
 - !private ["Ps9Equatable", "UITextBorderStyle"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - ["Ps9Equatable", "addDetailButton"]
@@ -583,10 +598,10 @@ depends-member:
 - !private ["Ps9Equatable", "currentPetitionValue"]
 - !private ["Ps9Equatable", "delegate"]
 - ["Ps9Equatable", "detailTextView"]
-- ["Ps9Equatable", "didReceiveMemoryWarning"]
 - ["Ps9Equatable", "doneAddingIdea"]
 - !private ["Ps9Equatable", "editable"]
 - !private ["Ps9Equatable", "enabled"]
+- !private ["Ps9Equatable", "generalPasteboard"]
 - !private ["Ps9Equatable", "hidden"]
 - ["Ps9Equatable", "indexPathForPreferredFocusedViewInTableView"]
 - ["Ps9Equatable", "init"]
@@ -602,6 +617,7 @@ depends-member:
 - ["Ps9Equatable", "petitionTextField"]
 - !private ["Ps9Equatable", "petitionURLArray"]
 - !private ["Ps9Equatable", "popViewControllerAnimated"]
+- !private ["Ps9Equatable", "print"]
 - ["Ps9Equatable", "problem"]
 - !private ["Ps9Equatable", "pushViewController"]
 - !private ["Ps9Equatable", "resignFirstResponder"]
@@ -629,6 +645,7 @@ depends-member:
 - !private ["Ps9Equatable", "solutionVoteArray"]
 - !private ["Ps9Equatable", "status"]
 - !private ["Ps9Equatable", "storyboard"]
+- !private ["Ps9Equatable", "string"]
 - ["Ps9Equatable", "tableView"]
 - !private ["Ps9Equatable", "text"]
 - !private ["Ps9Equatable", "textColor"]
@@ -667,6 +684,7 @@ depends-member:
 - !private ["Ps8Hashable", "SaveNewSolution"]
 - !private ["Ps8Hashable", "TempSave"]
 - !private ["Ps8Hashable", "UIColor"]
+- !private ["Ps8Hashable", "UIPasteboard"]
 - !private ["Ps8Hashable", "UITextBorderStyle"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - ["Ps8Hashable", "addDetailButton"]
@@ -685,10 +703,10 @@ depends-member:
 - !private ["Ps8Hashable", "currentPetitionValue"]
 - !private ["Ps8Hashable", "delegate"]
 - ["Ps8Hashable", "detailTextView"]
-- ["Ps8Hashable", "didReceiveMemoryWarning"]
 - ["Ps8Hashable", "doneAddingIdea"]
 - !private ["Ps8Hashable", "editable"]
 - !private ["Ps8Hashable", "enabled"]
+- !private ["Ps8Hashable", "generalPasteboard"]
 - !private ["Ps8Hashable", "hidden"]
 - ["Ps8Hashable", "indexPathForPreferredFocusedViewInTableView"]
 - ["Ps8Hashable", "init"]
@@ -704,6 +722,7 @@ depends-member:
 - ["Ps8Hashable", "petitionTextField"]
 - !private ["Ps8Hashable", "petitionURLArray"]
 - !private ["Ps8Hashable", "popViewControllerAnimated"]
+- !private ["Ps8Hashable", "print"]
 - ["Ps8Hashable", "problem"]
 - !private ["Ps8Hashable", "pushViewController"]
 - !private ["Ps8Hashable", "resignFirstResponder"]
@@ -731,6 +750,7 @@ depends-member:
 - !private ["Ps8Hashable", "solutionVoteArray"]
 - !private ["Ps8Hashable", "status"]
 - !private ["Ps8Hashable", "storyboard"]
+- !private ["Ps8Hashable", "string"]
 - ["Ps8Hashable", "tableView"]
 - !private ["Ps8Hashable", "text"]
 - !private ["Ps8Hashable", "textColor"]
@@ -797,6 +817,7 @@ depends-member:
 - !private ["PSo8NSCoding", "SaveNewSolution"]
 - !private ["PSo8NSCoding", "TempSave"]
 - !private ["PSo8NSCoding", "UIColor"]
+- !private ["PSo8NSCoding", "UIPasteboard"]
 - !private ["PSo8NSCoding", "UITextBorderStyle"]
 - ["PSo8NSCoding", "addDetailButton"]
 - ["PSo8NSCoding", "addDetailClick"]
@@ -813,7 +834,6 @@ depends-member:
 - ["PSo8NSCoding", "currentNameData"]
 - !private ["PSo8NSCoding", "delegate"]
 - ["PSo8NSCoding", "detailTextView"]
-- ["PSo8NSCoding", "didReceiveMemoryWarning"]
 - ["PSo8NSCoding", "doneAddingIdea"]
 - !private ["PSo8NSCoding", "editable"]
 - !private ["PSo8NSCoding", "enabled"]
@@ -827,6 +847,7 @@ depends-member:
 - ["PSo8NSCoding", "petitionButton"]
 - ["PSo8NSCoding", "petitionTextField"]
 - !private ["PSo8NSCoding", "popViewControllerAnimated"]
+- !private ["PSo8NSCoding", "print"]
 - ["PSo8NSCoding", "problem"]
 - !private ["PSo8NSCoding", "pushViewController"]
 - !private ["PSo8NSCoding", "resignFirstResponder"]
@@ -881,6 +902,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "SaveNewSolution"]
 - !private ["PSo26NSExtensionRequestHandling", "TempSave"]
 - !private ["PSo26NSExtensionRequestHandling", "UIColor"]
+- !private ["PSo26NSExtensionRequestHandling", "UIPasteboard"]
 - !private ["PSo26NSExtensionRequestHandling", "UITextBorderStyle"]
 - ["PSo26NSExtensionRequestHandling", "addDetailButton"]
 - ["PSo26NSExtensionRequestHandling", "addDetailClick"]
@@ -891,7 +913,6 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "currentDetailData"]
 - ["PSo26NSExtensionRequestHandling", "currentNameData"]
 - ["PSo26NSExtensionRequestHandling", "detailTextView"]
-- ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
 - ["PSo26NSExtensionRequestHandling", "doneAddingIdea"]
 - ["PSo26NSExtensionRequestHandling", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSo26NSExtensionRequestHandling", "init"]
@@ -900,6 +921,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "petitionButton"]
 - ["PSo26NSExtensionRequestHandling", "petitionTextField"]
 - !private ["PSo26NSExtensionRequestHandling", "popViewControllerAnimated"]
+- !private ["PSo26NSExtensionRequestHandling", "print"]
 - ["PSo26NSExtensionRequestHandling", "problem"]
 - !private ["PSo26NSExtensionRequestHandling", "pushViewController"]
 - ["PSo26NSExtensionRequestHandling", "scrollViewDidEndDecelerating"]
@@ -950,6 +972,7 @@ depends-member:
 - !private ["CSo8NSObject", "TempSave"]
 - ["CSo8NSObject", "UIButton"]
 - !private ["CSo8NSObject", "UIColor"]
+- !private ["CSo8NSObject", "UIPasteboard"]
 - !private ["CSo8NSObject", "UITextBorderStyle"]
 - ["CSo8NSObject", "UITextField"]
 - ["CSo8NSObject", "UITextView"]
@@ -970,10 +993,10 @@ depends-member:
 - !private ["CSo8NSObject", "currentPetitionValue"]
 - !private ["CSo8NSObject", "delegate"]
 - ["CSo8NSObject", "detailTextView"]
-- ["CSo8NSObject", "didReceiveMemoryWarning"]
 - ["CSo8NSObject", "doneAddingIdea"]
 - !private ["CSo8NSObject", "editable"]
 - !private ["CSo8NSObject", "enabled"]
+- !private ["CSo8NSObject", "generalPasteboard"]
 - !private ["CSo8NSObject", "hidden"]
 - ["CSo8NSObject", "indexPathForPreferredFocusedViewInTableView"]
 - ["CSo8NSObject", "init"]
@@ -989,6 +1012,7 @@ depends-member:
 - ["CSo8NSObject", "petitionTextField"]
 - !private ["CSo8NSObject", "petitionURLArray"]
 - !private ["CSo8NSObject", "popViewControllerAnimated"]
+- !private ["CSo8NSObject", "print"]
 - ["CSo8NSObject", "problem"]
 - !private ["CSo8NSObject", "pushViewController"]
 - !private ["CSo8NSObject", "resignFirstResponder"]
@@ -1016,6 +1040,7 @@ depends-member:
 - !private ["CSo8NSObject", "solutionVoteArray"]
 - !private ["CSo8NSObject", "status"]
 - !private ["CSo8NSObject", "storyboard"]
+- !private ["CSo8NSObject", "string"]
 - ["CSo8NSObject", "tableView"]
 - !private ["CSo8NSObject", "text"]
 - !private ["CSo8NSObject", "textColor"]
@@ -1046,6 +1071,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "SaveNewSolution"]
 - !private ["PSo16NSObjectProtocol", "TempSave"]
 - !private ["PSo16NSObjectProtocol", "UIColor"]
+- !private ["PSo16NSObjectProtocol", "UIPasteboard"]
 - !private ["PSo16NSObjectProtocol", "UITextBorderStyle"]
 - ["PSo16NSObjectProtocol", "addDetailButton"]
 - ["PSo16NSObjectProtocol", "addDetailClick"]
@@ -1063,10 +1089,10 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "currentPetitionValue"]
 - !private ["PSo16NSObjectProtocol", "delegate"]
 - ["PSo16NSObjectProtocol", "detailTextView"]
-- ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
 - ["PSo16NSObjectProtocol", "doneAddingIdea"]
 - !private ["PSo16NSObjectProtocol", "editable"]
 - !private ["PSo16NSObjectProtocol", "enabled"]
+- !private ["PSo16NSObjectProtocol", "generalPasteboard"]
 - !private ["PSo16NSObjectProtocol", "hidden"]
 - ["PSo16NSObjectProtocol", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSo16NSObjectProtocol", "init"]
@@ -1082,6 +1108,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "petitionTextField"]
 - !private ["PSo16NSObjectProtocol", "petitionURLArray"]
 - !private ["PSo16NSObjectProtocol", "popViewControllerAnimated"]
+- !private ["PSo16NSObjectProtocol", "print"]
 - ["PSo16NSObjectProtocol", "problem"]
 - !private ["PSo16NSObjectProtocol", "pushViewController"]
 - !private ["PSo16NSObjectProtocol", "resignFirstResponder"]
@@ -1109,6 +1136,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "solutionVoteArray"]
 - !private ["PSo16NSObjectProtocol", "status"]
 - !private ["PSo16NSObjectProtocol", "storyboard"]
+- !private ["PSo16NSObjectProtocol", "string"]
 - ["PSo16NSObjectProtocol", "tableView"]
 - !private ["PSo16NSObjectProtocol", "text"]
 - !private ["PSo16NSObjectProtocol", "textColor"]
@@ -1197,6 +1225,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "SaveNewSolution"]
 - !private ["PSo21UIAppearanceContainer", "TempSave"]
 - !private ["PSo21UIAppearanceContainer", "UIColor"]
+- !private ["PSo21UIAppearanceContainer", "UIPasteboard"]
 - !private ["PSo21UIAppearanceContainer", "UITextBorderStyle"]
 - ["PSo21UIAppearanceContainer", "addDetailButton"]
 - ["PSo21UIAppearanceContainer", "addDetailClick"]
@@ -1210,7 +1239,6 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "currentNameData"]
 - !private ["PSo21UIAppearanceContainer", "delegate"]
 - ["PSo21UIAppearanceContainer", "detailTextView"]
-- ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
 - ["PSo21UIAppearanceContainer", "doneAddingIdea"]
 - !private ["PSo21UIAppearanceContainer", "editable"]
 - !private ["PSo21UIAppearanceContainer", "enabled"]
@@ -1223,6 +1251,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "petitionButton"]
 - ["PSo21UIAppearanceContainer", "petitionTextField"]
 - !private ["PSo21UIAppearanceContainer", "popViewControllerAnimated"]
+- !private ["PSo21UIAppearanceContainer", "print"]
 - ["PSo21UIAppearanceContainer", "problem"]
 - !private ["PSo21UIAppearanceContainer", "pushViewController"]
 - !private ["PSo21UIAppearanceContainer", "resignFirstResponder"]
@@ -1276,6 +1305,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "SaveNewSolution"]
 - !private ["PSo18UIContentContainer", "TempSave"]
 - !private ["PSo18UIContentContainer", "UIColor"]
+- !private ["PSo18UIContentContainer", "UIPasteboard"]
 - !private ["PSo18UIContentContainer", "UITextBorderStyle"]
 - ["PSo18UIContentContainer", "addDetailButton"]
 - ["PSo18UIContentContainer", "addDetailClick"]
@@ -1286,7 +1316,6 @@ depends-member:
 - ["PSo18UIContentContainer", "currentDetailData"]
 - ["PSo18UIContentContainer", "currentNameData"]
 - ["PSo18UIContentContainer", "detailTextView"]
-- ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
 - ["PSo18UIContentContainer", "doneAddingIdea"]
 - ["PSo18UIContentContainer", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSo18UIContentContainer", "init"]
@@ -1295,6 +1324,7 @@ depends-member:
 - ["PSo18UIContentContainer", "petitionButton"]
 - ["PSo18UIContentContainer", "petitionTextField"]
 - !private ["PSo18UIContentContainer", "popViewControllerAnimated"]
+- !private ["PSo18UIContentContainer", "print"]
 - ["PSo18UIContentContainer", "problem"]
 - !private ["PSo18UIContentContainer", "pushViewController"]
 - ["PSo18UIContentContainer", "scrollViewDidEndDecelerating"]
@@ -1368,6 +1398,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "SaveNewSolution"]
 - !private ["PSo18UIFocusEnvironment", "TempSave"]
 - !private ["PSo18UIFocusEnvironment", "UIColor"]
+- !private ["PSo18UIFocusEnvironment", "UIPasteboard"]
 - !private ["PSo18UIFocusEnvironment", "UITextBorderStyle"]
 - ["PSo18UIFocusEnvironment", "addDetailButton"]
 - ["PSo18UIFocusEnvironment", "addDetailClick"]
@@ -1381,7 +1412,6 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "currentNameData"]
 - !private ["PSo18UIFocusEnvironment", "delegate"]
 - ["PSo18UIFocusEnvironment", "detailTextView"]
-- ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
 - ["PSo18UIFocusEnvironment", "doneAddingIdea"]
 - !private ["PSo18UIFocusEnvironment", "editable"]
 - !private ["PSo18UIFocusEnvironment", "enabled"]
@@ -1394,6 +1424,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "petitionButton"]
 - ["PSo18UIFocusEnvironment", "petitionTextField"]
 - !private ["PSo18UIFocusEnvironment", "popViewControllerAnimated"]
+- !private ["PSo18UIFocusEnvironment", "print"]
 - ["PSo18UIFocusEnvironment", "problem"]
 - !private ["PSo18UIFocusEnvironment", "pushViewController"]
 - !private ["PSo18UIFocusEnvironment", "resignFirstResponder"]
@@ -1448,6 +1479,8 @@ depends-member:
 - !private ["CSo22UINavigationController", "popViewControllerAnimated"]
 - !private ["CSo22UINavigationController", "pushViewController"]
 - !private ["CSo22UINavigationController", "title"]
+- !private ["CSo12UIPasteboard", "generalPasteboard"]
+- !private ["CSo12UIPasteboard", "string"]
 - ["CSo11UIResponder", "AnyObject"]
 - ["CSo11UIResponder", "Bool"]
 - !private ["CSo11UIResponder", "CGSizeMake"]
@@ -1458,6 +1491,7 @@ depends-member:
 - !private ["CSo11UIResponder", "TempSave"]
 - ["CSo11UIResponder", "UIButton"]
 - !private ["CSo11UIResponder", "UIColor"]
+- !private ["CSo11UIResponder", "UIPasteboard"]
 - !private ["CSo11UIResponder", "UITextBorderStyle"]
 - ["CSo11UIResponder", "UITextField"]
 - ["CSo11UIResponder", "UITextView"]
@@ -1474,7 +1508,6 @@ depends-member:
 - ["CSo11UIResponder", "currentNameData"]
 - !private ["CSo11UIResponder", "delegate"]
 - ["CSo11UIResponder", "detailTextView"]
-- ["CSo11UIResponder", "didReceiveMemoryWarning"]
 - ["CSo11UIResponder", "doneAddingIdea"]
 - !private ["CSo11UIResponder", "editable"]
 - !private ["CSo11UIResponder", "enabled"]
@@ -1487,6 +1520,7 @@ depends-member:
 - ["CSo11UIResponder", "petitionButton"]
 - ["CSo11UIResponder", "petitionTextField"]
 - !private ["CSo11UIResponder", "popViewControllerAnimated"]
+- !private ["CSo11UIResponder", "print"]
 - ["CSo11UIResponder", "problem"]
 - !private ["CSo11UIResponder", "pushViewController"]
 - !private ["CSo11UIResponder", "resignFirstResponder"]
@@ -1540,6 +1574,7 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "SaveNewSolution"]
 - !private ["PSo20UIScrollViewDelegate", "TempSave"]
 - !private ["PSo20UIScrollViewDelegate", "UIColor"]
+- !private ["PSo20UIScrollViewDelegate", "UIPasteboard"]
 - !private ["PSo20UIScrollViewDelegate", "UITextBorderStyle"]
 - !private ["PSo20UIScrollViewDelegate", "addDetailButton"]
 - !private ["PSo20UIScrollViewDelegate", "addNameButton"]
@@ -1551,6 +1586,7 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "nameTextField"]
 - !private ["PSo20UIScrollViewDelegate", "navigationController"]
 - !private ["PSo20UIScrollViewDelegate", "petitionTextField"]
+- !private ["PSo20UIScrollViewDelegate", "print"]
 - !private ["PSo20UIScrollViewDelegate", "problem"]
 - ["PSo20UIScrollViewDelegate", "scrollViewDidEndDecelerating"]
 - ["PSo20UIScrollViewDelegate", "scrollViewDidEndDragging"]
@@ -1588,6 +1624,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "SaveNewSolution"]
 - !private ["PSo16UIStateRestoring", "TempSave"]
 - !private ["PSo16UIStateRestoring", "UIColor"]
+- !private ["PSo16UIStateRestoring", "UIPasteboard"]
 - !private ["PSo16UIStateRestoring", "UITextBorderStyle"]
 - ["PSo16UIStateRestoring", "addDetailButton"]
 - ["PSo16UIStateRestoring", "addDetailClick"]
@@ -1598,7 +1635,6 @@ depends-member:
 - ["PSo16UIStateRestoring", "currentDetailData"]
 - ["PSo16UIStateRestoring", "currentNameData"]
 - ["PSo16UIStateRestoring", "detailTextView"]
-- ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
 - ["PSo16UIStateRestoring", "doneAddingIdea"]
 - ["PSo16UIStateRestoring", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSo16UIStateRestoring", "init"]
@@ -1607,6 +1643,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "petitionButton"]
 - ["PSo16UIStateRestoring", "petitionTextField"]
 - !private ["PSo16UIStateRestoring", "popViewControllerAnimated"]
+- !private ["PSo16UIStateRestoring", "print"]
 - ["PSo16UIStateRestoring", "problem"]
 - !private ["PSo16UIStateRestoring", "pushViewController"]
 - ["PSo16UIStateRestoring", "scrollViewDidEndDecelerating"]
@@ -1651,6 +1688,7 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "SaveNewSolution"]
 - !private ["PSo19UITableViewDelegate", "TempSave"]
 - !private ["PSo19UITableViewDelegate", "UIColor"]
+- !private ["PSo19UITableViewDelegate", "UIPasteboard"]
 - !private ["PSo19UITableViewDelegate", "UITextBorderStyle"]
 - !private ["PSo19UITableViewDelegate", "addDetailButton"]
 - !private ["PSo19UITableViewDelegate", "addNameButton"]
@@ -1662,6 +1700,7 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "nameTextField"]
 - !private ["PSo19UITableViewDelegate", "navigationController"]
 - !private ["PSo19UITableViewDelegate", "petitionTextField"]
+- !private ["PSo19UITableViewDelegate", "print"]
 - !private ["PSo19UITableViewDelegate", "problem"]
 - ["PSo19UITableViewDelegate", "scrollViewDidEndDecelerating"]
 - ["PSo19UITableViewDelegate", "scrollViewDidEndDragging"]
@@ -1706,6 +1745,7 @@ depends-member:
 - !private ["PSo19UITextFieldDelegate", "SaveNewSolution"]
 - !private ["PSo19UITextFieldDelegate", "TempSave"]
 - !private ["PSo19UITextFieldDelegate", "UIColor"]
+- !private ["PSo19UITextFieldDelegate", "UIPasteboard"]
 - !private ["PSo19UITextFieldDelegate", "UITextBorderStyle"]
 - !private ["PSo19UITextFieldDelegate", "addDetailButton"]
 - !private ["PSo19UITextFieldDelegate", "addNameButton"]
@@ -1717,6 +1757,7 @@ depends-member:
 - !private ["PSo19UITextFieldDelegate", "nameTextField"]
 - !private ["PSo19UITextFieldDelegate", "navigationController"]
 - !private ["PSo19UITextFieldDelegate", "petitionTextField"]
+- !private ["PSo19UITextFieldDelegate", "print"]
 - !private ["PSo19UITextFieldDelegate", "problem"]
 - ["PSo19UITextFieldDelegate", "scrollViewDidEndDecelerating"]
 - ["PSo19UITextFieldDelegate", "scrollViewDidEndDragging"]
@@ -1779,6 +1820,7 @@ depends-member:
 - !private ["PSo18UITextViewDelegate", "SaveNewSolution"]
 - !private ["PSo18UITextViewDelegate", "TempSave"]
 - !private ["PSo18UITextViewDelegate", "UIColor"]
+- !private ["PSo18UITextViewDelegate", "UIPasteboard"]
 - !private ["PSo18UITextViewDelegate", "UITextBorderStyle"]
 - !private ["PSo18UITextViewDelegate", "addDetailButton"]
 - !private ["PSo18UITextViewDelegate", "addNameButton"]
@@ -1790,6 +1832,7 @@ depends-member:
 - !private ["PSo18UITextViewDelegate", "nameTextField"]
 - !private ["PSo18UITextViewDelegate", "navigationController"]
 - !private ["PSo18UITextViewDelegate", "petitionTextField"]
+- !private ["PSo18UITextViewDelegate", "print"]
 - !private ["PSo18UITextViewDelegate", "problem"]
 - ["PSo18UITextViewDelegate", "scrollViewDidEndDecelerating"]
 - ["PSo18UITextViewDelegate", "scrollViewDidEndDragging"]
@@ -1827,6 +1870,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "SaveNewSolution"]
 - !private ["PSo18UITraitEnvironment", "TempSave"]
 - !private ["PSo18UITraitEnvironment", "UIColor"]
+- !private ["PSo18UITraitEnvironment", "UIPasteboard"]
 - !private ["PSo18UITraitEnvironment", "UITextBorderStyle"]
 - ["PSo18UITraitEnvironment", "addDetailButton"]
 - ["PSo18UITraitEnvironment", "addDetailClick"]
@@ -1840,7 +1884,6 @@ depends-member:
 - ["PSo18UITraitEnvironment", "currentNameData"]
 - !private ["PSo18UITraitEnvironment", "delegate"]
 - ["PSo18UITraitEnvironment", "detailTextView"]
-- ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
 - ["PSo18UITraitEnvironment", "doneAddingIdea"]
 - !private ["PSo18UITraitEnvironment", "editable"]
 - !private ["PSo18UITraitEnvironment", "enabled"]
@@ -1853,6 +1896,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "petitionButton"]
 - ["PSo18UITraitEnvironment", "petitionTextField"]
 - !private ["PSo18UITraitEnvironment", "popViewControllerAnimated"]
+- !private ["PSo18UITraitEnvironment", "print"]
 - ["PSo18UITraitEnvironment", "problem"]
 - !private ["PSo18UITraitEnvironment", "pushViewController"]
 - !private ["PSo18UITraitEnvironment", "resignFirstResponder"]
@@ -1916,6 +1960,7 @@ depends-member:
 - !private ["CSo16UIViewController", "TempSave"]
 - ["CSo16UIViewController", "UIButton"]
 - !private ["CSo16UIViewController", "UIColor"]
+- !private ["CSo16UIViewController", "UIPasteboard"]
 - !private ["CSo16UIViewController", "UITextBorderStyle"]
 - ["CSo16UIViewController", "UITextField"]
 - ["CSo16UIViewController", "UITextView"]
@@ -1929,7 +1974,6 @@ depends-member:
 - ["CSo16UIViewController", "currentDetailData"]
 - ["CSo16UIViewController", "currentNameData"]
 - ["CSo16UIViewController", "detailTextView"]
-- ["CSo16UIViewController", "didReceiveMemoryWarning"]
 - ["CSo16UIViewController", "doneAddingIdea"]
 - ["CSo16UIViewController", "indexPathForPreferredFocusedViewInTableView"]
 - ["CSo16UIViewController", "init"]
@@ -1938,6 +1982,7 @@ depends-member:
 - ["CSo16UIViewController", "petitionButton"]
 - ["CSo16UIViewController", "petitionTextField"]
 - !private ["CSo16UIViewController", "popViewControllerAnimated"]
+- !private ["CSo16UIViewController", "print"]
 - ["CSo16UIViewController", "problem"]
 - !private ["CSo16UIViewController", "pushViewController"]
 - ["CSo16UIViewController", "scrollViewDidEndDecelerating"]
@@ -2103,6 +2148,7 @@ depends-nominal:
 - "PSo18UIFocusEnvironment"
 - !private "PSo10UIKeyInput"
 - !private "CSo22UINavigationController"
+- !private "CSo12UIPasteboard"
 - "CSo11UIResponder"
 - !private "CSo12UIScrollView"
 - "PSo20UIScrollViewDelegate"
@@ -2158,4 +2204,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "51429be65fa229fc29d5f87d6d4f7bcf"
+interface-hash: "d0cbe9fc683b7f06f215a6ab3f7fdfb9"

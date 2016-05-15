@@ -7,11 +7,17 @@
 //
 
 import UIKit
+import WebKit
 
-class WebViewController: UIViewController,UIWebViewDelegate {
+
+class WebViewController: UIViewController,WKNavigationDelegate,WKUIDelegate {
     
-    @IBOutlet weak var webView: UIWebView!
+    //@IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var petitionText: UITextField!
+    
+    @IBOutlet weak var webView: WKWebView!
+    
+    
     
     var currentURL:String!
     var urlString:String = ""
@@ -24,7 +30,8 @@ class WebViewController: UIViewController,UIWebViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        webView.delegate = self
+       webView.UIDelegate = self
+        
         linkPetitionButton = UIBarButtonItem(title: "Link Petition", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(WebViewController.linkPetitionClick))
         self.navigationItem.rightBarButtonItem = linkPetitionButton
         
@@ -33,8 +40,12 @@ class WebViewController: UIViewController,UIWebViewDelegate {
         let request = NSURLRequest(URL: url)
        
         //load request
-        webView.loadRequest(request)
+        //webView.loadRequest(request)
         
+        //setPetitionURL()
+        
+        
+        UIApplication.sharedApplication().openURL(url)
         
     }
     
@@ -42,17 +53,31 @@ class WebViewController: UIViewController,UIWebViewDelegate {
    
     override func viewWillAppear(animated: Bool) {
         
-        // hide petition button
+        // hide petition button until conditions met below
         linkPetitionButton.enabled = false
         linkPetitionButton.tintColor = UIColor.clearColor()
         
     }
     
+    func webViewDidStartLoad(webView: WKWebView) {
+        print("start loading")
+    }
+    
+    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        
+        return true
+    }
+   
     
     func webViewDidFinishLoad(webView: UIWebView) {
         
+        print("web view did finish loading")
+        
         // once webview finsihed loading get curent url
         currentURL = webView.request!.URL?.absoluteString
+        
+        //let newString = webView.stringByEvaluatingJavaScriptFromString((webView.request?.mainDocumentURL)!)
+        //let newnewString = webView.stringByEvaluatingJavaScriptFromString(webView.request!.URL?.absoluteURL)
         
         //set text to current url
         petitionText.text = currentURL
@@ -80,8 +105,13 @@ class WebViewController: UIViewController,UIWebViewDelegate {
         
     }
     
+    
+
+    
+    
     // link petition
     @IBAction func linkPetitionClick(sender: UIButton) {
+        
         
         TempSave.sharedInstance().currentPetitionValue = currentURL
         self.navigationController!.popViewControllerAnimated(true)
