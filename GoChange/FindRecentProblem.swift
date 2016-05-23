@@ -12,14 +12,14 @@ import Firebase
 
 class FindRecentProblem:NSObject{
     
-    var baseRef = Firebase(url: "https://gochange.firebaseio.com/problem/")
+    var baseRef = FIRDatabase.database().reference().child("problem/")
     var problemKey:String!
     
     
-    init(problemName:String,completionHandler:(results:AnyObject,detailResult:AnyObject)->Void){
+    init(problemName:String,completionHandler:(results:FIRDataSnapshot,detailResult:AnyObject)->Void){
         super.init()
         
-        let nameRef = baseRef.childByAppendingPath("names")
+        let nameRef = baseRef.child("names")
         
         nameRef.queryOrderedByChild("ProblemName").queryEqualToValue(problemName).observeSingleEventOfType(.Value, withBlock: { snapshot in
             
@@ -51,13 +51,13 @@ class FindRecentProblem:NSObject{
     
     func getProblemDetail(completionHandler:(detailResults:AnyObject)->Void){
         
-        let detailRef = baseRef.childByAppendingPath("details").childByAppendingPath(self.problemKey)
+        let detailRef = baseRef.child("details").child(self.problemKey)
         
         
         detailRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
             
             
-            let detailResult = snapshot.value["ProblemDetail"]!
+            let detailResult = snapshot.value!["ProblemDetail"]!
             
             if let detailResult = detailResult{
                 completionHandler(detailResults:detailResult)

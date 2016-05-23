@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>380922095131-f06fd2u67ggg3cdi3ftb89gqd15rcla6.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.380922095131-f06fd2u67ggg3cdi3ftb89gqd15rcla6</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCAiJRLV8AEY2FFAiRtc_PR1L5chV5J4a0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>380922095131</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.Nick-short.GoChange</string>
+	<key>PROJECT_ID</key>
+	<string>project-3190428795622237658</string>
+	<key>STORAGE_BUCKET</key>
+	<string>project-3190428795622237658.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:380922095131:ios:b2639d12ba4ceaef</string>
+	<key>DATABASE_URL</key>
+	<string>https://gochange.firebaseio.com</string>
+</dict>
+</plist>

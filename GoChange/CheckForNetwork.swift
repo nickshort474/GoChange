@@ -11,12 +11,16 @@ import Firebase
 
 class CheckForNetwork:NSObject{
     
-    var connectedRef = Firebase(url:"https://gochange.firebaseio.com/.info/connected")
+    //var connectedRef = Firebase(url:"https://gochange.firebaseio.com/.info/connected")
+    
     
     
     init(completionHandler:(result:String)->Void){
     
     super.init()
+        
+        let connectedRef = FIRDatabase.database().reference().child("/.info/connected")
+        
         connectedRef.observeEventType(.Value, withBlock: { snapshot in
             
             let connected = snapshot.value as? Bool

@@ -10,6 +10,7 @@ import Foundation
 import CoreData
 import Firebase
 
+
 class SaveNewProblem:NSObject{
     
     
@@ -40,9 +41,10 @@ class SaveNewProblem:NSObject{
     
     func saveProblemToFirebase(){
         
-        let namesRef = Firebase(url:"https://gochange.firebaseio.com/problem/names")
-        
+        //let namesRef = Firebase(url:"https://gochange.firebaseio.com/problem/names")
+        let namesRef = FIRDatabase.database().reference().child("problem/names")
         //create location with unique ID in firebase database
+        
         let problemNameLocation = namesRef.childByAutoId()
         
         problemID = problemNameLocation.key
@@ -63,10 +65,10 @@ class SaveNewProblem:NSObject{
     func saveDetailsToFirebase(){
         
         // create reference to details section of firebase
-        let problemDetailLocation = Firebase(url:"https://gochange.firebaseio.com/problem/details")
-        
+        //let problemDetailLocation = Firebase(url:"https://gochange.firebaseio.com/problem/details")
+        let problemDetailLocation = FIRDatabase.database().reference().child("problem/details")
         // append unique ID to path
-        let uniqueDetailLocation = problemDetailLocation.childByAppendingPath(problemID!)
+        let uniqueDetailLocation = problemDetailLocation.child(problemID!)
         
         //set up details values to be saved
         let problemDetailValues = ["ProblemDetail":TempSave.sharedInstance().problemDetail]
@@ -80,14 +82,18 @@ class SaveNewProblem:NSObject{
         
         
         // create ref to solution count location
-        let solutionCountLocation = Firebase(url:"https://gochange.firebaseio.com/problem/solutionCount")
-        let uniqueSolutionCountLocation = solutionCountLocation.childByAppendingPath(problemID!)
+        //let solutionCountLocation = Firebase(url:"https://gochange.firebaseio.com/problem/solutionCount")
+        let solutionCountLocation = FIRDatabase.database().reference().child("problem/solutionCount")
+        
+        let uniqueSolutionCountLocation = solutionCountLocation.child(problemID!)
         uniqueSolutionCountLocation.setValue(["SolutionCount":TempSave.sharedInstance().solutionNameArray.count])
         
         
         //create reference to solutions location in firebase
-        let problemSolutionsLocation = Firebase(url:"https://gochange.firebaseio.com/problem/solutions")
-        let uniqueSolutionLocation = problemSolutionsLocation.childByAppendingPath(problemID!)
+        //let problemSolutionsLocation = Firebase(url:"https://gochange.firebaseio.com/problem/solutions")
+        let problemSolutionsLocation = FIRDatabase.database().reference().child("problem/solutions")
+        
+        let uniqueSolutionLocation = problemSolutionsLocation.child(problemID!)
         
         let solutionOwner = NSUserDefaults.standardUserDefaults().valueForKey("username") as? String
         
@@ -95,7 +101,7 @@ class SaveNewProblem:NSObject{
         for i in 0 ..< (TempSave.sharedInstance().solutionNameArray.count){
             
             //create unqiue location with ID within solutions section
-            let uniqueSolutionReference = uniqueSolutionLocation!.childByAutoId()
+            let uniqueSolutionReference = uniqueSolutionLocation.childByAutoId()
             
             //save unique locationID into IDArray so can be saved in coreData
             self.solutionIDArray.addObject(uniqueSolutionReference.key)

@@ -67,6 +67,7 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
             self.checkIfInCoreData()
             
          })
+    
     }
     
     override func viewWillAppear(animated: Bool) {

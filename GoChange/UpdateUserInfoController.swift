@@ -10,9 +10,14 @@ import Foundation
 import UIKit
 import Firebase
 
+
+
 class UpdateUserInfoController:UIViewController{
     
-    var ref = Firebase(url:"https://gochange.firebaseio.com")
+    //var ref = Firebase(url:"https://gochange.firebaseio.com")
+    var ref = FIRDatabase.database().reference()
+    
+    
     var currentlyUpdating:String = ""
     
     

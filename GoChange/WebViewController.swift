@@ -10,116 +10,124 @@ import UIKit
 import WebKit
 
 
-class WebViewController: UIViewController,WKNavigationDelegate,WKUIDelegate {
+class WebViewController: UIViewController{
     
-    //@IBOutlet weak var webView: UIWebView!
+    
+    @IBOutlet weak var changeOrg: UIButton!
+    @IBOutlet weak var linkPetition: UIButton!
     @IBOutlet weak var petitionText: UITextField!
     
-    @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var petitionView: UIView!
+    @IBOutlet weak var petitionActivity: UIActivityIndicatorView!
     
     
-    
-    var currentURL:String!
-    var urlString:String = ""
-    var status:String!
-    var linkPetitionButton:UIBarButtonItem!
-    
+    var urlString:String!
+    var timer:NSTimer!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-       webView.UIDelegate = self
+        UIPasteboard.generalPasteboard().string = " "
         
-        linkPetitionButton = UIBarButtonItem(title: "Link Petition", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(WebViewController.linkPetitionClick))
-        self.navigationItem.rightBarButtonItem = linkPetitionButton
-        
-        //setup url and request
-        let url:NSURL = NSURL(string: urlString)!
-        let request = NSURLRequest(URL: url)
-       
-        //load request
-        //webView.loadRequest(request)
-        
-        //setPetitionURL()
-        
-        
-        UIApplication.sharedApplication().openURL(url)
+        self.petitionView.alpha = 1
+        self.petitionActivity.stopAnimating()
+        self.petitionActivity.alpha = 0
+        self.linkPetition.alpha = 0
+        self.linkPetition.enabled = false
         
     }
     
-    
-   
-    override func viewWillAppear(animated: Bool) {
         
-        // hide petition button until conditions met below
-        linkPetitionButton.enabled = false
-        linkPetitionButton.tintColor = UIColor.clearColor()
+    @IBAction func changeOrgClick(sender: UIButton) {
         
-    }
-    
-    func webViewDidStartLoad(webView: WKWebView) {
-        print("start loading")
-    }
-    
-    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        //get url passed in
+        let newURL = NSURL(string: urlString)
         
-        return true
-    }
-   
-    
-    func webViewDidFinishLoad(webView: UIWebView) {
+        //open in safari / (not webView due to problem with gathering url from some pages loaded in webView)
+        UIApplication.sharedApplication().openURL(newURL!)
         
-        print("web view did finish loading")
-        
-        // once webview finsihed loading get curent url
-        currentURL = webView.request!.URL?.absoluteString
-        
-        //let newString = webView.stringByEvaluatingJavaScriptFromString((webView.request?.mainDocumentURL)!)
-        //let newnewString = webView.stringByEvaluatingJavaScriptFromString(webView.request!.URL?.absoluteURL)
-        
-        //set text to current url
-        petitionText.text = currentURL
-        
-        // test to see if current url is not homepage and not currently viewing linked petition
-        if(currentURL != GoChangeClient.Constants.basePetitionURL && self.status != "viewing"){
-            
-            //enable link petition button
-            linkPetitionButton.enabled = true
-            linkPetitionButton.tintColor = UIColor.blueColor()
-            
-            //set var to url
-            var petitionViewText = webView.request!.URL?.absoluteString
-            
-            //get range of petition text from complete change.org url
-            let range = petitionViewText?.rangeOfString("\(GoChangeClient.Constants.basePetitionURL)p/")
-           
-            //remove change.org part of url
-            petitionViewText?.removeRange(range!)
-            
-            //display whats left
-            petitionText.text = petitionViewText
-            
-        }
+        //setup timer
+        setupTimer()
         
     }
     
-    
-
-    
-    
-    // link petition
     @IBAction func linkPetitionClick(sender: UIButton) {
         
+        //get petition url from pasteboard
+        TempSave.sharedInstance().currentPetitionValue =  UIPasteboard.generalPasteboard().string!
         
-        TempSave.sharedInstance().currentPetitionValue = currentURL
-        self.navigationController!.popViewControllerAnimated(true)
+        //pop view controller
+        self.navigationController?.popViewControllerAnimated(true)
         
     }
+    
+    
+    func setupTimer(){
         
+        //set timer
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(onTimer), userInfo: nil, repeats: true)
+    }
     
-    
+    func onTimer(){
+       
+        var capturedPasteValue:String
+        
+        //get value of pasteboard string
+        if let pasteValue = UIPasteboard.generalPasteboard().string{
+            
+            capturedPasteValue = pasteValue
+            
+            if(capturedPasteValue != " "){
+            
+                self.petitionView.alpha = 0.5
+                self.petitionActivity.startAnimating()
+                self.petitionActivity.alpha = 1
+                self.changeOrg.enabled = false
+                
+                /*
+                 //set petition text to copied url
+                 let baseURL = GoChangeClient.Constants.basePetitionURL
+                 let fullURL = UIPasteboard.generalPasteboard().string!
+                 let range = fullURL.rangeOfString("\(baseURL)p/")
+                 let displayURL = fullURL.stringByReplacingCharactersInRange(range!, withString: "")
+                 */
+            
+                //get petition data from change.org
+                _ = ChangeOrgCode(petitionURL:UIPasteboard.generalPasteboard().string!){
+                    result in
+                
+                
+                    //get tilte
+                    if let resultTitle = result["title"]{
+                        if let resultTitle = resultTitle{
+                        
+                            dispatch_async(dispatch_get_main_queue(),{
+                                self.petitionText.text  = resultTitle as? String
+                                self.petitionView.alpha = 1
+                                self.petitionActivity.stopAnimating()
+                                self.petitionActivity.alpha = 0
+                                self.linkPetition.enabled = true
+                                self.linkPetition.alpha = 1
+                                self.changeOrg.enabled = true
+                                
+                                
+                            })
+                        
+                        }
+                    
+                    }
+                
+                }
+            
+                //stop timer
+                timer.invalidate()
+            
+            }
+
+        }
+                        
+    }
 }
 
 

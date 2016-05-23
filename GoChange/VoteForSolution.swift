@@ -77,13 +77,16 @@ class VoteForSolution:NSObject{
     func addVoteToFirebase(){
         
         
-        let ref = Firebase(url: "https://gochange.firebaseio.com/problem/solutions")
-        let childRef = ref.childByAppendingPath(problemID).childByAppendingPath(solutionID)
+        //let ref = Firebase(url: "https://gochange.firebaseio.com/problem/solutions")
+        let ref = FIRDatabase.database().reference()
+        ref.child("problem/solutions")
+        
+        let childRef = ref.child(problemID).child(solutionID)
         
         
         childRef.observeSingleEventOfType(.Value, withBlock:{snapshot in
             
-            self.currentVoteCount = snapshot.value["SolutionVoteCount"] as! Int
+            self.currentVoteCount = snapshot.value!["SolutionVoteCount"] as! Int
             self.currentVoteCount += 1
             childRef.updateChildValues(["SolutionVoteCount":self.currentVoteCount])
             

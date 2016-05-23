@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import Firebase
 
+
 class SignupViewController:UIViewController,UITextFieldDelegate{
     
     @IBOutlet weak var usernameTextfield: UITextField!
@@ -22,11 +23,14 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
     
     var sendingController:String = ""
     var updateField:String = ""
-    var ref = Firebase(url:"https://gochange.firebaseio.com")
+    //var ref = Firebase(url:"https://gochange.firebaseio.com")
     
+    var ref:FIRDatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ref = FIRDatabase.database().reference()
         
         usernameTextfield.delegate = self
         emailTextfield.delegate = self
@@ -81,7 +85,9 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
                     if (username != "" && email != "" && password != ""){
             
                         // create user account
-                        self.ref.createUser(email, password: password, withValueCompletionBlock: {
+                        //self.ref.createUser
+                        
+                        FIRAuth.auth()?.createUserWithEmail(email!, password: password!, completion: {
                             error, result in
                 
                             if error != nil{
@@ -91,21 +97,24 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
                             }else{
                                 
                                 //authorize user
-                                self.ref.authUser(email,password: password, withCompletionBlock: {
-                                    error, authData in
+                                //self.ref.authUser
+                                FIRAuth.auth()?.signInWithEmail(email!,password: password!, completion: {
+                                     user,error in
                         
                                     if error != nil{
                                         self.presentAlert("error authorizing user, please try again")
                                     }else{
                         
                                         //create basic user details
-                                        let user = ["provider":authData.provider!,"email":email!,"username":username!]
-                        
+                                        let provider = user?.providerID
+                                        
+                                        let userDetails = ["provider":provider!, "email":email!, "username":username!]
+                                        
                                         // create new user location in database
-                                        self.ref.childByAppendingPath("users").childByAppendingPath(authData.uid!).setValue(user)
+                                        self.ref.child("users").child(user!.uid).setValue(userDetails)
                         
                                         // save user id to NSDefaults
-                                        NSUserDefaults.standardUserDefaults().setValue(authData.uid!, forKey: "uid")
+                                        NSUserDefaults.standardUserDefaults().setValue(user!.uid, forKey: "uid")
                                         NSUserDefaults.standardUserDefaults().setValue(username, forKey: "username")
                             
                             
@@ -143,11 +152,11 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
                 let values = ["username":newUsername]
             
                 let userID = NSUserDefaults.standardUserDefaults().valueForKey("uid") as? String
-                let userRef = ref.childByAppendingPath("users/\(userID!)")
+                let userRef = ref.child("users/\(userID!)")
             
                 userRef.observeEventType(.Value, withBlock: { snapshot in
                 
-                    let usernameValue = snapshot.value.objectForKey("username") as? String
+                    let usernameValue = snapshot.value!.objectForKey("username") as? String
                     if usernameValue == oldUsername{
                         userRef.updateChildValues(values)
                     }
@@ -156,11 +165,13 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
             
             
             }else if(updateField == "password"){
-                let email = usernameTextfield.text
-                let oldPassword = emailTextfield.text
+                _ = usernameTextfield.text
+                _ = emailTextfield.text
                 let newPassword = passwordTextfield.text
             
-                ref.changePasswordForUser(email, fromOld: oldPassword, toNew: newPassword, withCompletionBlock: { error in
+                let user = FIRAuth.auth()?.currentUser
+                
+                user?.updatePassword(newPassword!, completion:{ error in
                     if error != nil{
                         
                         //code for error
@@ -173,11 +184,13 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
                 
         }else if(updateField == "email"){
             
-            let oldEmail = usernameTextfield.text
+            _ = usernameTextfield.text
             let newEmail = emailTextfield.text
-            let password = passwordTextfield.text
+            _ = passwordTextfield.text
             
-            ref.changeEmailForUser(oldEmail, password: password, toNewEmail: newEmail, withCompletionBlock: {
+            let user = FIRAuth.auth()?.currentUser
+                
+            user?.updateEmail(newEmail!, completion: {
                 error in
                 if error != nil{
                     //TODO: process error

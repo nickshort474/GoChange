@@ -12,7 +12,8 @@ import Firebase
 
 class RetrieveSolutionCountFirebase:NSObject{
     
-    var nameRef = Firebase(url: "https://gochange.firebaseio.com/problem/solutionCount")
+    //var nameRef = Firebase(url: "https://gochange.firebaseio.com/problem/solutionCount")
+    var nameRef = FIRDatabase.database().reference().child("problem/solutionCount")
     var resultsArray:[Int] = []
     
     init(problemArray:[String],completionHandler:(results:[Int])->Void){
@@ -20,8 +21,8 @@ class RetrieveSolutionCountFirebase:NSObject{
         
         for i in 0 ..< problemArray.count{
             
-            let solutionRef = nameRef.childByAppendingPath(problemArray[i])
-            let countRef = solutionRef.childByAppendingPath("SolutionCount")
+            let solutionRef = nameRef.child(problemArray[i])
+            let countRef = solutionRef.child("SolutionCount")
             
             countRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
             
@@ -41,12 +42,6 @@ class RetrieveSolutionCountFirebase:NSObject{
             })
             
         }
-        
-        
-        
-        
-        
-        
         
         
     }

@@ -142,14 +142,14 @@ class ViewIdeaViewController:UIViewController{
     }
     
     
-    //seque to web view controller to change.org homepage
+    //segue to web view controller to change.org homepage
     @IBAction func petitionButton(sender: UIButton) {
         
         var controller:WebViewController
         controller = storyboard?.instantiateViewControllerWithIdentifier("WebViewController") as! WebViewController
         
         controller.urlString = petitionURL
-        controller.status = "viewing"
+        //controller.status = "viewing"
         self.navigationController?.pushViewController(controller, animated: true)
         
     }

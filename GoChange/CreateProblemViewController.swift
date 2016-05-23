@@ -301,6 +301,7 @@ class CreateProblemViewController: UIViewController,UITextViewDelegate,UITextFie
                     self.presentAlert("Cannot post problem, please check your network and try again")
                 }
             }
+ 
         }
     }
     

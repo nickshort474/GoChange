@@ -160,11 +160,9 @@ SWIFT_CLASS("_TtC8GoChange13ChangeOrgCode")
 - (void)gatherPetitionData:(NSInteger)result completionHandler:(void (^ _Nonnull)(id _Nonnull))completionHandler;
 @end
 
-@class Firebase;
 
 SWIFT_CLASS("_TtC8GoChange15CheckForNetwork")
 @interface CheckForNetwork : NSObject
-@property (nonatomic, strong) Firebase * _Null_unspecified connectedRef;
 - (nonnull instancetype)initWithCompletionHandler:(void (^ _Nonnull)(NSString * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -232,12 +230,14 @@ SWIFT_CLASS("_TtC8GoChange25DeleteProblemFromCoreData")
 @property (nonatomic, strong) NSManagedObjectContext * _Nonnull sharedContext;
 @end
 
+@class FIRDatabaseReference;
+@class FIRDataSnapshot;
 
 SWIFT_CLASS("_TtC8GoChange17FindRecentProblem")
 @interface FindRecentProblem : NSObject
-@property (nonatomic, strong) Firebase * _Null_unspecified baseRef;
+@property (nonatomic, strong) FIRDatabaseReference * _Nonnull baseRef;
 @property (nonatomic, copy) NSString * _Null_unspecified problemKey;
-- (nonnull instancetype)initWithProblemName:(NSString * _Nonnull)problemName completionHandler:(void (^ _Nonnull)(id _Nonnull, id _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithProblemName:(NSString * _Nonnull)problemName completionHandler:(void (^ _Nonnull)(FIRDataSnapshot * _Nonnull, id _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
 - (void)getProblemDetail:(void (^ _Nonnull)(id _Nonnull))completionHandler;
 @end
 
@@ -261,12 +261,10 @@ SWIFT_CLASS("_TtC8GoChange23FollowingViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class FDataSnapshot;
 
 SWIFT_CLASS("_TtC8GoChange16GetRecentlyAdded")
 @interface GetRecentlyAdded : NSObject
-@property (nonatomic, strong) Firebase * _Null_unspecified ref;
-- (nonnull instancetype)initWithCompletionHandler:(void (^ _Nonnull)(FDataSnapshot * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithCompletionHandler:(void (^ _Nonnull)(id _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -296,7 +294,6 @@ SWIFT_CLASS("_TtC8GoChange18HomeViewController")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified followButton;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified followingLabel;
 @property (nonatomic, weak) IBOutlet UIActivityIndicatorView * _Null_unspecified startActivityIndicator;
-@property (nonatomic, strong) Firebase * _Null_unspecified ref;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 @property (nonatomic, strong) NSManagedObjectContext * _Nonnull sharedContext;
@@ -343,14 +340,12 @@ SWIFT_CLASS("_TtC8GoChange21ResultsViewController")
 
 SWIFT_CLASS("_TtC8GoChange28RetrieveAllNamesFromFirebase")
 @interface RetrieveAllNamesFromFirebase : NSObject
-@property (nonatomic, strong) Firebase * _Null_unspecified nameRef;
 - (nonnull instancetype)initWithCompletionHandler:(void (^ _Nonnull)(id _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 SWIFT_CLASS("_TtC8GoChange27RetrieveDetailsFromFirebase")
 @interface RetrieveDetailsFromFirebase : NSObject
-@property (nonatomic, strong) Firebase * _Null_unspecified ref;
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull results;
 - (nonnull instancetype)initWithUserRefArray:(NSArray<NSString *> * _Nonnull)userRefArray completionHandler:(void (^ _Nonnull)(NSArray<NSString *> * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -358,7 +353,6 @@ SWIFT_CLASS("_TtC8GoChange27RetrieveDetailsFromFirebase")
 
 SWIFT_CLASS("_TtC8GoChange25RetrieveNamesFromFirebase")
 @interface RetrieveNamesFromFirebase : NSObject
-@property (nonatomic, strong) Firebase * _Null_unspecified nameRef;
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull nameResults;
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull ownerResults;
 - (nonnull instancetype)initWithProblemArray:(NSArray<NSString *> * _Nonnull)problemArray completionHandler:(void (^ _Nonnull)(NSArray<NSString *> * _Nonnull, NSArray<NSString *> * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
@@ -374,7 +368,7 @@ SWIFT_CLASS("_TtC8GoChange15RetrieveProblem")
 
 SWIFT_CLASS("_TtC8GoChange29RetrieveSolutionCountFirebase")
 @interface RetrieveSolutionCountFirebase : NSObject
-@property (nonatomic, strong) Firebase * _Null_unspecified nameRef;
+@property (nonatomic, strong) FIRDatabaseReference * _Nonnull nameRef;
 @property (nonatomic, copy) NSArray<NSNumber *> * _Nonnull resultsArray;
 - (nonnull instancetype)initWithProblemArray:(NSArray<NSString *> * _Nonnull)problemArray completionHandler:(void (^ _Nonnull)(NSArray<NSNumber *> * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -389,13 +383,13 @@ SWIFT_CLASS("_TtC8GoChange17RetrieveSolutions")
 
 SWIFT_CLASS("_TtC8GoChange29RetrieveSolutionsFromFirebase")
 @interface RetrieveSolutionsFromFirebase : NSObject
-@property (nonatomic, strong) Firebase * _Null_unspecified ref;
-@property (nonatomic, strong) Firebase * _Null_unspecified problemRef;
+@property (nonatomic, strong) FIRDatabaseReference * _Null_unspecified ref;
+@property (nonatomic, strong) FIRDatabaseReference * _Null_unspecified problemRef;
 @property (nonatomic, strong) Problem * _Null_unspecified problem;
 @property (nonatomic, copy) NSString * _Null_unspecified problemID;
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull localSolutionIDArray;
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull nonMatches;
-- (nonnull instancetype)initWithProblemID:(NSString * _Nonnull)problemID problem:(Problem * _Nullable)problem caller:(NSString * _Nonnull)caller completionHandler:(void (^ _Nonnull)(FDataSnapshot * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithProblemID:(NSString * _Nonnull)problemID problem:(Problem * _Nullable)problem caller:(NSString * _Nonnull)caller completionHandler:(void (^ _Nonnull)(FIRDataSnapshot * _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
 - (void)createLocalArray;
 - (void)compareArraysForMatches;
 - (void)retrieveMatchedSolutionsFromFirebase;
@@ -505,7 +499,7 @@ SWIFT_CLASS("_TtC8GoChange20SignupViewController")
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified label3;
 @property (nonatomic, copy) NSString * _Nonnull sendingController;
 @property (nonatomic, copy) NSString * _Nonnull updateField;
-@property (nonatomic, strong) Firebase * _Null_unspecified ref;
+@property (nonatomic, strong) FIRDatabaseReference * _Null_unspecified ref;
 - (void)viewDidLoad;
 - (IBAction)signupButton:(UIButton * _Nonnull)sender;
 - (void)updateChildValues;
@@ -570,7 +564,7 @@ SWIFT_CLASS("_TtC8GoChange23UpdateCoreDataSolutions")
 
 SWIFT_CLASS("_TtC8GoChange24UpdateUserInfoController")
 @interface UpdateUserInfoController : UIViewController
-@property (nonatomic, strong) Firebase * _Null_unspecified ref;
+@property (nonatomic, strong) FIRDatabaseReference * _Nonnull ref;
 @property (nonatomic, copy) NSString * _Nonnull currentlyUpdating;
 - (IBAction)updatePassword:(UIButton * _Nonnull)sender;
 - (IBAction)updateUsername:(UIButton * _Nonnull)sender;
@@ -663,24 +657,23 @@ SWIFT_CLASS("_TtC8GoChange15VoteForSolution")
 - (void)addVoteToFirebase;
 @end
 
-@class UIBarButtonItem;
-@class UIWebView;
-@class NSURLRequest;
+@class NSTimer;
+@class UIView;
 
 SWIFT_CLASS("_TtC8GoChange17WebViewController")
-@interface WebViewController : UIViewController <UIWebViewDelegate>
-@property (nonatomic, weak) IBOutlet UIWebView * _Null_unspecified webView;
+@interface WebViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified changeOrg;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified linkPetition;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified petitionText;
-@property (nonatomic, copy) NSString * _Null_unspecified currentURL;
-@property (nonatomic, copy) NSString * _Nonnull urlString;
-@property (nonatomic, copy) NSString * _Null_unspecified status;
-@property (nonatomic, strong) UIBarButtonItem * _Null_unspecified linkPetitionButton;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified petitionView;
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView * _Null_unspecified petitionActivity;
+@property (nonatomic, copy) NSString * _Null_unspecified urlString;
+@property (nonatomic, strong) NSTimer * _Null_unspecified timer;
 - (void)viewDidLoad;
-- (void)viewWillAppear:(BOOL)animated;
-- (void)webViewDidStartLoad:(UIWebView * _Nonnull)webView;
-- (BOOL)webView:(UIWebView * _Nonnull)webView shouldStartLoadWithRequest:(NSURLRequest * _Nonnull)request navigationType:(UIWebViewNavigationType)navigationType;
-- (void)webViewDidFinishLoad:(UIWebView * _Nonnull)webView;
+- (IBAction)changeOrgClick:(UIButton * _Nonnull)sender;
 - (IBAction)linkPetitionClick:(UIButton * _Nonnull)sender;
+- (void)setupTimer;
+- (void)onTimer;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -692,7 +685,7 @@ SWIFT_CLASS("_TtC8GoChange19loginViewController")
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified passwordTextfield;
 @property (nonatomic, weak) IBOutlet UIActivityIndicatorView * _Null_unspecified loginActivityIndicator;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified loginButton;
-@property (nonatomic, strong) Firebase * _Null_unspecified ref;
+@property (nonatomic, strong) FIRDatabaseReference * _Null_unspecified ref;
 @property (nonatomic, copy) NSString * _Nullable userID;
 - (void)viewDidLoad;
 - (void)viewDidAppear:(BOOL)animated;

@@ -17,7 +17,7 @@ class loginViewController:UIViewController,UITextFieldDelegate{
     @IBOutlet weak var loginActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var loginButton: UIButton!
     
-    var ref:Firebase!
+    var ref:FIRDatabaseReference!
     var userID:String?
     
     
@@ -25,7 +25,7 @@ class loginViewController:UIViewController,UITextFieldDelegate{
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-        ref = Firebase(url: "https://gochange.firebaseio.com/")
+        ref = FIRDatabase.database().reference()
         
         emailTextfield.delegate = self
         passwordTextfield.delegate = self
@@ -61,8 +61,12 @@ class loginViewController:UIViewController,UITextFieldDelegate{
         
         if(email != "" && password != ""){
             
-            ref.authUser(email, password: password, withCompletionBlock: {
-                error, authData in
+            //FIRAuth.auth()?.signInWithEmail(<#T##email: String##String#>, password: <#T##String#>, completion: <#T##FIRAuthResultCallback?##FIRAuthResultCallback?##(FIRUser?, NSError?) -> Void#>)
+            
+            //ref.authUser
+            
+            FIRAuth.auth()?.signInWithEmail(email!, password: password!, completion: {
+                user,error in
                 
                 if error != nil{
                     //TODO: code for error
@@ -73,7 +77,7 @@ class loginViewController:UIViewController,UITextFieldDelegate{
                     self.loginButton.enabled = true
 
                     
-                    switch error.localizedDescription{
+                    switch error!.localizedDescription{
                         case "(Error Code: INVALID_EMAIL) The specified email address is invalid.":
                         self.presentAlert("Please enter a valid email")
                         
@@ -94,12 +98,12 @@ class loginViewController:UIViewController,UITextFieldDelegate{
                     
                 }else{
                     
-                    let usernameRef = self.ref.childByAppendingPath("users/\(authData.uid!)")
+                    let usernameRef = self.ref.child("users/\(user!.uid)")
                     
                     usernameRef.observeEventType(.Value, withBlock: {snapshot in
                         
-                        let username = snapshot.value.objectForKey("username") as? String
-                        NSUserDefaults.standardUserDefaults().setValue(authData.uid!,forKey:"uid")
+                        let username = snapshot.value!.objectForKey("username") as? String
+                        NSUserDefaults.standardUserDefaults().setValue(user!.uid,forKey:"uid")
                         NSUserDefaults.standardUserDefaults().setValue(username, forKey: "username")
                         self.segueToHomeScreen()
                         

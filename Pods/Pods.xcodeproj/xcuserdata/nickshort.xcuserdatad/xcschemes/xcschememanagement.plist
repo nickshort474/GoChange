@@ -4,12 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Firebase.xcscheme</key>
+		<key>Pods-GoChange.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-GoChange.xcscheme</key>
+		<key>Pods-GoChangeTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-GoChangeUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>24BA5A6005714785C22787C07CA5A8A3</key>
+		<key>195DB4E3A6BF036B6385A80A5731AF30</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B7AC9326D819482593FE118E915409D7</key>
+		<key>6252C67714E86D19465AB7C69E832FEF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A2F40296077B4772B6E2AA38266B6207</key>
 		<dict>
 			<key>primary</key>
 			<true/>

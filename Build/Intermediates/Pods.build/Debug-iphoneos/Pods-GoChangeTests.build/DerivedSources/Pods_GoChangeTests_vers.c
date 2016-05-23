@@ -1,0 +1,1 @@
+ const unsigned char Pods_GoChangeTestsVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:Pods_GoChangeTests  PROJECT:Pods-1" "\n"; const double Pods_GoChangeTestsVersionNumber __attribute__ ((used)) = (double)1.;

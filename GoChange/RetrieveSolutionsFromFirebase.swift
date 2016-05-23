@@ -8,12 +8,15 @@
 
 import Foundation
 import Firebase
+
 import CoreData
 
 class RetrieveSolutionsFromFirebase:NSObject{
     
-    var ref = Firebase(url:"https://gochange.firebaseio.com/problem/solutions")
-    var problemRef:Firebase!
+    //var ref = Firebase(url:"https://gochange.firebaseio.com/problem/solutions")
+    
+    var ref:FIRDatabaseReference!
+    var problemRef:FIRDatabaseReference!
     
     
     var problem:Problem!
@@ -24,8 +27,10 @@ class RetrieveSolutionsFromFirebase:NSObject{
     
    
     
-    init(problemID:String,problem:Problem? = nil,caller:String,completionHandler:(result:FDataSnapshot)->Void){
+    init(problemID:String,problem:Problem? = nil,caller:String,completionHandler:(result:FIRDataSnapshot)->Void){
         super.init()
+        
+        ref = FIRDatabase.database().reference().child("problem/solutions")        
         
         if((problem) != nil){
             self.problem = problem
@@ -43,19 +48,19 @@ class RetrieveSolutionsFromFirebase:NSObject{
 
         
         //setup reference to firebase using problemID
-        problemRef = ref.childByAppendingPath(problemID)
+        problemRef = ref.child(problemID)
         
         problemRef.observeSingleEventOfType(.Value, withBlock: {snapshot in
             
             //loop through retrieved firebase solutions and save into TempArrays
-            for solution in snapshot.children.allObjects as! [FDataSnapshot]{
+            for solution in snapshot.children.allObjects as! [FIRDataSnapshot]{
                 
                 TempSave.sharedInstance().solutionIDArray.append(solution.key)
-                TempSave.sharedInstance().solutionNameArray.append(solution.value["SolutionName"] as! String)
-                TempSave.sharedInstance().solutionDetailArray.append(solution.value["SolutionDescription"] as! String)
-                TempSave.sharedInstance().solutionVoteArray.append(solution.value["SolutionVoteCount"] as! Int)
-                TempSave.sharedInstance().solutionOwnerArray.append(solution.value["SolutionOwner"] as! String)
-                TempSave.sharedInstance().petitionURLArray.append(solution.value["PetitionURL"] as! String)
+                TempSave.sharedInstance().solutionNameArray.append(solution.value!["SolutionName"] as! String)
+                TempSave.sharedInstance().solutionDetailArray.append(solution.value!["SolutionDescription"] as! String)
+                TempSave.sharedInstance().solutionVoteArray.append(solution.value!["SolutionVoteCount"] as! Int)
+                TempSave.sharedInstance().solutionOwnerArray.append(solution.value!["SolutionOwner"] as! String)
+                TempSave.sharedInstance().petitionURLArray.append(solution.value!["PetitionURL"] as! String)
             }
             
             if(caller == "following"){
@@ -146,16 +151,16 @@ class RetrieveSolutionsFromFirebase:NSObject{
         // use diff to retrieve all data
         for i in 0 ..< nonMatches.count{
             
-            let solutionRef = problemRef.childByAppendingPath(nonMatches[i])
+            let solutionRef = problemRef.child(nonMatches[i])
             
             solutionRef.observeSingleEventOfType(.Value, withBlock: {snapshot in
                 
                 TempSave.sharedInstance().solutionIDArray.append(snapshot.key)
-                TempSave.sharedInstance().solutionNameArray.append(snapshot.value["SolutionName"] as! String)
-                TempSave.sharedInstance().solutionDetailArray.append(snapshot.value["SolutionDescription"] as! String)
-                TempSave.sharedInstance().solutionVoteArray.append(snapshot.value["SolutionVoteCount"] as! Int)
-                TempSave.sharedInstance().solutionOwnerArray.append(snapshot.value["SolutionOwner"] as! String)
-                TempSave.sharedInstance().petitionURLArray.append(snapshot.value["PetitionURL"] as! String)
+                TempSave.sharedInstance().solutionNameArray.append(snapshot.value!["SolutionName"] as! String)
+                TempSave.sharedInstance().solutionDetailArray.append(snapshot.value!["SolutionDescription"] as! String)
+                TempSave.sharedInstance().solutionVoteArray.append(snapshot.value!["SolutionVoteCount"] as! Int)
+                TempSave.sharedInstance().solutionOwnerArray.append(snapshot.value!["SolutionOwner"] as! String)
+                TempSave.sharedInstance().petitionURLArray.append(snapshot.value!["PetitionURL"] as! String)
                 
                 if(TempSave.sharedInstance().solutionIDArray.count == self.nonMatches.count){
                     

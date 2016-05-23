@@ -12,7 +12,10 @@ import Firebase
 
 class RetrieveNamesFromFirebase:NSObject{
     
-    var nameRef = Firebase(url: "https://gochange.firebaseio.com/problem/names")
+    //var nameRef = Firebase(url: "https://gochange.firebaseio.com/problem/names")
+    
+    
+    
     var nameResults:[String] = []
     var ownerResults:[String] = []
     
@@ -21,14 +24,16 @@ class RetrieveNamesFromFirebase:NSObject{
         
         super.init()
         
+        let nameRef = FIRDatabase.database().reference().child("problem/names")
+
         for i in 0 ..< problemArray.count{
             
-            let newRef = nameRef.childByAppendingPath(problemArray[i])
+            let newNameRef = nameRef.child(problemArray[i])
             
-            newRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
+            newNameRef.observeSingleEventOfType(.Value, withBlock: { (snapshot) in
             
-                self.nameResults.append(snapshot.value["ProblemName"] as! String)
-                self.ownerResults.append(snapshot.value["ProblemOwner"] as! String)
+                self.nameResults.append(snapshot.value!["ProblemName"] as! String)
+                self.ownerResults.append(snapshot.value!["ProblemOwner"] as! String)
                 
                 if(self.nameResults.count == problemArray.count){
                     

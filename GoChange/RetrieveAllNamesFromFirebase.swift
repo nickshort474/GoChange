@@ -8,16 +8,18 @@
 
 import Foundation
 import Firebase
-
+import FirebaseDatabase
 
 class RetrieveAllNamesFromFirebase:NSObject{
     
-    var nameRef = Firebase(url: "https://gochange.firebaseio.com/problem/names")
+    //var nameRef = Firebase(url: "https://gochange.firebaseio.com/problem/names")
     
     
     init(completionHandler:(results:AnyObject)->Void){
         
         super.init()
+        let nameRef = FIRDatabase.database().reference().child("problem/names")
+        
         
         nameRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
             

@@ -9,14 +9,18 @@
 import Foundation
 import Firebase
 
+
+
 class GetRecentlyAdded:NSObject{
     
     
-    var ref = Firebase(url: "https://gochange.firebaseio.com/problem/RecentlyAdded")
     
-    init(completionHandler:(result:FDataSnapshot)->Void){
+    
+    init(completionHandler:(result:AnyObject)->Void){
         super.init()
         
+        
+        let ref = FIRDatabase.database().reference().child("problem/RecentlyAdded")
         
         ref.observeSingleEventOfType(.Value, withBlock: {snapshot in
             

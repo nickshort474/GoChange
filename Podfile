@@ -5,7 +5,10 @@ use_frameworks!
 
 target 'GoChange' do
 
-pod 'Firebase', '>= 2.5.0'
+
+pod 'Firebase'
+pod 'Firebase/Database'
+pod 'Firebase/Auth'
 
 end
 

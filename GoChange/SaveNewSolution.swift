@@ -10,6 +10,7 @@ import Foundation
 import CoreData
 import Firebase
 
+
 class SaveNewSolution:NSObject{
     
     
@@ -40,14 +41,18 @@ class SaveNewSolution:NSObject{
         
         let problemID = existingProblem.problemID
         
-        let solutionCountLocation = Firebase(url:"https://gochange.firebaseio.com/problem/solutionCount")
-        let uniqueSolutionCountLocation = solutionCountLocation.childByAppendingPath(problemID)
+        //let solutionCountLocation = Firebase(url:"https://gochange.firebaseio.com/problem/solutionCount")
+        let solutionCountLocation =  FIRDatabase.database().reference().child("problem/solutionCount")
+        
+        let uniqueSolutionCountLocation = solutionCountLocation.child(problemID)
         uniqueSolutionCountLocation.setValue(["SolutionCount":TempSave.sharedInstance().solutionNameArray.count])
         
         
         //create reference to solutions location in firebase
-        let problemSolutionsLocation = Firebase(url:"https://gochange.firebaseio.com/problem/solutions")
-        let uniqueSolutionLocation = problemSolutionsLocation.childByAppendingPath(problemID)
+        //let problemSolutionsLocation = Firebase(url:"https://gochange.firebaseio.com/problem/solutions")
+        let problemSolutionsLocation = FIRDatabase.database().reference().child("problem/solutions")
+        
+        let uniqueSolutionLocation = problemSolutionsLocation.child(problemID)
         
         let solutionOwner = NSUserDefaults.standardUserDefaults().valueForKey("username") as! String
         
@@ -56,8 +61,8 @@ class SaveNewSolution:NSObject{
         for i in 0 ..< (TempSave.sharedInstance().newSolutionNameArray.count){
             
             //create unqiue location with ID within solutions section
-            let uniqueSolutionReference = uniqueSolutionLocation!.childByAutoId()
-            
+            let uniqueSolutionReference = uniqueSolutionLocation.childByAutoId()
+            //let uniqueSolutionRefrence = uniqueSolutionLocation.
             
             //save uniqueSolutionReference to array for later use
             self.solutionIDArray.addObject(uniqueSolutionReference.key)

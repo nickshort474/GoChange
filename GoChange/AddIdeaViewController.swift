@@ -43,7 +43,7 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         nameTextField.delegate = self
         detailTextView.delegate = self
 
-        //clear current petition value after previosu use
+        //clear current petition value after previous use
         TempSave.sharedInstance().currentPetitionValue = ""
         
         
@@ -74,9 +74,12 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         TempSave.sharedInstance().newSolutionDetailArray = []
         
         //set petition field text
+        
+        //TODO: process currentPetitionValue to get better title to display.
+        
         petitionTextField.text = TempSave.sharedInstance().currentPetitionValue
         
-        print(UIPasteboard.generalPasteboard().string)
+        
         
     }
     
@@ -228,7 +231,7 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         controller = storyboard?.instantiateViewControllerWithIdentifier("WebViewController") as! WebViewController
        
         controller.urlString = GoChangeClient.Constants.basePetitionURL
-        controller.status = "adding"
+        //controller.status = "adding"
         
         self.navigationController?.pushViewController(controller, animated: true)
     }

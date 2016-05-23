@@ -6,44 +6,43 @@ provides-nominal:
 provides-member:
 - ["C8GoChange18HomeViewController", ""]
 provides-dynamic-lookup:
-- "startActivityIndicator"
-- "checkCoreData"
-- "viewDidLoad"
 - "welcomeLabel"
+- "addUserData"
+- "startActivityIndicator"
+- "viewDidLoad"
+- "followButton"
 - "createProblem"
 - "logout"
 - "sharedContext"
+- "checkCoreData"
 - "followingLabel"
-- "addUserData"
-- "followButton"
 - "viewWillAppear"
-- "ref"
 depends-top-level:
-- !private "UINavigationController"
-- "UIViewController"
 - "UILabel"
-- !private "NSUserDefaults"
+- !private "StringLiteralType"
+- "UIViewController"
 - !private "UIBarButtonItemStyle"
-- !private "!="
-- !private "CoreDataStackManager"
 - !private "String"
-- !private "UIBarButtonItem"
-- !private "UpdateUserInfoController"
-- "StringLiteralType"
-- "Firebase"
-- "Bool"
-- !private "UnicodeScalarType"
-- "UIButton"
-- "NSManagedObjectContext"
-- !private "BooleanLiteralType"
-- "UIActivityIndicatorView"
-- !private "NSFetchRequest"
 - !private "Problem"
-- !private "AnyObject"
+- !private "UIBarButtonItem"
+- !private "NSUserDefaults"
+- !private "UpdateUserInfoController"
+- !private "CoreDataStackManager"
+- !private "NSFetchRequest"
+- !private "FIRAuth"
+- "Bool"
 - "HomeViewController"
+- "NSManagedObjectContext"
+- !private "UnicodeScalarType"
+- !private "BooleanLiteralType"
+- !private "!="
+- "UIButton"
+- "UIActivityIndicatorView"
+- !private "UINavigationController"
+- !private "AnyObject"
 depends-member:
 - !private ["Ps9AnyObject", "CoreDataStackManager"]
-- ["Ps9AnyObject", "Firebase"]
+- !private ["Ps9AnyObject", "FIRAuth"]
 - !private ["Ps9AnyObject", "NSFetchRequest"]
 - !private ["Ps9AnyObject", "NSUserDefaults"]
 - !private ["Ps9AnyObject", "String"]
@@ -51,6 +50,7 @@ depends-member:
 - !private ["Ps9AnyObject", "UIBarButtonItemStyle"]
 - ["Ps9AnyObject", "addUserData"]
 - !private ["Ps9AnyObject", "alpha"]
+- !private ["Ps9AnyObject", "auth"]
 - !private ["Ps9AnyObject", "backBarButtonItem"]
 - ["Ps9AnyObject", "checkCoreData"]
 - ["Ps9AnyObject", "createProblem"]
@@ -65,18 +65,17 @@ depends-member:
 - !private ["Ps9AnyObject", "managedObjectContext"]
 - !private ["Ps9AnyObject", "navigationItem"]
 - !private ["Ps9AnyObject", "presentViewController"]
-- ["Ps9AnyObject", "ref"]
 - !private ["Ps9AnyObject", "setValue"]
 - ["Ps9AnyObject", "sharedContext"]
 - ["Ps9AnyObject", "sharedContext.storage"]
 - !private ["Ps9AnyObject", "sharedInstance"]
+- !private ["Ps9AnyObject", "signOut"]
 - !private ["Ps9AnyObject", "standardUserDefaults"]
 - ["Ps9AnyObject", "startActivityIndicator"]
 - !private ["Ps9AnyObject", "startAnimating"]
 - !private ["Ps9AnyObject", "stopAnimating"]
 - !private ["Ps9AnyObject", "storyboard"]
 - !private ["Ps9AnyObject", "text"]
-- !private ["Ps9AnyObject", "unauth"]
 - !private ["Ps9AnyObject", "valueForKey"]
 - !private ["Ps9AnyObject", "view"]
 - ["Ps9AnyObject", "viewDidLoad"]
@@ -105,7 +104,7 @@ depends-member:
 - !private ["V12CoreGraphics7CGFloat", "deinit"]
 - !private ["Ps11CVarArgType", "CoreDataStackManager"]
 - !private ["Ps11CVarArgType", "Distance"]
-- ["Ps11CVarArgType", "Firebase"]
+- !private ["Ps11CVarArgType", "FIRAuth"]
 - !private ["Ps11CVarArgType", "IntegerLiteralType"]
 - !private ["Ps11CVarArgType", "NSFetchRequest"]
 - !private ["Ps11CVarArgType", "NSUserDefaults"]
@@ -114,6 +113,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "UIBarButtonItemStyle"]
 - ["Ps11CVarArgType", "addUserData"]
 - !private ["Ps11CVarArgType", "alpha"]
+- !private ["Ps11CVarArgType", "auth"]
 - !private ["Ps11CVarArgType", "backBarButtonItem"]
 - ["Ps11CVarArgType", "checkCoreData"]
 - ["Ps11CVarArgType", "createProblem"]
@@ -127,17 +127,16 @@ depends-member:
 - ["Ps11CVarArgType", "logout"]
 - !private ["Ps11CVarArgType", "navigationItem"]
 - !private ["Ps11CVarArgType", "presentViewController"]
-- ["Ps11CVarArgType", "ref"]
 - !private ["Ps11CVarArgType", "setValue"]
 - ["Ps11CVarArgType", "sharedContext"]
 - ["Ps11CVarArgType", "sharedContext.storage"]
+- !private ["Ps11CVarArgType", "signOut"]
 - !private ["Ps11CVarArgType", "standardUserDefaults"]
 - ["Ps11CVarArgType", "startActivityIndicator"]
 - !private ["Ps11CVarArgType", "startAnimating"]
 - !private ["Ps11CVarArgType", "stopAnimating"]
 - !private ["Ps11CVarArgType", "storyboard"]
 - !private ["Ps11CVarArgType", "text"]
-- !private ["Ps11CVarArgType", "unauth"]
 - !private ["Ps11CVarArgType", "valueForKey"]
 - !private ["Ps11CVarArgType", "view"]
 - ["Ps11CVarArgType", "viewDidLoad"]
@@ -155,7 +154,7 @@ depends-member:
 - !private ["C8GoChange20CoreDataStackManager", "managedObjectContext"]
 - !private ["C8GoChange20CoreDataStackManager", "sharedInstance"]
 - !private ["Ps28CustomDebugStringConvertible", "CoreDataStackManager"]
-- ["Ps28CustomDebugStringConvertible", "Firebase"]
+- !private ["Ps28CustomDebugStringConvertible", "FIRAuth"]
 - !private ["Ps28CustomDebugStringConvertible", "Generator"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "NSFetchRequest"]
@@ -166,6 +165,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "UIBarButtonItemStyle"]
 - ["Ps28CustomDebugStringConvertible", "addUserData"]
 - !private ["Ps28CustomDebugStringConvertible", "alpha"]
+- !private ["Ps28CustomDebugStringConvertible", "auth"]
 - !private ["Ps28CustomDebugStringConvertible", "backBarButtonItem"]
 - ["Ps28CustomDebugStringConvertible", "checkCoreData"]
 - !private ["Ps28CustomDebugStringConvertible", "count"]
@@ -180,17 +180,16 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "logout"]
 - !private ["Ps28CustomDebugStringConvertible", "navigationItem"]
 - !private ["Ps28CustomDebugStringConvertible", "presentViewController"]
-- ["Ps28CustomDebugStringConvertible", "ref"]
 - !private ["Ps28CustomDebugStringConvertible", "setValue"]
 - ["Ps28CustomDebugStringConvertible", "sharedContext"]
 - ["Ps28CustomDebugStringConvertible", "sharedContext.storage"]
+- !private ["Ps28CustomDebugStringConvertible", "signOut"]
 - !private ["Ps28CustomDebugStringConvertible", "standardUserDefaults"]
 - ["Ps28CustomDebugStringConvertible", "startActivityIndicator"]
 - !private ["Ps28CustomDebugStringConvertible", "startAnimating"]
 - !private ["Ps28CustomDebugStringConvertible", "stopAnimating"]
 - !private ["Ps28CustomDebugStringConvertible", "storyboard"]
 - !private ["Ps28CustomDebugStringConvertible", "text"]
-- !private ["Ps28CustomDebugStringConvertible", "unauth"]
 - !private ["Ps28CustomDebugStringConvertible", "valueForKey"]
 - !private ["Ps28CustomDebugStringConvertible", "view"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
@@ -199,7 +198,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps23CustomStringConvertible", "CoreDataStackManager"]
 - !private ["Ps23CustomStringConvertible", "Distance"]
-- ["Ps23CustomStringConvertible", "Firebase"]
+- !private ["Ps23CustomStringConvertible", "FIRAuth"]
 - !private ["Ps23CustomStringConvertible", "Generator"]
 - !private ["Ps23CustomStringConvertible", "Index"]
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
@@ -212,6 +211,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - ["Ps23CustomStringConvertible", "addUserData"]
 - !private ["Ps23CustomStringConvertible", "alpha"]
+- !private ["Ps23CustomStringConvertible", "auth"]
 - !private ["Ps23CustomStringConvertible", "backBarButtonItem"]
 - ["Ps23CustomStringConvertible", "checkCoreData"]
 - !private ["Ps23CustomStringConvertible", "count"]
@@ -226,17 +226,16 @@ depends-member:
 - ["Ps23CustomStringConvertible", "logout"]
 - !private ["Ps23CustomStringConvertible", "navigationItem"]
 - !private ["Ps23CustomStringConvertible", "presentViewController"]
-- ["Ps23CustomStringConvertible", "ref"]
 - !private ["Ps23CustomStringConvertible", "setValue"]
 - ["Ps23CustomStringConvertible", "sharedContext"]
 - ["Ps23CustomStringConvertible", "sharedContext.storage"]
+- !private ["Ps23CustomStringConvertible", "signOut"]
 - !private ["Ps23CustomStringConvertible", "standardUserDefaults"]
 - ["Ps23CustomStringConvertible", "startActivityIndicator"]
 - !private ["Ps23CustomStringConvertible", "startAnimating"]
 - !private ["Ps23CustomStringConvertible", "stopAnimating"]
 - !private ["Ps23CustomStringConvertible", "storyboard"]
 - !private ["Ps23CustomStringConvertible", "text"]
-- !private ["Ps23CustomStringConvertible", "unauth"]
 - !private ["Ps23CustomStringConvertible", "valueForKey"]
 - !private ["Ps23CustomStringConvertible", "view"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
@@ -246,7 +245,7 @@ depends-member:
 - !private ["Sd", "deinit"]
 - !private ["Ps9Equatable", "CoreDataStackManager"]
 - !private ["Ps9Equatable", "Distance"]
-- ["Ps9Equatable", "Firebase"]
+- !private ["Ps9Equatable", "FIRAuth"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "NSFetchRequest"]
 - !private ["Ps9Equatable", "NSUserDefaults"]
@@ -257,6 +256,7 @@ depends-member:
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - ["Ps9Equatable", "addUserData"]
 - !private ["Ps9Equatable", "alpha"]
+- !private ["Ps9Equatable", "auth"]
 - !private ["Ps9Equatable", "backBarButtonItem"]
 - ["Ps9Equatable", "checkCoreData"]
 - ["Ps9Equatable", "createProblem"]
@@ -270,17 +270,16 @@ depends-member:
 - ["Ps9Equatable", "logout"]
 - !private ["Ps9Equatable", "navigationItem"]
 - !private ["Ps9Equatable", "presentViewController"]
-- ["Ps9Equatable", "ref"]
 - !private ["Ps9Equatable", "setValue"]
 - ["Ps9Equatable", "sharedContext"]
 - ["Ps9Equatable", "sharedContext.storage"]
+- !private ["Ps9Equatable", "signOut"]
 - !private ["Ps9Equatable", "standardUserDefaults"]
 - ["Ps9Equatable", "startActivityIndicator"]
 - !private ["Ps9Equatable", "startAnimating"]
 - !private ["Ps9Equatable", "stopAnimating"]
 - !private ["Ps9Equatable", "storyboard"]
 - !private ["Ps9Equatable", "text"]
-- !private ["Ps9Equatable", "unauth"]
 - !private ["Ps9Equatable", "valueForKey"]
 - !private ["Ps9Equatable", "view"]
 - ["Ps9Equatable", "viewDidLoad"]
@@ -288,16 +287,14 @@ depends-member:
 - ["Ps9Equatable", "welcomeLabel"]
 - ["Ps9Equatable", ""]
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
-- ["CSo6FQuery", "init"]
-- !private ["CSo6FQuery", "unauth"]
-- ["CSo8Firebase", "init"]
-- !private ["CSo8Firebase", "unauth"]
+- !private ["CSo7FIRAuth", "auth"]
+- !private ["CSo7FIRAuth", "signOut"]
 - !private ["Sf", "deinit"]
 - !private ["Ps16ForwardIndexType", "Distance"]
 - !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "CoreDataStackManager"]
 - !private ["Ps8Hashable", "Distance"]
-- ["Ps8Hashable", "Firebase"]
+- !private ["Ps8Hashable", "FIRAuth"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "NSFetchRequest"]
 - !private ["Ps8Hashable", "NSUserDefaults"]
@@ -308,6 +305,7 @@ depends-member:
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - ["Ps8Hashable", "addUserData"]
 - !private ["Ps8Hashable", "alpha"]
+- !private ["Ps8Hashable", "auth"]
 - !private ["Ps8Hashable", "backBarButtonItem"]
 - ["Ps8Hashable", "checkCoreData"]
 - ["Ps8Hashable", "createProblem"]
@@ -321,17 +319,16 @@ depends-member:
 - ["Ps8Hashable", "logout"]
 - !private ["Ps8Hashable", "navigationItem"]
 - !private ["Ps8Hashable", "presentViewController"]
-- ["Ps8Hashable", "ref"]
 - !private ["Ps8Hashable", "setValue"]
 - ["Ps8Hashable", "sharedContext"]
 - ["Ps8Hashable", "sharedContext.storage"]
+- !private ["Ps8Hashable", "signOut"]
 - !private ["Ps8Hashable", "standardUserDefaults"]
 - ["Ps8Hashable", "startActivityIndicator"]
 - !private ["Ps8Hashable", "startAnimating"]
 - !private ["Ps8Hashable", "stopAnimating"]
 - !private ["Ps8Hashable", "storyboard"]
 - !private ["Ps8Hashable", "text"]
-- !private ["Ps8Hashable", "unauth"]
 - !private ["Ps8Hashable", "valueForKey"]
 - !private ["Ps8Hashable", "view"]
 - ["Ps8Hashable", "viewDidLoad"]
@@ -341,7 +338,7 @@ depends-member:
 - !private ["C8GoChange18HomeViewController", "AnyObject"]
 - ["C8GoChange18HomeViewController", "Bool"]
 - !private ["C8GoChange18HomeViewController", "CoreDataStackManager"]
-- ["C8GoChange18HomeViewController", "Firebase"]
+- !private ["C8GoChange18HomeViewController", "FIRAuth"]
 - !private ["C8GoChange18HomeViewController", "NSFetchRequest"]
 - ["C8GoChange18HomeViewController", "NSManagedObjectContext"]
 - !private ["C8GoChange18HomeViewController", "NSUserDefaults"]
@@ -365,7 +362,6 @@ depends-member:
 - ["C8GoChange18HomeViewController", "logout"]
 - !private ["C8GoChange18HomeViewController", "navigationItem"]
 - !private ["C8GoChange18HomeViewController", "presentViewController"]
-- ["C8GoChange18HomeViewController", "ref"]
 - ["C8GoChange18HomeViewController", "sharedContext"]
 - !private ["C8GoChange18HomeViewController", "sharedContext.storage"]
 - ["C8GoChange18HomeViewController", "startActivityIndicator"]
@@ -374,7 +370,6 @@ depends-member:
 - ["C8GoChange18HomeViewController", "viewDidLoad"]
 - ["C8GoChange18HomeViewController", "viewWillAppear"]
 - ["C8GoChange18HomeViewController", "welcomeLabel"]
-- ["SQ", "deinit"]
 - !private ["Ps9Indexable", "Generator"]
 - !private ["Ps9Indexable", "Index"]
 - !private ["Ps9Indexable", "SubSequence"]
@@ -408,7 +403,7 @@ depends-member:
 - !private ["Ps16MutableSliceable", "SubSequence"]
 - !private ["Ps16MutableSliceable", "count"]
 - !private ["PSo8NSCoding", "CoreDataStackManager"]
-- ["PSo8NSCoding", "Firebase"]
+- !private ["PSo8NSCoding", "FIRAuth"]
 - !private ["PSo8NSCoding", "NSFetchRequest"]
 - !private ["PSo8NSCoding", "NSUserDefaults"]
 - !private ["PSo8NSCoding", "String"]
@@ -428,7 +423,6 @@ depends-member:
 - ["PSo8NSCoding", "logout"]
 - !private ["PSo8NSCoding", "navigationItem"]
 - !private ["PSo8NSCoding", "presentViewController"]
-- ["PSo8NSCoding", "ref"]
 - ["PSo8NSCoding", "sharedContext"]
 - ["PSo8NSCoding", "sharedContext.storage"]
 - ["PSo8NSCoding", "startActivityIndicator"]
@@ -443,7 +437,7 @@ depends-member:
 - ["PSo8NSCoding", ""]
 - !private ["PSo9NSCopying", "init"]
 - !private ["PSo26NSExtensionRequestHandling", "CoreDataStackManager"]
-- ["PSo26NSExtensionRequestHandling", "Firebase"]
+- !private ["PSo26NSExtensionRequestHandling", "FIRAuth"]
 - !private ["PSo26NSExtensionRequestHandling", "NSFetchRequest"]
 - !private ["PSo26NSExtensionRequestHandling", "NSUserDefaults"]
 - !private ["PSo26NSExtensionRequestHandling", "String"]
@@ -459,7 +453,6 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "logout"]
 - !private ["PSo26NSExtensionRequestHandling", "navigationItem"]
 - !private ["PSo26NSExtensionRequestHandling", "presentViewController"]
-- ["PSo26NSExtensionRequestHandling", "ref"]
 - ["PSo26NSExtensionRequestHandling", "sharedContext"]
 - ["PSo26NSExtensionRequestHandling", "sharedContext.storage"]
 - ["PSo26NSExtensionRequestHandling", "startActivityIndicator"]
@@ -476,7 +469,7 @@ depends-member:
 - !private ["CSo8NSObject", "AnyObject"]
 - ["CSo8NSObject", "Bool"]
 - !private ["CSo8NSObject", "CoreDataStackManager"]
-- ["CSo8NSObject", "Firebase"]
+- !private ["CSo8NSObject", "FIRAuth"]
 - !private ["CSo8NSObject", "NSFetchRequest"]
 - ["CSo8NSObject", "NSManagedObjectContext"]
 - !private ["CSo8NSObject", "NSUserDefaults"]
@@ -491,6 +484,7 @@ depends-member:
 - !private ["CSo8NSObject", "UpdateUserInfoController"]
 - ["CSo8NSObject", "addUserData"]
 - !private ["CSo8NSObject", "alpha"]
+- !private ["CSo8NSObject", "auth"]
 - !private ["CSo8NSObject", "backBarButtonItem"]
 - ["CSo8NSObject", "checkCoreData"]
 - ["CSo8NSObject", "createProblem"]
@@ -504,24 +498,23 @@ depends-member:
 - ["CSo8NSObject", "logout"]
 - !private ["CSo8NSObject", "navigationItem"]
 - !private ["CSo8NSObject", "presentViewController"]
-- ["CSo8NSObject", "ref"]
 - !private ["CSo8NSObject", "setValue"]
 - ["CSo8NSObject", "sharedContext"]
 - ["CSo8NSObject", "sharedContext.storage"]
+- !private ["CSo8NSObject", "signOut"]
 - !private ["CSo8NSObject", "standardUserDefaults"]
 - ["CSo8NSObject", "startActivityIndicator"]
 - !private ["CSo8NSObject", "startAnimating"]
 - !private ["CSo8NSObject", "stopAnimating"]
 - !private ["CSo8NSObject", "storyboard"]
 - !private ["CSo8NSObject", "text"]
-- !private ["CSo8NSObject", "unauth"]
 - !private ["CSo8NSObject", "valueForKey"]
 - !private ["CSo8NSObject", "view"]
 - ["CSo8NSObject", "viewDidLoad"]
 - ["CSo8NSObject", "viewWillAppear"]
 - ["CSo8NSObject", "welcomeLabel"]
 - !private ["PSo16NSObjectProtocol", "CoreDataStackManager"]
-- ["PSo16NSObjectProtocol", "Firebase"]
+- !private ["PSo16NSObjectProtocol", "FIRAuth"]
 - !private ["PSo16NSObjectProtocol", "NSFetchRequest"]
 - !private ["PSo16NSObjectProtocol", "NSUserDefaults"]
 - !private ["PSo16NSObjectProtocol", "String"]
@@ -529,6 +522,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "UIBarButtonItemStyle"]
 - ["PSo16NSObjectProtocol", "addUserData"]
 - !private ["PSo16NSObjectProtocol", "alpha"]
+- !private ["PSo16NSObjectProtocol", "auth"]
 - !private ["PSo16NSObjectProtocol", "backBarButtonItem"]
 - ["PSo16NSObjectProtocol", "checkCoreData"]
 - ["PSo16NSObjectProtocol", "createProblem"]
@@ -542,17 +536,16 @@ depends-member:
 - ["PSo16NSObjectProtocol", "logout"]
 - !private ["PSo16NSObjectProtocol", "navigationItem"]
 - !private ["PSo16NSObjectProtocol", "presentViewController"]
-- ["PSo16NSObjectProtocol", "ref"]
 - !private ["PSo16NSObjectProtocol", "setValue"]
 - ["PSo16NSObjectProtocol", "sharedContext"]
 - ["PSo16NSObjectProtocol", "sharedContext.storage"]
+- !private ["PSo16NSObjectProtocol", "signOut"]
 - !private ["PSo16NSObjectProtocol", "standardUserDefaults"]
 - ["PSo16NSObjectProtocol", "startActivityIndicator"]
 - !private ["PSo16NSObjectProtocol", "startAnimating"]
 - !private ["PSo16NSObjectProtocol", "stopAnimating"]
 - !private ["PSo16NSObjectProtocol", "storyboard"]
 - !private ["PSo16NSObjectProtocol", "text"]
-- !private ["PSo16NSObjectProtocol", "unauth"]
 - !private ["PSo16NSObjectProtocol", "valueForKey"]
 - !private ["PSo16NSObjectProtocol", "view"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
@@ -605,7 +598,7 @@ depends-member:
 - !private ["PSo12UIAppearance", "stopAnimating"]
 - !private ["PSo12UIAppearance", "text"]
 - !private ["PSo21UIAppearanceContainer", "CoreDataStackManager"]
-- ["PSo21UIAppearanceContainer", "Firebase"]
+- !private ["PSo21UIAppearanceContainer", "FIRAuth"]
 - !private ["PSo21UIAppearanceContainer", "NSFetchRequest"]
 - !private ["PSo21UIAppearanceContainer", "NSUserDefaults"]
 - !private ["PSo21UIAppearanceContainer", "String"]
@@ -623,7 +616,6 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "logout"]
 - !private ["PSo21UIAppearanceContainer", "navigationItem"]
 - !private ["PSo21UIAppearanceContainer", "presentViewController"]
-- ["PSo21UIAppearanceContainer", "ref"]
 - ["PSo21UIAppearanceContainer", "sharedContext"]
 - ["PSo21UIAppearanceContainer", "sharedContext.storage"]
 - ["PSo21UIAppearanceContainer", "startActivityIndicator"]
@@ -640,7 +632,7 @@ depends-member:
 - !private ["OSC20UIBarButtonItemStyle", "Plain"]
 - !private ["CSo9UIBarItem", "init"]
 - !private ["PSo18UIContentContainer", "CoreDataStackManager"]
-- ["PSo18UIContentContainer", "Firebase"]
+- !private ["PSo18UIContentContainer", "FIRAuth"]
 - !private ["PSo18UIContentContainer", "NSFetchRequest"]
 - !private ["PSo18UIContentContainer", "NSUserDefaults"]
 - !private ["PSo18UIContentContainer", "String"]
@@ -656,7 +648,6 @@ depends-member:
 - ["PSo18UIContentContainer", "logout"]
 - !private ["PSo18UIContentContainer", "navigationItem"]
 - !private ["PSo18UIContentContainer", "presentViewController"]
-- ["PSo18UIContentContainer", "ref"]
 - ["PSo18UIContentContainer", "sharedContext"]
 - ["PSo18UIContentContainer", "sharedContext.storage"]
 - ["PSo18UIContentContainer", "startActivityIndicator"]
@@ -677,7 +668,7 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "stopAnimating"]
 - !private ["PSo13UIDynamicItem", "text"]
 - !private ["PSo18UIFocusEnvironment", "CoreDataStackManager"]
-- ["PSo18UIFocusEnvironment", "Firebase"]
+- !private ["PSo18UIFocusEnvironment", "FIRAuth"]
 - !private ["PSo18UIFocusEnvironment", "NSFetchRequest"]
 - !private ["PSo18UIFocusEnvironment", "NSUserDefaults"]
 - !private ["PSo18UIFocusEnvironment", "String"]
@@ -695,7 +686,6 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "logout"]
 - !private ["PSo18UIFocusEnvironment", "navigationItem"]
 - !private ["PSo18UIFocusEnvironment", "presentViewController"]
-- ["PSo18UIFocusEnvironment", "ref"]
 - ["PSo18UIFocusEnvironment", "sharedContext"]
 - ["PSo18UIFocusEnvironment", "sharedContext.storage"]
 - ["PSo18UIFocusEnvironment", "startActivityIndicator"]
@@ -714,7 +704,7 @@ depends-member:
 - !private ["CSo11UIResponder", "AnyObject"]
 - ["CSo11UIResponder", "Bool"]
 - !private ["CSo11UIResponder", "CoreDataStackManager"]
-- ["CSo11UIResponder", "Firebase"]
+- !private ["CSo11UIResponder", "FIRAuth"]
 - !private ["CSo11UIResponder", "NSFetchRequest"]
 - ["CSo11UIResponder", "NSManagedObjectContext"]
 - !private ["CSo11UIResponder", "NSUserDefaults"]
@@ -739,7 +729,6 @@ depends-member:
 - ["CSo11UIResponder", "logout"]
 - !private ["CSo11UIResponder", "navigationItem"]
 - !private ["CSo11UIResponder", "presentViewController"]
-- ["CSo11UIResponder", "ref"]
 - ["CSo11UIResponder", "sharedContext"]
 - ["CSo11UIResponder", "sharedContext.storage"]
 - ["CSo11UIResponder", "startActivityIndicator"]
@@ -752,7 +741,7 @@ depends-member:
 - ["CSo11UIResponder", "viewWillAppear"]
 - ["CSo11UIResponder", "welcomeLabel"]
 - !private ["PSo16UIStateRestoring", "CoreDataStackManager"]
-- ["PSo16UIStateRestoring", "Firebase"]
+- !private ["PSo16UIStateRestoring", "FIRAuth"]
 - !private ["PSo16UIStateRestoring", "NSFetchRequest"]
 - !private ["PSo16UIStateRestoring", "NSUserDefaults"]
 - !private ["PSo16UIStateRestoring", "String"]
@@ -768,7 +757,6 @@ depends-member:
 - ["PSo16UIStateRestoring", "logout"]
 - !private ["PSo16UIStateRestoring", "navigationItem"]
 - !private ["PSo16UIStateRestoring", "presentViewController"]
-- ["PSo16UIStateRestoring", "ref"]
 - ["PSo16UIStateRestoring", "sharedContext"]
 - ["PSo16UIStateRestoring", "sharedContext.storage"]
 - ["PSo16UIStateRestoring", "startActivityIndicator"]
@@ -780,7 +768,7 @@ depends-member:
 - ["PSo16UIStateRestoring", ""]
 - !private ["CSo12UIStoryboard", "instantiateViewControllerWithIdentifier"]
 - !private ["PSo18UITraitEnvironment", "CoreDataStackManager"]
-- ["PSo18UITraitEnvironment", "Firebase"]
+- !private ["PSo18UITraitEnvironment", "FIRAuth"]
 - !private ["PSo18UITraitEnvironment", "NSFetchRequest"]
 - !private ["PSo18UITraitEnvironment", "NSUserDefaults"]
 - !private ["PSo18UITraitEnvironment", "String"]
@@ -798,7 +786,6 @@ depends-member:
 - ["PSo18UITraitEnvironment", "logout"]
 - !private ["PSo18UITraitEnvironment", "navigationItem"]
 - !private ["PSo18UITraitEnvironment", "presentViewController"]
-- ["PSo18UITraitEnvironment", "ref"]
 - ["PSo18UITraitEnvironment", "sharedContext"]
 - ["PSo18UITraitEnvironment", "sharedContext.storage"]
 - ["PSo18UITraitEnvironment", "startActivityIndicator"]
@@ -819,7 +806,7 @@ depends-member:
 - !private ["CSo16UIViewController", "AnyObject"]
 - ["CSo16UIViewController", "Bool"]
 - !private ["CSo16UIViewController", "CoreDataStackManager"]
-- ["CSo16UIViewController", "Firebase"]
+- !private ["CSo16UIViewController", "FIRAuth"]
 - !private ["CSo16UIViewController", "NSFetchRequest"]
 - ["CSo16UIViewController", "NSManagedObjectContext"]
 - !private ["CSo16UIViewController", "NSUserDefaults"]
@@ -842,7 +829,6 @@ depends-member:
 - ["CSo16UIViewController", "logout"]
 - !private ["CSo16UIViewController", "navigationItem"]
 - !private ["CSo16UIViewController", "presentViewController"]
-- ["CSo16UIViewController", "ref"]
 - ["CSo16UIViewController", "sharedContext"]
 - ["CSo16UIViewController", "sharedContext.storage"]
 - ["CSo16UIViewController", "startActivityIndicator"]
@@ -927,13 +913,11 @@ depends-nominal:
 - !private "Sd"
 - "Ps9Equatable"
 - !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
-- "CSo6FQuery"
-- "CSo8Firebase"
+- !private "CSo7FIRAuth"
 - !private "Sf"
 - !private "Ps16ForwardIndexType"
 - "Ps8Hashable"
 - "C8GoChange18HomeViewController"
-- "SQ"
 - !private "Ps9Indexable"
 - !private "Si"
 - !private "Vs5Int16"
@@ -1026,17 +1010,43 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreData.swiftmodule"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FirebaseServerValue.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FTransactionResult.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FMutableData.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FirebaseApp.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FQuery.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FEventType.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FDataSnapshot.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FConfig.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthType.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
-interface-hash: "3b2268553e727c3ab641dbd332f1293c"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRConfiguration.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRApp.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/Firebase/Headers/module.modulemap"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIREmailPasswordAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/Firebase/Headers/Firebase.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/WebKit.swiftmodule"
+interface-hash: "7ba107633577acbc811c486966dc7d44"

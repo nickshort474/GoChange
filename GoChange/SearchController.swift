@@ -9,6 +9,7 @@
 import Foundation
 import Firebase
 
+
 class SearchController:NSObject{
     
     var searchText:String!
@@ -37,12 +38,12 @@ class SearchController:NSObject{
             (snapshot) in
             
             
-            let snap = snapshot as! FDataSnapshot
+            let snap = snapshot as! FIRDataSnapshot
                 
-            for name in snap.children.allObjects as! [FDataSnapshot]{
+            for name in snap.children.allObjects as! [FIRDataSnapshot]{
                 
                 //add value of returned item to array
-                self.returnedNameArray.append(name.value["ProblemName"]!! as! String)
+                self.returnedNameArray.append(name.value!["ProblemName"]!! as! String)
                 
                 //add ref to item to another array
                 self.returnedRefArray.append(String(name.key))
@@ -165,7 +166,7 @@ class SearchController:NSObject{
                     (solutionCountResults) in
                 
                     self.useSolutionCountArray = solutionCountResults
-                
+                    /*
                     _  = RetrieveNamesFromFirebase(problemArray:self.refsNotInCoreData){
                         (nameResults,ownerResults) in
                     
@@ -174,6 +175,7 @@ class SearchController:NSObject{
                     
                         completionHandler(nameResult:nameResults,detailResult:detailResults,ownerResult:ownerResults,solutionCountResult:solutionCountResults,refResult:self.refsNotInCoreData,matchType:"matched")
                     }
+                    */
                 }
             }
         }

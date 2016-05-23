@@ -18,7 +18,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var followingLabel: UILabel!
     @IBOutlet weak var startActivityIndicator: UIActivityIndicatorView!
     
-    var ref = Firebase(url:"https://gochange.firebaseio.com")
+    
     
     
     override func viewDidLoad() {
@@ -120,7 +120,8 @@ class HomeViewController: UIViewController {
     
     @IBAction func logout(sender: UIButton) {
         //unauthorize user
-        ref.unauth()
+        //ref.unauth()
+        try! FIRAuth.auth()?.signOut()
         
         //remove user details from user defaults
         NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "uid")
