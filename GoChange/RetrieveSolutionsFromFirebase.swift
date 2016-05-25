@@ -8,23 +8,17 @@
 
 import Foundation
 import Firebase
-
 import CoreData
 
 class RetrieveSolutionsFromFirebase:NSObject{
     
-    
     var ref:FIRDatabaseReference!
     var problemRef:FIRDatabaseReference!
-    
-    
     var problem:Problem!
     var problemID:String!
-    
     var localSolutionIDArray:[String] = []
     var nonMatches:[String] = []
     
-   
     
     init(problemID:String,problem:Problem? = nil,caller:String,completionHandler:(result:FIRDataSnapshot)->Void){
         super.init()

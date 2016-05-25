@@ -12,7 +12,6 @@ class ChangeOrgCode:NSObject{
     
     var petitionId:Int = 1
     var session = NSURLSession.sharedSession()
-    
     var parameterDictionary = [String:AnyObject]()
     
     

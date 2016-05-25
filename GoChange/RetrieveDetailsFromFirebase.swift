@@ -15,7 +15,6 @@ class RetrieveDetailsFromFirebase:NSObject{
     var results:[String] = []
     
     init(userRefArray:[String],completionHandler:(results:[String])->Void){
-        
         super.init()
         
         let ref = FIRDatabase.database().reference().child("problem/details")
