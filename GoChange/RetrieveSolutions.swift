@@ -15,7 +15,6 @@ class RetrieveSolutions:NSObject{
     init(problem:Problem,completionHandler:(result:AnyObject)-> Void){
         super.init()
         
-        
         // empty TempArrays ready to be populate with new data
         TempSave.sharedInstance().solutionNameArray = []
         TempSave.sharedInstance().solutionDetailArray = []
@@ -47,7 +46,6 @@ class RetrieveSolutions:NSObject{
             
             
         }catch{
-            //TODO: catch errors
         }
         
         

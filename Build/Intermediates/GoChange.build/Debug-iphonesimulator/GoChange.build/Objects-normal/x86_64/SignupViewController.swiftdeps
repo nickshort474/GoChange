@@ -6,60 +6,63 @@ provides-nominal:
 provides-member:
 - ["C8GoChange20SignupViewController", ""]
 provides-dynamic-lookup:
-- "label3"
 - "presentAlert"
-- "signupButton"
-- "signupButton"
-- "passwordTextfield"
-- "usernameTextfield"
-- "ref"
-- "sendingController"
-- "updateField"
-- "label2"
+- "label3"
 - "viewDidLoad"
-- "textFieldShouldReturn"
-- "emailTextfield"
-- "cancelButton"
 - "updateChildValues"
+- "usernameTextfield"
+- "label2"
+- "sendingController"
+- "signupButton"
+- "signupButton"
+- "updateField"
+- "cancelButton"
+- "textFieldShouldReturn"
+- "passwordTextfield"
 - "label1"
+- "emailTextfield"
+- "ref"
 depends-top-level:
-- !private "&&"
+- "UITextFieldDelegate"
+- !private "FIRAuth"
+- "Dictionary"
+- "Bool"
+- "UIViewController"
+- "String"
 - !private "NSUserDefaults"
-- "UIButton"
-- !private "UIAlertController"
-- "UITextField"
-- "UILabel"
 - !private "=="
-- "Firebase"
+- "UILabel"
+- "FIRDatabaseReference"
+- !private "UIAlertController"
 - "SignupViewController"
 - "StringLiteralType"
-- !private "UIControlState"
-- !private "!="
-- !private "UIAlertAction"
-- !private "CheckForNetwork"
-- "Dictionary"
 - !private "UIAlertActionStyle"
-- "UITextFieldDelegate"
-- "UIViewController"
+- "UITextField"
+- !private "UIControlState"
+- !private "UIAlertAction"
+- !private "&&"
+- !private "!="
+- "UIButton"
 - "BooleanLiteralType"
-- "String"
-- "Bool"
+- !private "CheckForNetwork"
+- !private "FIRDatabase"
 depends-member:
 - !private ["Ps9AnyObject", "CheckForNetwork"]
-- ["Ps9AnyObject", "Firebase"]
+- !private ["Ps9AnyObject", "FIRAuth"]
+- !private ["Ps9AnyObject", "FIRDatabase"]
 - !private ["Ps9AnyObject", "NSUserDefaults"]
 - !private ["Ps9AnyObject", "UIAlertAction"]
 - !private ["Ps9AnyObject", "UIAlertActionStyle"]
 - !private ["Ps9AnyObject", "UIAlertController"]
 - !private ["Ps9AnyObject", "UIControlState"]
 - !private ["Ps9AnyObject", "addAction"]
-- !private ["Ps9AnyObject", "authUser"]
+- !private ["Ps9AnyObject", "auth"]
 - ["Ps9AnyObject", "cancelButton"]
-- !private ["Ps9AnyObject", "changeEmailForUser"]
-- !private ["Ps9AnyObject", "changePasswordForUser"]
-- !private ["Ps9AnyObject", "childByAppendingPath"]
-- !private ["Ps9AnyObject", "createUser"]
+- !private ["Ps9AnyObject", "child"]
+- !private ["Ps9AnyObject", "createUserWithEmail"]
 - !private ["Ps9AnyObject", "currentTitle"]
+- !private ["Ps9AnyObject", "currentUser"]
+- !private ["Ps9AnyObject", "database"]
 - !private ["Ps9AnyObject", "deinit"]
 - !private ["Ps9AnyObject", "delegate"]
 - !private ["Ps9AnyObject", "dismissViewControllerAnimated"]
@@ -74,12 +77,14 @@ depends-member:
 - ["Ps9AnyObject", "passwordTextfield"]
 - ["Ps9AnyObject", "presentAlert"]
 - !private ["Ps9AnyObject", "presentViewController"]
-- !private ["Ps9AnyObject", "provider"]
+- !private ["Ps9AnyObject", "providerID"]
 - ["Ps9AnyObject", "ref"]
+- !private ["Ps9AnyObject", "reference"]
 - !private ["Ps9AnyObject", "resignFirstResponder"]
 - ["Ps9AnyObject", "sendingController"]
 - !private ["Ps9AnyObject", "setTitle"]
 - !private ["Ps9AnyObject", "setValue"]
+- !private ["Ps9AnyObject", "signInWithEmail"]
 - ["Ps9AnyObject", "signupButton"]
 - !private ["Ps9AnyObject", "standardUserDefaults"]
 - !private ["Ps9AnyObject", "text"]
@@ -92,7 +97,9 @@ depends-member:
 - ["Ps9AnyObject", "textFieldShouldReturn"]
 - !private ["Ps9AnyObject", "uid"]
 - ["Ps9AnyObject", "updateChildValues"]
+- !private ["Ps9AnyObject", "updateEmail"]
 - ["Ps9AnyObject", "updateField"]
+- !private ["Ps9AnyObject", "updatePassword"]
 - ["Ps9AnyObject", "usernameTextfield"]
 - !private ["Ps9AnyObject", "value"]
 - !private ["Ps9AnyObject", "valueForKey"]
@@ -104,20 +111,21 @@ depends-member:
 - !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
 - !private ["Ps11CVarArgType", "CheckForNetwork"]
-- ["Ps11CVarArgType", "Firebase"]
+- !private ["Ps11CVarArgType", "FIRAuth"]
+- !private ["Ps11CVarArgType", "FIRDatabase"]
 - !private ["Ps11CVarArgType", "NSUserDefaults"]
 - !private ["Ps11CVarArgType", "UIAlertAction"]
 - !private ["Ps11CVarArgType", "UIAlertActionStyle"]
 - !private ["Ps11CVarArgType", "UIAlertController"]
 - !private ["Ps11CVarArgType", "UIControlState"]
 - !private ["Ps11CVarArgType", "addAction"]
-- !private ["Ps11CVarArgType", "authUser"]
+- !private ["Ps11CVarArgType", "auth"]
 - ["Ps11CVarArgType", "cancelButton"]
-- !private ["Ps11CVarArgType", "changeEmailForUser"]
-- !private ["Ps11CVarArgType", "changePasswordForUser"]
-- !private ["Ps11CVarArgType", "childByAppendingPath"]
-- !private ["Ps11CVarArgType", "createUser"]
+- !private ["Ps11CVarArgType", "child"]
+- !private ["Ps11CVarArgType", "createUserWithEmail"]
 - !private ["Ps11CVarArgType", "currentTitle"]
+- !private ["Ps11CVarArgType", "currentUser"]
+- !private ["Ps11CVarArgType", "database"]
 - !private ["Ps11CVarArgType", "delegate"]
 - !private ["Ps11CVarArgType", "dismissViewControllerAnimated"]
 - ["Ps11CVarArgType", "emailTextfield"]
@@ -130,12 +138,14 @@ depends-member:
 - ["Ps11CVarArgType", "passwordTextfield"]
 - ["Ps11CVarArgType", "presentAlert"]
 - !private ["Ps11CVarArgType", "presentViewController"]
-- !private ["Ps11CVarArgType", "provider"]
+- !private ["Ps11CVarArgType", "providerID"]
 - ["Ps11CVarArgType", "ref"]
+- !private ["Ps11CVarArgType", "reference"]
 - !private ["Ps11CVarArgType", "resignFirstResponder"]
 - ["Ps11CVarArgType", "sendingController"]
 - !private ["Ps11CVarArgType", "setTitle"]
 - !private ["Ps11CVarArgType", "setValue"]
+- !private ["Ps11CVarArgType", "signInWithEmail"]
 - ["Ps11CVarArgType", "signupButton"]
 - !private ["Ps11CVarArgType", "standardUserDefaults"]
 - !private ["Ps11CVarArgType", "text"]
@@ -148,7 +158,9 @@ depends-member:
 - ["Ps11CVarArgType", "textFieldShouldReturn"]
 - !private ["Ps11CVarArgType", "uid"]
 - ["Ps11CVarArgType", "updateChildValues"]
+- !private ["Ps11CVarArgType", "updateEmail"]
 - ["Ps11CVarArgType", "updateField"]
+- !private ["Ps11CVarArgType", "updatePassword"]
 - ["Ps11CVarArgType", "usernameTextfield"]
 - !private ["Ps11CVarArgType", "value"]
 - !private ["Ps11CVarArgType", "valueForKey"]
@@ -160,7 +172,8 @@ depends-member:
 - !private ["Ps14CollectionType", "Value"]
 - !private ["Ps10Comparable", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "CheckForNetwork"]
-- ["Ps28CustomDebugStringConvertible", "Firebase"]
+- !private ["Ps28CustomDebugStringConvertible", "FIRAuth"]
+- !private ["Ps28CustomDebugStringConvertible", "FIRDatabase"]
 - !private ["Ps28CustomDebugStringConvertible", "Key"]
 - !private ["Ps28CustomDebugStringConvertible", "NSUserDefaults"]
 - !private ["Ps28CustomDebugStringConvertible", "UIAlertAction"]
@@ -169,13 +182,13 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "UIControlState"]
 - !private ["Ps28CustomDebugStringConvertible", "Value"]
 - !private ["Ps28CustomDebugStringConvertible", "addAction"]
-- !private ["Ps28CustomDebugStringConvertible", "authUser"]
+- !private ["Ps28CustomDebugStringConvertible", "auth"]
 - ["Ps28CustomDebugStringConvertible", "cancelButton"]
-- !private ["Ps28CustomDebugStringConvertible", "changeEmailForUser"]
-- !private ["Ps28CustomDebugStringConvertible", "changePasswordForUser"]
-- !private ["Ps28CustomDebugStringConvertible", "childByAppendingPath"]
-- !private ["Ps28CustomDebugStringConvertible", "createUser"]
+- !private ["Ps28CustomDebugStringConvertible", "child"]
+- !private ["Ps28CustomDebugStringConvertible", "createUserWithEmail"]
 - !private ["Ps28CustomDebugStringConvertible", "currentTitle"]
+- !private ["Ps28CustomDebugStringConvertible", "currentUser"]
+- !private ["Ps28CustomDebugStringConvertible", "database"]
 - !private ["Ps28CustomDebugStringConvertible", "delegate"]
 - !private ["Ps28CustomDebugStringConvertible", "dismissViewControllerAnimated"]
 - ["Ps28CustomDebugStringConvertible", "emailTextfield"]
@@ -188,12 +201,14 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "passwordTextfield"]
 - ["Ps28CustomDebugStringConvertible", "presentAlert"]
 - !private ["Ps28CustomDebugStringConvertible", "presentViewController"]
-- !private ["Ps28CustomDebugStringConvertible", "provider"]
+- !private ["Ps28CustomDebugStringConvertible", "providerID"]
 - ["Ps28CustomDebugStringConvertible", "ref"]
+- !private ["Ps28CustomDebugStringConvertible", "reference"]
 - !private ["Ps28CustomDebugStringConvertible", "resignFirstResponder"]
 - ["Ps28CustomDebugStringConvertible", "sendingController"]
 - !private ["Ps28CustomDebugStringConvertible", "setTitle"]
 - !private ["Ps28CustomDebugStringConvertible", "setValue"]
+- !private ["Ps28CustomDebugStringConvertible", "signInWithEmail"]
 - ["Ps28CustomDebugStringConvertible", "signupButton"]
 - !private ["Ps28CustomDebugStringConvertible", "standardUserDefaults"]
 - !private ["Ps28CustomDebugStringConvertible", "text"]
@@ -206,14 +221,17 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "textFieldShouldReturn"]
 - !private ["Ps28CustomDebugStringConvertible", "uid"]
 - ["Ps28CustomDebugStringConvertible", "updateChildValues"]
+- !private ["Ps28CustomDebugStringConvertible", "updateEmail"]
 - ["Ps28CustomDebugStringConvertible", "updateField"]
+- !private ["Ps28CustomDebugStringConvertible", "updatePassword"]
 - ["Ps28CustomDebugStringConvertible", "usernameTextfield"]
 - !private ["Ps28CustomDebugStringConvertible", "value"]
 - !private ["Ps28CustomDebugStringConvertible", "valueForKey"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps23CustomStringConvertible", "CheckForNetwork"]
-- ["Ps23CustomStringConvertible", "Firebase"]
+- !private ["Ps23CustomStringConvertible", "FIRAuth"]
+- !private ["Ps23CustomStringConvertible", "FIRDatabase"]
 - !private ["Ps23CustomStringConvertible", "Key"]
 - !private ["Ps23CustomStringConvertible", "NSUserDefaults"]
 - !private ["Ps23CustomStringConvertible", "UIAlertAction"]
@@ -223,13 +241,13 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "Value"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps23CustomStringConvertible", "addAction"]
-- !private ["Ps23CustomStringConvertible", "authUser"]
+- !private ["Ps23CustomStringConvertible", "auth"]
 - ["Ps23CustomStringConvertible", "cancelButton"]
-- !private ["Ps23CustomStringConvertible", "changeEmailForUser"]
-- !private ["Ps23CustomStringConvertible", "changePasswordForUser"]
-- !private ["Ps23CustomStringConvertible", "childByAppendingPath"]
-- !private ["Ps23CustomStringConvertible", "createUser"]
+- !private ["Ps23CustomStringConvertible", "child"]
+- !private ["Ps23CustomStringConvertible", "createUserWithEmail"]
 - !private ["Ps23CustomStringConvertible", "currentTitle"]
+- !private ["Ps23CustomStringConvertible", "currentUser"]
+- !private ["Ps23CustomStringConvertible", "database"]
 - !private ["Ps23CustomStringConvertible", "delegate"]
 - !private ["Ps23CustomStringConvertible", "dismissViewControllerAnimated"]
 - ["Ps23CustomStringConvertible", "emailTextfield"]
@@ -242,12 +260,14 @@ depends-member:
 - ["Ps23CustomStringConvertible", "passwordTextfield"]
 - ["Ps23CustomStringConvertible", "presentAlert"]
 - !private ["Ps23CustomStringConvertible", "presentViewController"]
-- !private ["Ps23CustomStringConvertible", "provider"]
+- !private ["Ps23CustomStringConvertible", "providerID"]
 - ["Ps23CustomStringConvertible", "ref"]
+- !private ["Ps23CustomStringConvertible", "reference"]
 - !private ["Ps23CustomStringConvertible", "resignFirstResponder"]
 - ["Ps23CustomStringConvertible", "sendingController"]
 - !private ["Ps23CustomStringConvertible", "setTitle"]
 - !private ["Ps23CustomStringConvertible", "setValue"]
+- !private ["Ps23CustomStringConvertible", "signInWithEmail"]
 - ["Ps23CustomStringConvertible", "signupButton"]
 - !private ["Ps23CustomStringConvertible", "standardUserDefaults"]
 - !private ["Ps23CustomStringConvertible", "text"]
@@ -260,7 +280,9 @@ depends-member:
 - ["Ps23CustomStringConvertible", "textFieldShouldReturn"]
 - !private ["Ps23CustomStringConvertible", "uid"]
 - ["Ps23CustomStringConvertible", "updateChildValues"]
+- !private ["Ps23CustomStringConvertible", "updateEmail"]
 - ["Ps23CustomStringConvertible", "updateField"]
+- !private ["Ps23CustomStringConvertible", "updatePassword"]
 - ["Ps23CustomStringConvertible", "usernameTextfield"]
 - !private ["Ps23CustomStringConvertible", "value"]
 - !private ["Ps23CustomStringConvertible", "valueForKey"]
@@ -274,7 +296,8 @@ depends-member:
 - !private ["Sd", "deinit"]
 - !private ["Ps9Equatable", "Cancel"]
 - !private ["Ps9Equatable", "CheckForNetwork"]
-- ["Ps9Equatable", "Firebase"]
+- !private ["Ps9Equatable", "FIRAuth"]
+- !private ["Ps9Equatable", "FIRDatabase"]
 - !private ["Ps9Equatable", "NSUserDefaults"]
 - !private ["Ps9Equatable", "Normal"]
 - !private ["Ps9Equatable", "UIAlertAction"]
@@ -284,13 +307,13 @@ depends-member:
 - !private ["Ps9Equatable", "Value"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "addAction"]
-- !private ["Ps9Equatable", "authUser"]
+- !private ["Ps9Equatable", "auth"]
 - ["Ps9Equatable", "cancelButton"]
-- !private ["Ps9Equatable", "changeEmailForUser"]
-- !private ["Ps9Equatable", "changePasswordForUser"]
-- !private ["Ps9Equatable", "childByAppendingPath"]
-- !private ["Ps9Equatable", "createUser"]
+- !private ["Ps9Equatable", "child"]
+- !private ["Ps9Equatable", "createUserWithEmail"]
 - !private ["Ps9Equatable", "currentTitle"]
+- !private ["Ps9Equatable", "currentUser"]
+- !private ["Ps9Equatable", "database"]
 - !private ["Ps9Equatable", "delegate"]
 - !private ["Ps9Equatable", "dismissViewControllerAnimated"]
 - ["Ps9Equatable", "emailTextfield"]
@@ -303,12 +326,14 @@ depends-member:
 - ["Ps9Equatable", "passwordTextfield"]
 - ["Ps9Equatable", "presentAlert"]
 - !private ["Ps9Equatable", "presentViewController"]
-- !private ["Ps9Equatable", "provider"]
+- !private ["Ps9Equatable", "providerID"]
 - ["Ps9Equatable", "ref"]
+- !private ["Ps9Equatable", "reference"]
 - !private ["Ps9Equatable", "resignFirstResponder"]
 - ["Ps9Equatable", "sendingController"]
 - !private ["Ps9Equatable", "setTitle"]
 - !private ["Ps9Equatable", "setValue"]
+- !private ["Ps9Equatable", "signInWithEmail"]
 - ["Ps9Equatable", "signupButton"]
 - !private ["Ps9Equatable", "standardUserDefaults"]
 - !private ["Ps9Equatable", "text"]
@@ -321,39 +346,44 @@ depends-member:
 - ["Ps9Equatable", "textFieldShouldReturn"]
 - !private ["Ps9Equatable", "uid"]
 - ["Ps9Equatable", "updateChildValues"]
+- !private ["Ps9Equatable", "updateEmail"]
 - ["Ps9Equatable", "updateField"]
+- !private ["Ps9Equatable", "updatePassword"]
 - ["Ps9Equatable", "usernameTextfield"]
 - !private ["Ps9Equatable", "value"]
 - !private ["Ps9Equatable", "valueForKey"]
 - ["Ps9Equatable", "viewDidLoad"]
 - ["Ps9Equatable", ""]
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
-- !private ["CSo9FAuthData", "provider"]
-- !private ["CSo9FAuthData", "uid"]
-- !private ["CSo13FDataSnapshot", "value"]
-- !private ["OSC10FEventType", "Value"]
-- !private ["CSo6FQuery", "authUser"]
-- !private ["CSo6FQuery", "changeEmailForUser"]
-- !private ["CSo6FQuery", "changePasswordForUser"]
-- !private ["CSo6FQuery", "childByAppendingPath"]
-- !private ["CSo6FQuery", "createUser"]
-- ["CSo6FQuery", "init"]
-- !private ["CSo6FQuery", "observeEventType"]
-- !private ["CSo6FQuery", "setValue"]
-- !private ["CSo6FQuery", "updateChildValues"]
-- !private ["CSo8Firebase", "authUser"]
-- !private ["CSo8Firebase", "changeEmailForUser"]
-- !private ["CSo8Firebase", "changePasswordForUser"]
-- !private ["CSo8Firebase", "childByAppendingPath"]
-- !private ["CSo8Firebase", "createUser"]
-- ["CSo8Firebase", "init"]
-- !private ["CSo8Firebase", "observeEventType"]
-- !private ["CSo8Firebase", "setValue"]
-- !private ["CSo8Firebase", "updateChildValues"]
+- !private ["CSo7FIRAuth", "auth"]
+- !private ["CSo7FIRAuth", "createUserWithEmail"]
+- !private ["CSo7FIRAuth", "currentUser"]
+- !private ["CSo7FIRAuth", "signInWithEmail"]
+- !private ["OSC16FIRDataEventType", "Value"]
+- !private ["CSo15FIRDataSnapshot", "value"]
+- !private ["CSo11FIRDatabase", "database"]
+- !private ["CSo11FIRDatabase", "reference"]
+- !private ["CSo16FIRDatabaseQuery", "child"]
+- !private ["CSo16FIRDatabaseQuery", "observeEventType"]
+- !private ["CSo16FIRDatabaseQuery", "setValue"]
+- !private ["CSo16FIRDatabaseQuery", "updateChildValues"]
+- !private ["CSo20FIRDatabaseReference", "child"]
+- !private ["CSo20FIRDatabaseReference", "observeEventType"]
+- !private ["CSo20FIRDatabaseReference", "setValue"]
+- !private ["CSo20FIRDatabaseReference", "updateChildValues"]
+- !private ["CSo7FIRUser", "providerID"]
+- !private ["CSo7FIRUser", "uid"]
+- !private ["CSo7FIRUser", "updateEmail"]
+- !private ["CSo7FIRUser", "updatePassword"]
+- !private ["PSo11FIRUserInfo", "providerID"]
+- !private ["PSo11FIRUserInfo", "uid"]
+- !private ["PSo11FIRUserInfo", "updateEmail"]
+- !private ["PSo11FIRUserInfo", "updatePassword"]
 - !private ["Sf", "deinit"]
 - !private ["Ps8Hashable", "Cancel"]
 - !private ["Ps8Hashable", "CheckForNetwork"]
-- ["Ps8Hashable", "Firebase"]
+- !private ["Ps8Hashable", "FIRAuth"]
+- !private ["Ps8Hashable", "FIRDatabase"]
 - !private ["Ps8Hashable", "NSUserDefaults"]
 - !private ["Ps8Hashable", "UIAlertAction"]
 - !private ["Ps8Hashable", "UIAlertActionStyle"]
@@ -362,13 +392,13 @@ depends-member:
 - !private ["Ps8Hashable", "Value"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "addAction"]
-- !private ["Ps8Hashable", "authUser"]
+- !private ["Ps8Hashable", "auth"]
 - ["Ps8Hashable", "cancelButton"]
-- !private ["Ps8Hashable", "changeEmailForUser"]
-- !private ["Ps8Hashable", "changePasswordForUser"]
-- !private ["Ps8Hashable", "childByAppendingPath"]
-- !private ["Ps8Hashable", "createUser"]
+- !private ["Ps8Hashable", "child"]
+- !private ["Ps8Hashable", "createUserWithEmail"]
 - !private ["Ps8Hashable", "currentTitle"]
+- !private ["Ps8Hashable", "currentUser"]
+- !private ["Ps8Hashable", "database"]
 - !private ["Ps8Hashable", "delegate"]
 - !private ["Ps8Hashable", "dismissViewControllerAnimated"]
 - ["Ps8Hashable", "emailTextfield"]
@@ -381,12 +411,14 @@ depends-member:
 - ["Ps8Hashable", "passwordTextfield"]
 - ["Ps8Hashable", "presentAlert"]
 - !private ["Ps8Hashable", "presentViewController"]
-- !private ["Ps8Hashable", "provider"]
+- !private ["Ps8Hashable", "providerID"]
 - ["Ps8Hashable", "ref"]
+- !private ["Ps8Hashable", "reference"]
 - !private ["Ps8Hashable", "resignFirstResponder"]
 - ["Ps8Hashable", "sendingController"]
 - !private ["Ps8Hashable", "setTitle"]
 - !private ["Ps8Hashable", "setValue"]
+- !private ["Ps8Hashable", "signInWithEmail"]
 - ["Ps8Hashable", "signupButton"]
 - !private ["Ps8Hashable", "standardUserDefaults"]
 - !private ["Ps8Hashable", "text"]
@@ -399,13 +431,14 @@ depends-member:
 - ["Ps8Hashable", "textFieldShouldReturn"]
 - !private ["Ps8Hashable", "uid"]
 - ["Ps8Hashable", "updateChildValues"]
+- !private ["Ps8Hashable", "updateEmail"]
 - ["Ps8Hashable", "updateField"]
+- !private ["Ps8Hashable", "updatePassword"]
 - ["Ps8Hashable", "usernameTextfield"]
 - !private ["Ps8Hashable", "value"]
 - !private ["Ps8Hashable", "valueForKey"]
 - ["Ps8Hashable", "viewDidLoad"]
 - ["Ps8Hashable", ""]
-- ["SQ", "deinit"]
 - !private ["Ps9Indexable", "Key"]
 - !private ["Ps9Indexable", "Value"]
 - !private ["Si", "deinit"]
@@ -415,7 +448,8 @@ depends-member:
 - !private ["Vs4Int8", "deinit"]
 - !private ["Ps14MirrorPathType", "init"]
 - !private ["PSo8NSCoding", "CheckForNetwork"]
-- ["PSo8NSCoding", "Firebase"]
+- !private ["PSo8NSCoding", "FIRAuth"]
+- !private ["PSo8NSCoding", "FIRDatabase"]
 - !private ["PSo8NSCoding", "NSUserDefaults"]
 - !private ["PSo8NSCoding", "UIAlertAction"]
 - !private ["PSo8NSCoding", "UIAlertActionStyle"]
@@ -454,9 +488,9 @@ depends-member:
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", ""]
 - !private ["PSo9NSCopying", "init"]
-- !private ["CSo7NSError", "deinit"]
 - !private ["PSo26NSExtensionRequestHandling", "CheckForNetwork"]
-- ["PSo26NSExtensionRequestHandling", "Firebase"]
+- !private ["PSo26NSExtensionRequestHandling", "FIRAuth"]
+- !private ["PSo26NSExtensionRequestHandling", "FIRDatabase"]
 - !private ["PSo26NSExtensionRequestHandling", "NSUserDefaults"]
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertAction"]
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertActionStyle"]
@@ -492,7 +526,9 @@ depends-member:
 - !private ["PSo16NSMutableCopying", "init"]
 - ["CSo8NSObject", "Bool"]
 - !private ["CSo8NSObject", "CheckForNetwork"]
-- ["CSo8NSObject", "Firebase"]
+- !private ["CSo8NSObject", "FIRAuth"]
+- !private ["CSo8NSObject", "FIRDatabase"]
+- ["CSo8NSObject", "FIRDatabaseReference"]
 - !private ["CSo8NSObject", "NSUserDefaults"]
 - ["CSo8NSObject", "String"]
 - !private ["CSo8NSObject", "UIAlertAction"]
@@ -503,14 +539,13 @@ depends-member:
 - ["CSo8NSObject", "UILabel"]
 - ["CSo8NSObject", "UITextField"]
 - !private ["CSo8NSObject", "addAction"]
-- !private ["CSo8NSObject", "authUser"]
+- !private ["CSo8NSObject", "auth"]
 - ["CSo8NSObject", "cancelButton"]
-- !private ["CSo8NSObject", "changeEmailForUser"]
-- !private ["CSo8NSObject", "changePasswordForUser"]
-- !private ["CSo8NSObject", "childByAppendingPath"]
-- !private ["CSo8NSObject", "createUser"]
+- !private ["CSo8NSObject", "child"]
+- !private ["CSo8NSObject", "createUserWithEmail"]
 - !private ["CSo8NSObject", "currentTitle"]
-- !private ["CSo8NSObject", "deinit"]
+- !private ["CSo8NSObject", "currentUser"]
+- !private ["CSo8NSObject", "database"]
 - !private ["CSo8NSObject", "delegate"]
 - !private ["CSo8NSObject", "dismissViewControllerAnimated"]
 - ["CSo8NSObject", "emailTextfield"]
@@ -523,12 +558,14 @@ depends-member:
 - ["CSo8NSObject", "passwordTextfield"]
 - ["CSo8NSObject", "presentAlert"]
 - !private ["CSo8NSObject", "presentViewController"]
-- !private ["CSo8NSObject", "provider"]
+- !private ["CSo8NSObject", "providerID"]
 - ["CSo8NSObject", "ref"]
+- !private ["CSo8NSObject", "reference"]
 - !private ["CSo8NSObject", "resignFirstResponder"]
 - ["CSo8NSObject", "sendingController"]
 - !private ["CSo8NSObject", "setTitle"]
 - !private ["CSo8NSObject", "setValue"]
+- !private ["CSo8NSObject", "signInWithEmail"]
 - ["CSo8NSObject", "signupButton"]
 - !private ["CSo8NSObject", "standardUserDefaults"]
 - !private ["CSo8NSObject", "text"]
@@ -541,26 +578,29 @@ depends-member:
 - ["CSo8NSObject", "textFieldShouldReturn"]
 - !private ["CSo8NSObject", "uid"]
 - ["CSo8NSObject", "updateChildValues"]
+- !private ["CSo8NSObject", "updateEmail"]
 - ["CSo8NSObject", "updateField"]
+- !private ["CSo8NSObject", "updatePassword"]
 - ["CSo8NSObject", "usernameTextfield"]
 - !private ["CSo8NSObject", "value"]
 - !private ["CSo8NSObject", "valueForKey"]
 - ["CSo8NSObject", "viewDidLoad"]
 - !private ["PSo16NSObjectProtocol", "CheckForNetwork"]
-- ["PSo16NSObjectProtocol", "Firebase"]
+- !private ["PSo16NSObjectProtocol", "FIRAuth"]
+- !private ["PSo16NSObjectProtocol", "FIRDatabase"]
 - !private ["PSo16NSObjectProtocol", "NSUserDefaults"]
 - !private ["PSo16NSObjectProtocol", "UIAlertAction"]
 - !private ["PSo16NSObjectProtocol", "UIAlertActionStyle"]
 - !private ["PSo16NSObjectProtocol", "UIAlertController"]
 - !private ["PSo16NSObjectProtocol", "UIControlState"]
 - !private ["PSo16NSObjectProtocol", "addAction"]
-- !private ["PSo16NSObjectProtocol", "authUser"]
+- !private ["PSo16NSObjectProtocol", "auth"]
 - ["PSo16NSObjectProtocol", "cancelButton"]
-- !private ["PSo16NSObjectProtocol", "changeEmailForUser"]
-- !private ["PSo16NSObjectProtocol", "changePasswordForUser"]
-- !private ["PSo16NSObjectProtocol", "childByAppendingPath"]
-- !private ["PSo16NSObjectProtocol", "createUser"]
+- !private ["PSo16NSObjectProtocol", "child"]
+- !private ["PSo16NSObjectProtocol", "createUserWithEmail"]
 - !private ["PSo16NSObjectProtocol", "currentTitle"]
+- !private ["PSo16NSObjectProtocol", "currentUser"]
+- !private ["PSo16NSObjectProtocol", "database"]
 - !private ["PSo16NSObjectProtocol", "delegate"]
 - !private ["PSo16NSObjectProtocol", "dismissViewControllerAnimated"]
 - ["PSo16NSObjectProtocol", "emailTextfield"]
@@ -573,12 +613,14 @@ depends-member:
 - ["PSo16NSObjectProtocol", "passwordTextfield"]
 - ["PSo16NSObjectProtocol", "presentAlert"]
 - !private ["PSo16NSObjectProtocol", "presentViewController"]
-- !private ["PSo16NSObjectProtocol", "provider"]
+- !private ["PSo16NSObjectProtocol", "providerID"]
 - ["PSo16NSObjectProtocol", "ref"]
+- !private ["PSo16NSObjectProtocol", "reference"]
 - !private ["PSo16NSObjectProtocol", "resignFirstResponder"]
 - ["PSo16NSObjectProtocol", "sendingController"]
 - !private ["PSo16NSObjectProtocol", "setTitle"]
 - !private ["PSo16NSObjectProtocol", "setValue"]
+- !private ["PSo16NSObjectProtocol", "signInWithEmail"]
 - ["PSo16NSObjectProtocol", "signupButton"]
 - !private ["PSo16NSObjectProtocol", "standardUserDefaults"]
 - !private ["PSo16NSObjectProtocol", "text"]
@@ -591,7 +633,9 @@ depends-member:
 - ["PSo16NSObjectProtocol", "textFieldShouldReturn"]
 - !private ["PSo16NSObjectProtocol", "uid"]
 - ["PSo16NSObjectProtocol", "updateChildValues"]
+- !private ["PSo16NSObjectProtocol", "updateEmail"]
 - ["PSo16NSObjectProtocol", "updateField"]
+- !private ["PSo16NSObjectProtocol", "updatePassword"]
 - ["PSo16NSObjectProtocol", "usernameTextfield"]
 - !private ["PSo16NSObjectProtocol", "value"]
 - !private ["PSo16NSObjectProtocol", "valueForKey"]
@@ -613,7 +657,9 @@ depends-member:
 - !private ["Ps14SetAlgebraType", "Normal"]
 - ["C8GoChange20SignupViewController", "Bool"]
 - !private ["C8GoChange20SignupViewController", "CheckForNetwork"]
-- ["C8GoChange20SignupViewController", "Firebase"]
+- !private ["C8GoChange20SignupViewController", "FIRAuth"]
+- !private ["C8GoChange20SignupViewController", "FIRDatabase"]
+- ["C8GoChange20SignupViewController", "FIRDatabaseReference"]
 - !private ["C8GoChange20SignupViewController", "NSUserDefaults"]
 - ["C8GoChange20SignupViewController", "String"]
 - !private ["C8GoChange20SignupViewController", "UIAlertAction"]
@@ -669,7 +715,8 @@ depends-member:
 - !private ["PSo12UIAppearance", "setTitle"]
 - !private ["PSo12UIAppearance", "text"]
 - !private ["PSo21UIAppearanceContainer", "CheckForNetwork"]
-- ["PSo21UIAppearanceContainer", "Firebase"]
+- !private ["PSo21UIAppearanceContainer", "FIRAuth"]
+- !private ["PSo21UIAppearanceContainer", "FIRDatabase"]
 - !private ["PSo21UIAppearanceContainer", "NSUserDefaults"]
 - !private ["PSo21UIAppearanceContainer", "UIAlertAction"]
 - !private ["PSo21UIAppearanceContainer", "UIAlertActionStyle"]
@@ -710,7 +757,8 @@ depends-member:
 - !private ["CSo8UIButton", "currentTitle"]
 - !private ["CSo8UIButton", "setTitle"]
 - !private ["PSo18UIContentContainer", "CheckForNetwork"]
-- ["PSo18UIContentContainer", "Firebase"]
+- !private ["PSo18UIContentContainer", "FIRAuth"]
+- !private ["PSo18UIContentContainer", "FIRDatabase"]
 - !private ["PSo18UIContentContainer", "NSUserDefaults"]
 - !private ["PSo18UIContentContainer", "UIAlertAction"]
 - !private ["PSo18UIContentContainer", "UIAlertActionStyle"]
@@ -760,7 +808,8 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "setTitle"]
 - !private ["PSo13UIDynamicItem", "text"]
 - !private ["PSo18UIFocusEnvironment", "CheckForNetwork"]
-- ["PSo18UIFocusEnvironment", "Firebase"]
+- !private ["PSo18UIFocusEnvironment", "FIRAuth"]
+- !private ["PSo18UIFocusEnvironment", "FIRDatabase"]
 - !private ["PSo18UIFocusEnvironment", "NSUserDefaults"]
 - !private ["PSo18UIFocusEnvironment", "UIAlertAction"]
 - !private ["PSo18UIFocusEnvironment", "UIAlertActionStyle"]
@@ -804,7 +853,9 @@ depends-member:
 - !private ["CSo7UILabel", "text"]
 - ["CSo11UIResponder", "Bool"]
 - !private ["CSo11UIResponder", "CheckForNetwork"]
-- ["CSo11UIResponder", "Firebase"]
+- !private ["CSo11UIResponder", "FIRAuth"]
+- !private ["CSo11UIResponder", "FIRDatabase"]
+- ["CSo11UIResponder", "FIRDatabaseReference"]
 - !private ["CSo11UIResponder", "NSUserDefaults"]
 - ["CSo11UIResponder", "String"]
 - !private ["CSo11UIResponder", "UIAlertAction"]
@@ -846,7 +897,8 @@ depends-member:
 - ["CSo11UIResponder", "usernameTextfield"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - !private ["PSo16UIStateRestoring", "CheckForNetwork"]
-- ["PSo16UIStateRestoring", "Firebase"]
+- !private ["PSo16UIStateRestoring", "FIRAuth"]
+- !private ["PSo16UIStateRestoring", "FIRDatabase"]
 - !private ["PSo16UIStateRestoring", "NSUserDefaults"]
 - !private ["PSo16UIStateRestoring", "UIAlertAction"]
 - !private ["PSo16UIStateRestoring", "UIAlertActionStyle"]
@@ -883,7 +935,8 @@ depends-member:
 - !private ["CSo11UITextField", "resignFirstResponder"]
 - !private ["CSo11UITextField", "text"]
 - !private ["PSo19UITextFieldDelegate", "CheckForNetwork"]
-- ["PSo19UITextFieldDelegate", "Firebase"]
+- !private ["PSo19UITextFieldDelegate", "FIRAuth"]
+- !private ["PSo19UITextFieldDelegate", "FIRDatabase"]
 - !private ["PSo19UITextFieldDelegate", "NSUserDefaults"]
 - !private ["PSo19UITextFieldDelegate", "UIAlertAction"]
 - !private ["PSo19UITextFieldDelegate", "UIAlertActionStyle"]
@@ -918,7 +971,8 @@ depends-member:
 - !private ["PSo17UITextInputTraits", "resignFirstResponder"]
 - !private ["PSo17UITextInputTraits", "text"]
 - !private ["PSo18UITraitEnvironment", "CheckForNetwork"]
-- ["PSo18UITraitEnvironment", "Firebase"]
+- !private ["PSo18UITraitEnvironment", "FIRAuth"]
+- !private ["PSo18UITraitEnvironment", "FIRDatabase"]
 - !private ["PSo18UITraitEnvironment", "NSUserDefaults"]
 - !private ["PSo18UITraitEnvironment", "UIAlertAction"]
 - !private ["PSo18UITraitEnvironment", "UIAlertActionStyle"]
@@ -963,7 +1017,9 @@ depends-member:
 - !private ["CSo6UIView", "text"]
 - ["CSo16UIViewController", "Bool"]
 - !private ["CSo16UIViewController", "CheckForNetwork"]
-- ["CSo16UIViewController", "Firebase"]
+- !private ["CSo16UIViewController", "FIRAuth"]
+- !private ["CSo16UIViewController", "FIRDatabase"]
+- ["CSo16UIViewController", "FIRDatabaseReference"]
 - !private ["CSo16UIViewController", "NSUserDefaults"]
 - ["CSo16UIViewController", "String"]
 - !private ["CSo16UIViewController", "UIAlertAction"]
@@ -1044,14 +1100,16 @@ depends-nominal:
 - !private "Sd"
 - "Ps9Equatable"
 - !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
-- !private "CSo9FAuthData"
-- !private "CSo13FDataSnapshot"
-- !private "OSC10FEventType"
-- "CSo6FQuery"
-- "CSo8Firebase"
+- !private "CSo7FIRAuth"
+- !private "OSC16FIRDataEventType"
+- !private "CSo15FIRDataSnapshot"
+- !private "CSo11FIRDatabase"
+- !private "CSo16FIRDatabaseQuery"
+- !private "CSo20FIRDatabaseReference"
+- !private "CSo7FIRUser"
+- !private "PSo11FIRUserInfo"
 - !private "Sf"
 - "Ps8Hashable"
-- "SQ"
 - !private "Ps9Indexable"
 - !private "Si"
 - !private "Vs5Int16"
@@ -1061,7 +1119,6 @@ depends-nominal:
 - !private "Ps14MirrorPathType"
 - "PSo8NSCoding"
 - !private "PSo9NSCopying"
-- !private "CSo7NSError"
 - "PSo26NSExtensionRequestHandling"
 - !private "PSo16NSMutableCopying"
 - "CSo8NSObject"
@@ -1125,23 +1182,49 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/Firebase/Headers/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FirebaseServerValue.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FTransactionResult.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FMutableData.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FirebaseApp.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FQuery.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/Firebase.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FEventType.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FDataSnapshot.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FConfig.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FAuthType.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FAuthData.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/Firebase-umbrella.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Modules/module.modulemap"
-interface-hash: "25d062033460cb4dbeee4467248ebd42"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRConfiguration.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRApp.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIREmailPasswordAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/Firebase/Headers/Firebase.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/WebKit.swiftmodule"
+interface-hash: "f5f698832b4ebad2d98ba71c40b6dfdc"

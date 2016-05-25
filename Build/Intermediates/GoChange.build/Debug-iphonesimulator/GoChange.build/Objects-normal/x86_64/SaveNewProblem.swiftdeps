@@ -6,38 +6,38 @@ provides-nominal:
 provides-member:
 - ["C8GoChange14SaveNewProblem", ""]
 provides-dynamic-lookup:
-- "problemID"
 - "saveDetailsToFirebase"
+- "problemID"
 - "saveSolutionsToFirebase"
-- "solutionIDArray"
-- "newProblem"
-- "createCoreDataProblem"
-- "sharedContext"
 - "saveProblemToFirebase"
 - "createCoreDataSolutions"
+- "createCoreDataProblem"
+- "sharedContext"
+- "solutionIDArray"
+- "newProblem"
 depends-top-level:
-- "AnyObject"
-- "SaveNewProblem"
-- !private "Solution"
-- "NSObject"
-- "String"
-- "NSManagedObjectContext"
 - !private "StringLiteralType"
-- !private "NSUserDefaults"
-- !private "Firebase"
-- !private "TempSave"
-- "Void"
-- "Array"
-- !private "CoreDataStackManager"
-- "NSMutableArray"
+- !private "Solution"
 - "Problem"
+- "NSMutableArray"
+- !private "FIRDatabase"
+- !private "TempSave"
+- !private "CoreDataStackManager"
+- "NSObject"
+- "AnyObject"
 - !private "Dictionary"
 - !private "..<"
+- "NSManagedObjectContext"
+- "String"
+- "Void"
+- !private "NSUserDefaults"
+- "SaveNewProblem"
+- "Array"
 depends-member:
 - !private ["Ps9AnyObject", "AnyObject"]
 - !private ["Ps9AnyObject", "CoreDataStackManager"]
 - ["Ps9AnyObject", "Element"]
-- !private ["Ps9AnyObject", "Firebase"]
+- !private ["Ps9AnyObject", "FIRDatabase"]
 - !private ["Ps9AnyObject", "Key"]
 - !private ["Ps9AnyObject", "Keys"]
 - !private ["Ps9AnyObject", "NSUserDefaults"]
@@ -47,10 +47,11 @@ depends-member:
 - !private ["Ps9AnyObject", "TempSave"]
 - !private ["Ps9AnyObject", "Value"]
 - !private ["Ps9AnyObject", "addObject"]
-- !private ["Ps9AnyObject", "childByAppendingPath"]
+- !private ["Ps9AnyObject", "child"]
 - !private ["Ps9AnyObject", "childByAutoId"]
 - ["Ps9AnyObject", "createCoreDataProblem"]
 - ["Ps9AnyObject", "createCoreDataSolutions"]
+- !private ["Ps9AnyObject", "database"]
 - !private ["Ps9AnyObject", "deinit"]
 - ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "key"]
@@ -60,6 +61,7 @@ depends-member:
 - !private ["Ps9AnyObject", "problemDetail"]
 - ["Ps9AnyObject", "problemID"]
 - !private ["Ps9AnyObject", "problemName"]
+- !private ["Ps9AnyObject", "reference"]
 - !private ["Ps9AnyObject", "save"]
 - ["Ps9AnyObject", "saveDetailsToFirebase"]
 - ["Ps9AnyObject", "saveProblemToFirebase"]
@@ -104,7 +106,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "CoreDataStackManager"]
 - !private ["Ps11CVarArgType", "Distance"]
 - ["Ps11CVarArgType", "Element"]
-- !private ["Ps11CVarArgType", "Firebase"]
+- !private ["Ps11CVarArgType", "FIRDatabase"]
 - !private ["Ps11CVarArgType", "IntegerLiteralType"]
 - !private ["Ps11CVarArgType", "Key"]
 - !private ["Ps11CVarArgType", "Keys"]
@@ -116,10 +118,11 @@ depends-member:
 - !private ["Ps11CVarArgType", "Value"]
 - !private ["Ps11CVarArgType", "_DisabledRangeIndex"]
 - !private ["Ps11CVarArgType", "addObject"]
-- !private ["Ps11CVarArgType", "childByAppendingPath"]
+- !private ["Ps11CVarArgType", "child"]
 - !private ["Ps11CVarArgType", "childByAutoId"]
 - ["Ps11CVarArgType", "createCoreDataProblem"]
 - ["Ps11CVarArgType", "createCoreDataSolutions"]
+- !private ["Ps11CVarArgType", "database"]
 - ["Ps11CVarArgType", "init"]
 - !private ["Ps11CVarArgType", "key"]
 - ["Ps11CVarArgType", "newProblem"]
@@ -127,6 +130,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "problemDetail"]
 - ["Ps11CVarArgType", "problemID"]
 - !private ["Ps11CVarArgType", "problemName"]
+- !private ["Ps11CVarArgType", "reference"]
 - !private ["Ps11CVarArgType", "save"]
 - ["Ps11CVarArgType", "saveDetailsToFirebase"]
 - ["Ps11CVarArgType", "saveProblemToFirebase"]
@@ -160,7 +164,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "AnyObject"]
 - !private ["Ps28CustomDebugStringConvertible", "CoreDataStackManager"]
 - ["Ps28CustomDebugStringConvertible", "Element"]
-- !private ["Ps28CustomDebugStringConvertible", "Firebase"]
+- !private ["Ps28CustomDebugStringConvertible", "FIRDatabase"]
 - !private ["Ps28CustomDebugStringConvertible", "Generator"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "Key"]
@@ -173,11 +177,12 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "TempSave"]
 - !private ["Ps28CustomDebugStringConvertible", "Value"]
 - !private ["Ps28CustomDebugStringConvertible", "addObject"]
-- !private ["Ps28CustomDebugStringConvertible", "childByAppendingPath"]
+- !private ["Ps28CustomDebugStringConvertible", "child"]
 - !private ["Ps28CustomDebugStringConvertible", "childByAutoId"]
 - !private ["Ps28CustomDebugStringConvertible", "count"]
 - ["Ps28CustomDebugStringConvertible", "createCoreDataProblem"]
 - ["Ps28CustomDebugStringConvertible", "createCoreDataSolutions"]
+- !private ["Ps28CustomDebugStringConvertible", "database"]
 - ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "key"]
 - ["Ps28CustomDebugStringConvertible", "newProblem"]
@@ -185,6 +190,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "problemDetail"]
 - ["Ps28CustomDebugStringConvertible", "problemID"]
 - !private ["Ps28CustomDebugStringConvertible", "problemName"]
+- !private ["Ps28CustomDebugStringConvertible", "reference"]
 - !private ["Ps28CustomDebugStringConvertible", "save"]
 - ["Ps28CustomDebugStringConvertible", "saveDetailsToFirebase"]
 - ["Ps28CustomDebugStringConvertible", "saveProblemToFirebase"]
@@ -205,7 +211,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "CoreDataStackManager"]
 - !private ["Ps23CustomStringConvertible", "Distance"]
 - ["Ps23CustomStringConvertible", "Element"]
-- !private ["Ps23CustomStringConvertible", "Firebase"]
+- !private ["Ps23CustomStringConvertible", "FIRDatabase"]
 - !private ["Ps23CustomStringConvertible", "Generator"]
 - !private ["Ps23CustomStringConvertible", "Index"]
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
@@ -221,11 +227,12 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "_DisabledRangeIndex"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps23CustomStringConvertible", "addObject"]
-- !private ["Ps23CustomStringConvertible", "childByAppendingPath"]
+- !private ["Ps23CustomStringConvertible", "child"]
 - !private ["Ps23CustomStringConvertible", "childByAutoId"]
 - !private ["Ps23CustomStringConvertible", "count"]
 - ["Ps23CustomStringConvertible", "createCoreDataProblem"]
 - ["Ps23CustomStringConvertible", "createCoreDataSolutions"]
+- !private ["Ps23CustomStringConvertible", "database"]
 - ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "key"]
 - ["Ps23CustomStringConvertible", "newProblem"]
@@ -233,6 +240,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "problemDetail"]
 - ["Ps23CustomStringConvertible", "problemID"]
 - !private ["Ps23CustomStringConvertible", "problemName"]
+- !private ["Ps23CustomStringConvertible", "reference"]
 - !private ["Ps23CustomStringConvertible", "save"]
 - ["Ps23CustomStringConvertible", "saveDetailsToFirebase"]
 - ["Ps23CustomStringConvertible", "saveProblemToFirebase"]
@@ -262,7 +270,7 @@ depends-member:
 - !private ["Ps9Equatable", "CoreDataStackManager"]
 - !private ["Ps9Equatable", "Distance"]
 - ["Ps9Equatable", "Element"]
-- !private ["Ps9Equatable", "Firebase"]
+- !private ["Ps9Equatable", "FIRDatabase"]
 - !private ["Ps9Equatable", "Generator"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "Key"]
@@ -276,10 +284,11 @@ depends-member:
 - !private ["Ps9Equatable", "_DisabledRangeIndex"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "addObject"]
-- !private ["Ps9Equatable", "childByAppendingPath"]
+- !private ["Ps9Equatable", "child"]
 - !private ["Ps9Equatable", "childByAutoId"]
 - ["Ps9Equatable", "createCoreDataProblem"]
 - ["Ps9Equatable", "createCoreDataSolutions"]
+- !private ["Ps9Equatable", "database"]
 - ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "key"]
 - ["Ps9Equatable", "newProblem"]
@@ -287,6 +296,7 @@ depends-member:
 - !private ["Ps9Equatable", "problemDetail"]
 - ["Ps9Equatable", "problemID"]
 - !private ["Ps9Equatable", "problemName"]
+- !private ["Ps9Equatable", "reference"]
 - !private ["Ps9Equatable", "save"]
 - ["Ps9Equatable", "saveDetailsToFirebase"]
 - ["Ps9Equatable", "saveProblemToFirebase"]
@@ -303,16 +313,16 @@ depends-member:
 - !private ["Ps9Equatable", "subscript"]
 - !private ["Ps9Equatable", "valueForKey"]
 - ["Ps9Equatable", ""]
-- !private ["CSo6FQuery", "childByAppendingPath"]
-- !private ["CSo6FQuery", "childByAutoId"]
-- !private ["CSo6FQuery", "init"]
-- !private ["CSo6FQuery", "key"]
-- !private ["CSo6FQuery", "setValue"]
-- !private ["CSo8Firebase", "childByAppendingPath"]
-- !private ["CSo8Firebase", "childByAutoId"]
-- !private ["CSo8Firebase", "init"]
-- !private ["CSo8Firebase", "key"]
-- !private ["CSo8Firebase", "setValue"]
+- !private ["CSo11FIRDatabase", "database"]
+- !private ["CSo11FIRDatabase", "reference"]
+- !private ["CSo16FIRDatabaseQuery", "child"]
+- !private ["CSo16FIRDatabaseQuery", "childByAutoId"]
+- !private ["CSo16FIRDatabaseQuery", "key"]
+- !private ["CSo16FIRDatabaseQuery", "setValue"]
+- !private ["CSo20FIRDatabaseReference", "child"]
+- !private ["CSo20FIRDatabaseReference", "childByAutoId"]
+- !private ["CSo20FIRDatabaseReference", "key"]
+- !private ["CSo20FIRDatabaseReference", "setValue"]
 - !private ["Ps16ForwardIndexType", "Distance"]
 - !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
 - !private ["Ps16ForwardIndexType", "_DisabledRangeIndex"]
@@ -323,7 +333,7 @@ depends-member:
 - !private ["Ps8Hashable", "CoreDataStackManager"]
 - !private ["Ps8Hashable", "Distance"]
 - ["Ps8Hashable", "Element"]
-- !private ["Ps8Hashable", "Firebase"]
+- !private ["Ps8Hashable", "FIRDatabase"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "Key"]
 - !private ["Ps8Hashable", "Keys"]
@@ -336,10 +346,11 @@ depends-member:
 - !private ["Ps8Hashable", "_DisabledRangeIndex"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "addObject"]
-- !private ["Ps8Hashable", "childByAppendingPath"]
+- !private ["Ps8Hashable", "child"]
 - !private ["Ps8Hashable", "childByAutoId"]
 - ["Ps8Hashable", "createCoreDataProblem"]
 - ["Ps8Hashable", "createCoreDataSolutions"]
+- !private ["Ps8Hashable", "database"]
 - ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "key"]
 - ["Ps8Hashable", "newProblem"]
@@ -347,6 +358,7 @@ depends-member:
 - !private ["Ps8Hashable", "problemDetail"]
 - ["Ps8Hashable", "problemID"]
 - !private ["Ps8Hashable", "problemName"]
+- !private ["Ps8Hashable", "reference"]
 - !private ["Ps8Hashable", "save"]
 - ["Ps8Hashable", "saveDetailsToFirebase"]
 - ["Ps8Hashable", "saveProblemToFirebase"]
@@ -456,7 +468,7 @@ depends-member:
 - ["CSo8NSObject", "AnyObject"]
 - !private ["CSo8NSObject", "CoreDataStackManager"]
 - ["CSo8NSObject", "Element"]
-- !private ["CSo8NSObject", "Firebase"]
+- !private ["CSo8NSObject", "FIRDatabase"]
 - !private ["CSo8NSObject", "Key"]
 - !private ["CSo8NSObject", "Keys"]
 - ["CSo8NSObject", "NSManagedObjectContext"]
@@ -469,10 +481,11 @@ depends-member:
 - !private ["CSo8NSObject", "Value"]
 - ["CSo8NSObject", "Void"]
 - !private ["CSo8NSObject", "addObject"]
-- !private ["CSo8NSObject", "childByAppendingPath"]
+- !private ["CSo8NSObject", "child"]
 - !private ["CSo8NSObject", "childByAutoId"]
 - ["CSo8NSObject", "createCoreDataProblem"]
 - ["CSo8NSObject", "createCoreDataSolutions"]
+- !private ["CSo8NSObject", "database"]
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "key"]
 - ["CSo8NSObject", "newProblem"]
@@ -480,6 +493,7 @@ depends-member:
 - !private ["CSo8NSObject", "problemDetail"]
 - ["CSo8NSObject", "problemID"]
 - !private ["CSo8NSObject", "problemName"]
+- !private ["CSo8NSObject", "reference"]
 - !private ["CSo8NSObject", "save"]
 - ["CSo8NSObject", "saveDetailsToFirebase"]
 - ["CSo8NSObject", "saveProblemToFirebase"]
@@ -499,7 +513,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "AnyObject"]
 - !private ["PSo16NSObjectProtocol", "CoreDataStackManager"]
 - ["PSo16NSObjectProtocol", "Element"]
-- !private ["PSo16NSObjectProtocol", "Firebase"]
+- !private ["PSo16NSObjectProtocol", "FIRDatabase"]
 - !private ["PSo16NSObjectProtocol", "Key"]
 - !private ["PSo16NSObjectProtocol", "Keys"]
 - !private ["PSo16NSObjectProtocol", "NSUserDefaults"]
@@ -509,10 +523,11 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "TempSave"]
 - !private ["PSo16NSObjectProtocol", "Value"]
 - !private ["PSo16NSObjectProtocol", "addObject"]
-- !private ["PSo16NSObjectProtocol", "childByAppendingPath"]
+- !private ["PSo16NSObjectProtocol", "child"]
 - !private ["PSo16NSObjectProtocol", "childByAutoId"]
 - ["PSo16NSObjectProtocol", "createCoreDataProblem"]
 - ["PSo16NSObjectProtocol", "createCoreDataSolutions"]
+- !private ["PSo16NSObjectProtocol", "database"]
 - ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "key"]
 - ["PSo16NSObjectProtocol", "newProblem"]
@@ -520,6 +535,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "problemDetail"]
 - ["PSo16NSObjectProtocol", "problemID"]
 - !private ["PSo16NSObjectProtocol", "problemName"]
+- !private ["PSo16NSObjectProtocol", "reference"]
 - !private ["PSo16NSObjectProtocol", "save"]
 - ["PSo16NSObjectProtocol", "saveDetailsToFirebase"]
 - ["PSo16NSObjectProtocol", "saveProblemToFirebase"]
@@ -543,6 +559,10 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "subscript"]
 - !private ["CSo14NSUserDefaults", "standardUserDefaults"]
 - !private ["CSo14NSUserDefaults", "valueForKey"]
+- !private ["Ps21NilLiteralConvertible", "Key"]
+- !private ["Ps21NilLiteralConvertible", "Value"]
+- !private ["Sq", "Key"]
+- !private ["Sq", "Value"]
 - !private ["Sq", "deinit"]
 - !private ["C8GoChange7Problem", "Keys"]
 - !private ["C8GoChange7Problem", "init"]
@@ -558,7 +578,7 @@ depends-member:
 - !private ["Ps30RangeReplaceableCollectionType", "subscript"]
 - ["C8GoChange14SaveNewProblem", "AnyObject"]
 - !private ["C8GoChange14SaveNewProblem", "CoreDataStackManager"]
-- !private ["C8GoChange14SaveNewProblem", "Firebase"]
+- !private ["C8GoChange14SaveNewProblem", "FIRDatabase"]
 - ["C8GoChange14SaveNewProblem", "NSManagedObjectContext"]
 - ["C8GoChange14SaveNewProblem", "NSMutableArray"]
 - !private ["C8GoChange14SaveNewProblem", "NSUserDefaults"]
@@ -688,8 +708,9 @@ depends-nominal:
 - !private "Vs10Dictionary"
 - !private "Ps28DictionaryLiteralConvertible"
 - "Ps9Equatable"
-- !private "CSo6FQuery"
-- !private "CSo8Firebase"
+- !private "CSo11FIRDatabase"
+- !private "CSo16FIRDatabaseQuery"
+- !private "CSo20FIRDatabaseReference"
 - !private "Ps16ForwardIndexType"
 - !private "Ps13GeneratorType"
 - !private "Vs16HalfOpenInterval"
@@ -722,6 +743,7 @@ depends-nominal:
 - "PSo16NSObjectProtocol"
 - "PSo14NSSecureCoding"
 - !private "CSo14NSUserDefaults"
+- !private "Ps21NilLiteralConvertible"
 - !private "Sq"
 - !private "C8GoChange7Problem"
 - !private "Ps21RandomAccessIndexType"
@@ -754,23 +776,49 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/Firebase/Headers/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FirebaseServerValue.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FTransactionResult.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FMutableData.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FirebaseApp.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FQuery.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/Firebase.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FEventType.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FDataSnapshot.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FConfig.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FAuthType.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FAuthData.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/Firebase-umbrella.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Modules/module.modulemap"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRConfiguration.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRApp.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIREmailPasswordAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/Firebase/Headers/Firebase.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/WebKit.swiftmodule"
 interface-hash: "b1c578b3f941aa78099383e87233d981"

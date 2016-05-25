@@ -51,7 +51,6 @@ class ChangeOrgCode:NSObject{
         
             if downloadError != nil{
             
-                //TODO: Deal with error
                 print("error with request \(downloadError)")
             
             }else{
@@ -61,7 +60,6 @@ class ChangeOrgCode:NSObject{
                 
                     if error != nil{
                         
-                        //TODO: deal with error
                         print("error parsing JSON \(error)")
                         
                     }else{
@@ -96,7 +94,6 @@ class ChangeOrgCode:NSObject{
             
             if downloadError != nil{
                 
-                //TODO: Deal with error
                 print("error with request \(downloadError)")
                 
             }else{
@@ -106,7 +103,6 @@ class ChangeOrgCode:NSObject{
                     
                     if error != nil{
                         
-                        //TODO: deal with error
                         print("error parsing JSON \(error)")
                         
                     }else{

@@ -59,7 +59,6 @@ class SaveResultToCoreData:NSObject{
             try self.sharedContext.save()
             
         }catch{
-            //TODO: Catch errors!
         }
         
         //completion handler to pass back newly created problem
@@ -73,8 +72,6 @@ class SaveResultToCoreData:NSObject{
         
         for i in 0 ..< TempSave.sharedInstance().solutionNameArray.count{
             
-            //TODO: sort new solution array problem...
-            //When coming from coreDataFirebaseSolutionPost need to use newSolutionNameArray and newSolutionDetailArray
             
             var solutionDictionary:[String:AnyObject] = [String:AnyObject]()
             

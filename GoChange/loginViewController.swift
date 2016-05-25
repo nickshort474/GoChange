@@ -27,6 +27,7 @@ class loginViewController:UIViewController,UITextFieldDelegate{
         // Do any additional setup after loading the view, typically from a nib.
         ref = FIRDatabase.database().reference()
         
+        
         emailTextfield.delegate = self
         passwordTextfield.delegate = self
         loginActivityIndicator.hidden = true
@@ -43,6 +44,8 @@ class loginViewController:UIViewController,UITextFieldDelegate{
             segueToHomeScreen()
             
         }
+        
+        loginButton.enabled = true
     }
     
     
@@ -61,30 +64,26 @@ class loginViewController:UIViewController,UITextFieldDelegate{
         
         if(email != "" && password != ""){
             
-            //FIRAuth.auth()?.signInWithEmail(<#T##email: String##String#>, password: <#T##String#>, completion: <#T##FIRAuthResultCallback?##FIRAuthResultCallback?##(FIRUser?, NSError?) -> Void#>)
-            
-            //ref.authUser
             
             FIRAuth.auth()?.signInWithEmail(email!, password: password!, completion: {
                 user,error in
                 
                 if error != nil{
-                    //TODO: code for error
                     
                     self.loginActivityIndicator.hidden = true
                     self.loginActivityIndicator.stopAnimating()
                     self.view.alpha = 1
                     self.loginButton.enabled = true
-
                     
+                                        
                     switch error!.localizedDescription{
-                        case "(Error Code: INVALID_EMAIL) The specified email address is invalid.":
+                        case "An internal error has occurred, print and inspect the error details for more information.":
                         self.presentAlert("Please enter a valid email")
                         
-                        case "(Error Code: INVALID_USER) The specified user does not exist.":
+                        case "There is no user record corresponding to this identifier. The user may have been deleted":
                         self.presentAlert("Email not recognized, please re-enter email or sign-up")
                         
-                        case "(Error Code: INVALID_PASSWORD) The specified password is incorrect.":
+                        case "The password is invalid or the user does not have a password.":
                         self.presentAlert("Password is incorrect, please enter a valid password")
                         
                         case "(Error Code: NETWORK_ERROR) The request timed out.":
@@ -115,6 +114,11 @@ class loginViewController:UIViewController,UITextFieldDelegate{
         }else{
             //code for empty fields
             presentAlert("Please provide your email and password")
+            self.loginActivityIndicator.hidden = true
+            self.loginActivityIndicator.stopAnimating()
+            self.view.alpha = 1
+            self.loginButton.enabled = true
+            
         }
     }
     
@@ -138,6 +142,7 @@ class loginViewController:UIViewController,UITextFieldDelegate{
     }
     
     
+    
     func segueToHomeScreen(){
         
         //segue to home screen
@@ -152,13 +157,38 @@ class loginViewController:UIViewController,UITextFieldDelegate{
     }
  
     
+    
+    @IBAction func forgotPassword(sender: UIButton) {
+        
+        let emailText = emailTextfield.text!
+        
+        if emailText == ""{
+            presentAlert("Please enter email")
+        }else{
+            FIRAuth.auth()?.sendPasswordResetWithEmail(emailText, completion:{
+                error in
+                if let error = error{
+                    print(error)
+                }else{
+                    self.presentAlert("Password reset email sent")
+                }
+                
+                
+            })
+        }
+        
+        
+    }
+    
+    
+    
     //present alerts
     func presentAlert(alertType:String){
         
         let controller = UIAlertController()
         controller.message = alertType
         
-        let alertAction = UIAlertAction(title: "Please try again", style: UIAlertActionStyle.Cancel){
+        let alertAction = UIAlertAction(title: "Okay", style: UIAlertActionStyle.Cancel){
             action in
             
             

@@ -14,10 +14,7 @@ import Firebase
 
 class UpdateUserInfoController:UIViewController{
     
-    //var ref = Firebase(url:"https://gochange.firebaseio.com")
     var ref = FIRDatabase.database().reference()
-    
-    
     var currentlyUpdating:String = ""
     
     
@@ -36,6 +33,15 @@ class UpdateUserInfoController:UIViewController{
         currentlyUpdating = "email"
         segueToInput()
     }
+    
+    @IBAction func deleteAccount(sender: UIButton) {
+        
+        currentlyUpdating = "delete"
+        segueToInput()
+        
+                
+    }
+    
     
     func segueToInput(){
         

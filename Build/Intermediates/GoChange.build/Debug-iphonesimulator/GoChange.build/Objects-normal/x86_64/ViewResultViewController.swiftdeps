@@ -6,55 +6,59 @@ provides-nominal:
 provides-member:
 - ["C8GoChange24ViewResultViewController", ""]
 provides-dynamic-lookup:
-- "nameField"
-- "owner"
-- "currentProblem"
-- "tableView"
-- "tableView"
-- "tableView"
-- "problemName"
-- "detailsField"
-- "viewWillAppear"
 - "solutionTable"
 - "viewDidLoad"
-- "followProblemClick"
-- "followProblemButton"
-- "problemDetail"
+- "owner"
+- "tableView"
+- "tableView"
+- "tableView"
+- "currentProblem"
+- "problemName"
+- "viewWillAppear"
+- "nameField"
 - "problemID"
+- "followProblemClick"
+- "problemDetail"
+- "followProblemButton"
+- "detailsField"
 depends-top-level:
-- "NSIndexPath"
-- "UIButton"
-- !private "TempSave"
-- "UITextField"
-- "Problem"
-- !private "UIColor"
-- "ViewResultViewController"
-- !private "CGSizeMake"
-- "UITableViewCell"
-- !private "StringLiteralType"
-- !private "SaveResultToCoreData"
 - !private "GoChangeClient"
+- !private "UIColor"
 - "UITableView"
-- "Int"
+- !private "-="
 - !private "ViewFollowingViewController"
 - "UITextViewDelegate"
 - !private "UITextBorderStyle"
-- !private "RetrieveSolutionsFromFirebase"
+- !private "SaveResultToCoreData"
 - "UITextFieldDelegate"
 - "UIViewController"
+- !private "ViewIdeaViewController"
 - "UITextView"
-- !private "CustomTableViewCell"
-- !private "BooleanLiteralType"
+- !private "TempSave"
 - "String"
 - "UITableViewDelegate"
-- !private "ViewIdeaViewController"
+- !private "BooleanLiteralType"
+- "UITableViewCell"
+- "ViewResultViewController"
+- !private "RetrieveSolutionsFromFirebase"
+- "UIButton"
+- "Int"
+- !private "=="
+- "UITextField"
+- !private "CustomTableViewCell"
+- !private "StringLiteralType"
+- !private "CGSizeMake"
 - "Bool"
+- "NSIndexPath"
+- "Problem"
 depends-member:
 - !private ["Ps9AnyObject", "CGColor"]
 - !private ["Ps9AnyObject", "CGSizeMake"]
 - !private ["Ps9AnyObject", "Constants"]
 - !private ["Ps9AnyObject", "GoChangeClient"]
 - !private ["Ps9AnyObject", "RetrieveSolutionsFromFirebase"]
+- !private ["Ps9AnyObject", "RetrievedProblemsCount"]
+- !private ["Ps9AnyObject", "RetrievedProblemsEmpty"]
 - !private ["Ps9AnyObject", "SaveResultToCoreData"]
 - !private ["Ps9AnyObject", "String"]
 - !private ["Ps9AnyObject", "TempSave"]
@@ -92,6 +96,7 @@ depends-member:
 - !private ["Ps9AnyObject", "problemOwner"]
 - !private ["Ps9AnyObject", "pushViewController"]
 - !private ["Ps9AnyObject", "reloadData"]
+- !private ["Ps9AnyObject", "retrievedProblemFollowed"]
 - !private ["Ps9AnyObject", "row"]
 - ["Ps9AnyObject", "scrollViewDidEndDecelerating"]
 - ["Ps9AnyObject", "scrollViewDidEndDragging"]
@@ -159,7 +164,10 @@ depends-member:
 - !private ["Ps22BidirectionalIndexType", "IntegerLiteralType"]
 - !private ["Ps21BitwiseOperationsType", "Distance"]
 - !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
+- !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["Sb", "deinit"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
 - !private ["CSo7CALayer", "borderColor"]
 - !private ["CSo7CALayer", "masksToBounds"]
 - !private ["CSo7CALayer", "shadowColor"]
@@ -180,6 +188,8 @@ depends-member:
 - !private ["Ps11CVarArgType", "GoChangeClient"]
 - !private ["Ps11CVarArgType", "IntegerLiteralType"]
 - !private ["Ps11CVarArgType", "RetrieveSolutionsFromFirebase"]
+- !private ["Ps11CVarArgType", "RetrievedProblemsCount"]
+- !private ["Ps11CVarArgType", "RetrievedProblemsEmpty"]
 - !private ["Ps11CVarArgType", "SaveResultToCoreData"]
 - !private ["Ps11CVarArgType", "String"]
 - !private ["Ps11CVarArgType", "TempSave"]
@@ -217,6 +227,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "problemOwner"]
 - !private ["Ps11CVarArgType", "pushViewController"]
 - !private ["Ps11CVarArgType", "reloadData"]
+- !private ["Ps11CVarArgType", "retrievedProblemFollowed"]
 - !private ["Ps11CVarArgType", "row"]
 - ["Ps11CVarArgType", "scrollViewDidEndDecelerating"]
 - ["Ps11CVarArgType", "scrollViewDidEndDragging"]
@@ -285,6 +296,8 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "GoChangeClient"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "RetrieveSolutionsFromFirebase"]
+- !private ["Ps28CustomDebugStringConvertible", "RetrievedProblemsCount"]
+- !private ["Ps28CustomDebugStringConvertible", "RetrievedProblemsEmpty"]
 - !private ["Ps28CustomDebugStringConvertible", "SaveResultToCoreData"]
 - !private ["Ps28CustomDebugStringConvertible", "String"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
@@ -324,6 +337,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "problemOwner"]
 - !private ["Ps28CustomDebugStringConvertible", "pushViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "reloadData"]
+- !private ["Ps28CustomDebugStringConvertible", "retrievedProblemFollowed"]
 - !private ["Ps28CustomDebugStringConvertible", "row"]
 - ["Ps28CustomDebugStringConvertible", "scrollViewDidEndDecelerating"]
 - ["Ps28CustomDebugStringConvertible", "scrollViewDidEndDragging"]
@@ -384,12 +398,15 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "Index"]
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["Ps23CustomStringConvertible", "RetrieveSolutionsFromFirebase"]
+- !private ["Ps23CustomStringConvertible", "RetrievedProblemsCount"]
+- !private ["Ps23CustomStringConvertible", "RetrievedProblemsEmpty"]
 - !private ["Ps23CustomStringConvertible", "SaveResultToCoreData"]
 - !private ["Ps23CustomStringConvertible", "String"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
 - !private ["Ps23CustomStringConvertible", "TempSave"]
 - !private ["Ps23CustomStringConvertible", "UIColor"]
 - !private ["Ps23CustomStringConvertible", "UITextBorderStyle"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps23CustomStringConvertible", "automaticallyAdjustsScrollViewInsets"]
 - !private ["Ps23CustomStringConvertible", "blackColor"]
 - !private ["Ps23CustomStringConvertible", "borderColor"]
@@ -423,6 +440,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "problemOwner"]
 - !private ["Ps23CustomStringConvertible", "pushViewController"]
 - !private ["Ps23CustomStringConvertible", "reloadData"]
+- !private ["Ps23CustomStringConvertible", "retrievedProblemFollowed"]
 - !private ["Ps23CustomStringConvertible", "row"]
 - ["Ps23CustomStringConvertible", "scrollViewDidEndDecelerating"]
 - ["Ps23CustomStringConvertible", "scrollViewDidEndDragging"]
@@ -486,11 +504,14 @@ depends-member:
 - !private ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "None"]
 - !private ["Ps9Equatable", "RetrieveSolutionsFromFirebase"]
+- !private ["Ps9Equatable", "RetrievedProblemsCount"]
+- !private ["Ps9Equatable", "RetrievedProblemsEmpty"]
 - !private ["Ps9Equatable", "SaveResultToCoreData"]
 - !private ["Ps9Equatable", "String"]
 - !private ["Ps9Equatable", "TempSave"]
 - !private ["Ps9Equatable", "UIColor"]
 - !private ["Ps9Equatable", "UITextBorderStyle"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "automaticallyAdjustsScrollViewInsets"]
 - !private ["Ps9Equatable", "blackColor"]
 - !private ["Ps9Equatable", "borderColor"]
@@ -523,6 +544,7 @@ depends-member:
 - !private ["Ps9Equatable", "problemOwner"]
 - !private ["Ps9Equatable", "pushViewController"]
 - !private ["Ps9Equatable", "reloadData"]
+- !private ["Ps9Equatable", "retrievedProblemFollowed"]
 - !private ["Ps9Equatable", "row"]
 - ["Ps9Equatable", "scrollViewDidEndDecelerating"]
 - ["Ps9Equatable", "scrollViewDidEndDragging"]
@@ -587,11 +609,14 @@ depends-member:
 - !private ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "None"]
 - !private ["Ps8Hashable", "RetrieveSolutionsFromFirebase"]
+- !private ["Ps8Hashable", "RetrievedProblemsCount"]
+- !private ["Ps8Hashable", "RetrievedProblemsEmpty"]
 - !private ["Ps8Hashable", "SaveResultToCoreData"]
 - !private ["Ps8Hashable", "String"]
 - !private ["Ps8Hashable", "TempSave"]
 - !private ["Ps8Hashable", "UIColor"]
 - !private ["Ps8Hashable", "UITextBorderStyle"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "automaticallyAdjustsScrollViewInsets"]
 - !private ["Ps8Hashable", "blackColor"]
 - !private ["Ps8Hashable", "borderColor"]
@@ -624,6 +649,7 @@ depends-member:
 - !private ["Ps8Hashable", "problemOwner"]
 - !private ["Ps8Hashable", "pushViewController"]
 - !private ["Ps8Hashable", "reloadData"]
+- !private ["Ps8Hashable", "retrievedProblemFollowed"]
 - !private ["Ps8Hashable", "row"]
 - ["Ps8Hashable", "scrollViewDidEndDecelerating"]
 - ["Ps8Hashable", "scrollViewDidEndDragging"]
@@ -875,6 +901,8 @@ depends-member:
 - ["CSo8NSObject", "NSIndexPath"]
 - ["CSo8NSObject", "Problem"]
 - !private ["CSo8NSObject", "RetrieveSolutionsFromFirebase"]
+- !private ["CSo8NSObject", "RetrievedProblemsCount"]
+- !private ["CSo8NSObject", "RetrievedProblemsEmpty"]
 - !private ["CSo8NSObject", "SaveResultToCoreData"]
 - ["CSo8NSObject", "String"]
 - !private ["CSo8NSObject", "TempSave"]
@@ -919,6 +947,7 @@ depends-member:
 - !private ["CSo8NSObject", "problemOwner"]
 - !private ["CSo8NSObject", "pushViewController"]
 - !private ["CSo8NSObject", "reloadData"]
+- !private ["CSo8NSObject", "retrievedProblemFollowed"]
 - !private ["CSo8NSObject", "row"]
 - ["CSo8NSObject", "scrollViewDidEndDecelerating"]
 - ["CSo8NSObject", "scrollViewDidEndDragging"]
@@ -973,6 +1002,8 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "Constants"]
 - !private ["PSo16NSObjectProtocol", "GoChangeClient"]
 - !private ["PSo16NSObjectProtocol", "RetrieveSolutionsFromFirebase"]
+- !private ["PSo16NSObjectProtocol", "RetrievedProblemsCount"]
+- !private ["PSo16NSObjectProtocol", "RetrievedProblemsEmpty"]
 - !private ["PSo16NSObjectProtocol", "SaveResultToCoreData"]
 - !private ["PSo16NSObjectProtocol", "String"]
 - !private ["PSo16NSObjectProtocol", "TempSave"]
@@ -1010,6 +1041,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "problemOwner"]
 - !private ["PSo16NSObjectProtocol", "pushViewController"]
 - !private ["PSo16NSObjectProtocol", "reloadData"]
+- !private ["PSo16NSObjectProtocol", "retrievedProblemFollowed"]
 - !private ["PSo16NSObjectProtocol", "row"]
 - ["PSo16NSObjectProtocol", "scrollViewDidEndDecelerating"]
 - ["PSo16NSObjectProtocol", "scrollViewDidEndDragging"]
@@ -1099,10 +1131,13 @@ depends-member:
 - !private ["SS", "init"]
 - !private ["Ps30StringInterpolationConvertible", "init"]
 - !private ["Ps24StringLiteralConvertible", "init"]
+- !private ["C8GoChange8TempSave", "RetrievedProblemsCount"]
+- !private ["C8GoChange8TempSave", "RetrievedProblemsEmpty"]
 - !private ["C8GoChange8TempSave", "petitionURLArray"]
 - !private ["C8GoChange8TempSave", "problemDetail"]
 - !private ["C8GoChange8TempSave", "problemName"]
 - !private ["C8GoChange8TempSave", "problemOwner"]
+- !private ["C8GoChange8TempSave", "retrievedProblemFollowed"]
 - !private ["C8GoChange8TempSave", "sharedInstance"]
 - !private ["C8GoChange8TempSave", "solutionDetailArray"]
 - !private ["C8GoChange8TempSave", "solutionNameArray"]
@@ -2022,6 +2057,7 @@ depends-member:
 - !private ["Ps10_ArrayType", "SubSequence"]
 - !private ["Ps10_ArrayType", "count"]
 - !private ["Ps10_ArrayType", "subscript"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
@@ -2047,6 +2083,7 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "Index"]
 - !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
 - !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "count"]
 - !private ["Ps21_ObjectiveCBridgeable", "init"]
 - !private ["Ps21_ObjectiveCBridgeable", "subscript"]
@@ -2057,6 +2094,7 @@ depends-member:
 - !private ["Ps12_Reflectable", "Index"]
 - !private ["Ps12_Reflectable", "IntegerLiteralType"]
 - !private ["Ps12_Reflectable", "SubSequence"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
 - !private ["Ps12_Reflectable", "borderStyle"]
 - !private ["Ps12_Reflectable", "count"]
 - !private ["Ps12_Reflectable", "delegate"]
@@ -2082,6 +2120,8 @@ depends-nominal:
 - !private "Ps22BidirectionalIndexType"
 - !private "Ps21BitwiseOperationsType"
 - !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
 - !private "CSo7CALayer"
 - !private "PSo13CAMediaTiming"
 - !private "V12CoreGraphics7CGFloat"
@@ -2184,6 +2224,7 @@ depends-nominal:
 - !private "C8GoChange22ViewIdeaViewController"
 - "C8GoChange24ViewResultViewController"
 - !private "Ps10_ArrayType"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
 - !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
 - !private "Ps33_BuiltinIntegerLiteralConvertible"
 - !private "Ps32_BuiltinStringLiteralConvertible"
@@ -2203,23 +2244,49 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/Firebase/Headers/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FirebaseServerValue.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FTransactionResult.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FMutableData.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FirebaseApp.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FQuery.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/Firebase.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FEventType.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FDataSnapshot.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FConfig.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FAuthType.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FAuthData.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/Firebase-umbrella.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Modules/module.modulemap"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRConfiguration.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRApp.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIREmailPasswordAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/Firebase/Headers/Firebase.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/WebKit.swiftmodule"
 interface-hash: "af39d3c0fd5c65196b49f6d9ba9700c2"

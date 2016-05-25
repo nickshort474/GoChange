@@ -7,14 +7,14 @@ provides-member:
 - ["C8GoChange15CheckForNetwork", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "NSObject"
 - !private "StringLiteralType"
 - !private "&&"
-- "String"
 - !private "!="
+- "NSObject"
 - !private "Bool"
-- !private "FIRDatabase"
+- "String"
 - "Void"
+- !private "FIRDatabase"
 - "CheckForNetwork"
 depends-member:
 - !private ["Ps9AnyObject", "FIRDatabase"]

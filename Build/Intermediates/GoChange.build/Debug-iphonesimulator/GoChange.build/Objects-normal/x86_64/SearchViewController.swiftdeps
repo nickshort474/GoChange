@@ -6,58 +6,61 @@ provides-nominal:
 provides-member:
 - ["C8GoChange20SearchViewController", ""]
 provides-dynamic-lookup:
-- "presentRecentProblem"
-- "searchActivity"
-- "buttonClick"
-- "searchForResults"
+- "checkIfInCoreData"
+- "presentAlert"
 - "problemsNotInCoreData"
-- "refArray"
-- "textFieldShouldReturn"
-- "problemDetail"
-- "problemOwner"
-- "viewDidLoad"
-- "problemID"
+- "problemName"
+- "recentNameArray"
 - "recentProblemStack"
+- "problemID"
+- "compareArrays"
+- "searchActivity"
+- "createButtons"
+- "presentRecentProblem"
+- "matchedProblemArray"
+- "viewDidLoad"
+- "recentProblemsLabel"
+- "problemDetail"
+- "buttonClick"
+- "textFieldShouldReturn"
+- "homeButtonClick"
 - "viewWillAppear"
 - "searchTextField"
-- "checkIfInCoreData"
-- "compareArrays"
-- "matchedProblemArray"
-- "presentAlert"
-- "problemName"
-- "homeButtonClick"
-- "recentNameArray"
-- "createButtons"
+- "problemOwner"
+- "refArray"
+- "searchForResults"
 depends-top-level:
-- !private "ResultsViewController"
-- !private "UIAlertActionStyle"
-- !private "UIAlertController"
-- "Bool"
-- !private "Set"
-- !private "!="
-- !private "GoChangeClient"
-- "UIStackView"
-- !private "=="
-- "UITextField"
-- !private "FindRecentProblem"
-- !private "ViewResultViewController"
-- !private "Array"
-- "UIButton"
-- !private "GetRecentlyAdded"
-- "StringLiteralType"
 - "String"
 - !private "CGSizeMake"
-- "UIActivityIndicatorView"
+- !private "=="
+- !private "ViewResultViewController"
+- !private "UIFont"
+- !private "GoChangeClient"
+- "UILabel"
 - "UIViewController"
-- !private "UIColor"
-- !private "BooleanLiteralType"
-- !private "RetrieveProblem"
-- "UITextFieldDelegate"
-- !private "UIAlertAction"
+- !private "UIAlertController"
 - "SearchViewController"
 - !private "TempSave"
-- !private "UIFont"
+- "StringLiteralType"
+- !private "ResultsViewController"
+- "UIActivityIndicatorView"
+- "UITextFieldDelegate"
 - !private "SearchController"
+- !private "Array"
+- !private "UIAlertActionStyle"
+- !private "FindRecentProblem"
+- "UIStackView"
+- !private "!="
+- "Bool"
+- !private "UIAlertAction"
+- "UIButton"
+- !private "&&"
+- !private "BooleanLiteralType"
+- !private "GetRecentlyAdded"
+- "UITextField"
+- !private "Set"
+- !private "UIColor"
+- !private "RetrieveProblem"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "subscript"]
 - !private ["Ps9AnyObject", "Array"]
@@ -70,6 +73,8 @@ depends-member:
 - !private ["Ps9AnyObject", "GetRecentlyAdded"]
 - !private ["Ps9AnyObject", "GoChangeClient"]
 - !private ["Ps9AnyObject", "RetrieveProblem"]
+- !private ["Ps9AnyObject", "RetrievedProblemsCount"]
+- !private ["Ps9AnyObject", "RetrievedProblemsEmpty"]
 - !private ["Ps9AnyObject", "SearchController"]
 - !private ["Ps9AnyObject", "SearchViewController"]
 - !private ["Ps9AnyObject", "Set"]
@@ -120,12 +125,14 @@ depends-member:
 - !private ["Ps9AnyObject", "pushViewController"]
 - ["Ps9AnyObject", "recentNameArray"]
 - ["Ps9AnyObject", "recentProblemStack"]
+- ["Ps9AnyObject", "recentProblemsLabel"]
 - ["Ps9AnyObject", "refArray"]
 - !private ["Ps9AnyObject", "removeArrangedSubview"]
 - !private ["Ps9AnyObject", "resignFirstResponder"]
 - !private ["Ps9AnyObject", "resultDetailArray"]
 - !private ["Ps9AnyObject", "resultNameArray"]
 - !private ["Ps9AnyObject", "resultSolutionCountArray"]
+- !private ["Ps9AnyObject", "retrievedProblemFollowed"]
 - !private ["Ps9AnyObject", "retrievedRecentProblem"]
 - ["Ps9AnyObject", "searchActivity"]
 - ["Ps9AnyObject", "searchForResults"]
@@ -203,6 +210,8 @@ depends-member:
 - !private ["Ps11CVarArgType", "GoChangeClient"]
 - !private ["Ps11CVarArgType", "IntegerLiteralType"]
 - !private ["Ps11CVarArgType", "RetrieveProblem"]
+- !private ["Ps11CVarArgType", "RetrievedProblemsCount"]
+- !private ["Ps11CVarArgType", "RetrievedProblemsEmpty"]
 - !private ["Ps11CVarArgType", "SearchController"]
 - !private ["Ps11CVarArgType", "SearchViewController"]
 - !private ["Ps11CVarArgType", "Set"]
@@ -252,12 +261,14 @@ depends-member:
 - !private ["Ps11CVarArgType", "pushViewController"]
 - ["Ps11CVarArgType", "recentNameArray"]
 - ["Ps11CVarArgType", "recentProblemStack"]
+- ["Ps11CVarArgType", "recentProblemsLabel"]
 - ["Ps11CVarArgType", "refArray"]
 - !private ["Ps11CVarArgType", "removeArrangedSubview"]
 - !private ["Ps11CVarArgType", "resignFirstResponder"]
 - !private ["Ps11CVarArgType", "resultDetailArray"]
 - !private ["Ps11CVarArgType", "resultNameArray"]
 - !private ["Ps11CVarArgType", "resultSolutionCountArray"]
+- !private ["Ps11CVarArgType", "retrievedProblemFollowed"]
 - !private ["Ps11CVarArgType", "retrievedRecentProblem"]
 - ["Ps11CVarArgType", "searchActivity"]
 - ["Ps11CVarArgType", "searchForResults"]
@@ -308,6 +319,8 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "GoChangeClient"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "RetrieveProblem"]
+- !private ["Ps28CustomDebugStringConvertible", "RetrievedProblemsCount"]
+- !private ["Ps28CustomDebugStringConvertible", "RetrievedProblemsEmpty"]
 - !private ["Ps28CustomDebugStringConvertible", "SearchController"]
 - !private ["Ps28CustomDebugStringConvertible", "SearchViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "Set"]
@@ -361,12 +374,14 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "pushViewController"]
 - ["Ps28CustomDebugStringConvertible", "recentNameArray"]
 - ["Ps28CustomDebugStringConvertible", "recentProblemStack"]
+- ["Ps28CustomDebugStringConvertible", "recentProblemsLabel"]
 - ["Ps28CustomDebugStringConvertible", "refArray"]
 - !private ["Ps28CustomDebugStringConvertible", "removeArrangedSubview"]
 - !private ["Ps28CustomDebugStringConvertible", "resignFirstResponder"]
 - !private ["Ps28CustomDebugStringConvertible", "resultDetailArray"]
 - !private ["Ps28CustomDebugStringConvertible", "resultNameArray"]
 - !private ["Ps28CustomDebugStringConvertible", "resultSolutionCountArray"]
+- !private ["Ps28CustomDebugStringConvertible", "retrievedProblemFollowed"]
 - !private ["Ps28CustomDebugStringConvertible", "retrievedRecentProblem"]
 - ["Ps28CustomDebugStringConvertible", "searchActivity"]
 - ["Ps28CustomDebugStringConvertible", "searchForResults"]
@@ -408,6 +423,8 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "Index"]
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["Ps23CustomStringConvertible", "RetrieveProblem"]
+- !private ["Ps23CustomStringConvertible", "RetrievedProblemsCount"]
+- !private ["Ps23CustomStringConvertible", "RetrievedProblemsEmpty"]
 - !private ["Ps23CustomStringConvertible", "SearchController"]
 - !private ["Ps23CustomStringConvertible", "SearchViewController"]
 - !private ["Ps23CustomStringConvertible", "Set"]
@@ -462,12 +479,14 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "pushViewController"]
 - ["Ps23CustomStringConvertible", "recentNameArray"]
 - ["Ps23CustomStringConvertible", "recentProblemStack"]
+- ["Ps23CustomStringConvertible", "recentProblemsLabel"]
 - ["Ps23CustomStringConvertible", "refArray"]
 - !private ["Ps23CustomStringConvertible", "removeArrangedSubview"]
 - !private ["Ps23CustomStringConvertible", "resignFirstResponder"]
 - !private ["Ps23CustomStringConvertible", "resultDetailArray"]
 - !private ["Ps23CustomStringConvertible", "resultNameArray"]
 - !private ["Ps23CustomStringConvertible", "resultSolutionCountArray"]
+- !private ["Ps23CustomStringConvertible", "retrievedProblemFollowed"]
 - !private ["Ps23CustomStringConvertible", "retrievedRecentProblem"]
 - ["Ps23CustomStringConvertible", "searchActivity"]
 - ["Ps23CustomStringConvertible", "searchForResults"]
@@ -511,6 +530,8 @@ depends-member:
 - !private ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "Normal"]
 - !private ["Ps9Equatable", "RetrieveProblem"]
+- !private ["Ps9Equatable", "RetrievedProblemsCount"]
+- !private ["Ps9Equatable", "RetrievedProblemsEmpty"]
 - !private ["Ps9Equatable", "SearchController"]
 - !private ["Ps9Equatable", "SearchViewController"]
 - !private ["Ps9Equatable", "Set"]
@@ -562,12 +583,14 @@ depends-member:
 - !private ["Ps9Equatable", "pushViewController"]
 - ["Ps9Equatable", "recentNameArray"]
 - ["Ps9Equatable", "recentProblemStack"]
+- ["Ps9Equatable", "recentProblemsLabel"]
 - ["Ps9Equatable", "refArray"]
 - !private ["Ps9Equatable", "removeArrangedSubview"]
 - !private ["Ps9Equatable", "resignFirstResponder"]
 - !private ["Ps9Equatable", "resultDetailArray"]
 - !private ["Ps9Equatable", "resultNameArray"]
 - !private ["Ps9Equatable", "resultSolutionCountArray"]
+- !private ["Ps9Equatable", "retrievedProblemFollowed"]
 - !private ["Ps9Equatable", "retrievedRecentProblem"]
 - ["Ps9Equatable", "searchActivity"]
 - ["Ps9Equatable", "searchForResults"]
@@ -598,7 +621,7 @@ depends-member:
 - ["Ps9Equatable", "viewWillAppear"]
 - ["Ps9Equatable", ""]
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "subscript"]
-- !private ["CSo13FDataSnapshot", "children"]
+- !private ["CSo15FIRDataSnapshot", "children"]
 - !private ["C8GoChange17FindRecentProblem", "init"]
 - !private ["Sf", "subscript"]
 - !private ["Ps23FloatLiteralConvertible", "subscript"]
@@ -620,6 +643,8 @@ depends-member:
 - !private ["Ps8Hashable", "GoChangeClient"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "RetrieveProblem"]
+- !private ["Ps8Hashable", "RetrievedProblemsCount"]
+- !private ["Ps8Hashable", "RetrievedProblemsEmpty"]
 - !private ["Ps8Hashable", "SearchController"]
 - !private ["Ps8Hashable", "SearchViewController"]
 - !private ["Ps8Hashable", "Set"]
@@ -670,12 +695,14 @@ depends-member:
 - !private ["Ps8Hashable", "pushViewController"]
 - ["Ps8Hashable", "recentNameArray"]
 - ["Ps8Hashable", "recentProblemStack"]
+- ["Ps8Hashable", "recentProblemsLabel"]
 - ["Ps8Hashable", "refArray"]
 - !private ["Ps8Hashable", "removeArrangedSubview"]
 - !private ["Ps8Hashable", "resignFirstResponder"]
 - !private ["Ps8Hashable", "resultDetailArray"]
 - !private ["Ps8Hashable", "resultNameArray"]
 - !private ["Ps8Hashable", "resultSolutionCountArray"]
+- !private ["Ps8Hashable", "retrievedProblemFollowed"]
 - !private ["Ps8Hashable", "retrievedRecentProblem"]
 - ["Ps8Hashable", "searchActivity"]
 - ["Ps8Hashable", "searchForResults"]
@@ -705,9 +732,7 @@ depends-member:
 - ["Ps8Hashable", "viewDidLoad"]
 - ["Ps8Hashable", "viewWillAppear"]
 - ["Ps8Hashable", ""]
-- !private ["SQ", "Generator"]
 - !private ["SQ", "deinit"]
-- !private ["SQ", "subscript"]
 - !private ["VVSS13CharacterView5Index", "deinit"]
 - !private ["Ps9Indexable", "Generator"]
 - !private ["Ps9Indexable", "Index"]
@@ -805,6 +830,7 @@ depends-member:
 - !private ["PSo8NSCoding", "pushViewController"]
 - ["PSo8NSCoding", "recentNameArray"]
 - ["PSo8NSCoding", "recentProblemStack"]
+- ["PSo8NSCoding", "recentProblemsLabel"]
 - ["PSo8NSCoding", "refArray"]
 - !private ["PSo8NSCoding", "removeArrangedSubview"]
 - !private ["PSo8NSCoding", "resignFirstResponder"]
@@ -885,6 +911,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "pushViewController"]
 - ["PSo26NSExtensionRequestHandling", "recentNameArray"]
 - ["PSo26NSExtensionRequestHandling", "recentProblemStack"]
+- ["PSo26NSExtensionRequestHandling", "recentProblemsLabel"]
 - ["PSo26NSExtensionRequestHandling", "refArray"]
 - !private ["PSo26NSExtensionRequestHandling", "resultDetailArray"]
 - !private ["PSo26NSExtensionRequestHandling", "resultNameArray"]
@@ -919,6 +946,8 @@ depends-member:
 - !private ["CSo8NSObject", "GoChangeClient"]
 - !private ["CSo8NSObject", "ResultsViewController"]
 - !private ["CSo8NSObject", "RetrieveProblem"]
+- !private ["CSo8NSObject", "RetrievedProblemsCount"]
+- !private ["CSo8NSObject", "RetrievedProblemsEmpty"]
 - !private ["CSo8NSObject", "SearchController"]
 - !private ["CSo8NSObject", "SearchViewController"]
 - !private ["CSo8NSObject", "Set"]
@@ -931,6 +960,7 @@ depends-member:
 - ["CSo8NSObject", "UIButton"]
 - !private ["CSo8NSObject", "UIColor"]
 - !private ["CSo8NSObject", "UIFont"]
+- ["CSo8NSObject", "UILabel"]
 - ["CSo8NSObject", "UIStackView"]
 - ["CSo8NSObject", "UITextField"]
 - !private ["CSo8NSObject", "ViewResultViewController"]
@@ -974,12 +1004,14 @@ depends-member:
 - !private ["CSo8NSObject", "pushViewController"]
 - ["CSo8NSObject", "recentNameArray"]
 - ["CSo8NSObject", "recentProblemStack"]
+- ["CSo8NSObject", "recentProblemsLabel"]
 - ["CSo8NSObject", "refArray"]
 - !private ["CSo8NSObject", "removeArrangedSubview"]
 - !private ["CSo8NSObject", "resignFirstResponder"]
 - !private ["CSo8NSObject", "resultDetailArray"]
 - !private ["CSo8NSObject", "resultNameArray"]
 - !private ["CSo8NSObject", "resultSolutionCountArray"]
+- !private ["CSo8NSObject", "retrievedProblemFollowed"]
 - !private ["CSo8NSObject", "retrievedRecentProblem"]
 - ["CSo8NSObject", "searchActivity"]
 - ["CSo8NSObject", "searchForResults"]
@@ -1016,6 +1048,8 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "GetRecentlyAdded"]
 - !private ["PSo16NSObjectProtocol", "GoChangeClient"]
 - !private ["PSo16NSObjectProtocol", "RetrieveProblem"]
+- !private ["PSo16NSObjectProtocol", "RetrievedProblemsCount"]
+- !private ["PSo16NSObjectProtocol", "RetrievedProblemsEmpty"]
 - !private ["PSo16NSObjectProtocol", "SearchController"]
 - !private ["PSo16NSObjectProtocol", "SearchViewController"]
 - !private ["PSo16NSObjectProtocol", "Set"]
@@ -1065,12 +1099,14 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "pushViewController"]
 - ["PSo16NSObjectProtocol", "recentNameArray"]
 - ["PSo16NSObjectProtocol", "recentProblemStack"]
+- ["PSo16NSObjectProtocol", "recentProblemsLabel"]
 - ["PSo16NSObjectProtocol", "refArray"]
 - !private ["PSo16NSObjectProtocol", "removeArrangedSubview"]
 - !private ["PSo16NSObjectProtocol", "resignFirstResponder"]
 - !private ["PSo16NSObjectProtocol", "resultDetailArray"]
 - !private ["PSo16NSObjectProtocol", "resultNameArray"]
 - !private ["PSo16NSObjectProtocol", "resultSolutionCountArray"]
+- !private ["PSo16NSObjectProtocol", "retrievedProblemFollowed"]
 - !private ["PSo16NSObjectProtocol", "retrievedRecentProblem"]
 - ["PSo16NSObjectProtocol", "searchActivity"]
 - ["PSo16NSObjectProtocol", "searchForResults"]
@@ -1103,7 +1139,6 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "blueColor"]
 - !private ["PSo14NSSecureCoding", "subscript"]
 - !private ["CSo8NSString", "subscript"]
-- !private ["Ps21NilLiteralConvertible", "Generator"]
 - !private ["Ps21NilLiteralConvertible", "subscript"]
 - !private ["Ps13OptionSetType", "Normal"]
 - !private ["Ps13OptionSetType", "TouchUpInside"]
@@ -1150,6 +1185,7 @@ depends-member:
 - ["C8GoChange20SearchViewController", "UIButton"]
 - !private ["C8GoChange20SearchViewController", "UIColor"]
 - !private ["C8GoChange20SearchViewController", "UIFont"]
+- ["C8GoChange20SearchViewController", "UILabel"]
 - ["C8GoChange20SearchViewController", "UIStackView"]
 - ["C8GoChange20SearchViewController", "UITextField"]
 - !private ["C8GoChange20SearchViewController", "ViewResultViewController"]
@@ -1172,6 +1208,7 @@ depends-member:
 - ["C8GoChange20SearchViewController", "problemsNotInCoreData"]
 - ["C8GoChange20SearchViewController", "recentNameArray"]
 - ["C8GoChange20SearchViewController", "recentProblemStack"]
+- ["C8GoChange20SearchViewController", "recentProblemsLabel"]
 - ["C8GoChange20SearchViewController", "refArray"]
 - ["C8GoChange20SearchViewController", "searchActivity"]
 - ["C8GoChange20SearchViewController", "searchForResults"]
@@ -1216,6 +1253,9 @@ depends-member:
 - !private ["SS", "subscript"]
 - !private ["Ps30StringInterpolationConvertible", "subscript"]
 - !private ["Ps24StringLiteralConvertible", "subscript"]
+- !private ["C8GoChange8TempSave", "RetrievedProblemsCount"]
+- !private ["C8GoChange8TempSave", "RetrievedProblemsEmpty"]
+- !private ["C8GoChange8TempSave", "retrievedProblemFollowed"]
 - !private ["C8GoChange8TempSave", "retrievedRecentProblem"]
 - !private ["C8GoChange8TempSave", "sharedInstance"]
 - !private ["PSo29UIAccessibilityIdentification", "addArrangedSubview"]
@@ -1312,6 +1352,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "pushViewController"]
 - ["PSo21UIAppearanceContainer", "recentNameArray"]
 - ["PSo21UIAppearanceContainer", "recentProblemStack"]
+- ["PSo21UIAppearanceContainer", "recentProblemsLabel"]
 - ["PSo21UIAppearanceContainer", "refArray"]
 - !private ["PSo21UIAppearanceContainer", "removeArrangedSubview"]
 - !private ["PSo21UIAppearanceContainer", "resignFirstResponder"]
@@ -1389,6 +1430,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "pushViewController"]
 - ["PSo18UIContentContainer", "recentNameArray"]
 - ["PSo18UIContentContainer", "recentProblemStack"]
+- ["PSo18UIContentContainer", "recentProblemsLabel"]
 - ["PSo18UIContentContainer", "refArray"]
 - !private ["PSo18UIContentContainer", "resultDetailArray"]
 - !private ["PSo18UIContentContainer", "resultNameArray"]
@@ -1507,6 +1549,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "pushViewController"]
 - ["PSo18UIFocusEnvironment", "recentNameArray"]
 - ["PSo18UIFocusEnvironment", "recentProblemStack"]
+- ["PSo18UIFocusEnvironment", "recentProblemsLabel"]
 - ["PSo18UIFocusEnvironment", "refArray"]
 - !private ["PSo18UIFocusEnvironment", "removeArrangedSubview"]
 - !private ["PSo18UIFocusEnvironment", "resignFirstResponder"]
@@ -1540,6 +1583,7 @@ depends-member:
 - !private ["PSo10UIKeyInput", "layer"]
 - !private ["PSo10UIKeyInput", "resignFirstResponder"]
 - !private ["PSo10UIKeyInput", "text"]
+- !private ["CSo7UILabel", "alpha"]
 - !private ["CSo7UILabel", "font"]
 - !private ["CSo7UILabel", "text"]
 - !private ["CSo15UINavigationBar", "barTintColor"]
@@ -1566,6 +1610,7 @@ depends-member:
 - ["CSo11UIResponder", "UIButton"]
 - !private ["CSo11UIResponder", "UIColor"]
 - !private ["CSo11UIResponder", "UIFont"]
+- ["CSo11UIResponder", "UILabel"]
 - ["CSo11UIResponder", "UIStackView"]
 - ["CSo11UIResponder", "UITextField"]
 - !private ["CSo11UIResponder", "ViewResultViewController"]
@@ -1604,6 +1649,7 @@ depends-member:
 - !private ["CSo11UIResponder", "pushViewController"]
 - ["CSo11UIResponder", "recentNameArray"]
 - ["CSo11UIResponder", "recentProblemStack"]
+- ["CSo11UIResponder", "recentProblemsLabel"]
 - ["CSo11UIResponder", "refArray"]
 - !private ["CSo11UIResponder", "removeArrangedSubview"]
 - !private ["CSo11UIResponder", "resignFirstResponder"]
@@ -1640,6 +1686,7 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "resultNameArray"]
 - !private ["PSo20UIScrollViewDelegate", "resultSolutionCountArray"]
 - !private ["CSo11UIStackView", "addArrangedSubview"]
+- !private ["CSo11UIStackView", "hidden"]
 - !private ["CSo11UIStackView", "removeArrangedSubview"]
 - !private ["PSo16UIStateRestoring", "Array"]
 - !private ["PSo16UIStateRestoring", "CGSizeMake"]
@@ -1682,6 +1729,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "pushViewController"]
 - ["PSo16UIStateRestoring", "recentNameArray"]
 - ["PSo16UIStateRestoring", "recentProblemStack"]
+- ["PSo16UIStateRestoring", "recentProblemsLabel"]
 - ["PSo16UIStateRestoring", "refArray"]
 - !private ["PSo16UIStateRestoring", "resultDetailArray"]
 - !private ["PSo16UIStateRestoring", "resultNameArray"]
@@ -1749,6 +1797,7 @@ depends-member:
 - !private ["PSo19UITextFieldDelegate", "problemsNotInCoreData"]
 - !private ["PSo19UITextFieldDelegate", "recentNameArray"]
 - !private ["PSo19UITextFieldDelegate", "recentProblemStack"]
+- !private ["PSo19UITextFieldDelegate", "recentProblemsLabel"]
 - !private ["PSo19UITextFieldDelegate", "refArray"]
 - !private ["PSo19UITextFieldDelegate", "searchActivity"]
 - !private ["PSo19UITextFieldDelegate", "searchTextField"]
@@ -1826,6 +1875,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "pushViewController"]
 - ["PSo18UITraitEnvironment", "recentNameArray"]
 - ["PSo18UITraitEnvironment", "recentProblemStack"]
+- ["PSo18UITraitEnvironment", "recentProblemsLabel"]
 - ["PSo18UITraitEnvironment", "refArray"]
 - !private ["PSo18UITraitEnvironment", "removeArrangedSubview"]
 - !private ["PSo18UITraitEnvironment", "resignFirstResponder"]
@@ -1892,6 +1942,7 @@ depends-member:
 - ["CSo16UIViewController", "UIButton"]
 - !private ["CSo16UIViewController", "UIColor"]
 - !private ["CSo16UIViewController", "UIFont"]
+- ["CSo16UIViewController", "UILabel"]
 - ["CSo16UIViewController", "UIStackView"]
 - ["CSo16UIViewController", "UITextField"]
 - !private ["CSo16UIViewController", "ViewResultViewController"]
@@ -1920,6 +1971,7 @@ depends-member:
 - !private ["CSo16UIViewController", "pushViewController"]
 - ["CSo16UIViewController", "recentNameArray"]
 - ["CSo16UIViewController", "recentProblemStack"]
+- ["CSo16UIViewController", "recentProblemsLabel"]
 - ["CSo16UIViewController", "refArray"]
 - !private ["CSo16UIViewController", "resultDetailArray"]
 - !private ["CSo16UIViewController", "resultNameArray"]
@@ -2046,7 +2098,7 @@ depends-nominal:
 - !private "Sd"
 - "Ps9Equatable"
 - !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
-- !private "CSo13FDataSnapshot"
+- !private "CSo15FIRDataSnapshot"
 - !private "C8GoChange17FindRecentProblem"
 - !private "Sf"
 - !private "Ps23FloatLiteralConvertible"
@@ -2164,29 +2216,55 @@ depends-nominal:
 depends-dynamic-lookup:
 - !private "value"
 - !private "subscript"
-- !private "key"
 - !private "children"
+- !private "key"
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/Firebase/Headers/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FirebaseServerValue.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FTransactionResult.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FMutableData.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FirebaseApp.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FQuery.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/Firebase.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FEventType.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FDataSnapshot.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FConfig.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FAuthType.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FAuthData.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/Firebase-umbrella.h"
-- "/Users/nickshort/Git/GoChangeCopy/Build/Products/Debug-iphonesimulator/Firebase.framework/Modules/module.modulemap"
-interface-hash: "f2ab4728e427eea76b4af5c2dc1bafc4"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRConfiguration.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRApp.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIREmailPasswordAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/Firebase/Headers/Firebase.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/WebKit.swiftmodule"
+interface-hash: "a576b7ed0f0ef6d96779d778ef08203a"

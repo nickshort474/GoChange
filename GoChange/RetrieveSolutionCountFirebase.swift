@@ -12,7 +12,6 @@ import Firebase
 
 class RetrieveSolutionCountFirebase:NSObject{
     
-    //var nameRef = Firebase(url: "https://gochange.firebaseio.com/problem/solutionCount")
     var nameRef = FIRDatabase.database().reference().child("problem/solutionCount")
     var resultsArray:[Int] = []
     

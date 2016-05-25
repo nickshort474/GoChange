@@ -12,10 +12,6 @@ import Firebase
 
 class RetrieveNamesFromFirebase:NSObject{
     
-    //var nameRef = Firebase(url: "https://gochange.firebaseio.com/problem/names")
-    
-    
-    
     var nameResults:[String] = []
     var ownerResults:[String] = []
     

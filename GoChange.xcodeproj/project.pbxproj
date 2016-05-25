@@ -35,7 +35,6 @@
 		36C37CBA1C7A01AC002B4FB1 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CAD1C7A01AC002B4FB1 /* WebViewController.swift */; };
 		36C37CBE1C7A01C5002B4FB1 /* GoChangeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CBB1C7A01C5002B4FB1 /* GoChangeClient.swift */; };
 		36C37CBF1C7A01C5002B4FB1 /* GoChangeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CBC1C7A01C5002B4FB1 /* GoChangeConstants.swift */; };
-		36C37CC01C7A01C5002B4FB1 /* GoChangeConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37CBD1C7A01C5002B4FB1 /* GoChangeConvenience.swift */; };
 		36CB44141CCF504A000AD3C5 /* ChangeOrgCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CB44131CCF504A000AD3C5 /* ChangeOrgCode.swift */; };
 		36D214591CDA568C00C3142B /* DeleteProblemFromCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D214581CDA568C00C3142B /* DeleteProblemFromCoreData.swift */; };
 		36D7CA051CA542C100A73176 /* TempSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D7CA041CA542C100A73176 /* TempSave.swift */; };
@@ -114,7 +113,6 @@
 		36C37CAD1C7A01AC002B4FB1 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		36C37CBB1C7A01C5002B4FB1 /* GoChangeClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoChangeClient.swift; sourceTree = "<group>"; };
 		36C37CBC1C7A01C5002B4FB1 /* GoChangeConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoChangeConstants.swift; sourceTree = "<group>"; };
-		36C37CBD1C7A01C5002B4FB1 /* GoChangeConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoChangeConvenience.swift; sourceTree = "<group>"; };
 		36CB44131CCF504A000AD3C5 /* ChangeOrgCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeOrgCode.swift; sourceTree = "<group>"; };
 		36D214581CDA568C00C3142B /* DeleteProblemFromCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteProblemFromCoreData.swift; sourceTree = "<group>"; };
 		36D7CA041CA542C100A73176 /* TempSave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempSave.swift; sourceTree = "<group>"; };
@@ -225,8 +223,6 @@
 		36C37C6A1C7A00E3002B4FB1 /* GoChange */ = {
 			isa = PBXGroup;
 			children = (
-				367AEBDD1CF1B563003AB9B1 /* GoogleService-Info.plist */,
-				36DE37501CB10EBD005DEEEA /* Old files */,
 				36B03CC51C8DFBC700E9427D /* Controllers */,
 				36C37CA01C7A0125002B4FB1 /* Helper */,
 				36C37C9F1C7A0118002B4FB1 /* Other */,
@@ -303,6 +299,7 @@
 		36C37C9F1C7A0118002B4FB1 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				367AEBDD1CF1B563003AB9B1 /* GoogleService-Info.plist */,
 				36C37C7A1C7A00E3002B4FB1 /* Info.plist */,
 			);
 			name = Other;
@@ -312,16 +309,8 @@
 			isa = PBXGroup;
 			children = (
 				36C37CBB1C7A01C5002B4FB1 /* GoChangeClient.swift */,
-				36C37CBD1C7A01C5002B4FB1 /* GoChangeConvenience.swift */,
 			);
 			name = Helper;
-			sourceTree = "<group>";
-		};
-		36DE37501CB10EBD005DEEEA /* Old files */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Old files";
 			sourceTree = "<group>";
 		};
 		63F03377A8A9E4CB0A0482D4 /* Frameworks */ = {
@@ -627,7 +616,6 @@
 				36C37CBF1C7A01C5002B4FB1 /* GoChangeConstants.swift in Sources */,
 				36C37CBE1C7A01C5002B4FB1 /* GoChangeClient.swift in Sources */,
 				3618C41D1CE2573E003102C1 /* GetRecentlyAdded.swift in Sources */,
-				36C37CC01C7A01C5002B4FB1 /* GoChangeConvenience.swift in Sources */,
 				36C37CB61C7A01AC002B4FB1 /* loginViewController.swift in Sources */,
 				36C37C6C1C7A00E3002B4FB1 /* AppDelegate.swift in Sources */,
 				36E564A11CCCA79E008656EC /* SaveNewProblem.swift in Sources */,

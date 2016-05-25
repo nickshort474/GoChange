@@ -41,10 +41,9 @@ class SaveNewProblem:NSObject{
     
     func saveProblemToFirebase(){
         
-        //let namesRef = Firebase(url:"https://gochange.firebaseio.com/problem/names")
         let namesRef = FIRDatabase.database().reference().child("problem/names")
-        //create location with unique ID in firebase database
         
+        //create location with unique ID in firebase database
         let problemNameLocation = namesRef.childByAutoId()
         
         problemID = problemNameLocation.key
@@ -65,8 +64,8 @@ class SaveNewProblem:NSObject{
     func saveDetailsToFirebase(){
         
         // create reference to details section of firebase
-        //let problemDetailLocation = Firebase(url:"https://gochange.firebaseio.com/problem/details")
         let problemDetailLocation = FIRDatabase.database().reference().child("problem/details")
+        
         // append unique ID to path
         let uniqueDetailLocation = problemDetailLocation.child(problemID!)
         
@@ -82,7 +81,6 @@ class SaveNewProblem:NSObject{
         
         
         // create ref to solution count location
-        //let solutionCountLocation = Firebase(url:"https://gochange.firebaseio.com/problem/solutionCount")
         let solutionCountLocation = FIRDatabase.database().reference().child("problem/solutionCount")
         
         let uniqueSolutionCountLocation = solutionCountLocation.child(problemID!)
@@ -90,7 +88,6 @@ class SaveNewProblem:NSObject{
         
         
         //create reference to solutions location in firebase
-        //let problemSolutionsLocation = Firebase(url:"https://gochange.firebaseio.com/problem/solutions")
         let problemSolutionsLocation = FIRDatabase.database().reference().child("problem/solutions")
         
         let uniqueSolutionLocation = problemSolutionsLocation.child(problemID!)
@@ -145,7 +142,6 @@ class SaveNewProblem:NSObject{
             try self.sharedContext.save()
             
         }catch{
-            //TODO: Catch errors!
         }
         
         //completion handler to pass back newly created problem

@@ -8,12 +8,12 @@ provides-member:
 - ["C8GoChange14GoChangeClient", "Constants"]
 provides-dynamic-lookup:
 depends-top-level:
-- "GoChangeClient"
 - "StringLiteralType"
 - "*"
-- "UIColor"
-- "CGFloat"
 - "String"
+- "CGFloat"
+- "GoChangeClient"
+- "UIColor"
 - "/"
 depends-member:
 - ["Ps9AnyObject", "UIColor"]

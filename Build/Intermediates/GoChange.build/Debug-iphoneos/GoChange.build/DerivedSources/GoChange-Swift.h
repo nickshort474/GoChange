@@ -267,23 +267,19 @@ SWIFT_CLASS("_TtC8GoChange16GetRecentlyAdded")
 - (nonnull instancetype)initWithCompletionHandler:(void (^ _Nonnull)(id _Nonnull))completionHandler OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSData;
+@class NSError;
 
 SWIFT_CLASS("_TtC8GoChange14GoChangeClient")
 @interface GoChangeClient : NSObject
+- (NSString * _Nonnull)escapedParameters:(NSDictionary<NSString *, id> * _Nonnull)parameters;
+- (void)parseJSON:(NSData * _Nonnull)data completionHandler:(void (^ _Nonnull)(id _Null_unspecified, NSError * _Nullable))completionHandler;
 + (GoChangeClient * _Nonnull)sharedInstance;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 @interface GoChangeClient (SWIFT_EXTENSION(GoChange))
-@end
-
-@class NSData;
-@class NSError;
-
-@interface GoChangeClient (SWIFT_EXTENSION(GoChange))
-- (NSString * _Nonnull)escapedParameters:(NSDictionary<NSString *, id> * _Nonnull)parameters;
-- (void)parseJSON:(NSData * _Nonnull)data completionHandler:(void (^ _Nonnull)(id _Null_unspecified, NSError * _Nullable))completionHandler;
 @end
 
 @class UIActivityIndicatorView;
@@ -569,6 +565,7 @@ SWIFT_CLASS("_TtC8GoChange24UpdateUserInfoController")
 - (IBAction)updatePassword:(UIButton * _Nonnull)sender;
 - (IBAction)updateUsername:(UIButton * _Nonnull)sender;
 - (IBAction)updateEmail:(UIButton * _Nonnull)sender;
+- (IBAction)deleteAccount:(UIButton * _Nonnull)sender;
 - (void)segueToInput;
 - (IBAction)cancelUpdate:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -609,6 +606,7 @@ SWIFT_CLASS("_TtC8GoChange22ViewIdeaViewController")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified voteSolutionButton;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified petitionTextField;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified secondPetitionTextField;
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView * _Null_unspecified petitionActivity;
 @property (nonatomic, copy) NSString * _Null_unspecified problemID;
 @property (nonatomic, copy) NSString * _Null_unspecified solutionID;
 @property (nonatomic, copy) NSString * _Null_unspecified viewControllerStatus;
@@ -617,6 +615,7 @@ SWIFT_CLASS("_TtC8GoChange22ViewIdeaViewController")
 @property (nonatomic, copy) NSString * _Null_unspecified petitionURL;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
+- (void)viewDidAppear:(BOOL)animated;
 - (IBAction)petitionButton:(UIButton * _Nonnull)sender;
 - (IBAction)voteSolutionClick:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -693,6 +692,7 @@ SWIFT_CLASS("_TtC8GoChange19loginViewController")
 - (IBAction)signupControl:(UIButton * _Nonnull)sender;
 - (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField;
 - (void)segueToHomeScreen;
+- (IBAction)forgotPassword:(UIButton * _Nonnull)sender;
 - (void)presentAlert:(NSString * _Nonnull)alertType;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;

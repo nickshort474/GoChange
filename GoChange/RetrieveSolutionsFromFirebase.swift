@@ -13,7 +13,6 @@ import CoreData
 
 class RetrieveSolutionsFromFirebase:NSObject{
     
-    //var ref = Firebase(url:"https://gochange.firebaseio.com/problem/solutions")
     
     var ref:FIRDatabaseReference!
     var problemRef:FIRDatabaseReference!
@@ -67,8 +66,6 @@ class RetrieveSolutionsFromFirebase:NSObject{
                 self.createLocalArray()
             }
             
-            
-            //TODO: decide whather completion handler needed
             completionHandler(result: snapshot)
 
             
@@ -97,34 +94,11 @@ class RetrieveSolutionsFromFirebase:NSObject{
             
             
         }catch{
-            //TODO: deal with errors
         }
             
     }
     
     func compareArraysForMatches(){
-        
-         //Test whether any of the solutions from firebase (held in TempSave) already exist in retrieved coredata array (localSolutionIDArray)
-        /*
-        for var i in 0 ..< TempSave.sharedInstance().solutionIDArray.count{
-            
-            for var j in 0 ..< localSolutionIDArray.count{
-                
-                
-                if(TempSave.sharedInstance().solutionIDArray[i] as? String == localSolutionIDArray[j] as? String){
-                    
-                    // IF there is a match between a firebase solution and coreData remove it from arrays
-                    /*
-                    TempSave.sharedInstance().solutionIDArray.removeObjectAtIndex(i)
-                    TempSave.sharedInstance().solutionNameArray.removeObjectAtIndex(i)
-                    TempSave.sharedInstance().solutionDetailArray.removeObjectAtIndex(i)
-                    TempSave.sharedInstance().solutionVoteArray.removeObjectAtIndex(i)
-                    TempSave.sharedInstance().solutionOwnerArray.removeObjectAtIndex(i)
-                    */
-                }
-            }
-        }
-        */
         
         //gets useRef Array
         let setA = Set(TempSave.sharedInstance().solutionIDArray)
@@ -163,8 +137,6 @@ class RetrieveSolutionsFromFirebase:NSObject{
                 TempSave.sharedInstance().petitionURLArray.append(snapshot.value!["PetitionURL"] as! String)
                 
                 if(TempSave.sharedInstance().solutionIDArray.count == self.nonMatches.count){
-                    
-                    //TODO: call UpdateCoreDataSolutions class rather than function
                     
                     self.updateCoreDataSolutions()
                 }
@@ -206,7 +178,6 @@ class RetrieveSolutionsFromFirebase:NSObject{
             try self.sharedContext.save()
             
         }catch{
-            //TODO: Catch errors!
         }
     }
     

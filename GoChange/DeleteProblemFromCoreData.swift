@@ -38,7 +38,6 @@ class DeleteProblemFromCoreData:NSObject{
             }
             
         }catch{
-            //TODO: deal with error
         }
         
     }
@@ -62,14 +61,12 @@ class DeleteProblemFromCoreData:NSObject{
             }
             
         }catch{
-            //TODO: deal with error
         }
         
         
         do{
             try sharedContext.save()
         }catch{
-            //TODO: deal with error
         }
         
     }

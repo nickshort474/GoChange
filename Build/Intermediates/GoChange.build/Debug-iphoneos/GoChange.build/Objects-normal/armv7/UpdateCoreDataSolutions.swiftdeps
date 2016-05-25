@@ -8,21 +8,21 @@ provides-member:
 provides-dynamic-lookup:
 - "sharedContext"
 - "haveVotedArray"
-- "createCoreDataSolutions"
 - "existingProblem"
+- "createCoreDataSolutions"
 depends-top-level:
-- "NSMutableArray"
-- "Problem"
-- "NSManagedObjectContext"
-- !private "String"
-- !private "..<"
-- !private "Solution"
 - "UpdateCoreDataSolutions"
+- !private "AnyObject"
+- "NSObject"
 - !private "TempSave"
 - "Array"
-- !private "AnyObject"
+- !private "..<"
+- !private "String"
+- "NSManagedObjectContext"
+- "Problem"
 - !private "CoreDataStackManager"
-- "NSObject"
+- !private "Solution"
+- "NSMutableArray"
 depends-member:
 - !private ["Ps9AnyObject", "AnyObject"]
 - !private ["Ps9AnyObject", "CoreDataStackManager"]

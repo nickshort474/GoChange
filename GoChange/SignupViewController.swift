@@ -23,7 +23,6 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
     
     var sendingController:String = ""
     var updateField:String = ""
-    //var ref = Firebase(url:"https://gochange.firebaseio.com")
     
     var ref:FIRDatabaseReference!
     
@@ -52,6 +51,12 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
                 label1.text = "Old email"
                 label2.text = "New email"
                 label3.text = "Password"
+            }else if(updateField == "delete"){
+                label1.text = "Email"
+                label2.text = "Password"
+                
+                label3.hidden = true
+                passwordTextfield.hidden = true
             }
             
         }else if (sendingController == "login"){
@@ -85,7 +90,6 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
                     if (username != "" && email != "" && password != ""){
             
                         // create user account
-                        //self.ref.createUser
                         
                         FIRAuth.auth()?.createUserWithEmail(email!, password: password!, completion: {
                             error, result in
@@ -97,7 +101,6 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
                             }else{
                                 
                                 //authorize user
-                                //self.ref.authUser
                                 FIRAuth.auth()?.signInWithEmail(email!,password: password!, completion: {
                                      user,error in
                         
@@ -145,6 +148,8 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
             if(updateField == "username"){
                 let oldUsername = usernameTextfield.text
                 let newUsername = emailTextfield.text!
+                
+                //migrating from firebase 2.0 to 3.0 no longer need password? / need to update UI
                 _ = passwordTextfield.text
             
                 NSUserDefaults.standardUserDefaults().setValue(newUsername, forKey: "username")
@@ -160,51 +165,117 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
                     if usernameValue == oldUsername{
                         userRef.updateChildValues(values)
                     }
+                    self.presentAlert("Username changed!")
                 })
             
             
             
             }else if(updateField == "password"){
-                _ = usernameTextfield.text
-                _ = emailTextfield.text
-                let newPassword = passwordTextfield.text
-            
+                
+                
+                let email = usernameTextfield.text! //email
+                let oldPassword = emailTextfield.text! // old password
+                let newPassword = passwordTextfield.text!  // new password
+                
                 let user = FIRAuth.auth()?.currentUser
                 
-                user?.updatePassword(newPassword!, completion:{ error in
-                    if error != nil{
-                        
-                        //code for error
-                        self.presentAlert("There was an error while changing password, please try again")
+                var credential:FIRAuthCredential
+                credential = FIREmailPasswordAuthProvider.credentialWithEmail(email, password: oldPassword)
+                
+                user?.reauthenticateWithCredential(credential){
+                    error in
+                    
+                    if let _ = error{
                         
                     }else{
-                       self.presentAlert("password changed!")
+                        
+                        user?.updatePassword(newPassword, completion:{
+                            error in
+                            if let _ = error{
+                                 //code for error
+                                self.presentAlert("There was an error while changing password, please try again")
+                                
+                            }else{
+                                self.presentAlert("password changed!")
+                                
+                            }
+                            
+                        })
                     }
-                })
+                }
                 
         }else if(updateField == "email"){
             
-            _ = usernameTextfield.text
-            let newEmail = emailTextfield.text
-            _ = passwordTextfield.text
+            let oldEmail = usernameTextfield.text! // old email
+            let newEmail = emailTextfield.text! // new email
+            let password = passwordTextfield.text! // password
             
             let user = FIRAuth.auth()?.currentUser
+            var credential:FIRAuthCredential
+            credential = FIREmailPasswordAuthProvider.credentialWithEmail(oldEmail, password: password)
                 
-            user?.updateEmail(newEmail!, completion: {
+            user?.reauthenticateWithCredential(credential){
                 error in
-                if error != nil{
-                    //TODO: process error
-                    self.presentAlert("There was an error while changing email, please try again")
+                    
+                if let error = error{
+                        
+                    print("an error happened \(error)")
+                        
                 }else{
-                    self.presentAlert("Email changed!")
+                    user?.updateEmail(newEmail, completion: {
+                        error in
+                        if let _ = error{
+                            self.presentAlert("There was an error while changing email, please try again")
+                            
+                        }else{
+                            // save new email to database
+                            self.ref.child("users/(user!.uid)/email").setValue(newEmail)
+                            
+                            //present alert
+                            self.presentAlert("Email changed!")
+                        }
+                    })
                 }
-            })
+            }
+        }else if(updateField == "delete"){
+                
+                let email = usernameTextfield.text! // email
+                let password = emailTextfield.text! // password
+                
+                
+                let user = FIRAuth.auth()?.currentUser
+                var credential:FIRAuthCredential
+                credential = FIREmailPasswordAuthProvider.credentialWithEmail(email, password: password)
+                
+                user?.reauthenticateWithCredential(credential){
+                    error in
+                    
+                    if let error = error{
+                        
+                        print("an error happened \(error)")
+                        
+                    }else{
+                        user?.deleteWithCompletion({
+                            error in
+                            if let _ = error{
+                           
+                                self.presentAlert("There was an error while deleting account")
+                               
+                            }else{
+                                self.presentAlert("Account deleted")
+                            }
+                        })
+                    }
+                }
+    
+                
+                
         }
         }else{
             //prompt user to input data
             self.presentAlert("Please input information")
         }
-        self.dismissViewControllerAnimated(true, completion: nil)
+        
     }
         
     
@@ -227,9 +298,15 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
         let controller = UIAlertController()
         controller.message = alertType
         
-        let alertAction = UIAlertAction(title: "Please try again", style: UIAlertActionStyle.Cancel){
+        let alertAction = UIAlertAction(title: "Okay", style: UIAlertActionStyle.Cancel){
             action in
             
+            if alertType == "Account deleted"{
+                self.navigationController?.popToRootViewControllerAnimated(true)
+                
+            }else{
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
         }
         
         controller.addAction(alertAction)

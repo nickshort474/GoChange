@@ -6,44 +6,46 @@ provides-nominal:
 provides-member:
 - ["C8GoChange19loginViewController", ""]
 provides-dynamic-lookup:
-- "emailTextfield"
-- "viewDidLoad"
 - "loginButton"
-- "signupControl"
-- "segueToHomeScreen"
-- "loginActivityIndicator"
-- "presentAlert"
+- "forgotPassword"
+- "emailTextfield"
 - "userID"
-- "textFieldShouldReturn"
-- "ref"
-- "viewDidAppear"
+- "viewDidLoad"
+- "loginActivityIndicator"
 - "login"
+- "signupControl"
+- "textFieldShouldReturn"
+- "viewDidAppear"
+- "segueToHomeScreen"
+- "ref"
 - "passwordTextfield"
+- "presentAlert"
 depends-top-level:
-- !private "FIRDatabase"
-- !private "FIRAuth"
+- !private "StringLiteralType"
+- !private "UIAlertActionStyle"
+- "UITextFieldDelegate"
+- "UIViewController"
+- !private "HomeViewController"
+- "Bool"
 - "UIActivityIndicatorView"
+- !private "UIAlertAction"
+- "String"
+- "AnyObject"
+- "FIRDatabaseReference"
+- !private "FIRAuth"
+- !private "~="
+- !private "=="
+- !private "SignupViewController"
+- "UITextField"
+- !private "BooleanLiteralType"
+- !private "&&"
+- "loginViewController"
+- !private "NSUserDefaults"
+- !private "FIRDatabase"
+- "UIButton"
+- !private "UIAlertController"
 - !private "!="
 - !private "print"
-- !private "StringLiteralType"
-- !private "UIAlertController"
-- "UITextField"
-- "UIButton"
-- !private "&&"
-- !private "NSUserDefaults"
-- !private "~="
-- "String"
-- !private "SignupViewController"
-- !private "BooleanLiteralType"
-- "UIViewController"
-- !private "UIAlertActionStyle"
-- "Bool"
-- "UITextFieldDelegate"
-- "AnyObject"
-- !private "HomeViewController"
-- "FIRDatabaseReference"
-- "loginViewController"
-- !private "UIAlertAction"
 depends-member:
 - !private ["Ps9AnyObject", "FIRAuth"]
 - !private ["Ps9AnyObject", "FIRDatabase"]
@@ -61,6 +63,7 @@ depends-member:
 - !private ["Ps9AnyObject", "description"]
 - ["Ps9AnyObject", "emailTextfield"]
 - !private ["Ps9AnyObject", "enabled"]
+- ["Ps9AnyObject", "forgotPassword"]
 - !private ["Ps9AnyObject", "hidden"]
 - ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "instantiateViewControllerWithIdentifier"]
@@ -79,6 +82,7 @@ depends-member:
 - !private ["Ps9AnyObject", "reference"]
 - !private ["Ps9AnyObject", "resignFirstResponder"]
 - ["Ps9AnyObject", "segueToHomeScreen"]
+- !private ["Ps9AnyObject", "sendPasswordResetWithEmail"]
 - !private ["Ps9AnyObject", "setValue"]
 - !private ["Ps9AnyObject", "signInWithEmail"]
 - ["Ps9AnyObject", "signupControl"]
@@ -122,6 +126,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "description"]
 - ["Ps11CVarArgType", "emailTextfield"]
 - !private ["Ps11CVarArgType", "enabled"]
+- ["Ps11CVarArgType", "forgotPassword"]
 - !private ["Ps11CVarArgType", "hidden"]
 - ["Ps11CVarArgType", "init"]
 - !private ["Ps11CVarArgType", "instantiateViewControllerWithIdentifier"]
@@ -139,6 +144,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "reference"]
 - !private ["Ps11CVarArgType", "resignFirstResponder"]
 - ["Ps11CVarArgType", "segueToHomeScreen"]
+- !private ["Ps11CVarArgType", "sendPasswordResetWithEmail"]
 - !private ["Ps11CVarArgType", "setValue"]
 - !private ["Ps11CVarArgType", "signInWithEmail"]
 - ["Ps11CVarArgType", "signupControl"]
@@ -167,6 +173,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "FIRAuth"]
 - !private ["Ps28CustomDebugStringConvertible", "FIRDatabase"]
 - !private ["Ps28CustomDebugStringConvertible", "NSUserDefaults"]
+- !private ["Ps28CustomDebugStringConvertible", "Some"]
 - !private ["Ps28CustomDebugStringConvertible", "UIAlertAction"]
 - !private ["Ps28CustomDebugStringConvertible", "UIAlertActionStyle"]
 - !private ["Ps28CustomDebugStringConvertible", "UIAlertController"]
@@ -179,6 +186,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "description"]
 - ["Ps28CustomDebugStringConvertible", "emailTextfield"]
 - !private ["Ps28CustomDebugStringConvertible", "enabled"]
+- ["Ps28CustomDebugStringConvertible", "forgotPassword"]
 - !private ["Ps28CustomDebugStringConvertible", "hidden"]
 - ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "instantiateViewControllerWithIdentifier"]
@@ -196,6 +204,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "reference"]
 - !private ["Ps28CustomDebugStringConvertible", "resignFirstResponder"]
 - ["Ps28CustomDebugStringConvertible", "segueToHomeScreen"]
+- !private ["Ps28CustomDebugStringConvertible", "sendPasswordResetWithEmail"]
 - !private ["Ps28CustomDebugStringConvertible", "setValue"]
 - !private ["Ps28CustomDebugStringConvertible", "signInWithEmail"]
 - ["Ps28CustomDebugStringConvertible", "signupControl"]
@@ -235,6 +244,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "description"]
 - ["Ps23CustomStringConvertible", "emailTextfield"]
 - !private ["Ps23CustomStringConvertible", "enabled"]
+- ["Ps23CustomStringConvertible", "forgotPassword"]
 - !private ["Ps23CustomStringConvertible", "hidden"]
 - ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "instantiateViewControllerWithIdentifier"]
@@ -252,6 +262,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "reference"]
 - !private ["Ps23CustomStringConvertible", "resignFirstResponder"]
 - ["Ps23CustomStringConvertible", "segueToHomeScreen"]
+- !private ["Ps23CustomStringConvertible", "sendPasswordResetWithEmail"]
 - !private ["Ps23CustomStringConvertible", "setValue"]
 - !private ["Ps23CustomStringConvertible", "signInWithEmail"]
 - ["Ps23CustomStringConvertible", "signupControl"]
@@ -294,6 +305,7 @@ depends-member:
 - !private ["Ps9Equatable", "description"]
 - ["Ps9Equatable", "emailTextfield"]
 - !private ["Ps9Equatable", "enabled"]
+- ["Ps9Equatable", "forgotPassword"]
 - !private ["Ps9Equatable", "hidden"]
 - ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "instantiateViewControllerWithIdentifier"]
@@ -311,6 +323,7 @@ depends-member:
 - !private ["Ps9Equatable", "reference"]
 - !private ["Ps9Equatable", "resignFirstResponder"]
 - ["Ps9Equatable", "segueToHomeScreen"]
+- !private ["Ps9Equatable", "sendPasswordResetWithEmail"]
 - !private ["Ps9Equatable", "setValue"]
 - !private ["Ps9Equatable", "signInWithEmail"]
 - ["Ps9Equatable", "signupControl"]
@@ -338,6 +351,7 @@ depends-member:
 - !private ["Ps9ErrorType", "localizedDescription"]
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["CSo7FIRAuth", "auth"]
+- !private ["CSo7FIRAuth", "sendPasswordResetWithEmail"]
 - !private ["CSo7FIRAuth", "signInWithEmail"]
 - !private ["OSC16FIRDataEventType", "Value"]
 - !private ["CSo15FIRDataSnapshot", "value"]
@@ -368,6 +382,7 @@ depends-member:
 - !private ["Ps8Hashable", "description"]
 - ["Ps8Hashable", "emailTextfield"]
 - !private ["Ps8Hashable", "enabled"]
+- ["Ps8Hashable", "forgotPassword"]
 - !private ["Ps8Hashable", "hidden"]
 - ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "instantiateViewControllerWithIdentifier"]
@@ -385,6 +400,7 @@ depends-member:
 - !private ["Ps8Hashable", "reference"]
 - !private ["Ps8Hashable", "resignFirstResponder"]
 - ["Ps8Hashable", "segueToHomeScreen"]
+- !private ["Ps8Hashable", "sendPasswordResetWithEmail"]
 - !private ["Ps8Hashable", "setValue"]
 - !private ["Ps8Hashable", "signInWithEmail"]
 - ["Ps8Hashable", "signupControl"]
@@ -426,6 +442,7 @@ depends-member:
 - !private ["PSo8NSCoding", "description"]
 - ["PSo8NSCoding", "emailTextfield"]
 - !private ["PSo8NSCoding", "enabled"]
+- ["PSo8NSCoding", "forgotPassword"]
 - !private ["PSo8NSCoding", "hidden"]
 - ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "localizedDescription"]
@@ -470,6 +487,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertController"]
 - !private ["PSo26NSExtensionRequestHandling", "addAction"]
 - ["PSo26NSExtensionRequestHandling", "emailTextfield"]
+- ["PSo26NSExtensionRequestHandling", "forgotPassword"]
 - ["PSo26NSExtensionRequestHandling", "init"]
 - ["PSo26NSExtensionRequestHandling", "login"]
 - ["PSo26NSExtensionRequestHandling", "loginActivityIndicator"]
@@ -521,6 +539,7 @@ depends-member:
 - !private ["CSo8NSObject", "description"]
 - ["CSo8NSObject", "emailTextfield"]
 - !private ["CSo8NSObject", "enabled"]
+- ["CSo8NSObject", "forgotPassword"]
 - !private ["CSo8NSObject", "hidden"]
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "instantiateViewControllerWithIdentifier"]
@@ -538,6 +557,7 @@ depends-member:
 - !private ["CSo8NSObject", "reference"]
 - !private ["CSo8NSObject", "resignFirstResponder"]
 - ["CSo8NSObject", "segueToHomeScreen"]
+- !private ["CSo8NSObject", "sendPasswordResetWithEmail"]
 - !private ["CSo8NSObject", "setValue"]
 - !private ["CSo8NSObject", "signInWithEmail"]
 - ["CSo8NSObject", "signupControl"]
@@ -575,6 +595,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "description"]
 - ["PSo16NSObjectProtocol", "emailTextfield"]
 - !private ["PSo16NSObjectProtocol", "enabled"]
+- ["PSo16NSObjectProtocol", "forgotPassword"]
 - !private ["PSo16NSObjectProtocol", "hidden"]
 - ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "instantiateViewControllerWithIdentifier"]
@@ -592,6 +613,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "reference"]
 - !private ["PSo16NSObjectProtocol", "resignFirstResponder"]
 - ["PSo16NSObjectProtocol", "segueToHomeScreen"]
+- !private ["PSo16NSObjectProtocol", "sendPasswordResetWithEmail"]
 - !private ["PSo16NSObjectProtocol", "setValue"]
 - !private ["PSo16NSObjectProtocol", "signInWithEmail"]
 - ["PSo16NSObjectProtocol", "signupControl"]
@@ -623,6 +645,8 @@ depends-member:
 - !private ["CSo14NSUserDefaults", "setValue"]
 - !private ["CSo14NSUserDefaults", "standardUserDefaults"]
 - !private ["CSo14NSUserDefaults", "valueForKey"]
+- !private ["Ps21NilLiteralConvertible", "Some"]
+- !private ["Sq", "Some"]
 - !private ["Sq", "deinit"]
 - !private ["Ps16OutputStreamType", "init"]
 - !private ["Vs5Range", "deinit"]
@@ -668,6 +692,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "delegate"]
 - ["PSo21UIAppearanceContainer", "emailTextfield"]
 - !private ["PSo21UIAppearanceContainer", "enabled"]
+- ["PSo21UIAppearanceContainer", "forgotPassword"]
 - !private ["PSo21UIAppearanceContainer", "hidden"]
 - ["PSo21UIAppearanceContainer", "init"]
 - ["PSo21UIAppearanceContainer", "login"]
@@ -707,6 +732,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "UIAlertController"]
 - !private ["PSo18UIContentContainer", "addAction"]
 - ["PSo18UIContentContainer", "emailTextfield"]
+- ["PSo18UIContentContainer", "forgotPassword"]
 - ["PSo18UIContentContainer", "init"]
 - ["PSo18UIContentContainer", "login"]
 - ["PSo18UIContentContainer", "loginActivityIndicator"]
@@ -763,6 +789,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "delegate"]
 - ["PSo18UIFocusEnvironment", "emailTextfield"]
 - !private ["PSo18UIFocusEnvironment", "enabled"]
+- ["PSo18UIFocusEnvironment", "forgotPassword"]
 - !private ["PSo18UIFocusEnvironment", "hidden"]
 - ["PSo18UIFocusEnvironment", "init"]
 - ["PSo18UIFocusEnvironment", "login"]
@@ -816,6 +843,7 @@ depends-member:
 - !private ["CSo11UIResponder", "delegate"]
 - ["CSo11UIResponder", "emailTextfield"]
 - !private ["CSo11UIResponder", "enabled"]
+- ["CSo11UIResponder", "forgotPassword"]
 - !private ["CSo11UIResponder", "hidden"]
 - ["CSo11UIResponder", "init"]
 - ["CSo11UIResponder", "login"]
@@ -853,6 +881,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "UIAlertController"]
 - !private ["PSo16UIStateRestoring", "addAction"]
 - ["PSo16UIStateRestoring", "emailTextfield"]
+- ["PSo16UIStateRestoring", "forgotPassword"]
 - ["PSo16UIStateRestoring", "init"]
 - ["PSo16UIStateRestoring", "login"]
 - ["PSo16UIStateRestoring", "loginActivityIndicator"]
@@ -925,6 +954,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "delegate"]
 - ["PSo18UITraitEnvironment", "emailTextfield"]
 - !private ["PSo18UITraitEnvironment", "enabled"]
+- ["PSo18UITraitEnvironment", "forgotPassword"]
 - !private ["PSo18UITraitEnvironment", "hidden"]
 - ["PSo18UITraitEnvironment", "init"]
 - ["PSo18UITraitEnvironment", "login"]
@@ -980,6 +1010,7 @@ depends-member:
 - ["CSo16UIViewController", "UITextField"]
 - !private ["CSo16UIViewController", "addAction"]
 - ["CSo16UIViewController", "emailTextfield"]
+- ["CSo16UIViewController", "forgotPassword"]
 - ["CSo16UIViewController", "init"]
 - ["CSo16UIViewController", "login"]
 - ["CSo16UIViewController", "loginActivityIndicator"]
@@ -1020,6 +1051,7 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "init"]
 - !private ["Vs26_OptionalNilComparisonType", "deinit"]
+- !private ["Ps12_Reflectable", "Some"]
 - !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
 - !private ["Ps12_Reflectable", "alpha"]
 - !private ["Ps12_Reflectable", "delegate"]
@@ -1047,6 +1079,7 @@ depends-member:
 - ["C8GoChange19loginViewController", "UITextField"]
 - ["C8GoChange19loginViewController", "deinit"]
 - ["C8GoChange19loginViewController", "emailTextfield"]
+- ["C8GoChange19loginViewController", "forgotPassword"]
 - ["C8GoChange19loginViewController", "init"]
 - ["C8GoChange19loginViewController", "login"]
 - ["C8GoChange19loginViewController", "loginActivityIndicator"]
@@ -1111,6 +1144,7 @@ depends-nominal:
 - !private "PSo14NSSecureCoding"
 - !private "CSo8NSString"
 - !private "CSo14NSUserDefaults"
+- !private "Ps21NilLiteralConvertible"
 - !private "Sq"
 - !private "Ps16OutputStreamType"
 - !private "Vs5Range"
@@ -1210,4 +1244,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
 - "/Users/nickshort/Git/GoChangeCopy/Pods/Firebase/Headers/Firebase.h"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/WebKit.swiftmodule"
-interface-hash: "2180c0a89ad7b30bd3d66a7d0c16903c"
+interface-hash: "0c2023ba474e6aed424d075ba2d20106"

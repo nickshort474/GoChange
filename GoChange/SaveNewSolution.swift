@@ -123,7 +123,6 @@ class SaveNewSolution:NSObject{
             }
             
         }catch{
-            //TODO: catch errors
         }
         
         do{
@@ -131,7 +130,6 @@ class SaveNewSolution:NSObject{
             try self.sharedContext.save()
             
         }catch{
-            //TODO: Catch errors!
         }
     }
     

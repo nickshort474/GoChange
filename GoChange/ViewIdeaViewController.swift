@@ -18,7 +18,7 @@ class ViewIdeaViewController:UIViewController{
     @IBOutlet weak var voteSolutionButton: UIButton!
     @IBOutlet weak var petitionTextField: UITextField!
     @IBOutlet weak var secondPetitionTextField: UITextField!
-    
+    @IBOutlet weak var petitionActivity: UIActivityIndicatorView!
     
     
     var problemID:String!
@@ -32,6 +32,9 @@ class ViewIdeaViewController:UIViewController{
     
     override func viewDidLoad(){
         super.viewDidLoad()
+        
+        petitionActivity.stopAnimating()
+        petitionActivity.hidden = true
         
         //deal with scrollview issue
         self.automaticallyAdjustsScrollViewInsets = false
@@ -59,46 +62,8 @@ class ViewIdeaViewController:UIViewController{
         solutionDetailField.layer.shadowOffset = CGSizeMake(1.0,1.0)
         solutionDetailField.layer.shadowOpacity = 0.5
         
-        //if we have a petition URL
-        if(petitionURL != ""){
-            
-            //get petition data from change.org
-            _ = ChangeOrgCode(petitionURL:petitionURL){
-                result in
-            
-                //get signature count
-                if let resultSignCount = result["signature_count"]{
-                   
-                    if let resultSignCount = resultSignCount{
-                        
-                        let petitionText = "Current Signature count is: \(String(resultSignCount))"
-
-                        dispatch_async(dispatch_get_main_queue(),{
-                           self.secondPetitionTextField.text = petitionText
-                        })
-                        
-                    }
-                    
-                }
-                
-                //get tilte
-                if let resultTitle = result["title"]{
-                    if let resultTitle = resultTitle{
-                        
-                         dispatch_async(dispatch_get_main_queue(),{
-                            self.petitionTextField.text = resultTitle as? String
-                        })
-                        
-                    }
-                    
-                }
-                
-            }
-        }else{
-            viewPetitionButton.enabled = false
-            viewPetitionButton.alpha = 0
-            petitionTextField.text = "No linked petition"
-        }
+        
+        
     }
     
     
@@ -141,16 +106,73 @@ class ViewIdeaViewController:UIViewController{
         
     }
     
+    override func viewDidAppear(animated: Bool) {
+        //if we have a petition URL
+        if(petitionURL != ""){
+            
+            petitionActivity.startAnimating()
+            petitionActivity.hidden = false
+            view.alpha = 0.5
+            viewPetitionButton.enabled = false
+            
+            //get petition data from change.org
+            _ = ChangeOrgCode(petitionURL:petitionURL){
+                result in
+                
+                //get signature count
+                if let resultSignCount = result["signature_count"]{
+                    
+                    if let resultSignCount = resultSignCount{
+                        
+                        let petitionText = "Current Signature count is: \(String(resultSignCount))"
+                        
+                        dispatch_async(dispatch_get_main_queue(),{
+                            self.secondPetitionTextField.text = petitionText
+                        })
+                        
+                    }
+                    
+                }
+                
+                //get tilte
+                if let resultTitle = result["title"]{
+                    if let resultTitle = resultTitle{
+                        
+                        dispatch_async(dispatch_get_main_queue(),{
+                            self.petitionTextField.text = resultTitle as? String
+                            self.petitionActivity.stopAnimating()
+                            self.petitionActivity.hidden = true
+                            self.view.alpha = 1
+                            self.viewPetitionButton.enabled = true
+                        })
+                        
+                    }
+                    
+                }
+                
+                
+            }
+        }else{
+            viewPetitionButton.enabled = false
+            viewPetitionButton.alpha = 0
+            petitionTextField.text = "No linked petition"
+            
+        }
+        
+    }
+    
+    
+    
     
     //segue to web view controller to change.org homepage
     @IBAction func petitionButton(sender: UIButton) {
         
-        var controller:WebViewController
-        controller = storyboard?.instantiateViewControllerWithIdentifier("WebViewController") as! WebViewController
+        //get url passed in
+        let newURL = NSURL(string: petitionURL)
         
-        controller.urlString = petitionURL
-        //controller.status = "viewing"
-        self.navigationController?.pushViewController(controller, animated: true)
+        //open in safari / (not webView due to problem with gathering url from some pages loaded in webView)
+        UIApplication.sharedApplication().openURL(newURL!)
+        
         
     }
     

@@ -15,9 +15,7 @@ class RetrieveProblem:NSObject{
     init(problemID:String,completionHandler:(problemName:String,problemID:String)-> Void){
        super.init()
         
-       
-        
-        let request = NSFetchRequest(entityName: "Problem")
+       let request = NSFetchRequest(entityName: "Problem")
         let predicate = NSPredicate(format: "problemID == %@", problemID)
         request.predicate = predicate
         
@@ -36,7 +34,6 @@ class RetrieveProblem:NSObject{
             }
             
         }catch{
-            //TODO: catch errors
         }
         
         

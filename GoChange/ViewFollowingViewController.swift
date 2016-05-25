@@ -12,7 +12,6 @@ import CoreData
 import Firebase
 
 
-
 class ViewFollowingViewController: UIViewController,UITextViewDelegate,UITextFieldDelegate,UITableViewDelegate {
     
     

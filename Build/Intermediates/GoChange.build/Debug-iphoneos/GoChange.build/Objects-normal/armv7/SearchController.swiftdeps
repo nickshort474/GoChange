@@ -7,42 +7,44 @@ provides-member:
 - ["C8GoChange16SearchController", ""]
 provides-dynamic-lookup:
 - "returnedRefArray"
-- "useOwnerArray"
-- "searchText"
 - "createRefArray"
+- "checkIfInCoreData"
+- "refsNotInCoreData"
+- "useOwnerArray"
 - "countArray"
 - "useSolutionCountArray"
 - "useNameArray"
 - "checkResults"
+- "searchText"
 - "returnedNameArray"
-- "checkIfInCoreData"
 - "useDetailArray"
 - "matchedNameArray"
 - "matchedRefArray"
-- "refsNotInCoreData"
 depends-top-level:
+- "String"
+- !private "=="
+- !private "!="
+- !private "..<"
+- !private "UnicodeScalarType"
+- !private "Array"
+- !private "RetrieveProblem"
+- !private "RetrieveSolutionCountFirebase"
 - "StringLiteralType"
 - "Int"
-- !private "RetrieveAllNamesFromFirebase"
-- !private "Array"
-- "SearchController"
-- !private "FIRDataSnapshot"
-- !private "=="
-- !private "UnicodeScalarType"
-- !private "..<"
-- "Void"
-- !private "RetrieveProblem"
-- !private "+="
-- !private "RetrieveSolutionCountFirebase"
-- !private "Set"
 - "NSObject"
-- "String"
-- !private "!="
+- "Void"
+- "SearchController"
+- !private "Set"
+- !private "+="
+- !private "RetrieveAllNamesFromFirebase"
+- !private "FIRDataSnapshot"
+- !private "RetrieveNamesFromFirebase"
 - !private "RetrieveDetailsFromFirebase"
 depends-member:
 - !private ["Ps9AnyObject", "Array"]
 - !private ["Ps9AnyObject", "RetrieveAllNamesFromFirebase"]
 - !private ["Ps9AnyObject", "RetrieveDetailsFromFirebase"]
+- !private ["Ps9AnyObject", "RetrieveNamesFromFirebase"]
 - !private ["Ps9AnyObject", "RetrieveProblem"]
 - !private ["Ps9AnyObject", "RetrieveSolutionCountFirebase"]
 - !private ["Ps9AnyObject", "Set"]
@@ -108,6 +110,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "IntegerLiteralType"]
 - !private ["Ps11CVarArgType", "RetrieveAllNamesFromFirebase"]
 - !private ["Ps11CVarArgType", "RetrieveDetailsFromFirebase"]
+- !private ["Ps11CVarArgType", "RetrieveNamesFromFirebase"]
 - !private ["Ps11CVarArgType", "RetrieveProblem"]
 - !private ["Ps11CVarArgType", "RetrieveSolutionCountFirebase"]
 - !private ["Ps11CVarArgType", "Set"]
@@ -160,6 +163,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "RetrieveAllNamesFromFirebase"]
 - !private ["Ps28CustomDebugStringConvertible", "RetrieveDetailsFromFirebase"]
+- !private ["Ps28CustomDebugStringConvertible", "RetrieveNamesFromFirebase"]
 - !private ["Ps28CustomDebugStringConvertible", "RetrieveProblem"]
 - !private ["Ps28CustomDebugStringConvertible", "RetrieveSolutionCountFirebase"]
 - !private ["Ps28CustomDebugStringConvertible", "Set"]
@@ -201,6 +205,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["Ps23CustomStringConvertible", "RetrieveAllNamesFromFirebase"]
 - !private ["Ps23CustomStringConvertible", "RetrieveDetailsFromFirebase"]
+- !private ["Ps23CustomStringConvertible", "RetrieveNamesFromFirebase"]
 - !private ["Ps23CustomStringConvertible", "RetrieveProblem"]
 - !private ["Ps23CustomStringConvertible", "RetrieveSolutionCountFirebase"]
 - !private ["Ps23CustomStringConvertible", "Set"]
@@ -243,6 +248,7 @@ depends-member:
 - !private ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "RetrieveAllNamesFromFirebase"]
 - !private ["Ps9Equatable", "RetrieveDetailsFromFirebase"]
+- !private ["Ps9Equatable", "RetrieveNamesFromFirebase"]
 - !private ["Ps9Equatable", "RetrieveProblem"]
 - !private ["Ps9Equatable", "RetrieveSolutionCountFirebase"]
 - !private ["Ps9Equatable", "Set"]
@@ -293,6 +299,7 @@ depends-member:
 - !private ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "RetrieveAllNamesFromFirebase"]
 - !private ["Ps8Hashable", "RetrieveDetailsFromFirebase"]
+- !private ["Ps8Hashable", "RetrieveNamesFromFirebase"]
 - !private ["Ps8Hashable", "RetrieveProblem"]
 - !private ["Ps8Hashable", "RetrieveSolutionCountFirebase"]
 - !private ["Ps8Hashable", "Set"]
@@ -406,6 +413,7 @@ depends-member:
 - ["CSo8NSObject", "Int"]
 - !private ["CSo8NSObject", "RetrieveAllNamesFromFirebase"]
 - !private ["CSo8NSObject", "RetrieveDetailsFromFirebase"]
+- !private ["CSo8NSObject", "RetrieveNamesFromFirebase"]
 - !private ["CSo8NSObject", "RetrieveProblem"]
 - !private ["CSo8NSObject", "RetrieveSolutionCountFirebase"]
 - !private ["CSo8NSObject", "Set"]
@@ -437,6 +445,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "Array"]
 - !private ["PSo16NSObjectProtocol", "RetrieveAllNamesFromFirebase"]
 - !private ["PSo16NSObjectProtocol", "RetrieveDetailsFromFirebase"]
+- !private ["PSo16NSObjectProtocol", "RetrieveNamesFromFirebase"]
 - !private ["PSo16NSObjectProtocol", "RetrieveProblem"]
 - !private ["PSo16NSObjectProtocol", "RetrieveSolutionCountFirebase"]
 - !private ["PSo16NSObjectProtocol", "Set"]
@@ -493,6 +502,7 @@ depends-member:
 - !private ["Ps30RangeReplaceableCollectionType", "subscript"]
 - !private ["C8GoChange28RetrieveAllNamesFromFirebase", "init"]
 - !private ["C8GoChange27RetrieveDetailsFromFirebase", "init"]
+- !private ["C8GoChange25RetrieveNamesFromFirebase", "init"]
 - !private ["C8GoChange15RetrieveProblem", "init"]
 - !private ["C8GoChange29RetrieveSolutionCountFirebase", "init"]
 - !private ["C8GoChange16SearchController", "Array"]
@@ -500,6 +510,7 @@ depends-member:
 - ["C8GoChange16SearchController", "Int"]
 - !private ["C8GoChange16SearchController", "RetrieveAllNamesFromFirebase"]
 - !private ["C8GoChange16SearchController", "RetrieveDetailsFromFirebase"]
+- !private ["C8GoChange16SearchController", "RetrieveNamesFromFirebase"]
 - !private ["C8GoChange16SearchController", "RetrieveProblem"]
 - !private ["C8GoChange16SearchController", "RetrieveSolutionCountFirebase"]
 - !private ["C8GoChange16SearchController", "Set"]
@@ -722,6 +733,7 @@ depends-nominal:
 - !private "Ps30RangeReplaceableCollectionType"
 - !private "C8GoChange28RetrieveAllNamesFromFirebase"
 - !private "C8GoChange27RetrieveDetailsFromFirebase"
+- !private "C8GoChange25RetrieveNamesFromFirebase"
 - !private "C8GoChange15RetrieveProblem"
 - !private "C8GoChange29RetrieveSolutionCountFirebase"
 - "C8GoChange16SearchController"

@@ -9,12 +9,7 @@
 import Foundation
 import Firebase
 
-
-
 class GetRecentlyAdded:NSObject{
-    
-    
-    
     
     init(completionHandler:(result:AnyObject)->Void){
         super.init()
@@ -33,11 +28,6 @@ class GetRecentlyAdded:NSObject{
             
         })
         
-        
-        
-        
     }
-    
-    
     
 }

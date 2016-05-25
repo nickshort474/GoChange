@@ -130,8 +130,6 @@ class CreateProblemViewController: UIViewController,UITextViewDelegate,UITextFie
     
     @IBAction func detailsActionButton(sender: UIButton) {
         
-        //TODO: check for /n character, delete if necessary
-        
         detailsField.resignFirstResponder()
         detailsPlusButton.hidden = true
         

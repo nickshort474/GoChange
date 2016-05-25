@@ -74,12 +74,7 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         TempSave.sharedInstance().newSolutionDetailArray = []
         
         //set petition field text
-        
-        //TODO: process currentPetitionValue to get better title to display.
-        
         petitionTextField.text = TempSave.sharedInstance().currentPetitionValue
-        
-        
         
     }
     

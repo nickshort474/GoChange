@@ -58,7 +58,6 @@ class UpdateCoreDataSolutions:NSObject{
             try self.sharedContext.save()
             
         }catch{
-            //TODO: Catch errors!
         }
     }
 

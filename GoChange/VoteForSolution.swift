@@ -62,13 +62,11 @@ class VoteForSolution:NSObject{
             entity?.haveVotedFor = "yes"
             
         }catch{
-            //TODO: deal with errors
         }
         
         do{
             try sharedContext.save()
         }catch{
-            //TODO: deal with errors
         }
         
     }
@@ -76,8 +74,6 @@ class VoteForSolution:NSObject{
     
     func addVoteToFirebase(){
         
-        
-        //let ref = Firebase(url: "https://gochange.firebaseio.com/problem/solutions")
         let ref = FIRDatabase.database().reference()
         ref.child("problem/solutions")
         
@@ -92,9 +88,6 @@ class VoteForSolution:NSObject{
             
             
         }, withCancelBlock:{error in
-            
-            //TODO: deal with error
-            
         })
         
     }

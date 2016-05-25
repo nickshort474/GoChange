@@ -14,7 +14,6 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var searchActivity: UIActivityIndicatorView!
     @IBOutlet weak var recentProblemStack: UIStackView!
-    
     @IBOutlet weak var recentProblemsLabel: UILabel!
     
     
@@ -71,6 +70,11 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
+        
+        recentProblemStack.hidden = false
+        view.alpha = 1
+        searchActivity.stopAnimating()
+        searchActivity.hidden = true
         
         // if have clicked recent problem and come back
         if(TempSave.sharedInstance().retrievedRecentProblem != nil && TempSave.sharedInstance().retrievedProblemFollowed == true){
@@ -217,6 +221,18 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
     
     
     func buttonClick(sender:UIButton){
+        
+        searchActivity.startAnimating()
+        searchActivity.hidden = false
+        view.alpha = 0.5
+        
+        
+        //sender.enabled = false
+        //sender.alpha = 0.5
+        
+        recentProblemStack.hidden = true
+        
+        
         
         //gather details of recent problem
         _ = FindRecentProblem(problemName: (sender.titleLabel?.text)!,completionHandler: {

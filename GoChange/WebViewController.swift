@@ -85,14 +85,7 @@ class WebViewController: UIViewController{
                 self.petitionActivity.alpha = 1
                 self.changeOrg.enabled = false
                 
-                /*
-                 //set petition text to copied url
-                 let baseURL = GoChangeClient.Constants.basePetitionURL
-                 let fullURL = UIPasteboard.generalPasteboard().string!
-                 let range = fullURL.rangeOfString("\(baseURL)p/")
-                 let displayURL = fullURL.stringByReplacingCharactersInRange(range!, withString: "")
-                 */
-            
+                
                 //get petition data from change.org
                 _ = ChangeOrgCode(petitionURL:UIPasteboard.generalPasteboard().string!){
                     result in
@@ -110,23 +103,16 @@ class WebViewController: UIViewController{
                                 self.linkPetition.enabled = true
                                 self.linkPetition.alpha = 1
                                 self.changeOrg.enabled = true
-                                
-                                
                             })
-                        
                         }
-                    
                     }
-                
                 }
             
                 //stop timer
                 timer.invalidate()
             
             }
-
         }
-                        
     }
 }
 

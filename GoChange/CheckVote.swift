@@ -11,12 +11,8 @@ import CoreData
 
 class CheckVote:NSObject{
     
-    
-    
     init(solutionID:String,completionHandler:(result:Solution)-> Void){
         super.init()
-        
-        
         
         let request = NSFetchRequest(entityName: "Solution")
         let predicate = NSPredicate(format: "solutionID == %@", solutionID)
@@ -30,7 +26,6 @@ class CheckVote:NSObject{
             
             
         }catch{
-            //TODO: catch errors
         }
         
         

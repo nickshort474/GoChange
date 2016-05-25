@@ -9,8 +9,7 @@
 import UIKit
 import CoreData
 
-class FollowingViewController: UITableViewController,
- NSFetchedResultsControllerDelegate {
+class FollowingViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
     @IBOutlet weak var followingTableView: UITableView!
     @IBOutlet weak var homeButton: UIButton!
@@ -23,7 +22,6 @@ class FollowingViewController: UITableViewController,
         do{
             try fetchedResultsController.performFetch()
         }catch{
-            //TODO: deal with errors
         }
         
         let barButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)

@@ -28,15 +28,11 @@ class FindRecentProblem:NSObject{
             }
             
             
-            
-            
             self.getProblemDetail({
                 (detailResult) in
                                 
                 completionHandler(results:snapshot,detailResult:detailResult)
             })
-            
-            
             
             
             }, withCancelBlock:{ error in
@@ -62,8 +58,6 @@ class FindRecentProblem:NSObject{
             if let detailResult = detailResult{
                 completionHandler(detailResults:detailResult)
             }
-            
-            
             
             
             }, withCancelBlock:{ error in

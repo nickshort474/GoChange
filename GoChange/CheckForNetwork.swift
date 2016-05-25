@@ -11,9 +11,6 @@ import Firebase
 
 class CheckForNetwork:NSObject{
     
-    //var connectedRef = Firebase(url:"https://gochange.firebaseio.com/.info/connected")
-    
-    
     
     init(completionHandler:(result:String)->Void){
     

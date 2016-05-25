@@ -166,7 +166,7 @@ class SearchController:NSObject{
                     (solutionCountResults) in
                 
                     self.useSolutionCountArray = solutionCountResults
-                    /*
+                    
                     _  = RetrieveNamesFromFirebase(problemArray:self.refsNotInCoreData){
                         (nameResults,ownerResults) in
                     
@@ -175,7 +175,7 @@ class SearchController:NSObject{
                     
                         completionHandler(nameResult:nameResults,detailResult:detailResults,ownerResult:ownerResults,solutionCountResult:solutionCountResults,refResult:self.refsNotInCoreData,matchType:"matched")
                     }
-                    */
+                    
                 }
             }
         }

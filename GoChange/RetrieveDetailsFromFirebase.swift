@@ -12,8 +12,6 @@ import Firebase
 
 class RetrieveDetailsFromFirebase:NSObject{
     
-    //var ref = Firebase(url: "https://gochange.firebaseio.com/problem/details")
-    
     var results:[String] = []
     
     init(userRefArray:[String],completionHandler:(results:[String])->Void){
