@@ -6,13 +6,13 @@ provides-nominal:
 provides-member:
 - ["C8GoChange19CustomTableViewCell", ""]
 provides-dynamic-lookup:
-- "problemName"
-- "voteCount"
 - "ownerName"
+- "voteCount"
+- "problemName"
 depends-top-level:
-- "CustomTableViewCell"
 - "UITableViewCell"
 - "UILabel"
+- "CustomTableViewCell"
 depends-member:
 - ["Ps9AnyObject", "init"]
 - ["Ps9AnyObject", "ownerName"]

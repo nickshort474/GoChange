@@ -1644,9 +1644,9 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bp6-0h-e0M">
-                                        <rect key="frame" x="408" y="482" width="172" height="28"/>
+                                        <rect key="frame" x="184" y="482" width="232" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <state key="normal" title="View petition at Change.org:"/>
+                                        <state key="normal" title="View / Vote for petition at Change.org:"/>
                                         <connections>
                                             <action selector="petitionButton:" destination="12K-Tr-tf9" eventType="touchUpInside" id="nFk-Ak-zEu"/>
                                         </connections>
@@ -1683,6 +1683,7 @@
                                     <constraint firstAttribute="bottom" secondItem="Bp6-0h-e0M" secondAttribute="bottom" constant="20" id="HdO-F1-CPp"/>
                                     <constraint firstAttribute="trailing" secondItem="d3R-bG-swZ" secondAttribute="trailing" constant="10" id="IUC-Ya-gvL"/>
                                     <constraint firstAttribute="trailing" secondItem="jwh-Z8-oZy" secondAttribute="trailing" constant="8" id="JWa-rH-z4I"/>
+                                    <constraint firstItem="Bp6-0h-e0M" firstAttribute="centerX" secondItem="CnK-rm-5aK" secondAttribute="centerX" id="JmK-91-J6o"/>
                                     <constraint firstAttribute="trailing" secondItem="eO3-oH-VVy" secondAttribute="trailing" constant="8" id="N5J-ss-GdT"/>
                                     <constraint firstAttribute="trailing" secondItem="KqM-9N-DVd" secondAttribute="trailing" constant="10" id="NxS-df-TVd"/>
                                     <constraint firstItem="n6X-D9-2kd" firstAttribute="centerX" secondItem="CnK-rm-5aK" secondAttribute="centerX" id="Rbl-Rw-3EM"/>
@@ -1693,7 +1694,6 @@
                                     <constraint firstItem="jwh-Z8-oZy" firstAttribute="leading" secondItem="CnK-rm-5aK" secondAttribute="leading" constant="12" id="lAf-bm-MDm"/>
                                     <constraint firstItem="Bp6-0h-e0M" firstAttribute="top" secondItem="KqM-9N-DVd" secondAttribute="bottom" constant="8" id="myp-af-U9V"/>
                                     <constraint firstItem="eO3-oH-VVy" firstAttribute="top" secondItem="jwh-Z8-oZy" secondAttribute="bottom" constant="8" id="o53-ba-qoa"/>
-                                    <constraint firstAttribute="trailing" secondItem="Bp6-0h-e0M" secondAttribute="trailing" constant="20" id="sGf-WK-y55"/>
                                     <constraint firstItem="KqM-9N-DVd" firstAttribute="top" secondItem="d3R-bG-swZ" secondAttribute="bottom" constant="8" id="zpJ-ol-kc2"/>
                                 </constraints>
                             </view>

@@ -10,14 +10,14 @@ provides-dynamic-lookup:
 depends-top-level:
 - !private "StringLiteralType"
 - !private "Problem"
+- !private "NSFetchRequest"
+- "Void"
+- "String"
+- !private "CoreDataStackManager"
+- !private "NSPredicate"
 - "RetrieveProblem"
 - "NSManagedObjectContext"
-- "String"
-- !private "NSPredicate"
 - "NSObject"
-- "Void"
-- !private "CoreDataStackManager"
-- !private "NSFetchRequest"
 depends-member:
 - !private ["Ps9AnyObject", "CoreDataStackManager"]
 - !private ["Ps9AnyObject", "NSFetchRequest"]

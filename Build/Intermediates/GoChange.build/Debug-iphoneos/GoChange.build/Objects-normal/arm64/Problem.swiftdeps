@@ -1,0 +1,284 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Problem"
+provides-nominal:
+- "C8GoChange7Problem"
+- "VC8GoChange7Problem4Keys"
+provides-member:
+- ["C8GoChange7Problem", ""]
+- ["VC8GoChange7Problem4Keys", ""]
+provides-dynamic-lookup:
+- "problemDescription"
+- "solutionCount"
+- "problemOwner"
+- "problemName"
+- "problemID"
+- "problemNeedingSolution"
+depends-top-level:
+- "NSManagedObjectContext"
+- "StringLiteralType"
+- "String"
+- "NSEntityDescription"
+- "NSNumber"
+- "Problem"
+- "NSManagedObject"
+- "AnyObject"
+- "Solution"
+depends-member:
+- !private ["Ps9AnyObject", "Keys"]
+- !private ["Ps9AnyObject", "NSEntityDescription"]
+- !private ["Ps9AnyObject", "Problem"]
+- !private ["Ps9AnyObject", "entityForName"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "problemDescription"]
+- ["Ps9AnyObject", "problemID"]
+- ["Ps9AnyObject", "problemName"]
+- ["Ps9AnyObject", "problemNeedingSolution"]
+- ["Ps9AnyObject", "problemOwner"]
+- ["Ps9AnyObject", "solutionCount"]
+- ["Ps9AnyObject", ""]
+- !private ["Ps11CVarArgType", "Keys"]
+- !private ["Ps11CVarArgType", "NSEntityDescription"]
+- !private ["Ps11CVarArgType", "Problem"]
+- !private ["Ps11CVarArgType", "entityForName"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "problemDescription"]
+- ["Ps11CVarArgType", "problemID"]
+- ["Ps11CVarArgType", "problemName"]
+- ["Ps11CVarArgType", "problemNeedingSolution"]
+- ["Ps11CVarArgType", "problemOwner"]
+- ["Ps11CVarArgType", "solutionCount"]
+- ["Ps11CVarArgType", ""]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "subscript"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
+- !private ["Ps28CustomDebugStringConvertible", "Keys"]
+- !private ["Ps28CustomDebugStringConvertible", "NSEntityDescription"]
+- !private ["Ps28CustomDebugStringConvertible", "Problem"]
+- !private ["Ps28CustomDebugStringConvertible", "entityForName"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "problemDescription"]
+- ["Ps28CustomDebugStringConvertible", "problemID"]
+- ["Ps28CustomDebugStringConvertible", "problemName"]
+- ["Ps28CustomDebugStringConvertible", "problemNeedingSolution"]
+- ["Ps28CustomDebugStringConvertible", "problemOwner"]
+- ["Ps28CustomDebugStringConvertible", "solutionCount"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "Index"]
+- !private ["Ps23CustomStringConvertible", "Keys"]
+- !private ["Ps23CustomStringConvertible", "NSEntityDescription"]
+- !private ["Ps23CustomStringConvertible", "Problem"]
+- !private ["Ps23CustomStringConvertible", "entityForName"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "problemDescription"]
+- ["Ps23CustomStringConvertible", "problemID"]
+- ["Ps23CustomStringConvertible", "problemName"]
+- ["Ps23CustomStringConvertible", "problemNeedingSolution"]
+- ["Ps23CustomStringConvertible", "problemOwner"]
+- ["Ps23CustomStringConvertible", "solutionCount"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Vs10Dictionary", "Index"]
+- !private ["Vs10Dictionary", "deinit"]
+- !private ["Vs10Dictionary", "subscript"]
+- !private ["Ps28DictionaryLiteralConvertible", "Index"]
+- !private ["Ps28DictionaryLiteralConvertible", "subscript"]
+- !private ["Ps9Equatable", "Keys"]
+- !private ["Ps9Equatable", "NSEntityDescription"]
+- !private ["Ps9Equatable", "Problem"]
+- !private ["Ps9Equatable", "entityForName"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "problemDescription"]
+- ["Ps9Equatable", "problemID"]
+- ["Ps9Equatable", "problemName"]
+- ["Ps9Equatable", "problemNeedingSolution"]
+- ["Ps9Equatable", "problemOwner"]
+- ["Ps9Equatable", "solutionCount"]
+- ["Ps9Equatable", ""]
+- !private ["Ps13GeneratorType", "Element"]
+- !private ["Ps8Hashable", "Keys"]
+- !private ["Ps8Hashable", "NSEntityDescription"]
+- !private ["Ps8Hashable", "Problem"]
+- !private ["Ps8Hashable", "entityForName"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "problemDescription"]
+- ["Ps8Hashable", "problemID"]
+- ["Ps8Hashable", "problemName"]
+- ["Ps8Hashable", "problemNeedingSolution"]
+- ["Ps8Hashable", "problemOwner"]
+- ["Ps8Hashable", "solutionCount"]
+- ["Ps8Hashable", ""]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "subscript"]
+- !private ["Vs17IndexingGenerator", "Element"]
+- ["VC8GoChange7Problem4Keys", "firebaseLocation"]
+- ["VC8GoChange7Problem4Keys", "init"]
+- ["VC8GoChange7Problem4Keys", "problemDescription"]
+- ["VC8GoChange7Problem4Keys", "problemID"]
+- ["VC8GoChange7Problem4Keys", "problemName"]
+- ["VC8GoChange7Problem4Keys", "problemOwner"]
+- ["VC8GoChange7Problem4Keys", "solutionCount"]
+- !private ["PSo8NSCoding", "entityForName"]
+- !private ["PSo9NSCopying", "entityForName"]
+- !private ["CSo19NSEntityDescription", "entityForName"]
+- !private ["PSo17NSFastEnumeration", "entityForName"]
+- ["CSo15NSManagedObject", "AnyObject"]
+- !private ["CSo15NSManagedObject", "Keys"]
+- ["CSo15NSManagedObject", "NSEntityDescription"]
+- ["CSo15NSManagedObject", "NSManagedObjectContext"]
+- ["CSo15NSManagedObject", "NSNumber"]
+- !private ["CSo15NSManagedObject", "Problem"]
+- ["CSo15NSManagedObject", "Solution"]
+- ["CSo15NSManagedObject", "String"]
+- ["CSo15NSManagedObject", "init"]
+- ["CSo15NSManagedObject", "problemDescription"]
+- ["CSo15NSManagedObject", "problemID"]
+- ["CSo15NSManagedObject", "problemName"]
+- ["CSo15NSManagedObject", "problemNeedingSolution"]
+- ["CSo15NSManagedObject", "problemOwner"]
+- ["CSo15NSManagedObject", "solutionCount"]
+- ["CSo15NSManagedObject", ""]
+- ["CSo8NSObject", "AnyObject"]
+- !private ["CSo8NSObject", "Keys"]
+- ["CSo8NSObject", "NSEntityDescription"]
+- ["CSo8NSObject", "NSManagedObjectContext"]
+- ["CSo8NSObject", "NSNumber"]
+- !private ["CSo8NSObject", "Problem"]
+- ["CSo8NSObject", "Solution"]
+- ["CSo8NSObject", "String"]
+- !private ["CSo8NSObject", "entityForName"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "problemDescription"]
+- ["CSo8NSObject", "problemID"]
+- ["CSo8NSObject", "problemName"]
+- ["CSo8NSObject", "problemNeedingSolution"]
+- ["CSo8NSObject", "problemOwner"]
+- ["CSo8NSObject", "solutionCount"]
+- !private ["PSo16NSObjectProtocol", "Keys"]
+- !private ["PSo16NSObjectProtocol", "NSEntityDescription"]
+- !private ["PSo16NSObjectProtocol", "Problem"]
+- !private ["PSo16NSObjectProtocol", "entityForName"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "problemDescription"]
+- ["PSo16NSObjectProtocol", "problemID"]
+- ["PSo16NSObjectProtocol", "problemName"]
+- ["PSo16NSObjectProtocol", "problemNeedingSolution"]
+- ["PSo16NSObjectProtocol", "problemOwner"]
+- ["PSo16NSObjectProtocol", "solutionCount"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["Sq", "deinit"]
+- ["C8GoChange7Problem", "AnyObject"]
+- ["C8GoChange7Problem", "Keys"]
+- ["C8GoChange7Problem", "NSEntityDescription"]
+- ["C8GoChange7Problem", "NSManagedObjectContext"]
+- ["C8GoChange7Problem", "NSNumber"]
+- !private ["C8GoChange7Problem", "Problem"]
+- ["C8GoChange7Problem", "Solution"]
+- ["C8GoChange7Problem", "String"]
+- ["C8GoChange7Problem", "deinit"]
+- ["C8GoChange7Problem", "init"]
+- ["C8GoChange7Problem", "problemDescription"]
+- ["C8GoChange7Problem", "problemID"]
+- ["C8GoChange7Problem", "problemName"]
+- ["C8GoChange7Problem", "problemNeedingSolution"]
+- ["C8GoChange7Problem", "problemOwner"]
+- ["C8GoChange7Problem", "solutionCount"]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- !private ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "subscript"]
+- !private ["Vs5Slice", "Generator"]
+- !private ["Vs5Slice", "Index"]
+- !private ["Vs5Slice", "SubSequence"]
+- !private ["Vs5Slice", "_Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- !private ["Ps12_Reflectable", "Index"]
+- !private ["Ps12_Reflectable", "subscript"]
+depends-nominal:
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
+- !private "Ps14CollectionType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- !private "Vs10Dictionary"
+- !private "Ps28DictionaryLiteralConvertible"
+- "Ps9Equatable"
+- !private "Ps13GeneratorType"
+- "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
+- "VC8GoChange7Problem4Keys"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "CSo19NSEntityDescription"
+- !private "PSo17NSFastEnumeration"
+- "CSo15NSManagedObject"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "Sq"
+- "C8GoChange7Problem"
+- !private "Ps12SequenceType"
+- !private "Vs5Slice"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/Firebase/Headers/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRConfiguration.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRApp.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIREmailPasswordAuthProvider.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/nickshort/Git/GoChangeCopy/Pods/Firebase/Headers/Firebase.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/WebKit.swiftmodule"
+interface-hash: "1d205b9611a31448c079f8b496711dc5"

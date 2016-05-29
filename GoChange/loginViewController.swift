@@ -27,7 +27,7 @@ class loginViewController:UIViewController,UITextFieldDelegate{
         // Do any additional setup after loading the view, typically from a nib.
         ref = FIRDatabase.database().reference()
         
-        
+        //set delegates and UI elements
         emailTextfield.delegate = self
         passwordTextfield.delegate = self
         loginActivityIndicator.hidden = true
@@ -36,6 +36,7 @@ class loginViewController:UIViewController,UITextFieldDelegate{
     
     
     override func viewDidAppear(animated: Bool) {
+        
         //check for saved user ID in user defaults if exists log in
         userID = NSUserDefaults.standardUserDefaults().valueForKey("uid") as? String
         
@@ -52,6 +53,7 @@ class loginViewController:UIViewController,UITextFieldDelegate{
     
     @IBAction func login(sender: AnyObject) {
         
+        
         loginActivityIndicator.hidden = false
         loginActivityIndicator.startAnimating()
         self.view.alpha = 0.5
@@ -61,13 +63,14 @@ class loginViewController:UIViewController,UITextFieldDelegate{
         let email = emailTextfield.text
         let password = passwordTextfield.text
         
-        
+        //check for empty fields
         if(email != "" && password != ""){
             
-            
+            //sign in with email to Firebase
             FIRAuth.auth()?.signInWithEmail(email!, password: password!, completion: {
                 user,error in
                 
+                // if error comes back
                 if error != nil{
                     
                     self.loginActivityIndicator.hidden = true
@@ -75,7 +78,7 @@ class loginViewController:UIViewController,UITextFieldDelegate{
                     self.view.alpha = 1
                     self.loginButton.enabled = true
                     
-                                        
+                     // check for type of error and present alert accordingly
                     switch error!.localizedDescription{
                         case "An internal error has occurred, print and inspect the error details for more information.":
                         self.presentAlert("Please enter a valid email")
@@ -94,16 +97,21 @@ class loginViewController:UIViewController,UITextFieldDelegate{
                         
                     }
                     
-                    
+                 // if no error
                 }else{
                     
+                    // set username to returned user uid
                     let usernameRef = self.ref.child("users/\(user!.uid)")
+                    
                     
                     usernameRef.observeEventType(.Value, withBlock: {snapshot in
                         
+                        //get 
                         let username = snapshot.value!.objectForKey("username") as? String
+                        
                         NSUserDefaults.standardUserDefaults().setValue(user!.uid,forKey:"uid")
                         NSUserDefaults.standardUserDefaults().setValue(username, forKey: "username")
+                        
                         self.segueToHomeScreen()
                         
                     }, withCancelBlock: { error in

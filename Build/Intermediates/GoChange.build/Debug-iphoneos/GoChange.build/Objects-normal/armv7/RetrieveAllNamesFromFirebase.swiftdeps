@@ -7,12 +7,12 @@ provides-member:
 - ["C8GoChange28RetrieveAllNamesFromFirebase", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "FIRDatabase"
+- "Void"
+- "RetrieveAllNamesFromFirebase"
+- !private "StringLiteralType"
 - "NSObject"
 - "AnyObject"
-- "RetrieveAllNamesFromFirebase"
-- "Void"
-- !private "StringLiteralType"
+- !private "FIRDatabase"
 depends-member:
 - !private ["Ps9AnyObject", "FIRDatabase"]
 - !private ["Ps9AnyObject", "child"]

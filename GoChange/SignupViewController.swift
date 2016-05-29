@@ -31,14 +31,17 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
         
         ref = FIRDatabase.database().reference()
         
+        //set delegates
         usernameTextfield.delegate = self
         emailTextfield.delegate = self
         passwordTextfield.delegate = self
         
         //if segue from add User data (update) switch signupButton.text = "Update user info"
         if (sendingController == "update"){
+            
             signupButton.setTitle("Update user info", forState: UIControlState.Normal)
             
+            //set labels accordingly
             if(updateField == "username"){
                 label1.text = "Old username"
                 label2.text = "New username"
@@ -90,12 +93,12 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
                     if (username != "" && email != "" && password != ""){
             
                         // create user account
-                        
                         FIRAuth.auth()?.createUserWithEmail(email!, password: password!, completion: {
                             error, result in
                 
                             if error != nil{
-                                
+                               
+                               //present error alert
                                self.presentAlert("Error creating new user, please try again")
                                 
                             }else{
@@ -105,6 +108,7 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
                                      user,error in
                         
                                     if error != nil{
+                                        //present error alert
                                         self.presentAlert("error authorizing user, please try again")
                                     }else{
                         
@@ -152,6 +156,7 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
                 //migrating from firebase 2.0 to 3.0 no longer need password? / need to update UI
                 _ = passwordTextfield.text
             
+                //update user defaults
                 NSUserDefaults.standardUserDefaults().setValue(newUsername, forKey: "username")
             
                 let values = ["username":newUsername]
@@ -162,6 +167,7 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
                 userRef.observeEventType(.Value, withBlock: { snapshot in
                 
                     let usernameValue = snapshot.value!.objectForKey("username") as? String
+                    
                     if usernameValue == oldUsername{
                         userRef.updateChildValues(values)
                     }

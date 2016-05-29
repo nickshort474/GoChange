@@ -6,17 +6,17 @@ provides-nominal:
 provides-member:
 - ["C8GoChange17FindRecentProblem", ""]
 provides-dynamic-lookup:
-- "problemKey"
-- "baseRef"
 - "getProblemDetail"
+- "baseRef"
+- "problemKey"
 depends-top-level:
-- "StringLiteralType"
-- "FIRDatabase"
 - "FindRecentProblem"
 - !private "print"
 - "AnyObject"
-- "Void"
 - "NSObject"
+- "Void"
+- "FIRDatabase"
+- "StringLiteralType"
 - "FIRDataSnapshot"
 - "String"
 depends-member:

@@ -74,20 +74,25 @@ class VoteForSolution:NSObject{
     
     func addVoteToFirebase(){
         
-        let ref = FIRDatabase.database().reference()
-        ref.child("problem/solutions")
+        let ref = FIRDatabase.database().reference().child("problem/solutions")
         
         let childRef = ref.child(problemID).child(solutionID)
-        
+        print(childRef)
         
         childRef.observeSingleEventOfType(.Value, withBlock:{snapshot in
             
             self.currentVoteCount = snapshot.value!["SolutionVoteCount"] as! Int
+            print(self.currentVoteCount)
             self.currentVoteCount += 1
+            print(self.currentVoteCount)
             childRef.updateChildValues(["SolutionVoteCount":self.currentVoteCount])
             
             
         }, withCancelBlock:{error in
+            print(error)
+            print(error.localizedDescription)
+            
+            
         })
         
     }

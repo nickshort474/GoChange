@@ -94,6 +94,13 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate, UITextViewDe
                 TempSave.sharedInstance().solutionVoteArray.append(0)
                 TempSave.sharedInstance().solutionIDArray.append("newSolution")
                 
+                //get solutionOwner
+                let solutionOwner = NSUserDefaults.standardUserDefaults().valueForKey("username") as! String
+                
+                //save solution owner
+                TempSave.sharedInstance().solutionOwnerArray.append(solutionOwner)
+                
+                
                 //Save data to newSolutionArrays ready for posting of SaveNewSoltion
                 TempSave.sharedInstance().newSolutionNameArray.append(nameTextField.text!)
                 TempSave.sharedInstance().newSolutionDetailArray.append(detailTextView.text!)

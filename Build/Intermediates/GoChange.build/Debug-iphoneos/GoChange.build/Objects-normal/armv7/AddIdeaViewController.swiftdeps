@@ -6,56 +6,58 @@ provides-nominal:
 provides-member:
 - ["C8GoChange21AddIdeaViewController", ""]
 provides-dynamic-lookup:
-- "detailTextView"
-- "viewControllerStatus"
-- "doneAddingIdea"
+- "addDetailButton"
 - "viewWillAppear"
-- "addSolution"
+- "viewDidLoad"
+- "addPetition"
+- "doneAddingIdea"
+- "detailTextView"
+- "addDetailClick"
+- "problem"
+- "petitionTextField"
+- "currentNameData"
 - "currentDetailData"
+- "viewControllerStatus"
+- "addNameButton"
 - "textFieldDidBeginEditing"
 - "petitionButton"
-- "addDetailClick"
-- "addPetition"
+- "addSolution"
+- "textViewDidBeginEditing"
 - "addNameClick"
 - "nameTextField"
-- "addDetailButton"
-- "textViewDidBeginEditing"
-- "currentNameData"
-- "addNameButton"
-- "petitionTextField"
-- "problem"
-- "viewDidLoad"
 depends-top-level:
-- !private "UITextBorderStyle"
-- !private "CGSizeMake"
-- !private "StringLiteralType"
-- !private "!="
-- "Bool"
-- !private "UIColor"
-- !private "WebViewController"
-- !private "&&"
-- "UIButton"
-- "AnyObject"
-- !private "=="
-- "UITextField"
-- "AddIdeaViewController"
-- "Problem"
-- "UITableViewDelegate"
-- "String"
-- !private "BooleanLiteralType"
-- !private "Array"
 - !private "GoChangeClient"
-- !private "SaveNewSolution"
+- !private "StringLiteralType"
+- "UITextViewDelegate"
+- !private "UITextBorderStyle"
+- "UITextFieldDelegate"
 - "UIViewController"
 - "UITextView"
-- "UITextFieldDelegate"
-- "UITextViewDelegate"
+- "String"
+- "UITableViewDelegate"
+- !private "=="
+- !private "WebViewController"
+- "Bool"
+- !private "&&"
+- !private "NSUserDefaults"
+- !private "SaveNewSolution"
+- "UIButton"
+- "AddIdeaViewController"
+- !private "BooleanLiteralType"
 - !private "TempSave"
+- "UITextField"
+- "AnyObject"
+- !private "UIColor"
+- "Problem"
+- !private "Array"
+- !private "CGSizeMake"
+- !private "!="
 depends-member:
 - ["C8GoChange21AddIdeaViewController", "AnyObject"]
 - ["C8GoChange21AddIdeaViewController", "Bool"]
 - !private ["C8GoChange21AddIdeaViewController", "CGSizeMake"]
 - !private ["C8GoChange21AddIdeaViewController", "GoChangeClient"]
+- !private ["C8GoChange21AddIdeaViewController", "NSUserDefaults"]
 - ["C8GoChange21AddIdeaViewController", "Problem"]
 - !private ["C8GoChange21AddIdeaViewController", "SaveNewSolution"]
 - ["C8GoChange21AddIdeaViewController", "String"]
@@ -120,6 +122,7 @@ depends-member:
 - !private ["Ps9AnyObject", "CGSizeMake"]
 - !private ["Ps9AnyObject", "Constants"]
 - !private ["Ps9AnyObject", "GoChangeClient"]
+- !private ["Ps9AnyObject", "NSUserDefaults"]
 - !private ["Ps9AnyObject", "SaveNewSolution"]
 - !private ["Ps9AnyObject", "TempSave"]
 - !private ["Ps9AnyObject", "UIColor"]
@@ -182,7 +185,9 @@ depends-member:
 - !private ["Ps9AnyObject", "solutionDetailArray"]
 - !private ["Ps9AnyObject", "solutionIDArray"]
 - !private ["Ps9AnyObject", "solutionNameArray"]
+- !private ["Ps9AnyObject", "solutionOwnerArray"]
 - !private ["Ps9AnyObject", "solutionVoteArray"]
+- !private ["Ps9AnyObject", "standardUserDefaults"]
 - !private ["Ps9AnyObject", "storyboard"]
 - ["Ps9AnyObject", "tableView"]
 - !private ["Ps9AnyObject", "text"]
@@ -203,6 +208,7 @@ depends-member:
 - ["Ps9AnyObject", "textViewShouldEndEditing"]
 - !private ["Ps9AnyObject", "title"]
 - !private ["Ps9AnyObject", "urlString"]
+- !private ["Ps9AnyObject", "valueForKey"]
 - ["Ps9AnyObject", "viewControllerStatus"]
 - ["Ps9AnyObject", "viewDidLoad"]
 - ["Ps9AnyObject", "viewForZoomingInScrollView"]
@@ -248,6 +254,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "Distance"]
 - !private ["Ps11CVarArgType", "GoChangeClient"]
 - !private ["Ps11CVarArgType", "IntegerLiteralType"]
+- !private ["Ps11CVarArgType", "NSUserDefaults"]
 - !private ["Ps11CVarArgType", "SaveNewSolution"]
 - !private ["Ps11CVarArgType", "TempSave"]
 - !private ["Ps11CVarArgType", "UIColor"]
@@ -310,7 +317,9 @@ depends-member:
 - !private ["Ps11CVarArgType", "solutionDetailArray"]
 - !private ["Ps11CVarArgType", "solutionIDArray"]
 - !private ["Ps11CVarArgType", "solutionNameArray"]
+- !private ["Ps11CVarArgType", "solutionOwnerArray"]
 - !private ["Ps11CVarArgType", "solutionVoteArray"]
+- !private ["Ps11CVarArgType", "standardUserDefaults"]
 - !private ["Ps11CVarArgType", "storyboard"]
 - ["Ps11CVarArgType", "tableView"]
 - !private ["Ps11CVarArgType", "text"]
@@ -331,6 +340,7 @@ depends-member:
 - ["Ps11CVarArgType", "textViewShouldEndEditing"]
 - !private ["Ps11CVarArgType", "title"]
 - !private ["Ps11CVarArgType", "urlString"]
+- !private ["Ps11CVarArgType", "valueForKey"]
 - ["Ps11CVarArgType", "viewControllerStatus"]
 - ["Ps11CVarArgType", "viewDidLoad"]
 - ["Ps11CVarArgType", "viewForZoomingInScrollView"]
@@ -353,6 +363,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "Generator"]
 - !private ["Ps28CustomDebugStringConvertible", "GoChangeClient"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
+- !private ["Ps28CustomDebugStringConvertible", "NSUserDefaults"]
 - !private ["Ps28CustomDebugStringConvertible", "SaveNewSolution"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
 - !private ["Ps28CustomDebugStringConvertible", "TempSave"]
@@ -418,7 +429,9 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "solutionDetailArray"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionIDArray"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionNameArray"]
+- !private ["Ps28CustomDebugStringConvertible", "solutionOwnerArray"]
 - !private ["Ps28CustomDebugStringConvertible", "solutionVoteArray"]
+- !private ["Ps28CustomDebugStringConvertible", "standardUserDefaults"]
 - !private ["Ps28CustomDebugStringConvertible", "storyboard"]
 - ["Ps28CustomDebugStringConvertible", "tableView"]
 - !private ["Ps28CustomDebugStringConvertible", "text"]
@@ -439,6 +452,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "textViewShouldEndEditing"]
 - !private ["Ps28CustomDebugStringConvertible", "title"]
 - !private ["Ps28CustomDebugStringConvertible", "urlString"]
+- !private ["Ps28CustomDebugStringConvertible", "valueForKey"]
 - ["Ps28CustomDebugStringConvertible", "viewControllerStatus"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
 - ["Ps28CustomDebugStringConvertible", "viewForZoomingInScrollView"]
@@ -453,6 +467,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "GoChangeClient"]
 - !private ["Ps23CustomStringConvertible", "Index"]
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
+- !private ["Ps23CustomStringConvertible", "NSUserDefaults"]
 - !private ["Ps23CustomStringConvertible", "SaveNewSolution"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
 - !private ["Ps23CustomStringConvertible", "TempSave"]
@@ -519,7 +534,9 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "solutionDetailArray"]
 - !private ["Ps23CustomStringConvertible", "solutionIDArray"]
 - !private ["Ps23CustomStringConvertible", "solutionNameArray"]
+- !private ["Ps23CustomStringConvertible", "solutionOwnerArray"]
 - !private ["Ps23CustomStringConvertible", "solutionVoteArray"]
+- !private ["Ps23CustomStringConvertible", "standardUserDefaults"]
 - !private ["Ps23CustomStringConvertible", "storyboard"]
 - ["Ps23CustomStringConvertible", "tableView"]
 - !private ["Ps23CustomStringConvertible", "text"]
@@ -540,6 +557,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "textViewShouldEndEditing"]
 - !private ["Ps23CustomStringConvertible", "title"]
 - !private ["Ps23CustomStringConvertible", "urlString"]
+- !private ["Ps23CustomStringConvertible", "valueForKey"]
 - ["Ps23CustomStringConvertible", "viewControllerStatus"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
 - ["Ps23CustomStringConvertible", "viewForZoomingInScrollView"]
@@ -551,6 +569,7 @@ depends-member:
 - !private ["Ps9Equatable", "Distance"]
 - !private ["Ps9Equatable", "GoChangeClient"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
+- !private ["Ps9Equatable", "NSUserDefaults"]
 - !private ["Ps9Equatable", "None"]
 - !private ["Ps9Equatable", "SaveNewSolution"]
 - !private ["Ps9Equatable", "TempSave"]
@@ -615,7 +634,9 @@ depends-member:
 - !private ["Ps9Equatable", "solutionDetailArray"]
 - !private ["Ps9Equatable", "solutionIDArray"]
 - !private ["Ps9Equatable", "solutionNameArray"]
+- !private ["Ps9Equatable", "solutionOwnerArray"]
 - !private ["Ps9Equatable", "solutionVoteArray"]
+- !private ["Ps9Equatable", "standardUserDefaults"]
 - !private ["Ps9Equatable", "storyboard"]
 - ["Ps9Equatable", "tableView"]
 - !private ["Ps9Equatable", "text"]
@@ -636,6 +657,7 @@ depends-member:
 - ["Ps9Equatable", "textViewShouldEndEditing"]
 - !private ["Ps9Equatable", "title"]
 - !private ["Ps9Equatable", "urlString"]
+- !private ["Ps9Equatable", "valueForKey"]
 - ["Ps9Equatable", "viewControllerStatus"]
 - ["Ps9Equatable", "viewDidLoad"]
 - ["Ps9Equatable", "viewForZoomingInScrollView"]
@@ -651,6 +673,7 @@ depends-member:
 - !private ["Ps8Hashable", "Distance"]
 - !private ["Ps8Hashable", "GoChangeClient"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
+- !private ["Ps8Hashable", "NSUserDefaults"]
 - !private ["Ps8Hashable", "None"]
 - !private ["Ps8Hashable", "SaveNewSolution"]
 - !private ["Ps8Hashable", "TempSave"]
@@ -715,7 +738,9 @@ depends-member:
 - !private ["Ps8Hashable", "solutionDetailArray"]
 - !private ["Ps8Hashable", "solutionIDArray"]
 - !private ["Ps8Hashable", "solutionNameArray"]
+- !private ["Ps8Hashable", "solutionOwnerArray"]
 - !private ["Ps8Hashable", "solutionVoteArray"]
+- !private ["Ps8Hashable", "standardUserDefaults"]
 - !private ["Ps8Hashable", "storyboard"]
 - ["Ps8Hashable", "tableView"]
 - !private ["Ps8Hashable", "text"]
@@ -736,6 +761,7 @@ depends-member:
 - ["Ps8Hashable", "textViewShouldEndEditing"]
 - !private ["Ps8Hashable", "title"]
 - !private ["Ps8Hashable", "urlString"]
+- !private ["Ps8Hashable", "valueForKey"]
 - ["Ps8Hashable", "viewControllerStatus"]
 - ["Ps8Hashable", "viewDidLoad"]
 - ["Ps8Hashable", "viewForZoomingInScrollView"]
@@ -780,6 +806,7 @@ depends-member:
 - !private ["PSo8NSCoding", "CGColor"]
 - !private ["PSo8NSCoding", "CGSizeMake"]
 - !private ["PSo8NSCoding", "GoChangeClient"]
+- !private ["PSo8NSCoding", "NSUserDefaults"]
 - !private ["PSo8NSCoding", "SaveNewSolution"]
 - !private ["PSo8NSCoding", "TempSave"]
 - !private ["PSo8NSCoding", "UIColor"]
@@ -862,6 +889,7 @@ depends-member:
 - !private ["PSo9NSCopying", "clearColor"]
 - !private ["PSo26NSExtensionRequestHandling", "CGSizeMake"]
 - !private ["PSo26NSExtensionRequestHandling", "GoChangeClient"]
+- !private ["PSo26NSExtensionRequestHandling", "NSUserDefaults"]
 - !private ["PSo26NSExtensionRequestHandling", "SaveNewSolution"]
 - !private ["PSo26NSExtensionRequestHandling", "TempSave"]
 - !private ["PSo26NSExtensionRequestHandling", "UIColor"]
@@ -926,6 +954,7 @@ depends-member:
 - !private ["CSo8NSObject", "CGSizeMake"]
 - !private ["CSo8NSObject", "Constants"]
 - !private ["CSo8NSObject", "GoChangeClient"]
+- !private ["CSo8NSObject", "NSUserDefaults"]
 - ["CSo8NSObject", "Problem"]
 - !private ["CSo8NSObject", "SaveNewSolution"]
 - ["CSo8NSObject", "String"]
@@ -994,7 +1023,9 @@ depends-member:
 - !private ["CSo8NSObject", "solutionDetailArray"]
 - !private ["CSo8NSObject", "solutionIDArray"]
 - !private ["CSo8NSObject", "solutionNameArray"]
+- !private ["CSo8NSObject", "solutionOwnerArray"]
 - !private ["CSo8NSObject", "solutionVoteArray"]
+- !private ["CSo8NSObject", "standardUserDefaults"]
 - !private ["CSo8NSObject", "storyboard"]
 - ["CSo8NSObject", "tableView"]
 - !private ["CSo8NSObject", "text"]
@@ -1015,6 +1046,7 @@ depends-member:
 - ["CSo8NSObject", "textViewShouldEndEditing"]
 - !private ["CSo8NSObject", "title"]
 - !private ["CSo8NSObject", "urlString"]
+- !private ["CSo8NSObject", "valueForKey"]
 - ["CSo8NSObject", "viewControllerStatus"]
 - ["CSo8NSObject", "viewDidLoad"]
 - ["CSo8NSObject", "viewForZoomingInScrollView"]
@@ -1023,6 +1055,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "CGSizeMake"]
 - !private ["PSo16NSObjectProtocol", "Constants"]
 - !private ["PSo16NSObjectProtocol", "GoChangeClient"]
+- !private ["PSo16NSObjectProtocol", "NSUserDefaults"]
 - !private ["PSo16NSObjectProtocol", "SaveNewSolution"]
 - !private ["PSo16NSObjectProtocol", "TempSave"]
 - !private ["PSo16NSObjectProtocol", "UIColor"]
@@ -1085,7 +1118,9 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "solutionDetailArray"]
 - !private ["PSo16NSObjectProtocol", "solutionIDArray"]
 - !private ["PSo16NSObjectProtocol", "solutionNameArray"]
+- !private ["PSo16NSObjectProtocol", "solutionOwnerArray"]
 - !private ["PSo16NSObjectProtocol", "solutionVoteArray"]
+- !private ["PSo16NSObjectProtocol", "standardUserDefaults"]
 - !private ["PSo16NSObjectProtocol", "storyboard"]
 - ["PSo16NSObjectProtocol", "tableView"]
 - !private ["PSo16NSObjectProtocol", "text"]
@@ -1106,6 +1141,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "textViewShouldEndEditing"]
 - !private ["PSo16NSObjectProtocol", "title"]
 - !private ["PSo16NSObjectProtocol", "urlString"]
+- !private ["PSo16NSObjectProtocol", "valueForKey"]
 - ["PSo16NSObjectProtocol", "viewControllerStatus"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", "viewForZoomingInScrollView"]
@@ -1114,6 +1150,8 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "CGColor"]
 - !private ["PSo14NSSecureCoding", "blackColor"]
 - !private ["PSo14NSSecureCoding", "clearColor"]
+- !private ["CSo14NSUserDefaults", "standardUserDefaults"]
+- !private ["CSo14NSUserDefaults", "valueForKey"]
 - !private ["Sq", "deinit"]
 - !private ["Ps21RandomAccessIndexType", "Distance"]
 - !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
@@ -1147,6 +1185,7 @@ depends-member:
 - !private ["C8GoChange8TempSave", "solutionDetailArray"]
 - !private ["C8GoChange8TempSave", "solutionIDArray"]
 - !private ["C8GoChange8TempSave", "solutionNameArray"]
+- !private ["C8GoChange8TempSave", "solutionOwnerArray"]
 - !private ["C8GoChange8TempSave", "solutionVoteArray"]
 - !private ["PSo29UIAccessibilityIdentification", "alpha"]
 - !private ["PSo29UIAccessibilityIdentification", "borderStyle"]
@@ -1172,6 +1211,7 @@ depends-member:
 - !private ["PSo12UIAppearance", "textColor"]
 - !private ["PSo21UIAppearanceContainer", "CGSizeMake"]
 - !private ["PSo21UIAppearanceContainer", "GoChangeClient"]
+- !private ["PSo21UIAppearanceContainer", "NSUserDefaults"]
 - !private ["PSo21UIAppearanceContainer", "SaveNewSolution"]
 - !private ["PSo21UIAppearanceContainer", "TempSave"]
 - !private ["PSo21UIAppearanceContainer", "UIColor"]
@@ -1249,6 +1289,7 @@ depends-member:
 - !private ["CSo7UIColor", "clearColor"]
 - !private ["PSo18UIContentContainer", "CGSizeMake"]
 - !private ["PSo18UIContentContainer", "GoChangeClient"]
+- !private ["PSo18UIContentContainer", "NSUserDefaults"]
 - !private ["PSo18UIContentContainer", "SaveNewSolution"]
 - !private ["PSo18UIContentContainer", "TempSave"]
 - !private ["PSo18UIContentContainer", "UIColor"]
@@ -1339,6 +1380,7 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "textColor"]
 - !private ["PSo18UIFocusEnvironment", "CGSizeMake"]
 - !private ["PSo18UIFocusEnvironment", "GoChangeClient"]
+- !private ["PSo18UIFocusEnvironment", "NSUserDefaults"]
 - !private ["PSo18UIFocusEnvironment", "SaveNewSolution"]
 - !private ["PSo18UIFocusEnvironment", "TempSave"]
 - !private ["PSo18UIFocusEnvironment", "UIColor"]
@@ -1424,6 +1466,7 @@ depends-member:
 - ["CSo11UIResponder", "Bool"]
 - !private ["CSo11UIResponder", "CGSizeMake"]
 - !private ["CSo11UIResponder", "GoChangeClient"]
+- !private ["CSo11UIResponder", "NSUserDefaults"]
 - ["CSo11UIResponder", "Problem"]
 - !private ["CSo11UIResponder", "SaveNewSolution"]
 - ["CSo11UIResponder", "String"]
@@ -1507,6 +1550,7 @@ depends-member:
 - !private ["CSo12UIScrollView", "textColor"]
 - !private ["PSo20UIScrollViewDelegate", "CGSizeMake"]
 - !private ["PSo20UIScrollViewDelegate", "GoChangeClient"]
+- !private ["PSo20UIScrollViewDelegate", "NSUserDefaults"]
 - !private ["PSo20UIScrollViewDelegate", "SaveNewSolution"]
 - !private ["PSo20UIScrollViewDelegate", "TempSave"]
 - !private ["PSo20UIScrollViewDelegate", "UIColor"]
@@ -1555,6 +1599,7 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", ""]
 - !private ["PSo16UIStateRestoring", "CGSizeMake"]
 - !private ["PSo16UIStateRestoring", "GoChangeClient"]
+- !private ["PSo16UIStateRestoring", "NSUserDefaults"]
 - !private ["PSo16UIStateRestoring", "SaveNewSolution"]
 - !private ["PSo16UIStateRestoring", "TempSave"]
 - !private ["PSo16UIStateRestoring", "UIColor"]
@@ -1616,6 +1661,7 @@ depends-member:
 - !private ["CSo12UIStoryboard", "instantiateViewControllerWithIdentifier"]
 - !private ["PSo19UITableViewDelegate", "CGSizeMake"]
 - !private ["PSo19UITableViewDelegate", "GoChangeClient"]
+- !private ["PSo19UITableViewDelegate", "NSUserDefaults"]
 - !private ["PSo19UITableViewDelegate", "SaveNewSolution"]
 - !private ["PSo19UITableViewDelegate", "TempSave"]
 - !private ["PSo19UITableViewDelegate", "UIColor"]
@@ -1671,6 +1717,7 @@ depends-member:
 - !private ["CSo11UITextField", "text"]
 - !private ["PSo19UITextFieldDelegate", "CGSizeMake"]
 - !private ["PSo19UITextFieldDelegate", "GoChangeClient"]
+- !private ["PSo19UITextFieldDelegate", "NSUserDefaults"]
 - !private ["PSo19UITextFieldDelegate", "SaveNewSolution"]
 - !private ["PSo19UITextFieldDelegate", "TempSave"]
 - !private ["PSo19UITextFieldDelegate", "UIColor"]
@@ -1744,6 +1791,7 @@ depends-member:
 - !private ["CSo10UITextView", "textColor"]
 - !private ["PSo18UITextViewDelegate", "CGSizeMake"]
 - !private ["PSo18UITextViewDelegate", "GoChangeClient"]
+- !private ["PSo18UITextViewDelegate", "NSUserDefaults"]
 - !private ["PSo18UITextViewDelegate", "SaveNewSolution"]
 - !private ["PSo18UITextViewDelegate", "TempSave"]
 - !private ["PSo18UITextViewDelegate", "UIColor"]
@@ -1792,6 +1840,7 @@ depends-member:
 - ["PSo18UITextViewDelegate", ""]
 - !private ["PSo18UITraitEnvironment", "CGSizeMake"]
 - !private ["PSo18UITraitEnvironment", "GoChangeClient"]
+- !private ["PSo18UITraitEnvironment", "NSUserDefaults"]
 - !private ["PSo18UITraitEnvironment", "SaveNewSolution"]
 - !private ["PSo18UITraitEnvironment", "TempSave"]
 - !private ["PSo18UITraitEnvironment", "UIColor"]
@@ -1876,6 +1925,7 @@ depends-member:
 - ["CSo16UIViewController", "Bool"]
 - !private ["CSo16UIViewController", "CGSizeMake"]
 - !private ["CSo16UIViewController", "GoChangeClient"]
+- !private ["CSo16UIViewController", "NSUserDefaults"]
 - ["CSo16UIViewController", "Problem"]
 - !private ["CSo16UIViewController", "SaveNewSolution"]
 - ["CSo16UIViewController", "String"]
@@ -2041,6 +2091,7 @@ depends-nominal:
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
+- !private "CSo14NSUserDefaults"
 - !private "Sq"
 - !private "Ps21RandomAccessIndexType"
 - !private "Ps30RangeReplaceableCollectionType"
