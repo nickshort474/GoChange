@@ -29,5 +29,5 @@ Each solution posted also comes with the option of linking a change.org petition
 A user can click the change.org link and the app will open an instance of safari, navigate to the 
 change.org site and allow the user to navigate to an appropriate petition page. Instructions are 
 provided to show the user how to copy the pages URL so that when they return to GoChange the URL 
-can be used to create a link to that petition with the GoChange solution.
+can be used to create a link to that petition.
 
