@@ -1,7 +1,7 @@
 # GoChange
 
 A Problem / Solution app written in swift for iOS.<br>
-Once registered users have the option of either posting problems they have, or searching for existing problems they can provide solutions for.
+Once registered, users have the option of either posting problems they have which they are looking for a solution to, or searching for existing problems they can provide solutions for.
 <hr>
 
 <h2>Start</h2>
@@ -14,8 +14,8 @@ the problem if they wish.
 The second option on the home screen is search, here the user is presented with a search box 
 which will search the GoChange database for problems related to the search term. The user is
 also presented with a shiort list of recently added problems for them to look into.
-Once a problem is selected it can be followed so the user can track the problem and any solutions
-added provided.
+Once a problem is selected a user can choose to follow that problem, so they can track it and any solutions
+posted. 
 
 <h2>Follow</h2>
 The third option on the home screen is follow. This lists all the problems created by the user and
@@ -26,8 +26,8 @@ are selected the most up to date set of solutions are downloaded to the app and 
 
 <h2> Additional features</h2>
 Each solution posted also comes with the option of linking a change.org petition to the solution.
-A user can click the change.org link and the app will open an instance of safari, navigate to the 
-change.org site and allow the user to navigate to an appropriate petition page. Instructions are 
-provided to show the user how to copy the pages URL so that when they return to GoChange the URL 
-can be used to create a link to that petition.
+A user can click the change.org link when in the add a solution page, and the app will open an 
+instance of safari, navigate to the change.org site and allow the user to navigate to an appropriate 
+petition page. Instructions are provided to show the user how to copy the pages URL so that when they
+return to GoChange the URL can be used to create a link to that petition.
 
