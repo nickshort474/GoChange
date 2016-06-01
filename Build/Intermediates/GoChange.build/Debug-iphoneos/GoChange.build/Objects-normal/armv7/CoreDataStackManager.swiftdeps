@@ -7,24 +7,24 @@ provides-member:
 - ["C8GoChange20CoreDataStackManager", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "NSLog"
-- !private "NSUnderlyingErrorKey"
 - !private "NSSQLiteStoreType"
-- !private "-"
-- "StringLiteralType"
-- "NSPersistentStoreCoordinator"
-- "NSManagedObjectModel"
 - !private "NSError"
-- "NSManagedObjectContext"
-- !private "NSLocalizedFailureReasonErrorKey"
-- !private "NSFileManager"
-- "NSURL"
-- !private "SQLITE_FILE_NAME"
-- !private "AnyObject"
-- "CoreDataStackManager"
+- !private "NSLog"
 - !private "String"
-- !private "NSBundle"
 - !private "NSLocalizedDescriptionKey"
+- !private "NSUnderlyingErrorKey"
+- "NSPersistentStoreCoordinator"
+- !private "SQLITE_FILE_NAME"
+- !private "NSFileManager"
+- "CoreDataStackManager"
+- "NSURL"
+- !private "NSLocalizedFailureReasonErrorKey"
+- "NSManagedObjectModel"
+- !private "-"
+- "NSManagedObjectContext"
+- !private "NSBundle"
+- "StringLiteralType"
+- !private "AnyObject"
 depends-member:
 - !private ["Ps9AnyObject", "AnyObject"]
 - !private ["Ps9AnyObject", "CoreDataStackManager"]

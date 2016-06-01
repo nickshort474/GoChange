@@ -8,15 +8,15 @@ provides-member:
 provides-dynamic-lookup:
 - "results"
 depends-top-level:
-- "Void"
+- !private "FIRDatabase"
 - "RetrieveDetailsFromFirebase"
+- "String"
 - !private "=="
 - !private "..<"
-- !private "print"
 - !private "StringLiteralType"
+- "Void"
 - "NSObject"
-- !private "FIRDatabase"
-- "String"
+- !private "print"
 depends-member:
 - !private ["Ps9AnyObject", "FIRDatabase"]
 - !private ["Ps9AnyObject", "child"]

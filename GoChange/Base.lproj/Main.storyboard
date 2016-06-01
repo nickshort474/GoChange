@@ -111,7 +111,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.99215686270000003" green="0.59999999999999998" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qEz-NR-W1v" firstAttribute="leading" secondItem="3Si-Xr-W5B" secondAttribute="leadingMargin" id="0lH-9S-0Ib"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qEz-NR-W1v" secondAttribute="trailing" id="LWA-JH-SlW"/>
@@ -366,7 +366,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.99215686270000003" green="0.59999999999999998" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6ZT-AT-ko7" firstAttribute="top" secondItem="E6N-8X-Jd1" secondAttribute="bottom" constant="20" id="BQ9-Uf-dlR"/>
                             <constraint firstItem="E6N-8X-Jd1" firstAttribute="leading" secondItem="PBP-0V-fjg" secondAttribute="leadingMargin" id="NPO-ls-QAE"/>

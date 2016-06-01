@@ -9,16 +9,16 @@ provides-dynamic-lookup:
 - "resultsArray"
 - "nameRef"
 depends-top-level:
-- "NSObject"
-- "String"
-- "FIRDatabase"
-- "Int"
-- "RetrieveSolutionCountFirebase"
 - "StringLiteralType"
 - !private "print"
-- !private "=="
-- "Void"
 - !private "..<"
+- "RetrieveSolutionCountFirebase"
+- "Void"
+- !private "=="
+- "FIRDatabase"
+- "NSObject"
+- "String"
+- "Int"
 depends-member:
 - ["Ps9AnyObject", "FIRDatabase"]
 - ["Ps9AnyObject", "child"]

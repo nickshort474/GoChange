@@ -17,6 +17,8 @@
 		369EF17D1C80C24600D8D46A /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369EF17C1C80C24600D8D46A /* Problem.swift */; };
 		369EF17F1C80C5D900D8D46A /* CoreDataStackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369EF17E1C80C5D900D8D46A /* CoreDataStackManager.swift */; };
 		36AE6F361C8C37A50041B5CD /* UpdateUserInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AE6F351C8C37A50041B5CD /* UpdateUserInfoController.swift */; };
+		36BAA9B91CFC554E007A4B3F /* Febrero-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 36BAA9B71CFC554E007A4B3F /* Febrero-Light.otf */; };
+		36BAA9BA1CFC554E007A4B3F /* Febrero-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 36BAA9B81CFC554E007A4B3F /* Febrero-Regular.otf */; };
 		36C37C6C1C7A00E3002B4FB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37C6B1C7A00E3002B4FB1 /* AppDelegate.swift */; };
 		36C37C711C7A00E3002B4FB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36C37C6F1C7A00E3002B4FB1 /* Main.storyboard */; };
 		36C37C741C7A00E3002B4FB1 /* GoChange.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 36C37C721C7A00E3002B4FB1 /* GoChange.xcdatamodeld */; };
@@ -89,6 +91,8 @@
 		369EF17C1C80C24600D8D46A /* Problem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem.swift; sourceTree = "<group>"; };
 		369EF17E1C80C5D900D8D46A /* CoreDataStackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStackManager.swift; sourceTree = "<group>"; };
 		36AE6F351C8C37A50041B5CD /* UpdateUserInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateUserInfoController.swift; sourceTree = "<group>"; };
+		36BAA9B71CFC554E007A4B3F /* Febrero-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Febrero-Light.otf"; sourceTree = "<group>"; };
+		36BAA9B81CFC554E007A4B3F /* Febrero-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Febrero-Regular.otf"; sourceTree = "<group>"; };
 		36C37C681C7A00E2002B4FB1 /* GoChange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoChange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C37C6B1C7A00E3002B4FB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36C37C701C7A00E3002B4FB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -299,6 +303,8 @@
 		36C37C9F1C7A0118002B4FB1 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				36BAA9B71CFC554E007A4B3F /* Febrero-Light.otf */,
+				36BAA9B81CFC554E007A4B3F /* Febrero-Regular.otf */,
 				367AEBDD1CF1B563003AB9B1 /* GoogleService-Info.plist */,
 				36C37C7A1C7A00E3002B4FB1 /* Info.plist */,
 			);
@@ -450,7 +456,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36BAA9B91CFC554E007A4B3F /* Febrero-Light.otf in Resources */,
 				36C37C791C7A00E3002B4FB1 /* LaunchScreen.storyboard in Resources */,
+				36BAA9BA1CFC554E007A4B3F /* Febrero-Regular.otf in Resources */,
 				367AEBDE1CF1B563003AB9B1 /* GoogleService-Info.plist in Resources */,
 				36C37C761C7A00E3002B4FB1 /* Assets.xcassets in Resources */,
 				36C37C711C7A00E3002B4FB1 /* Main.storyboard in Resources */,

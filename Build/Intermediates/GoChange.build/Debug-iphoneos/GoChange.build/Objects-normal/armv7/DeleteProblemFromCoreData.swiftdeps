@@ -6,19 +6,19 @@ provides-nominal:
 provides-member:
 - ["C8GoChange25DeleteProblemFromCoreData", ""]
 provides-dynamic-lookup:
-- "deleteCoreDataProblem"
-- "problem"
 - "sharedContext"
+- "deleteCoreDataProblem"
 - "deleteCoreDataSolutions"
+- "problem"
 depends-top-level:
 - !private "StringLiteralType"
-- !private "NSPredicate"
-- "DeleteProblemFromCoreData"
-- "NSManagedObjectContext"
 - !private "NSFetchRequest"
+- "Problem"
+- "NSManagedObjectContext"
+- !private "NSPredicate"
 - !private "Solution"
 - "NSObject"
-- "Problem"
+- "DeleteProblemFromCoreData"
 - !private "CoreDataStackManager"
 depends-member:
 - !private ["Ps9AnyObject", "CoreDataStackManager"]

@@ -565,6 +565,7 @@ SWIFT_CLASS("_TtC8GoChange24UpdateUserInfoController")
 - (IBAction)updatePassword:(UIButton * _Nonnull)sender;
 - (IBAction)updateUsername:(UIButton * _Nonnull)sender;
 - (IBAction)updateEmail:(UIButton * _Nonnull)sender;
+- (IBAction)deleteAccount:(UIButton * _Nonnull)sender;
 - (void)segueToInput;
 - (IBAction)cancelUpdate:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -614,6 +615,7 @@ SWIFT_CLASS("_TtC8GoChange22ViewIdeaViewController")
 @property (nonatomic, copy) NSString * _Null_unspecified petitionURL;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
+- (void)viewDidAppear:(BOOL)animated;
 - (IBAction)petitionButton:(UIButton * _Nonnull)sender;
 - (IBAction)voteSolutionClick:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -690,6 +692,7 @@ SWIFT_CLASS("_TtC8GoChange19loginViewController")
 - (IBAction)signupControl:(UIButton * _Nonnull)sender;
 - (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField;
 - (void)segueToHomeScreen;
+- (IBAction)forgotPassword:(UIButton * _Nonnull)sender;
 - (void)presentAlert:(NSString * _Nonnull)alertType;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;

@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Febrero-Regular.otf">
+            <string>Febrero-Regular</string>
+            <string>Febrero-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -17,31 +24,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GoChange" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDR-L0-DGt">
-                                <rect key="frame" x="247" y="156" width="107" height="29"/>
-                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="22"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GC" translatesAutoresizingMaskIntoConstraints="NO" id="MH2-UJ-Lgc">
-                                <rect key="frame" x="200" y="200" width="200" height="200"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Problem Solution App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vX6-fz-Sbh">
-                                <rect key="frame" x="193" y="415" width="215" height="23"/>
-                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHZ-UJ-9ZZ">
+                                <rect key="frame" x="40" y="50" width="520" height="500"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GoChange" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDR-L0-DGt">
+                                        <rect key="frame" x="208" y="132" width="105" height="30"/>
+                                        <color key="backgroundColor" red="0.99095481630000004" green="0.53592085840000003" blue="0.1050226465" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Febrero-Regular" family="Febrero" pointSize="27"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Problem / Solution App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vX6-fz-Sbh">
+                                        <rect key="frame" x="147" y="337" width="227" height="25"/>
+                                        <fontDescription key="fontDescription" name="Febrero-Regular" family="Febrero" pointSize="22"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GC" translatesAutoresizingMaskIntoConstraints="NO" id="MH2-UJ-Lgc">
+                                        <rect key="frame" x="198" y="187" width="125" height="125"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99095481630000004" green="0.53592085840000003" blue="0.1050226465" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="SDR-L0-DGt" firstAttribute="centerX" secondItem="fHZ-UJ-9ZZ" secondAttribute="centerX" id="2Al-O3-syN"/>
+                                    <constraint firstItem="MH2-UJ-Lgc" firstAttribute="centerX" secondItem="fHZ-UJ-9ZZ" secondAttribute="centerX" id="2pv-eJ-PW4"/>
+                                    <constraint firstItem="vX6-fz-Sbh" firstAttribute="centerX" secondItem="fHZ-UJ-9ZZ" secondAttribute="centerX" id="d0g-CF-grr"/>
+                                    <constraint firstItem="MH2-UJ-Lgc" firstAttribute="centerY" secondItem="fHZ-UJ-9ZZ" secondAttribute="centerY" id="jdX-Ld-axM"/>
+                                    <constraint firstItem="MH2-UJ-Lgc" firstAttribute="top" secondItem="SDR-L0-DGt" secondAttribute="bottom" constant="25" id="wnq-YY-r0J"/>
+                                    <constraint firstItem="vX6-fz-Sbh" firstAttribute="top" secondItem="MH2-UJ-Lgc" secondAttribute="bottom" constant="25" id="z2X-4r-epV"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.99095481630000004" green="0.53592085840000003" blue="0.1050226465" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="vX6-fz-Sbh" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="G3j-7d-5es"/>
-                            <constraint firstItem="vX6-fz-Sbh" firstAttribute="top" secondItem="MH2-UJ-Lgc" secondAttribute="bottom" constant="15" id="H0w-dC-ZSy"/>
-                            <constraint firstItem="MH2-UJ-Lgc" firstAttribute="top" secondItem="SDR-L0-DGt" secondAttribute="bottom" constant="15" id="P5E-kB-2ng"/>
-                            <constraint firstItem="SDR-L0-DGt" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="VLc-vR-XHm"/>
-                            <constraint firstItem="MH2-UJ-Lgc" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="VgN-iF-zgu"/>
-                            <constraint firstItem="MH2-UJ-Lgc" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="zX6-Yc-I4j"/>
+                            <constraint firstItem="fHZ-UJ-9ZZ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="4iy-AJ-xfU"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="fHZ-UJ-9ZZ" secondAttribute="bottom" constant="50" id="HnE-Iz-Qy3"/>
+                            <constraint firstItem="fHZ-UJ-9ZZ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="exG-Q6-WIp"/>
+                            <constraint firstItem="fHZ-UJ-9ZZ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="20" id="gaU-Dm-5w2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fHZ-UJ-9ZZ" secondAttribute="trailing" constant="20" id="tGZ-9S-QIp"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -51,6 +71,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="GC" width="200" height="200"/>
+        <image name="GC" width="125" height="125"/>
     </resources>
 </document>

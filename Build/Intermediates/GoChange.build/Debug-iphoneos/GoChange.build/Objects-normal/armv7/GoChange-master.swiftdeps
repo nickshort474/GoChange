@@ -1,6 +1,6 @@
 version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
 options: "e09a12a01bd1099f62dec5317938306f"
-build_time: [517838668, 269363000]
+build_time: [518106074, 481897000]
 inputs:
   "/Users/nickshort/Git/GoChangeCopy/GoChange/CreateProblemViewController.swift": [517517213, 0]
   "/Users/nickshort/Git/GoChangeCopy/GoChange/RetrieveNamesFromFirebase.swift": [517339410, 0]
@@ -17,7 +17,7 @@ inputs:
   "/Users/nickshort/Git/GoChangeCopy/GoChange/GoChangeConstants.swift": [515698258, 0]
   "/Users/nickshort/Git/GoChangeCopy/GoChange/GoChangeClient.swift": [517517214, 0]
   "/Users/nickshort/Git/GoChangeCopy/GoChange/GetRecentlyAdded.swift": [517339410, 0]
-  "/Users/nickshort/Git/GoChangeCopy/GoChange/loginViewController.swift": [517836360, 0]
+  "/Users/nickshort/Git/GoChangeCopy/GoChange/loginViewController.swift": [517850947, 0]
   "/Users/nickshort/Git/GoChangeCopy/GoChange/AppDelegate.swift": [517517214, 0]
   "/Users/nickshort/Git/GoChangeCopy/GoChange/SaveNewProblem.swift": [517517214, 0]
   "/Users/nickshort/Git/GoChangeCopy/GoChange/SaveNewSolution.swift": [517517214, 0]
@@ -28,7 +28,7 @@ inputs:
   "/Users/nickshort/Git/GoChangeCopy/GoChange/RetrieveDetailsFromFirebase.swift": [517517213, 0]
   "/Users/nickshort/Git/GoChangeCopy/GoChange/RetrieveSolutions.swift": [517517213, 0]
   "/Users/nickshort/Git/GoChangeCopy/GoChange/CustomTableViewCell.swift": [515498657, 0]
-  "/Users/nickshort/Git/GoChangeCopy/GoChange/SignupViewController.swift": [517836360, 0]
+  "/Users/nickshort/Git/GoChangeCopy/GoChange/SignupViewController.swift": [517850947, 0]
   "/Users/nickshort/Git/GoChangeCopy/GoChange/UpdateUserInfoController.swift": [517490098, 0]
   "/Users/nickshort/Git/GoChangeCopy/GoChange/SearchController.swift": [517339410, 0]
   "/Users/nickshort/Git/GoChangeCopy/GoChange/DeleteProblemFromCoreData.swift": [517517213, 0]

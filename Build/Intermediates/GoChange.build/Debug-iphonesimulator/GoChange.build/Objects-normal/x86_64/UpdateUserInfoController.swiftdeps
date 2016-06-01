@@ -6,27 +6,29 @@ provides-nominal:
 provides-member:
 - ["C8GoChange24UpdateUserInfoController", ""]
 provides-dynamic-lookup:
-- "ref"
-- "cancelUpdate"
 - "updatePassword"
-- "segueToInput"
-- "currentlyUpdating"
 - "updateUsername"
 - "updateEmail"
+- "cancelUpdate"
+- "segueToInput"
+- "ref"
+- "deleteAccount"
+- "currentlyUpdating"
 depends-top-level:
-- "UIViewController"
-- !private "SignupViewController"
-- "String"
 - "UpdateUserInfoController"
-- "StringLiteralType"
-- "FIRDatabase"
-- "UIButton"
+- "String"
 - !private "BooleanLiteralType"
+- "FIRDatabase"
+- !private "SignupViewController"
+- "UIButton"
+- "UIViewController"
+- "StringLiteralType"
 depends-member:
 - ["Ps9AnyObject", "FIRDatabase"]
 - ["Ps9AnyObject", "cancelUpdate"]
 - ["Ps9AnyObject", "currentlyUpdating"]
 - ["Ps9AnyObject", "database"]
+- ["Ps9AnyObject", "deleteAccount"]
 - !private ["Ps9AnyObject", "dismissViewControllerAnimated"]
 - ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "instantiateViewControllerWithIdentifier"]
@@ -45,6 +47,7 @@ depends-member:
 - ["Ps11CVarArgType", "cancelUpdate"]
 - ["Ps11CVarArgType", "currentlyUpdating"]
 - ["Ps11CVarArgType", "database"]
+- ["Ps11CVarArgType", "deleteAccount"]
 - !private ["Ps11CVarArgType", "dismissViewControllerAnimated"]
 - ["Ps11CVarArgType", "init"]
 - !private ["Ps11CVarArgType", "instantiateViewControllerWithIdentifier"]
@@ -63,6 +66,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "cancelUpdate"]
 - ["Ps28CustomDebugStringConvertible", "currentlyUpdating"]
 - ["Ps28CustomDebugStringConvertible", "database"]
+- ["Ps28CustomDebugStringConvertible", "deleteAccount"]
 - !private ["Ps28CustomDebugStringConvertible", "dismissViewControllerAnimated"]
 - ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "instantiateViewControllerWithIdentifier"]
@@ -81,6 +85,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "cancelUpdate"]
 - ["Ps23CustomStringConvertible", "currentlyUpdating"]
 - ["Ps23CustomStringConvertible", "database"]
+- ["Ps23CustomStringConvertible", "deleteAccount"]
 - !private ["Ps23CustomStringConvertible", "dismissViewControllerAnimated"]
 - ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "instantiateViewControllerWithIdentifier"]
@@ -99,6 +104,7 @@ depends-member:
 - ["Ps9Equatable", "cancelUpdate"]
 - ["Ps9Equatable", "currentlyUpdating"]
 - ["Ps9Equatable", "database"]
+- ["Ps9Equatable", "deleteAccount"]
 - !private ["Ps9Equatable", "dismissViewControllerAnimated"]
 - ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "instantiateViewControllerWithIdentifier"]
@@ -119,6 +125,7 @@ depends-member:
 - ["Ps8Hashable", "cancelUpdate"]
 - ["Ps8Hashable", "currentlyUpdating"]
 - ["Ps8Hashable", "database"]
+- ["Ps8Hashable", "deleteAccount"]
 - !private ["Ps8Hashable", "dismissViewControllerAnimated"]
 - ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "instantiateViewControllerWithIdentifier"]
@@ -136,6 +143,7 @@ depends-member:
 - ["PSo8NSCoding", "FIRDatabase"]
 - ["PSo8NSCoding", "cancelUpdate"]
 - ["PSo8NSCoding", "currentlyUpdating"]
+- ["PSo8NSCoding", "deleteAccount"]
 - !private ["PSo8NSCoding", "dismissViewControllerAnimated"]
 - ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "presentViewController"]
@@ -151,6 +159,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "FIRDatabase"]
 - ["PSo26NSExtensionRequestHandling", "cancelUpdate"]
 - ["PSo26NSExtensionRequestHandling", "currentlyUpdating"]
+- ["PSo26NSExtensionRequestHandling", "deleteAccount"]
 - !private ["PSo26NSExtensionRequestHandling", "dismissViewControllerAnimated"]
 - ["PSo26NSExtensionRequestHandling", "init"]
 - !private ["PSo26NSExtensionRequestHandling", "presentViewController"]
@@ -170,6 +179,7 @@ depends-member:
 - ["CSo8NSObject", "cancelUpdate"]
 - ["CSo8NSObject", "currentlyUpdating"]
 - ["CSo8NSObject", "database"]
+- ["CSo8NSObject", "deleteAccount"]
 - !private ["CSo8NSObject", "dismissViewControllerAnimated"]
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "instantiateViewControllerWithIdentifier"]
@@ -187,6 +197,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "cancelUpdate"]
 - ["PSo16NSObjectProtocol", "currentlyUpdating"]
 - ["PSo16NSObjectProtocol", "database"]
+- ["PSo16NSObjectProtocol", "deleteAccount"]
 - !private ["PSo16NSObjectProtocol", "dismissViewControllerAnimated"]
 - ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "instantiateViewControllerWithIdentifier"]
@@ -207,6 +218,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "FIRDatabase"]
 - ["PSo21UIAppearanceContainer", "cancelUpdate"]
 - ["PSo21UIAppearanceContainer", "currentlyUpdating"]
+- ["PSo21UIAppearanceContainer", "deleteAccount"]
 - !private ["PSo21UIAppearanceContainer", "dismissViewControllerAnimated"]
 - ["PSo21UIAppearanceContainer", "init"]
 - !private ["PSo21UIAppearanceContainer", "presentViewController"]
@@ -222,6 +234,7 @@ depends-member:
 - ["PSo18UIContentContainer", "FIRDatabase"]
 - ["PSo18UIContentContainer", "cancelUpdate"]
 - ["PSo18UIContentContainer", "currentlyUpdating"]
+- ["PSo18UIContentContainer", "deleteAccount"]
 - !private ["PSo18UIContentContainer", "dismissViewControllerAnimated"]
 - ["PSo18UIContentContainer", "init"]
 - !private ["PSo18UIContentContainer", "presentViewController"]
@@ -237,6 +250,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "FIRDatabase"]
 - ["PSo18UIFocusEnvironment", "cancelUpdate"]
 - ["PSo18UIFocusEnvironment", "currentlyUpdating"]
+- ["PSo18UIFocusEnvironment", "deleteAccount"]
 - !private ["PSo18UIFocusEnvironment", "dismissViewControllerAnimated"]
 - ["PSo18UIFocusEnvironment", "init"]
 - !private ["PSo18UIFocusEnvironment", "presentViewController"]
@@ -255,6 +269,7 @@ depends-member:
 - ["CSo11UIResponder", "UIButton"]
 - ["CSo11UIResponder", "cancelUpdate"]
 - ["CSo11UIResponder", "currentlyUpdating"]
+- ["CSo11UIResponder", "deleteAccount"]
 - !private ["CSo11UIResponder", "dismissViewControllerAnimated"]
 - ["CSo11UIResponder", "init"]
 - !private ["CSo11UIResponder", "presentViewController"]
@@ -269,6 +284,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "FIRDatabase"]
 - ["PSo16UIStateRestoring", "cancelUpdate"]
 - ["PSo16UIStateRestoring", "currentlyUpdating"]
+- ["PSo16UIStateRestoring", "deleteAccount"]
 - !private ["PSo16UIStateRestoring", "dismissViewControllerAnimated"]
 - ["PSo16UIStateRestoring", "init"]
 - !private ["PSo16UIStateRestoring", "presentViewController"]
@@ -287,6 +303,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "FIRDatabase"]
 - ["PSo18UITraitEnvironment", "cancelUpdate"]
 - ["PSo18UITraitEnvironment", "currentlyUpdating"]
+- ["PSo18UITraitEnvironment", "deleteAccount"]
 - !private ["PSo18UITraitEnvironment", "dismissViewControllerAnimated"]
 - ["PSo18UITraitEnvironment", "init"]
 - !private ["PSo18UITraitEnvironment", "presentViewController"]
@@ -305,6 +322,7 @@ depends-member:
 - ["CSo16UIViewController", "UIButton"]
 - ["CSo16UIViewController", "cancelUpdate"]
 - ["CSo16UIViewController", "currentlyUpdating"]
+- ["CSo16UIViewController", "deleteAccount"]
 - !private ["CSo16UIViewController", "dismissViewControllerAnimated"]
 - ["CSo16UIViewController", "init"]
 - !private ["CSo16UIViewController", "presentViewController"]
@@ -324,6 +342,7 @@ depends-member:
 - ["C8GoChange24UpdateUserInfoController", "cancelUpdate"]
 - ["C8GoChange24UpdateUserInfoController", "currentlyUpdating"]
 - ["C8GoChange24UpdateUserInfoController", "deinit"]
+- ["C8GoChange24UpdateUserInfoController", "deleteAccount"]
 - !private ["C8GoChange24UpdateUserInfoController", "dismissViewControllerAnimated"]
 - ["C8GoChange24UpdateUserInfoController", "init"]
 - !private ["C8GoChange24UpdateUserInfoController", "presentViewController"]
@@ -407,4 +426,4 @@ depends-external:
 - "/Users/nickshort/Git/GoChangeCopy/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
 - "/Users/nickshort/Git/GoChangeCopy/Pods/Firebase/Headers/Firebase.h"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/WebKit.swiftmodule"
-interface-hash: "95bcc7e4afee35696bea7e8bdfd38854"
+interface-hash: "58b5fecdacda091de50d36e15829d5ac"

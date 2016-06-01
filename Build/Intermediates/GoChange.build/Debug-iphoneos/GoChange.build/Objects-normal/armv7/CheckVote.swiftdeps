@@ -11,13 +11,13 @@ depends-top-level:
 - !private "StringLiteralType"
 - "CheckVote"
 - "NSManagedObjectContext"
+- "Void"
 - !private "NSFetchRequest"
+- "Solution"
 - "NSObject"
 - !private "NSPredicate"
-- "Void"
-- "Solution"
-- "String"
 - !private "CoreDataStackManager"
+- "String"
 depends-member:
 - !private ["Ps9AnyObject", "CoreDataStackManager"]
 - !private ["Ps9AnyObject", "NSFetchRequest"]
