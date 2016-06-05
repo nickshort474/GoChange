@@ -18,7 +18,7 @@ class CheckForNetwork:NSObject{
         
         let connectedRef = FIRDatabase.database().reference().child("/.info/connected")
         
-        connectedRef.observeEventType(.Value, withBlock: { snapshot in
+        connectedRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
             
             let connected = snapshot.value as? Bool
             

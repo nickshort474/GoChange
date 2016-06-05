@@ -166,7 +166,7 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
                 let userID = NSUserDefaults.standardUserDefaults().valueForKey("uid") as? String
                 let userRef = ref.child("users/\(userID!)")
             
-                userRef.observeEventType(.Value, withBlock: { snapshot in
+                userRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
                 
                     let usernameValue = snapshot.value!.objectForKey("username") as? String
                     

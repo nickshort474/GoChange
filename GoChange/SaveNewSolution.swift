@@ -41,7 +41,7 @@ class SaveNewSolution:NSObject{
         
         let problemID = existingProblem.problemID
         
-        //let solutionCountLocation = Firebase(url:"https://gochange.firebaseio.com/problem/solutionCount")
+        
         let solutionCountLocation =  FIRDatabase.database().reference().child("problem/solutionCount")
         
         let uniqueSolutionCountLocation = solutionCountLocation.child(problemID)
@@ -49,7 +49,7 @@ class SaveNewSolution:NSObject{
         
         
         //create reference to solutions location in firebase
-        //let problemSolutionsLocation = Firebase(url:"https://gochange.firebaseio.com/problem/solutions")
+        
         let problemSolutionsLocation = FIRDatabase.database().reference().child("problem/solutions")
         
         let uniqueSolutionLocation = problemSolutionsLocation.child(problemID)

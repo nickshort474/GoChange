@@ -53,81 +53,91 @@ class loginViewController:UIViewController,UITextFieldDelegate{
     
     @IBAction func login(sender: AnyObject) {
         
-        
-        loginActivityIndicator.hidden = false
-        loginActivityIndicator.startAnimating()
-        self.view.alpha = 0.5
-        loginButton.enabled = false
-        
-        
-        let email = emailTextfield.text
-        let password = passwordTextfield.text
-        
-        //check for empty fields
-        if(email != "" && password != ""){
+        _ = CheckForNetwork(){
+            result in
             
-            //sign in with email to Firebase
-            FIRAuth.auth()?.signInWithEmail(email!, password: password!, completion: {
-                user,error in
+            if(result == "Connected"){
+                self.loginActivityIndicator.hidden = false
+                self.loginActivityIndicator.startAnimating()
+                self.view.alpha = 0.5
+                self.loginButton.enabled = false
+        
+        
+                let email = self.emailTextfield.text
+                let password = self.passwordTextfield.text
+        
+                //check for empty fields
+                if(email != "" && password != ""){
+            
+                    //sign in with email to Firebase
+                    FIRAuth.auth()?.signInWithEmail(email!, password: password!, completion: {
+                        user,error in
                 
-                // if error comes back
-                if error != nil{
+                        // if error comes back
+                        if error != nil{
                     
+                            self.loginActivityIndicator.hidden = true
+                            self.loginActivityIndicator.stopAnimating()
+                            self.view.alpha = 1
+                            self.loginButton.enabled = true
+                    
+                            // check for type of error and present alert accordingly
+                            switch error!.localizedDescription{
+                            case "An internal error has occurred, print and inspect the error details for more information.":
+                                self.presentAlert("Please enter a valid email")
+                        
+                            case "There is no user record corresponding to this identifier. The user may have been deleted":
+                                self.presentAlert("Email not recognized, please re-enter email or sign-up")
+                        
+                            case "The password is invalid or the user does not have a password.":
+                                self.presentAlert("Password is incorrect, please enter a valid password")
+                        
+                            case "(Error Code: NETWORK_ERROR) The request timed out.":
+                                self.presentAlert("Login timed out, please check your network connection")
+                                
+                            default:
+                                break
+                                
+                            }
+                    
+                            // if no error
+                        }else{
+                    
+                            // set username to returned user uid
+                            let usernameRef = self.ref.child("users/\(user!.uid)")
+                    
+                            
+                            usernameRef.observeSingleEventOfType(.Value, withBlock: {snapshot in
+                        
+                                //get
+                                let username = snapshot.value!.objectForKey("username") as? String
+                        
+                                NSUserDefaults.standardUserDefaults().setValue(user!.uid,forKey:"uid")
+                                NSUserDefaults.standardUserDefaults().setValue(username, forKey: "username")
+                        
+                                self.segueToHomeScreen()
+                        
+                                }, withCancelBlock: { error in
+                                    print(error.description)
+                            })
+                        }
+                    })
+                }else{
+                    //code for empty fields
+                    self.presentAlert("Please provide your email and password")
                     self.loginActivityIndicator.hidden = true
                     self.loginActivityIndicator.stopAnimating()
                     self.view.alpha = 1
                     self.loginButton.enabled = true
-                    
-                     // check for type of error and present alert accordingly
-                    switch error!.localizedDescription{
-                        case "An internal error has occurred, print and inspect the error details for more information.":
-                        self.presentAlert("Please enter a valid email")
-                        
-                        case "There is no user record corresponding to this identifier. The user may have been deleted":
-                        self.presentAlert("Email not recognized, please re-enter email or sign-up")
-                        
-                        case "The password is invalid or the user does not have a password.":
-                        self.presentAlert("Password is incorrect, please enter a valid password")
-                        
-                        case "(Error Code: NETWORK_ERROR) The request timed out.":
-                        self.presentAlert("Login timed out, please check your network connection")
-                        
-                        default:
-                        break
-                        
-                    }
-                    
-                 // if no error
-                }else{
-                    
-                    // set username to returned user uid
-                    let usernameRef = self.ref.child("users/\(user!.uid)")
-                    
-                    
-                    usernameRef.observeEventType(.Value, withBlock: {snapshot in
-                        
-                        //get 
-                        let username = snapshot.value!.objectForKey("username") as? String
-                        
-                        NSUserDefaults.standardUserDefaults().setValue(user!.uid,forKey:"uid")
-                        NSUserDefaults.standardUserDefaults().setValue(username, forKey: "username")
-                        
-                        self.segueToHomeScreen()
-                        
-                    }, withCancelBlock: { error in
-                         print(error.description)
-                    })
-                }
-            })
-        }else{
-            //code for empty fields
-            presentAlert("Please provide your email and password")
-            self.loginActivityIndicator.hidden = true
-            self.loginActivityIndicator.stopAnimating()
-            self.view.alpha = 1
-            self.loginButton.enabled = true
             
+                }
+            }else{
+                self.presentAlert("Error logging in no network available, please check your connection and try again")
+            }
         }
+        
+        
+      
     }
     
     
@@ -168,24 +178,29 @@ class loginViewController:UIViewController,UITextFieldDelegate{
     
     @IBAction func forgotPassword(sender: UIButton) {
         
-        let emailText = emailTextfield.text!
+        _ = CheckForNetwork(){
+            result in
+            
+            if(result == "Connected"){
+                
+                let emailText = self.emailTextfield.text!
         
-        if emailText == ""{
-            presentAlert("Please enter email")
-        }else{
-            FIRAuth.auth()?.sendPasswordResetWithEmail(emailText, completion:{
-                error in
-                if let error = error{
-                    print(error)
+                if emailText == ""{
+                    self.presentAlert("Please enter email")
                 }else{
-                    self.presentAlert("Password reset email sent")
+                    FIRAuth.auth()?.sendPasswordResetWithEmail(emailText, completion:{
+                        error in
+                        if let error = error{
+                            print(error)
+                        }else{
+                            self.presentAlert("Password reset email sent")
+                        }
+                    })
                 }
-                
-                
-            })
+            }else{
+                self.presentAlert("Error connecting to network, please check connection and try again")
+            }
         }
-        
-        
     }
     
     

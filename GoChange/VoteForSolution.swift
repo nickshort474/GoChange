@@ -82,9 +82,7 @@ class VoteForSolution:NSObject{
         childRef.observeSingleEventOfType(.Value, withBlock:{snapshot in
             
             self.currentVoteCount = snapshot.value!["SolutionVoteCount"] as! Int
-            print(self.currentVoteCount)
             self.currentVoteCount += 1
-            print(self.currentVoteCount)
             childRef.updateChildValues(["SolutionVoteCount":self.currentVoteCount])
             
             

@@ -49,7 +49,7 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         searchActivity.hidden = true
         searchActivity.stopAnimating()
         
-        //clear TempSave variables for
+        //clear TempSave variables
         TempSave.sharedInstance().retrievedRecentProblem = nil
         TempSave.sharedInstance().retrievedProblemFollowed = false
         TempSave.sharedInstance().RetrievedProblemsEmpty = false
@@ -67,8 +67,7 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
                 self.refArray.append(name.key)
             }
          
-            print(self.refArray)
-            //check whether the items are already followed (in core data)
+           //check whether the items are already followed (in core data)
             self.checkIfInCoreData()
             
          })
@@ -111,11 +110,9 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
                 
                 
                 //once all items in refArray have been retrieved
-                if(self.matchedProblemArray.count == self.refArray.count){
+                if(self.matchedIDArray.count == self.refArray.count){
                    
                     //compare matchedArray to retrieved ref array
-                    print(self.matchedProblemArray)
-                    print(self.matchedIDArray)
                     self.compareArrays()
                    
                 }
@@ -135,8 +132,6 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         //use diff to see which elements from retrieved firebase array don't exist in core data set
         let diff = setA.subtract(setB)
         self.problemsNotInCoreData = Array(diff)
-        
-        print(self.problemsNotInCoreData)
         
         TempSave.sharedInstance().RetrievedProblemsCount = problemsNotInCoreData.count
         
@@ -188,45 +183,54 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         searchActivity.startAnimating()
         self.view.alpha = 0.5
         
-        //search for result
-        _ = SearchController(searchText: searchTextField.text!){
-            (nameResult,detailResult,ownerResult,solutionCountResult,refResult,matchType) in
+        _ = CheckForNetwork(){
+            result in
             
-            // if no matches to search term present alert
-            if(matchType == "noFirebaseMatches"){
+            if(result == "Connected"){
+                //search for result
+                _ = SearchController(searchText: self.searchTextField.text!){
+                    (nameResult,detailResult,ownerResult,solutionCountResult,refResult,matchType) in
+            
+                    // if no matches to search term present alert
+                    if(matchType == "noFirebaseMatches"){
                 
-                self.presentAlert("No matches for your search term")
-                self.searchActivity.hidden = true
-                self.searchActivity.stopAnimating()
-                self.view.alpha = 01
+                        self.presentAlert("No matches for your search term")
+                        self.searchActivity.hidden = true
+                        self.searchActivity.stopAnimating()
+                        self.view.alpha = 01
                 
-            }else if(matchType == "coreDataMatch"){
+                    }else if(matchType == "coreDataMatch"){
                
-                self.presentAlert("Matches found but already followed")
-                self.searchActivity.hidden = true
-                self.searchActivity.stopAnimating()
-                self.view.alpha = 1
+                        self.presentAlert("Matches found but already followed")
+                        self.searchActivity.hidden = true
+                        self.searchActivity.stopAnimating()
+                        self.view.alpha = 1
             
+                    }else{
+                
+                        // if match found show result vc
+                        var controller:ResultsViewController
+                        controller = self.storyboard?.instantiateViewControllerWithIdentifier("ResultsViewController") as! ResultsViewController
+                        let navigationController = self.navigationController
+            
+                        controller.resultNameArray = nameResult
+                        controller.resultDetailArray = detailResult
+                        controller.problemOwnerArray = ownerResult
+                        controller.resultSolutionCountArray = solutionCountResult
+                        controller.refArray = refResult
+            
+                        //set activity indicator
+                        self.searchActivity.hidden = true
+                        self.searchActivity.stopAnimating()
+                        self.view.alpha = 1
+                
+                        navigationController?.pushViewController(controller,animated: true)
+                
+                    }
+                }
+
             }else{
-                
-                // if match found show result vc
-                var controller:ResultsViewController
-                controller = self.storyboard?.instantiateViewControllerWithIdentifier("ResultsViewController") as! ResultsViewController
-                let navigationController = self.navigationController
-            
-                controller.resultNameArray = nameResult
-                controller.resultDetailArray = detailResult
-                controller.problemOwnerArray = ownerResult
-                controller.resultSolutionCountArray = solutionCountResult
-                controller.refArray = refResult
-            
-                //set activity indicator
-                self.searchActivity.hidden = true
-                self.searchActivity.stopAnimating()
-                self.view.alpha = 1
-                
-                navigationController?.pushViewController(controller,animated: true)
-                
+                self.presentAlert("Cannot search network error, please check your connection and try again")
             }
         }
     }

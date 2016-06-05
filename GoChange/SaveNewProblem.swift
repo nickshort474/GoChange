@@ -18,18 +18,69 @@ class SaveNewProblem:NSObject{
     var newProblem:Problem!
     var solutionIDArray:NSMutableArray = []
     
+    var nameResults:[String] = []
+    var resultExists:Bool = false
+    
     init(completionHandler:(result:AnyObject)->Void){
         super.init()
         
+        // test to see if problem name already exists in firebase / disallow if it does
+        let currentProblemName = TempSave.sharedInstance().problemName
+        let nameRef = FIRDatabase.database().reference().child("problem/names")
         
-        saveProblemToFirebase()
         
-        createCoreDataProblem(){
-            (result) in
+        // get all problem names from firebase
+        nameRef.observeSingleEventOfType(.Value, withBlock: { (snapshot) in
             
-            completionHandler(result:result)
+            //assign returned problem names to nameResults Array
+            for name in snapshot.children.allObjects as! [FIRDataSnapshot]{
+                
+                self.nameResults.append(name.value!["ProblemName"]!! as! String)
+                
+            }
             
-        }
+            // loop through array and check proposed name against all items
+            for name in self.nameResults{
+                
+               
+                if (name == currentProblemName){
+                    
+                    // problemName already exists return to CreateProblemVC and inform user
+                    self.resultExists = true
+                   
+                }
+            }
+            
+            
+            if(self.resultExists == false){
+               
+                self.saveProblemToFirebase()
+        
+                self.createCoreDataProblem()
+                
+                let result = "Problem saved"
+                completionHandler(result: result)
+            
+            }else{
+                let result = "exists"
+                 completionHandler(result:result)
+            }
+            
+                
+          
+            }, withCancelBlock:{ error in
+                
+                print(error.description)
+                
+        })
+        
+        
+        
+        
+        
+        
+        
+       
         
     }
     
@@ -116,7 +167,7 @@ class SaveNewProblem:NSObject{
     
     
     
-    func createCoreDataProblem(completionHandler:(result:AnyObject)-> Void){
+    func createCoreDataProblem(){
         
         var problemDictionary:[String:AnyObject] = [String:AnyObject]()
         
@@ -145,7 +196,7 @@ class SaveNewProblem:NSObject{
         }
         
         //completion handler to pass back newly created problem
-        completionHandler(result: newProblem)
+        //completionHandler(result: newProblem)
         
     }
     

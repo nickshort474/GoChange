@@ -92,7 +92,7 @@ class ViewFollowingViewController: UIViewController,UITextViewDelegate,UITextFie
         
         
         
-        //collect passed data and putinto textfields
+        //collect passed data and put into textfields
         nameField.text = problemClicked.problemName
         detailsField.text = problemClicked.problemDescription
         localSolutionCount = problemClicked.solutionCount as Int

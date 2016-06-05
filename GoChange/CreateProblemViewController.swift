@@ -232,6 +232,7 @@ class CreateProblemViewController: UIViewController,UITextViewDelegate,UITextFie
         cell.problemName.text = solutionName
         
         let username = NSUserDefaults.standardUserDefaults().valueForKey("username") as? String
+        
         if let username = username{
             cell.ownerName.text = "Submitted by: \(username)"
         }
@@ -285,14 +286,21 @@ class CreateProblemViewController: UIViewController,UITextViewDelegate,UITextFie
             //test for network connection before proceeding
             _ = CheckForNetwork(){
                 (result) in
+               
                 if(result == "Connected"){
                     
                     //save problem
                     _ = SaveNewProblem(completionHandler:{
                         (result) in
-                
+                        
+                        // deal with if problem name already exists
+                       if(result as! String == "exists"){
+                            self.presentAlert("Problem name already exists in database, please try another name")
+                        }else{
+                            self.dismissViewControllerAnimated(true, completion: nil)
+                        }
                     })
-                    self.dismissViewControllerAnimated(true, completion: nil)
+                    
                 }else{
                     
                     // if no network present alert
