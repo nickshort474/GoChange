@@ -24,7 +24,12 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
     
     var recentNameArray:[String] = []
     var refArray:[String] = []
+    
+    
     var matchedProblemArray:[String] = []
+    var matchedIDArray:[String] = []
+    
+    
     var problemsNotInCoreData:[String] = []
     
     
@@ -62,7 +67,8 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
                 self.refArray.append(name.key)
             }
          
-            //check whterh thes eitems are already followed (in core data)
+            print(self.refArray)
+            //check whether the items are already followed (in core data)
             self.checkIfInCoreData()
             
          })
@@ -101,12 +107,17 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
                 
                 //add any matched item to matchedProblemArray
                 self.matchedProblemArray.append(resultName)
+                self.matchedIDArray.append(resultID)
+                
                 
                 //once all items in refArray have been retrieved
                 if(self.matchedProblemArray.count == self.refArray.count){
                    
                     //compare matchedArray to retrieved ref array
+                    print(self.matchedProblemArray)
+                    print(self.matchedIDArray)
                     self.compareArrays()
+                   
                 }
                 
             })
@@ -124,6 +135,8 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         //use diff to see which elements from retrieved firebase array don't exist in core data set
         let diff = setA.subtract(setB)
         self.problemsNotInCoreData = Array(diff)
+        
+        print(self.problemsNotInCoreData)
         
         TempSave.sharedInstance().RetrievedProblemsCount = problemsNotInCoreData.count
         
@@ -226,9 +239,6 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         searchActivity.hidden = false
         view.alpha = 0.5
         
-        
-        //sender.enabled = false
-        //sender.alpha = 0.5
         
         recentProblemStack.hidden = true
         

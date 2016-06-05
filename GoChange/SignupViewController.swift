@@ -45,7 +45,10 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
             if(updateField == "username"){
                 label1.text = "Old username"
                 label2.text = "New username"
-                label3.text = "Password"
+                
+                passwordTextfield.hidden = true
+                label3.hidden = true
+                
             }else if(updateField == "password"){
                 label1.text = "Email"
                 label2.text = "Old password"
@@ -147,15 +150,14 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
     func updateChildValues(){
         
         //gather current user details and paste into boxes
-        if(usernameTextfield.text != nil && emailTextfield.text != nil && passwordTextfield.text != nil){
+        if(usernameTextfield.text != nil && emailTextfield.text != nil){
         
             if(updateField == "username"){
+                
                 let oldUsername = usernameTextfield.text
                 let newUsername = emailTextfield.text!
                 
-                //migrating from firebase 2.0 to 3.0 no longer need password? / need to update UI
-                _ = passwordTextfield.text
-            
+               
                 //update user defaults
                 NSUserDefaults.standardUserDefaults().setValue(newUsername, forKey: "username")
             
@@ -216,6 +218,7 @@ class SignupViewController:UIViewController,UITextFieldDelegate{
             let newEmail = emailTextfield.text! // new email
             let password = passwordTextfield.text! // password
             
+                
             let user = FIRAuth.auth()?.currentUser
             var credential:FIRAuthCredential
             credential = FIREmailPasswordAuthProvider.credentialWithEmail(oldEmail, password: password)

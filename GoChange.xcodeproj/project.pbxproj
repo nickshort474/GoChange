@@ -179,17 +179,18 @@
 		36B03CC51C8DFBC700E9427D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				36D82C221CD3A56E00FDA274 /* SearchController.swift */,
+				3618C41C1CE2573E003102C1 /* GetRecentlyAdded.swift */,
 				3618C41A1CE23E3A003102C1 /* FindRecentProblem.swift */,
+				36E703EE1CAEE30C007C880C /* RetrieveProblem.swift */,
+				361E7EFE1CE4F70A00998B7E /* CheckForNetwork.swift */,
+				36D82C221CD3A56E00FDA274 /* SearchController.swift */,
 				36CB44131CCF504A000AD3C5 /* ChangeOrgCode.swift */,
 				36D963F61CB556A1006F9D36 /* RetrieveSolutionsFromFirebase.swift */,
 				36D82C201CD37EC300FDA274 /* RetrieveNamesFromFirebase.swift */,
 				361A063F1CB2CD450066C07C /* RetrieveAllNamesFromFirebase.swift */,
-				361E7EFE1CE4F70A00998B7E /* CheckForNetwork.swift */,
 				36F871B61CB81503006706BD /* RetrieveSolutionCountFirebase.swift */,
 				36EB1EB91CB42E9000EA0CC4 /* RetrieveDetailsFromFirebase.swift */,
 				36DE37511CB12640005DEEEA /* RetrieveSolutions.swift */,
-				36E703EE1CAEE30C007C880C /* RetrieveProblem.swift */,
 				36E705B31CC79802003F5C6A /* VoteForSolution.swift */,
 				36E564A21CCCA7D9008656EC /* UpdateCoreDataSolutions.swift */,
 				36E564A41CCCA815008656EC /* SaveNewSolution.swift */,
@@ -197,7 +198,6 @@
 				36E564A01CCCA79E008656EC /* SaveNewProblem.swift */,
 				36F4EDD81CD4C39600F26996 /* CheckVote.swift */,
 				36D214581CDA568C00C3142B /* DeleteProblemFromCoreData.swift */,
-				3618C41C1CE2573E003102C1 /* GetRecentlyAdded.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";

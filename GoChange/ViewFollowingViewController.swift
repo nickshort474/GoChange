@@ -73,14 +73,25 @@ class ViewFollowingViewController: UIViewController,UITextViewDelegate,UITextFie
         solutionTable.layer.shadowOpacity = 0.5
         
         
-        //if coming from ViewResultViewController need back button to go home
+        
+        
+        
+        
+        
+        //if coming from ViewResultViewController need back button to go search rather than use default back button which will take you back to the result view controller
+        
         if(sendingController == "ViewResult"){
             
-            let barButtonItem = UIBarButtonItem(title: "Home", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ViewFollowingViewController.goBackHome))
+            let barButtonItem = UIBarButtonItem(title: " < Search", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ViewFollowingViewController.goBackHome))
             self.navigationItem.leftBarButtonItem = barButtonItem
             
         }
        
+        
+        
+        
+        
+        
         //collect passed data and putinto textfields
         nameField.text = problemClicked.problemName
         detailsField.text = problemClicked.problemDescription
@@ -194,6 +205,8 @@ class ViewFollowingViewController: UIViewController,UITextViewDelegate,UITextFie
         
     }
     
+    
+    // go back to search screen
     func goBackHome(){
         
         self.navigationController?.popToRootViewControllerAnimated(true)
